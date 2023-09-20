@@ -1,0 +1,16 @@
+/* 
+  CameraUI.strings
+  Veterinary
+
+  Created by Mohammed Abouarab on 08/12/2021.
+  
+*/
+
+"PHOTO" = "PHOTO";
+"AEAF_LOCK_TEXT" = "AE/AF LOCK";
+"API_CANCEL_TITLE" = "Cancel";
+"HDR_AUTO" = "Auto";
+"HDR_ON" = "On";
+"HDR_OFF" = "Off";
+"TIMER_OFF_TEXT" = "Off";
+"USE_PHOTO" = "Use Photo";

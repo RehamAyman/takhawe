@@ -1,0 +1,11 @@
+/* 
+  PhotoLibraryServices.strings
+  Veterinary
+
+  Created by Mohammed Abouarab on 08/12/2021.
+  
+*/
+
+"PHOTOS" = "Photos";
+"CAMERA_ROLL" = "Camera roll";
+"ALL_SCREENSHOTS" = "Screenshots";

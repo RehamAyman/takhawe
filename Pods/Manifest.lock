@@ -1,0 +1,21 @@
+PODS:
+  - OTPFieldView (1.0.1)
+
+DEPENDENCIES:
+  - OTPFieldView (from `https://github.com/AbdallaTarek/OTPFieldView.git`)
+
+EXTERNAL SOURCES:
+  OTPFieldView:
+    :git: https://github.com/AbdallaTarek/OTPFieldView.git
+
+CHECKOUT OPTIONS:
+  OTPFieldView:
+    :commit: 04d2a7231cc0bb455a57612980703473cb81cb52
+    :git: https://github.com/AbdallaTarek/OTPFieldView.git
+
+SPEC CHECKSUMS:
+  OTPFieldView: 700a752fe62c41d1c4914c78aa500fb30d97c255
+
+PODFILE CHECKSUM: a671497025b7ff2fe510a0f10596851a571fc646
+
+COCOAPODS: 1.12.1

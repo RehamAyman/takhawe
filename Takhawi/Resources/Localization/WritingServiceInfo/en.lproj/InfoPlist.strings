@@ -1,0 +1,22 @@
+/* 
+  InfoPlist.strings
+  Veterinary
+
+  Created by Mohammed Abouarab on 08/12/2021.
+  
+*/
+
+
+//"CFBundleDisplayName" = "Writing Service";
+
+"NSCameraUsageDescription" = "Writing Service needs your permission for opening camera to can upload your order images";
+
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Writing Service wants to access your location to get better performance and allow you to get nearest stores .";
+
+"NSLocationAlwaysUsageDescription" = "Writing Service wants to access your location to get better performance and allow you to get nearest stores .";
+
+"NSLocationWhenInUseUsageDescription" = "Writing Service needs your persmission to access your location to can get nearest providers for you and deliver your order to your location";
+
+"NSPhotoLibraryUsageDescription" = "Writing Service needs your permission for opening your gallary to can upload your order images";
+
+"NSMicrophoneUsageDescription" = "Writing Service wants your permission to can access your michrophone to allow you sending voice notes";

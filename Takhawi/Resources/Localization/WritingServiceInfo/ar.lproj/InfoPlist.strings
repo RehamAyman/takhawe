@@ -1,0 +1,20 @@
+/* 
+  InfoPlist.strings
+  Veterinary
+
+  Created by Mohammed Abouarab on 08/12/2021.
+  
+*/
+
+//"CFBundleDisplayName" =  "فاست اوردر";
+"NSCameraUsageDescription" = "التطبيق يحتاج الي اذنك لفتح الكاميرا لتحميل صوره طلبك";
+
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "التطبيق يريد الوصول إلى موقعك للحصول على أداء أفضل والسماح لك بالوصول إلى أقرب المتاجر";
+
+"NSLocationAlwaysUsageDescription" = "التطبيق  يريد الوصول إلى موقعك للحصول على أداء أفضل والسماح لك بالوصول إلى أقرب المتاجر";
+
+"NSLocationWhenInUseUsageDescription" = "التطبيق يحتاج إلى اذنك للوصول إلى موقعك للحصول على أقرب مزودين خدمة لك وتسليم طلبك إلى موقعك";
+
+"NSPhotoLibraryUsageDescription" = " التطبيق يحتاج إلى إذنك لفتح معرض الصور الخاص بك ليتمكن من تحميل صور طلبك";
+
+"NSMicrophoneUsageDescription" = "التطبيق يريد إذنك للوصول إلى الميكروفون للسماح لك بإرسال رسائل صوتية";

@@ -1,0 +1,6 @@
+framework module Pods_Takhawi {
+  umbrella header "Pods-Takhawi-umbrella.h"
+
+  export *
+  module * { export * }
+}
