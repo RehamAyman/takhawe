@@ -15,9 +15,16 @@ struct CustomSegmentedControl: View {
     
     
     var body: some View {
+      
+        
         
         VStack {
-            HStack  {
+         
+            
+            
+            HStack   {
+                
+                
                 
                 // tab 1
                 
@@ -42,7 +49,8 @@ struct CustomSegmentedControl: View {
                     }
                     .frame(width: 100, height: 100)
                     .cornerRadius(50)
-                Spacer()
+                  
+               Spacer()
                 
                 // tab 2
                 
@@ -53,7 +61,8 @@ struct CustomSegmentedControl: View {
                         ZStack{
                             if selectedIndex == 1 {
                                 Color( "MainColor")
-                                //    .matchedGeometryEffect(id: "TAB", in: animation)
+                                   
+                                  //  .matchedGeometryEffect(id: "TAB", in: animation)
                             }}
                         
                     )
@@ -68,6 +77,10 @@ struct CustomSegmentedControl: View {
                     .cornerRadius(50)
                 
                 
+                
+              
+                
+                
             }
             .background(Color.white.opacity(0.7))
          
@@ -76,7 +89,7 @@ struct CustomSegmentedControl: View {
           
             .shadow(color: .gray.opacity(0.6), radius: 4 , x: 1 , y: 2)
            
-            
+            .animation(Animation.interpolatingSpring(stiffness: 300.0, damping: 20 , initialVelocity: 7))
             
             HStack {
                 Text ( "Female")
