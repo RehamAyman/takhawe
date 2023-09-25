@@ -56,8 +56,11 @@ class SelectUserTypeVC: BaseVC {
         userCheackBox.checkState = .unchecked
 
         UIView.animate(withDuration: 0.5) {
-            self.driverView.backgroundColor = UIColor.appColor(.SelectionColor)
-            self.userView.backgroundColor = UIColor.white
+            self.driverView.borderWidth = 2
+            self.driverView.borderColor = UIColor(named: "MainColor")
+            self.userView.backgroundColor = UIColor.systemGray5
+            self.driverView.backgroundColor = UIColor.white
+            self.userView.borderColor = UIColor.clear
 
         }
     }
@@ -69,8 +72,12 @@ class SelectUserTypeVC: BaseVC {
         deiverCheackBox.checkState = .unchecked
 
         UIView.animate(withDuration: 0.5) {
-            self.userView.backgroundColor = UIColor.appColor(.SelectionColor)
-            self.driverView.backgroundColor = UIColor.white
+            self.userView.borderWidth = 2
+            self.userView.borderColor = UIColor(named: "MainColor")
+            self.driverView.backgroundColor = UIColor.systemGray5
+            self.userView.backgroundColor = UIColor.white
+            self.driverView.borderColor = UIColor.clear
+           
         }
 
         print("Driver")
@@ -79,13 +86,13 @@ class SelectUserTypeVC: BaseVC {
     // MARK: - Actions -
 
     @IBAction func continueAction(_ sender: Any) {
-        let vc = RegisterVC()
+        let vc =  homeVC()
 
-        if selectedType == "User" {
-            vc.typeOfLogin = .user
-        } else {
-            vc.typeOfLogin = .driver
-        }
+//        if selectedType == "User" {
+//            vc.typeOfLogin = .user
+//        } else {
+//            vc.typeOfLogin = .driver
+//        }
         self.push(vc)
     }
 }

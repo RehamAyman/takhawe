@@ -55,4 +55,53 @@ extension UIStackView {
         self.reloadData(animationDirection: .up)
     }
 
+    
+    
+    
+// added
+    
+//MARK: - BUS ANIMATION 🚗
+    func busAnimation  ( item : UIImageView) {
+        self.reloadBusItem(animationDirection: .right, item: item)
+    }
+    
+
+    private func reloadBusItem(animationDirection: AnimationDirection , item : UIImageView) {
+        self.layoutIfNeeded()
+        let views = self.arrangedSubviews
+        let tableHeight: CGFloat = self.bounds.size.height
+
+        for i in views {
+            
+            if i == item {
+                
+                switch animationDirection {
+                case .up:
+                    item.transform = CGAffineTransform(translationX: 0, y: -tableHeight)
+                    break
+                case .down:
+                    item.transform = CGAffineTransform(translationX: 0, y: tableHeight)
+                    break
+                case .left:
+                    item.transform = CGAffineTransform(translationX: tableHeight, y: 0)
+                    break
+                case .right:
+                    item.transform = CGAffineTransform(translationX: -tableHeight, y: 0)
+                    break
+                }
+                UIView.animate(withDuration: 1.0, delay: 0.08 , usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
+                    item.transform = CGAffineTransform(translationX: 0, y: 0)
+                }, completion: nil)
+                
+            }
+            
+            
+         
+           
+           
+        }
+    }
 }
+
+
+

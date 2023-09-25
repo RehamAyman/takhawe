@@ -270,7 +270,12 @@ extension OTPFieldView: UITextFieldDelegate {
                 textField.text = " "
             } else {
                 if secureEntry {
-                    textField.text = "•"
+                    textField.text = "◉"
+                    if #available(iOS 11.0, *) {
+                        textField.textColor = UIColor(named: "MainColor")
+                    } else {
+                        // Fallback on earlier versions
+                    }
                 } else {
                     textField.text = string
                 }

@@ -12,5 +12,7 @@ source 'https://cdn.cocoapods.org/'
 
 
   pod 'OTPFieldView', :git => 'https://github.com/AbdallaTarek/OTPFieldView.git'
+  pod 'SGDigitTextField'
+  pod 'CHIOTPField', '~> 0.1'
 
 end

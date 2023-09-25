@@ -25,13 +25,16 @@ class UIShowHideTextField: UITextField {
     }
 
     func commonInit() {
-        rightButton.setImage(UIImage(systemName: "eye.fill"), for: .normal)
+        rightButton.setImage(UIImage(systemName:  "eye.slash.fill"), for: .normal)
         rightButton.addTarget(self, action: #selector(toggleShowHide), for: .touchUpInside)
-        rightButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-
+        rightButton.frame = CGRect(x: 0 , y: 0, width: 30, height: 30)
+        rightButton.backgroundColor = UIColor.clear
+        var configuration = UIButton.Configuration.plain() // there are several options to choose from instead of .plain()
+        configuration.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 8 , bottom: 0, trailing: 8)
+        rightButton.configuration = configuration
         layer.cornerRadius = layer.frame.height / 2
         layer.shadowRadius = 5
-
+     
         if Language.isRTL() {
             print("Right")
             self.setRightPaddingPoints(10)
@@ -56,9 +59,10 @@ class UIShowHideTextField: UITextField {
     func toggle() {
         isSecureTextEntry = !isSecureTextEntry
         if isSecureTextEntry {
-            rightButton.setImage(UIImage(systemName: "eye.fill"), for: .normal)
-        } else {
+            
             rightButton.setImage(UIImage(systemName: "eye.slash.fill"), for: .normal)
+        } else {
+            rightButton.setImage(UIImage(systemName: "eye.fill"), for: .normal)
         }
     }
 
