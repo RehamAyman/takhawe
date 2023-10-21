@@ -21,13 +21,18 @@ struct tap2: View {
           
           Image("padlock 1")
                 .resizable()
-             //   .frame(width:  UIScreen.main.bounds.width * 0.3 , height: UIScreen.main.bounds.width * 0.23 )
-                .frame(width: 120 , height:  120 )
+                .frame(width:  UIScreen.main.bounds.width * 0.3)
+                .frame(height:  UIScreen.main.bounds.height * 0.15)
                 .padding(8)
             
             SecureInputView( "Enter New Password" , text: $email)
+                .submitLabel(.done)
+             
             SecureInputView( "Confirm Password" , text: $confirmPassword)
-               
+                .submitLabel(.done)
+              
+            
+            
             HStack{
                 
                 Image( checkTerms ?  "checkbox" : "UNcheckbox")
@@ -52,7 +57,7 @@ struct tap2: View {
             }.padding()
             
            
-               
+            Spacer()
         }.padding(8)
     }
 }

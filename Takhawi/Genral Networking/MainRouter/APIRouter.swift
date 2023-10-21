@@ -234,3 +234,27 @@ extension APIRouter {
     }
 
 }
+
+
+
+
+
+class API: NSObject {
+    class func GET(url: String, completion: @escaping (_ succeeded: Bool, _ result: [String: AnyObject]) -> Void) {
+        //        KRProgressHUD.show()
+       
+        AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).response { (respone) in
+            switch respone.result {
+            case .failure(let error):
+                print(error)
+                completion(false, [:])
+            //                KRProgressHUD.dismiss()
+            case .success(let value):
+                print("😇😇😇😇😇😇😇")
+                print(value)
+                completion(true, value as! [String: AnyObject])
+                //                KRProgressHUD.dismiss()
+            }
+        }
+    }
+}

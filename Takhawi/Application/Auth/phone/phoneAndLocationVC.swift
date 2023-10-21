@@ -23,7 +23,7 @@ class phoneAndLocationVC: BaseVC, UITextFieldDelegate {
 //MARK: - Design Methods -
     private func configureInitialDesign() {
         self.title = "".localized
-        self.mainStackView.busAnimation(item: self.logoImage)
+       // self.mainStackView.busAnimation(item: self.logoImage)
         self.passwordTextField.delegate = self
    
     }
@@ -47,10 +47,13 @@ class phoneAndLocationVC: BaseVC, UITextFieldDelegate {
             
             if passwordTextField.text == "00 000 0000" { // let us assume this is old user phone
                 let vc = enterPasswordVC()
+                dismissKeyboard()
                 push(vc)
             } else { // new user
                 let vc = registerTapsVC()
+                dismissKeyboard()
                 push(vc)
+                
             }
            
    

@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+
+
+
+
+
 struct registerTabs: View {
     @State private var tabSelection = 1
     var action: () -> Void
@@ -18,18 +23,19 @@ struct registerTabs: View {
         VStack (  alignment: .center, spacing: 12 ) {
             
             
-            Button {
-                // go back
-                self.BackAction()
-            } label: {
+          
                 HStack {
                     Image( "Group 25")
                         .resizable()
-                        .frame(width: 30  , height : 30  )
+                        .frame(width: 40  , height : 40  )
+                        .onTapGesture {
+                            self.BackAction()
+                        }
                     Spacer()
-                }.padding()
+                }.padding(.leading)
+                .padding(.trailing)
                
-            }
+                .padding(.top)
 
             Text ("Signup")
                  .font(.custom(AppFont.Bold.rawValue, size: 30))
@@ -49,9 +55,9 @@ struct registerTabs: View {
                     
                        
                 }.padding(8)
-                .padding(.leading)
-                .padding(.trailing)
-             
+                .padding(.leading , 50 )
+                .padding(.trailing , 50 )
+                .fixedSize(horizontal: false, vertical: true)
             
                 TabView (selection: $tabSelection) {
                     tap1()
@@ -67,7 +73,8 @@ struct registerTabs: View {
                 } .tabViewStyle(.page(indexDisplayMode: .never))
                 .padding(.leading , 20 )
                 .padding(.trailing , 20 )
-            
+                .frame(height : UIScreen.main.bounds.height * 0.41)
+                
             Spacer()
             
             HStack ( spacing: 10) {
@@ -100,13 +107,18 @@ struct registerTabs: View {
                     .background(Color("MainColor"))
                     .cornerRadius(27.5)
                     .padding(25)
-                    .shadow(color: Color("MainColor").opacity(0.6), radius: 5 , x: 0 , y: 3)
+                    .shadow(color: Color("MainColor").opacity(0.6), radius: 3 , x: 0 , y: 3)
             }
+           
         }
           
             .background(Color("BackGroundColor"))
-            
-            
+         
+           // .keyboardAdaptive()
+        .ignoresSafeArea(.keyboard, edges: .bottom)
+          //  force app to be left just for now
+            .environment(\.layoutDirection,   .leftToRight  )
+        
     }
 }
 

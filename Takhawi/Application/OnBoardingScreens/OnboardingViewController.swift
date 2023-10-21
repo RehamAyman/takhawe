@@ -30,8 +30,8 @@ class OnboardingViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
 
-        let vc =  phoneAndLocationVC()  //  LoginVC()//
-
+    let vc =  phoneAndLocationVC()  //  LoginVC()//
+      //    let vc = homeVC()
 //        self.navigationController?.pushViewController(vc, animated: true)
 
         let nav = CustomNavigationController(rootViewController: vc)

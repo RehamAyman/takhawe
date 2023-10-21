@@ -13,7 +13,8 @@ struct tab4: View {
         VStack {
          Image ( "id-card 1")
                 .resizable()
-                .frame(width: 140  , height:  140 , alignment: .center)
+                .frame(width:  UIScreen.main.bounds.width * 0.3)
+                .frame(height:  UIScreen.main.bounds.height * 0.15)
             
             TextField( "Enter Your Full Name" , text: $fullName )
                 .font(.custom(AppFont.Regular.rawValue, size: 14))

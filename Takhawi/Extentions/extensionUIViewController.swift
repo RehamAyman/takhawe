@@ -6,7 +6,7 @@
 //
 
 import AVKit
-import IQKeyboardManagerSwift
+//import IQKeyboardManagerSwift
 import Kingfisher
 import UIKit
 

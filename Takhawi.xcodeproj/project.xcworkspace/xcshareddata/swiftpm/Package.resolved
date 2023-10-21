@@ -136,6 +136,15 @@
       }
     },
     {
+      "identity" : "miotpverificationspm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Mindinventory/MIOTPVerificationSPM.git",
+      "state" : {
+        "revision" : "e7680607aca63ed2888678a5a1b44eb3bdf5b0d2",
+        "version" : "1.10.0"
+      }
+    },
+    {
       "identity" : "nanopb",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/firebase/nanopb.git",

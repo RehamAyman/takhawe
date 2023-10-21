@@ -25,10 +25,9 @@ class registerTapsVC: BaseVC {
         print("here i catch next button  well 🥳")
         let vc = SelectUserTypeVC()
         self.navigationController?.pushViewController(vc, animated: true)
-        
    } BackAction: {
        print("hello i catch back action well 🥳 ")
-       self.pop()
+       self.pop(animated: true)
    } )
     
     
@@ -40,6 +39,7 @@ class registerTapsVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureInitialDesign()
+        self.navigationController?.navigationBar.isHidden = true
         self.importSwiftuiView()
     }
     

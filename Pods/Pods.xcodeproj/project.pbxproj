@@ -6,126 +6,210 @@
 	objectVersion = 55;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		0C1885900810601510E0C632060FAF26 /* GooglePlaces */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 7D29BFAF01DAA6577AB08F1CFD73E21D /* Build configuration list for PBXAggregateTarget "GooglePlaces" */;
+			buildPhases = (
+			);
+			dependencies = (
+				8149BC6949C8233B8FE75575AE25F231 /* PBXTargetDependency */,
+			);
+			name = GooglePlaces;
+		};
+		885917490BC3F1DF8613D63A80B4E196 /* GooglePlacePicker */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = E6CF2221486E05140006A4A6B5D537FC /* Build configuration list for PBXAggregateTarget "GooglePlacePicker" */;
+			buildPhases = (
+			);
+			dependencies = (
+				2C9A3B6313E1D2C550B27F354DB1BDB9 /* PBXTargetDependency */,
+				E8E09E1364A5E8F4AF538D301C18ACDE /* PBXTargetDependency */,
+			);
+			name = GooglePlacePicker;
+		};
+		E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 46921981F609C5BA3CB72EC4EA41299D /* Build configuration list for PBXAggregateTarget "GoogleMaps" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = GoogleMaps;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		0C3E413CA7F026333A902C1C69962013 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		10335D14025453F4B3465115F8AB97A9 /* Pods-Takhawi-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EEED1AAF3906889A20150E2E00958F05 /* Pods-Takhawi-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		151282AA8AD6456C545F9D601C3FF5B3 /* SGDigitTextField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A780CD3B6016F074F1A8D7287FA75E0D /* SGDigitTextField-dummy.m */; };
-		184AC97C82D418CB1767BF946264F25A /* CHIOTPField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBA7AD8258B0F28AAC85BB3D4042789 /* CHIOTPField-dummy.m */; };
-		19566CED5C43AB99F059D9DA194B80A7 /* OTPFieldView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F083975CDE47F2D03B7B949A02288CED /* OTPFieldView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		25F4247C8510B49D352935BA784792DC /* CHIOTPFieldFourLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37893EAC0F598BF55340A6B16373480 /* CHIOTPFieldFourLabel.swift */; };
-		31598CDE82FEDDE9058EB9C730A8C285 /* CHIOTPFieldTwoLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADF6580D97ACEF2530F5881AE83A82F /* CHIOTPFieldTwoLabel.swift */; };
-		3257D951614E18B79FC13209671A943A /* SGDigitTextField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 14426F0C70EC9AA51FB38A6E7BA6E6F7 /* SGDigitTextField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		39A0A6FD7854941AD9229644035CDB23 /* CHIOTPFieldThreeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A7A0381EDFB793CAA922EC41B3CA9 /* CHIOTPFieldThreeLabel.swift */; };
-		50BFBACEF843304F9B104A891FA9D96A /* CHIOTPFieldThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F29EFCFD999FADA116337F287582DC /* CHIOTPFieldThree.swift */; };
-		592C2643633CDC3B17F08392489E3912 /* Pods-Takhawi-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 192883E6BAEAFC28BCCECD15259A48D0 /* Pods-Takhawi-dummy.m */; };
-		5D9DBD3DCD3DD7CC74B8691213BF2E0B /* CHIOTPField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169B5935622643B669D45876A2DAC8E4 /* CHIOTPField.swift */; };
-		619D4A3F93A9608497B9FFBC482612EC /* CHIOTPField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E5910588D65F53AA01CC4B5ADA6C923 /* CHIOTPField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6DC83986392F59F1CD53A603674D499F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		778D379DA472B7960C3AD5793AC46BE0 /* OTPFieldView.h in Headers */ = {isa = PBXBuildFile; fileRef = A0239E546C5A6A60C6A7A9683707D872 /* OTPFieldView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9BDF600E161D1F30FA6CC596AE211AB6 /* CHIOTPFieldTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBAE595B20689F4066E628DEE5AADDA /* CHIOTPFieldTwo.swift */; };
-		9DB4CBDFE92F4E8ED8DEF17B0D55548B /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B814C5E29E1BC6931629C88BDACF10 /* OTPTextField.swift */; };
+		184AC97C82D418CB1767BF946264F25A /* CHIOTPField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FCD92B23066481BDE095A33B4F4579 /* CHIOTPField-dummy.m */; };
+		19566CED5C43AB99F059D9DA194B80A7 /* OTPFieldView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 63C5294CFAFB2E3AD297C4032EF41AB6 /* OTPFieldView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		25F4247C8510B49D352935BA784792DC /* CHIOTPFieldFourLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44836A69A975951CB82D977C89148A52 /* CHIOTPFieldFourLabel.swift */; };
+		26190E32DFA7E0AC07DDAF80E860F359 /* Pods-Takhawi-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5193907EE9E9DFFA03D7E7DCA0118D1E /* Pods-Takhawi-dummy.m */; };
+		31598CDE82FEDDE9058EB9C730A8C285 /* CHIOTPFieldTwoLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C070162A8EF761E288670BB95046B281 /* CHIOTPFieldTwoLabel.swift */; };
+		39A0A6FD7854941AD9229644035CDB23 /* CHIOTPFieldThreeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACD7AF08D3CF454E4C2EC40E26F67F7 /* CHIOTPFieldThreeLabel.swift */; };
+		4671398F69B53D5989414A6CEE1D8C30 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876086326AAA906BDDD88AFEFAB3C809 /* UIKitExtensions.swift */; };
+		49695EB8E2064D1E33F7417A4BB02D02 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		50BFBACEF843304F9B104A891FA9D96A /* CHIOTPFieldThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1BF02A30AE8FA9F021F1E179B0DE48 /* CHIOTPFieldThree.swift */; };
+		5D9DBD3DCD3DD7CC74B8691213BF2E0B /* CHIOTPField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD4D3FFFBA6C90FA27C71B76E6DEC4B /* CHIOTPField.swift */; };
+		619D4A3F93A9608497B9FFBC482612EC /* CHIOTPField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C26FC158840A9DCF858F9074D187E1F1 /* CHIOTPField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		659B1F8EA25E1E0117966342E2B65C07 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		778D379DA472B7960C3AD5793AC46BE0 /* OTPFieldView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C8B7FF67D7DB61ABB085CD4865E2F15 /* OTPFieldView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9BDF600E161D1F30FA6CC596AE211AB6 /* CHIOTPFieldTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1FFFE63E029F2D5EECE06CCBFF84B9 /* CHIOTPFieldTwo.swift */; };
+		9DB4CBDFE92F4E8ED8DEF17B0D55548B /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDDE8A6B5D13FE2FB96133834EA8B42 /* OTPTextField.swift */; };
+		A1B74155626A3DA480C9316AF3FF8DC0 /* EasyTipView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F48251B79925C9AEDF764E4F5EB5CF7C /* EasyTipView-dummy.m */; };
 		A60AE45490BFB435DFE76393A09D4400 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		A61CCA76E7B9AD663CC54E5F4C6290A1 /* CHIOTPFieldOneLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D88034707B0D6970EBDE9C5DD26BE1 /* CHIOTPFieldOneLabel.swift */; };
-		AE3A3FF9A48A17875E549C5C3DC3FC1B /* OTPFieldView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA9003AEA97A9AF721BD3A971FA4AEC /* OTPFieldView-dummy.m */; };
-		BE8D87E9D13B2442195F465B84E3DE57 /* OTPLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C0DF36C242EF1ACD2BED371A09AB9D /* OTPLabel.swift */; };
-		BF5C187D8C85AB3548B6EA7CE4B3B032 /* OTPFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FA3F39C52A116D7767BD46FC95ADE0 /* OTPFieldView.swift */; };
-		CB388B0CFB5597E5DBA215A4FA90C285 /* CHIOTPFieldOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E3FBEE40DB049DE9515B7234E0A008 /* CHIOTPFieldOne.swift */; };
-		D8E46EAFCDA8C054F83730F21C3EA7DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		DB1349B2AE88662D69CD282A91FB4E7C /* CHIOTPFieldFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C7169A71E5CD41F6BF73BAB01776DC /* CHIOTPFieldFour.swift */; };
-		F07BBFC709F84A43D361BF31D052FE9F /* SGDigitTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBE80B79C0353A21CE815C2B54A7B91 /* SGDigitTextField.swift */; };
+		A61CCA76E7B9AD663CC54E5F4C6290A1 /* CHIOTPFieldOneLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA6F8CC25B108FE254BBD38A694F627 /* CHIOTPFieldOneLabel.swift */; };
+		AE3A3FF9A48A17875E549C5C3DC3FC1B /* OTPFieldView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFB5BB4E5ABD7EBD9A5A6E77E6C0846 /* OTPFieldView-dummy.m */; };
+		BE8D87E9D13B2442195F465B84E3DE57 /* OTPLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA21EE6314135A8366F10181B00AFBA6 /* OTPLabel.swift */; };
+		BF5C187D8C85AB3548B6EA7CE4B3B032 /* OTPFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEF6B8056A74F3AE040AB7E673C0391 /* OTPFieldView.swift */; };
+		CB388B0CFB5597E5DBA215A4FA90C285 /* CHIOTPFieldOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1421A14BB4F53671F94F5491D2C3FB98 /* CHIOTPFieldOne.swift */; };
+		D09341A5DADC4D6C7BAE2E892B48E111 /* EasyTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657B23CF073D69B166E96189123FC4E1 /* EasyTipView.swift */; };
+		DB1349B2AE88662D69CD282A91FB4E7C /* CHIOTPFieldFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFE18C5481588FB9D325FE9FBDF699C /* CHIOTPFieldFour.swift */; };
+		E344296D5F4DB09A8FACA769581D644D /* EasyTipView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C4D1B0A7BF0AB5DE3FAA49FD35511E3A /* EasyTipView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F7F0642A45EA3FC27E1A1965859049C9 /* Pods-Takhawi-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 90CDC3C09CA1414C5B09A2F2661A5869 /* Pods-Takhawi-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		89F67AFA9BC558A1FCDFBBECBD6B85F7 /* PBXContainerItemProxy */ = {
+		0037C4DB7FB6C4A259BB002138570699 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 611F5A158CECA35CD3732830A42CE76E;
-			remoteInfo = SGDigitTextField;
+			remoteGlobalIDString = 048D21E3C8151CD23D428D38093E1538;
+			remoteInfo = EasyTipView;
 		};
-		D89DF785BBC29B5EB6BD7604665F1E9B /* PBXContainerItemProxy */ = {
+		04B1463B59F38EB600530BE69905EAF6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3BFA50DA07196AD4DB6512C559850F45;
-			remoteInfo = OTPFieldView;
+			remoteGlobalIDString = 0C1885900810601510E0C632060FAF26;
+			remoteInfo = GooglePlaces;
 		};
-		EF9FC853045F9D72B9F58283E9CD3B20 /* PBXContainerItemProxy */ = {
+		8987D48CEC5EE899A9E339F79C8AC0BB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2C3802DE25FD87315162839684885A04;
 			remoteInfo = CHIOTPField;
 		};
+		AFBF4F262B68F434CE3BDFC9486E3303 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5B4BBC6DD552AC8943C7E22772FC1D3;
+			remoteInfo = GoogleMaps;
+		};
+		B1021EEBD6405B99AA964B5E060EC535 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5B4BBC6DD552AC8943C7E22772FC1D3;
+			remoteInfo = GoogleMaps;
+		};
+		B882F46005AFEAD7A1F1215D627BCD90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5B4BBC6DD552AC8943C7E22772FC1D3;
+			remoteInfo = GoogleMaps;
+		};
+		D249A542D7FF637BD1A9F1CC22A530BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 885917490BC3F1DF8613D63A80B4E196;
+			remoteInfo = GooglePlacePicker;
+		};
+		E533BBD203FA09B0AE13AAB9D9211149 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C1885900810601510E0C632060FAF26;
+			remoteInfo = GooglePlaces;
+		};
+		F70B0A47D586D4618FBD92D39493085A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BFA50DA07196AD4DB6512C559850F45;
+			remoteInfo = OTPFieldView;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		052D7F24D619408CEF320A9A29465F26 /* OTPFieldView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OTPFieldView.release.xcconfig; sourceTree = "<group>"; };
-		11E3FBEE40DB049DE9515B7234E0A008 /* CHIOTPFieldOne.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIOTPFieldOne.swift; path = Sources/CHIOTPFieldOne/CHIOTPFieldOne.swift; sourceTree = "<group>"; };
-		13F7ECE194343A9624F75C80B236A4A7 /* CHIOTPField.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CHIOTPField.release.xcconfig; sourceTree = "<group>"; };
-		14426F0C70EC9AA51FB38A6E7BA6E6F7 /* SGDigitTextField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SGDigitTextField-umbrella.h"; sourceTree = "<group>"; };
-		169B5935622643B669D45876A2DAC8E4 /* CHIOTPField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIOTPField.swift; path = Sources/Base/CHIOTPField.swift; sourceTree = "<group>"; };
-		192883E6BAEAFC28BCCECD15259A48D0 /* Pods-Takhawi-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Takhawi-dummy.m"; sourceTree = "<group>"; };
-		280209679C62DED4F7B4478AC35FD6AA /* CHIOTPField.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CHIOTPField.debug.xcconfig; sourceTree = "<group>"; };
-		296B5A83BF8060C108FF7824EAE1F99A /* SGDigitTextField */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SGDigitTextField; path = SGDigitTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C5F4A7C49122A91A642216E73DE5C01 /* OTPFieldView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "OTPFieldView-Info.plist"; sourceTree = "<group>"; };
-		3128F12062ACC6F41999FDCC7461BBCD /* Pods-Takhawi-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Takhawi-frameworks.sh"; sourceTree = "<group>"; };
-		3FA9003AEA97A9AF721BD3A971FA4AEC /* OTPFieldView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OTPFieldView-dummy.m"; sourceTree = "<group>"; };
-		40D88034707B0D6970EBDE9C5DD26BE1 /* CHIOTPFieldOneLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIOTPFieldOneLabel.swift; path = Sources/CHIOTPFieldOne/CHIOTPFieldOneLabel.swift; sourceTree = "<group>"; };
-		45A3527C77EB0284DB04666CD92EB57E /* SGDigitTextField-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SGDigitTextField-Info.plist"; sourceTree = "<group>"; };
-		45C7169A71E5CD41F6BF73BAB01776DC /* CHIOTPFieldFour.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIOTPFieldFour.swift; path = Sources/CHIOTPFieldFour/CHIOTPFieldFour.swift; sourceTree = "<group>"; };
-		59B68A4010941B4A071ACEA0B26FBD62 /* Pods-Takhawi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Takhawi.release.xcconfig"; sourceTree = "<group>"; };
-		5C5FE42BE2BB0D8E82E1A25407245C70 /* CHIOTPField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CHIOTPField-prefix.pch"; sourceTree = "<group>"; };
-		61B814C5E29E1BC6931629C88BDACF10 /* OTPTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OTPTextField.swift; path = OTPFieldView/OTPTextField.swift; sourceTree = "<group>"; };
-		67FA3F39C52A116D7767BD46FC95ADE0 /* OTPFieldView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OTPFieldView.swift; path = OTPFieldView/OTPFieldView.swift; sourceTree = "<group>"; };
-		6C9B05ACBF537EB06C34BCE35C3E6727 /* Pods-Takhawi-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Takhawi-acknowledgements.plist"; sourceTree = "<group>"; };
-		6E4B4D2C9BCD7A24AFDE6E46E50CB0DC /* OTPFieldView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = OTPFieldView.modulemap; sourceTree = "<group>"; };
-		6E5910588D65F53AA01CC4B5ADA6C923 /* CHIOTPField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CHIOTPField-umbrella.h"; sourceTree = "<group>"; };
+		041115CD33582673327014C9BF094527 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		04D0636D5183E42EB0433AC499474681 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
+		0B89CDD651135B86165C4B3FD9A34E88 /* GooglePlacePicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GooglePlacePicker.debug.xcconfig; sourceTree = "<group>"; };
+		0DDDE8A6B5D13FE2FB96133834EA8B42 /* OTPTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OTPTextField.swift; path = OTPFieldView/OTPTextField.swift; sourceTree = "<group>"; };
+		137683A74779CA3A05FEEC573AC8EA73 /* CHIOTPField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CHIOTPField.modulemap; sourceTree = "<group>"; };
+		1421A14BB4F53671F94F5491D2C3FB98 /* CHIOTPFieldOne.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIOTPFieldOne.swift; path = Sources/CHIOTPFieldOne/CHIOTPFieldOne.swift; sourceTree = "<group>"; };
+		2E02ED5D21E097C5D64E69C5C1174178 /* OTPFieldView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "OTPFieldView-Info.plist"; sourceTree = "<group>"; };
+		3D73B427A311058CEA351B9B0E0047C2 /* GooglePlacePicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GooglePlacePicker.release.xcconfig; sourceTree = "<group>"; };
+		42FCD92B23066481BDE095A33B4F4579 /* CHIOTPField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CHIOTPField-dummy.m"; sourceTree = "<group>"; };
+		44836A69A975951CB82D977C89148A52 /* CHIOTPFieldFourLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIOTPFieldFourLabel.swift; path = Sources/CHIOTPFieldFour/CHIOTPFieldFourLabel.swift; sourceTree = "<group>"; };
+		4BC3FCC60354731F674D36E4106DECD1 /* OTPFieldView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = OTPFieldView.modulemap; sourceTree = "<group>"; };
+		5193907EE9E9DFFA03D7E7DCA0118D1E /* Pods-Takhawi-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Takhawi-dummy.m"; sourceTree = "<group>"; };
+		5303A236B4DD309FA2495A23E273FC24 /* EasyTipView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EasyTipView-prefix.pch"; sourceTree = "<group>"; };
+		535DFF238A55987AAE66E363467E025F /* EasyTipView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EasyTipView.release.xcconfig; sourceTree = "<group>"; };
+		544EEE7B2CB74600386C9D7255287DA9 /* Pods-Takhawi.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Takhawi.modulemap"; sourceTree = "<group>"; };
+		5F0F8E44116BEC71371C6DB7BA7F946C /* Pods-Takhawi-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Takhawi-frameworks.sh"; sourceTree = "<group>"; };
+		63C5294CFAFB2E3AD297C4032EF41AB6 /* OTPFieldView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OTPFieldView-umbrella.h"; sourceTree = "<group>"; };
+		657B23CF073D69B166E96189123FC4E1 /* EasyTipView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EasyTipView.swift; path = Sources/EasyTipView/EasyTipView.swift; sourceTree = "<group>"; };
+		6AB2582D2C88F065EB677DE7246D10DC /* OTPFieldView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OTPFieldView-prefix.pch"; sourceTree = "<group>"; };
+		70E4B48BB50FD28F34437A20D3EE22BE /* GoogleMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleMaps.debug.xcconfig; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		77F29EFCFD999FADA116337F287582DC /* CHIOTPFieldThree.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIOTPFieldThree.swift; path = Sources/CHIOTPFieldThree/CHIOTPFieldThree.swift; sourceTree = "<group>"; };
-		7ADF6580D97ACEF2530F5881AE83A82F /* CHIOTPFieldTwoLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIOTPFieldTwoLabel.swift; path = Sources/CHIOTPFieldTwo/CHIOTPFieldTwoLabel.swift; sourceTree = "<group>"; };
-		7CB5C7B34B14C471B255B222E05BC0E9 /* OTPFieldView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OTPFieldView-prefix.pch"; sourceTree = "<group>"; };
-		7CF017B18402365FC31673ECF0873C9A /* SGDigitTextField.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SGDigitTextField.debug.xcconfig; sourceTree = "<group>"; };
-		83714D87E52A1A78B741D5E127CDF3B1 /* Pods-Takhawi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Takhawi.debug.xcconfig"; sourceTree = "<group>"; };
-		8B93A840DA2E4D0A4DDF97EB841761FE /* SGDigitTextField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SGDigitTextField-prefix.pch"; sourceTree = "<group>"; };
+		76F351A8C2948583E73CFAAD5DDE071C /* CHIOTPField.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CHIOTPField.release.xcconfig; sourceTree = "<group>"; };
+		78149BE809BFEA7F276DCEDE8BFA9C26 /* Pods-Takhawi-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Takhawi-resources.sh"; sourceTree = "<group>"; };
+		7BA6F8CC25B108FE254BBD38A694F627 /* CHIOTPFieldOneLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIOTPFieldOneLabel.swift; path = Sources/CHIOTPFieldOne/CHIOTPFieldOneLabel.swift; sourceTree = "<group>"; };
+		7C8B7FF67D7DB61ABB085CD4865E2F15 /* OTPFieldView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OTPFieldView.h; path = OTPFieldView/OTPFieldView.h; sourceTree = "<group>"; };
+		7CD4D3FFFBA6C90FA27C71B76E6DEC4B /* CHIOTPField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIOTPField.swift; path = Sources/Base/CHIOTPField.swift; sourceTree = "<group>"; };
+		7E2054CA6D82F647E97BD52612BFBF12 /* Pods-Takhawi-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Takhawi-acknowledgements.plist"; sourceTree = "<group>"; };
+		7EFB5BB4E5ABD7EBD9A5A6E77E6C0846 /* OTPFieldView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OTPFieldView-dummy.m"; sourceTree = "<group>"; };
+		876086326AAA906BDDD88AFEFAB3C809 /* UIKitExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIKitExtensions.swift; path = Sources/EasyTipView/UIKitExtensions.swift; sourceTree = "<group>"; };
+		88614CA970892ECA418524535EB710CF /* GooglePlacePicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlacePicker.framework; path = Frameworks/GooglePlacePicker.framework; sourceTree = "<group>"; };
+		8A63F6AA6A1D241970B6D28C2970A8B9 /* EasyTipView */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EasyTipView; path = EasyTipView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D083C961E236F4E584FF0ECD2E2676F /* EasyTipView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EasyTipView.debug.xcconfig; sourceTree = "<group>"; };
+		8D24060125C02A096CC9532FFA30BDA0 /* Pods-Takhawi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Takhawi.release.xcconfig"; sourceTree = "<group>"; };
+		8E1FFFE63E029F2D5EECE06CCBFF84B9 /* CHIOTPFieldTwo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIOTPFieldTwo.swift; path = Sources/CHIOTPFieldTwo/CHIOTPFieldTwo.swift; sourceTree = "<group>"; };
+		90CDC3C09CA1414C5B09A2F2661A5869 /* Pods-Takhawi-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Takhawi-umbrella.h"; sourceTree = "<group>"; };
+		933C8000AE7E0740194754425C588C4C /* EasyTipView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "EasyTipView-Info.plist"; sourceTree = "<group>"; };
+		93AFF9BAD7A70B7E3721CEE0F6E853DD /* OTPFieldView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OTPFieldView.release.xcconfig; sourceTree = "<group>"; };
+		97FB54C11E8ACBFD708B884D23D648CC /* GooglePlaces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GooglePlaces.release.xcconfig; sourceTree = "<group>"; };
+		9BA3EDDC356C0001AECC02215325E34F /* GooglePlaces.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle; sourceTree = "<group>"; };
+		9D885C44871E8C490B3742085E03BC42 /* EasyTipView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EasyTipView.modulemap; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A0239E546C5A6A60C6A7A9683707D872 /* OTPFieldView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OTPFieldView.h; path = OTPFieldView/OTPFieldView.h; sourceTree = "<group>"; };
-		A44C3F7FE093764C823FE8ADD89BC9F2 /* SGDigitTextField.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SGDigitTextField.release.xcconfig; sourceTree = "<group>"; };
-		A59A7A0381EDFB793CAA922EC41B3CA9 /* CHIOTPFieldThreeLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIOTPFieldThreeLabel.swift; path = Sources/CHIOTPFieldThree/CHIOTPFieldThreeLabel.swift; sourceTree = "<group>"; };
-		A780CD3B6016F074F1A8D7287FA75E0D /* SGDigitTextField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SGDigitTextField-dummy.m"; sourceTree = "<group>"; };
-		ABBE80B79C0353A21CE815C2B54A7B91 /* SGDigitTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SGDigitTextField.swift; path = SGDigitTextField/Classes/SGDigitTextField.swift; sourceTree = "<group>"; };
-		AD8ADC1666620E28693BD1F88AE33DE2 /* Pods-Takhawi.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Takhawi.modulemap"; sourceTree = "<group>"; };
-		AEBA7AD8258B0F28AAC85BB3D4042789 /* CHIOTPField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CHIOTPField-dummy.m"; sourceTree = "<group>"; };
-		B37893EAC0F598BF55340A6B16373480 /* CHIOTPFieldFourLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIOTPFieldFourLabel.swift; path = Sources/CHIOTPFieldFour/CHIOTPFieldFourLabel.swift; sourceTree = "<group>"; };
-		BE33AB7CA6BDA5CD5AB090C32C71025D /* SGDigitTextField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SGDigitTextField.modulemap; sourceTree = "<group>"; };
-		BEBAE595B20689F4066E628DEE5AADDA /* CHIOTPFieldTwo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIOTPFieldTwo.swift; path = Sources/CHIOTPFieldTwo/CHIOTPFieldTwo.swift; sourceTree = "<group>"; };
-		BF02D2126B8FE634AD206CDD1E0355D2 /* OTPFieldView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OTPFieldView.debug.xcconfig; sourceTree = "<group>"; };
-		C0C0DF36C242EF1ACD2BED371A09AB9D /* OTPLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OTPLabel.swift; path = Sources/Base/OTPLabel.swift; sourceTree = "<group>"; };
-		D07910DBD43963A86D8E347A8863BA0E /* CHIOTPField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CHIOTPField.modulemap; sourceTree = "<group>"; };
+		A1744945606AFAF6431B6375C971AEB3 /* GoogleMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleMaps.release.xcconfig; sourceTree = "<group>"; };
+		A9BB8AB138C9111F44C1CA94D90ABB69 /* OTPFieldView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OTPFieldView.debug.xcconfig; sourceTree = "<group>"; };
+		AA21EE6314135A8366F10181B00AFBA6 /* OTPLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OTPLabel.swift; path = Sources/Base/OTPLabel.swift; sourceTree = "<group>"; };
+		AACD7AF08D3CF454E4C2EC40E26F67F7 /* CHIOTPFieldThreeLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIOTPFieldThreeLabel.swift; path = Sources/CHIOTPFieldThree/CHIOTPFieldThreeLabel.swift; sourceTree = "<group>"; };
+		AE1BF02A30AE8FA9F021F1E179B0DE48 /* CHIOTPFieldThree.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIOTPFieldThree.swift; path = Sources/CHIOTPFieldThree/CHIOTPFieldThree.swift; sourceTree = "<group>"; };
+		AFEF6B8056A74F3AE040AB7E673C0391 /* OTPFieldView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OTPFieldView.swift; path = OTPFieldView/OTPFieldView.swift; sourceTree = "<group>"; };
+		B8606F62CD006C70DDA564BE495F0B87 /* Pods-Takhawi-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Takhawi-Info.plist"; sourceTree = "<group>"; };
+		B97D625115F08BA3B4F6E7D7272B457E /* Pods-Takhawi-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Takhawi-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C070162A8EF761E288670BB95046B281 /* CHIOTPFieldTwoLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIOTPFieldTwoLabel.swift; path = Sources/CHIOTPFieldTwo/CHIOTPFieldTwoLabel.swift; sourceTree = "<group>"; };
+		C1DF80F808878D4A8FFA03E3FA387DC8 /* GooglePlacePicker.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlacePicker.bundle; path = Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle; sourceTree = "<group>"; };
+		C26FC158840A9DCF858F9074D187E1F1 /* CHIOTPField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CHIOTPField-umbrella.h"; sourceTree = "<group>"; };
+		C4D1B0A7BF0AB5DE3FAA49FD35511E3A /* EasyTipView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EasyTipView-umbrella.h"; sourceTree = "<group>"; };
+		D03D22082F052161FC3716C112C279FD /* CHIOTPField.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CHIOTPField.debug.xcconfig; sourceTree = "<group>"; };
+		D1B772959BD0D37B3EA1D981F489ECB0 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
 		D2CE9B449E089CD356CC4A54329FEE79 /* CHIOTPField */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CHIOTPField; path = CHIOTPField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E77B5127D34AFA820222364C7D9FDB20 /* Pods-Takhawi-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Takhawi-Info.plist"; sourceTree = "<group>"; };
-		EA636F4F2673010FBFB80B1F2A261D3E /* Pods-Takhawi-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Takhawi-acknowledgements.markdown"; sourceTree = "<group>"; };
-		EEED1AAF3906889A20150E2E00958F05 /* Pods-Takhawi-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Takhawi-umbrella.h"; sourceTree = "<group>"; };
-		F083975CDE47F2D03B7B949A02288CED /* OTPFieldView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OTPFieldView-umbrella.h"; sourceTree = "<group>"; };
+		D83D021EAA8C705F7636DBF2C874172F /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Frameworks/GooglePlaces.framework; sourceTree = "<group>"; };
+		DC83B0A72BD6B1B0007F3B4945E26926 /* GooglePlaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GooglePlaces.debug.xcconfig; sourceTree = "<group>"; };
+		DCFE18C5481588FB9D325FE9FBDF699C /* CHIOTPFieldFour.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIOTPFieldFour.swift; path = Sources/CHIOTPFieldFour/CHIOTPFieldFour.swift; sourceTree = "<group>"; };
+		E0AE9116D7040B73D6C7738740C94F92 /* Pods-Takhawi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Takhawi.debug.xcconfig"; sourceTree = "<group>"; };
+		F2BD709965176F78292E969AFBE0243B /* CHIOTPField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CHIOTPField-prefix.pch"; sourceTree = "<group>"; };
+		F48251B79925C9AEDF764E4F5EB5CF7C /* EasyTipView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EasyTipView-dummy.m"; sourceTree = "<group>"; };
 		F7DDDF3321396C0CDA7197B4FE8F124C /* Pods-Takhawi */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Takhawi"; path = Pods_Takhawi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD000C4A7385AD37BF96447F6FE3C0E4 /* CHIOTPField-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CHIOTPField-Info.plist"; sourceTree = "<group>"; };
+		FAE6532E267DADDC4A37310B45F6F672 /* CHIOTPField-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CHIOTPField-Info.plist"; sourceTree = "<group>"; };
 		FD1309C85A2B4DD96C17CEE227B41C92 /* OTPFieldView */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = OTPFieldView; path = OTPFieldView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF62121CFAC31769A4561D02A626014A /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		24B7B0DAE82CAAB277EBB527442CD019 /* Frameworks */ = {
+		18A657F02105B512A9172E9DEC57F9D2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DC83986392F59F1CD53A603674D499F /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3F5E3C6E64678E25D8F6EF479994F878 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D8E46EAFCDA8C054F83730F21C3EA7DA /* Foundation.framework in Frameworks */,
+				49695EB8E2064D1E33F7417A4BB02D02 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +218,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A60AE45490BFB435DFE76393A09D4400 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0DB0AD3A45F6A519361F3DF7B08CA01 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				659B1F8EA25E1E0117966342E2B65C07 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,32 +240,132 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		011F4AA3501D591C9E6DE6E45F4539A7 /* Pods */ = {
+		02FBDBB159B39AB4CC130DFF5B9F3DAB /* GoogleMaps */ = {
 			isa = PBXGroup;
 			children = (
-				9D0ADBEE14133DD9EF3F30B30230B78D /* CHIOTPField */,
-				5ACF5735EA379EAA9E63BDBA6FB8CC47 /* OTPFieldView */,
-				D1438A8EE347530F11FACA23AEC8A260 /* SGDigitTextField */,
+				28EFB3126D4DBA695101C0ED6A1BD94E /* Base */,
+				409F255B951376D6BFF72E1C67925603 /* Maps */,
+				2ECA6F4AD059CE7FCCBBB791F84D5F58 /* Support Files */,
 			);
-			name = Pods;
+			name = GoogleMaps;
+			path = GoogleMaps;
 			sourceTree = "<group>";
 		};
-		439ECBA225B4EC0B38AE62BCB70BD882 /* Three */ = {
+		10DA94A9B9FB0C698EEB5C7196911B11 /* EasyTipView */ = {
+			isa = PBXGroup;
+			children = (
+				657B23CF073D69B166E96189123FC4E1 /* EasyTipView.swift */,
+				876086326AAA906BDDD88AFEFAB3C809 /* UIKitExtensions.swift */,
+				7106B8117C08063CAB2ABB6F4563FD2C /* Support Files */,
+			);
+			name = EasyTipView;
+			path = EasyTipView;
+			sourceTree = "<group>";
+		};
+		1AC774F135099BB573EDC91FF3BF9414 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D83D021EAA8C705F7636DBF2C874172F /* GooglePlaces.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		28EFB3126D4DBA695101C0ED6A1BD94E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D91E92423120E6F30610CA08711FCB7D /* Frameworks */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		2ECA6F4AD059CE7FCCBBB791F84D5F58 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				70E4B48BB50FD28F34437A20D3EE22BE /* GoogleMaps.debug.xcconfig */,
+				A1744945606AFAF6431B6375C971AEB3 /* GoogleMaps.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GoogleMaps";
+			sourceTree = "<group>";
+		};
+		2F24E1F591DAE8A2CE3514B958A4783B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2CE9B449E089CD356CC4A54329FEE79 /* CHIOTPField */,
+				8A63F6AA6A1D241970B6D28C2970A8B9 /* EasyTipView */,
+				FD1309C85A2B4DD96C17CEE227B41C92 /* OTPFieldView */,
+				F7DDDF3321396C0CDA7197B4FE8F124C /* Pods-Takhawi */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B04B57809EFC36359027614B3DA6B65 /* GooglePlacePicker */ = {
+			isa = PBXGroup;
+			children = (
+				622681D58B2EEB732CFDE874CEE9FAEC /* Frameworks */,
+				DA761BD66BB0330F729D29ED43FF47BA /* Resources */,
+				91ACC62F128B1D6F7276F7FDD92C8924 /* Support Files */,
+			);
+			name = GooglePlacePicker;
+			path = GooglePlacePicker;
+			sourceTree = "<group>";
+		};
+		3BB8DE7790C153D8A1FFCD898DF08356 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04D0636D5183E42EB0433AC499474681 /* GoogleMaps.framework */,
+				D1B772959BD0D37B3EA1D981F489ECB0 /* GoogleMapsCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3E8BA7E138BC30AFDBF3D11C1812AC25 /* Three */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Three;
 			sourceTree = "<group>";
 		};
-		49636399EA9BE784E1CC2539F6E74524 /* Products */ = {
+		409F255B951376D6BFF72E1C67925603 /* Maps */ = {
 			isa = PBXGroup;
 			children = (
-				D2CE9B449E089CD356CC4A54329FEE79 /* CHIOTPField */,
-				FD1309C85A2B4DD96C17CEE227B41C92 /* OTPFieldView */,
-				F7DDDF3321396C0CDA7197B4FE8F124C /* Pods-Takhawi */,
-				296B5A83BF8060C108FF7824EAE1F99A /* SGDigitTextField */,
+				3BB8DE7790C153D8A1FFCD898DF08356 /* Frameworks */,
+				A00E2F98FE9653EBDCD4419B27D5A57E /* Resources */,
 			);
-			name = Products;
+			name = Maps;
+			sourceTree = "<group>";
+		};
+		421A9495A776AC0755BC129F4F93D6AD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				137683A74779CA3A05FEEC573AC8EA73 /* CHIOTPField.modulemap */,
+				42FCD92B23066481BDE095A33B4F4579 /* CHIOTPField-dummy.m */,
+				FAE6532E267DADDC4A37310B45F6F672 /* CHIOTPField-Info.plist */,
+				F2BD709965176F78292E969AFBE0243B /* CHIOTPField-prefix.pch */,
+				C26FC158840A9DCF858F9074D187E1F1 /* CHIOTPField-umbrella.h */,
+				D03D22082F052161FC3716C112C279FD /* CHIOTPField.debug.xcconfig */,
+				76F351A8C2948583E73CFAAD5DDE071C /* CHIOTPField.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CHIOTPField";
+			sourceTree = "<group>";
+		};
+		5232299AA54E0CE68D99C0B8CAAE1608 /* Pods-Takhawi */ = {
+			isa = PBXGroup;
+			children = (
+				544EEE7B2CB74600386C9D7255287DA9 /* Pods-Takhawi.modulemap */,
+				B97D625115F08BA3B4F6E7D7272B457E /* Pods-Takhawi-acknowledgements.markdown */,
+				7E2054CA6D82F647E97BD52612BFBF12 /* Pods-Takhawi-acknowledgements.plist */,
+				5193907EE9E9DFFA03D7E7DCA0118D1E /* Pods-Takhawi-dummy.m */,
+				5F0F8E44116BEC71371C6DB7BA7F946C /* Pods-Takhawi-frameworks.sh */,
+				B8606F62CD006C70DDA564BE495F0B87 /* Pods-Takhawi-Info.plist */,
+				78149BE809BFEA7F276DCEDE8BFA9C26 /* Pods-Takhawi-resources.sh */,
+				90CDC3C09CA1414C5B09A2F2661A5869 /* Pods-Takhawi-umbrella.h */,
+				E0AE9116D7040B73D6C7738740C94F92 /* Pods-Takhawi.debug.xcconfig */,
+				8D24060125C02A096CC9532FFA30BDA0 /* Pods-Takhawi.release.xcconfig */,
+			);
+			name = "Pods-Takhawi";
+			path = "Target Support Files/Pods-Takhawi";
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -184,130 +376,111 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		5ACF5735EA379EAA9E63BDBA6FB8CC47 /* OTPFieldView */ = {
+		622681D58B2EEB732CFDE874CEE9FAEC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A0239E546C5A6A60C6A7A9683707D872 /* OTPFieldView.h */,
-				67FA3F39C52A116D7767BD46FC95ADE0 /* OTPFieldView.swift */,
-				61B814C5E29E1BC6931629C88BDACF10 /* OTPTextField.swift */,
-				7D3AE7CE57BE056D4A90BF9F3DCFD15D /* Support Files */,
+				88614CA970892ECA418524535EB710CF /* GooglePlacePicker.framework */,
 			);
-			name = OTPFieldView;
-			path = OTPFieldView;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		66BB2E0D5EBBC055CB7E120661B49297 /* Two */ = {
+		6F8D16F79CA7DB2736B621E43E814CE8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9BA3EDDC356C0001AECC02215325E34F /* GooglePlaces.bundle */,
 			);
-			name = Two;
+			name = Resources;
 			sourceTree = "<group>";
 		};
-		7D3AE7CE57BE056D4A90BF9F3DCFD15D /* Support Files */ = {
+		7106B8117C08063CAB2ABB6F4563FD2C /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				6E4B4D2C9BCD7A24AFDE6E46E50CB0DC /* OTPFieldView.modulemap */,
-				3FA9003AEA97A9AF721BD3A971FA4AEC /* OTPFieldView-dummy.m */,
-				2C5F4A7C49122A91A642216E73DE5C01 /* OTPFieldView-Info.plist */,
-				7CB5C7B34B14C471B255B222E05BC0E9 /* OTPFieldView-prefix.pch */,
-				F083975CDE47F2D03B7B949A02288CED /* OTPFieldView-umbrella.h */,
-				BF02D2126B8FE634AD206CDD1E0355D2 /* OTPFieldView.debug.xcconfig */,
-				052D7F24D619408CEF320A9A29465F26 /* OTPFieldView.release.xcconfig */,
+				9D885C44871E8C490B3742085E03BC42 /* EasyTipView.modulemap */,
+				F48251B79925C9AEDF764E4F5EB5CF7C /* EasyTipView-dummy.m */,
+				933C8000AE7E0740194754425C588C4C /* EasyTipView-Info.plist */,
+				5303A236B4DD309FA2495A23E273FC24 /* EasyTipView-prefix.pch */,
+				C4D1B0A7BF0AB5DE3FAA49FD35511E3A /* EasyTipView-umbrella.h */,
+				8D083C961E236F4E584FF0ECD2E2676F /* EasyTipView.debug.xcconfig */,
+				535DFF238A55987AAE66E363467E025F /* EasyTipView.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/EasyTipView";
+			sourceTree = "<group>";
+		};
+		87828D80FFEAFB7C0C3311BA14A3FBFC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4BC3FCC60354731F674D36E4106DECD1 /* OTPFieldView.modulemap */,
+				7EFB5BB4E5ABD7EBD9A5A6E77E6C0846 /* OTPFieldView-dummy.m */,
+				2E02ED5D21E097C5D64E69C5C1174178 /* OTPFieldView-Info.plist */,
+				6AB2582D2C88F065EB677DE7246D10DC /* OTPFieldView-prefix.pch */,
+				63C5294CFAFB2E3AD297C4032EF41AB6 /* OTPFieldView-umbrella.h */,
+				A9BB8AB138C9111F44C1CA94D90ABB69 /* OTPFieldView.debug.xcconfig */,
+				93AFF9BAD7A70B7E3721CEE0F6E853DD /* OTPFieldView.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/OTPFieldView";
 			sourceTree = "<group>";
 		};
-		986085F74F10C4944FC667CE9B1E392C /* Four */ = {
+		91ACC62F128B1D6F7276F7FDD92C8924 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				0B89CDD651135B86165C4B3FD9A34E88 /* GooglePlacePicker.debug.xcconfig */,
+				3D73B427A311058CEA351B9B0E0047C2 /* GooglePlacePicker.release.xcconfig */,
 			);
-			name = Four;
+			name = "Support Files";
+			path = "../Target Support Files/GooglePlacePicker";
 			sourceTree = "<group>";
 		};
-		9A094217E4D159EF4F42CCA9055FB90D /* Pods-Takhawi */ = {
-			isa = PBXGroup;
-			children = (
-				AD8ADC1666620E28693BD1F88AE33DE2 /* Pods-Takhawi.modulemap */,
-				EA636F4F2673010FBFB80B1F2A261D3E /* Pods-Takhawi-acknowledgements.markdown */,
-				6C9B05ACBF537EB06C34BCE35C3E6727 /* Pods-Takhawi-acknowledgements.plist */,
-				192883E6BAEAFC28BCCECD15259A48D0 /* Pods-Takhawi-dummy.m */,
-				3128F12062ACC6F41999FDCC7461BBCD /* Pods-Takhawi-frameworks.sh */,
-				E77B5127D34AFA820222364C7D9FDB20 /* Pods-Takhawi-Info.plist */,
-				EEED1AAF3906889A20150E2E00958F05 /* Pods-Takhawi-umbrella.h */,
-				83714D87E52A1A78B741D5E127CDF3B1 /* Pods-Takhawi.debug.xcconfig */,
-				59B68A4010941B4A071ACEA0B26FBD62 /* Pods-Takhawi.release.xcconfig */,
-			);
-			name = "Pods-Takhawi";
-			path = "Target Support Files/Pods-Takhawi";
-			sourceTree = "<group>";
-		};
-		9D0ADBEE14133DD9EF3F30B30230B78D /* CHIOTPField */ = {
-			isa = PBXGroup;
-			children = (
-				169B5935622643B669D45876A2DAC8E4 /* CHIOTPField.swift */,
-				45C7169A71E5CD41F6BF73BAB01776DC /* CHIOTPFieldFour.swift */,
-				B37893EAC0F598BF55340A6B16373480 /* CHIOTPFieldFourLabel.swift */,
-				11E3FBEE40DB049DE9515B7234E0A008 /* CHIOTPFieldOne.swift */,
-				40D88034707B0D6970EBDE9C5DD26BE1 /* CHIOTPFieldOneLabel.swift */,
-				77F29EFCFD999FADA116337F287582DC /* CHIOTPFieldThree.swift */,
-				A59A7A0381EDFB793CAA922EC41B3CA9 /* CHIOTPFieldThreeLabel.swift */,
-				BEBAE595B20689F4066E628DEE5AADDA /* CHIOTPFieldTwo.swift */,
-				7ADF6580D97ACEF2530F5881AE83A82F /* CHIOTPFieldTwoLabel.swift */,
-				C0C0DF36C242EF1ACD2BED371A09AB9D /* OTPLabel.swift */,
-				986085F74F10C4944FC667CE9B1E392C /* Four */,
-				B3F8E3305A2433586F5033A508889B41 /* One */,
-				CE073AD4C1E1B878A235AB05D48B1C33 /* Support Files */,
-				439ECBA225B4EC0B38AE62BCB70BD882 /* Three */,
-				66BB2E0D5EBBC055CB7E120661B49297 /* Two */,
-			);
-			name = CHIOTPField;
-			path = CHIOTPField;
-			sourceTree = "<group>";
-		};
-		AFDE130048A887B6B6073CF3A7B6047B /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				9A094217E4D159EF4F42CCA9055FB90D /* Pods-Takhawi */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		B3F8E3305A2433586F5033A508889B41 /* One */ = {
+		9B338BE2415F9E0E0FE03E7D6B8C8ED0 /* One */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = One;
 			sourceTree = "<group>";
 		};
-		C4014285382D0375D72E08F782C6A933 /* Support Files */ = {
+		9BA8DAFAA81799AD213A6A78BA943635 /* OTPFieldView */ = {
 			isa = PBXGroup;
 			children = (
-				BE33AB7CA6BDA5CD5AB090C32C71025D /* SGDigitTextField.modulemap */,
-				A780CD3B6016F074F1A8D7287FA75E0D /* SGDigitTextField-dummy.m */,
-				45A3527C77EB0284DB04666CD92EB57E /* SGDigitTextField-Info.plist */,
-				8B93A840DA2E4D0A4DDF97EB841761FE /* SGDigitTextField-prefix.pch */,
-				14426F0C70EC9AA51FB38A6E7BA6E6F7 /* SGDigitTextField-umbrella.h */,
-				7CF017B18402365FC31673ECF0873C9A /* SGDigitTextField.debug.xcconfig */,
-				A44C3F7FE093764C823FE8ADD89BC9F2 /* SGDigitTextField.release.xcconfig */,
+				7C8B7FF67D7DB61ABB085CD4865E2F15 /* OTPFieldView.h */,
+				AFEF6B8056A74F3AE040AB7E673C0391 /* OTPFieldView.swift */,
+				0DDDE8A6B5D13FE2FB96133834EA8B42 /* OTPTextField.swift */,
+				87828D80FFEAFB7C0C3311BA14A3FBFC /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/SGDigitTextField";
+			name = OTPFieldView;
+			path = OTPFieldView;
 			sourceTree = "<group>";
 		};
-		CE073AD4C1E1B878A235AB05D48B1C33 /* Support Files */ = {
+		9FC3B632B802F82C2798E37203832C75 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D07910DBD43963A86D8E347A8863BA0E /* CHIOTPField.modulemap */,
-				AEBA7AD8258B0F28AAC85BB3D4042789 /* CHIOTPField-dummy.m */,
-				FD000C4A7385AD37BF96447F6FE3C0E4 /* CHIOTPField-Info.plist */,
-				5C5FE42BE2BB0D8E82E1A25407245C70 /* CHIOTPField-prefix.pch */,
-				6E5910588D65F53AA01CC4B5ADA6C923 /* CHIOTPField-umbrella.h */,
-				280209679C62DED4F7B4478AC35FD6AA /* CHIOTPField.debug.xcconfig */,
-				13F7ECE194343A9624F75C80B236A4A7 /* CHIOTPField.release.xcconfig */,
+				D98B1872E794A420BCEC0E255BE0CEBB /* CHIOTPField */,
+				10DA94A9B9FB0C698EEB5C7196911B11 /* EasyTipView */,
+				02FBDBB159B39AB4CC130DFF5B9F3DAB /* GoogleMaps */,
+				3B04B57809EFC36359027614B3DA6B65 /* GooglePlacePicker */,
+				CE3ED14D28E6BC47394DB1F21AE8F644 /* GooglePlaces */,
+				9BA8DAFAA81799AD213A6A78BA943635 /* OTPFieldView */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/CHIOTPField";
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A00E2F98FE9653EBDCD4419B27D5A57E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				041115CD33582673327014C9BF094527 /* GoogleMaps.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		CE3ED14D28E6BC47394DB1F21AE8F644 /* GooglePlaces */ = {
+			isa = PBXGroup;
+			children = (
+				1AC774F135099BB573EDC91FF3BF9414 /* Frameworks */,
+				6F8D16F79CA7DB2736B621E43E814CE8 /* Resources */,
+				F2CC33430249E255001594F1980A34BA /* Support Files */,
+			);
+			name = GooglePlaces;
+			path = GooglePlaces;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -315,20 +488,18 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				011F4AA3501D591C9E6DE6E45F4539A7 /* Pods */,
-				49636399EA9BE784E1CC2539F6E74524 /* Products */,
-				AFDE130048A887B6B6073CF3A7B6047B /* Targets Support Files */,
+				9FC3B632B802F82C2798E37203832C75 /* Pods */,
+				2F24E1F591DAE8A2CE3514B958A4783B /* Products */,
+				CFC9FE32D61D0A9B7D74026FA94BFA2A /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D1438A8EE347530F11FACA23AEC8A260 /* SGDigitTextField */ = {
+		CFC9FE32D61D0A9B7D74026FA94BFA2A /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				ABBE80B79C0353A21CE815C2B54A7B91 /* SGDigitTextField.swift */,
-				C4014285382D0375D72E08F782C6A933 /* Support Files */,
+				5232299AA54E0CE68D99C0B8CAAE1608 /* Pods-Takhawi */,
 			);
-			name = SGDigitTextField;
-			path = SGDigitTextField;
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
@@ -339,9 +510,80 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D50A81F0CD793606DE9E78794FE833BE /* Two */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Two;
+			sourceTree = "<group>";
+		};
+		D91E92423120E6F30610CA08711FCB7D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF62121CFAC31769A4561D02A626014A /* GoogleMapsBase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D98B1872E794A420BCEC0E255BE0CEBB /* CHIOTPField */ = {
+			isa = PBXGroup;
+			children = (
+				7CD4D3FFFBA6C90FA27C71B76E6DEC4B /* CHIOTPField.swift */,
+				DCFE18C5481588FB9D325FE9FBDF699C /* CHIOTPFieldFour.swift */,
+				44836A69A975951CB82D977C89148A52 /* CHIOTPFieldFourLabel.swift */,
+				1421A14BB4F53671F94F5491D2C3FB98 /* CHIOTPFieldOne.swift */,
+				7BA6F8CC25B108FE254BBD38A694F627 /* CHIOTPFieldOneLabel.swift */,
+				AE1BF02A30AE8FA9F021F1E179B0DE48 /* CHIOTPFieldThree.swift */,
+				AACD7AF08D3CF454E4C2EC40E26F67F7 /* CHIOTPFieldThreeLabel.swift */,
+				8E1FFFE63E029F2D5EECE06CCBFF84B9 /* CHIOTPFieldTwo.swift */,
+				C070162A8EF761E288670BB95046B281 /* CHIOTPFieldTwoLabel.swift */,
+				AA21EE6314135A8366F10181B00AFBA6 /* OTPLabel.swift */,
+				F17C5F07DCFC56B18B0071AEAADBC04C /* Four */,
+				9B338BE2415F9E0E0FE03E7D6B8C8ED0 /* One */,
+				421A9495A776AC0755BC129F4F93D6AD /* Support Files */,
+				3E8BA7E138BC30AFDBF3D11C1812AC25 /* Three */,
+				D50A81F0CD793606DE9E78794FE833BE /* Two */,
+			);
+			name = CHIOTPField;
+			path = CHIOTPField;
+			sourceTree = "<group>";
+		};
+		DA761BD66BB0330F729D29ED43FF47BA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C1DF80F808878D4A8FFA03E3FA387DC8 /* GooglePlacePicker.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F17C5F07DCFC56B18B0071AEAADBC04C /* Four */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Four;
+			sourceTree = "<group>";
+		};
+		F2CC33430249E255001594F1980A34BA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC83B0A72BD6B1B0007F3B4945E26926 /* GooglePlaces.debug.xcconfig */,
+				97FB54C11E8ACBFD708B884D23D648CC /* GooglePlaces.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GooglePlaces";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		4D018EBCBC20D588F77BD33B2045E7A7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E344296D5F4DB09A8FACA769581D644D /* EasyTipView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		512D069EA14F2A50E8E6A3F4A49009E5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -351,19 +593,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7C2B92DC84B0BDFF6788CF498DB62DFF /* Headers */ = {
+		E332E42E4049DCEF072CAAE21C25FC13 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3257D951614E18B79FC13209671A943A /* SGDigitTextField-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D5F9BBF5E81DBC2104FF80F594515B68 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				10335D14025453F4B3465115F8AB97A9 /* Pods-Takhawi-umbrella.h in Headers */,
+				F7F0642A45EA3FC27E1A1965859049C9 /* Pods-Takhawi-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +612,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		048D21E3C8151CD23D428D38093E1538 /* EasyTipView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B2DAEC38B1D5BB734E7DF77F6E6B63C /* Build configuration list for PBXNativeTarget "EasyTipView" */;
+			buildPhases = (
+				4D018EBCBC20D588F77BD33B2045E7A7 /* Headers */,
+				6C29ED58712A5B957601500677FF85D4 /* Sources */,
+				D0DB0AD3A45F6A519361F3DF7B08CA01 /* Frameworks */,
+				8D6B9181EEC1D0D2A85D54FE1C01FEBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EasyTipView;
+			productName = EasyTipView;
+			productReference = 8A63F6AA6A1D241970B6D28C2970A8B9 /* EasyTipView */;
+			productType = "com.apple.product-type.framework";
+		};
 		2C3802DE25FD87315162839684885A04 /* CHIOTPField */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 064BB9B9EECEAD91CDAD507B0C287FB4 /* Build configuration list for PBXNativeTarget "CHIOTPField" */;
@@ -414,39 +666,24 @@
 			productReference = FD1309C85A2B4DD96C17CEE227B41C92 /* OTPFieldView */;
 			productType = "com.apple.product-type.framework";
 		};
-		611F5A158CECA35CD3732830A42CE76E /* SGDigitTextField */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B361D73643F420B69D36BE16FD62643D /* Build configuration list for PBXNativeTarget "SGDigitTextField" */;
-			buildPhases = (
-				7C2B92DC84B0BDFF6788CF498DB62DFF /* Headers */,
-				BAE194582CD4F38AF1F00A1A201D9858 /* Sources */,
-				24B7B0DAE82CAAB277EBB527442CD019 /* Frameworks */,
-				8A1363919D1E9265AF17EF50A4408200 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SGDigitTextField;
-			productName = SGDigitTextField;
-			productReference = 296B5A83BF8060C108FF7824EAE1F99A /* SGDigitTextField */;
-			productType = "com.apple.product-type.framework";
-		};
 		F2373F998B02EC2795088F952C79207F /* Pods-Takhawi */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AC075A4896060132AC10606A85419EED /* Build configuration list for PBXNativeTarget "Pods-Takhawi" */;
+			buildConfigurationList = A3D0254356EEDB56800780CC29AFC578 /* Build configuration list for PBXNativeTarget "Pods-Takhawi" */;
 			buildPhases = (
-				D5F9BBF5E81DBC2104FF80F594515B68 /* Headers */,
-				F51E9446926E0EB0FDC7583C40F74504 /* Sources */,
-				3F5E3C6E64678E25D8F6EF479994F878 /* Frameworks */,
-				FD7B8E3A81AEFB4A7EA59501A470BD01 /* Resources */,
+				E332E42E4049DCEF072CAAE21C25FC13 /* Headers */,
+				D17A0AABE3CB8BDDE03CDC1E9AC6E555 /* Sources */,
+				18A657F02105B512A9172E9DEC57F9D2 /* Frameworks */,
+				5BACF12B7910E55CD2FCC423C9D11553 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8D336F59B7519D6D4FA0E3BFB923F395 /* PBXTargetDependency */,
-				E2594E5A8C7CF0EBD4BF188E7BFBEAFC /* PBXTargetDependency */,
-				55A2CCC100461E2A3A0E7B0D5114FCD8 /* PBXTargetDependency */,
+				18E1D15C2CD2B9956E773380BB701442 /* PBXTargetDependency */,
+				4FBA3B46BE2EF155F226BF0C2967DBDC /* PBXTargetDependency */,
+				9831324EE322B8EBF6A30E2BA06466B2 /* PBXTargetDependency */,
+				60BC4C9D5C2B09F8D853C397305F5883 /* PBXTargetDependency */,
+				9C5EF7DE3F140A9AE6D60FFFB27BE8CA /* PBXTargetDependency */,
+				78138229658821F4810958D05A131F4D /* PBXTargetDependency */,
 			);
 			name = "Pods-Takhawi";
 			productName = Pods_Takhawi;
@@ -471,14 +708,17 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 49636399EA9BE784E1CC2539F6E74524 /* Products */;
+			productRefGroup = 2F24E1F591DAE8A2CE3514B958A4783B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				2C3802DE25FD87315162839684885A04 /* CHIOTPField */,
+				048D21E3C8151CD23D428D38093E1538 /* EasyTipView */,
+				E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */,
+				885917490BC3F1DF8613D63A80B4E196 /* GooglePlacePicker */,
+				0C1885900810601510E0C632060FAF26 /* GooglePlaces */,
 				3BFA50DA07196AD4DB6512C559850F45 /* OTPFieldView */,
 				F2373F998B02EC2795088F952C79207F /* Pods-Takhawi */,
-				611F5A158CECA35CD3732830A42CE76E /* SGDigitTextField */,
 			);
 		};
 /* End PBXProject section */
@@ -498,14 +738,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8A1363919D1E9265AF17EF50A4408200 /* Resources */ = {
+		5BACF12B7910E55CD2FCC423C9D11553 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FD7B8E3A81AEFB4A7EA59501A470BD01 /* Resources */ = {
+		8D6B9181EEC1D0D2A85D54FE1C01FEBE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -533,6 +773,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6C29ED58712A5B957601500677FF85D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D09341A5DADC4D6C7BAE2E892B48E111 /* EasyTipView.swift in Sources */,
+				A1B74155626A3DA480C9316AF3FF8DC0 /* EasyTipView-dummy.m in Sources */,
+				4671398F69B53D5989414A6CEE1D8C30 /* UIKitExtensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7169D6FD44672A7DD71CF81A51DCA21C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -543,53 +793,82 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BAE194582CD4F38AF1F00A1A201D9858 /* Sources */ = {
+		D17A0AABE3CB8BDDE03CDC1E9AC6E555 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F07BBFC709F84A43D361BF31D052FE9F /* SGDigitTextField.swift in Sources */,
-				151282AA8AD6456C545F9D601C3FF5B3 /* SGDigitTextField-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F51E9446926E0EB0FDC7583C40F74504 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				592C2643633CDC3B17F08392489E3912 /* Pods-Takhawi-dummy.m in Sources */,
+				26190E32DFA7E0AC07DDAF80E860F359 /* Pods-Takhawi-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		55A2CCC100461E2A3A0E7B0D5114FCD8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SGDigitTextField;
-			target = 611F5A158CECA35CD3732830A42CE76E /* SGDigitTextField */;
-			targetProxy = 89F67AFA9BC558A1FCDFBBECBD6B85F7 /* PBXContainerItemProxy */;
-		};
-		8D336F59B7519D6D4FA0E3BFB923F395 /* PBXTargetDependency */ = {
+		18E1D15C2CD2B9956E773380BB701442 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CHIOTPField;
 			target = 2C3802DE25FD87315162839684885A04 /* CHIOTPField */;
-			targetProxy = EF9FC853045F9D72B9F58283E9CD3B20 /* PBXContainerItemProxy */;
+			targetProxy = 8987D48CEC5EE899A9E339F79C8AC0BB /* PBXContainerItemProxy */;
 		};
-		E2594E5A8C7CF0EBD4BF188E7BFBEAFC /* PBXTargetDependency */ = {
+		2C9A3B6313E1D2C550B27F354DB1BDB9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleMaps;
+			target = E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */;
+			targetProxy = AFBF4F262B68F434CE3BDFC9486E3303 /* PBXContainerItemProxy */;
+		};
+		4FBA3B46BE2EF155F226BF0C2967DBDC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = EasyTipView;
+			target = 048D21E3C8151CD23D428D38093E1538 /* EasyTipView */;
+			targetProxy = 0037C4DB7FB6C4A259BB002138570699 /* PBXContainerItemProxy */;
+		};
+		60BC4C9D5C2B09F8D853C397305F5883 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GooglePlacePicker;
+			target = 885917490BC3F1DF8613D63A80B4E196 /* GooglePlacePicker */;
+			targetProxy = D249A542D7FF637BD1A9F1CC22A530BB /* PBXContainerItemProxy */;
+		};
+		78138229658821F4810958D05A131F4D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = OTPFieldView;
 			target = 3BFA50DA07196AD4DB6512C559850F45 /* OTPFieldView */;
-			targetProxy = D89DF785BBC29B5EB6BD7604665F1E9B /* PBXContainerItemProxy */;
+			targetProxy = F70B0A47D586D4618FBD92D39493085A /* PBXContainerItemProxy */;
+		};
+		8149BC6949C8233B8FE75575AE25F231 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleMaps;
+			target = E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */;
+			targetProxy = B1021EEBD6405B99AA964B5E060EC535 /* PBXContainerItemProxy */;
+		};
+		9831324EE322B8EBF6A30E2BA06466B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleMaps;
+			target = E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */;
+			targetProxy = B882F46005AFEAD7A1F1215D627BCD90 /* PBXContainerItemProxy */;
+		};
+		9C5EF7DE3F140A9AE6D60FFFB27BE8CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GooglePlaces;
+			target = 0C1885900810601510E0C632060FAF26 /* GooglePlaces */;
+			targetProxy = E533BBD203FA09B0AE13AAB9D9211149 /* PBXContainerItemProxy */;
+		};
+		E8E09E1364A5E8F4AF538D301C18ACDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GooglePlaces;
+			target = 0C1885900810601510E0C632060FAF26 /* GooglePlaces */;
+			targetProxy = 04B1463B59F38EB600530BE69905EAF6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1A7AA4D14A2B9609597FACE53520E143 /* Release */ = {
+		0AA8A28C8C749D1715549E3D04340686 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 59B68A4010941B4A071ACEA0B26FBD62 /* Pods-Takhawi.release.xcconfig */;
+			baseConfigurationReference = E0AE9116D7040B73D6C7738740C94F92 /* Pods-Takhawi.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -598,9 +877,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				EXPANDED_CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = "Target Support Files/Pods-Takhawi/Pods-Takhawi-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -608,80 +889,7 @@
 				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Takhawi/Pods-Takhawi.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		3B5E39EF50DD2165A40D9775C9E0971D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 13F7ECE194343A9624F75C80B236A4A7 /* CHIOTPField.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CHIOTPField/CHIOTPField-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CHIOTPField/CHIOTPField-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/CHIOTPField/CHIOTPField.modulemap";
-				PRODUCT_MODULE_NAME = CHIOTPField;
-				PRODUCT_NAME = CHIOTPField;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		4CB4AD6973900162F52F7FD892DD966C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 83714D87E52A1A78B741D5E127CDF3B1 /* Pods-Takhawi.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Takhawi/Pods-Takhawi-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Takhawi/Pods-Takhawi.modulemap";
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -695,10 +903,13 @@
 			};
 			name = Debug;
 		};
-		59A1625EE51292062FFA1A50C4D63B00 /* Release */ = {
+		25FF11868C9E16D275DDAC52EB5AB92B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A44C3F7FE093764C823FE8ADD89BC9F2 /* SGDigitTextField.release.xcconfig */;
+			baseConfigurationReference = 535DFF238A55987AAE66E363467E025F /* EasyTipView.release.xcconfig */;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -707,18 +918,21 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SGDigitTextField/SGDigitTextField-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SGDigitTextField/SGDigitTextField-Info.plist";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				EXPANDED_CODE_SIGN_IDENTITY = "";
+				GCC_PREFIX_HEADER = "Target Support Files/EasyTipView/EasyTipView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EasyTipView/EasyTipView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/SGDigitTextField/SGDigitTextField.modulemap";
-				PRODUCT_MODULE_NAME = SGDigitTextField;
-				PRODUCT_NAME = SGDigitTextField;
+				MODULEMAP_FILE = "Target Support Files/EasyTipView/EasyTipView.modulemap";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_MODULE_NAME = EasyTipView;
+				PRODUCT_NAME = EasyTipView;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -729,6 +943,216 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		26E6FDFFD48A504BD92D86FBD6D8495C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D73B427A311058CEA351B9B0E0047C2 /* GooglePlacePicker.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				EXPANDED_CODE_SIGN_IDENTITY = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3B5E39EF50DD2165A40D9775C9E0971D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76F351A8C2948583E73CFAAD5DDE071C /* CHIOTPField.release.xcconfig */;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				EXPANDED_CODE_SIGN_IDENTITY = "";
+				GCC_PREFIX_HEADER = "Target Support Files/CHIOTPField/CHIOTPField-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CHIOTPField/CHIOTPField-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CHIOTPField/CHIOTPField.modulemap";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_MODULE_NAME = CHIOTPField;
+				PRODUCT_NAME = CHIOTPField;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3C823A8B3CD48784A0CA28EC390FA292 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D083C961E236F4E584FF0ECD2E2676F /* EasyTipView.debug.xcconfig */;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				EXPANDED_CODE_SIGN_IDENTITY = "";
+				GCC_PREFIX_HEADER = "Target Support Files/EasyTipView/EasyTipView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EasyTipView/EasyTipView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/EasyTipView/EasyTipView.modulemap";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_MODULE_NAME = EasyTipView;
+				PRODUCT_NAME = EasyTipView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6CCBCE52FD46D89565DEB676446DB083 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70E4B48BB50FD28F34437A20D3EE22BE /* GoogleMaps.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				EXPANDED_CODE_SIGN_IDENTITY = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6F3369DDFBB426A19F744404DB795F15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D24060125C02A096CC9532FFA30BDA0 /* Pods-Takhawi.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				EXPANDED_CODE_SIGN_IDENTITY = "";
+				INFOPLIST_FILE = "Target Support Files/Pods-Takhawi/Pods-Takhawi-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Takhawi/Pods-Takhawi.modulemap";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7B52AED984E5F96408001A1A7FFB4B3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1744945606AFAF6431B6375C971AEB3 /* GoogleMaps.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				EXPANDED_CODE_SIGN_IDENTITY = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7FDC0CF5DD26C6E632D4FEA97CF3DEEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B89CDD651135B86165C4B3FD9A34E88 /* GooglePlacePicker.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				EXPANDED_CODE_SIGN_IDENTITY = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
 		};
 		90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -858,11 +1282,35 @@
 			};
 			name = Release;
 		};
+		9600EF00410F292C1A3E3E3A2FA12624 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97FB54C11E8ACBFD708B884D23D648CC /* GooglePlaces.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				EXPANDED_CODE_SIGN_IDENTITY = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		9B63404BD7D3F122569C56BB2921CD67 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF02D2126B8FE634AD206CDD1E0355D2 /* OTPFieldView.debug.xcconfig */;
+			baseConfigurationReference = A9BB8AB138C9111F44C1CA94D90ABB69 /* OTPFieldView.debug.xcconfig */;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -871,16 +1319,19 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				EXPANDED_CODE_SIGN_IDENTITY = "";
 				GCC_PREFIX_HEADER = "Target Support Files/OTPFieldView/OTPFieldView-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/OTPFieldView/OTPFieldView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
 				MODULEMAP_FILE = "Target Support Files/OTPFieldView/OTPFieldView.modulemap";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_MODULE_NAME = OTPFieldView;
 				PRODUCT_NAME = OTPFieldView;
 				SDKROOT = iphoneos;
@@ -893,11 +1344,34 @@
 			};
 			name = Debug;
 		};
+		A026B26B532BF27098EC438860A4D441 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC83B0A72BD6B1B0007F3B4945E26926 /* GooglePlaces.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				EXPANDED_CODE_SIGN_IDENTITY = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		A07598AD8F39E0E75E530F013C5CD233 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 052D7F24D619408CEF320A9A29465F26 /* OTPFieldView.release.xcconfig */;
+			baseConfigurationReference = 93AFF9BAD7A70B7E3721CEE0F6E853DD /* OTPFieldView.release.xcconfig */;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -906,16 +1380,19 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				EXPANDED_CODE_SIGN_IDENTITY = "";
 				GCC_PREFIX_HEADER = "Target Support Files/OTPFieldView/OTPFieldView-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/OTPFieldView/OTPFieldView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
 				MODULEMAP_FILE = "Target Support Files/OTPFieldView/OTPFieldView.modulemap";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_MODULE_NAME = OTPFieldView;
 				PRODUCT_NAME = OTPFieldView;
 				SDKROOT = iphoneos;
@@ -931,9 +1408,11 @@
 		};
 		B899ED58102057E0EE4150E7E09188A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 280209679C62DED4F7B4478AC35FD6AA /* CHIOTPField.debug.xcconfig */;
+			baseConfigurationReference = D03D22082F052161FC3716C112C279FD /* CHIOTPField.debug.xcconfig */;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -942,52 +1421,21 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				EXPANDED_CODE_SIGN_IDENTITY = "";
 				GCC_PREFIX_HEADER = "Target Support Files/CHIOTPField/CHIOTPField-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/CHIOTPField/CHIOTPField-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
 				MODULEMAP_FILE = "Target Support Files/CHIOTPField/CHIOTPField.modulemap";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_MODULE_NAME = CHIOTPField;
 				PRODUCT_NAME = CHIOTPField;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		F276F411CD3B3F13F1C303D951F02F58 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7CF017B18402365FC31673ECF0873C9A /* SGDigitTextField.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SGDigitTextField/SGDigitTextField-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SGDigitTextField/SGDigitTextField-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SGDigitTextField/SGDigitTextField.modulemap";
-				PRODUCT_MODULE_NAME = SGDigitTextField;
-				PRODUCT_NAME = SGDigitTextField;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -1010,6 +1458,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		46921981F609C5BA3CB72EC4EA41299D /* Build configuration list for PBXAggregateTarget "GoogleMaps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CCBCE52FD46D89565DEB676446DB083 /* Debug */,
+				7B52AED984E5F96408001A1A7FFB4B3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1028,20 +1485,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AC075A4896060132AC10606A85419EED /* Build configuration list for PBXNativeTarget "Pods-Takhawi" */ = {
+		6B2DAEC38B1D5BB734E7DF77F6E6B63C /* Build configuration list for PBXNativeTarget "EasyTipView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4CB4AD6973900162F52F7FD892DD966C /* Debug */,
-				1A7AA4D14A2B9609597FACE53520E143 /* Release */,
+				3C823A8B3CD48784A0CA28EC390FA292 /* Debug */,
+				25FF11868C9E16D275DDAC52EB5AB92B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B361D73643F420B69D36BE16FD62643D /* Build configuration list for PBXNativeTarget "SGDigitTextField" */ = {
+		7D29BFAF01DAA6577AB08F1CFD73E21D /* Build configuration list for PBXAggregateTarget "GooglePlaces" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F276F411CD3B3F13F1C303D951F02F58 /* Debug */,
-				59A1625EE51292062FFA1A50C4D63B00 /* Release */,
+				A026B26B532BF27098EC438860A4D441 /* Debug */,
+				9600EF00410F292C1A3E3E3A2FA12624 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A3D0254356EEDB56800780CC29AFC578 /* Build configuration list for PBXNativeTarget "Pods-Takhawi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AA8A28C8C749D1715549E3D04340686 /* Debug */,
+				6F3369DDFBB426A19F744404DB795F15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6CF2221486E05140006A4A6B5D537FC /* Build configuration list for PBXAggregateTarget "GooglePlacePicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FDC0CF5DD26C6E632D4FEA97CF3DEEB /* Debug */,
+				26E6FDFFD48A504BD92D86FBD6D8495C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -14,12 +14,15 @@ struct tap1: View {
           
           Image("arroba 1")
                 .resizable()
-                .frame(width: 130, height: 130)
+               // .frame(width: 130, height: 130)
+                .frame(width:  UIScreen.main.bounds.width * 0.3)
+                .frame(height:  UIScreen.main.bounds.height * 0.15)
             
             TextField( "Enter Your Email Address", text: $email)
                
                 .font(.custom(AppFont.Regular.rawValue, size: 14))
                 .padding()
+                .submitLabel(.done)
                 
                 .overlay(
                     RoundedRectangle(cornerRadius: 25)

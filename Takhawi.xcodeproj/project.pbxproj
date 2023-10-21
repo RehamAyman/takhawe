@@ -169,8 +169,16 @@
 		96EA1E422A77006B00F39386 /* Alexandria-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9641AD3F2A6C8BAF00A29046 /* Alexandria-Regular.ttf */; };
 		96EA1E432A77006B00F39386 /* Alexandria-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9641AD392A6C8BAE00A29046 /* Alexandria-SemiBold.ttf */; };
 		96EA1E442A77006B00F39386 /* Alexandria-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9641AD402A6C8BAF00A29046 /* Alexandria-Thin.ttf */; };
+		C3BDE49A748BCB4E8F9427F8 /* Pods_Takhawi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 497CB877ED76784E9D04400D /* Pods_Takhawi.framework */; };
 		CE115E5B2ABED5CC00972CC9 /* homeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE115E5A2ABED5CC00972CC9 /* homeVC.xib */; };
 		CE115E5D2ABED5E800972CC9 /* homeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE115E5C2ABED5E800972CC9 /* homeVC.swift */; };
+		CE27F53D2ADFAD8500DEA419 /* StarRatingStackView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE27F53A2ADFAD8500DEA419 /* StarRatingStackView.xib */; };
+		CE27F53E2ADFAD8500DEA419 /* JStarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27F53B2ADFAD8500DEA419 /* JStarRatingView.swift */; };
+		CE27F53F2ADFAD8500DEA419 /* StarRatingStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27F53C2ADFAD8500DEA419 /* StarRatingStackView.swift */; };
+		CE27F5432ADFB02F00DEA419 /* GoogleMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE27F5412ADFB02F00DEA419 /* GoogleMapViewController.xib */; };
+		CE27F5442ADFB02F00DEA419 /* GoogleMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27F5422ADFB02F00DEA419 /* GoogleMapViewController.swift */; };
+		CE27F5472ADFD3B700DEA419 /* selectDateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27F5462ADFD3B700DEA419 /* selectDateVC.swift */; };
+		CE27F5492ADFD3D200DEA419 /* selectDateVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE27F5482ADFD3D200DEA419 /* selectDateVC.xib */; };
 		CE3021282ABB274100572DE7 /* phoneAndLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3021272ABB274100572DE7 /* phoneAndLocationVC.swift */; };
 		CE30212A2ABB275400572DE7 /* phoneAndLocationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE3021292ABB275400572DE7 /* phoneAndLocationVC.xib */; };
 		CE3021332ABB87CF00572DE7 /* enterPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3021322ABB87CF00572DE7 /* enterPasswordVC.swift */; };
@@ -181,12 +189,35 @@
 		CE30213F2ABBAB1100572DE7 /* verificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30213E2ABBAB1100572DE7 /* verificationVC.swift */; };
 		CE3021412ABBAB2F00572DE7 /* verificationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE3021402ABBAB2F00572DE7 /* verificationVC.xib */; };
 		CE3021432ABBB86500572DE7 /* phoneFormate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3021422ABBB86500572DE7 /* phoneFormate.swift */; };
-		CE3021482ABBBD0700572DE7 /* registerPagesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3021452ABBBD0700572DE7 /* registerPagesVC.swift */; };
-		CE3021492ABBBD0700572DE7 /* registerPagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3021462ABBBD0700572DE7 /* registerPagesCell.swift */; };
-		CE30214A2ABBBD0700572DE7 /* registerPagesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE3021472ABBBD0700572DE7 /* registerPagesCell.xib */; };
-		CE30214C2ABBBD3200572DE7 /* registerPagesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE30214B2ABBBD3200572DE7 /* registerPagesVC.xib */; };
-		CE30214E2ABBC05E00572DE7 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30214D2ABBC05E00572DE7 /* test.swift */; };
+		CE385D942AE267A4008F2D50 /* AnimatePolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE385D902AE267A4008F2D50 /* AnimatePolyline.swift */; };
+		CE385D962AE267A4008F2D50 /* Easing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE385D922AE267A4008F2D50 /* Easing.swift */; };
+		CE385D972AE267A4008F2D50 /* LocationUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE385D932AE267A4008F2D50 /* LocationUtilities.swift */; };
+		CE385D992AE267D0008F2D50 /* Utilitiesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE385D982AE267D0008F2D50 /* Utilitiesh.swift */; };
+		CE44773A2AE03DBD000D96F6 /* selectDateExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4477392AE03DBD000D96F6 /* selectDateExtention.swift */; };
+		CE44773D2AE042D5000D96F6 /* calendarSwiftui.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE44773C2AE042D5000D96F6 /* calendarSwiftui.swift */; };
+		CE44773F2AE04355000D96F6 /* weeksTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE44773E2AE04355000D96F6 /* weeksTabView.swift */; };
+		CE4477412AE04392000D96F6 /* oneWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4477402AE04392000D96F6 /* oneWeekView.swift */; };
+		CE4477442AE0440E000D96F6 /* calendarWeekStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4477432AE0440E000D96F6 /* calendarWeekStore.swift */; };
+		CE6178A02ACCF9E500AA8BB7 /* homeSearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE61789F2ACCF9E500AA8BB7 /* homeSearchVC.xib */; };
+		CE6178A22ACCF9F700AA8BB7 /* homeSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6178A12ACCF9F700AA8BB7 /* homeSearchVC.swift */; };
+		CE6178A42ACD08DE00AA8BB7 /* homeSearch+textfieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6178A32ACD08DE00AA8BB7 /* homeSearch+textfieldDelegate.swift */; };
+		CE6178A72ACD102F00AA8BB7 /* mapSearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6178A62ACD102F00AA8BB7 /* mapSearchVC.xib */; };
+		CE6178AA2ACD104900AA8BB7 /* mapSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6178A92ACD104900AA8BB7 /* mapSearchVC.swift */; };
+		CE6178AD2ACD23BD00AA8BB7 /* tipLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6178AC2ACD23BD00AA8BB7 /* tipLabel.swift */; };
+		CE772FBA2ADD458600BDEDC9 /* sideMenuItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE772FB92ADD458600BDEDC9 /* sideMenuItems.swift */; };
+		CE7D82F42AC3B86300C5B028 /* selectYorLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7D82F32AC3B86300C5B028 /* selectYorLocation.swift */; };
+		CE7D82F72AC3BB1100C5B028 /* MainAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7D82F62AC3BB1100C5B028 /* MainAlert.swift */; };
+		CE7D82F92AC3BC1D00C5B028 /* SelectYourLocationVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE7D82F82AC3BC1D00C5B028 /* SelectYourLocationVc.xib */; };
+		CE7D82FC2AC3CA8300C5B028 /* googleMapsStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = CE7D82FB2AC3CA8300C5B028 /* googleMapsStyle.json */; };
+		CE9757C42AE0F0BD0014346E /* tripListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9757C12AE0F0BD0014346E /* tripListCell.swift */; };
+		CE9757C52AE0F0BD0014346E /* tripListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9757C22AE0F0BD0014346E /* tripListVC.swift */; };
+		CE9757C62AE0F0BD0014346E /* tripListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9757C32AE0F0BD0014346E /* tripListCell.xib */; };
+		CE9757C82AE0F0CC0014346E /* tripListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9757C72AE0F0CC0014346E /* tripListVC.xib */; };
+		CE9757D12AE1B1E70014346E /* driverProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9757D02AE1B1E70014346E /* driverProfileVC.xib */; };
+		CE9757D52AE1B2B00014346E /* driverProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9757D42AE1B2B00014346E /* driverProfileVC.swift */; };
+		CE98110A2AC2CD2E00D99EC7 /* homeVc+delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9811092AC2CD2E00D99EC7 /* homeVc+delegate.swift */; };
 		CE9DB3962AC18346000759B8 /* customSegnmentWithAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9DB3952AC18346000759B8 /* customSegnmentWithAnimation.swift */; };
+		CE9DB3992AC1AD58000759B8 /* customUIsegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9DB3982AC1AD58000759B8 /* customUIsegment.swift */; };
 		CEB5A8492ABC489200A7F4AD /* MIOTPVerificationSPM in Frameworks */ = {isa = PBXBuildFile; productRef = CEB5A8482ABC489200A7F4AD /* MIOTPVerificationSPM */; };
 		CEB5A84B2ABC4DEC00A7F4AD /* shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB5A84A2ABC4DEC00A7F4AD /* shadow.swift */; };
 		CEB5A84E2ABC4F7500A7F4AD /* backButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB5A84D2ABC4F7500A7F4AD /* backButton.swift */; };
@@ -200,11 +231,29 @@
 		CEB5A8602ABCCD8C00A7F4AD /* secureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB5A85F2ABCCD8C00A7F4AD /* secureTextField.swift */; };
 		CEB5A8622ABCDAF700A7F4AD /* customSegmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB5A8612ABCDAF700A7F4AD /* customSegmentController.swift */; };
 		CEB5A8642ABD7ECD00A7F4AD /* tab4.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB5A8632ABD7ECD00A7F4AD /* tab4.swift */; };
-		FF9EC518BACD6B4B24EBE56A /* Pods_Takhawi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF98DFA68EA91E35EF860AA /* Pods_Takhawi.framework */; };
+		CEBB8B902ADE489A00E70EC4 /* RecentPlacesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB8B8E2ADE489A00E70EC4 /* RecentPlacesCell.swift */; };
+		CEBB8B912ADE489A00E70EC4 /* RecentPlacesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEBB8B8F2ADE489A00E70EC4 /* RecentPlacesCell.xib */; };
+		CEBB8B932ADE77FB00E70EC4 /* mapSearchExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB8B922ADE77FB00E70EC4 /* mapSearchExtention.swift */; };
+		CEBB8B972ADE95F200E70EC4 /* profileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEBB8B962ADE95F200E70EC4 /* profileVC.xib */; };
+		CEBB8B992ADE960100E70EC4 /* profileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB8B982ADE960100E70EC4 /* profileVC.swift */; };
+		CEBB8BA22ADEB8ED00E70EC4 /* profileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB8BA02ADEB8ED00E70EC4 /* profileCell.swift */; };
+		CEBB8BA32ADEB8ED00E70EC4 /* profileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEBB8BA12ADEB8ED00E70EC4 /* profileCell.xib */; };
+		CEBB8BA52ADEEC1900E70EC4 /* profileVc+delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB8BA42ADEEC1900E70EC4 /* profileVc+delegate.swift */; };
+		CED51ED32AE1B86D00603151 /* driverProfile+collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED51ED22AE1B86D00603151 /* driverProfile+collection.swift */; };
+		CEDDBE182ACBDFA700677C94 /* sideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDDBE162ACBDFA700677C94 /* sideMenuCell.swift */; };
+		CEDDBE192ACBDFA700677C94 /* sideMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDDBE172ACBDFA700677C94 /* sideMenuCell.xib */; };
+		CEDDBE1C2ACC0DAB00677C94 /* sideMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDDBE1B2ACC0DAB00677C94 /* sideMenuModel.swift */; };
+		CEDDBE232ACC45AF00677C94 /* destinationSearchVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDDBE202ACC45AF00677C94 /* destinationSearchVCCell.swift */; };
+		CEDDBE252ACC45AF00677C94 /* destinationSearchVCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDDBE222ACC45AF00677C94 /* destinationSearchVCCell.xib */; };
+		CEDDBE292ACC5C3700677C94 /* blurEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDDBE282ACC5C3700677C94 /* blurEffect.swift */; };
+		CEF9737A2AC1D4B600CDCCFD /* UIResponder+Current.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF973792AC1D4B600CDCCFD /* UIResponder+Current.swift */; };
+		CEF9737C2AC1D4D800CDCCFD /* KeyboardHeightPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF9737B2AC1D4D700CDCCFD /* KeyboardHeightPublisher.swift */; };
+		CEF9737E2AC1D4FA00CDCCFD /* KeyboardAdaptive.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF9737D2AC1D4FA00CDCCFD /* KeyboardAdaptive.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1FEADD82AE4CE1D1AD7ECB60 /* Pods-Takhawi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Takhawi.release.xcconfig"; path = "Target Support Files/Pods-Takhawi/Pods-Takhawi.release.xcconfig"; sourceTree = "<group>"; };
+		174FE3F7777F14CCC00CD042 /* Pods-Takhawi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Takhawi.release.xcconfig"; path = "Target Support Files/Pods-Takhawi/Pods-Takhawi.release.xcconfig"; sourceTree = "<group>"; };
+		497CB877ED76784E9D04400D /* Pods_Takhawi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Takhawi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96202C782A7FAE2700053C5B /* OTPVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVC.swift; sourceTree = "<group>"; };
 		96202C7A2A7FAE3300053C5B /* OTPVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPVC.xib; sourceTree = "<group>"; };
 		96202C822A7FB97B00053C5B /* EnterMobileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterMobileVC.swift; sourceTree = "<group>"; };
@@ -342,18 +391,12 @@
 		9694AC352A5E040D00BDF5F8 /* ArbFONTS-URW-DIN-Arabic-Demi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ArbFONTS-URW-DIN-Arabic-Demi.ttf"; sourceTree = "<group>"; };
 		9694AC362A5E040D00BDF5F8 /* ArbFONTS-URW-DIN-Arabic-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ArbFONTS-URW-DIN-Arabic-Black.ttf"; sourceTree = "<group>"; };
 		9694AC372A5E040D00BDF5F8 /* ArbFONTS-URW-DIN-Arabic-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ArbFONTS-URW-DIN-Arabic-Bold.ttf"; sourceTree = "<group>"; };
-		9694AC3A2A5E040D00BDF5F8 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
-		9694AC3C2A5E040D00BDF5F8 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/PhotoLibrary.strings; sourceTree = "<group>"; };
-		9694AC3E2A5E040D00BDF5F8 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/PhotoLibraryServices.strings; sourceTree = "<group>"; };
-		9694AC402A5E040D00BDF5F8 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/CameraUI.strings; sourceTree = "<group>"; };
-		9694AC422A5E040D00BDF5F8 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/PhotosUI.strings; sourceTree = "<group>"; };
 		9694AC432A5E040D00BDF5F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9694AC442A5E040D00BDF5F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/PhotoLibrary.strings; sourceTree = "<group>"; };
 		9694AC452A5E040D00BDF5F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/PhotoLibraryServices.strings; sourceTree = "<group>"; };
 		9694AC462A5E040D00BDF5F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/CameraUI.strings; sourceTree = "<group>"; };
 		9694AC472A5E040D00BDF5F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/PhotosUI.strings; sourceTree = "<group>"; };
 		9694AC482A5E040D00BDF5F8 /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
-		9694AC4B2A5E040D00BDF5F8 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9694AC4C2A5E040D00BDF5F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9694AC4E2A5E040D00BDF5F8 /* Extensions+Bundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+Bundle.swift"; sourceTree = "<group>"; };
 		9694AC4F2A5E040D00BDF5F8 /* Extensions+UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+UITextField.swift"; sourceTree = "<group>"; };
@@ -363,9 +406,18 @@
 		9694AC762A5E0D8B00BDF5F8 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
 		96B27F862A82F791006C8DB3 /* TermsOfUseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseVC.swift; sourceTree = "<group>"; };
 		96B27F8A2A82F7BE006C8DB3 /* TermsOfUseVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermsOfUseVC.xib; sourceTree = "<group>"; };
-		ABF98DFA68EA91E35EF860AA /* Pods_Takhawi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Takhawi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE07ECE12AC22AA400584119 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		CE115E5A2ABED5CC00972CC9 /* homeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = homeVC.xib; sourceTree = "<group>"; };
 		CE115E5C2ABED5E800972CC9 /* homeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeVC.swift; sourceTree = "<group>"; };
+		CE27F5352ADF947C00DEA419 /* EasyTipView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EasyTipView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE27F5372ADF96C400DEA419 /* EasyTipView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EasyTipView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE27F53A2ADFAD8500DEA419 /* StarRatingStackView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StarRatingStackView.xib; sourceTree = "<group>"; };
+		CE27F53B2ADFAD8500DEA419 /* JStarRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JStarRatingView.swift; sourceTree = "<group>"; };
+		CE27F53C2ADFAD8500DEA419 /* StarRatingStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarRatingStackView.swift; sourceTree = "<group>"; };
+		CE27F5412ADFB02F00DEA419 /* GoogleMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoogleMapViewController.xib; sourceTree = "<group>"; };
+		CE27F5422ADFB02F00DEA419 /* GoogleMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleMapViewController.swift; sourceTree = "<group>"; };
+		CE27F5462ADFD3B700DEA419 /* selectDateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectDateVC.swift; sourceTree = "<group>"; };
+		CE27F5482ADFD3D200DEA419 /* selectDateVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = selectDateVC.xib; sourceTree = "<group>"; };
 		CE3021272ABB274100572DE7 /* phoneAndLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = phoneAndLocationVC.swift; sourceTree = "<group>"; };
 		CE3021292ABB275400572DE7 /* phoneAndLocationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = phoneAndLocationVC.xib; sourceTree = "<group>"; };
 		CE3021322ABB87CF00572DE7 /* enterPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enterPasswordVC.swift; sourceTree = "<group>"; };
@@ -376,12 +428,46 @@
 		CE30213E2ABBAB1100572DE7 /* verificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = verificationVC.swift; sourceTree = "<group>"; };
 		CE3021402ABBAB2F00572DE7 /* verificationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = verificationVC.xib; sourceTree = "<group>"; };
 		CE3021422ABBB86500572DE7 /* phoneFormate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = phoneFormate.swift; sourceTree = "<group>"; };
-		CE3021452ABBBD0700572DE7 /* registerPagesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerPagesVC.swift; sourceTree = "<group>"; };
-		CE3021462ABBBD0700572DE7 /* registerPagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerPagesCell.swift; sourceTree = "<group>"; };
-		CE3021472ABBBD0700572DE7 /* registerPagesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = registerPagesCell.xib; sourceTree = "<group>"; };
-		CE30214B2ABBBD3200572DE7 /* registerPagesVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = registerPagesVC.xib; sourceTree = "<group>"; };
-		CE30214D2ABBC05E00572DE7 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
+		CE385D772AE2631D008F2D50 /* AnimatePolyline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnimatePolyline.swift; path = AnimatePolyline/Classes/AnimatePolyline.swift; sourceTree = "<group>"; };
+		CE385D782AE2631D008F2D50 /* Easing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Easing.swift; path = AnimatePolyline/Classes/Easing.swift; sourceTree = "<group>"; };
+		CE385D792AE2631D008F2D50 /* LocationUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationUtilities.swift; path = AnimatePolyline/Classes/LocationUtilities.swift; sourceTree = "<group>"; };
+		CE385D7A2AE2631D008F2D50 /* AnimatePolyline.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = AnimatePolyline.modulemap; path = "Takhawi/Target Support Files/AnimatePolyline/AnimatePolyline.modulemap"; sourceTree = "<group>"; };
+		CE385D7B2AE2631D008F2D50 /* AnimatePolyline-dummy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AnimatePolyline-dummy.m"; path = "Takhawi/Target Support Files/AnimatePolyline/AnimatePolyline-dummy.m"; sourceTree = "<group>"; };
+		CE385D7C2AE2631D008F2D50 /* AnimatePolyline-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "AnimatePolyline-Info.plist"; path = "Takhawi/Target Support Files/AnimatePolyline/AnimatePolyline-Info.plist"; sourceTree = "<group>"; };
+		CE385D7D2AE2631D008F2D50 /* AnimatePolyline-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AnimatePolyline-prefix.pch"; path = "Takhawi/Target Support Files/AnimatePolyline/AnimatePolyline-prefix.pch"; sourceTree = "<group>"; };
+		CE385D7E2AE2631D008F2D50 /* AnimatePolyline-umbrella.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AnimatePolyline-umbrella.h"; path = "Takhawi/Target Support Files/AnimatePolyline/AnimatePolyline-umbrella.h"; sourceTree = "<group>"; };
+		CE385D7F2AE2631D008F2D50 /* AnimatePolyline.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = AnimatePolyline.debug.xcconfig; path = "Takhawi/Target Support Files/AnimatePolyline/AnimatePolyline.debug.xcconfig"; sourceTree = "<group>"; };
+		CE385D802AE2631D008F2D50 /* AnimatePolyline.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = AnimatePolyline.release.xcconfig; path = "Takhawi/Target Support Files/AnimatePolyline/AnimatePolyline.release.xcconfig"; sourceTree = "<group>"; };
+		CE385D902AE267A4008F2D50 /* AnimatePolyline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatePolyline.swift; sourceTree = "<group>"; };
+		CE385D922AE267A4008F2D50 /* Easing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Easing.swift; sourceTree = "<group>"; };
+		CE385D932AE267A4008F2D50 /* LocationUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationUtilities.swift; sourceTree = "<group>"; };
+		CE385D982AE267D0008F2D50 /* Utilitiesh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilitiesh.swift; sourceTree = "<group>"; };
+		CE44772F2AE01599000D96F6 /* HorizontalCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HorizontalCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE4477392AE03DBD000D96F6 /* selectDateExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectDateExtention.swift; sourceTree = "<group>"; };
+		CE44773C2AE042D5000D96F6 /* calendarSwiftui.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calendarSwiftui.swift; sourceTree = "<group>"; };
+		CE44773E2AE04355000D96F6 /* weeksTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weeksTabView.swift; sourceTree = "<group>"; };
+		CE4477402AE04392000D96F6 /* oneWeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oneWeekView.swift; sourceTree = "<group>"; };
+		CE4477432AE0440E000D96F6 /* calendarWeekStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calendarWeekStore.swift; sourceTree = "<group>"; };
+		CE61789F2ACCF9E500AA8BB7 /* homeSearchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = homeSearchVC.xib; sourceTree = "<group>"; };
+		CE6178A12ACCF9F700AA8BB7 /* homeSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeSearchVC.swift; sourceTree = "<group>"; };
+		CE6178A32ACD08DE00AA8BB7 /* homeSearch+textfieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "homeSearch+textfieldDelegate.swift"; sourceTree = "<group>"; };
+		CE6178A62ACD102F00AA8BB7 /* mapSearchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = mapSearchVC.xib; sourceTree = "<group>"; };
+		CE6178A92ACD104900AA8BB7 /* mapSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapSearchVC.swift; sourceTree = "<group>"; };
+		CE6178AC2ACD23BD00AA8BB7 /* tipLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipLabel.swift; sourceTree = "<group>"; };
+		CE772FB92ADD458600BDEDC9 /* sideMenuItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sideMenuItems.swift; sourceTree = "<group>"; };
+		CE7D82F32AC3B86300C5B028 /* selectYorLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectYorLocation.swift; sourceTree = "<group>"; };
+		CE7D82F62AC3BB1100C5B028 /* MainAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAlert.swift; sourceTree = "<group>"; };
+		CE7D82F82AC3BC1D00C5B028 /* SelectYourLocationVc.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectYourLocationVc.xib; sourceTree = "<group>"; };
+		CE7D82FB2AC3CA8300C5B028 /* googleMapsStyle.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = googleMapsStyle.json; sourceTree = "<group>"; };
+		CE9757C12AE0F0BD0014346E /* tripListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripListCell.swift; sourceTree = "<group>"; };
+		CE9757C22AE0F0BD0014346E /* tripListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripListVC.swift; sourceTree = "<group>"; };
+		CE9757C32AE0F0BD0014346E /* tripListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = tripListCell.xib; sourceTree = "<group>"; };
+		CE9757C72AE0F0CC0014346E /* tripListVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = tripListVC.xib; sourceTree = "<group>"; };
+		CE9757D02AE1B1E70014346E /* driverProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = driverProfileVC.xib; sourceTree = "<group>"; };
+		CE9757D42AE1B2B00014346E /* driverProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = driverProfileVC.swift; sourceTree = "<group>"; };
+		CE9811092AC2CD2E00D99EC7 /* homeVc+delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "homeVc+delegate.swift"; sourceTree = "<group>"; };
 		CE9DB3952AC18346000759B8 /* customSegnmentWithAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customSegnmentWithAnimation.swift; sourceTree = "<group>"; };
+		CE9DB3982AC1AD58000759B8 /* customUIsegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customUIsegment.swift; sourceTree = "<group>"; };
 		CEB5A84A2ABC4DEC00A7F4AD /* shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shadow.swift; sourceTree = "<group>"; };
 		CEB5A84D2ABC4F7500A7F4AD /* backButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backButton.swift; sourceTree = "<group>"; };
 		CEB5A84F2ABC53C200A7F4AD /* underLineButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = underLineButton.swift; sourceTree = "<group>"; };
@@ -394,7 +480,25 @@
 		CEB5A85F2ABCCD8C00A7F4AD /* secureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secureTextField.swift; sourceTree = "<group>"; };
 		CEB5A8612ABCDAF700A7F4AD /* customSegmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customSegmentController.swift; sourceTree = "<group>"; };
 		CEB5A8632ABD7ECD00A7F4AD /* tab4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tab4.swift; sourceTree = "<group>"; };
-		CF167FCEE9E95FB61B46A5BA /* Pods-Takhawi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Takhawi.debug.xcconfig"; path = "Target Support Files/Pods-Takhawi/Pods-Takhawi.debug.xcconfig"; sourceTree = "<group>"; };
+		CEBB8B8E2ADE489A00E70EC4 /* RecentPlacesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentPlacesCell.swift; sourceTree = "<group>"; };
+		CEBB8B8F2ADE489A00E70EC4 /* RecentPlacesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentPlacesCell.xib; sourceTree = "<group>"; };
+		CEBB8B922ADE77FB00E70EC4 /* mapSearchExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapSearchExtention.swift; sourceTree = "<group>"; };
+		CEBB8B962ADE95F200E70EC4 /* profileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = profileVC.xib; sourceTree = "<group>"; };
+		CEBB8B982ADE960100E70EC4 /* profileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileVC.swift; sourceTree = "<group>"; };
+		CEBB8BA02ADEB8ED00E70EC4 /* profileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileCell.swift; sourceTree = "<group>"; };
+		CEBB8BA12ADEB8ED00E70EC4 /* profileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = profileCell.xib; sourceTree = "<group>"; };
+		CEBB8BA42ADEEC1900E70EC4 /* profileVc+delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "profileVc+delegate.swift"; sourceTree = "<group>"; };
+		CED51ED22AE1B86D00603151 /* driverProfile+collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "driverProfile+collection.swift"; sourceTree = "<group>"; };
+		CEDDBE162ACBDFA700677C94 /* sideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sideMenuCell.swift; sourceTree = "<group>"; };
+		CEDDBE172ACBDFA700677C94 /* sideMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = sideMenuCell.xib; sourceTree = "<group>"; };
+		CEDDBE1B2ACC0DAB00677C94 /* sideMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sideMenuModel.swift; sourceTree = "<group>"; };
+		CEDDBE202ACC45AF00677C94 /* destinationSearchVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = destinationSearchVCCell.swift; sourceTree = "<group>"; };
+		CEDDBE222ACC45AF00677C94 /* destinationSearchVCCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = destinationSearchVCCell.xib; sourceTree = "<group>"; };
+		CEDDBE282ACC5C3700677C94 /* blurEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blurEffect.swift; sourceTree = "<group>"; };
+		CEF973792AC1D4B600CDCCFD /* UIResponder+Current.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIResponder+Current.swift"; sourceTree = "<group>"; };
+		CEF9737B2AC1D4D700CDCCFD /* KeyboardHeightPublisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardHeightPublisher.swift; sourceTree = "<group>"; };
+		CEF9737D2AC1D4FA00CDCCFD /* KeyboardAdaptive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardAdaptive.swift; sourceTree = "<group>"; };
+		E2FCFFF148A9D16245CF1A70 /* Pods-Takhawi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Takhawi.debug.xcconfig"; path = "Target Support Files/Pods-Takhawi/Pods-Takhawi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -415,7 +519,7 @@
 				96EA1E3B2A76EDF900F39386 /* M13Checkbox in Frameworks */,
 				9694AC0A2A5DFB6300BDF5F8 /* Alamofire in Frameworks */,
 				9694AC152A5E013100BDF5F8 /* Kingfisher in Frameworks */,
-				FF9EC518BACD6B4B24EBE56A /* Pods_Takhawi.framework in Frameworks */,
+				C3BDE49A748BCB4E8F9427F8 /* Pods_Takhawi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,7 +603,6 @@
 			isa = PBXGroup;
 			children = (
 				CEB5A8552ABC6D1F00A7F4AD /* registerTaps */,
-				CE3021442ABBBCBD00572DE7 /* registerPageSwipe */,
 				CE30213D2ABBAAF800572DE7 /* verification */,
 				CE3021382ABBA49500572DE7 /* forgetPassword */,
 				CE3021312ABB87B600572DE7 /* enterPassword */,
@@ -565,10 +668,11 @@
 		9694AB342A5DE9D500BDF5F8 /* Takhawi */ = {
 			isa = PBXGroup;
 			children = (
+				CE772FB82ADD457400BDEDC9 /* Const */,
 				9694AC752A5E0D6C00BDF5F8 /* Storage */,
 				9694AC212A5E040D00BDF5F8 /* Resources */,
+				CE27F5402ADFB02F00DEA419 /* LocationVC */,
 				9694AB982A5DFACA00BDF5F8 /* Componants */,
-				CEB5A85E2ABCCD7300A7F4AD /* swiftuiExtentions */,
 				9694AB652A5DFACA00BDF5F8 /* Extentions */,
 				9694AB942A5DFACA00BDF5F8 /* FCM */,
 				9694AB542A5DFAC900BDF5F8 /* Genral Networking */,
@@ -581,6 +685,7 @@
 				9694AB402A5DE9D600BDF5F8 /* LaunchScreen.storyboard */,
 				9694AB432A5DE9D600BDF5F8 /* Info.plist */,
 				9641AD2D2A6C1ADD00A29046 /* Main.storyboard */,
+				CE385D822AE2631D008F2D50 /* AnimatePolyline */,
 			);
 			path = Takhawi;
 			sourceTree = "<group>";
@@ -588,6 +693,10 @@
 		9694AB492A5DE9DA00BDF5F8 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				CEBB8B942ADE95D300E70EC4 /* sideMenu */,
+				CE6178A52ACD101B00AA8BB7 /* mapSearch */,
+				CEDDBE1D2ACC456E00677C94 /* searchDestination */,
+				CE9757C02AE0F09A0014346E /* tripListView */,
 				CE115E592ABED5AB00972CC9 /* Home */,
 				9641AD2F2A6C29D000A29046 /* OnBoardingScreens */,
 				9641AD242A6965B900A29046 /* Auth */,
@@ -680,6 +789,9 @@
 		9694AB652A5DFACA00BDF5F8 /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
+				CE385D852AE26334008F2D50 /* animatedGoogleRoute */,
+				CEB5A85E2ABCCD7300A7F4AD /* swiftuiExtentions */,
+				CE27F5392ADFAD8500DEA419 /* JStarView */,
 				9694AB682A5DFACA00BDF5F8 /* UIKit */,
 				9694AB662A5DFACA00BDF5F8 /* ExtensionNotification.swift */,
 				9694AB672A5DFACA00BDF5F8 /* Alert.swift */,
@@ -706,6 +818,10 @@
 		9694AB682A5DFACA00BDF5F8 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				CE6178AB2ACD23AC00AA8BB7 /* UILabel */,
+				CEDDBE272ACC5C2000677C94 /* UIVIEW */,
+				CE7D82F52AC3BB0200C5B028 /* UiAlert */,
+				CE9DB3972AC1AD30000759B8 /* UISegmentController */,
 				CEB5A84C2ABC4F6600A7F4AD /* UIButtons */,
 				9694AB692A5DFACA00BDF5F8 /* UIAlertContollerExtentions.swift */,
 				9694AB6A2A5DFACA00BDF5F8 /* RoundImage.swift */,
@@ -1012,7 +1128,10 @@
 		C8CB0ABA24A3C0A7DBD8F785 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				ABF98DFA68EA91E35EF860AA /* Pods_Takhawi.framework */,
+				CE44772F2AE01599000D96F6 /* HorizontalCalendar.framework */,
+				CE27F5372ADF96C400DEA419 /* EasyTipView.framework */,
+				CE27F5352ADF947C00DEA419 /* EasyTipView.framework */,
+				497CB877ED76784E9D04400D /* Pods_Takhawi.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1020,8 +1139,8 @@
 		C935BC724100C1DFE068F48E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CF167FCEE9E95FB61B46A5BA /* Pods-Takhawi.debug.xcconfig */,
-				1FEADD82AE4CE1D1AD7ECB60 /* Pods-Takhawi.release.xcconfig */,
+				E2FCFFF148A9D16245CF1A70 /* Pods-Takhawi.debug.xcconfig */,
+				174FE3F7777F14CCC00CD042 /* Pods-Takhawi.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -1029,10 +1148,45 @@
 		CE115E592ABED5AB00972CC9 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				CE27F5452ADFD27300DEA419 /* selectDate */,
+				CEDDBE1A2ACC0D9700677C94 /* model */,
+				CEDDBE152ACBDF8500677C94 /* cell */,
+				CE7D82F22AC3B84E00C5B028 /* Location */,
 				CE115E5A2ABED5CC00972CC9 /* homeVC.xib */,
 				CE115E5C2ABED5E800972CC9 /* homeVC.swift */,
+				CE9811092AC2CD2E00D99EC7 /* homeVc+delegate.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		CE27F5392ADFAD8500DEA419 /* JStarView */ = {
+			isa = PBXGroup;
+			children = (
+				CE27F53A2ADFAD8500DEA419 /* StarRatingStackView.xib */,
+				CE27F53B2ADFAD8500DEA419 /* JStarRatingView.swift */,
+				CE27F53C2ADFAD8500DEA419 /* StarRatingStackView.swift */,
+			);
+			path = JStarView;
+			sourceTree = "<group>";
+		};
+		CE27F5402ADFB02F00DEA419 /* LocationVC */ = {
+			isa = PBXGroup;
+			children = (
+				CE27F5412ADFB02F00DEA419 /* GoogleMapViewController.xib */,
+				CE27F5422ADFB02F00DEA419 /* GoogleMapViewController.swift */,
+			);
+			path = LocationVC;
+			sourceTree = "<group>";
+		};
+		CE27F5452ADFD27300DEA419 /* selectDate */ = {
+			isa = PBXGroup;
+			children = (
+				CE27F5482ADFD3D200DEA419 /* selectDateVC.xib */,
+				CE27F5462ADFD3B700DEA419 /* selectDateVC.swift */,
+				CE4477392AE03DBD000D96F6 /* selectDateExtention.swift */,
+				CE44773B2AE042C4000D96F6 /* calendar */,
+			);
+			path = selectDate;
 			sourceTree = "<group>";
 		};
 		CE3021262ABB271300572DE7 /* phone */ = {
@@ -1072,16 +1226,158 @@
 			path = verification;
 			sourceTree = "<group>";
 		};
-		CE3021442ABBBCBD00572DE7 /* registerPageSwipe */ = {
+		CE385D812AE2631D008F2D50 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				CE3021452ABBBD0700572DE7 /* registerPagesVC.swift */,
-				CE3021462ABBBD0700572DE7 /* registerPagesCell.swift */,
-				CE3021472ABBBD0700572DE7 /* registerPagesCell.xib */,
-				CE30214B2ABBBD3200572DE7 /* registerPagesVC.xib */,
-				CE30214D2ABBC05E00572DE7 /* test.swift */,
+				CE385D7A2AE2631D008F2D50 /* AnimatePolyline.modulemap */,
+				CE385D7B2AE2631D008F2D50 /* AnimatePolyline-dummy.m */,
+				CE385D7C2AE2631D008F2D50 /* AnimatePolyline-Info.plist */,
+				CE385D7D2AE2631D008F2D50 /* AnimatePolyline-prefix.pch */,
+				CE385D7E2AE2631D008F2D50 /* AnimatePolyline-umbrella.h */,
+				CE385D7F2AE2631D008F2D50 /* AnimatePolyline.debug.xcconfig */,
+				CE385D802AE2631D008F2D50 /* AnimatePolyline.release.xcconfig */,
 			);
-			path = registerPageSwipe;
+			name = "Support Files";
+			path = "../Target Support Files/AnimatePolyline";
+			sourceTree = "<group>";
+		};
+		CE385D822AE2631D008F2D50 /* AnimatePolyline */ = {
+			isa = PBXGroup;
+			children = (
+				CE385D772AE2631D008F2D50 /* AnimatePolyline.swift */,
+				CE385D782AE2631D008F2D50 /* Easing.swift */,
+				CE385D792AE2631D008F2D50 /* LocationUtilities.swift */,
+				CE385D812AE2631D008F2D50 /* Support Files */,
+			);
+			path = AnimatePolyline;
+			sourceTree = "<group>";
+		};
+		CE385D852AE26334008F2D50 /* animatedGoogleRoute */ = {
+			isa = PBXGroup;
+			children = (
+				CE385D8F2AE267A4008F2D50 /* Classes */,
+			);
+			path = animatedGoogleRoute;
+			sourceTree = "<group>";
+		};
+		CE385D8F2AE267A4008F2D50 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CE385D982AE267D0008F2D50 /* Utilitiesh.swift */,
+				CE385D902AE267A4008F2D50 /* AnimatePolyline.swift */,
+				CE385D922AE267A4008F2D50 /* Easing.swift */,
+				CE385D932AE267A4008F2D50 /* LocationUtilities.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		CE44773B2AE042C4000D96F6 /* calendar */ = {
+			isa = PBXGroup;
+			children = (
+				CE4477422AE043F5000D96F6 /* viewModel */,
+				CE44773C2AE042D5000D96F6 /* calendarSwiftui.swift */,
+				CE44773E2AE04355000D96F6 /* weeksTabView.swift */,
+				CE4477402AE04392000D96F6 /* oneWeekView.swift */,
+			);
+			path = calendar;
+			sourceTree = "<group>";
+		};
+		CE4477422AE043F5000D96F6 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE4477432AE0440E000D96F6 /* calendarWeekStore.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		CE6178A52ACD101B00AA8BB7 /* mapSearch */ = {
+			isa = PBXGroup;
+			children = (
+				CE6178A62ACD102F00AA8BB7 /* mapSearchVC.xib */,
+				CE6178A92ACD104900AA8BB7 /* mapSearchVC.swift */,
+				CEBB8B922ADE77FB00E70EC4 /* mapSearchExtention.swift */,
+			);
+			path = mapSearch;
+			sourceTree = "<group>";
+		};
+		CE6178AB2ACD23AC00AA8BB7 /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				CE6178AC2ACD23BD00AA8BB7 /* tipLabel.swift */,
+			);
+			path = UILabel;
+			sourceTree = "<group>";
+		};
+		CE772FB82ADD457400BDEDC9 /* Const */ = {
+			isa = PBXGroup;
+			children = (
+				CE772FB92ADD458600BDEDC9 /* sideMenuItems.swift */,
+			);
+			path = Const;
+			sourceTree = "<group>";
+		};
+		CE7D82F22AC3B84E00C5B028 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				CE7D82FA2AC3CA4F00C5B028 /* googleMapsStylling */,
+				CE7D82F32AC3B86300C5B028 /* selectYorLocation.swift */,
+				CE7D82F82AC3BC1D00C5B028 /* SelectYourLocationVc.xib */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		CE7D82F52AC3BB0200C5B028 /* UiAlert */ = {
+			isa = PBXGroup;
+			children = (
+				CE7D82F62AC3BB1100C5B028 /* MainAlert.swift */,
+			);
+			path = UiAlert;
+			sourceTree = "<group>";
+		};
+		CE7D82FA2AC3CA4F00C5B028 /* googleMapsStylling */ = {
+			isa = PBXGroup;
+			children = (
+				CE7D82FB2AC3CA8300C5B028 /* googleMapsStyle.json */,
+			);
+			path = googleMapsStylling;
+			sourceTree = "<group>";
+		};
+		CE9757C02AE0F09A0014346E /* tripListView */ = {
+			isa = PBXGroup;
+			children = (
+				CE9757CB2AE1AD4D0014346E /* driverProfile */,
+				CE9757C92AE0F0D40014346E /* cell */,
+				CE9757C72AE0F0CC0014346E /* tripListVC.xib */,
+				CE9757C22AE0F0BD0014346E /* tripListVC.swift */,
+			);
+			path = tripListView;
+			sourceTree = "<group>";
+		};
+		CE9757C92AE0F0D40014346E /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				CE9757C32AE0F0BD0014346E /* tripListCell.xib */,
+				CE9757C12AE0F0BD0014346E /* tripListCell.swift */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		CE9757CB2AE1AD4D0014346E /* driverProfile */ = {
+			isa = PBXGroup;
+			children = (
+				CE9757D02AE1B1E70014346E /* driverProfileVC.xib */,
+				CE9757D42AE1B2B00014346E /* driverProfileVC.swift */,
+				CED51ED22AE1B86D00603151 /* driverProfile+collection.swift */,
+			);
+			path = driverProfile;
+			sourceTree = "<group>";
+		};
+		CE9DB3972AC1AD30000759B8 /* UISegmentController */ = {
+			isa = PBXGroup;
+			children = (
+				CE9DB3982AC1AD58000759B8 /* customUIsegment.swift */,
+			);
+			path = UISegmentController;
 			sourceTree = "<group>";
 		};
 		CEB5A84C2ABC4F6600A7F4AD /* UIButtons */ = {
@@ -1110,11 +1406,89 @@
 		CEB5A85E2ABCCD7300A7F4AD /* swiftuiExtentions */ = {
 			isa = PBXGroup;
 			children = (
+				CEF9737D2AC1D4FA00CDCCFD /* KeyboardAdaptive.swift */,
+				CEF973792AC1D4B600CDCCFD /* UIResponder+Current.swift */,
+				CEF9737B2AC1D4D700CDCCFD /* KeyboardHeightPublisher.swift */,
 				CEB5A85F2ABCCD8C00A7F4AD /* secureTextField.swift */,
 				CEB5A8612ABCDAF700A7F4AD /* customSegmentController.swift */,
 				CE9DB3952AC18346000759B8 /* customSegnmentWithAnimation.swift */,
 			);
 			path = swiftuiExtentions;
+			sourceTree = "<group>";
+		};
+		CEBB8B942ADE95D300E70EC4 /* sideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				CEBB8B952ADE95D900E70EC4 /* profile */,
+			);
+			path = sideMenu;
+			sourceTree = "<group>";
+		};
+		CEBB8B952ADE95D900E70EC4 /* profile */ = {
+			isa = PBXGroup;
+			children = (
+				CEBB8B9F2ADEB8CE00E70EC4 /* cell */,
+				CEBB8B962ADE95F200E70EC4 /* profileVC.xib */,
+				CEBB8B982ADE960100E70EC4 /* profileVC.swift */,
+				CEBB8BA42ADEEC1900E70EC4 /* profileVc+delegate.swift */,
+			);
+			path = profile;
+			sourceTree = "<group>";
+		};
+		CEBB8B9F2ADEB8CE00E70EC4 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				CEBB8BA02ADEB8ED00E70EC4 /* profileCell.swift */,
+				CEBB8BA12ADEB8ED00E70EC4 /* profileCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		CEDDBE152ACBDF8500677C94 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				CEDDBE162ACBDFA700677C94 /* sideMenuCell.swift */,
+				CEDDBE172ACBDFA700677C94 /* sideMenuCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		CEDDBE1A2ACC0D9700677C94 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				CEDDBE1B2ACC0DAB00677C94 /* sideMenuModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		CEDDBE1D2ACC456E00677C94 /* searchDestination */ = {
+			isa = PBXGroup;
+			children = (
+				CEDDBE262ACC5BBC00677C94 /* cell */,
+				CE61789F2ACCF9E500AA8BB7 /* homeSearchVC.xib */,
+				CE6178A12ACCF9F700AA8BB7 /* homeSearchVC.swift */,
+				CE6178A32ACD08DE00AA8BB7 /* homeSearch+textfieldDelegate.swift */,
+			);
+			path = searchDestination;
+			sourceTree = "<group>";
+		};
+		CEDDBE262ACC5BBC00677C94 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				CEDDBE222ACC45AF00677C94 /* destinationSearchVCCell.xib */,
+				CEDDBE202ACC45AF00677C94 /* destinationSearchVCCell.swift */,
+				CEBB8B8E2ADE489A00E70EC4 /* RecentPlacesCell.swift */,
+				CEBB8B8F2ADE489A00E70EC4 /* RecentPlacesCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		CEDDBE272ACC5C2000677C94 /* UIVIEW */ = {
+			isa = PBXGroup;
+			children = (
+				CEDDBE282ACC5C3700677C94 /* blurEffect.swift */,
+			);
+			path = UIVIEW;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1124,11 +1498,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9694AB462A5DE9D600BDF5F8 /* Build configuration list for PBXNativeTarget "Takhawi" */;
 			buildPhases = (
-				03C9E5DDB323737BD42637D0 /* [CP] Check Pods Manifest.lock */,
+				D072B671286BE7E1DDCE035D /* [CP] Check Pods Manifest.lock */,
 				9694AB2E2A5DE9D500BDF5F8 /* Sources */,
 				9694AB2F2A5DE9D500BDF5F8 /* Frameworks */,
 				9694AB302A5DE9D500BDF5F8 /* Resources */,
-				F9FF9F265C71D8C512336104 /* [CP] Embed Pods Frameworks */,
+				6256EC291A4069400B807961 /* [CP] Embed Pods Frameworks */,
+				9289DFB8FC1DF7C4D5C77983 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1162,7 +1537,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					9694AB312A5DE9D500BDF5F8 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -1180,17 +1555,17 @@
 			);
 			mainGroup = 9694AB292A5DE9D500BDF5F8;
 			packageReferences = (
-				9694AC082A5DFB6200BDF5F8 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				9694AC082A5DFB6200BDF5F8 /* XCRemoteSwiftPackageReference "Alamofire.git" */,
 				9694AC0B2A5DFC1400BDF5F8 /* XCRemoteSwiftPackageReference "SwiftMessages" */,
 				9694AC0E2A5DFEA500BDF5F8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				9694AC132A5E013100BDF5F8 /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				9694AC162A5E028800BDF5F8 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
-				9694AC1B2A5E02EB00BDF5F8 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				9694AC132A5E013100BDF5F8 /* XCRemoteSwiftPackageReference "Kingfisher.git" */,
+				9694AC162A5E028800BDF5F8 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView.git" */,
+				9694AC1B2A5E02EB00BDF5F8 /* XCRemoteSwiftPackageReference "IQKeyboardManager.git" */,
 				9694AC1E2A5E03AF00BDF5F8 /* XCRemoteSwiftPackageReference "BottomPopup" */,
-				9694AC722A5E048F00BDF5F8 /* XCRemoteSwiftPackageReference "Cosmos" */,
+				9694AC722A5E048F00BDF5F8 /* XCRemoteSwiftPackageReference "Cosmos.git" */,
 				96EA1E392A76EDF900F39386 /* XCRemoteSwiftPackageReference "M13Checkbox" */,
 				963DAB242A7FDAE7004ED3C7 /* XCRemoteSwiftPackageReference "AlertKit" */,
-				CEB5A8472ABC489200A7F4AD /* XCRemoteSwiftPackageReference "MIOTPVerificationSPM" */,
+				CEB5A8472ABC489200A7F4AD /* XCRemoteSwiftPackageReference "MIOTPVerificationSPM.git" */,
 			);
 			productRefGroup = 9694AB332A5DE9D500BDF5F8 /* Products */;
 			projectDirPath = "";
@@ -1209,33 +1584,45 @@
 				96EA1E3C2A77006B00F39386 /* Alexandria-Black.ttf in Resources */,
 				96EA1E3D2A77006B00F39386 /* Alexandria-Bold.ttf in Resources */,
 				96EA1E3E2A77006B00F39386 /* Alexandria-ExtraBold.ttf in Resources */,
+				CEDDBE192ACBDFA700677C94 /* sideMenuCell.xib in Resources */,
 				96EA1E3F2A77006B00F39386 /* Alexandria-ExtraLight.ttf in Resources */,
 				96EA1E402A77006B00F39386 /* Alexandria-Light.ttf in Resources */,
+				CEBB8B912ADE489A00E70EC4 /* RecentPlacesCell.xib in Resources */,
 				963DAB302A7FDD9B004ED3C7 /* DriverRegisterVC.xib in Resources */,
-				CE30214A2ABBBD0700572DE7 /* registerPagesCell.xib in Resources */,
 				96EA1E412A77006B00F39386 /* Alexandria-Medium.ttf in Resources */,
 				96202C852A7FB98800053C5B /* EnterMobileVC.xib in Resources */,
 				96EA1E422A77006B00F39386 /* Alexandria-Regular.ttf in Resources */,
 				96EA1E432A77006B00F39386 /* Alexandria-SemiBold.ttf in Resources */,
+				CEBB8B972ADE95F200E70EC4 /* profileVC.xib in Resources */,
+				CE7D82FC2AC3CA8300C5B028 /* googleMapsStyle.json in Resources */,
 				96EA1E442A77006B00F39386 /* Alexandria-Thin.ttf in Resources */,
+				CE6178A02ACCF9E500AA8BB7 /* homeSearchVC.xib in Resources */,
+				CE27F5492ADFD3D200DEA419 /* selectDateVC.xib in Resources */,
 				963DAB392A803B6C004ED3C7 /* RegisterDriverPersonalInfoVC.xib in Resources */,
+				CE7D82F92AC3BC1D00C5B028 /* SelectYourLocationVc.xib in Resources */,
 				9694AC5F2A5E040D00BDF5F8 /* ArbFONTS-URW-DIN-Arabic-Medium.ttf in Resources */,
+				CE9757C82AE0F0CC0014346E /* tripListVC.xib in Resources */,
 				9694AC5B2A5E040D00BDF5F8 /* no-search-result.json in Resources */,
 				CE30212A2ABB275400572DE7 /* phoneAndLocationVC.xib in Resources */,
 				9694AC632A5E040D00BDF5F8 /* ArbFONTS-URW-DIN-Arabic-Demi.ttf in Resources */,
+				CE27F53D2ADFAD8500DEA419 /* StarRatingStackView.xib in Resources */,
+				CE9757C62AE0F0BD0014346E /* tripListCell.xib in Resources */,
 				96202C8A2A7FBB1300053C5B /* ReseatPasswordVC.xib in Resources */,
 				9694AC6C2A5E040D00BDF5F8 /* InfoPlist.strings in Resources */,
 				9630071A2A7671560075DBFE /* SelectUserTypeVC.xib in Resources */,
 				9694AB422A5DE9D600BDF5F8 /* LaunchScreen.storyboard in Resources */,
 				96B27F8B2A82F7BE006C8DB3 /* TermsOfUseVC.xib in Resources */,
-				CE30214C2ABBBD3200572DE7 /* registerPagesVC.xib in Resources */,
+				CEBB8BA32ADEB8ED00E70EC4 /* profileCell.xib in Resources */,
 				9694AC592A5E040D00BDF5F8 /* empty-box-animation.json in Resources */,
 				9694AC582A5E040D00BDF5F8 /* 108106-empty-cart.json in Resources */,
 				CE30213C2ABBA4D400572DE7 /* forgetPasswordVC.xib in Resources */,
+				CE6178A72ACD102F00AA8BB7 /* mapSearchVC.xib in Resources */,
 				9641AD2E2A6C1ADD00A29046 /* Main.storyboard in Resources */,
 				9694AC5E2A5E040D00BDF5F8 /* 116102-check-in-blue.json in Resources */,
 				9694AC6A2A5E040D00BDF5F8 /* PhotosUI.strings in Resources */,
+				CEDDBE252ACC45AF00677C94 /* destinationSearchVCCell.xib in Resources */,
 				9694AC5D2A5E040D00BDF5F8 /* 62623-warning.json in Resources */,
+				CE27F5432ADFB02F00DEA419 /* GoogleMapViewController.xib in Resources */,
 				9694AC5A2A5E040D00BDF5F8 /* 629-empty-box.json in Resources */,
 				96202C7B2A7FAE3300053C5B /* OTPVC.xib in Resources */,
 				963007152A76710C0075DBFE /* RegisterVC.xib in Resources */,
@@ -1252,6 +1639,7 @@
 				9694AC542A5E040D00BDF5F8 /* Assets.xcassets in Resources */,
 				9694ABE52A5DFACA00BDF5F8 /* FiristStrpProgressCell.xib in Resources */,
 				963DAB372A803B64004ED3C7 /* RegisterDriverPersonalInfoCell.xib in Resources */,
+				CE9757D12AE1B1E70014346E /* driverProfileVC.xib in Resources */,
 				9694AC5C2A5E040D00BDF5F8 /* logo.json in Resources */,
 				9694AC682A5E040D00BDF5F8 /* PhotoLibraryServices.strings in Resources */,
 				CE3021352ABB908E00572DE7 /* enterPasswordVC.xib in Resources */,
@@ -1263,7 +1651,41 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		03C9E5DDB323737BD42637D0 /* [CP] Check Pods Manifest.lock */ = {
+		6256EC291A4069400B807961 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Takhawi/Pods-Takhawi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Takhawi/Pods-Takhawi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Takhawi/Pods-Takhawi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9289DFB8FC1DF7C4D5C77983 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Takhawi/Pods-Takhawi-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Takhawi/Pods-Takhawi-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Takhawi/Pods-Takhawi-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D072B671286BE7E1DDCE035D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1285,23 +1707,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F9FF9F265C71D8C512336104 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Takhawi/Pods-Takhawi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Takhawi/Pods-Takhawi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Takhawi/Pods-Takhawi-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1314,6 +1719,7 @@
 				CEB5A8592ABC6DF000A7F4AD /* tap2.swift in Sources */,
 				9694ABF32A5DFACA00BDF5F8 /* CustomizedTabBar.swift in Sources */,
 				9694ABE62A5DFACA00BDF5F8 /* FiristStrpProgressCell.swift in Sources */,
+				CEBB8B932ADE77FB00E70EC4 /* mapSearchExtention.swift in Sources */,
 				CEB5A8642ABD7ECD00A7F4AD /* tab4.swift in Sources */,
 				CE115E5D2ABED5E800972CC9 /* homeVC.swift in Sources */,
 				9694ABE82A5DFACA00BDF5F8 /* LocationExtetioin.swift in Sources */,
@@ -1323,20 +1729,25 @@
 				9694ABD92A5DFACA00BDF5F8 /* UIDeviceExtention.swift in Sources */,
 				96202C882A7FBB0A00053C5B /* ReseatPasswordVC.swift in Sources */,
 				96202C832A7FB97B00053C5B /* EnterMobileVC.swift in Sources */,
+				CE772FBA2ADD458600BDEDC9 /* sideMenuItems.swift in Sources */,
+				CE6178A42ACD08DE00AA8BB7 /* homeSearch+textfieldDelegate.swift in Sources */,
 				9694AC012A5DFACA00BDF5F8 /* SocialMedia.swift in Sources */,
 				9694ABE72A5DFACA00BDF5F8 /* extensionUICollectionView.swift in Sources */,
 				9694AC052A5DFACA00BDF5F8 /* ValidationErrors.swift in Sources */,
 				9694AC702A5E040D00BDF5F8 /* Extensions+UICollectionView.swift in Sources */,
 				9694AB532A5DFA5000BDF5F8 /* BaseNav.swift in Sources */,
 				9694AB3A2A5DE9D500BDF5F8 /* ViewController.swift in Sources */,
+				CEF9737E2AC1D4FA00CDCCFD /* KeyboardAdaptive.swift in Sources */,
 				CEB5A8622ABCDAF700A7F4AD /* customSegmentController.swift in Sources */,
 				CEB5A8502ABC53C200A7F4AD /* underLineButton.swift in Sources */,
-				CE3021492ABBBD0700572DE7 /* registerPagesCell.swift in Sources */,
 				9694AC062A5DFACA00BDF5F8 /* RegularExpression.swift in Sources */,
+				CE27F5472ADFD3B700DEA419 /* selectDateVC.swift in Sources */,
 				9641AD382A6C2EFC00A29046 /* Blurview.swift in Sources */,
 				9694ABD12A5DFACA00BDF5F8 /* UIstackViewExtension.swift in Sources */,
+				CE27F53F2ADFAD8500DEA419 /* StarRatingStackView.swift in Sources */,
 				CEB5A8572ABC6D3700A7F4AD /* tap1.swift in Sources */,
 				9694ABFF2A5DFACA00BDF5F8 /* defult.swift in Sources */,
+				CE4477442AE0440E000D96F6 /* calendarWeekStore.swift in Sources */,
 				9694AC6F2A5E040D00BDF5F8 /* localizeStringExtension.swift in Sources */,
 				9694ABFE2A5DFACA00BDF5F8 /* Constants.swift in Sources */,
 				9694ABD82A5DFACA00BDF5F8 /* extensionUITextField.swift in Sources */,
@@ -1348,20 +1759,27 @@
 				9694AC032A5DFACA00BDF5F8 /* Enums.swift in Sources */,
 				9694AC6D2A5E040D00BDF5F8 /* Extensions+Bundle.swift in Sources */,
 				9694ABD32A5DFACA00BDF5F8 /* NSAttributedStringExtension.swift in Sources */,
+				CE4477412AE04392000D96F6 /* oneWeekView.swift in Sources */,
 				9694ABDA2A5DFACA00BDF5F8 /* FileDownloader.swift in Sources */,
 				9694ABC62A5DFACA00BDF5F8 /* UIAlertContollerExtentions.swift in Sources */,
+				CEBB8B992ADE960100E70EC4 /* profileVC.swift in Sources */,
 				9694ABE22A5DFACA00BDF5F8 /* extensionUIView.swift in Sources */,
+				CEDDBE292ACC5C3700677C94 /* blurEffect.swift in Sources */,
 				9694ABD02A5DFACA00BDF5F8 /* UIWindow+Extensions.swift in Sources */,
 				9694ABBA2A5DFACA00BDF5F8 /* CodableInit.swift in Sources */,
 				CEB5A84E2ABC4F7500A7F4AD /* backButton.swift in Sources */,
 				9694ABD42A5DFACA00BDF5F8 /* TableView&CollectionView.swift in Sources */,
+				CE9757C42AE0F0BD0014346E /* tripListCell.swift in Sources */,
 				963DAB352A803B64004ED3C7 /* RegisterDriverPersonalInfoVC.swift in Sources */,
 				9694AC622A5E040D00BDF5F8 /* Fonts.swift in Sources */,
 				9694ABC82A5DFACA00BDF5F8 /* UIlableExtension.swift in Sources */,
+				CEBB8B902ADE489A00E70EC4 /* RecentPlacesCell.swift in Sources */,
 				9694ABCB2A5DFACA00BDF5F8 /* extensionUIStoryBoard.swift in Sources */,
 				9641AD362A6C2C4200A29046 /* OnboardingCollectionViewCell.swift in Sources */,
 				9694ABC52A5DFACA00BDF5F8 /* Alert.swift in Sources */,
 				9694ABC32A5DFACA00BDF5F8 /* Utilities.swift in Sources */,
+				CEBB8BA22ADEB8ED00E70EC4 /* profileCell.swift in Sources */,
+				CEF9737C2AC1D4D800CDCCFD /* KeyboardHeightPublisher.swift in Sources */,
 				963007132A7671020075DBFE /* RegisterVC.swift in Sources */,
 				9694ABDE2A5DFACA00BDF5F8 /* String.swift in Sources */,
 				9694AC572A5E040D00BDF5F8 /* Color.swift in Sources */,
@@ -1370,29 +1788,40 @@
 				9694ABCD2A5DFACA00BDF5F8 /* UITableViewExtension.swift in Sources */,
 				963007182A76714E0075DBFE /* SelectUserTypeVC.swift in Sources */,
 				9694ABD22A5DFACA00BDF5F8 /* UIButtonExtesion.swift in Sources */,
+				CE44773D2AE042D5000D96F6 /* calendarSwiftui.swift in Sources */,
+				CE7D82F72AC3BB1100C5B028 /* MainAlert.swift in Sources */,
 				9694ABE42A5DFACA00BDF5F8 /* AnimateGifImage.swift in Sources */,
+				CED51ED32AE1B86D00603151 /* driverProfile+collection.swift in Sources */,
 				9694AB362A5DE9D500BDF5F8 /* AppDelegate.swift in Sources */,
-				CE30214E2ABBC05E00572DE7 /* test.swift in Sources */,
+				CE6178A22ACCF9F700AA8BB7 /* homeSearchVC.swift in Sources */,
+				CE6178AD2ACD23BD00AA8BB7 /* tipLabel.swift in Sources */,
 				9694ABE02A5DFACA00BDF5F8 /* Optional.swift in Sources */,
+				CE6178AA2ACD104900AA8BB7 /* mapSearchVC.swift in Sources */,
 				9694ABDC2A5DFACA00BDF5F8 /* Array.swift in Sources */,
 				9694AB382A5DE9D500BDF5F8 /* SceneDelegate.swift in Sources */,
 				963DAB2B2A7FDD27004ED3C7 /* DriverRegisterVC.swift in Sources */,
 				9694AC772A5E0D8B00BDF5F8 /* UserDefaultsExtensions.swift in Sources */,
+				CE385D942AE267A4008F2D50 /* AnimatePolyline.swift in Sources */,
 				CE3021372ABB9B7A00572DE7 /* enterpassword+textfielddelegate.swift in Sources */,
 				9694ABCE2A5DFACA00BDF5F8 /* UITextViewExtesion.swift in Sources */,
+				CE385D992AE267D0008F2D50 /* Utilitiesh.swift in Sources */,
 				9694ABEB2A5DFACA00BDF5F8 /* UINavigationController.swift in Sources */,
 				CEB5A85D2ABC909400A7F4AD /* registerTapsVC.swift in Sources */,
 				9694AC022A5DFACA00BDF5F8 /* AppHelper.swift in Sources */,
 				9694ABBC2A5DFACA00BDF5F8 /* APIRouter.swift in Sources */,
+				CE385D972AE267A4008F2D50 /* LocationUtilities.swift in Sources */,
 				CE3021332ABB87CF00572DE7 /* enterPasswordVC.swift in Sources */,
+				CE9757D52AE1B2B00014346E /* driverProfileVC.swift in Sources */,
 				CE30213A2ABBA4B200572DE7 /* forgetPasswordVCVC.swift in Sources */,
 				9694ABFD2A5DFACA00BDF5F8 /* AppAlert.swift in Sources */,
 				9694ABC22A5DFACA00BDF5F8 /* Constant.swift in Sources */,
 				9694AC562A5E040D00BDF5F8 /* AppColor.swift in Sources */,
 				CE3021282ABB274100572DE7 /* phoneAndLocationVC.swift in Sources */,
+				CE7D82F42AC3B86300C5B028 /* selectYorLocation.swift in Sources */,
 				9694ABC12A5DFACA00BDF5F8 /* APIParameters.swift in Sources */,
 				9694ABF62A5DFACA00BDF5F8 /* MarkerView.swift in Sources */,
 				9694ABFC2A5DFACA00BDF5F8 /* AlertView.swift in Sources */,
+				CEF9737A2AC1D4B600CDCCFD /* UIResponder+Current.swift in Sources */,
 				963DAB362A803B64004ED3C7 /* RegisterDriverPersonalInfoCell.swift in Sources */,
 				CE9DB3962AC18346000759B8 /* customSegnmentWithAnimation.swift in Sources */,
 				9694ABC42A5DFACA00BDF5F8 /* ExtensionNotification.swift in Sources */,
@@ -1405,36 +1834,47 @@
 				9694ABBF2A5DFACA00BDF5F8 /* APIGloabelResponse.swift in Sources */,
 				9694ABDF2A5DFACA00BDF5F8 /* Double.swift in Sources */,
 				9694ABF52A5DFACA00BDF5F8 /* showandHidePassword.swift in Sources */,
+				CE27F5442ADFB02F00DEA419 /* GoogleMapViewController.swift in Sources */,
+				CEDDBE182ACBDFA700677C94 /* sideMenuCell.swift in Sources */,
 				9694ABF02A5DFACA00BDF5F8 /* PushNotifcations.swift in Sources */,
-				CE3021482ABBBD0700572DE7 /* registerPagesVC.swift in Sources */,
 				9694ABBD2A5DFACA00BDF5F8 /* UploadData.swift in Sources */,
+				CE385D962AE267A4008F2D50 /* Easing.swift in Sources */,
 				9694ABF12A5DFACA00BDF5F8 /* CustomButtons.swift in Sources */,
 				9694ABF82A5DFACA00BDF5F8 /* ImagePicker.swift in Sources */,
+				CE98110A2AC2CD2E00D99EC7 /* homeVc+delegate.swift in Sources */,
 				9694ABD62A5DFACA00BDF5F8 /* ExtensionUILable.swift in Sources */,
 				CE3021432ABBB86500572DE7 /* phoneFormate.swift in Sources */,
 				9694AC712A5E040D00BDF5F8 /* Extensions+UITextView.swift in Sources */,
 				9694ABE92A5DFACA00BDF5F8 /* extensionUIImageView.swift in Sources */,
 				CE30213F2ABBAB1100572DE7 /* verificationVC.swift in Sources */,
 				9694AC072A5DFACA00BDF5F8 /* NSNotificationNames.swift in Sources */,
+				CEBB8BA52ADEEC1900E70EC4 /* profileVc+delegate.swift in Sources */,
 				9694ABD52A5DFACA00BDF5F8 /* UIImageExtention.swift in Sources */,
 				9694ABC72A5DFACA00BDF5F8 /* RoundImage.swift in Sources */,
+				CE44773A2AE03DBD000D96F6 /* selectDateExtention.swift in Sources */,
+				CEDDBE232ACC45AF00677C94 /* destinationSearchVCCell.swift in Sources */,
 				9694ABBB2A5DFACA00BDF5F8 /* GenralModel.swift in Sources */,
 				9694ABF72A5DFACA00BDF5F8 /* AppIndicator.swift in Sources */,
 				9694ABBE2A5DFACA00BDF5F8 /* UserModel.swift in Sources */,
+				CE9DB3992AC1AD58000759B8 /* customUIsegment.swift in Sources */,
 				9694ABD72A5DFACA00BDF5F8 /* UIFontExtension.swift in Sources */,
 				9694ABF92A5DFACA00BDF5F8 /* Locator.swift in Sources */,
+				CEDDBE1C2ACC0DAB00677C94 /* sideMenuModel.swift in Sources */,
 				9694AC002A5DFACA00BDF5F8 /* Print.swift in Sources */,
+				CE9757C52AE0F0BD0014346E /* tripListVC.swift in Sources */,
 				9694AC6B2A5E040D00BDF5F8 /* Language.swift in Sources */,
 				9694ABEA2A5DFACA00BDF5F8 /* extensionUIViewController.swift in Sources */,
 				9641AD312A6C29DD00A29046 /* OnboardingViewController.swift in Sources */,
 				96202C792A7FAE2800053C5B /* OTPVC.swift in Sources */,
 				9694AB522A5DFA5000BDF5F8 /* BaseVC.swift in Sources */,
 				9694ABC92A5DFACA00BDF5F8 /* UIViewLayout.swift in Sources */,
+				CE44773F2AE04355000D96F6 /* weeksTabView.swift in Sources */,
 				9694AC6E2A5E040D00BDF5F8 /* Extensions+UITextField.swift in Sources */,
 				96B27F872A82F791006C8DB3 /* TermsOfUseVC.swift in Sources */,
 				9694AC552A5E040D00BDF5F8 /* Themes.swift in Sources */,
 				9641AD342A6C2C1700A29046 /* OnboardingSlide.swift in Sources */,
 				9694AC042A5DFACA00BDF5F8 /* ValidationService.swift in Sources */,
+				CE27F53E2ADFAD8500DEA419 /* JStarRatingView.swift in Sources */,
 				9694ABF22A5DFACA00BDF5F8 /* CustomViews.swift in Sources */,
 				9694ABDB2A5DFACA00BDF5F8 /* Date.swift in Sources */,
 				9694ABCF2A5DFACA00BDF5F8 /* UITabbar+NavigationControllerExtension.swift in Sources */,
@@ -1448,6 +1888,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				9694AB412A5DE9D600BDF5F8 /* Base */,
+				CE07ECE12AC22AA400584119 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1455,7 +1896,6 @@
 		9694AC392A5E040D00BDF5F8 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9694AC3A2A5E040D00BDF5F8 /* ar */,
 				9694AC432A5E040D00BDF5F8 /* en */,
 			);
 			name = Localizable.strings;
@@ -1464,7 +1904,6 @@
 		9694AC3B2A5E040D00BDF5F8 /* PhotoLibrary.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9694AC3C2A5E040D00BDF5F8 /* ar */,
 				9694AC442A5E040D00BDF5F8 /* en */,
 			);
 			name = PhotoLibrary.strings;
@@ -1473,7 +1912,6 @@
 		9694AC3D2A5E040D00BDF5F8 /* PhotoLibraryServices.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9694AC3E2A5E040D00BDF5F8 /* ar */,
 				9694AC452A5E040D00BDF5F8 /* en */,
 			);
 			name = PhotoLibraryServices.strings;
@@ -1482,7 +1920,6 @@
 		9694AC3F2A5E040D00BDF5F8 /* CameraUI.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9694AC402A5E040D00BDF5F8 /* ar */,
 				9694AC462A5E040D00BDF5F8 /* en */,
 			);
 			name = CameraUI.strings;
@@ -1491,7 +1928,6 @@
 		9694AC412A5E040D00BDF5F8 /* PhotosUI.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9694AC422A5E040D00BDF5F8 /* ar */,
 				9694AC472A5E040D00BDF5F8 /* en */,
 			);
 			name = PhotosUI.strings;
@@ -1500,7 +1936,6 @@
 		9694AC4A2A5E040D00BDF5F8 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9694AC4B2A5E040D00BDF5F8 /* ar */,
 				9694AC4C2A5E040D00BDF5F8 /* en */,
 			);
 			name = InfoPlist.strings;
@@ -1513,6 +1948,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -1545,6 +1981,9 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1573,6 +2012,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -1605,6 +2045,8 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1616,6 +2058,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -1625,21 +2068,33 @@
 		};
 		9694AB472A5DE9D600BDF5F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CF167FCEE9E95FB61B46A5BA /* Pods-Takhawi.debug.xcconfig */;
+			baseConfigurationReference = E2FCFFF148A9D16245CF1A70 /* Pods-Takhawi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = CA5NVSJ377;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/CHIOTPField\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/EasyTipView\"/**",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/OTPFieldView\"",
+					"\"${PODS_ROOT}/GoogleMaps/Base/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleMaps/Maps/Frameworks\"",
+					"\"${PODS_ROOT}/GooglePlacePicker/Frameworks\"",
+					"\"${PODS_ROOT}/GooglePlaces/Frameworks\"",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Takhawi/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Will you allow this app to always know your location,to get near places for you?";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1659,21 +2114,34 @@
 		};
 		9694AB482A5DE9D600BDF5F8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1FEADD82AE4CE1D1AD7ECB60 /* Pods-Takhawi.release.xcconfig */;
+			baseConfigurationReference = 174FE3F7777F14CCC00CD042 /* Pods-Takhawi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 95K26889X5;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = CA5NVSJ377;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				"EXCLUDED_ARCHS[sdk=*]" = arm64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/CHIOTPField\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/EasyTipView\"/**",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/OTPFieldView\"",
+					"\"${PODS_ROOT}/GoogleMaps/Base/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleMaps/Maps/Frameworks\"",
+					"\"${PODS_ROOT}/GooglePlacePicker/Frameworks\"",
+					"\"${PODS_ROOT}/GooglePlaces/Frameworks\"",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Takhawi/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Will you allow this app to always know your location,to get near places for you?";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1723,7 +2191,7 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		9694AC082A5DFB6200BDF5F8 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		9694AC082A5DFB6200BDF5F8 /* XCRemoteSwiftPackageReference "Alamofire.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -1747,7 +2215,7 @@
 				minimumVersion = 10.0.0;
 			};
 		};
-		9694AC132A5E013100BDF5F8 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		9694AC132A5E013100BDF5F8 /* XCRemoteSwiftPackageReference "Kingfisher.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -1755,7 +2223,7 @@
 				minimumVersion = 7.0.0;
 			};
 		};
-		9694AC162A5E028800BDF5F8 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
+		9694AC162A5E028800BDF5F8 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ninjaprox/NVActivityIndicatorView.git";
 			requirement = {
@@ -1763,7 +2231,7 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		9694AC1B2A5E02EB00BDF5F8 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+		9694AC1B2A5E02EB00BDF5F8 /* XCRemoteSwiftPackageReference "IQKeyboardManager.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
 			requirement = {
@@ -1779,7 +2247,7 @@
 				minimumVersion = 0.7.1;
 			};
 		};
-		9694AC722A5E048F00BDF5F8 /* XCRemoteSwiftPackageReference "Cosmos" */ = {
+		9694AC722A5E048F00BDF5F8 /* XCRemoteSwiftPackageReference "Cosmos.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/evgenyneu/Cosmos.git";
 			requirement = {
@@ -1795,7 +2263,7 @@
 				minimumVersion = 3.0.0;
 			};
 		};
-		CEB5A8472ABC489200A7F4AD /* XCRemoteSwiftPackageReference "MIOTPVerificationSPM" */ = {
+		CEB5A8472ABC489200A7F4AD /* XCRemoteSwiftPackageReference "MIOTPVerificationSPM.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Mindinventory/MIOTPVerificationSPM.git";
 			requirement = {
@@ -1813,7 +2281,7 @@
 		};
 		9694AC092A5DFB6300BDF5F8 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9694AC082A5DFB6200BDF5F8 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = 9694AC082A5DFB6200BDF5F8 /* XCRemoteSwiftPackageReference "Alamofire.git" */;
 			productName = Alamofire;
 		};
 		9694AC0C2A5DFC1400BDF5F8 /* SwiftMessages */ = {
@@ -1833,22 +2301,22 @@
 		};
 		9694AC142A5E013100BDF5F8 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9694AC132A5E013100BDF5F8 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = 9694AC132A5E013100BDF5F8 /* XCRemoteSwiftPackageReference "Kingfisher.git" */;
 			productName = Kingfisher;
 		};
 		9694AC172A5E028800BDF5F8 /* NVActivityIndicatorView */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9694AC162A5E028800BDF5F8 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			package = 9694AC162A5E028800BDF5F8 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView.git" */;
 			productName = NVActivityIndicatorView;
 		};
 		9694AC192A5E028800BDF5F8 /* NVActivityIndicatorViewExtended */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9694AC162A5E028800BDF5F8 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			package = 9694AC162A5E028800BDF5F8 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView.git" */;
 			productName = NVActivityIndicatorViewExtended;
 		};
 		9694AC1C2A5E02EB00BDF5F8 /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9694AC1B2A5E02EB00BDF5F8 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			package = 9694AC1B2A5E02EB00BDF5F8 /* XCRemoteSwiftPackageReference "IQKeyboardManager.git" */;
 			productName = IQKeyboardManagerSwift;
 		};
 		9694AC1F2A5E03AF00BDF5F8 /* BottomPopup */ = {
@@ -1858,7 +2326,7 @@
 		};
 		9694AC732A5E048F00BDF5F8 /* Cosmos */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9694AC722A5E048F00BDF5F8 /* XCRemoteSwiftPackageReference "Cosmos" */;
+			package = 9694AC722A5E048F00BDF5F8 /* XCRemoteSwiftPackageReference "Cosmos.git" */;
 			productName = Cosmos;
 		};
 		96EA1E3A2A76EDF900F39386 /* M13Checkbox */ = {
@@ -1868,7 +2336,7 @@
 		};
 		CEB5A8482ABC489200A7F4AD /* MIOTPVerificationSPM */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CEB5A8472ABC489200A7F4AD /* XCRemoteSwiftPackageReference "MIOTPVerificationSPM" */;
+			package = CEB5A8472ABC489200A7F4AD /* XCRemoteSwiftPackageReference "MIOTPVerificationSPM.git" */;
 			productName = MIOTPVerificationSPM;
 		};
 /* End XCSwiftPackageProductDependency section */

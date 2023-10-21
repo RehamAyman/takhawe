@@ -10,7 +10,7 @@ import UIKit
 
 extension CALayer {
   func applySketchShadow(
-    color: UIColor = .black,
+    color: UIColor = .systemGray4,
     alpha: Float = 0.5,
     x: CGFloat = 0,
     y: CGFloat = 2,
@@ -30,6 +30,24 @@ extension CALayer {
       shadowPath = UIBezierPath(rect: rect).cgPath
     }
   }
+    
+    func addBasicShadow (cornerRadius : Float) {
+        self.cornerRadius = CGFloat(cornerRadius)
+        self.shadowColor = UIColor.lightGray.cgColor
+        self.shadowOffset = CGSize(width: 0, height: 0)
+        self.shadowOpacity = 0.7
+        self.shadowRadius = 4.0
+    }
+    
+    
+    
+    func addTopShadow () {
+        self.shadowColor = UIColor.black.cgColor
+        self.shadowRadius = 3
+        self.shadowOffset = CGSize(width: 3, height: -3)
+    }
+    
+    
 }
 
 extension UIView {
@@ -101,7 +119,14 @@ extension UIView {
        layer.masksToBounds = false
     }
     
-    
+
+       func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+            let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+            let mask = CAShapeLayer()
+            mask.path = path.cgPath
+            layer.mask = mask
+        }
+ 
     
     
     func AddTOPCornersView (num : CGFloat ) {

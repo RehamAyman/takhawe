@@ -1,8 +1,42 @@
 PODS:
+  - CHIOTPField (0.1.0):
+    - CHIOTPField/Four (= 0.1.0)
+    - CHIOTPField/One (= 0.1.0)
+    - CHIOTPField/Three (= 0.1.0)
+    - CHIOTPField/Two (= 0.1.0)
+  - CHIOTPField/Four (0.1.0)
+  - CHIOTPField/One (0.1.0)
+  - CHIOTPField/Three (0.1.0)
+  - CHIOTPField/Two (0.1.0)
+  - EasyTipView (2.1.0)
+  - GoogleMaps (3.1.0):
+    - GoogleMaps/Maps (= 3.1.0)
+  - GoogleMaps/Base (3.1.0)
+  - GoogleMaps/Maps (3.1.0):
+    - GoogleMaps/Base
+  - GooglePlacePicker (3.1.0):
+    - GoogleMaps (= 3.1.0)
+    - GooglePlaces (= 3.1.0)
+  - GooglePlaces (3.1.0):
+    - GoogleMaps/Base (= 3.1.0)
   - OTPFieldView (1.0.1)
 
 DEPENDENCIES:
+  - CHIOTPField (~> 0.1)
+  - EasyTipView (~> 2.1)
+  - GoogleMaps
+  - GooglePlacePicker
+  - GooglePlaces
   - OTPFieldView (from `https://github.com/AbdallaTarek/OTPFieldView.git`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - CHIOTPField
+    - EasyTipView
+    - GooglePlacePicker
+  trunk:
+    - GoogleMaps
+    - GooglePlaces
 
 EXTERNAL SOURCES:
   OTPFieldView:
@@ -14,8 +48,13 @@ CHECKOUT OPTIONS:
     :git: https://github.com/AbdallaTarek/OTPFieldView.git
 
 SPEC CHECKSUMS:
+  CHIOTPField: 5df19b433ccfad2a80e944d3abde128a236aaf01
+  EasyTipView: a92b6edc377b81c5ac18e9fd35d5ee78e9409488
+  GoogleMaps: 5c13302e6fe6bb6e686b267196586b91cd594225
+  GooglePlacePicker: fa975116ac202ac29822c0a79758ea1c4db5a95f
+  GooglePlaces: e874db179f2675c4f3eeda0b686b540273a578b0
   OTPFieldView: 700a752fe62c41d1c4914c78aa500fb30d97c255
 
-PODFILE CHECKSUM: a671497025b7ff2fe510a0f10596851a571fc646
+PODFILE CHECKSUM: cdd95cee17e699a15f8f3528ee14bf78b1ec8dda
 
 COCOAPODS: 1.12.1
