@@ -91,7 +91,7 @@ extension tripListVC: UITableViewDelegate {
         push(vc)
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 270
+        return 260
     }
 }
 

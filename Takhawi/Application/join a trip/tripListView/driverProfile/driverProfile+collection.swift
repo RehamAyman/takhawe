@@ -70,7 +70,7 @@ extension driverProfileVC : UICollectionViewDelegate , UICollectionViewDataSourc
           self.animatePolyline = AnimatePolyline(mapView: self.googleView)
           self.animatePolyline?.route = route
           self.animatePolyline?.startAnimation()
- //         self.mapView.animate(with: GMSCameraUpdate.fit(GMSCoordinateBounds(path: route.path), withPadding: 50.0))
+
            googleView.animate(with: GMSCameraUpdate.fit(GMSCoordinateBounds(path: route.path), withPadding: 50.0))
       }
 
