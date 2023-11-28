@@ -14,6 +14,7 @@ import GoogleMaps
 class driverProfileVC: BaseVC {
     
 //MARK: - IBOutlets -
+    @IBOutlet weak var tripCountLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
     @IBOutlet weak var googleView: GMSMapView!
@@ -51,6 +52,8 @@ class driverProfileVC: BaseVC {
         self.collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         self.googleView.layer.addBasicShadow(cornerRadius: 30)
         self.setUpGoogleView()
+        self.tripCountLabel.cornerRadius = 17
+        self.tripCountLabel.layer.masksToBounds = true 
         
     }
     
@@ -58,6 +61,26 @@ class driverProfileVC: BaseVC {
     
   
 //MARK: - Actions -
+    
+    
+    
+    @IBAction func reserveYourSeatAction(_ sender: UIButton) {
+        sender.animateButtonWhenPressed {
+            let vc = ReserveTheTripVC()
+            self.push(vc)
+        }
+    }
+    @IBAction func reviewsAction(_ sender: UIButton) {
+        sender.animateButtonWhenPressed {
+            self.push(reviewsViewVC())
+        }
+        
+        
+        
+        
+        
+        
+    }
     
 }
 

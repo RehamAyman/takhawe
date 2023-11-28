@@ -1,15 +1,15 @@
 //
-//  ReserveTheTripVC.swift
+//  successBookViewVC.swift
 //  Takhawi
 //
-//  Created by Reham Ayman on 27/11/2023.
+//  Created by Reham Ayman on 28/11/2023.
 //
 //  Template by MGAbouarab®
 
 
 import UIKit
 
-class ReserveTheTripVC: BaseVC {
+class successBookViewVC: BaseVC {
     
 //MARK: - IBOutlets -
     
@@ -18,8 +18,8 @@ class ReserveTheTripVC: BaseVC {
     
     
 //MARK: - Creation -
-    static func create() -> ReserveTheTripVC {
-        let vc = AppStoryboards.<#StoryboardCase#>.instantiate(ReserveTheTripVC.self)
+    static func create() -> successBookViewVC {
+        let vc = AppStoryboards.<#StoryboardCase#>.instantiate(successBookViewVC.self)
         vc.hidesBottomBarWhenPushed = true
         return vc
     }
@@ -45,11 +45,11 @@ class ReserveTheTripVC: BaseVC {
 
 
 //MARK: - Networking -
-extension ReserveTheTripVC {
+extension successBookViewVC {
     
 }
 
 //MARK: - Routes -
-extension ReserveTheTripVC {
+extension successBookViewVC {
     
 }

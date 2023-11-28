@@ -15,6 +15,7 @@
                 <outlet property="collectionView" destination="7mh-CN-Dfo" id="ahz-cl-gt6"/>
                 <outlet property="containerView" destination="wTq-9C-DMp" id="dIu-U1-xVG"/>
                 <outlet property="googleView" destination="ag7-m0-5iV" id="PYU-s2-rdE"/>
+                <outlet property="tripCountLabel" destination="gTa-8g-a8U" id="8nP-SO-iH6"/>
                 <outlet property="view" destination="o2g-cy-0xQ" id="339-f4-k3I"/>
             </connections>
         </placeholder>
@@ -115,6 +116,9 @@
                                                                     <real key="value" value="17"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="reviewsAction:" destination="-1" eventType="touchUpInside" id="oen-8Q-Iuc"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <constraints>
@@ -365,6 +369,9 @@
                                                     <real key="value" value="25"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="reserveYourSeatAction:" destination="-1" eventType="touchUpInside" id="js6-l1-Bi6"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
