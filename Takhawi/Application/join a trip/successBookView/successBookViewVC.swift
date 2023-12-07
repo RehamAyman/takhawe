@@ -13,16 +13,17 @@ class successBookViewVC: BaseVC {
     
 //MARK: - IBOutlets -
     
+    @IBOutlet weak var checkMark: UIImageView!
+    @IBOutlet weak var confirmOutlet: UIButton!
+    @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var visualView: UIVisualEffectView!
     
 //MARK: - Properties -
     
     
 //MARK: - Creation -
-    static func create() -> successBookViewVC {
-        let vc = AppStoryboards.<#StoryboardCase#>.instantiate(successBookViewVC.self)
-        vc.hidesBottomBarWhenPushed = true
-        return vc
-    }
+    
+   
     
 // MARK: - Lifecycle -
     override func viewDidLoad() {
@@ -34,13 +35,66 @@ class successBookViewVC: BaseVC {
 //MARK: - Design Methods -
     private func configureInitialDesign() {
         self.title = "".localized
+        self.mainView.layer.addBasicShadow(cornerRadius: 20)
+        self.confirmOutlet.layer.addBasicShadow(cornerRadius: Float(self.confirmOutlet.layer.frame.height) / 2  )
+        
+        self.openingAnimation()
+        
+       
+        
+        
+        
+        
+        
+        
+        
+        
     }
     
 //MARK: - Logic Methods -
     
+override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
+   {
+       let touch = touches.first
+       if touch?.view != self.mainView
+       { self.dismiss(animated: true, completion: nil) }
+   }
+    
+    
+    private func openingAnimation () {
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4)  { [weak self] in
+        self?.visualView.isHidden = false
+            
+            UIView.animate(withDuration: 0.5) {
+                self?.checkMark.layer.transform = CATransform3DMakeScale( 1.3 , 1.3 , 1)
+            } completion: { completed  in
+                if completed {
+                    UIView.animate(withDuration: 0.5) {
+                        self?.checkMark.layer.transform = CATransform3DMakeScale(1, 1, 1)
+                        // do here any actionn after animation done !
+                        
+                        
+                    }
+                }
+            }
+       }
+    }
+    
     
 //MARK: - Actions -
     
+    @IBAction func confirmAction(_ sender: UIButton) {
+        sender.animateButtonWhenPressed {
+            
+        }
+    }
+    @IBAction func dismissAction(_ sender: UIButton) {
+        sender.animateButtonWhenPressed {
+            self.visualView.isHidden = true
+            self.dismiss(animated: true )
+        }
+    }
 }
 
 

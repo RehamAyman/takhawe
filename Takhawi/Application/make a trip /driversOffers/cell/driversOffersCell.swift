@@ -6,18 +6,36 @@
 //
 
 import UIKit
+import Cosmos
 
 class driversOffersCell: UITableViewCell {
 
+    @IBOutlet weak var driverRate: CosmosView!
+    @IBOutlet weak var driverName: UILabel!
+    @IBOutlet weak var driverPhoto: UIImageView!
+    @IBOutlet weak var mainView: UIView!
+    var action: (() -> Void)?
+    var cancel: (() -> Void)?
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        selectionStyle = .none
+        self.mainView.layer.addBasicShadow(cornerRadius: 10)
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    @IBAction func selectItem(_ sender: UIButton) {
+        sender.animateButtonWhenPressed {
+            self.action?()
+        }
+    }
+    @IBAction func cancel(_ sender: UIButton) {
+        sender.animateButtonWhenPressed {
+            self.cancel?()
+            
+        }
     }
     
 }

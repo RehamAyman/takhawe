@@ -9,6 +9,7 @@ import UIKit
 
 class chooseFeatureCell: UICollectionViewCell {
 
+    @IBOutlet weak var featureImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

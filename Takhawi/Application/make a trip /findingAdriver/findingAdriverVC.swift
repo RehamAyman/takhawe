@@ -8,21 +8,18 @@
 
 
 import UIKit
+import Lottie
 
 class findingAdriverVC: BaseVC {
     
 //MARK: - IBOutlets -
     
+    @IBOutlet weak var loadingView: LottieAnimationView!
     
 //MARK: - Properties -
-    
-    
-//MARK: - Creation -
-    static func create() -> findingAdriverVC {
-        let vc = AppStoryboards.<#StoryboardCase#>.instantiate(findingAdriverVC.self)
-        vc.hidesBottomBarWhenPushed = true
-        return vc
-    }
+    var cancel : (() -> Void)?
+    var  didfindAdrivier : (() -> Void)?
+    var userCancel : Bool = false
     
 // MARK: - Lifecycle -
     override func viewDidLoad() {
@@ -34,12 +31,31 @@ class findingAdriverVC: BaseVC {
 //MARK: - Design Methods -
     private func configureInitialDesign() {
         self.title = "".localized
+        loadingView.contentMode = .scaleAspectFit
+  
+        loadingView.loopMode = .loop
+        loadingView.animationSpeed = 0.9
+        loadingView.play()
+        
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5 ) {
+//            if self.userCancel == false {
+//                self.didfindAdrivier?()
+//                self.dismiss(animated: true )
+//            }
+//        }
     }
     
 //MARK: - Logic Methods -
     
     
 //MARK: - Actions -
+    @IBAction func cancel(_ sender: UIButton) {
+        self.userCancel = true
+        self.cancel?()
+        
+        self.dismiss(animated: true )
+      
+    }
     
 }
 

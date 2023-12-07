@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,40 +19,54 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock 2" translatesAutoresizingMaskIntoConstraints="NO" id="AHQ-TX-8Wu">
-                        <rect key="frame" x="15" y="34.666666666666664" width="20" height="20"/>
+                        <rect key="frame" x="10" y="34.666666666666664" width="20" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="4cD-Ze-S5N"/>
                             <constraint firstAttribute="width" constant="20" id="cXJ-S9-gNj"/>
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2k9-Qa-QAs">
-                        <rect key="frame" x="43" y="34.666666666666671" width="272" height="43.666666666666671"/>
+                        <rect key="frame" x="38" y="34.666666666666671" width="234" height="43.666666666666671"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNQ-8h-Ert">
-                                <rect key="frame" x="0.0" y="0.0" width="272" height="19.333333333333332"/>
+                                <rect key="frame" x="0.0" y="0.0" width="234" height="19.333333333333332"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVY-Ah-jTS">
-                                <rect key="frame" x="0.0" y="24.333333333333336" width="272" height="19.333333333333336"/>
+                                <rect key="frame" x="0.0" y="24.333333333333336" width="234" height="19.333333333333336"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                     </stackView>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YIN-9Y-igt" customClass="LottieAnimationView" customModule="Lottie">
+                        <rect key="frame" x="280" y="41.666666666666664" width="30" height="29.999999999999993"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="DIS-v6-6rV"/>
+                            <constraint firstAttribute="width" constant="30" id="iVS-1X-Hgi"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="ojN2ZJRA2i"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="YIN-9Y-igt" firstAttribute="centerY" secondItem="2k9-Qa-QAs" secondAttribute="centerY" id="3ME-7S-i0n"/>
+                    <constraint firstAttribute="trailing" secondItem="YIN-9Y-igt" secondAttribute="trailing" constant="10" id="DpI-au-HXS"/>
                     <constraint firstItem="2k9-Qa-QAs" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Lls-UN-OSH"/>
                     <constraint firstItem="2k9-Qa-QAs" firstAttribute="leading" secondItem="AHQ-TX-8Wu" secondAttribute="trailing" constant="8" id="TLK-KG-aUT"/>
-                    <constraint firstItem="AHQ-TX-8Wu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="k4D-jI-S6Q"/>
+                    <constraint firstItem="AHQ-TX-8Wu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="k4D-jI-S6Q"/>
                     <constraint firstItem="AHQ-TX-8Wu" firstAttribute="top" secondItem="2k9-Qa-QAs" secondAttribute="top" id="kau-WU-MaD"/>
-                    <constraint firstAttribute="trailing" secondItem="2k9-Qa-QAs" secondAttribute="trailing" constant="5" id="xD1-LC-Yx8"/>
+                    <constraint firstItem="YIN-9Y-igt" firstAttribute="leading" secondItem="2k9-Qa-QAs" secondAttribute="trailing" constant="8" id="tl8-8P-s0u"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="checkMark" destination="YIN-9Y-igt" id="zem-6Y-6fv"/>
                 <outlet property="city" destination="cVY-Ah-jTS" id="ocq-OQ-Kjq"/>
                 <outlet property="placeName" destination="bNQ-8h-Ert" id="pdv-Ud-UhW"/>
             </connections>
@@ -60,5 +75,8 @@
     </objects>
     <resources>
         <image name="clock 2" width="16" height="16"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

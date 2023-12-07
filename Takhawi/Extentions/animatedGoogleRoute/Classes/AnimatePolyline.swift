@@ -23,7 +23,7 @@ open class AnimatePolyline {
         }
     }
     open var duration: TimeInterval = 3.0
-    open var strokeColor: UIColor = .black {
+    open var strokeColor: UIColor =  UIColor(named: "MainColor") ?? UIColor.blue {
         didSet {
             currentSegment.strokeColor = strokeColor
             backgroundSegment.strokeColor = strokeColor
@@ -52,12 +52,12 @@ open class AnimatePolyline {
 
     private func makePolylines(mapView: GMSMapView) {
         currentSegment = GMSPolyline(path: route.path)
-        currentSegment.strokeWidth = 3.0
+        currentSegment.strokeWidth = 5.0
         currentSegment.strokeColor = strokeColor
         currentSegment.map = mapView
 
         backgroundSegment = GMSPolyline(path: route.path)
-        backgroundSegment.strokeWidth = 3.0
+        backgroundSegment.strokeWidth = 5.0
         backgroundSegment.map = mapView
     }
 

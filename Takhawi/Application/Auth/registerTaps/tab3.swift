@@ -30,10 +30,11 @@ struct tab3: View {
             }.foregroundColor(.gray)
                 .font(.custom(AppFont.Regular.rawValue, size: 14))
             .padding()
+            .padding(.top)
           .frame(width: 250)
             
             
-           Spacer()
+          
         }
         
         

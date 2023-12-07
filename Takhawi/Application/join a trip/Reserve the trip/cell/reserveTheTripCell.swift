@@ -6,7 +6,9 @@
 //
 
 import UIKit
+//
 import Lottie
+//import Lottie
 
 
 
@@ -23,12 +25,10 @@ class reserveTheTripCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        checkMarkView.contentMode = .scaleAspectFit
-         
-        checkMarkView.loopMode = .playOnce
-         
-        checkMarkView.animationSpeed = 0.5
-   
+    checkMarkView.contentMode = .scaleAspectFit
+    checkMarkView.loopMode = .playOnce
+    checkMarkView.animationSpeed = 0.5
+////
   
     }
     

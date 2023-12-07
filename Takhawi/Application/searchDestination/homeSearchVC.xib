@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="homeSearchVC" customModule="Takhawi" customModuleProvider="target">
             <connections>
+                <outlet property="chooseFromMapsOutlet" destination="SEu-vF-uGN" id="9Pt-1m-FEu"/>
                 <outlet property="popviewContainer" destination="tfq-2m-zCw" id="lqe-Gh-BKI"/>
                 <outlet property="searchContainerView" destination="8SO-14-A5Q" id="Xlg-U3-gWu"/>
                 <outlet property="searchTextField" destination="ZZg-Ju-QzA" id="osD-yv-9H8"/>
@@ -93,16 +94,15 @@
                                 <action selector="clearAllAction:" destination="-1" eventType="touchUpInside" id="7AW-G3-um3"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SEu-vF-uGN">
-                            <rect key="frame" x="20" y="115.33333333333334" width="173" height="32"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SEu-vF-uGN">
+                            <rect key="frame" x="30" y="115.33333333333334" width="343" height="32"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="32" id="R5E-PN-Cqa"/>
                             </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                             <color key="tintColor" name="MainColor"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" image="Vector 1" title="Choose from Map" imagePadding="8">
-                                <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                            </buttonConfiguration>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="8" maxY="0.0"/>
+                            <state key="normal" title="Choose from Map" image="Vector 1"/>
                             <connections>
                                 <action selector="chooseOnMaps:" destination="-1" eventType="touchUpInside" id="rEp-el-bMt"/>
                             </connections>
@@ -123,6 +123,9 @@
                                             <real key="value" value="25"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="selectPlace:" destination="-1" eventType="touchUpInside" id="D9x-F0-lnu"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WAG-sz-4Rj">
                                     <rect key="frame" x="166.66666666666663" y="0.0" width="146.33333333333337" height="50"/>
@@ -158,11 +161,12 @@
                         <constraint firstItem="71p-AZ-8vU" firstAttribute="leading" secondItem="tfq-2m-zCw" secondAttribute="leading" constant="40" id="8cZ-TI-wyb"/>
                         <constraint firstAttribute="trailing" secondItem="71p-AZ-8vU" secondAttribute="trailing" constant="40" id="B3c-Mw-AzK"/>
                         <constraint firstItem="71p-AZ-8vU" firstAttribute="top" secondItem="H4u-0O-Qd5" secondAttribute="bottom" constant="10" id="DmN-sL-BMJ"/>
-                        <constraint firstItem="SEu-vF-uGN" firstAttribute="leading" secondItem="tfq-2m-zCw" secondAttribute="leading" constant="20" id="FaW-lN-R6Z"/>
+                        <constraint firstItem="SEu-vF-uGN" firstAttribute="leading" secondItem="tfq-2m-zCw" secondAttribute="leading" constant="30" id="FaW-lN-R6Z"/>
                         <constraint firstItem="H4u-0O-Qd5" firstAttribute="top" secondItem="SEu-vF-uGN" secondAttribute="bottom" constant="20" id="M9y-Me-Cqh"/>
                         <constraint firstAttribute="trailing" secondItem="H4u-0O-Qd5" secondAttribute="trailing" constant="20" id="PVx-hR-uJ8"/>
                         <constraint firstItem="8SO-14-A5Q" firstAttribute="leading" secondItem="tfq-2m-zCw" secondAttribute="leading" constant="20" id="SKn-L1-fXk"/>
                         <constraint firstAttribute="trailing" secondItem="nuy-Df-f3z" secondAttribute="trailing" constant="20" id="aAL-jH-wGz"/>
+                        <constraint firstAttribute="trailing" secondItem="SEu-vF-uGN" secondAttribute="trailing" constant="20" id="gu2-lO-V1K"/>
                         <constraint firstAttribute="bottom" secondItem="71p-AZ-8vU" secondAttribute="bottom" constant="50" id="l9i-4o-REK"/>
                         <constraint firstItem="nuy-Df-f3z" firstAttribute="centerY" secondItem="TRN-vs-Kf7" secondAttribute="centerY" id="lxY-qY-aNN"/>
                         <constraint firstItem="TRN-vs-Kf7" firstAttribute="top" secondItem="8SO-14-A5Q" secondAttribute="bottom" constant="10" id="nfS-Wq-z0g"/>
@@ -178,7 +182,6 @@
                 <constraint firstItem="tfq-2m-zCw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="AQO-An-WOJ"/>
                 <constraint firstAttribute="trailing" secondItem="30t-6K-9Fp" secondAttribute="trailing" id="Fxv-ii-ma2"/>
                 <constraint firstItem="30t-6K-9Fp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="KUC-1g-ZtJ"/>
-                <constraint firstItem="SEu-vF-uGN" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.44" id="LKl-2x-FJa"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="tfq-2m-zCw" secondAttribute="trailing" id="V1q-nG-GvW"/>
                 <constraint firstItem="tfq-2m-zCw" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.8" id="Vxl-R8-YXw"/>
                 <constraint firstItem="30t-6K-9Fp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bLf-rp-94M"/>

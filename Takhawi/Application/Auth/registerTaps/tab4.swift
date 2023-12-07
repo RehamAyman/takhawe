@@ -26,7 +26,7 @@ struct tab4: View {
                     .frame(height: 45)
                     .padding(8)
                     .padding(.top)
-            Spacer()
+           
         }
     }
 }

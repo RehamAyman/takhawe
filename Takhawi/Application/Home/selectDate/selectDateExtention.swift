@@ -27,8 +27,12 @@ extension selectDateVC {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
        {
            let touch = touches.first
-           if touch?.view != self.mainView
-           { self.dismiss(animated: true, completion: nil) }
+           
+        if touch?.view == self.visualView {
+            self.dismiss(animated: true, completion: nil)
+           }
+           
+       
        }
     
     

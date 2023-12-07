@@ -17,20 +17,25 @@ struct tap2: View {
     
     
     var body: some View {
-        VStack ( spacing: 15) {
+        VStack ( spacing: 10) {
           
           Image("padlock 1")
                 .resizable()
-                .frame(width:  UIScreen.main.bounds.width * 0.3)
-                .frame(height:  UIScreen.main.bounds.height * 0.15)
-                .padding(8)
+                .scaledToFit()
+                .frame(width: 120 , height: 120)
+                .padding(.top , 30 )
+           //    .frame(width:  UIScreen.main.bounds.width * 0.3)
+            //    .frame(height:  UIScreen.main.bounds.height * 0.12)
+               // .padding(8)
             
             SecureInputView( "Enter New Password" , text: $email)
-                .submitLabel(.done)
-             
+             //   .submitLabel(.done)
+                .frame(height: 45)
+//
             SecureInputView( "Confirm Password" , text: $confirmPassword)
-                .submitLabel(.done)
-              
+              //  .submitLabel(.done)
+                .frame(height: 45)
+//
             
             
             HStack{
@@ -54,10 +59,10 @@ struct tap2: View {
                     .fixedSize()
                     .frame(maxWidth: .infinity)
                 
-            }.padding()
+            }.padding(.horizontal)
             
            
-            Spacer()
+           
         }.padding(8)
     }
 }

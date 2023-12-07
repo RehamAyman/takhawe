@@ -7,11 +7,24 @@
 
 import UIKit
 import GoogleMaps
-import EasyTipView
+
 
 
 extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableViewDelegate , UITableViewDataSource {
     
+    
+    
+    func finishPassing(location: String, lat: Double, lng: Double) {
+        
+        self.tripHaveDestination = true 
+        self.joinTripDestButton.isHidden = false
+        self.searchView.isHidden = true
+        self.searchViewContainerHeight.constant = 0
+        self.joinTripDestButton.setTitle(location, for: .normal)
+        self.containetStackView.addArrangedSubview(   self.joinTripDestButton )
+        
+        
+    }
     
 //MARK: - TABLE VIEW METHODS
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -128,12 +141,7 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
                         }
                     }
         }
-        
-        
-        
-        
-        
-        
+     
     }
     
     
@@ -182,34 +190,61 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
 //MARK: - SEGMENT VIEW ANIMATED METHODS
     
     func segmentOneAction () {
-        self.viewHeight.constant = 180
-        self.joinTripOutlet.setTitle("Join the trip" , for: .normal)
+    
         self.locationOutlet.isHidden = true
         self.UserLocationOutlet.isHidden = true
+        self.chooseFeatureCollection.isHidden = true
+   
+        
         UIView.animate(withDuration: 0.8 , animations: {
-           
-            self.tipView.dismiss()
+            
+            if self.tripHaveDestination {
+              
+                self.containetStackView.addArrangedSubview(self.joinTripDestButton)
+                self.joinTripDestButton.isHidden = false
+            } else {
+                self.searchView.isHidden = false
+                self.searchViewContainerHeight.constant = 40
+            }
+            
+            
+            
+            self.viewHeight.constant = 185
+            self.joinTripOutlet.setTitle("Join the trip" , for: .normal)
+          
+            self.containetStackView.removeArrangedSubview(self.collectionContainerView)
+          
+            
+            
+            
+          
              self.view.layoutIfNeeded()
         })
     }
   
     func segmentTwoAction () {
-       
-        
-        
-        
-        
-        self.viewHeight.constant = 260
-        self.joinTripOutlet.setTitle( "Create Trip", for: .normal)
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.65) {
 
-            self.tipView.show(forView: self.tapView)
-            self.locationOutlet.isHidden = false
-            self.UserLocationOutlet.isHidden = false
-        }
+        self.viewHeight.constant = 290
+        self.joinTripDestButton.isHidden = true
+        
        
         UIView.animate(withDuration: 0.8 , animations: {
+            self.joinTripOutlet.setTitle( "Create Trip", for: .normal)
+            self.searchView.isHidden = true
+            
+            self.searchViewContainerHeight.constant = 0
+            self.containetStackView.removeArrangedSubview( self.joinTripDestButton)
+            
+            self.locationOutlet.isHidden = false
+            self.UserLocationOutlet.isHidden = false
+            self.chooseFeatureCollection.isHidden = false
+            self.containetStackView.addArrangedSubview(self.collectionContainerView)
+            
+            
+            
+            
+            
+            
             self.view.layoutIfNeeded()
         })
       
@@ -226,10 +261,15 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
         segment.setTitleTextAttributes(titleTextAttributes1 as [NSAttributedString.Key : Any], for:.selected)
         segmentContainerView.layer.applySketchShadow(color: .black)
         
-        
-        self.viewHeight.constant = 180
+      //  self.containetStackView.removeFromSuperview(self.joinTripDestButton)
+        self.viewHeight.constant = 185
         self.locationOutlet.isHidden = true
         self.UserLocationOutlet.isHidden = true
+        self.chooseFeatureCollection.isHidden = true
+        self.containetStackView.removeArrangedSubview(self.collectionContainerView)
+        self.joinTripDestButton.isHidden = true
+        self.containetStackView.removeArrangedSubview( self.joinTripDestButton)
+        
         self.view.layoutIfNeeded()
     }
     
@@ -238,6 +278,9 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
         let now = Date()
         let stringData = now.dateToString
         self.calendarOutlet.setTitle( stringData, for: .normal)
+//        self.calendarOutlet.titleLabel?.font =  UIFont(name: "URW DIN Arabic" , size: 13)
+        
+        
     }
     
     
@@ -248,12 +291,12 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
     
     
     func showMenu() {
-        self.tipView.dismiss()
+     
         self.containerView.layer.cornerRadius = 40
         self.googleMaps.layer.cornerRadius = self.containerView.layer.cornerRadius
-        let x = UIScreen.main.bounds.width * 0.7
+        let x = UIScreen.main.bounds.width * 0.6
         let originalTransform = self.containerView.transform
-        let scaledTransform = originalTransform.scaledBy(x: 0.8, y: 0.8)
+        let scaledTransform = originalTransform.scaledBy(x: 1, y: 1)
             let scaledAndTranslatedTransform = scaledTransform.translatedBy(x: x, y: 0)
             UIView.animate(withDuration: 0.7, animations: {
                 self.containerView.transform = scaledAndTranslatedTransform
@@ -342,13 +385,6 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
          }
 
     
-   //MARK: - INTEGRATE TIP VIEW
-    
-    func tipViewIntegration ()  {
-        preferences.drawing.foregroundColor = UIColor.white
-        preferences.drawing.backgroundColor = UIColor.black
-        preferences.drawing.arrowPosition = EasyTipView.ArrowPosition.top
-        tipView = EasyTipView(text: "The cost will increase by a certain amount for this kind of request" , preferences: preferences)
-    }
+   
     
 }

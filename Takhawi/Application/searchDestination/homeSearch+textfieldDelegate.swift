@@ -21,8 +21,8 @@ extension homeSearchVC : UITextFieldDelegate  , UITableViewDelegate , UITableVie
         
         cell.placeName.text = recentPlaces[indexPath.row].placeName
         cell.city.text = "Jeddah"
-        
-        
+      
+     
         
         return cell
     }
@@ -31,6 +31,34 @@ extension homeSearchVC : UITextFieldDelegate  , UITableViewDelegate , UITableVie
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
+    
+    
+//    
+//    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? RecentPlacesCell else {
+            return
+        }
+        cell.checkMark.isHidden = false
+        cell.checkMark.play()
+        self.selectedPlace = cell.placeName.text ?? ""
+      
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? RecentPlacesCell else {
+            return
+        }
+        cell.checkMark.stop()
+        cell.checkMark.isHidden = true
+           
+       }
+//    
+    
+    
+    
+    // text field methods
     
     
 

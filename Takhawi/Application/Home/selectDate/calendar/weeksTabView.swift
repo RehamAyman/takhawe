@@ -15,7 +15,7 @@ struct WeeksTabView : View {
     @State private var direction: TimeDirection = .unknown
     @State private var position = CGSize.zero
     @GestureState private var dragOffset = CGSize.zero
-    @StateObject var weekStoreModel = WeekStore()
+    @StateObject var weekStoreModel : WeekStore
  
    
     
@@ -67,13 +67,14 @@ struct WeeksTabView : View {
                 .padding(.leading)
                 .padding(.trailing)
                 .allowsHitTesting(false)
+             
                 
             Spacer()
         }
     }
 }
-#Preview {
-    WeeksTabView()
-}
-
+//#Preview {
+//    WeeksTabView( weekStoreModel: <#WeekStore#>, action: {})
+//}
+//
 

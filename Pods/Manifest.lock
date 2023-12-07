@@ -19,6 +19,7 @@ PODS:
     - GooglePlaces (= 3.1.0)
   - GooglePlaces (3.1.0):
     - GoogleMaps/Base (= 3.1.0)
+  - lottie-ios (3.5.0)
   - OTPFieldView (1.0.1)
 
 DEPENDENCIES:
@@ -27,6 +28,7 @@ DEPENDENCIES:
   - GoogleMaps
   - GooglePlacePicker
   - GooglePlaces
+  - lottie-ios
   - OTPFieldView (from `https://github.com/AbdallaTarek/OTPFieldView.git`)
 
 SPEC REPOS:
@@ -34,6 +36,7 @@ SPEC REPOS:
     - CHIOTPField
     - EasyTipView
     - GooglePlacePicker
+    - lottie-ios
   trunk:
     - GoogleMaps
     - GooglePlaces
@@ -53,8 +56,9 @@ SPEC CHECKSUMS:
   GoogleMaps: 5c13302e6fe6bb6e686b267196586b91cd594225
   GooglePlacePicker: fa975116ac202ac29822c0a79758ea1c4db5a95f
   GooglePlaces: e874db179f2675c4f3eeda0b686b540273a578b0
+  lottie-ios: c55158d67d0629a260625cc2ded2052b829e3c3e
   OTPFieldView: 700a752fe62c41d1c4914c78aa500fb30d97c255
 
-PODFILE CHECKSUM: cdd95cee17e699a15f8f3528ee14bf78b1ec8dda
+PODFILE CHECKSUM: 624a30847361fded8e4b61420c89ac54cb85d7cc
 
 COCOAPODS: 1.12.1

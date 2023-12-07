@@ -13,16 +13,13 @@ class hotelsVC: BaseVC {
     
 //MARK: - IBOutlets -
     
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var topView: UIView!
     
 //MARK: - Properties -
     
     
-//MARK: - Creation -
-    static func create() -> hotelsVC {
-        let vc = AppStoryboards.<#StoryboardCase#>.instantiate(hotelsVC.self)
-        vc.hidesBottomBarWhenPushed = true
-        return vc
-    }
+
     
 // MARK: - Lifecycle -
     override func viewDidLoad() {
@@ -34,6 +31,10 @@ class hotelsVC: BaseVC {
 //MARK: - Design Methods -
     private func configureInitialDesign() {
         self.title = "".localized
+        self.topView.addBottomCornersView(num: 30)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(cellType: hotelCell.self)
     }
     
 //MARK: - Logic Methods -
@@ -41,6 +42,15 @@ class hotelsVC: BaseVC {
     
 //MARK: - Actions -
     
+    @IBAction func filterAction(_ sender: UIButton) {
+        sender.animateButtonWhenPressed {
+            let vc = filterViewVC()
+            vc.modalTransitionStyle = .coverVertical
+            vc.modalPresentationStyle = .overCurrentContext
+            self.present(vc , animated: true )
+        }
+       
+    }
 }
 
 

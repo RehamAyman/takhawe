@@ -17,6 +17,7 @@ class driverProfileVC: BaseVC {
     @IBOutlet weak var tripCountLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var numberOfChildrenText: UITextField!
     @IBOutlet weak var googleView: GMSMapView!
     @IBOutlet weak var containerView: UIView!
     
@@ -54,6 +55,10 @@ class driverProfileVC: BaseVC {
         self.setUpGoogleView()
         self.tripCountLabel.cornerRadius = 17
         self.tripCountLabel.layer.masksToBounds = true 
+        self.numberOfChildrenText.layer.addBasicShadow(cornerRadius: 22.5)
+        self.numberOfChildrenText.setLeftPaddingPoints(8)
+        self.numberOfChildrenText.setRightPaddingPoints(8)
+        
         
     }
     
@@ -70,6 +75,15 @@ class driverProfileVC: BaseVC {
             self.push(vc)
         }
     }
+    
+    @IBAction func fullGoogleView(_ sender: UIButton) {
+        let vc = fullScreenGoogleViewVC()
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc , animated: true )
+    }
+    
+    
+    
     @IBAction func reviewsAction(_ sender: UIButton) {
         sender.animateButtonWhenPressed {
             self.push(reviewsViewVC())

@@ -43,6 +43,7 @@ struct SecureInputView: View {
             .overlay(
                 RoundedRectangle(cornerRadius: 25)
                        .stroke(Color("MainColor"), lineWidth: 2)
+                       .frame(height: 45)
             )
            
     }

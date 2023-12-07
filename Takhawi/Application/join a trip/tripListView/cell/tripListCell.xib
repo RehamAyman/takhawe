@@ -43,7 +43,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="StO-Si-Glf" customClass="JStarRatingView" customModule="Takhawi" customModuleProvider="target">
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="StO-Si-Glf" customClass="CosmosView" customModule="Cosmos">
                                         <rect key="frame" x="0.0" y="26" width="224" height="30"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -59,9 +59,11 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="starRoundingRawValue">
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="15"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                                <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="filledImage" value="star 1"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="star"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
@@ -273,6 +275,8 @@
         <image name="calendar" width="20" height="20"/>
         <image name="music 1" width="24" height="24"/>
         <image name="pngegg (4) 1" width="50" height="108"/>
+        <image name="star" width="16" height="16"/>
+        <image name="star 1" width="16" height="16"/>
         <namedColor name="AppRed">
             <color red="1" green="0.37254901960784315" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -10,12 +10,14 @@
 import UIKit
 import GoogleMaps
 import GooglePlaces
+import AlertKit
 
 class homeSearchVC: BaseVC{
 
     
 //MARK: - IBOutlets -
     
+    @IBOutlet weak var chooseFromMapsOutlet: UIButton!
     
     @IBOutlet weak var searchContainerView: UIView!
     @IBOutlet weak var visualView: UIVisualEffectView!
@@ -27,21 +29,18 @@ class homeSearchVC: BaseVC{
 //MARK: - Properties -
    
     var onCommit: (() -> Void)? = nil
+    var selectedPlace : String = ""
+    var selectAndDismiss : ((String) -> Void)?
     var recentPlaces : [recentPlace] = [
         recentPlace(placeName: "Jeddah Park by Cenomi" , city: "Jeddah") ,
-        recentPlace(placeName: "place 2 " , city: "Jeddah") ,
-        recentPlace(placeName: "place 3 " , city: "Jeddah")
+        recentPlace(placeName: "Kingdom Tower" , city: "Jeddah") ,
+        recentPlace(placeName: "Fakieh Aquarium" , city: "Jeddah")
     ]
         
   
     
     
-//MARK: - Creation -
-//    static func create() -> homeSearchVC {
-////        let vc = AppStoryboards.<#StoryboardCase#>.instantiate(homeSearchVC.self)
-////        vc.hidesBottomBarWhenPushed = true
-////        return vc
-//    }
+
     
 // MARK: - Lifecycle -
     override func viewDidLoad() {
@@ -61,6 +60,7 @@ class homeSearchVC: BaseVC{
         self.searchContainerView.layer.applySketchShadow()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.4)  { [weak self] in
         self?.visualView.isHidden = false
+            self?.chooseFromMapsOutlet.imagePadding(spacing: 5)
        }
       
       
@@ -77,17 +77,37 @@ class homeSearchVC: BaseVC{
     
 //MARK: - Actions -
     
+    @IBAction func selectPlace(_ sender: UIButton) {
+  
+      
+            if self.selectedPlace == "" {
+                AlertKitAPI.present(
+                    title: "Sorry, but you need to select a destination first!" ,
+                    icon: .error,
+                    style: .iOS17AppleMusic,
+                    haptic: .success
+                )
+            } else {
+                sender.animateButtonWhenPressed {
+                self.selectAndDismiss?(self.selectedPlace)
+                self.dismiss(animated: true )
+            }
+        }
+    }
     @IBAction func clearAllAction(_ sender: UIButton) {
-       
        
             self.recentPlaces.removeAll()
             self.tableview.reloadData()
            
-            
-      
     }
+    
+    
+    
     @IBAction func cancel(_ sender: UIButton) {
-        self.dismiss(animated: true)
+        sender.animateButtonWhenPressed {
+            self.dismiss(animated: true)
+        }
+       
     }
     @IBAction func chooseOnMaps(_ sender: UIButton) {
         print("choose on map ")
@@ -113,4 +133,5 @@ extension homeSearchVC {
 struct recentPlace {
     let placeName : String
     let city : String
+    var selected : Bool = false
 }

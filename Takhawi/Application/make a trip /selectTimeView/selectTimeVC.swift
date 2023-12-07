@@ -14,15 +14,14 @@ class selectTimeVC: BaseVC {
 //MARK: - IBOutlets -
     
     
+    @IBOutlet weak var mainView: UIView!
+    
+    @IBOutlet weak var visualView: UIVisualEffectView!
+    
 //MARK: - Properties -
     
     
-//MARK: - Creation -
-    static func create() -> selectTimeVC {
-        let vc = AppStoryboards.<#StoryboardCase#>.instantiate(selectTimeVC.self)
-        vc.hidesBottomBarWhenPushed = true
-        return vc
-    }
+
     
 // MARK: - Lifecycle -
     override func viewDidLoad() {
@@ -34,6 +33,11 @@ class selectTimeVC: BaseVC {
 //MARK: - Design Methods -
     private func configureInitialDesign() {
         self.title = "".localized
+        self.mainView.layer.addBasicShadow(cornerRadius: 20)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4 ) {
+            self.visualView.isHidden = false
+        }
     }
     
 //MARK: - Logic Methods -

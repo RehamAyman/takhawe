@@ -10,17 +10,26 @@
 import UIKit
 import CoreLocation
 import GoogleMaps
-import EasyTipView
+
+import AlertKit
 
 
 
-class homeVC: BaseVC{
+class homeVC: BaseVC, sendDataBackDelegate{
+  
+    
     
 //MARK: - IBOutlets -
     
+    @IBOutlet weak var hotelIconOutlet: UIButton!
+    @IBOutlet weak var joinTripDestButton: UIButton!
+    @IBOutlet weak var searchViewContainerHeight: NSLayoutConstraint!
+    @IBOutlet weak var containetStackView: UIStackView!
     @IBOutlet weak var tapView: UIView!
     @IBOutlet weak var containerView: UIView!
     
+    @IBOutlet weak var collectionContainerView: UIView!
+    @IBOutlet weak var chooseFeatureCollection: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var viewHeight: NSLayoutConstraint!
     @IBOutlet weak var userimageOutlet: UIImageView!
@@ -36,12 +45,20 @@ class homeVC: BaseVC{
     
     
     @IBOutlet weak var joinTripOutlet: UIButton!
-    var preferences = EasyTipView.Preferences()
-    var tipView = EasyTipView(text: "")
-   // Notification Messages
+   
+
+    
+    
+    
 //MARK: - Properties -
     
-    
+    var dummyActivty : [dummyActivity] = [
+        dummyActivity(icon: "Food", name: "Basketball") ,
+        dummyActivity(icon: "smoke", name: "Riding Horse") ,
+        dummyActivity(icon: "Vector 3", name: "Drawing") ,
+        dummyActivity(icon: "music 1", name: "Listen to music") ,
+        dummyActivity(icon: "AC", name: "Travelling")
+    ]
     
     
     let locationManager = CLLocationManager()
@@ -49,6 +66,7 @@ class homeVC: BaseVC{
     var menu = false
     var home = CGAffineTransform()
     var sideMenuItems  =  publicSideMenu.items
+    var tripHaveDestination : Bool = false 
     
 //MARK: - Creation -
   
@@ -64,7 +82,7 @@ class homeVC: BaseVC{
         tableView.dataSource = self
         tableView.register(UINib(nibName: "sideMenuCell", bundle: nil), forCellReuseIdentifier: "sideMenuCell")
         //
-
+       
 
     }
     
@@ -85,8 +103,20 @@ class homeVC: BaseVC{
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
         self.initialSegment()
-        self.joinTripOutlet.backgroundColor = UIColor.lightGray
-        self.tipViewIntegration()
+     
+        
+      
+        chooseFeatureCollection.delegate = self
+        chooseFeatureCollection.dataSource = self
+        self.chooseFeatureCollection.register(cellType: chooseFeatureCell.self)
+        self.chooseFeatureCollection.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+
+        calendarOutlet.imagePadding(spacing: 5)
+        locationOutlet.imagePadding(spacing: 5)
+        UserLocationOutlet.imagePadding(spacing: 5)
+        joinTripDestButton.imagePadding(spacing: 5)
+
+  
     }
     
     
@@ -102,6 +132,71 @@ class homeVC: BaseVC{
        
     }
     
+    
+    @IBAction func hotelsAction(_ sender: UIButton) {
+        sender.animateButtonWhenPressed {
+            let vc = hotelsVC()
+            self.push(vc)
+        }
+    }
+    
+    
+    @IBAction func joinAction(_ sender: UIButton) {
+        if segment.selectedSegmentIndex == 0 {
+            //check if i have a destination to go  then  move to trip list :D
+            if tripHaveDestination {
+                let vc = tripListVC()
+                self.push(vc)
+            } else {
+                AlertKitAPI.present(
+                    title: "Sorry, but you need to select a destination first!" ,
+                    icon: .error,
+                    style: .iOS17AppleMusic,
+                    haptic: .success
+                )
+            }
+            
+        } else {
+           // check if the user select an destination or not then move to make a trip popup :)
+            
+            
+            
+            let vc = makeAtripAlertPopUpVC()
+            vc.modalTransitionStyle = .coverVertical
+            vc.modalPresentationStyle = .overCurrentContext
+            vc.action = {
+                let vc1 = findingAdriverVC()
+                vc1.modalTransitionStyle = .coverVertical
+                vc1.modalPresentationStyle = .overCurrentContext
+                self.bottomView.isHidden = true
+                self.segmentContainerView.isHidden = true
+                self.present(vc1 , animated: true)
+                vc1.cancel = {
+                    self.bottomView.isHidden = false
+                    self.segmentContainerView.isHidden = false
+                }
+                vc1.didfindAdrivier = {
+                    let vc = driverOffersVC()
+                    self.bottomView.isHidden = false
+                    self.segmentContainerView.isHidden = false
+                    self.push(vc)
+                }
+            }
+            
+            
+            self.present(vc , animated: true)
+            
+        }
+    }
+    
+    
+    
+    @IBAction func joinatripsegmentbutton(_ sender: UIButton) {
+        let pushVc = mapSearchVC()
+        pushVc.delegate = self 
+        self.push(pushVc)
+    }
+    
     @IBAction func searchAction(_ sender: UIButton) {
         
         // present search view
@@ -110,10 +205,22 @@ class homeVC: BaseVC{
             
             vc.modalTransitionStyle = .coverVertical
             vc.modalPresentationStyle = .overCurrentContext
+            let pushVc = mapSearchVC()
+            pushVc.delegate = self
+            vc.selectAndDismiss = { string in
+                self.tripHaveDestination = true
+                self.joinTripDestButton.isHidden = false
+                self.searchView.isHidden = true
+                self.searchViewContainerHeight.constant = 0
+                self.joinTripDestButton.setTitle( string , for: .normal)
+                self.containetStackView.addArrangedSubview(   self.joinTripDestButton )
+            }
+            
+            
             
             present(vc , animated: true )
             vc.onCommit  = {  [weak self] in
-                let pushVc = mapSearchVC()
+               
                 self?.push(pushVc)
             }
         }
@@ -121,12 +228,36 @@ class homeVC: BaseVC{
     
     
     @IBAction func calendarAction(_ sender: UIButton) {
+        
+        let vc = selectDateVC()
+        vc.modalTransitionStyle = .coverVertical
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.comeFromMakeAtrip = segment.selectedSegmentIndex == 0 ? false : true
+        present(vc , animated: true )
+        vc.change = {  [weak self] (value) in
+            
+            self?.calendarOutlet.setTitle( value , for: .normal)
+            
+            
+        }
+        vc.action = {
+            let vc = selectTimeVC()
+              vc.modalTransitionStyle = .coverVertical
+              vc.modalPresentationStyle = .overCurrentContext
+              self.present( vc , animated: true )
+        }
+        
 
         
         
     }
     
     
+    @IBAction func changeMyLoacation(_ sender: UIButton) {
+        
+    }
+    @IBAction func chooseYourDestination(_ sender: UIButton) {
+    }
     
     
     @IBAction func segmentAction(_ sender: UISegmentedControl) {
@@ -151,5 +282,22 @@ extension homeVC {
 
 //MARK: - Routes -
 extension homeVC {
+    
+}
+
+
+
+extension UIStackView {
+    
+    func removeFully(view: UIView) {
+        removeArrangedSubview(view)
+        view.removeFromSuperview()
+    }
+    
+    func removeFullyAllArrangedSubviews() {
+        arrangedSubviews.forEach { (view) in
+            removeFully(view: view)
+        }
+    }
     
 }

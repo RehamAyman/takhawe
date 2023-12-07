@@ -6,14 +6,19 @@
 //
 
 import UIKit
+import Lottie
 
 class RecentPlacesCell: UITableViewCell {
-
+    @IBOutlet weak var checkMark: LottieAnimationView!
+    
     @IBOutlet weak var city: UILabel!
     @IBOutlet weak var placeName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
+        checkMark.contentMode = .scaleAspectFit
+        checkMark.loopMode = .playOnce
+        checkMark.animationSpeed = 0.5
     }
 
     

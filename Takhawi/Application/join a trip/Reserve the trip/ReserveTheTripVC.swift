@@ -59,9 +59,17 @@ class ReserveTheTripVC: BaseVC {
 //MARK: - Actions -
     
     @IBAction func confirmTrip(_ sender: UIButton) {
-        sender.animateButtonWhenPressed {
+        
+        
+        
+      
+            let vc = successBookViewVC()
+            vc.modalTransitionStyle = .coverVertical
+            vc.modalPresentationStyle = .overCurrentContext
+           
+            self.present( vc , animated: true )
             
-        }
+        
     }
 }
 

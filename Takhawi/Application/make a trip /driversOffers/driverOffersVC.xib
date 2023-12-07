@@ -11,6 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="driverOffersVC" customModule="Takhawi" customModuleProvider="target">
             <connections>
+                <outlet property="animationView" destination="QUt-4O-FYY" id="6Yp-da-5jk"/>
+                <outlet property="noOffersView" destination="MJQ-HC-mNA" id="nAr-Rk-8lW"/>
+                <outlet property="noOffersViewHeight" destination="CyQ-9y-cs8" id="Ug8-7v-ksy"/>
                 <outlet property="tableview" destination="310-Fk-1hc" id="LI8-KB-msc"/>
                 <outlet property="view" destination="iN0-l3-epB" id="2oU-hp-XYn"/>
             </connections>
@@ -39,17 +42,50 @@
                     <rect key="frame" x="0.0" y="124" width="393" height="694"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MJQ-HC-mNA">
+                    <rect key="frame" x="0.0" y="276" width="393" height="300"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QUt-4O-FYY" customClass="LottieAnimationView" customModule="Lottie">
+                            <rect key="frame" x="0.0" y="20" width="393" height="200"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="200" id="08P-uu-4UB"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="JwaDQrIWWe"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="no offers yet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5q-QI-ndB">
+                            <rect key="frame" x="154.66666666666666" y="240" width="83.666666666666657" height="17.666666666666686"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="S5q-QI-ndB" firstAttribute="centerX" secondItem="MJQ-HC-mNA" secondAttribute="centerX" id="7cM-Qa-5hD"/>
+                        <constraint firstAttribute="height" constant="300" id="CyQ-9y-cs8"/>
+                        <constraint firstItem="S5q-QI-ndB" firstAttribute="top" secondItem="QUt-4O-FYY" secondAttribute="bottom" constant="20" id="JtX-F8-GXp"/>
+                        <constraint firstItem="QUt-4O-FYY" firstAttribute="leading" secondItem="MJQ-HC-mNA" secondAttribute="leading" id="mtJ-Rh-pK2"/>
+                        <constraint firstItem="QUt-4O-FYY" firstAttribute="top" secondItem="MJQ-HC-mNA" secondAttribute="top" constant="20" id="pVv-vG-1ni"/>
+                        <constraint firstAttribute="trailing" secondItem="QUt-4O-FYY" secondAttribute="trailing" id="u0M-FA-fW1"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" name="BackGroundColor"/>
             <constraints>
                 <constraint firstItem="EW9-kN-j3O" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="0wW-mi-P0w"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="310-Fk-1hc" secondAttribute="bottom" id="5Cm-6n-4Fd"/>
+                <constraint firstItem="MJQ-HC-mNA" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="A9u-gb-xdA"/>
                 <constraint firstAttribute="trailing" secondItem="310-Fk-1hc" secondAttribute="trailing" id="F27-93-4fl"/>
                 <constraint firstItem="tLQ-2Y-q0l" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="GwT-KH-wTH"/>
                 <constraint firstItem="EW9-kN-j3O" firstAttribute="centerY" secondItem="tLQ-2Y-q0l" secondAttribute="centerY" id="Ptf-5b-M9Q"/>
                 <constraint firstItem="310-Fk-1hc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="SKs-BI-rsH"/>
                 <constraint firstItem="tLQ-2Y-q0l" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="jCd-LE-SLV"/>
+                <constraint firstItem="MJQ-HC-mNA" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="k6N-yc-y7g"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="MJQ-HC-mNA" secondAttribute="trailing" id="sod-dG-JXT"/>
                 <constraint firstItem="310-Fk-1hc" firstAttribute="top" secondItem="tLQ-2Y-q0l" secondAttribute="bottom" constant="10" id="vGA-rG-DVp"/>
             </constraints>
             <point key="canvasLocation" x="64.885496183206101" y="19.718309859154932"/>

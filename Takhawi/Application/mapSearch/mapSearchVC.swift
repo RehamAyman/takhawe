@@ -13,6 +13,8 @@ import GooglePlaces
 import CoreLocation
 import MapKit
 
+
+
 class mapSearchVC: BaseVC {
     
 //MARK: - IBOutlets -
@@ -32,6 +34,7 @@ class mapSearchVC: BaseVC {
     var marker = GMSMarker()
     var titleView = ""
     var isRecive = ""
+    
     
 //MARK: - Creation -
 
@@ -87,14 +90,9 @@ class mapSearchVC: BaseVC {
  
     @IBAction func confirm(_ sender: UIButton) {
         // present the calendar
-        let vc = selectDateVC()
-        vc.modalTransitionStyle = .coverVertical
-        vc.modalPresentationStyle = .overFullScreen
-        vc.onCommit =  {
-            let vc = tripListVC()
-            self.push(vc)
-        }
-        self.present(vc, animated: true )
+        delegate?.finishPassing(location: locationLabel.text! , lat: self.lat , lng: self.lng)
+        pop(animated: true )
+       
         
     }
     

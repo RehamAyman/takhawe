@@ -15,12 +15,18 @@
                 <outlet property="UserLocationOutlet" destination="wys-nK-sd0" id="crR-67-P0C"/>
                 <outlet property="bottomView" destination="Ihg-WG-lMq" id="VCu-l4-HKD"/>
                 <outlet property="calendarOutlet" destination="8Ii-wh-81a" id="F1L-zh-Jd0"/>
+                <outlet property="chooseFeatureCollection" destination="WCe-7w-C2A" id="Dc3-Z8-Xv0"/>
+                <outlet property="collectionContainerView" destination="vSE-QP-Qpw" id="B4N-dq-aOC"/>
                 <outlet property="containerView" destination="kOb-jt-lur" id="SRR-Mt-mBv"/>
+                <outlet property="containetStackView" destination="rEl-cC-QuR" id="9tr-dU-68w"/>
                 <outlet property="googleMaps" destination="ikX-1o-drw" id="IYb-xe-Pj7"/>
+                <outlet property="hotelIconOutlet" destination="wej-V0-d54" id="TdS-nj-XD9"/>
+                <outlet property="joinTripDestButton" destination="lZw-hz-e1E" id="w9j-q3-g6A"/>
                 <outlet property="joinTripOutlet" destination="e9o-BI-c4b" id="fcU-42-pka"/>
                 <outlet property="locationOutlet" destination="4WN-vJ-UWC" id="mt5-V5-rwA"/>
                 <outlet property="menuOutlet" destination="Lgb-I8-ALx" id="MhR-kj-uMY"/>
                 <outlet property="searchView" destination="UGQ-k0-NnC" id="xts-Or-bIO"/>
+                <outlet property="searchViewContainerHeight" destination="j7k-JB-LxK" id="Dc8-W6-4Tm"/>
                 <outlet property="segment" destination="xhk-dz-j19" id="YD0-UL-M7j"/>
                 <outlet property="segmentContainerView" destination="tT1-1b-Yy2" id="owP-B4-y79"/>
                 <outlet property="tableView" destination="d2n-zT-x41" id="inF-8f-8sm"/>
@@ -85,7 +91,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1HJ-MD-1gy">
-                            <rect key="frame" x="161.33333333333331" y="477.66666666666669" width="211.33333333333331" height="44.000000000000057"/>
+                            <rect key="frame" x="161.33333333333331" y="385.66666666666669" width="211.33333333333331" height="44"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ikX-1o-drw" customClass="GMSMapView">
@@ -93,7 +99,7 @@
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ihg-WG-lMq">
-                            <rect key="frame" x="15" y="537" width="363" height="260"/>
+                            <rect key="frame" x="15" y="447" width="363" height="350"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UGQ-k0-NnC">
                                     <rect key="frame" x="15" y="10" width="333" height="40"/>
@@ -134,70 +140,102 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rEl-cC-QuR">
-                                    <rect key="frame" x="15" y="60" width="333" height="125"/>
+                                    <rect key="frame" x="20" y="60" width="323" height="220"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wys-nK-sd0">
-                                            <rect key="frame" x="0.0" y="0.0" width="333" height="36.333333333333336"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZw-hz-e1E">
+                                            <rect key="frame" x="0.0" y="0.0" width="323" height="37.666666666666664"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                             <color key="tintColor" name="MainColor"/>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" image="focus 1" title="Button" imagePadding="8">
-                                                <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
-                                            </buttonConfiguration>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
+                                            <state key="normal" title="Button" image="focus 1"/>
                                             <connections>
-                                                <action selector="calendarAction:" destination="-1" eventType="touchUpInside" id="EAs-vP-MlM"/>
+                                                <action selector="joinatripsegmentbutton:" destination="-1" eventType="touchUpInside" id="Urn-nH-SkJ"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wys-nK-sd0">
+                                            <rect key="frame" x="0.0" y="45.666666666666629" width="323" height="37.666666666666657"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                            <color key="tintColor" name="MainColor"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
+                                            <state key="normal" title="Button" image="focus 1"/>
+                                            <connections>
+                                                <action selector="changeMyLoacation:" destination="-1" eventType="touchUpInside" id="D5j-RN-FkE"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4WN-vJ-UWC">
+                                            <rect key="frame" x="0.0" y="91.333333333333371" width="323" height="37.333333333333343"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                            <color key="tintColor" name="MainColor"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
+                                            <state key="normal" title="Destination" image="focus 1"/>
+                                            <connections>
+                                                <action selector="chooseYourDestination:" destination="-1" eventType="touchUpInside" id="Ljo-2h-Pm9"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ii-wh-81a">
-                                            <rect key="frame" x="0.0" y="44.333333333333371" width="333" height="36.333333333333343"/>
+                                            <rect key="frame" x="0.0" y="136.66666666666663" width="323" height="37.666666666666657"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                             <color key="tintColor" name="MainColor"/>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" image="calendar" title="Button" imagePadding="8">
-                                                <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                            </buttonConfiguration>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
+                                            <state key="normal" title="Button" image="calendar"/>
                                             <connections>
                                                 <action selector="calendarAction:" destination="-1" eventType="touchUpInside" id="cIk-V9-Fcf"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4WN-vJ-UWC">
-                                            <rect key="frame" x="0.0" y="88.666666666666629" width="333" height="36.333333333333343"/>
-                                            <color key="tintColor" name="MainColor"/>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" image="Vector" title="Button" imagePadding="8">
-                                                <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
-                                            </buttonConfiguration>
-                                            <connections>
-                                                <action selector="calendarAction:" destination="-1" eventType="touchUpInside" id="uw2-GC-FbL"/>
-                                            </connections>
-                                        </button>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vSE-QP-Qpw">
+                                            <rect key="frame" x="0.0" y="182.33333333333337" width="323" height="37.666666666666657"/>
+                                            <subviews>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="WCe-7w-C2A">
+                                                    <rect key="frame" x="20" y="0.0" width="283" height="37.666666666666664"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IAE-EU-NsG">
+                                                        <size key="itemSize" width="128" height="128"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                </collectionView>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="WCe-7w-C2A" secondAttribute="bottom" id="0AT-Ef-DpN"/>
+                                                <constraint firstAttribute="trailing" secondItem="WCe-7w-C2A" secondAttribute="trailing" constant="20" id="GJT-cf-yYZ"/>
+                                                <constraint firstItem="WCe-7w-C2A" firstAttribute="leading" secondItem="vSE-QP-Qpw" secondAttribute="leading" constant="20" id="Lif-od-UKl"/>
+                                                <constraint firstItem="WCe-7w-C2A" firstAttribute="top" secondItem="vSE-QP-Qpw" secondAttribute="top" id="iEJ-7D-r2c"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9o-BI-c4b">
-                                    <rect key="frame" x="15" y="195" width="333" height="50"/>
+                                    <rect key="frame" x="15" y="290" width="333" height="45"/>
                                     <color key="backgroundColor" name="MainColor"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="50" id="rD2-oW-gf1"/>
+                                        <constraint firstAttribute="height" constant="45" id="rD2-oW-gf1"/>
                                     </constraints>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="Join the trip"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                            <real key="value" value="25"/>
+                                            <real key="value" value="22.5"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="joinAction:" destination="-1" eventType="touchUpInside" id="3Al-0E-aRs"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="e9o-BI-c4b" secondAttribute="bottom" constant="15" id="2dm-QY-UBF"/>
-                                <constraint firstAttribute="trailing" secondItem="rEl-cC-QuR" secondAttribute="trailing" constant="15" id="51M-Ol-7lD"/>
+                                <constraint firstAttribute="trailing" secondItem="rEl-cC-QuR" secondAttribute="trailing" constant="20" id="51M-Ol-7lD"/>
                                 <constraint firstItem="e9o-BI-c4b" firstAttribute="leading" secondItem="Ihg-WG-lMq" secondAttribute="leading" constant="15" id="Hfi-4N-GZq"/>
-                                <constraint firstAttribute="height" constant="260" id="Hh6-wh-1kx"/>
+                                <constraint firstAttribute="height" constant="350" id="Hh6-wh-1kx"/>
                                 <constraint firstAttribute="trailing" secondItem="UGQ-k0-NnC" secondAttribute="trailing" constant="15" id="Nv9-Lp-CUV"/>
                                 <constraint firstItem="rEl-cC-QuR" firstAttribute="top" secondItem="UGQ-k0-NnC" secondAttribute="bottom" constant="10" id="Rpq-Am-nZm"/>
                                 <constraint firstAttribute="trailing" secondItem="e9o-BI-c4b" secondAttribute="trailing" constant="15" id="eFS-CF-woI"/>
                                 <constraint firstItem="UGQ-k0-NnC" firstAttribute="leading" secondItem="Ihg-WG-lMq" secondAttribute="leading" constant="15" id="j7J-JS-LyH"/>
-                                <constraint firstItem="rEl-cC-QuR" firstAttribute="leading" secondItem="Ihg-WG-lMq" secondAttribute="leading" constant="15" id="mSs-Uv-RH6"/>
+                                <constraint firstItem="rEl-cC-QuR" firstAttribute="leading" secondItem="Ihg-WG-lMq" secondAttribute="leading" constant="20" id="mSs-Uv-RH6"/>
                                 <constraint firstItem="UGQ-k0-NnC" firstAttribute="top" secondItem="Ihg-WG-lMq" secondAttribute="top" constant="10" id="mhZ-yU-OAf"/>
                                 <constraint firstItem="e9o-BI-c4b" firstAttribute="top" secondItem="rEl-cC-QuR" secondAttribute="bottom" constant="10" id="tmu-wn-cWu"/>
                             </constraints>
@@ -208,7 +246,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tT1-1b-Yy2">
-                            <rect key="frame" x="15" y="472" width="363" height="55"/>
+                            <rect key="frame" x="15" y="380" width="363" height="55"/>
                             <subviews>
                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xhk-dz-j19" customClass="CustomUISegmentedControl" customModule="Takhawi" customModuleProvider="target">
                                     <rect key="frame" x="5.3333333333333428" y="5.6666666666666856" width="352.33333333333326" height="45"/>
@@ -279,7 +317,7 @@
                             </subviews>
                         </stackView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wej-V0-d54">
-                            <rect key="frame" x="333" y="412" width="40" height="40"/>
+                            <rect key="frame" x="333" y="320" width="40" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="40" id="BQy-BT-dy3"/>
                                 <constraint firstAttribute="height" constant="40" id="qhz-fs-LCd"/>
@@ -291,9 +329,12 @@
                                     <real key="value" value="20"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="hotelsAction:" destination="-1" eventType="touchUpInside" id="pn4-J0-ONF"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MRd-Yd-ij6">
-                            <rect key="frame" x="30" y="547" width="333" height="40"/>
+                            <rect key="frame" x="30" y="457" width="333" height="40"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title=" "/>
                             <connections>
@@ -322,7 +363,7 @@
                         <constraint firstItem="1HJ-MD-1gy" firstAttribute="width" secondItem="xhk-dz-j19" secondAttribute="width" multiplier="0.6" id="f5n-7m-mQZ"/>
                         <constraint firstItem="tT1-1b-Yy2" firstAttribute="leading" secondItem="kOb-jt-lur" secondAttribute="leading" constant="15" id="hqn-h5-RYJ"/>
                         <constraint firstAttribute="trailing" secondItem="Ihg-WG-lMq" secondAttribute="trailing" constant="15" id="j7r-0C-gk6"/>
-                        <constraint firstItem="Ihg-WG-lMq" firstAttribute="top" secondItem="tT1-1b-Yy2" secondAttribute="bottom" constant="10" id="jeS-zM-A6W"/>
+                        <constraint firstItem="Ihg-WG-lMq" firstAttribute="top" secondItem="tT1-1b-Yy2" secondAttribute="bottom" constant="12" id="jeS-zM-A6W"/>
                         <constraint firstItem="MRd-Yd-ij6" firstAttribute="centerY" secondItem="UGQ-k0-NnC" secondAttribute="centerY" id="jw1-nL-59G"/>
                         <constraint firstAttribute="trailing" secondItem="wej-V0-d54" secondAttribute="trailing" constant="20" id="mfb-2Q-fdS"/>
                         <constraint firstItem="MRd-Yd-ij6" firstAttribute="height" secondItem="UGQ-k0-NnC" secondAttribute="height" id="pUq-Qm-wug"/>
@@ -351,7 +392,6 @@
         <image name="Group 1000002907" width="70" height="70"/>
         <image name="Logo" width="171" height="170.66667175292969"/>
         <image name="Search" width="17.333333969116211" height="17.666666030883789"/>
-        <image name="Vector" width="13.666666984558105" height="16"/>
         <image name="calendar" width="20" height="20"/>
         <image name="focus 1" width="16" height="16"/>
         <image name="menu 1" width="32" height="32"/>

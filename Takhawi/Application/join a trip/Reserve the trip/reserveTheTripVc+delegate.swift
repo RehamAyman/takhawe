@@ -14,7 +14,7 @@ extension ReserveTheTripVC : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
         
-        self.tableviewHeight.constant = CGFloat(85 * self.DummyPaymentMethods.count) + 20
+        self.tableviewHeight.constant = CGFloat(85 * self.DummyPaymentMethods.count) + 50
         return self.DummyPaymentMethods.count
     }
     
@@ -68,7 +68,8 @@ extension ReserveTheTripVC : UITableViewDelegate , UITableViewDataSource {
             return
         }
         cell.checkMarkView.isHidden = false
-        cell.checkMarkView.play()
+    //   
+    cell.checkMarkView.play()
     }
     
     
@@ -76,7 +77,7 @@ extension ReserveTheTripVC : UITableViewDelegate , UITableViewDataSource {
         guard let cell = tableView.cellForRow(at: indexPath) as? reserveTheTripCell else {
             return
         }
-        cell.checkMarkView.isHidden = true
+     cell.checkMarkView.isHidden = true
            
        }
         

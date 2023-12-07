@@ -35,8 +35,8 @@ extension CALayer {
         self.cornerRadius = CGFloat(cornerRadius)
         self.shadowColor = UIColor.lightGray.cgColor
         self.shadowOffset = CGSize(width: 0, height: 0)
-        self.shadowOpacity = 0.7
-        self.shadowRadius = 4.0
+        self.shadowOpacity = 0.55
+        self.shadowRadius = 3.0
     }
     
     
@@ -136,6 +136,13 @@ extension UIView {
          
     }
     
+    
+    func addBottomCornersView (num : CGFloat ) {
+            //layerMinXMinYCorner
+      layer.cornerRadius = num
+        layer.maskedCorners = [.layerMaxXMaxYCorner , .layerMinXMaxYCorner]
+         
+    }
     
     
     
