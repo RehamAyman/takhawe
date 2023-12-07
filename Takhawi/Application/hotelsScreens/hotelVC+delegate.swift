@@ -24,5 +24,9 @@ extension hotelsVC : UITableViewDelegate , UITableViewDataSource {
     }
     
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = hotelDetailsVC()
+        push(vc)
+    }
     
 }

@@ -19,6 +19,9 @@ PODS:
     - GooglePlaces (= 3.1.0)
   - GooglePlaces (3.1.0):
     - GoogleMaps/Base (= 3.1.0)
+  - ImageSlideshow (1.9.2):
+    - ImageSlideshow/Core (= 1.9.2)
+  - ImageSlideshow/Core (1.9.2)
   - lottie-ios (3.5.0)
   - OTPFieldView (1.0.1)
 
@@ -28,6 +31,7 @@ DEPENDENCIES:
   - GoogleMaps
   - GooglePlacePicker
   - GooglePlaces
+  - ImageSlideshow (~> 1.9.0)
   - lottie-ios
   - OTPFieldView (from `https://github.com/AbdallaTarek/OTPFieldView.git`)
 
@@ -36,6 +40,7 @@ SPEC REPOS:
     - CHIOTPField
     - EasyTipView
     - GooglePlacePicker
+    - ImageSlideshow
     - lottie-ios
   trunk:
     - GoogleMaps
@@ -56,9 +61,10 @@ SPEC CHECKSUMS:
   GoogleMaps: 5c13302e6fe6bb6e686b267196586b91cd594225
   GooglePlacePicker: fa975116ac202ac29822c0a79758ea1c4db5a95f
   GooglePlaces: e874db179f2675c4f3eeda0b686b540273a578b0
+  ImageSlideshow: be305b54eaf2b2cfc7a7141c7c734605d44dc07d
   lottie-ios: c55158d67d0629a260625cc2ded2052b829e3c3e
   OTPFieldView: 700a752fe62c41d1c4914c78aa500fb30d97c255
 
-PODFILE CHECKSUM: 624a30847361fded8e4b61420c89ac54cb85d7cc
+PODFILE CHECKSUM: d8aa7efe24046b94a36b4b9a1f5ea0539c5df7fe
 
 COCOAPODS: 1.12.1

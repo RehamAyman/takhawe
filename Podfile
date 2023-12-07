@@ -23,6 +23,8 @@ target 'Takhawi' do
   pod 'CHIOTPField', '~> 0.1'
   pod 'EasyTipView', '~> 2.1'
   pod 'lottie-ios'
+  pod 'ImageSlideshow', '~> 1.9.0'
+  pod 'CHIPageControl', '~> 0.1.3'
 
   
 
