@@ -19,7 +19,7 @@ class successBookViewVC: BaseVC {
     @IBOutlet weak var visualView: UIVisualEffectView!
     
 //MARK: - Properties -
-    
+    var action: (() -> Void)?
     
 //MARK: - Creation -
     
@@ -38,7 +38,7 @@ class successBookViewVC: BaseVC {
         self.mainView.layer.addBasicShadow(cornerRadius: 20)
         self.confirmOutlet.layer.addBasicShadow(cornerRadius: Float(self.confirmOutlet.layer.frame.height) / 2  )
         
-        self.openingAnimation()
+       
         
        
         
@@ -85,16 +85,25 @@ override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
 //MARK: - Actions -
     
     @IBAction func confirmAction(_ sender: UIButton) {
-        sender.animateButtonWhenPressed {
-            
-        }
+        self.dismiss(animated: true )
+        self.action?()
+    
     }
+    
+    
+    
+    
     @IBAction func dismissAction(_ sender: UIButton) {
         sender.animateButtonWhenPressed {
             self.visualView.isHidden = true
             self.dismiss(animated: true )
         }
     }
+    
+    
+    
+    
+    
 }
 
 

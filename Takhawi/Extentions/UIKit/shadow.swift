@@ -39,12 +39,20 @@ extension CALayer {
         self.shadowRadius = 3.0
     }
     
+    func addBasicTopShadow (cornerRadius : Double ) {
+        self.cornerRadius = CGFloat(cornerRadius)
+        self.shadowColor = UIColor.lightGray.cgColor
+        self.shadowOffset = CGSize(width:  0  , height: 0  )
+        self.shadowOpacity = 0.55
+        self.shadowRadius = 3.0
+    }
+    
     
     
     func addTopShadow () {
         self.shadowColor = UIColor.black.cgColor
         self.shadowRadius = 3
-        self.shadowOffset = CGSize(width: 3, height: -3)
+        self.shadowOffset = CGSize(width: 3, height: -3 )
     }
     
     

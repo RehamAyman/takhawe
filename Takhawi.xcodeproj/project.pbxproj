@@ -216,6 +216,8 @@
 		CE44773F2AE04355000D96F6 /* weeksTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE44773E2AE04355000D96F6 /* weeksTabView.swift */; };
 		CE4477412AE04392000D96F6 /* oneWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4477402AE04392000D96F6 /* oneWeekView.swift */; };
 		CE4477442AE0440E000D96F6 /* calendarWeekStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4477432AE0440E000D96F6 /* calendarWeekStore.swift */; };
+		CE4843D72B245FE200FFAD1D /* amenitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4843D52B245FE200FFAD1D /* amenitiesCell.swift */; };
+		CE4843D82B245FE200FFAD1D /* amenitiesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE4843D62B245FE200FFAD1D /* amenitiesCell.xib */; };
 		CE6178A02ACCF9E500AA8BB7 /* homeSearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE61789F2ACCF9E500AA8BB7 /* homeSearchVC.xib */; };
 		CE6178A22ACCF9F700AA8BB7 /* homeSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6178A12ACCF9F700AA8BB7 /* homeSearchVC.swift */; };
 		CE6178A42ACD08DE00AA8BB7 /* homeSearch+textfieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6178A32ACD08DE00AA8BB7 /* homeSearch+textfieldDelegate.swift */; };
@@ -249,6 +251,9 @@
 		CE9757D12AE1B1E70014346E /* driverProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9757D02AE1B1E70014346E /* driverProfileVC.xib */; };
 		CE9757D52AE1B2B00014346E /* driverProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9757D42AE1B2B00014346E /* driverProfileVC.swift */; };
 		CE98110A2AC2CD2E00D99EC7 /* homeVc+delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9811092AC2CD2E00D99EC7 /* homeVc+delegate.swift */; };
+		CE996B542B25AC5D0089D2F4 /* trackYourTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE996B532B25AC5D0089D2F4 /* trackYourTripVC.swift */; };
+		CE996B562B25AC6F0089D2F4 /* trackYourTripVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE996B552B25AC6F0089D2F4 /* trackYourTripVC.xib */; };
+		CE996B602B25DA530089D2F4 /* trackYourTripVC+delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE996B5F2B25DA530089D2F4 /* trackYourTripVC+delegate.swift */; };
 		CE9DB3962AC18346000759B8 /* customSegnmentWithAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9DB3952AC18346000759B8 /* customSegnmentWithAnimation.swift */; };
 		CE9DB3992AC1AD58000759B8 /* customUIsegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9DB3982AC1AD58000759B8 /* customUIsegment.swift */; };
 		CE9EBFE62B1393520080A0F2 /* reviewsViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9EBFE52B1393520080A0F2 /* reviewsViewVC.swift */; };
@@ -289,6 +294,8 @@
 		CEBB8BA22ADEB8ED00E70EC4 /* profileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB8BA02ADEB8ED00E70EC4 /* profileCell.swift */; };
 		CEBB8BA32ADEB8ED00E70EC4 /* profileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEBB8BA12ADEB8ED00E70EC4 /* profileCell.xib */; };
 		CEBB8BA52ADEEC1900E70EC4 /* profileVc+delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB8BA42ADEEC1900E70EC4 /* profileVc+delegate.swift */; };
+		CECA04572B29D2EF001AA89D /* rateTheDriverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA04562B29D2EF001AA89D /* rateTheDriverVC.swift */; };
+		CECA04592B29D308001AA89D /* reteTheDriverVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECA04582B29D308001AA89D /* reteTheDriverVC.xib */; };
 		CED51ED32AE1B86D00603151 /* driverProfile+collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED51ED22AE1B86D00603151 /* driverProfile+collection.swift */; };
 		CEDDBE182ACBDFA700677C94 /* sideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDDBE162ACBDFA700677C94 /* sideMenuCell.swift */; };
 		CEDDBE192ACBDFA700677C94 /* sideMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDDBE172ACBDFA700677C94 /* sideMenuCell.xib */; };
@@ -515,6 +522,8 @@
 		CE44773E2AE04355000D96F6 /* weeksTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weeksTabView.swift; sourceTree = "<group>"; };
 		CE4477402AE04392000D96F6 /* oneWeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oneWeekView.swift; sourceTree = "<group>"; };
 		CE4477432AE0440E000D96F6 /* calendarWeekStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calendarWeekStore.swift; sourceTree = "<group>"; };
+		CE4843D52B245FE200FFAD1D /* amenitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = amenitiesCell.swift; sourceTree = "<group>"; };
+		CE4843D62B245FE200FFAD1D /* amenitiesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = amenitiesCell.xib; sourceTree = "<group>"; };
 		CE61789F2ACCF9E500AA8BB7 /* homeSearchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = homeSearchVC.xib; sourceTree = "<group>"; };
 		CE6178A12ACCF9F700AA8BB7 /* homeSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeSearchVC.swift; sourceTree = "<group>"; };
 		CE6178A32ACD08DE00AA8BB7 /* homeSearch+textfieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "homeSearch+textfieldDelegate.swift"; sourceTree = "<group>"; };
@@ -549,6 +558,9 @@
 		CE9757D02AE1B1E70014346E /* driverProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = driverProfileVC.xib; sourceTree = "<group>"; };
 		CE9757D42AE1B2B00014346E /* driverProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = driverProfileVC.swift; sourceTree = "<group>"; };
 		CE9811092AC2CD2E00D99EC7 /* homeVc+delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "homeVc+delegate.swift"; sourceTree = "<group>"; };
+		CE996B532B25AC5D0089D2F4 /* trackYourTripVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trackYourTripVC.swift; sourceTree = "<group>"; };
+		CE996B552B25AC6F0089D2F4 /* trackYourTripVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = trackYourTripVC.xib; sourceTree = "<group>"; };
+		CE996B5F2B25DA530089D2F4 /* trackYourTripVC+delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "trackYourTripVC+delegate.swift"; sourceTree = "<group>"; };
 		CE9DB3952AC18346000759B8 /* customSegnmentWithAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customSegnmentWithAnimation.swift; sourceTree = "<group>"; };
 		CE9DB3982AC1AD58000759B8 /* customUIsegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customUIsegment.swift; sourceTree = "<group>"; };
 		CE9EBFE52B1393520080A0F2 /* reviewsViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reviewsViewVC.swift; sourceTree = "<group>"; };
@@ -588,6 +600,8 @@
 		CEBB8BA02ADEB8ED00E70EC4 /* profileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileCell.swift; sourceTree = "<group>"; };
 		CEBB8BA12ADEB8ED00E70EC4 /* profileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = profileCell.xib; sourceTree = "<group>"; };
 		CEBB8BA42ADEEC1900E70EC4 /* profileVc+delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "profileVc+delegate.swift"; sourceTree = "<group>"; };
+		CECA04562B29D2EF001AA89D /* rateTheDriverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rateTheDriverVC.swift; sourceTree = "<group>"; };
+		CECA04582B29D308001AA89D /* reteTheDriverVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = reteTheDriverVC.xib; sourceTree = "<group>"; };
 		CED51ED22AE1B86D00603151 /* driverProfile+collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "driverProfile+collection.swift"; sourceTree = "<group>"; };
 		CEDDBE162ACBDFA700677C94 /* sideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sideMenuCell.swift; sourceTree = "<group>"; };
 		CEDDBE172ACBDFA700677C94 /* sideMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = sideMenuCell.xib; sourceTree = "<group>"; };
@@ -794,6 +808,8 @@
 		9694AB492A5DE9DA00BDF5F8 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				CECA04552B29D2CB001AA89D /* rateTheDriver */,
+				CE996B522B25AC400089D2F4 /* trakYourTrip */,
 				CE9F3C4F2B19E644004C3D24 /* hotelsScreens */,
 				CE9EBFE32B1393280080A0F2 /* join a trip */,
 				CE9EBFE22B1393100080A0F2 /* make a trip  */,
@@ -1460,6 +1476,15 @@
 			path = viewModel;
 			sourceTree = "<group>";
 		};
+		CE4843D42B245F5E00FFAD1D /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				CE4843D52B245FE200FFAD1D /* amenitiesCell.swift */,
+				CE4843D62B245FE200FFAD1D /* amenitiesCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 		CE6178A52ACD101B00AA8BB7 /* mapSearch */ = {
 			isa = PBXGroup;
 			children = (
@@ -1510,6 +1535,7 @@
 		CE7434ED2B223BCA0023DC17 /* hotelDetials */ = {
 			isa = PBXGroup;
 			children = (
+				CE4843D42B245F5E00FFAD1D /* cell */,
 				CE7434EE2B223BF30023DC17 /* hotelDetailsVC.swift */,
 				CE7434F02B223C5D0023DC17 /* hotelDetailsVC.xib */,
 				CE7434F22B2254CD0023DC17 /* hotelDetailsExtention.swift */,
@@ -1588,6 +1614,16 @@
 				CED51ED22AE1B86D00603151 /* driverProfile+collection.swift */,
 			);
 			path = driverProfile;
+			sourceTree = "<group>";
+		};
+		CE996B522B25AC400089D2F4 /* trakYourTrip */ = {
+			isa = PBXGroup;
+			children = (
+				CE996B532B25AC5D0089D2F4 /* trackYourTripVC.swift */,
+				CE996B552B25AC6F0089D2F4 /* trackYourTripVC.xib */,
+				CE996B5F2B25DA530089D2F4 /* trackYourTripVC+delegate.swift */,
+			);
+			path = trakYourTrip;
 			sourceTree = "<group>";
 		};
 		CE9DB3972AC1AD30000759B8 /* UISegmentController */ = {
@@ -1770,6 +1806,15 @@
 			path = cell;
 			sourceTree = "<group>";
 		};
+		CECA04552B29D2CB001AA89D /* rateTheDriver */ = {
+			isa = PBXGroup;
+			children = (
+				CECA04562B29D2EF001AA89D /* rateTheDriverVC.swift */,
+				CECA04582B29D308001AA89D /* reteTheDriverVC.xib */,
+			);
+			path = rateTheDriver;
+			sourceTree = "<group>";
+		};
 		CEDDBE152ACBDF8500677C94 /* cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1944,6 +1989,7 @@
 				CE9757C82AE0F0CC0014346E /* tripListVC.xib in Resources */,
 				9694AC5B2A5E040D00BDF5F8 /* no-search-result.json in Resources */,
 				CE22928C2B1E638300E8AB42 /* hotelCell.xib in Resources */,
+				CECA04592B29D308001AA89D /* reteTheDriverVC.xib in Resources */,
 				CE30212A2ABB275400572DE7 /* phoneAndLocationVC.xib in Resources */,
 				9694AC632A5E040D00BDF5F8 /* ArbFONTS-URW-DIN-Arabic-Demi.ttf in Resources */,
 				CE7576F32AF2041100AFF56A /* chooseFeatureCell.xib in Resources */,
@@ -1965,6 +2011,7 @@
 				9641AD2E2A6C1ADD00A29046 /* Main.storyboard in Resources */,
 				9694AC5E2A5E040D00BDF5F8 /* 116102-check-in-blue.json in Resources */,
 				9694AC6A2A5E040D00BDF5F8 /* PhotosUI.strings in Resources */,
+				CE996B562B25AC6F0089D2F4 /* trackYourTripVC.xib in Resources */,
 				CEDDBE252ACC45AF00677C94 /* destinationSearchVCCell.xib in Resources */,
 				CE9EC0012B1466E70080A0F2 /* reserveTheTripCell.xib in Resources */,
 				9694AC5D2A5E040D00BDF5F8 /* 62623-warning.json in Resources */,
@@ -1987,6 +2034,7 @@
 				9694ABEF2A5DFACA00BDF5F8 /* GoogleService-Info.plist in Resources */,
 				CE2D4AF22B185483008D556E /* filterCell.xib in Resources */,
 				9694ABFB2A5DFACA00BDF5F8 /* AlertView.xib in Resources */,
+				CE4843D82B245FE200FFAD1D /* amenitiesCell.xib in Resources */,
 				9694AC542A5E040D00BDF5F8 /* Assets.xcassets in Resources */,
 				9694ABE52A5DFACA00BDF5F8 /* FiristStrpProgressCell.xib in Resources */,
 				963DAB372A803B64004ED3C7 /* RegisterDriverPersonalInfoCell.xib in Resources */,
@@ -2110,6 +2158,7 @@
 				9694ABEC2A5DFACA00BDF5F8 /* CustomNavigationController.swift in Sources */,
 				9694ABDD2A5DFACA00BDF5F8 /* Collection.swift in Sources */,
 				CEB5A8542ABC6CB500A7F4AD /* registerTabs.swift in Sources */,
+				CE996B602B25DA530089D2F4 /* trackYourTripVC+delegate.swift in Sources */,
 				9641AD272A69674300A29046 /* LoginVC.swift in Sources */,
 				9694AC032A5DFACA00BDF5F8 /* Enums.swift in Sources */,
 				CE04D9C42B15F65300B41157 /* shimmer.swift in Sources */,
@@ -2237,11 +2286,14 @@
 				9694AC6B2A5E040D00BDF5F8 /* Language.swift in Sources */,
 				9694ABEA2A5DFACA00BDF5F8 /* extensionUIViewController.swift in Sources */,
 				9641AD312A6C29DD00A29046 /* OnboardingViewController.swift in Sources */,
+				CECA04572B29D2EF001AA89D /* rateTheDriverVC.swift in Sources */,
 				96202C792A7FAE2800053C5B /* OTPVC.swift in Sources */,
+				CE996B542B25AC5D0089D2F4 /* trackYourTripVC.swift in Sources */,
 				CE2D4AEC2B184E99008D556E /* filterViewVC.swift in Sources */,
 				CE71F4732B168E1000E7B689 /* driverOffers+extentions.swift in Sources */,
 				CE9EC0002B1466E70080A0F2 /* reserveTheTripCell.swift in Sources */,
 				9694AB522A5DFA5000BDF5F8 /* BaseVC.swift in Sources */,
+				CE4843D72B245FE200FFAD1D /* amenitiesCell.swift in Sources */,
 				CE71F4702B16885B00E7B689 /* driversOffersCell.swift in Sources */,
 				9694ABC92A5DFACA00BDF5F8 /* UIViewLayout.swift in Sources */,
 				CE44773F2AE04355000D96F6 /* weeksTabView.swift in Sources */,
