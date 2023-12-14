@@ -29,6 +29,7 @@ class trackYourTripVC: BaseVC {
 //MARK: - Properties -
     var animatePolyline: AnimatePolyline?
     var count = 10
+    var stopCompleteTheTrip : Bool = false
     
     
     
@@ -42,6 +43,7 @@ class trackYourTripVC: BaseVC {
 //MARK: - Design Methods -
     private func configureInitialDesign() {
         self.title = "".localized
+        
         self.setUpGoogleView()
        
         self.bottomView.layer.addBasicShadow(cornerRadius: 20)
@@ -52,8 +54,7 @@ class trackYourTripVC: BaseVC {
        
         self.driverArriveIn.start()
         self.topViewHeight.constant = 21
-        
-        
+      
 // trip
         DispatchQueue.main.asyncAfter(deadline: .now() + 10 ) {
             UIView.animate(withDuration: 0.3 ) {
@@ -72,28 +73,57 @@ class trackYourTripVC: BaseVC {
                 UIView.animate(withDuration: 0.3 ) {
                     self.tripStartViewheight.constant = 200
                     self.view.layoutIfNeeded()
-                    
-                }
-                // trip end go to rate the driver
-                DispatchQueue.main.asyncAfter(deadline: .now() + 10 ) {
-                    let vc = rateTheDriverVC()
-                    vc.modalTransitionStyle = .crossDissolve
-                    vc.modalPresentationStyle = .overCurrentContext
-                    self.present( vc , animated: true)
                 }
                 
+                // trip end go to rate the driver
+                self.tripEnd()
+
                 
             }
             
             
+            
+            
+            
 
         }
+        
+        
+        
+        
+        
     }
     
 //MARK: - Logic Methods -
     
     
 //MARK: - Actions -
+    @IBAction func flagAction(_ sender: UIButton) {
+        sender.animateButtonWhenPressed {
+            self.stopCompleteTheTrip = true
+            let vc = reportCancelVC()
+            vc.report = true
+            self.push(vc)
+        }
+       
+        
+        
+    }
+    
+    
+    @IBAction func cancelTheTrip(_ sender: UIButton) {
+        self.stopCompleteTheTrip = true
+       
+            let vc = reportCancelVC()
+            vc.report = false
+        vc.items = ["hello"]
+            self.push(vc)
+        
+       
+     
+    }
+    
+    
     
 }
 

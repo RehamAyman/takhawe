@@ -170,6 +170,11 @@
 		96EA1E422A77006B00F39386 /* Alexandria-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9641AD3F2A6C8BAF00A29046 /* Alexandria-Regular.ttf */; };
 		96EA1E432A77006B00F39386 /* Alexandria-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9641AD392A6C8BAE00A29046 /* Alexandria-SemiBold.ttf */; };
 		96EA1E442A77006B00F39386 /* Alexandria-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9641AD402A6C8BAF00A29046 /* Alexandria-Thin.ttf */; };
+		CE034F442B2B5D990040516E /* reportCancelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE034F432B2B5D990040516E /* reportCancelVC.swift */; };
+		CE034F462B2B5DC70040516E /* reportCancelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE034F452B2B5DC70040516E /* reportCancelVC.xib */; };
+		CE034F482B2B9D940040516E /* reportCancelVC+delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE034F472B2B9D940040516E /* reportCancelVC+delegate.swift */; };
+		CE034F4C2B2B9E6C0040516E /* reportOrCandelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE034F4A2B2B9E6C0040516E /* reportOrCandelCell.swift */; };
+		CE034F4D2B2B9E6C0040516E /* reportOrCandelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE034F4B2B2B9E6C0040516E /* reportOrCandelCell.xib */; };
 		CE04D9BD2B15DD0000B41157 /* successBookViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE04D9BC2B15DD0000B41157 /* successBookViewVC.swift */; };
 		CE04D9C12B15E8BC00B41157 /* successBookViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE04D9C02B15E8BC00B41157 /* successBookViewVC.xib */; };
 		CE04D9C42B15F65300B41157 /* shimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE04D9C32B15F65300B41157 /* shimmer.swift */; };
@@ -206,6 +211,13 @@
 		CE385D962AE267A4008F2D50 /* Easing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE385D922AE267A4008F2D50 /* Easing.swift */; };
 		CE385D972AE267A4008F2D50 /* LocationUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE385D932AE267A4008F2D50 /* LocationUtilities.swift */; };
 		CE385D992AE267D0008F2D50 /* Utilitiesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE385D982AE267D0008F2D50 /* Utilitiesh.swift */; };
+		CE3B53A02B2AFA01003D3043 /* rateTheDriverVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE3B539F2B2AFA01003D3043 /* rateTheDriverVC.xib */; };
+		CE3B53A22B2AFD6A003D3043 /* rateTheDriverDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3B53A12B2AFD6A003D3043 /* rateTheDriverDelegates.swift */; };
+		CE3B53A52B2AFFFF003D3043 /* cancelTheTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3B53A42B2AFFFF003D3043 /* cancelTheTripVC.swift */; };
+		CE3B53A72B2B0009003D3043 /* cancelTheTripVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE3B53A62B2B0009003D3043 /* cancelTheTripVC.xib */; };
+		CE3B53A92B2B18D2003D3043 /* appMainTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3B53A82B2B18D2003D3043 /* appMainTextField.swift */; };
+		CE3B53AE2B2B2365003D3043 /* tipsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3B53AC2B2B2365003D3043 /* tipsCell.swift */; };
+		CE3B53AF2B2B2365003D3043 /* tipsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE3B53AD2B2B2365003D3043 /* tipsCell.xib */; };
 		CE3CEEDA2B1648D400619C79 /* makeAtripAlertPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3CEED92B1648D400619C79 /* makeAtripAlertPopUpVC.swift */; };
 		CE3CEEDC2B1648FC00619C79 /* makeAtripAlertPopUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE3CEEDB2B1648FC00619C79 /* makeAtripAlertPopUpVC.xib */; };
 		CE3CEEDE2B1652DD00619C79 /* findingAdriverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3CEEDD2B1652DD00619C79 /* findingAdriverVC.swift */; };
@@ -295,7 +307,6 @@
 		CEBB8BA32ADEB8ED00E70EC4 /* profileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEBB8BA12ADEB8ED00E70EC4 /* profileCell.xib */; };
 		CEBB8BA52ADEEC1900E70EC4 /* profileVc+delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB8BA42ADEEC1900E70EC4 /* profileVc+delegate.swift */; };
 		CECA04572B29D2EF001AA89D /* rateTheDriverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA04562B29D2EF001AA89D /* rateTheDriverVC.swift */; };
-		CECA04592B29D308001AA89D /* reteTheDriverVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECA04582B29D308001AA89D /* reteTheDriverVC.xib */; };
 		CED51ED32AE1B86D00603151 /* driverProfile+collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED51ED22AE1B86D00603151 /* driverProfile+collection.swift */; };
 		CEDDBE182ACBDFA700677C94 /* sideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDDBE162ACBDFA700677C94 /* sideMenuCell.swift */; };
 		CEDDBE192ACBDFA700677C94 /* sideMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDDBE172ACBDFA700677C94 /* sideMenuCell.xib */; };
@@ -462,6 +473,11 @@
 		96B27F862A82F791006C8DB3 /* TermsOfUseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseVC.swift; sourceTree = "<group>"; };
 		96B27F8A2A82F7BE006C8DB3 /* TermsOfUseVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermsOfUseVC.xib; sourceTree = "<group>"; };
 		A8CF50C0964AF25CF2EE7BB5 /* Pods-Takhawi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Takhawi.debug.xcconfig"; path = "Target Support Files/Pods-Takhawi/Pods-Takhawi.debug.xcconfig"; sourceTree = "<group>"; };
+		CE034F432B2B5D990040516E /* reportCancelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reportCancelVC.swift; sourceTree = "<group>"; };
+		CE034F452B2B5DC70040516E /* reportCancelVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = reportCancelVC.xib; sourceTree = "<group>"; };
+		CE034F472B2B9D940040516E /* reportCancelVC+delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "reportCancelVC+delegate.swift"; sourceTree = "<group>"; };
+		CE034F4A2B2B9E6C0040516E /* reportOrCandelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reportOrCandelCell.swift; sourceTree = "<group>"; };
+		CE034F4B2B2B9E6C0040516E /* reportOrCandelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = reportOrCandelCell.xib; sourceTree = "<group>"; };
 		CE04D9BC2B15DD0000B41157 /* successBookViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = successBookViewVC.swift; sourceTree = "<group>"; };
 		CE04D9C02B15E8BC00B41157 /* successBookViewVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = successBookViewVC.xib; sourceTree = "<group>"; };
 		CE04D9C32B15F65300B41157 /* shimmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shimmer.swift; sourceTree = "<group>"; };
@@ -511,6 +527,13 @@
 		CE385D922AE267A4008F2D50 /* Easing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Easing.swift; sourceTree = "<group>"; };
 		CE385D932AE267A4008F2D50 /* LocationUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationUtilities.swift; sourceTree = "<group>"; };
 		CE385D982AE267D0008F2D50 /* Utilitiesh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilitiesh.swift; sourceTree = "<group>"; };
+		CE3B539F2B2AFA01003D3043 /* rateTheDriverVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = rateTheDriverVC.xib; sourceTree = "<group>"; };
+		CE3B53A12B2AFD6A003D3043 /* rateTheDriverDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rateTheDriverDelegates.swift; sourceTree = "<group>"; };
+		CE3B53A42B2AFFFF003D3043 /* cancelTheTripVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cancelTheTripVC.swift; sourceTree = "<group>"; };
+		CE3B53A62B2B0009003D3043 /* cancelTheTripVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cancelTheTripVC.xib; sourceTree = "<group>"; };
+		CE3B53A82B2B18D2003D3043 /* appMainTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appMainTextField.swift; sourceTree = "<group>"; };
+		CE3B53AC2B2B2365003D3043 /* tipsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipsCell.swift; sourceTree = "<group>"; };
+		CE3B53AD2B2B2365003D3043 /* tipsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = tipsCell.xib; sourceTree = "<group>"; };
 		CE3CEED92B1648D400619C79 /* makeAtripAlertPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = makeAtripAlertPopUpVC.swift; sourceTree = "<group>"; };
 		CE3CEEDB2B1648FC00619C79 /* makeAtripAlertPopUpVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = makeAtripAlertPopUpVC.xib; sourceTree = "<group>"; };
 		CE3CEEDD2B1652DD00619C79 /* findingAdriverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = findingAdriverVC.swift; sourceTree = "<group>"; };
@@ -601,7 +624,6 @@
 		CEBB8BA12ADEB8ED00E70EC4 /* profileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = profileCell.xib; sourceTree = "<group>"; };
 		CEBB8BA42ADEEC1900E70EC4 /* profileVc+delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "profileVc+delegate.swift"; sourceTree = "<group>"; };
 		CECA04562B29D2EF001AA89D /* rateTheDriverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rateTheDriverVC.swift; sourceTree = "<group>"; };
-		CECA04582B29D308001AA89D /* reteTheDriverVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = reteTheDriverVC.xib; sourceTree = "<group>"; };
 		CED51ED22AE1B86D00603151 /* driverProfile+collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "driverProfile+collection.swift"; sourceTree = "<group>"; };
 		CEDDBE162ACBDFA700677C94 /* sideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sideMenuCell.swift; sourceTree = "<group>"; };
 		CEDDBE172ACBDFA700677C94 /* sideMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = sideMenuCell.xib; sourceTree = "<group>"; };
@@ -808,6 +830,8 @@
 		9694AB492A5DE9DA00BDF5F8 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				CE3B53B02B2B4BB6003D3043 /* reportOrCancel */,
+				CE3B53A32B2AFFD9003D3043 /* cancelTheTrip */,
 				CECA04552B29D2CB001AA89D /* rateTheDriver */,
 				CE996B522B25AC400089D2F4 /* trakYourTrip */,
 				CE9F3C4F2B19E644004C3D24 /* hotelsScreens */,
@@ -908,6 +932,7 @@
 		9694AB652A5DFACA00BDF5F8 /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
+				CE3B53AA2B2B18D8003D3043 /* appMainTextField */,
 				CE04D9C22B15F64000B41157 /* imageShimmering */,
 				CE7576EB2AF1FE1600AFF56A /* shadow */,
 				CE385D852AE26334008F2D50 /* animatedGoogleRoute */,
@@ -1267,6 +1292,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		CE034F492B2B9E4B0040516E /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				CE034F4A2B2B9E6C0040516E /* reportOrCandelCell.swift */,
+				CE034F4B2B2B9E6C0040516E /* reportOrCandelCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 		CE04D9BB2B15DCE100B41157 /* successBookView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1437,6 +1471,43 @@
 				CE385D932AE267A4008F2D50 /* LocationUtilities.swift */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		CE3B53A32B2AFFD9003D3043 /* cancelTheTrip */ = {
+			isa = PBXGroup;
+			children = (
+				CE3B53A42B2AFFFF003D3043 /* cancelTheTripVC.swift */,
+				CE3B53A62B2B0009003D3043 /* cancelTheTripVC.xib */,
+			);
+			name = cancelTheTrip;
+			sourceTree = "<group>";
+		};
+		CE3B53AA2B2B18D8003D3043 /* appMainTextField */ = {
+			isa = PBXGroup;
+			children = (
+				CE3B53A82B2B18D2003D3043 /* appMainTextField.swift */,
+			);
+			path = appMainTextField;
+			sourceTree = "<group>";
+		};
+		CE3B53AB2B2B2351003D3043 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				CE3B53AC2B2B2365003D3043 /* tipsCell.swift */,
+				CE3B53AD2B2B2365003D3043 /* tipsCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		CE3B53B02B2B4BB6003D3043 /* reportOrCancel */ = {
+			isa = PBXGroup;
+			children = (
+				CE034F492B2B9E4B0040516E /* cell */,
+				CE034F432B2B5D990040516E /* reportCancelVC.swift */,
+				CE034F452B2B5DC70040516E /* reportCancelVC.xib */,
+				CE034F472B2B9D940040516E /* reportCancelVC+delegate.swift */,
+			);
+			path = reportOrCancel;
 			sourceTree = "<group>";
 		};
 		CE3CEED82B1648B200619C79 /* makeTripALertPopup */ = {
@@ -1619,8 +1690,8 @@
 		CE996B522B25AC400089D2F4 /* trakYourTrip */ = {
 			isa = PBXGroup;
 			children = (
-				CE996B532B25AC5D0089D2F4 /* trackYourTripVC.swift */,
 				CE996B552B25AC6F0089D2F4 /* trackYourTripVC.xib */,
+				CE996B532B25AC5D0089D2F4 /* trackYourTripVC.swift */,
 				CE996B5F2B25DA530089D2F4 /* trackYourTripVC+delegate.swift */,
 			);
 			path = trakYourTrip;
@@ -1809,8 +1880,10 @@
 		CECA04552B29D2CB001AA89D /* rateTheDriver */ = {
 			isa = PBXGroup;
 			children = (
+				CE3B53AB2B2B2351003D3043 /* cell */,
 				CECA04562B29D2EF001AA89D /* rateTheDriverVC.swift */,
-				CECA04582B29D308001AA89D /* reteTheDriverVC.xib */,
+				CE3B53A12B2AFD6A003D3043 /* rateTheDriverDelegates.swift */,
+				CE3B539F2B2AFA01003D3043 /* rateTheDriverVC.xib */,
 			);
 			path = rateTheDriver;
 			sourceTree = "<group>";
@@ -1982,6 +2055,8 @@
 				963DAB392A803B6C004ED3C7 /* RegisterDriverPersonalInfoVC.xib in Resources */,
 				CE3CEEE12B16532F00619C79 /* findingAdriverVC.xib in Resources */,
 				CE7D82F92AC3BC1D00C5B028 /* SelectYourLocationVc.xib in Resources */,
+				CE034F4D2B2B9E6C0040516E /* reportOrCandelCell.xib in Resources */,
+				CE034F462B2B5DC70040516E /* reportCancelVC.xib in Resources */,
 				CE9F3C572B1B4550004C3D24 /* wAY9ZXW4id.json in Resources */,
 				9694AC5F2A5E040D00BDF5F8 /* ArbFONTS-URW-DIN-Arabic-Medium.ttf in Resources */,
 				CE71F4712B16885B00E7B689 /* driversOffersCell.xib in Resources */,
@@ -1989,9 +2064,9 @@
 				CE9757C82AE0F0CC0014346E /* tripListVC.xib in Resources */,
 				9694AC5B2A5E040D00BDF5F8 /* no-search-result.json in Resources */,
 				CE22928C2B1E638300E8AB42 /* hotelCell.xib in Resources */,
-				CECA04592B29D308001AA89D /* reteTheDriverVC.xib in Resources */,
 				CE30212A2ABB275400572DE7 /* phoneAndLocationVC.xib in Resources */,
 				9694AC632A5E040D00BDF5F8 /* ArbFONTS-URW-DIN-Arabic-Demi.ttf in Resources */,
+				CE3B53AF2B2B2365003D3043 /* tipsCell.xib in Resources */,
 				CE7576F32AF2041100AFF56A /* chooseFeatureCell.xib in Resources */,
 				CE27F53D2ADFAD8500DEA419 /* StarRatingStackView.xib in Resources */,
 				CE9757C62AE0F0BD0014346E /* tripListCell.xib in Resources */,
@@ -2034,7 +2109,9 @@
 				9694ABEF2A5DFACA00BDF5F8 /* GoogleService-Info.plist in Resources */,
 				CE2D4AF22B185483008D556E /* filterCell.xib in Resources */,
 				9694ABFB2A5DFACA00BDF5F8 /* AlertView.xib in Resources */,
+				CE3B53A72B2B0009003D3043 /* cancelTheTripVC.xib in Resources */,
 				CE4843D82B245FE200FFAD1D /* amenitiesCell.xib in Resources */,
+				CE3B53A02B2AFA01003D3043 /* rateTheDriverVC.xib in Resources */,
 				9694AC542A5E040D00BDF5F8 /* Assets.xcassets in Resources */,
 				9694ABE52A5DFACA00BDF5F8 /* FiristStrpProgressCell.xib in Resources */,
 				963DAB372A803B64004ED3C7 /* RegisterDriverPersonalInfoCell.xib in Resources */,
@@ -2122,6 +2199,7 @@
 				CEBB8B932ADE77FB00E70EC4 /* mapSearchExtention.swift in Sources */,
 				CEB5A8642ABD7ECD00A7F4AD /* tab4.swift in Sources */,
 				CE115E5D2ABED5E800972CC9 /* homeVC.swift in Sources */,
+				CE3B53A92B2B18D2003D3043 /* appMainTextField.swift in Sources */,
 				9694ABE82A5DFACA00BDF5F8 /* LocationExtetioin.swift in Sources */,
 				9694ABED2A5DFACA00BDF5F8 /* Extention+Material.swift in Sources */,
 				9694ABCA2A5DFACA00BDF5F8 /* extensionUIVIewControllerSwiftMessage.swift in Sources */,
@@ -2148,6 +2226,7 @@
 				9641AD382A6C2EFC00A29046 /* Blurview.swift in Sources */,
 				9694ABD12A5DFACA00BDF5F8 /* UIstackViewExtension.swift in Sources */,
 				CE27F53F2ADFAD8500DEA419 /* StarRatingStackView.swift in Sources */,
+				CE3B53A52B2AFFFF003D3043 /* cancelTheTripVC.swift in Sources */,
 				CEB5A8572ABC6D3700A7F4AD /* tap1.swift in Sources */,
 				9694ABFF2A5DFACA00BDF5F8 /* defult.swift in Sources */,
 				CE4477442AE0440E000D96F6 /* calendarWeekStore.swift in Sources */,
@@ -2185,10 +2264,12 @@
 				9694ABC52A5DFACA00BDF5F8 /* Alert.swift in Sources */,
 				CE7434F32B2254CD0023DC17 /* hotelDetailsExtention.swift in Sources */,
 				9694ABC32A5DFACA00BDF5F8 /* Utilities.swift in Sources */,
+				CE034F482B2B9D940040516E /* reportCancelVC+delegate.swift in Sources */,
 				CEBB8BA22ADEB8ED00E70EC4 /* profileCell.swift in Sources */,
 				CEF9737C2AC1D4D800CDCCFD /* KeyboardHeightPublisher.swift in Sources */,
 				963007132A7671020075DBFE /* RegisterVC.swift in Sources */,
 				CE2292852B1E57B300E8AB42 /* hotelsVC.swift in Sources */,
+				CE3B53AE2B2B2365003D3043 /* tipsCell.swift in Sources */,
 				9694ABDE2A5DFACA00BDF5F8 /* String.swift in Sources */,
 				9694AC572A5E040D00BDF5F8 /* Color.swift in Sources */,
 				9694ABC02A5DFACA00BDF5F8 /* ServerPath.swift in Sources */,
@@ -2221,6 +2302,7 @@
 				CEB5A85D2ABC909400A7F4AD /* registerTapsVC.swift in Sources */,
 				9694AC022A5DFACA00BDF5F8 /* AppHelper.swift in Sources */,
 				9694ABBC2A5DFACA00BDF5F8 /* APIRouter.swift in Sources */,
+				CE3B53A22B2AFD6A003D3043 /* rateTheDriverDelegates.swift in Sources */,
 				CE385D972AE267A4008F2D50 /* LocationUtilities.swift in Sources */,
 				CE3021332ABB87CF00572DE7 /* enterPasswordVC.swift in Sources */,
 				CE9757D52AE1B2B00014346E /* driverProfileVC.swift in Sources */,
@@ -2249,6 +2331,7 @@
 				9694ABFA2A5DFACA00BDF5F8 /* TopAlert.swift in Sources */,
 				9694ABEE2A5DFACA00BDF5F8 /* PushNotifcationManager.swift in Sources */,
 				9694ABBF2A5DFACA00BDF5F8 /* APIGloabelResponse.swift in Sources */,
+				CE034F442B2B5D990040516E /* reportCancelVC.swift in Sources */,
 				9694ABDF2A5DFACA00BDF5F8 /* Double.swift in Sources */,
 				9694ABF52A5DFACA00BDF5F8 /* showandHidePassword.swift in Sources */,
 				CE27F5442ADFB02F00DEA419 /* GoogleMapViewController.swift in Sources */,
@@ -2277,6 +2360,7 @@
 				9694ABBE2A5DFACA00BDF5F8 /* UserModel.swift in Sources */,
 				CE7576ED2AF1FE2500AFF56A /* innerShadow.swift in Sources */,
 				CE9DB3992AC1AD58000759B8 /* customUIsegment.swift in Sources */,
+				CE034F4C2B2B9E6C0040516E /* reportOrCandelCell.swift in Sources */,
 				CE71F47A2B17435A00E7B689 /* selectTimeVC.swift in Sources */,
 				9694ABD72A5DFACA00BDF5F8 /* UIFontExtension.swift in Sources */,
 				9694ABF92A5DFACA00BDF5F8 /* Locator.swift in Sources */,
@@ -2507,7 +2591,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
-				DEVELOPMENT_TEAM = CA5NVSJ377;
+				DEVELOPMENT_TEAM = 95K26889X5;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
 				FRAMEWORK_SEARCH_PATHS = "${inherited}";
@@ -2526,7 +2610,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.takhawi.Takhawiapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.takhawi.Takhawiappo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -2546,7 +2630,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
-				DEVELOPMENT_TEAM = CA5NVSJ377;
+				DEVELOPMENT_TEAM = 95K26889X5;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				FRAMEWORK_SEARCH_PATHS = "${inherited}";
@@ -2565,7 +2649,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.takhawi.Takhawiapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.takhawi.Takhawiappo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

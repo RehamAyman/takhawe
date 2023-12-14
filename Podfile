@@ -24,10 +24,13 @@ target 'Takhawi' do
   pod 'EasyTipView', '~> 2.1'
   pod 'lottie-ios'
   pod 'ImageSlideshow', '~> 1.9.0'
-  
   pod 'CountdownLabel'
+  pod 'MaterialComponents/TextFields'
+  pod 'MaterialComponents/TextControls+FilledTextAreas'
+  pod 'MaterialComponents/TextControls+FilledTextFields'
+  pod 'MaterialComponents/TextControls+OutlinedTextAreas'
+  pod 'MaterialComponents/TextControls+OutlinedTextFields'
 
-  
 
   
   

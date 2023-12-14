@@ -107,6 +107,9 @@
                             </constraints>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="Group 1000002825"/>
+                            <connections>
+                                <action selector="flagAction:" destination="-1" eventType="touchUpInside" id="9vq-eh-GxI"/>
+                            </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yd6-Bi-mqv">
                             <rect key="frame" x="75" y="119.5" width="224" height="48"/>
@@ -369,6 +372,9 @@
                             <state key="normal" title="Cancel Trip">
                                 <color key="titleColor" name="AppRed"/>
                             </state>
+                            <connections>
+                                <action selector="cancelTheTrip:" destination="-1" eventType="touchUpInside" id="dcS-VG-3Zv"/>
+                            </connections>
                         </button>
                         <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lwV-id-l6B" customClass="CosmosView" customModule="Cosmos">
                             <rect key="frame" x="131" y="86.5" width="112" height="25"/>
@@ -521,6 +527,9 @@
                             <state key="normal" title="Cancel Trip">
                                 <color key="titleColor" name="AppRed"/>
                             </state>
+                            <connections>
+                                <action selector="cancelTheTrip:" destination="-1" eventType="touchUpInside" id="u17-bz-ozE"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPR-uX-bmr">
                             <rect key="frame" x="309" y="15" width="50" height="50"/>
@@ -530,6 +539,9 @@
                             </constraints>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="Group 1000002825"/>
+                            <connections>
+                                <action selector="flagAction:" destination="-1" eventType="touchUpInside" id="g6M-HD-CGp"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
