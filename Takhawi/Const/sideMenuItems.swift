@@ -24,13 +24,17 @@ struct publicSideMenu {
     static func sideMenuView ( index : IndexPath , main : BaseVC) {
         switch index.row {
         case 0 :print( "go to home")
-           
         case 1 : print("go to switch to driver ")
         case 2 : // go to profile
             let vc = profileVC()
             main.push(vc)
         case 3 : // go to notifications
             let vc = notificationViewVC()
+            main.push(vc)
+        case 4 : // go to messages
+            print("go to messages vc ")
+        case 5 : // go to favorites
+            let vc = favoritesVC()
             main.push(vc)
             
         default:

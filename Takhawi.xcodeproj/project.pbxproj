@@ -323,6 +323,8 @@
 		CEEDC0212B2E10F10017C804 /* notivicationViewVC+delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEDC0202B2E10F10017C804 /* notivicationViewVC+delegates.swift */; };
 		CEEDC0252B2E13890017C804 /* notificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEDC0232B2E13890017C804 /* notificationCell.swift */; };
 		CEEDC0262B2E13890017C804 /* notificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEEDC0242B2E13890017C804 /* notificationCell.xib */; };
+		CEF7B6E92B2E2B1B00E3FE5C /* favoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7B6E82B2E2B1B00E3FE5C /* favoritesVC.swift */; };
+		CEF7B6EB2B2E2F7400E3FE5C /* favoritesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF7B6EA2B2E2F7400E3FE5C /* favoritesVC.xib */; };
 		CEF9737A2AC1D4B600CDCCFD /* UIResponder+Current.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF973792AC1D4B600CDCCFD /* UIResponder+Current.swift */; };
 		CEF9737C2AC1D4D800CDCCFD /* KeyboardHeightPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF9737B2AC1D4D700CDCCFD /* KeyboardHeightPublisher.swift */; };
 		CEF9737E2AC1D4FA00CDCCFD /* KeyboardAdaptive.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF9737D2AC1D4FA00CDCCFD /* KeyboardAdaptive.swift */; };
@@ -649,6 +651,8 @@
 		CEEDC0202B2E10F10017C804 /* notivicationViewVC+delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "notivicationViewVC+delegates.swift"; sourceTree = "<group>"; };
 		CEEDC0232B2E13890017C804 /* notificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notificationCell.swift; sourceTree = "<group>"; };
 		CEEDC0242B2E13890017C804 /* notificationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = notificationCell.xib; sourceTree = "<group>"; };
+		CEF7B6E82B2E2B1B00E3FE5C /* favoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favoritesVC.swift; sourceTree = "<group>"; };
+		CEF7B6EA2B2E2F7400E3FE5C /* favoritesVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = favoritesVC.xib; sourceTree = "<group>"; };
 		CEF973792AC1D4B600CDCCFD /* UIResponder+Current.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIResponder+Current.swift"; sourceTree = "<group>"; };
 		CEF9737B2AC1D4D700CDCCFD /* KeyboardHeightPublisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardHeightPublisher.swift; sourceTree = "<group>"; };
 		CEF9737D2AC1D4FA00CDCCFD /* KeyboardAdaptive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardAdaptive.swift; sourceTree = "<group>"; };
@@ -1890,6 +1894,7 @@
 		CEBB8B942ADE95D300E70EC4 /* sideMenu */ = {
 			isa = PBXGroup;
 			children = (
+				CEF7B6E72B2E2AE800E3FE5C /* favourites */,
 				CEEDC01B2B2E0FC60017C804 /* notifications */,
 				CEBB8B952ADE95D900E70EC4 /* profile */,
 			);
@@ -1994,6 +1999,15 @@
 				CEEDC0242B2E13890017C804 /* notificationCell.xib */,
 			);
 			path = cell;
+			sourceTree = "<group>";
+		};
+		CEF7B6E72B2E2AE800E3FE5C /* favourites */ = {
+			isa = PBXGroup;
+			children = (
+				CEF7B6E82B2E2B1B00E3FE5C /* favoritesVC.swift */,
+				CEF7B6EA2B2E2F7400E3FE5C /* favoritesVC.xib */,
+			);
+			path = favourites;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2116,6 +2130,7 @@
 				CE3CEEE12B16532F00619C79 /* findingAdriverVC.xib in Resources */,
 				CE7D82F92AC3BC1D00C5B028 /* SelectYourLocationVc.xib in Resources */,
 				CE034F4D2B2B9E6C0040516E /* reportOrCandelCell.xib in Resources */,
+				CEF7B6EB2B2E2F7400E3FE5C /* favoritesVC.xib in Resources */,
 				CE034F462B2B5DC70040516E /* reportCancelVC.xib in Resources */,
 				CE9F3C572B1B4550004C3D24 /* wAY9ZXW4id.json in Resources */,
 				9694AC5F2A5E040D00BDF5F8 /* ArbFONTS-URW-DIN-Arabic-Medium.ttf in Resources */,
@@ -2405,6 +2420,7 @@
 				9694ABF02A5DFACA00BDF5F8 /* PushNotifcations.swift in Sources */,
 				CE71F4672B16855D00E7B689 /* driverOffersVC.swift in Sources */,
 				9694ABBD2A5DFACA00BDF5F8 /* UploadData.swift in Sources */,
+				CEF7B6E92B2E2B1B00E3FE5C /* favoritesVC.swift in Sources */,
 				CE385D962AE267A4008F2D50 /* Easing.swift in Sources */,
 				9694ABF12A5DFACA00BDF5F8 /* CustomButtons.swift in Sources */,
 				9694ABF82A5DFACA00BDF5F8 /* ImagePicker.swift in Sources */,
