@@ -103,6 +103,7 @@ class trackYourTripVC: BaseVC {
             self.stopCompleteTheTrip = true
             let vc = reportCancelVC()
             vc.report = true
+            vc.items = dummyReportResons
             self.push(vc)
         }
        
@@ -116,7 +117,7 @@ class trackYourTripVC: BaseVC {
        
             let vc = reportCancelVC()
             vc.report = false
-        vc.items = ["hello"]
+             vc.items = dummyCancelationResons
             self.push(vc)
         
        

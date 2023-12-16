@@ -20,6 +20,7 @@
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home 1" translatesAutoresizingMaskIntoConstraints="NO" id="13S-lh-eYJ">
                         <rect key="frame" x="10" y="34.666666666666664" width="24" height="24"/>
+                        <color key="tintColor" name="MainColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="24" id="a9y-BQ-4tG"/>
                             <constraint firstAttribute="width" constant="24" id="fJ8-RB-Phd"/>
@@ -28,11 +29,11 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yea-ad-kSb">
                         <rect key="frame" x="42" y="37.333333333333336" width="268" height="18.666666666666664"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="textColor" name="MainColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <color key="backgroundColor" name="MainColor"/>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="13S-lh-eYJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Fqs-vB-zhf"/>
                     <constraint firstItem="13S-lh-eYJ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="NZa-I8-nak"/>

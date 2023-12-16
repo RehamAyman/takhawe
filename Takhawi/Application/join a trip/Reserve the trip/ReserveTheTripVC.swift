@@ -61,7 +61,7 @@ class ReserveTheTripVC: BaseVC {
     @IBAction func confirmTrip(_ sender: UIButton) {
 
             let vc = successBookViewVC()
-            vc.modalTransitionStyle = .coverVertical
+            vc.modalTransitionStyle = .crossDissolve
             vc.modalPresentationStyle = .overCurrentContext
         vc.action = {
             let vc = trackYourTripVC()

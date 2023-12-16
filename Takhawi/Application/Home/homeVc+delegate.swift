@@ -31,15 +31,13 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
         return self.sideMenuItems.count
     }
     
-    
-    
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = sideMenuItems[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "sideMenuCell", for: indexPath) as! sideMenuCell
         cell.contentView.backgroundColor = UIColor.clear
         cell.backgroundColor = UIColor.clear
-        cell.sideIcon.image = UIImage(named: item.icon)
+        cell.sideIcon.image = UIImage(named: item.icon)?.withRenderingMode(.alwaysTemplate)
         cell.title.text = item.name
         cell.selectionStyle = .none
         
@@ -290,18 +288,24 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
     
     
     
+    
+    
+    
+    
+    
     func showMenu() {
-     
-        self.containerView.layer.cornerRadius = 40
-        self.googleMaps.layer.cornerRadius = self.containerView.layer.cornerRadius
+        
+        self.sideMenuContainer.isHidden = false
+        self.visualView.isHidden = false
+        self.visualView.isUserInteractionEnabled = true
+        self.sideMenuContainer.isHidden = false
+        self.sideMenuContainer.isUserInteractionEnabled = true
         let x = UIScreen.main.bounds.width * 0.6
-        let originalTransform = self.containerView.transform
+        let originalTransform = self.sideMenuContainer.transform
         let scaledTransform = originalTransform.scaledBy(x: 1, y: 1)
             let scaledAndTranslatedTransform = scaledTransform.translatedBy(x: x, y: 0)
-            UIView.animate(withDuration: 0.7, animations: {
-                self.containerView.transform = scaledAndTranslatedTransform
-                
-                
+            UIView.animate(withDuration: 0.5, animations: {
+                self.sideMenuContainer.transform = scaledAndTranslatedTransform
                 // stop google maps interaction
                 self.googleMaps.isUserInteractionEnabled = false
                 self.containerView.isUserInteractionEnabled = false
@@ -311,26 +315,53 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
         self.menu = true
         
     }
-
+  
    
     
 //MARK: - hide side menu with animation  function
     
     
     
+    func initialSideMenu () {
+       
+        self.visualView.isHidden = true
+        self.visualView.isUserInteractionEnabled = false
+        self.sideMenuContainer.isHidden = true
+        let x = UIScreen.main.bounds.width * 0.6
+        let originalTransform = self.sideMenuContainer.transform
+        let scaledTransform = originalTransform.scaledBy(x: 1, y: 1)
+        let scaledAndTranslatedTransform = scaledTransform.translatedBy(x: -x, y: 0)
+        self.sideMenuContainer.transform = scaledAndTranslatedTransform
+        // stop google maps interaction
+        self.googleMaps.isUserInteractionEnabled = true
+        self.containerView.isUserInteractionEnabled = true
+        
+        
+        
+        
+    }
     
     func hideMenu() {
+   
         
-            UIView.animate(withDuration: 0.7, animations: {
-                self.containerView.transform = self.home
-                self.containerView.layer.cornerRadius = 0
-               self.googleMaps.layer.cornerRadius = 0
-                
-                // make maps view able to interact
-                self.googleMaps.isUserInteractionEnabled = true
-                self.containerView.isUserInteractionEnabled = true
-                
-            })
+        
+        self.visualView.isHidden = true
+        self.visualView.isUserInteractionEnabled = false
+        let x = UIScreen.main.bounds.width * 0.6
+               let originalTransform = self.sideMenuContainer.transform
+               let scaledTransform = originalTransform.scaledBy(x: 1, y: 1)
+                   let scaledAndTranslatedTransform = scaledTransform.translatedBy(x: -x, y: 0)
+                   UIView.animate(withDuration: 0.5, animations: {
+                       self.sideMenuContainer.transform = scaledAndTranslatedTransform
+                       // stop google maps interaction
+                       self.googleMaps.isUserInteractionEnabled = true
+                       self.containerView.isUserInteractionEnabled = true
+                   })
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5  ) {
+            self.sideMenuContainer.isHidden = true
+        }
+        
+    
         self.menu =  false
     }
     

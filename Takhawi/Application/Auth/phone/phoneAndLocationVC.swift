@@ -50,7 +50,10 @@ class phoneAndLocationVC: BaseVC, UITextFieldDelegate {
                 dismissKeyboard()
                 push(vc)
             } else { // new user
-                let vc = registerTapsVC()
+                
+                
+                
+               let vc =   registerTapsVC()   // swiftRegisterVC()    // registerTapsVC()
                 dismissKeyboard()
                 push(vc)
                 

@@ -52,6 +52,16 @@ class reportCancelVC: BaseVC {
 //MARK: - Actions -
     
     @IBAction func submit(_ sender: UIButton) {
+        let vc = cancelTheTripVC()
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .overCurrentContext
+        
+        if report  {
+            vc.report = true
+            self.present( vc , animated: true )
+        } else {
+            self.present( vc , animated: true )
+        }
     }
 }
 

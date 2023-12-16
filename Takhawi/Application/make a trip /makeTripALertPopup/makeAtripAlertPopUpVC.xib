@@ -24,7 +24,7 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <visualEffectView hidden="YES" opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5VC-uk-q3t">
+                <visualEffectView opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5VC-uk-q3t">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="N5D-h5-rSl">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -34,17 +34,17 @@
                     <blurEffect style="regular"/>
                 </visualEffectView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YW0-jV-LGD">
-                    <rect key="frame" x="15" y="251" width="363" height="350"/>
+                    <rect key="frame" x="20" y="251" width="353" height="350"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="warning 1" translatesAutoresizingMaskIntoConstraints="NO" id="hR5-Yx-zGY">
-                            <rect key="frame" x="40.666666666666657" y="70" width="282" height="128"/>
+                            <rect key="frame" x="35.666666666666657" y="70" width="282" height="128"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="128" id="5bT-aL-JOr"/>
                                 <constraint firstAttribute="width" constant="282" id="vbx-he-WVL"/>
                             </constraints>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpY-y1-4GG">
-                            <rect key="frame" x="313" y="20" width="30" height="30"/>
+                            <rect key="frame" x="303" y="20" width="30" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="30" id="SNw-1m-6eS"/>
                                 <constraint firstAttribute="height" constant="30" id="Wng-wL-laF"/>
@@ -56,7 +56,7 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3N-C5-NLp">
-                            <rect key="frame" x="81.666666666666686" y="208" width="200" height="30.333333333333343"/>
+                            <rect key="frame" x="76.666666666666686" y="208" width="200" height="30.333333333333343"/>
                             <string key="text">The cost will increase by a certain 
 amount for this kind of request</string>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
@@ -64,10 +64,10 @@ amount for this kind of request</string>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rq4-ik-thu">
-                            <rect key="frame" x="20" y="286" width="323" height="44"/>
+                            <rect key="frame" x="20" y="280" width="313" height="50"/>
                             <color key="backgroundColor" name="MainColor"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="44" id="uQN-UZ-q3L"/>
+                                <constraint firstAttribute="height" constant="50" id="uQN-UZ-q3L"/>
                             </constraints>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" title="Button"/>
@@ -98,7 +98,7 @@ amount for this kind of request</string>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="5VC-uk-q3t" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="8DX-iq-l5W"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="YW0-jV-LGD" secondAttribute="trailing" constant="15" id="UJO-Ce-khw"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="YW0-jV-LGD" secondAttribute="trailing" constant="20" id="UJO-Ce-khw"/>
                 <constraint firstAttribute="trailing" secondItem="5VC-uk-q3t" secondAttribute="trailing" id="bPR-km-LG5"/>
                 <constraint firstItem="5VC-uk-q3t" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="byE-9V-rZv"/>
                 <constraint firstItem="YW0-jV-LGD" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="d1S-FZ-Pw2"/>

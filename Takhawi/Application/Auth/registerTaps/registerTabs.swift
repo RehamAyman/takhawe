@@ -13,13 +13,14 @@ import SwiftUI
 
 
 struct registerTabs: View {
-    @State private var tabSelection = 1
+    @State private var tabSelection = 0
     @State var test : String = ""
     var action: () -> Void
     var BackAction: () -> Void
     
     
     var body: some View {
+       
         
         VStack  {
             
@@ -44,8 +45,7 @@ struct registerTabs: View {
                  .padding(12)
                  .frame(height: 20)
            
-//            Text("Please PleasePleasePleasePleasePleasePleasePleasePlease")
-//                .frame(height: 20)
+        
             Group {
                     Text("Please ")
                     .font(.custom(AppFont.Regular.rawValue, size: 17))
@@ -62,11 +62,9 @@ struct registerTabs: View {
                .padding(.trailing , 50 )
                .fixedSize(horizontal: false, vertical: true)
               .frame(height: 50)
-              .padding(.bottom)
+               .padding(.bottom)
             
                 TabView (selection: $tabSelection) {
-                    
-                  
                     
                     tap1()
                         .frame(height: UIScreen.main.bounds.size.height * 0.5)
@@ -86,13 +84,8 @@ struct registerTabs: View {
                 .padding(.leading , 20 )
                 .padding(.trailing , 20 )
                
-                .frame(height: UIScreen.main.bounds.size.height * 0.5)
+            //    .frame(height: UIScreen.main.bounds.size.height * 0.5)
                
-               
-          
-             
-                
-           
             
             HStack ( spacing: 10) {
                 ForEach((1...4), id: \.self) { item in
@@ -104,6 +97,8 @@ struct registerTabs: View {
             }
             .padding()
            
+          
+      
             
             
            
@@ -156,7 +151,7 @@ struct registerTabs: View {
         }
         
         .frame( maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
-            .background(Color("BackGroundColor"))
+        .background(Color("BackGroundColor"))
         .ignoresSafeArea(.keyboard, edges: .bottom)
         
           //  force app to be left just for now

@@ -26,9 +26,13 @@ struct publicSideMenu {
         case 0 :print( "go to home")
            
         case 1 : print("go to switch to driver ")
-        case 2 :
-            let vc = profileVC() // go to profile
+        case 2 : // go to profile
+            let vc = profileVC()
             main.push(vc)
+        case 3 : // go to notifications
+            let vc = notificationViewVC()
+            main.push(vc)
+            
         default:
             break
         }

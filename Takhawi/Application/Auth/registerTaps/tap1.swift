@@ -16,25 +16,23 @@ struct tap1: View {
                 .resizable()
                 .scaledToFit()
                 .frame(width: 120, height: 120)
-                .padding(.top)
-              // .frame(width:  UIScreen.main.bounds.width * 0.3)
-               // .frame(height:  UIScreen.main.bounds.height * 0.15)
+             
+                
             
             TextField( "Enter Your Email Address", text: $email)
-               
                 .font(.custom(AppFont.Regular.rawValue, size: 14))
                 .padding()
-               // .submitLabel(.done)
                 .frame(height: 45)
                 .overlay(
                     RoundedRectangle(cornerRadius: 25)
-                           .stroke(Color("MainColor"), lineWidth: 2)
-                           .frame(height: 45)
+                    .stroke(Color("MainColor"), lineWidth: 2)
+                    .frame(height: 45)
                 )
+        
                
         
         }.padding(8)
-            
+        
       
     }
 }

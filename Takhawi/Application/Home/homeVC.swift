@@ -21,6 +21,8 @@ class homeVC: BaseVC, sendDataBackDelegate{
     
 //MARK: - IBOutlets -
     
+    @IBOutlet weak var visualView: UIVisualEffectView!
+    @IBOutlet weak var sideMenuContainer: UIView!
     @IBOutlet weak var hotelIconOutlet: UIButton!
     @IBOutlet weak var joinTripDestButton: UIButton!
     @IBOutlet weak var searchViewContainerHeight: NSLayoutConstraint!
@@ -46,7 +48,8 @@ class homeVC: BaseVC, sendDataBackDelegate{
     
     @IBOutlet weak var joinTripOutlet: UIButton!
    
-
+    @IBOutlet weak var sideMenuWidth: NSLayoutConstraint!
+    
     
     
     
@@ -77,12 +80,20 @@ class homeVC: BaseVC, sendDataBackDelegate{
         self.configureInitialDesign()
         self.setUpGoogleMapView()
         self.setTodayDateINformate()
+        self.initialSideMenu()
         home = self.containerView.transform
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "sideMenuCell", bundle: nil), forCellReuseIdentifier: "sideMenuCell")
         //
+        
+        
+        
+        
+      
        
+       
+        
 
     }
     
@@ -103,8 +114,8 @@ class homeVC: BaseVC, sendDataBackDelegate{
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
         self.initialSegment()
+        self.sideMenuContainer.layer.addBasicShadow(cornerRadius: 25 )
      
-        
       
         chooseFeatureCollection.delegate = self
         chooseFeatureCollection.dataSource = self
@@ -162,7 +173,7 @@ class homeVC: BaseVC, sendDataBackDelegate{
             
             
             let vc = makeAtripAlertPopUpVC()
-            vc.modalTransitionStyle = .coverVertical
+            vc.modalTransitionStyle = .crossDissolve
             vc.modalPresentationStyle = .overCurrentContext
             vc.action = {
                 let vc1 = findingAdriverVC()

@@ -33,9 +33,11 @@ class makeAtripAlertPopUpVC: BaseVC {
 //MARK: - Design Methods -
     private func configureInitialDesign() {
         self.title = "".localized
-        self.okOutlet.layer.addBasicShadow(cornerRadius: 22 )
+        self.okOutlet.layer.addBasicShadow(cornerRadius: 25 )
         self.mainView.layer.addBasicShadow(cornerRadius: 20)
-        self.openingAnimation()
+       
+        
+        
         
      
         
@@ -45,23 +47,17 @@ class makeAtripAlertPopUpVC: BaseVC {
     
 //MARK: - Logic Methods -
     private func openingAnimation () {
+        self.mainView.isHidden = true
+        UIView.animate(withDuration: 1 ) {
+            self.mainView.isHidden = false
+            self.view.layoutIfNeeded()
+        }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4)  { [weak self] in
-        self?.visualView.isHidden = false
-            
-            UIView.animate(withDuration: 0.5) {
-                self?.alertImage.layer.transform = CATransform3DMakeScale( 1.3 , 1.3 , 1)
-            } completion: { completed  in
-                if completed {
-                    UIView.animate(withDuration: 0.5) {
-                        self?.alertImage.layer.transform = CATransform3DMakeScale(1, 1, 1)
-                        // do here any actionn after animation done !
-                        
-                        
-                    }
-                }
-            }
-       }
+        
+        
+        
+        
+      
     }
     
 //MARK: - Actions -

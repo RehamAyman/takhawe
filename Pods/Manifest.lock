@@ -137,6 +137,7 @@ PODS:
   - MDFInternationalization (3.0.0)
   - MDFTextAccessibility (2.0.1)
   - OTPFieldView (1.0.1)
+  - PureLayout (3.1.9)
 
 DEPENDENCIES:
   - CHIOTPField (~> 0.1)
@@ -153,6 +154,7 @@ DEPENDENCIES:
   - "MaterialComponents/TextControls+OutlinedTextFields"
   - MaterialComponents/TextFields
   - OTPFieldView (from `https://github.com/AbdallaTarek/OTPFieldView.git`)
+  - PureLayout
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -165,6 +167,7 @@ SPEC REPOS:
     - MaterialComponents
     - MDFInternationalization
     - MDFTextAccessibility
+    - PureLayout
   trunk:
     - GoogleMaps
     - GooglePlaces
@@ -191,7 +194,8 @@ SPEC CHECKSUMS:
   MDFInternationalization: d697c55307816222a55685c4ccb1044ffb030c12
   MDFTextAccessibility: f4bb4cc2194286651b59a215fdeaa0e05dc90ba5
   OTPFieldView: 700a752fe62c41d1c4914c78aa500fb30d97c255
+  PureLayout: 5fb5e5429519627d60d079ccb1eaa7265ce7cf88
 
-PODFILE CHECKSUM: 9b2e5b8343f046473fa40825a03996fcc4283bbb
+PODFILE CHECKSUM: 69fb0c3e1788de9686b70115c7081b35c96be8ae
 
 COCOAPODS: 1.14.3

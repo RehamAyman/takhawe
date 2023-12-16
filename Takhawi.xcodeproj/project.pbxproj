@@ -218,6 +218,10 @@
 		CE3B53A92B2B18D2003D3043 /* appMainTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3B53A82B2B18D2003D3043 /* appMainTextField.swift */; };
 		CE3B53AE2B2B2365003D3043 /* tipsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3B53AC2B2B2365003D3043 /* tipsCell.swift */; };
 		CE3B53AF2B2B2365003D3043 /* tipsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE3B53AD2B2B2365003D3043 /* tipsCell.xib */; };
+		CE3CACC72B2D8E3F0025990E /* animatedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3CACC62B2D8E3F0025990E /* animatedLoader.swift */; };
+		CE3CACF02B2DA7A50025990E /* swiftRegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3CACEF2B2DA7A50025990E /* swiftRegisterVC.swift */; };
+		CE3CACF22B2DA7B80025990E /* swiftRegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE3CACF12B2DA7B80025990E /* swiftRegisterVC.xib */; };
+		CE3CACF42B2DB1030025990E /* regChieldTapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3CACF32B2DB1030025990E /* regChieldTapView.swift */; };
 		CE3CEEDA2B1648D400619C79 /* makeAtripAlertPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3CEED92B1648D400619C79 /* makeAtripAlertPopUpVC.swift */; };
 		CE3CEEDC2B1648FC00619C79 /* makeAtripAlertPopUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE3CEEDB2B1648FC00619C79 /* makeAtripAlertPopUpVC.xib */; };
 		CE3CEEDE2B1652DD00619C79 /* findingAdriverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3CEEDD2B1652DD00619C79 /* findingAdriverVC.swift */; };
@@ -314,6 +318,11 @@
 		CEDDBE232ACC45AF00677C94 /* destinationSearchVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDDBE202ACC45AF00677C94 /* destinationSearchVCCell.swift */; };
 		CEDDBE252ACC45AF00677C94 /* destinationSearchVCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDDBE222ACC45AF00677C94 /* destinationSearchVCCell.xib */; };
 		CEDDBE292ACC5C3700677C94 /* blurEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDDBE282ACC5C3700677C94 /* blurEffect.swift */; };
+		CEEDC01D2B2E0FE10017C804 /* notificationViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEDC01C2B2E0FE10017C804 /* notificationViewVC.swift */; };
+		CEEDC01F2B2E0FF40017C804 /* notificationViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEEDC01E2B2E0FF40017C804 /* notificationViewVC.xib */; };
+		CEEDC0212B2E10F10017C804 /* notivicationViewVC+delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEDC0202B2E10F10017C804 /* notivicationViewVC+delegates.swift */; };
+		CEEDC0252B2E13890017C804 /* notificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEDC0232B2E13890017C804 /* notificationCell.swift */; };
+		CEEDC0262B2E13890017C804 /* notificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEEDC0242B2E13890017C804 /* notificationCell.xib */; };
 		CEF9737A2AC1D4B600CDCCFD /* UIResponder+Current.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF973792AC1D4B600CDCCFD /* UIResponder+Current.swift */; };
 		CEF9737C2AC1D4D800CDCCFD /* KeyboardHeightPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF9737B2AC1D4D700CDCCFD /* KeyboardHeightPublisher.swift */; };
 		CEF9737E2AC1D4FA00CDCCFD /* KeyboardAdaptive.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF9737D2AC1D4FA00CDCCFD /* KeyboardAdaptive.swift */; };
@@ -534,6 +543,10 @@
 		CE3B53A82B2B18D2003D3043 /* appMainTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appMainTextField.swift; sourceTree = "<group>"; };
 		CE3B53AC2B2B2365003D3043 /* tipsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipsCell.swift; sourceTree = "<group>"; };
 		CE3B53AD2B2B2365003D3043 /* tipsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = tipsCell.xib; sourceTree = "<group>"; };
+		CE3CACC62B2D8E3F0025990E /* animatedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animatedLoader.swift; sourceTree = "<group>"; };
+		CE3CACEF2B2DA7A50025990E /* swiftRegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftRegisterVC.swift; sourceTree = "<group>"; };
+		CE3CACF12B2DA7B80025990E /* swiftRegisterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = swiftRegisterVC.xib; sourceTree = "<group>"; };
+		CE3CACF32B2DB1030025990E /* regChieldTapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = regChieldTapView.swift; sourceTree = "<group>"; };
 		CE3CEED92B1648D400619C79 /* makeAtripAlertPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = makeAtripAlertPopUpVC.swift; sourceTree = "<group>"; };
 		CE3CEEDB2B1648FC00619C79 /* makeAtripAlertPopUpVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = makeAtripAlertPopUpVC.xib; sourceTree = "<group>"; };
 		CE3CEEDD2B1652DD00619C79 /* findingAdriverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = findingAdriverVC.swift; sourceTree = "<group>"; };
@@ -631,6 +644,11 @@
 		CEDDBE202ACC45AF00677C94 /* destinationSearchVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = destinationSearchVCCell.swift; sourceTree = "<group>"; };
 		CEDDBE222ACC45AF00677C94 /* destinationSearchVCCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = destinationSearchVCCell.xib; sourceTree = "<group>"; };
 		CEDDBE282ACC5C3700677C94 /* blurEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blurEffect.swift; sourceTree = "<group>"; };
+		CEEDC01C2B2E0FE10017C804 /* notificationViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notificationViewVC.swift; sourceTree = "<group>"; };
+		CEEDC01E2B2E0FF40017C804 /* notificationViewVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = notificationViewVC.xib; sourceTree = "<group>"; };
+		CEEDC0202B2E10F10017C804 /* notivicationViewVC+delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "notivicationViewVC+delegates.swift"; sourceTree = "<group>"; };
+		CEEDC0232B2E13890017C804 /* notificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notificationCell.swift; sourceTree = "<group>"; };
+		CEEDC0242B2E13890017C804 /* notificationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = notificationCell.xib; sourceTree = "<group>"; };
 		CEF973792AC1D4B600CDCCFD /* UIResponder+Current.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIResponder+Current.swift"; sourceTree = "<group>"; };
 		CEF9737B2AC1D4D700CDCCFD /* KeyboardHeightPublisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardHeightPublisher.swift; sourceTree = "<group>"; };
 		CEF9737D2AC1D4FA00CDCCFD /* KeyboardAdaptive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardAdaptive.swift; sourceTree = "<group>"; };
@@ -739,6 +757,7 @@
 		9641AD242A6965B900A29046 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				CE3CACEE2B2DA7760025990E /* swiftRegister */,
 				CEB5A8552ABC6D1F00A7F4AD /* registerTaps */,
 				CE30213D2ABBAAF800572DE7 /* verification */,
 				CE3021382ABBA49500572DE7 /* forgetPassword */,
@@ -753,6 +772,7 @@
 				963007162A7671390075DBFE /* SelectUserType */,
 				963007112A7670F00075DBFE /* Register */,
 				9641AD252A6965BD00A29046 /* Login */,
+				CE3CACF32B2DB1030025990E /* regChieldTapView.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -932,6 +952,7 @@
 		9694AB652A5DFACA00BDF5F8 /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
+				CE3CACC52B2D8E2F0025990E /* animatedLoader */,
 				CE3B53AA2B2B18D8003D3043 /* appMainTextField */,
 				CE04D9C22B15F64000B41157 /* imageShimmering */,
 				CE7576EB2AF1FE1600AFF56A /* shadow */,
@@ -1510,6 +1531,23 @@
 			path = reportOrCancel;
 			sourceTree = "<group>";
 		};
+		CE3CACC52B2D8E2F0025990E /* animatedLoader */ = {
+			isa = PBXGroup;
+			children = (
+				CE3CACC62B2D8E3F0025990E /* animatedLoader.swift */,
+			);
+			path = animatedLoader;
+			sourceTree = "<group>";
+		};
+		CE3CACEE2B2DA7760025990E /* swiftRegister */ = {
+			isa = PBXGroup;
+			children = (
+				CE3CACEF2B2DA7A50025990E /* swiftRegisterVC.swift */,
+				CE3CACF12B2DA7B80025990E /* swiftRegisterVC.xib */,
+			);
+			path = swiftRegister;
+			sourceTree = "<group>";
+		};
 		CE3CEED82B1648B200619C79 /* makeTripALertPopup */ = {
 			isa = PBXGroup;
 			children = (
@@ -1852,6 +1890,7 @@
 		CEBB8B942ADE95D300E70EC4 /* sideMenu */ = {
 			isa = PBXGroup;
 			children = (
+				CEEDC01B2B2E0FC60017C804 /* notifications */,
 				CEBB8B952ADE95D900E70EC4 /* profile */,
 			);
 			path = sideMenu;
@@ -1935,6 +1974,26 @@
 				CEDDBE282ACC5C3700677C94 /* blurEffect.swift */,
 			);
 			path = UIVIEW;
+			sourceTree = "<group>";
+		};
+		CEEDC01B2B2E0FC60017C804 /* notifications */ = {
+			isa = PBXGroup;
+			children = (
+				CEEDC0222B2E134A0017C804 /* cell */,
+				CEEDC01C2B2E0FE10017C804 /* notificationViewVC.swift */,
+				CEEDC0202B2E10F10017C804 /* notivicationViewVC+delegates.swift */,
+				CEEDC01E2B2E0FF40017C804 /* notificationViewVC.xib */,
+			);
+			path = notifications;
+			sourceTree = "<group>";
+		};
+		CEEDC0222B2E134A0017C804 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				CEEDC0232B2E13890017C804 /* notificationCell.swift */,
+				CEEDC0242B2E13890017C804 /* notificationCell.xib */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2042,6 +2101,7 @@
 				CE3CEEDC2B1648FC00619C79 /* makeAtripAlertPopUpVC.xib in Resources */,
 				96202C852A7FB98800053C5B /* EnterMobileVC.xib in Resources */,
 				96EA1E422A77006B00F39386 /* Alexandria-Regular.ttf in Resources */,
+				CE3CACF22B2DA7B80025990E /* swiftRegisterVC.xib in Resources */,
 				CE9EBFF22B1396390080A0F2 /* reviewCell.xib in Resources */,
 				CE3CEEE32B1654B400619C79 /* rAjz5wfQVS.json in Resources */,
 				96EA1E432A77006B00F39386 /* Alexandria-SemiBold.ttf in Resources */,
@@ -2110,6 +2170,7 @@
 				CE2D4AF22B185483008D556E /* filterCell.xib in Resources */,
 				9694ABFB2A5DFACA00BDF5F8 /* AlertView.xib in Resources */,
 				CE3B53A72B2B0009003D3043 /* cancelTheTripVC.xib in Resources */,
+				CEEDC0262B2E13890017C804 /* notificationCell.xib in Resources */,
 				CE4843D82B245FE200FFAD1D /* amenitiesCell.xib in Resources */,
 				CE3B53A02B2AFA01003D3043 /* rateTheDriverVC.xib in Resources */,
 				9694AC542A5E040D00BDF5F8 /* Assets.xcassets in Resources */,
@@ -2119,6 +2180,7 @@
 				9694AC5C2A5E040D00BDF5F8 /* logo.json in Resources */,
 				9694AC682A5E040D00BDF5F8 /* PhotoLibraryServices.strings in Resources */,
 				CE2D4AF42B1863B9008D556E /* JwaDQrIWWe.json in Resources */,
+				CEEDC01F2B2E0FF40017C804 /* notificationViewVC.xib in Resources */,
 				CE3021352ABB908E00572DE7 /* enterPasswordVC.xib in Resources */,
 				9694AC692A5E040D00BDF5F8 /* CameraUI.strings in Resources */,
 				CE3021412ABBAB2F00572DE7 /* verificationVC.xib in Resources */,
@@ -2196,6 +2258,7 @@
 				CEB5A8592ABC6DF000A7F4AD /* tap2.swift in Sources */,
 				9694ABF32A5DFACA00BDF5F8 /* CustomizedTabBar.swift in Sources */,
 				9694ABE62A5DFACA00BDF5F8 /* FiristStrpProgressCell.swift in Sources */,
+				CE3CACF02B2DA7A50025990E /* swiftRegisterVC.swift in Sources */,
 				CEBB8B932ADE77FB00E70EC4 /* mapSearchExtention.swift in Sources */,
 				CEB5A8642ABD7ECD00A7F4AD /* tab4.swift in Sources */,
 				CE115E5D2ABED5E800972CC9 /* homeVC.swift in Sources */,
@@ -2288,6 +2351,7 @@
 				CE6178AD2ACD23BD00AA8BB7 /* tipLabel.swift in Sources */,
 				CE3CEEDE2B1652DD00619C79 /* findingAdriverVC.swift in Sources */,
 				9694ABE02A5DFACA00BDF5F8 /* Optional.swift in Sources */,
+				CE3CACC72B2D8E3F0025990E /* animatedLoader.swift in Sources */,
 				CE6178AA2ACD104900AA8BB7 /* mapSearchVC.swift in Sources */,
 				9694ABDC2A5DFACA00BDF5F8 /* Array.swift in Sources */,
 				9694AB382A5DE9D500BDF5F8 /* SceneDelegate.swift in Sources */,
@@ -2304,6 +2368,7 @@
 				9694ABBC2A5DFACA00BDF5F8 /* APIRouter.swift in Sources */,
 				CE3B53A22B2AFD6A003D3043 /* rateTheDriverDelegates.swift in Sources */,
 				CE385D972AE267A4008F2D50 /* LocationUtilities.swift in Sources */,
+				CEEDC0212B2E10F10017C804 /* notivicationViewVC+delegates.swift in Sources */,
 				CE3021332ABB87CF00572DE7 /* enterPasswordVC.swift in Sources */,
 				CE9757D52AE1B2B00014346E /* driverProfileVC.swift in Sources */,
 				CE30213A2ABBA4B200572DE7 /* forgetPasswordVCVC.swift in Sources */,
@@ -2328,6 +2393,7 @@
 				CE3CEEDA2B1648D400619C79 /* makeAtripAlertPopUpVC.swift in Sources */,
 				9694ABF42A5DFACA00BDF5F8 /* CustomInputViews.swift in Sources */,
 				CEB5A8522ABC567000A7F4AD /* tabAnimation.swift in Sources */,
+				CEEDC0252B2E13890017C804 /* notificationCell.swift in Sources */,
 				9694ABFA2A5DFACA00BDF5F8 /* TopAlert.swift in Sources */,
 				9694ABEE2A5DFACA00BDF5F8 /* PushNotifcationManager.swift in Sources */,
 				9694ABBF2A5DFACA00BDF5F8 /* APIGloabelResponse.swift in Sources */,
@@ -2363,6 +2429,7 @@
 				CE034F4C2B2B9E6C0040516E /* reportOrCandelCell.swift in Sources */,
 				CE71F47A2B17435A00E7B689 /* selectTimeVC.swift in Sources */,
 				9694ABD72A5DFACA00BDF5F8 /* UIFontExtension.swift in Sources */,
+				CEEDC01D2B2E0FE10017C804 /* notificationViewVC.swift in Sources */,
 				9694ABF92A5DFACA00BDF5F8 /* Locator.swift in Sources */,
 				CEDDBE1C2ACC0DAB00677C94 /* sideMenuModel.swift in Sources */,
 				9694AC002A5DFACA00BDF5F8 /* Print.swift in Sources */,
@@ -2373,6 +2440,7 @@
 				CECA04572B29D2EF001AA89D /* rateTheDriverVC.swift in Sources */,
 				96202C792A7FAE2800053C5B /* OTPVC.swift in Sources */,
 				CE996B542B25AC5D0089D2F4 /* trackYourTripVC.swift in Sources */,
+				CE3CACF42B2DB1030025990E /* regChieldTapView.swift in Sources */,
 				CE2D4AEC2B184E99008D556E /* filterViewVC.swift in Sources */,
 				CE71F4732B168E1000E7B689 /* driverOffers+extentions.swift in Sources */,
 				CE9EC0002B1466E70080A0F2 /* reserveTheTripCell.swift in Sources */,

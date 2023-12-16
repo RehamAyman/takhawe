@@ -46,7 +46,24 @@ extension reportCancelVC : UITableViewDelegate , UITableViewDataSource {
         return 50
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? reportOrCandelCell else {
+            return
+        }
+        
+            cell.checkBox.image = UIImage(named:"Element")
+          
+
+        
+    }
     
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? reportOrCandelCell else {
+            return
+        }
+        cell.checkBox.image = UIImage(named:"Outer Rectangle")
+    }
     
     
     

@@ -44,9 +44,6 @@ extension homeVC : UICollectionViewDelegate , UICollectionViewDataSource , UICol
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        
-        
-        
     }
     
     

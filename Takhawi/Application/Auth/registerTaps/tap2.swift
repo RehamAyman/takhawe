@@ -29,12 +29,9 @@ struct tap2: View {
                // .padding(8)
             
             SecureInputView( "Enter New Password" , text: $email)
-             //   .submitLabel(.done)
-                .frame(height: 45)
+            
 //
             SecureInputView( "Confirm Password" , text: $confirmPassword)
-              //  .submitLabel(.done)
-                .frame(height: 45)
 //
             
             

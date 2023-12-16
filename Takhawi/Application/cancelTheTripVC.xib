@@ -13,6 +13,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="cancelTheTripVC" customModule="Takhawi" customModuleProvider="target">
             <connections>
                 <outlet property="mainView" destination="xUA-VD-BzE" id="qd3-GZ-iEg"/>
+                <outlet property="screenTitle" destination="tbE-7S-UpO" id="TdY-Cr-HdH"/>
+                <outlet property="subTitle" destination="npe-vk-8ZP" id="lBG-j1-fNt"/>
                 <outlet property="view" destination="uSc-C9-DDt" id="XRv-vk-EcF"/>
             </connections>
         </placeholder>
