@@ -38,8 +38,3 @@ extension profileVC : UICollectionViewDelegate , UICollectionViewDataSource , UI
     
 }
 
-
-struct dummyActivity  {
-    let icon : String
-    let name : String
-}

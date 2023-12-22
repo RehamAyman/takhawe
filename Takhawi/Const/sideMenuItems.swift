@@ -36,6 +36,9 @@ struct publicSideMenu {
         case 5 : // go to favorites
             let vc = favoritesVC()
             main.push(vc)
+        case 6: // go to wallet
+            let vc = walletVC()
+            main.push(vc)
             
         default:
             break

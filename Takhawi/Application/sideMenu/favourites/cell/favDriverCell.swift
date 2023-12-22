@@ -8,16 +8,19 @@
 import UIKit
 
 class favDriverCell: UITableViewCell {
-
+    @IBOutlet weak var mainView: UIView!
+    
+    @IBOutlet weak var reviewsLabel: UILabel!
+    @IBOutlet weak var driverName: UILabel!
+    @IBOutlet weak var driverProfile: UIImageView!
+    @IBOutlet weak var favIcon: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.selectionStyle = .none
+        self.mainView.layer.addBasicShadow(cornerRadius: 10)
+
+
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
 }

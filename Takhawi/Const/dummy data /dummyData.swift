@@ -46,6 +46,12 @@ struct NotificationData {
 
 
 
+struct dummyActivity  {
+    let icon : String
+    let name : String
+}
+
+
 
 struct dummyFilterData {
     let name : String
@@ -53,6 +59,11 @@ struct dummyFilterData {
 }
 
 
+
+struct dummyLocations {
+    let location : String
+    let locationDetails : String
+}
 
 
 

@@ -8,6 +8,7 @@ PODS:
   - CHIOTPField/One (0.1.0)
   - CHIOTPField/Three (0.1.0)
   - CHIOTPField/Two (0.1.0)
+  - CollectionViewPagingLayout (1.1.0)
   - CountdownLabel (4.0.1)
   - EasyTipView (2.1.0)
   - GoogleMaps (3.1.0):
@@ -141,6 +142,7 @@ PODS:
 
 DEPENDENCIES:
   - CHIOTPField (~> 0.1)
+  - CollectionViewPagingLayout
   - CountdownLabel
   - EasyTipView (~> 2.1)
   - GoogleMaps
@@ -159,6 +161,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - CHIOTPField
+    - CollectionViewPagingLayout
     - CountdownLabel
     - EasyTipView
     - GooglePlacePicker
@@ -183,6 +186,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   CHIOTPField: 5df19b433ccfad2a80e944d3abde128a236aaf01
+  CollectionViewPagingLayout: 2f8d50683bae57ca88f47fa4ab0195c9079582cf
   CountdownLabel: c9975e3f329140b5e7d1f45cd63b1300badd1712
   EasyTipView: a92b6edc377b81c5ac18e9fd35d5ee78e9409488
   GoogleMaps: 5c13302e6fe6bb6e686b267196586b91cd594225
@@ -196,6 +200,6 @@ SPEC CHECKSUMS:
   OTPFieldView: 700a752fe62c41d1c4914c78aa500fb30d97c255
   PureLayout: 5fb5e5429519627d60d079ccb1eaa7265ce7cf88
 
-PODFILE CHECKSUM: 69fb0c3e1788de9686b70115c7081b35c96be8ae
+PODFILE CHECKSUM: 4574ecdb52f1ece15e7f57d21bdcd8dd5c725b18
 
 COCOAPODS: 1.14.3

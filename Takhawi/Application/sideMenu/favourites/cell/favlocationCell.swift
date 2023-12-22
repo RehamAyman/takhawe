@@ -8,16 +8,18 @@
 import UIKit
 
 class favlocationCell: UITableViewCell {
-
+    @IBOutlet weak var cellTitle: UILabel!
+    
+    @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var favIcon: UIImageView!
+    @IBOutlet weak var cellSubTitle: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.selectionStyle = .none
+        self.mainView.layer.addBasicShadow(cornerRadius: 10)
+        
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+ 
     
 }
