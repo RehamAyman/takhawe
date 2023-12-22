@@ -32,7 +32,9 @@ target 'Takhawi' do
   pod 'MaterialComponents/TextControls+OutlinedTextFields'
   pod 'PureLayout'
   pod 'CollectionViewPagingLayout'
-
+  pod 'HSCycleGalleryView'
+  
+  pod 'EDCarousel'
 
   
   

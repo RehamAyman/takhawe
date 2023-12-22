@@ -11,6 +11,7 @@ PODS:
   - CollectionViewPagingLayout (1.1.0)
   - CountdownLabel (4.0.1)
   - EasyTipView (2.1.0)
+  - EDCarousel (0.0.1)
   - GoogleMaps (3.1.0):
     - GoogleMaps/Maps (= 3.1.0)
   - GoogleMaps/Base (3.1.0)
@@ -21,6 +22,7 @@ PODS:
     - GooglePlaces (= 3.1.0)
   - GooglePlaces (3.1.0):
     - GoogleMaps/Base (= 3.1.0)
+  - HSCycleGalleryView (1.2.0)
   - ImageSlideshow (1.9.2):
     - ImageSlideshow/Core (= 1.9.2)
   - ImageSlideshow/Core (1.9.2)
@@ -145,9 +147,11 @@ DEPENDENCIES:
   - CollectionViewPagingLayout
   - CountdownLabel
   - EasyTipView (~> 2.1)
+  - EDCarousel
   - GoogleMaps
   - GooglePlacePicker
   - GooglePlaces
+  - HSCycleGalleryView
   - ImageSlideshow (~> 1.9.0)
   - lottie-ios
   - "MaterialComponents/TextControls+FilledTextAreas"
@@ -164,7 +168,9 @@ SPEC REPOS:
     - CollectionViewPagingLayout
     - CountdownLabel
     - EasyTipView
+    - EDCarousel
     - GooglePlacePicker
+    - HSCycleGalleryView
     - ImageSlideshow
     - lottie-ios
     - MaterialComponents
@@ -189,9 +195,11 @@ SPEC CHECKSUMS:
   CollectionViewPagingLayout: 2f8d50683bae57ca88f47fa4ab0195c9079582cf
   CountdownLabel: c9975e3f329140b5e7d1f45cd63b1300badd1712
   EasyTipView: a92b6edc377b81c5ac18e9fd35d5ee78e9409488
+  EDCarousel: 758aeba7c487c52572d9a7faf80937d0b58e97ee
   GoogleMaps: 5c13302e6fe6bb6e686b267196586b91cd594225
   GooglePlacePicker: fa975116ac202ac29822c0a79758ea1c4db5a95f
   GooglePlaces: e874db179f2675c4f3eeda0b686b540273a578b0
+  HSCycleGalleryView: 5101435175a26d08f1c062cf6cb245f58f09b425
   ImageSlideshow: be305b54eaf2b2cfc7a7141c7c734605d44dc07d
   lottie-ios: c55158d67d0629a260625cc2ded2052b829e3c3e
   MaterialComponents: 1a9b2d9d45b1601ae544de85089adc4c464306d4
@@ -200,6 +208,6 @@ SPEC CHECKSUMS:
   OTPFieldView: 700a752fe62c41d1c4914c78aa500fb30d97c255
   PureLayout: 5fb5e5429519627d60d079ccb1eaa7265ce7cf88
 
-PODFILE CHECKSUM: 4574ecdb52f1ece15e7f57d21bdcd8dd5c725b18
+PODFILE CHECKSUM: c3a3e9a5f590e7d4551a617788c714e36ccc5776
 
 COCOAPODS: 1.14.3

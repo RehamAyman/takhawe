@@ -25,6 +25,11 @@
 		04B659EA2B34519B00E78752 /* animatedCartSwiftuiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B659E92B34519B00E78752 /* animatedCartSwiftuiView.swift */; };
 		04B659EC2B3451EB00E78752 /* cardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B659EB2B3451EB00E78752 /* cardModel.swift */; };
 		04B659F02B345DA800E78752 /* cartItemVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B659EF2B345DA800E78752 /* cartItemVView.swift */; };
+		04D81F892B35BC1F00AAA66C /* swiftRegister+extention .swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D81F882B35BC1F00AAA66C /* swiftRegister+extention .swift */; };
+		04D81F8C2B35BC8C00AAA66C /* firstAuthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D81F8A2B35BC8C00AAA66C /* firstAuthCell.swift */; };
+		04D81F8D2B35BC8C00AAA66C /* firstAuthCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D81F8B2B35BC8C00AAA66C /* firstAuthCell.xib */; };
+		04D81F912B35C03200AAA66C /* secauthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D81F8F2B35C03100AAA66C /* secauthCell.swift */; };
+		04D81F922B35C03200AAA66C /* secauthCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D81F902B35C03100AAA66C /* secauthCell.xib */; };
 		0F2615D7CCB4F4B462FB2D66 /* Pods_Takhawi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F82324004936416986DA34AA /* Pods_Takhawi.framework */; };
 		96202C792A7FAE2800053C5B /* OTPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96202C782A7FAE2700053C5B /* OTPVC.swift */; };
 		96202C7B2A7FAE3300053C5B /* OTPVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96202C7A2A7FAE3300053C5B /* OTPVC.xib */; };
@@ -367,6 +372,11 @@
 		04B659E92B34519B00E78752 /* animatedCartSwiftuiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animatedCartSwiftuiView.swift; sourceTree = "<group>"; };
 		04B659EB2B3451EB00E78752 /* cardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardModel.swift; sourceTree = "<group>"; };
 		04B659EF2B345DA800E78752 /* cartItemVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cartItemVView.swift; sourceTree = "<group>"; };
+		04D81F882B35BC1F00AAA66C /* swiftRegister+extention .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "swiftRegister+extention .swift"; sourceTree = "<group>"; };
+		04D81F8A2B35BC8C00AAA66C /* firstAuthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstAuthCell.swift; sourceTree = "<group>"; };
+		04D81F8B2B35BC8C00AAA66C /* firstAuthCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = firstAuthCell.xib; sourceTree = "<group>"; };
+		04D81F8F2B35C03100AAA66C /* secauthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secauthCell.swift; sourceTree = "<group>"; };
+		04D81F902B35C03100AAA66C /* secauthCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = secauthCell.xib; sourceTree = "<group>"; };
 		96202C782A7FAE2700053C5B /* OTPVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVC.swift; sourceTree = "<group>"; };
 		96202C7A2A7FAE3300053C5B /* OTPVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPVC.xib; sourceTree = "<group>"; };
 		96202C822A7FB97B00053C5B /* EnterMobileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterMobileVC.swift; sourceTree = "<group>"; };
@@ -782,6 +792,17 @@
 				04B659EF2B345DA800E78752 /* cartItemVView.swift */,
 			);
 			path = animatedCart;
+			sourceTree = "<group>";
+		};
+		04D81F8E2B35BC8F00AAA66C /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				04D81F8A2B35BC8C00AAA66C /* firstAuthCell.swift */,
+				04D81F8B2B35BC8C00AAA66C /* firstAuthCell.xib */,
+				04D81F8F2B35C03100AAA66C /* secauthCell.swift */,
+				04D81F902B35C03100AAA66C /* secauthCell.xib */,
+			);
+			path = cells;
 			sourceTree = "<group>";
 		};
 		96202C772A7FAE1700053C5B /* OTPVC */ = {
@@ -1645,8 +1666,10 @@
 		CE3CACEE2B2DA7760025990E /* swiftRegister */ = {
 			isa = PBXGroup;
 			children = (
+				04D81F8E2B35BC8F00AAA66C /* cells */,
 				CE3CACEF2B2DA7A50025990E /* swiftRegisterVC.swift */,
 				CE3CACF12B2DA7B80025990E /* swiftRegisterVC.xib */,
+				04D81F882B35BC1F00AAA66C /* swiftRegister+extention .swift */,
 			);
 			path = swiftRegister;
 			sourceTree = "<group>";
@@ -2227,6 +2250,7 @@
 				CEBB8B972ADE95F200E70EC4 /* profileVC.xib in Resources */,
 				CE9EBFE82B1393710080A0F2 /* reviewsViewVC.xib in Resources */,
 				CE7D82FC2AC3CA8300C5B028 /* googleMapsStyle.json in Resources */,
+				04D81F922B35C03200AAA66C /* secauthCell.xib in Resources */,
 				CE71F4772B17351800E7B689 /* i29sRturwt.json in Resources */,
 				96EA1E442A77006B00F39386 /* Alexandria-Thin.ttf in Resources */,
 				CE6178A02ACCF9E500AA8BB7 /* homeSearchVC.xib in Resources */,
@@ -2293,6 +2317,7 @@
 				9694ABEF2A5DFACA00BDF5F8 /* GoogleService-Info.plist in Resources */,
 				CE2D4AF22B185483008D556E /* filterCell.xib in Resources */,
 				9694ABFB2A5DFACA00BDF5F8 /* AlertView.xib in Resources */,
+				04D81F8D2B35BC8C00AAA66C /* firstAuthCell.xib in Resources */,
 				CE3B53A72B2B0009003D3043 /* cancelTheTripVC.xib in Resources */,
 				CEEDC0262B2E13890017C804 /* notificationCell.xib in Resources */,
 				CE4843D82B245FE200FFAD1D /* amenitiesCell.xib in Resources */,
@@ -2459,7 +2484,9 @@
 				CEF9737C2AC1D4D800CDCCFD /* KeyboardHeightPublisher.swift in Sources */,
 				963007132A7671020075DBFE /* RegisterVC.swift in Sources */,
 				CE2292852B1E57B300E8AB42 /* hotelsVC.swift in Sources */,
+				04D81F8C2B35BC8C00AAA66C /* firstAuthCell.swift in Sources */,
 				CE3B53AE2B2B2365003D3043 /* tipsCell.swift in Sources */,
+				04D81F912B35C03200AAA66C /* secauthCell.swift in Sources */,
 				9694ABDE2A5DFACA00BDF5F8 /* String.swift in Sources */,
 				9694AC572A5E040D00BDF5F8 /* Color.swift in Sources */,
 				9694ABC02A5DFACA00BDF5F8 /* ServerPath.swift in Sources */,
@@ -2469,6 +2496,7 @@
 				9694ABD22A5DFACA00BDF5F8 /* UIButtonExtesion.swift in Sources */,
 				CE44773D2AE042D5000D96F6 /* calendarSwiftui.swift in Sources */,
 				CE9EBFF12B1396390080A0F2 /* reviewCell.swift in Sources */,
+				04D81F892B35BC1F00AAA66C /* swiftRegister+extention .swift in Sources */,
 				CE7D82F72AC3BB1100C5B028 /* MainAlert.swift in Sources */,
 				CE2D4AF12B185483008D556E /* filterCell.swift in Sources */,
 				9694ABE42A5DFACA00BDF5F8 /* AnimateGifImage.swift in Sources */,

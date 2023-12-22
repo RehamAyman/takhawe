@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "5051B821-0C3C-4D91-9E67-300DE81E3E45"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5F1A56DE-68A2-42C8-8D49-DFC82D3EC0B3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Takhawi/Application/sideMenu/wallet/addAmmount/addAmmountVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "addAmountVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "5F1A56DE-68A2-42C8-8D49-DFC82D3EC0B3 - 8e8ea01a4a8d59ab"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Takhawi.addAmountVC.swiftUIView.getter : SwiftUI.UIHostingController&lt;Takhawi.animatedCartSwiftuiView&gt;"
+                  moduleName = "Takhawi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Documents/takhawy/Takhawi/Application/sideMenu/wallet/addAmmount/addAmmountVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  uuid = "5F1A56DE-68A2-42C8-8D49-DFC82D3EC0B3 - 8e8ea01a4a8d59ab"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Takhawi.addAmountVC.swiftUIView.setter : SwiftUI.UIHostingController&lt;Takhawi.animatedCartSwiftuiView&gt;"
+                  moduleName = "Takhawi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Documents/takhawy/Takhawi/Application/sideMenu/wallet/addAmmount/addAmmountVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "5F1A56DE-68A2-42C8-8D49-DFC82D3EC0B3 - d74b301438c751c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Takhawi.addAmountVC.swiftUIView.modify : SwiftUI.UIHostingController&lt;Takhawi.animatedCartSwiftuiView&gt;"
+                  moduleName = "Takhawi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Documents/takhawy/Takhawi/Application/sideMenu/wallet/addAmmount/addAmmountVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "5F1A56DE-68A2-42C8-8D49-DFC82D3EC0B3 - dfa693df26abf195"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Takhawi.addAmountVC.swiftUIView.modify : SwiftUI.UIHostingController&lt;Takhawi.animatedCartSwiftuiView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Takhawi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Documents/takhawy/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "17">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

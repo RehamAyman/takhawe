@@ -102,10 +102,10 @@ enum FontFamilyName: String {
 
 enum AppFont: String {
     case Light = "Alexandria-Light"
-    case Regular = "Alexandria-Regular"
-    case Medium = "Alexandria-Medium"
+    case Regular = "HelveticaNeue-Regular"
+    case Medium = "HelveticaNeue-Medium"
     case Demi = "Alexandria-SemiBold"
-    case Bold = "Alexandria-Bold"
+    case Bold = "HelveticaNeue-Bold"
     case Black = "Alexandria-Black"
 }
 

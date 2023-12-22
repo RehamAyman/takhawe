@@ -13,7 +13,7 @@ import SwiftUI
 
 
 struct registerTabs: View {
-    @State private var tabSelection = 0
+    @State private var tabSelection = 1
     @State var test : String = ""
     var action: () -> Void
     var BackAction: () -> Void
@@ -40,49 +40,51 @@ struct registerTabs: View {
                 .padding(.top)
 
             Text ("Signup")
-                 .font(.custom(AppFont.Bold.rawValue, size: 30))
+                
+                .font(.custom(AppFont.Bold.rawValue, size: 33))
+               
                  .foregroundColor(Color("MainColor"))
                  .padding(12)
-                 .frame(height: 20)
+                
            
         
             Group {
                     Text("Please ")
-                    .font(.custom(AppFont.Regular.rawValue, size: 17))
+                    .font(.custom(AppFont.Regular.rawValue, size: 18))
                 +
                     Text("provide following details ")
-                    .font(.custom(AppFont.Bold.rawValue, size: 17))
+                    .font(.custom(AppFont.Bold.rawValue, size: 18))
                 +
                     Text("for your new account")
-                    .font(.custom(AppFont.Regular.rawValue, size: 17))
+                    .font(.custom(AppFont.Regular.rawValue, size: 18))
                     
                        
-                }.padding(8)
-               .padding(.leading , 50 )
-               .padding(.trailing , 50 )
-               .fixedSize(horizontal: false, vertical: true)
-              .frame(height: 50)
-               .padding(.bottom)
-            
+                }
+                
+                .fixedSize(horizontal: false, vertical: true)
+             
+                .frame( maxWidth: .infinity ,  alignment: .center)
+                .padding(8)
+                .padding(.horizontal)
                 TabView (selection: $tabSelection) {
                     
                     tap1()
-                        .frame(height: UIScreen.main.bounds.size.height * 0.5)
+                       
                         .tag(1)
                     tap2()
-                        .frame(height: UIScreen.main.bounds.size.height * 0.5)
+                       
                         .tag(2)
                     tab3()
-                        .frame(height: UIScreen.main.bounds.size.height * 0.5)
+                        
                         .tag(3)
                     tab4()
-                        .frame(height: UIScreen.main.bounds.size.height * 0.5)
+                      
                         .tag(4)
                     
                     
                 } .tabViewStyle(.page(indexDisplayMode: .never))
-                .padding(.leading , 20 )
-                .padding(.trailing , 20 )
+                .padding(.leading , 25 )
+                .padding(.trailing , 25 )
                
             //    .frame(height: UIScreen.main.bounds.size.height * 0.5)
                
@@ -97,12 +99,7 @@ struct registerTabs: View {
             }
             .padding()
            
-          
-      
-            
-            
-           
-            
+
             
             Button {
                
@@ -111,25 +108,28 @@ struct registerTabs: View {
                 } else {
                     
                     
-                    
                     // go next
                    
                         
                    
                     if tabSelection == 1 {
-                        
+                        withAnimation {
                             self.tabSelection = 2
+                        }
+                         
            
                       
                     } else if tabSelection == 2 {
-                     
+                        withAnimation {
                             self.tabSelection = 3
+                        }
+                           
                        
                       
                     } else if  tabSelection == 3 {
-                      
+                        withAnimation {
                             self.tabSelection = 4
-                     
+                        }
                       
                     }
                     
@@ -152,11 +152,11 @@ struct registerTabs: View {
         
         .frame( maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
         .background(Color("BackGroundColor"))
-        .ignoresSafeArea(.keyboard, edges: .bottom)
+        //.ignoresSafeArea(.keyboard, edges: .bottom)
         
           //  force app to be left just for now
         .environment(\.layoutDirection,   .leftToRight  )
-        
+        .ignoresSafeArea(.keyboard, edges: .bottom)
            
         
     }

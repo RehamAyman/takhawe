@@ -21,11 +21,6 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdP-xw-Lcz">
                         <rect key="frame" x="10" y="10" width="769" height="232"/>
                         <color key="backgroundColor" name="MainColor"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                <real key="value" value="25"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>
@@ -38,6 +33,9 @@
                 <constraint firstItem="hdP-xw-Lcz" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="wdC-7E-0x2"/>
             </constraints>
             <size key="customSize" width="789" height="252"/>
+            <connections>
+                <outlet property="mainView" destination="hdP-xw-Lcz" id="Wgp-xJ-iQB"/>
+            </connections>
             <point key="canvasLocation" x="571.75572519083971" y="90.845070422535215"/>
         </collectionViewCell>
     </objects>

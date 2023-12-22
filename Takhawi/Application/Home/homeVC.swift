@@ -270,6 +270,9 @@ class homeVC: BaseVC, sendDataBackDelegate{
     @IBAction func chooseYourDestination(_ sender: UIButton) {
     }
     
+    @IBAction func hideSidemenuButton(_ sender: UIButton) {
+        self.hideMenu()
+    }
     
     @IBAction func segmentAction(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {

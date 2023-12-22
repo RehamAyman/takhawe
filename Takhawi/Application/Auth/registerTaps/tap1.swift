@@ -22,13 +22,13 @@ struct tap1: View {
             TextField( "Enter Your Email Address", text: $email)
                 .font(.custom(AppFont.Regular.rawValue, size: 14))
                 .padding()
-                .frame(height: 45)
+                .frame(height: 50)
                 .overlay(
                     RoundedRectangle(cornerRadius: 25)
                     .stroke(Color("MainColor"), lineWidth: 2)
-                    .frame(height: 45)
+                    .frame(height: 50)
                 )
-        
+        Spacer()
                
         
         }.padding(8)

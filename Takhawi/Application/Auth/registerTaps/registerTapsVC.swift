@@ -9,6 +9,7 @@
 
 import UIKit
 import SwiftUI
+import IQKeyboardManagerSwift
 
 class registerTapsVC: BaseVC {
    
@@ -38,6 +39,7 @@ class registerTapsVC: BaseVC {
 // MARK: - Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
+        IQKeyboardManager.shared.enable = false 
         self.configureInitialDesign()
         self.navigationController?.navigationBar.isHidden = true
         self.importSwiftuiView()

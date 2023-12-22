@@ -32,7 +32,7 @@ struct tab3: View {
             .padding()
             .padding(.top)
           .frame(width: 250)
-            
+          Spacer()
             
            
         }

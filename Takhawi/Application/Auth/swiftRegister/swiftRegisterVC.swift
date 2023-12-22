@@ -9,12 +9,15 @@
 
 import UIKit
 import SwiftUI
+import CollectionViewPagingLayout
+import IQKeyboardManagerSwift
 
 class swiftRegisterVC: BaseVC {
     
 //MARK: - IBOutlets -
     
-    @IBOutlet weak var parentView: UIView!
+    @IBOutlet weak var collectionview: UICollectionView!
+    
     @IBOutlet weak var dotsPageControl: UIPageControl!
     
 //MARK: - Properties -
@@ -37,17 +40,16 @@ class swiftRegisterVC: BaseVC {
         }
         
         
-        let vc = UIHostingController(rootView: regChieldTapView())
-        let swiftuiView = vc.view!
-        swiftuiView.translatesAutoresizingMaskIntoConstraints = false
-        addChild(vc)
-        parentView.addSubview(swiftuiView)
-        NSLayoutConstraint.activate([
-                swiftuiView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-                swiftuiView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            ])
-        vc.didMove(toParent: self)
+        self.collectionview.delegate = self
+        self.collectionview.dataSource = self 
+        self.collectionview.register(cellType: firstAuthCell.self)
+        self.collectionview.register(cellType: secauthCell.self)
+        let layout = CollectionViewPagingLayout()
+        collectionview.collectionViewLayout = layout
+        collectionview.isPagingEnabled = true // enabling paging effect
+        layout.numberOfVisibleItems = nil 
         
+        IQKeyboardManager.shared.enable = false 
         
     
     }

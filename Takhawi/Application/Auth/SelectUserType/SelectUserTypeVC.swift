@@ -34,7 +34,7 @@ class SelectUserTypeVC: BaseVC {
         userCheackBox.checkState = .checked
 
         userCheackBox.boxType = .circle
-        userCheackBox.layer.cornerRadius = 20
+        userCheackBox.layer.cornerRadius = 15
         userCheackBox.clipsToBounds = true
 
         userCheackBox.stateChangeAnimation = .expand(.fill)
@@ -42,7 +42,7 @@ class SelectUserTypeVC: BaseVC {
 
         deiverCheackBox.boxType = .circle
         deiverCheackBox.clipsToBounds = true
-        deiverCheackBox.layer.cornerRadius = 20
+        deiverCheackBox.layer.cornerRadius = 15
 
         self.userCheackBox.addTarget(self, action: #selector(userValueCheckedChange), for: .valueChanged)
         self.deiverCheackBox.addTarget(self, action: #selector(driverValueCheckedChange), for: .valueChanged)

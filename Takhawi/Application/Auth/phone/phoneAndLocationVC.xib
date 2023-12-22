@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,60 +24,77 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="haF-AY-gvC">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="iOp-aF-T4I">
-                    <rect key="frame" x="28" y="123.5" width="319" height="300"/>
+                    <rect key="frame" x="30" y="150" width="315" height="300"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3Y-kc-AjZ">
-                            <rect key="frame" x="0.0" y="0.0" width="319" height="46.5"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="46.5" id="mod-Tn-WnO"/>
-                            </constraints>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="S3Y-kc-AjZ">
+                            <rect key="frame" x="0.0" y="0.0" width="315" height="43"/>
                             <attributedString key="attributedText">
                                 <fragment content="Please enter ">
                                     <attributes>
-                                        <font key="NSFont" metaFont="system" size="17"/>
-                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                     </attributes>
                                 </fragment>
                                 <fragment content="your phone number">
                                     <attributes>
-                                        <font key="NSFont" size="17" name="Avenir-Heavy"/>
-                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <font key="NSFont" size="18" name="HelveticaNeue-Bold"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                     </attributes>
                                 </fragment>
                                 <fragment content=" and ">
                                     <attributes>
-                                        <font key="NSFont" metaFont="system" size="17"/>
-                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                     </attributes>
                                 </fragment>
                                 <fragment content="location">
                                     <attributes>
-                                        <font key="NSFont" size="17" name="Avenir-Heavy"/>
-                                        <font key="NSOriginalFont" size="17" name="Avenir-Heavy"/>
-                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <font key="NSFont" size="18" name="HelveticaNeue-Bold"/>
+                                        <font key="NSOriginalFont" size="18" name="HelveticaNeue-Bold"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                     </attributes>
                                 </fragment>
                                 <fragment content=" so we can verify you.">
                                     <attributes>
-                                        <font key="NSFont" metaFont="system" size="17"/>
-                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                     </attributes>
                                 </fragment>
                             </attributedString>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="rNf-4D-MZC">
-                            <rect key="frame" x="0.0" y="71.5" width="319" height="153.5"/>
-                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GAs-Xz-hr8">
+                            <rect key="frame" x="0.0" y="68" width="315" height="157"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="rNf-4D-MZC">
+                                    <rect key="frame" x="57.666666666666686" y="3.6666666666666572" width="200" height="150"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="150" id="2bV-fC-UVM"/>
+                                        <constraint firstAttribute="width" constant="200" id="JAC-wS-XZF"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="157" id="Fhd-Yt-pf3"/>
+                                <constraint firstItem="rNf-4D-MZC" firstAttribute="centerY" secondItem="GAs-Xz-hr8" secondAttribute="centerY" id="riv-jc-P2h"/>
+                                <constraint firstItem="rNf-4D-MZC" firstAttribute="centerX" secondItem="GAs-Xz-hr8" secondAttribute="centerX" id="vCI-3t-vRG"/>
+                            </constraints>
+                        </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1VW-Bv-6JV">
-                            <rect key="frame" x="0.0" y="250" width="319" height="50"/>
+                            <rect key="frame" x="0.0" y="250" width="315" height="50"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="pzp-pb-mMT">
-                                    <rect key="frame" x="10" y="0.0" width="299" height="50"/>
+                                    <rect key="frame" x="10" y="0.0" width="295" height="50"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flag" translatesAutoresizingMaskIntoConstraints="NO" id="lYo-I2-aP7">
                                             <rect key="frame" x="0.0" y="0.0" width="26" height="50"/>
@@ -93,7 +110,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Your Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gdR-2r-XDJ" customClass="MainAppTextFaild" customModule="Takhawi" customModuleProvider="target">
-                                            <rect key="frame" x="76" y="0.0" width="223" height="50"/>
+                                            <rect key="frame" x="76" y="0.0" width="219" height="50"/>
                                             <color key="backgroundColor" name="BackGroundColor"/>
                                             <fontDescription key="fontDescription" name="Alexandria-Regular" family="Alexandria" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" keyboardType="ASCIICapableNumberPad"/>
@@ -129,22 +146,22 @@
                     </subviews>
                     <constraints>
                         <constraint firstAttribute="height" constant="300" id="maN-yU-sh6"/>
-                        <constraint firstItem="rNf-4D-MZC" firstAttribute="centerX" secondItem="iOp-aF-T4I" secondAttribute="centerX" id="yhL-vl-ZNx"/>
                     </constraints>
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="lc3-2q-MvZ"/>
             <color key="backgroundColor" name="BackGroundColor"/>
             <constraints>
-                <constraint firstItem="iOp-aF-T4I" firstAttribute="centerY" secondItem="haF-AY-gvC" secondAttribute="centerY" constant="-60" id="9u6-YM-1ZQ"/>
-                <constraint firstItem="iOp-aF-T4I" firstAttribute="width" secondItem="haF-AY-gvC" secondAttribute="width" multiplier="0.85" id="QuY-4h-mEs"/>
+                <constraint firstAttribute="trailing" secondItem="iOp-aF-T4I" secondAttribute="trailing" constant="30" id="7e5-gQ-9Nv"/>
+                <constraint firstItem="iOp-aF-T4I" firstAttribute="leading" secondItem="haF-AY-gvC" secondAttribute="leading" constant="30" id="McS-4z-nnd"/>
+                <constraint firstItem="iOp-aF-T4I" firstAttribute="top" secondItem="lc3-2q-MvZ" secondAttribute="top" constant="100" id="RlH-GT-Zdz"/>
                 <constraint firstItem="iOp-aF-T4I" firstAttribute="centerX" secondItem="haF-AY-gvC" secondAttribute="centerX" id="UAk-bk-U6Q"/>
             </constraints>
             <point key="canvasLocation" x="771" y="-44"/>
         </view>
     </objects>
     <resources>
-        <image name="Logo" width="540.5" height="540"/>
+        <image name="Logo" width="171" height="170.66667175292969"/>
         <image name="flag" width="26" height="26"/>
         <namedColor name="BackGroundColor">
             <color red="0.95300000905990601" green="0.95300000905990601" blue="0.97299998998641968" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

@@ -37,7 +37,7 @@
                     <state key="normal" image="Group 25"/>
                 </button>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hdd-8N-YOR" customClass="ColoredCustomUISegmentedControl" customModule="Takhawi" customModuleProvider="target">
-                    <rect key="frame" x="59" y="119" width="275" height="51"/>
+                    <rect key="frame" x="72.666666666666671" y="119" width="247.66666666666663" height="51"/>
                     <segments>
                         <segment title="Locations"/>
                         <segment title="Drivers"/>
@@ -68,7 +68,7 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="66b-dw-2bT" secondAttribute="trailing" constant="20" id="nec-C4-ExA"/>
                 <constraint firstItem="66b-dw-2bT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="sel-i1-Nmk"/>
                 <constraint firstItem="hdd-8N-YOR" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="u5e-2x-egr"/>
-                <constraint firstItem="hdd-8N-YOR" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.7" id="yc5-DF-DaO"/>
+                <constraint firstItem="hdd-8N-YOR" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.63" id="yc5-DF-DaO"/>
             </constraints>
             <point key="canvasLocation" x="104.58015267175573" y="19.718309859154932"/>
         </view>

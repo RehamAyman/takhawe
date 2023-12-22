@@ -21,25 +21,18 @@ struct tap2: View {
           
           Image("padlock 1")
                 .resizable()
-                .scaledToFit()
+             //   .scaledToFit()
                 .frame(width: 120 , height: 120)
-                .padding(.top , 30 )
-           //    .frame(width:  UIScreen.main.bounds.width * 0.3)
-            //    .frame(height:  UIScreen.main.bounds.height * 0.12)
-               // .padding(8)
             
             SecureInputView( "Enter New Password" , text: $email)
-            
-//
             SecureInputView( "Confirm Password" , text: $confirmPassword)
-//
             
             
             HStack{
                 
                 Image( checkTerms ?  "checkbox" : "UNcheckbox")
                     .resizable()
-                    .frame(width: 20 , height: 20 )
+                    .frame(width: 25 , height: 25 )
                     .onTapGesture {
                         withAnimation {
                             checkTerms.toggle()
@@ -54,11 +47,11 @@ struct tap2: View {
                 Text( "I agree to the terms and conditions")
                     .font(.custom(AppFont.Regular.rawValue, size: 14))
                     .fixedSize()
-                    .frame(maxWidth: .infinity)
+                    .frame(maxWidth: .infinity , alignment : .leading)
                 
             }.padding(.horizontal)
             
-           
+           Spacer()
            
         }.padding(8)
     }

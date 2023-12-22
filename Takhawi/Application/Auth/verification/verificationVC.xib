@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,9 +11,6 @@
     <customFonts key="customFonts">
         <array key="Alexandria-Medium.ttf">
             <string>Alexandria-Medium</string>
-        </array>
-        <array key="Alexandria-Regular.ttf">
-            <string>Alexandria-Regular</string>
         </array>
     </customFonts>
     <objects>
@@ -29,8 +26,8 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verification" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRD-7f-Do7">
-                    <rect key="frame" x="10" y="94" width="373" height="41.666666666666657"/>
-                    <fontDescription key="fontDescription" name="Alexandria-Medium" family="Alexandria" pointSize="34"/>
+                    <rect key="frame" x="10" y="139" width="373" height="40.666666666666657"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="34"/>
                     <color key="textColor" name="MainColor"/>
                     <nil key="highlightedColor"/>
                     <userDefinedRuntimeAttributes>
@@ -38,14 +35,14 @@
                     </userDefinedRuntimeAttributes>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="u3Q-5O-MoQ">
-                    <rect key="frame" x="25" y="160.66666666666666" width="343" height="272.66666666666674"/>
+                    <rect key="frame" x="25" y="204.66666666666666" width="343" height="272.66666666666674"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter verification code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ly7-FQ-lvc">
                             <rect key="frame" x="0.0" y="0.0" width="343" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="rhi-XE-wOM"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="Alexandria-Regular" family="Alexandria" pointSize="16"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                             <userDefinedRuntimeAttributes>
@@ -53,7 +50,7 @@
                             </userDefinedRuntimeAttributes>
                         </label>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verified 1" translatesAutoresizingMaskIntoConstraints="NO" id="h0C-6F-meZ">
-                            <rect key="frame" x="0.0" y="55" width="343" height="132.66666666666666"/>
+                            <rect key="frame" x="0.0" y="55.000000000000028" width="343" height="132.66666666666666"/>
                         </imageView>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u15-b1-TKo" customClass="CHIOTPFieldThree" customModule="CHIOTPField">
                             <rect key="frame" x="0.0" y="222.66666666666666" width="343" height="49.999999999999972"/>
@@ -61,7 +58,7 @@
                                 <constraint firstAttribute="height" constant="50" id="Iof-LZ-7f2"/>
                             </constraints>
                             <color key="textColor" name="MainColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                             <textInputTraits key="textInputTraits" keyboardType="ASCIICapableNumberPad"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="numberOfDigits">
@@ -100,15 +97,24 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5W4-ge-JdQ">
-                    <rect key="frame" x="154.66666666666666" y="453.33333333333331" width="84" height="33.666666666666686"/>
+                    <rect key="frame" x="156.33333333333334" y="497.33333333333331" width="80.333333333333343" height="33.333333333333314"/>
                     <color key="tintColor" name="MainColor"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Resend">
-                        <fontDescription key="titleFontDescription" name="Alexandria-Medium" family="Alexandria" pointSize="16"/>
+                        <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                     </buttonConfiguration>
                     <connections>
                         <action selector="resendCode:" destination="-1" eventType="touchUpInside" id="Rxm-pA-msD"/>
                     </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBR-Gx-OoI" customClass="BackButton" customModule="Takhawi" customModuleProvider="target">
+                    <rect key="frame" x="20" y="69" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="2xC-r8-fZP"/>
+                        <constraint firstAttribute="width" constant="40" id="Fdh-ws-q60"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="Group 25"/>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="2oN-jg-PYl"/>
@@ -122,21 +128,24 @@
                 <constraint firstItem="2oN-jg-PYl" firstAttribute="bottom" secondItem="XGF-am-qJP" secondAttribute="bottom" constant="30" id="9nO-K5-36z"/>
                 <constraint firstItem="2oN-jg-PYl" firstAttribute="trailing" secondItem="u3Q-5O-MoQ" secondAttribute="trailing" constant="25" id="AOX-BS-G8a"/>
                 <constraint firstItem="XGF-am-qJP" firstAttribute="leading" secondItem="Tze-CY-5p7" secondAttribute="leading" constant="30" id="AuY-WE-CFR"/>
+                <constraint firstItem="eRD-7f-Do7" firstAttribute="top" secondItem="nBR-Gx-OoI" secondAttribute="bottom" constant="30" id="CWq-DQ-ubz"/>
                 <constraint firstItem="2oN-jg-PYl" firstAttribute="trailing" secondItem="XGF-am-qJP" secondAttribute="trailing" constant="30" id="Scc-CH-GRf"/>
                 <constraint firstItem="eRD-7f-Do7" firstAttribute="leading" secondItem="2oN-jg-PYl" secondAttribute="leading" constant="10" id="Wlp-vU-Uq1"/>
                 <constraint firstItem="u3Q-5O-MoQ" firstAttribute="top" secondItem="eRD-7f-Do7" secondAttribute="bottom" constant="25" id="YB7-US-xOJ"/>
                 <constraint firstItem="2oN-jg-PYl" firstAttribute="trailing" secondItem="eRD-7f-Do7" secondAttribute="trailing" constant="10" id="b7E-oc-cfI"/>
-                <constraint firstItem="eRD-7f-Do7" firstAttribute="top" secondItem="2oN-jg-PYl" secondAttribute="top" constant="35" id="l9o-xF-XLN"/>
+                <constraint firstItem="nBR-Gx-OoI" firstAttribute="leading" secondItem="2oN-jg-PYl" secondAttribute="leading" constant="20" id="kR0-Zn-SZP"/>
+                <constraint firstItem="nBR-Gx-OoI" firstAttribute="top" secondItem="2oN-jg-PYl" secondAttribute="top" constant="10" id="wLW-qh-88c"/>
             </constraints>
             <point key="canvasLocation" x="-48" y="20"/>
         </view>
     </objects>
     <designables>
         <designable name="u15-b1-TKo">
-            <size key="intrinsicContentSize" width="4" height="18.666666666666668"/>
+            <size key="intrinsicContentSize" width="4" height="17"/>
         </designable>
     </designables>
     <resources>
+        <image name="Group 25" width="41" height="40"/>
         <image name="verified 1" width="120" height="120"/>
         <namedColor name="BackGroundColor">
             <color red="0.95300000905990601" green="0.95300000905990601" blue="0.97299998998641968" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

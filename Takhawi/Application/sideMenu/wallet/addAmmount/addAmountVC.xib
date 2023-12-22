@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -14,7 +13,6 @@
             <connections>
                 <outlet property="addAmountTextField" destination="jQf-uK-9N5" id="mpp-Pg-V3S"/>
                 <outlet property="cardeView" destination="BBR-Af-LRn" id="hJc-de-4O1"/>
-                <outlet property="collectionview" destination="tqd-LY-4WV" id="eqt-GC-LTr"/>
                 <outlet property="view" destination="iN0-l3-epB" id="ZsU-nR-LLE"/>
             </connections>
         </placeholder>
@@ -65,10 +63,10 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BBR-Af-LRn">
-                    <rect key="frame" x="0.0" y="568.33333333333337" width="433" height="250"/>
+                    <rect key="frame" x="0.0" y="288.33333333333331" width="393" height="269.99999999999994"/>
                     <color key="backgroundColor" name="BackGroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="250" id="Dkt-LX-C8T"/>
+                        <constraint firstAttribute="height" constant="270" id="Dkt-LX-C8T"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHl-aX-l6v">
@@ -88,33 +86,17 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </button>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="tqd-LY-4WV">
-                    <rect key="frame" x="0.0" y="278.33333333333331" width="393" height="249.99999999999994"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="250" id="cLM-6r-DKo"/>
-                    </constraints>
-                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WtO-Vt-22a">
-                        <size key="itemSize" width="128" height="128"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" name="BackGroundColor"/>
             <constraints>
                 <constraint firstItem="BBR-Af-LRn" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="25C-dD-awq"/>
-                <constraint firstItem="tqd-LY-4WV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Ffg-2i-qWy"/>
                 <constraint firstItem="jQf-uK-9N5" firstAttribute="top" secondItem="97A-AH-Tfl" secondAttribute="bottom" constant="30" id="GMK-6D-zGV"/>
-                <constraint firstItem="BBR-Af-LRn" firstAttribute="top" secondItem="8fp-aH-dXV" secondAttribute="bottom" constant="300" id="HeI-xG-6Hk"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="BBR-Af-LRn" secondAttribute="trailing" constant="-40" id="Ina-yS-bsG"/>
+                <constraint firstItem="BBR-Af-LRn" firstAttribute="top" secondItem="8fp-aH-dXV" secondAttribute="bottom" constant="20" id="HeI-xG-6Hk"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="BBR-Af-LRn" secondAttribute="trailing" id="Ina-yS-bsG"/>
                 <constraint firstItem="8fp-aH-dXV" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Mus-tC-hrV"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="dHl-aX-l6v" secondAttribute="bottom" constant="10" id="O9C-UO-9Kz"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="tqd-LY-4WV" secondAttribute="trailing" id="Q8Q-S9-GG2"/>
                 <constraint firstItem="Sms-M3-BII" firstAttribute="centerY" secondItem="97A-AH-Tfl" secondAttribute="centerY" id="Wg4-f4-KHx"/>
-                <constraint firstItem="tqd-LY-4WV" firstAttribute="top" secondItem="8fp-aH-dXV" secondAttribute="bottom" constant="10" id="Wpj-se-iUE"/>
                 <constraint firstItem="jQf-uK-9N5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="XIm-mI-Jah"/>
                 <constraint firstItem="97A-AH-Tfl" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="YWk-gZ-cIQ"/>
                 <constraint firstItem="Sms-M3-BII" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="e10-Bm-MwB"/>
@@ -139,8 +121,5 @@
         <namedColor name="MainColor">
             <color red="0.35294117647058826" green="0.25882352941176473" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
