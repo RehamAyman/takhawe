@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Пин от пользователя 테니사 на доске zepeto hijab | Милые рисунки, Рисунки, Цветочные картины 1.jpg",
+      "filename" : "Down.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Down@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Down@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

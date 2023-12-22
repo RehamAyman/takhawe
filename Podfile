@@ -31,6 +31,7 @@ target 'Takhawi' do
   pod 'MaterialComponents/TextControls+OutlinedTextAreas'
   pod 'MaterialComponents/TextControls+OutlinedTextFields'
   pod 'PureLayout'
+  pod 'CollectionViewPagingLayout'
 
 
   

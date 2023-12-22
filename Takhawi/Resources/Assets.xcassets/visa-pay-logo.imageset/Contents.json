@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Пин от пользователя 테니사 на доске zepeto hijab | Милые рисунки, Рисунки, Цветочные картины 1.jpg",
+      "filename" : "visa-pay-logo.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "visa-pay-logo@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "visa-pay-logo@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
