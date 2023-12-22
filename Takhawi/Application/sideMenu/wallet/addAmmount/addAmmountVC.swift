@@ -8,6 +8,7 @@
 import UIKit
 import MaterialComponents
 import SwiftUI
+import CollectionViewPagingLayout
 
 class addAmountVC : BaseVC {
     //MARK: - IBOutlets -
@@ -26,6 +27,13 @@ class addAmountVC : BaseVC {
         override func viewDidLoad() {
             super.viewDidLoad()
             self.configureInitialDesign()
+            let layout = CollectionViewPagingLayout()
+            collectionview.collectionViewLayout = layout
+            collectionview.collectionViewLayout.collectionView?.backgroundColor = UIColor.clear
+            collectionview.isPagingEnabled = true // enabling paging effect
+            layout.numberOfVisibleItems = nil
+            
+            
         }
         
     //MARK: - Design Methods -

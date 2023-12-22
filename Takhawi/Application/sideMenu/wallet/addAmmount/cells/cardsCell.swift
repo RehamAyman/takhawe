@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CollectionViewPagingLayout
 
 class cardsCell: UICollectionViewCell {
 
@@ -15,3 +16,17 @@ class cardsCell: UICollectionViewCell {
     }
 
 }
+
+
+extension cardsCell : ScaleTransformView {
+    var scaleOptions: ScaleTransformViewOptions {
+        ScaleTransformViewOptions(
+            minScale: 0.6,
+            scaleRatio: 0.4,
+            translationRatio: CGPoint(x: 0.66, y: 0.2),
+            maxTranslationRatio: CGPoint(x: 2, y: 0)
+            )
+    }
+    
+}
+

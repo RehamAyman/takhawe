@@ -23,10 +23,10 @@ extension addAmountVC : UICollectionViewDelegate , UICollectionViewDataSource , 
     
     
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width:  self.collectionview.width - 50  , height: 200  )
-    }
-    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return CGSize(width:  self.collectionview.width - 50  , height: 200  )
+//    }
+//    
     
     
     
