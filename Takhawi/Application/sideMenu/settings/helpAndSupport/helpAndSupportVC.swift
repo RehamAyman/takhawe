@@ -72,7 +72,7 @@ class helpAndSupportVC: BaseVC {
             vc.viewDismissed = {
                 self.removePresentEffect()
             }
-            self.presentWithEffect(vc:  vc )
+            self.presentWithEffect(vc: vc )
 
         }
     }
@@ -80,8 +80,14 @@ class helpAndSupportVC: BaseVC {
     //MARK: - Logic Methods -
     
     
+    
+    
     //MARK: - Actions -
     
+    @IBAction func sendAction(_ sender: UIButton) {
+        self.validateAndSend()
+        
+    }
 }
 
 

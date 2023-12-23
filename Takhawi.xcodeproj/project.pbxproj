@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0426FBC22B3753970017F12A /* aboutUsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0426FBC12B3753970017F12A /* aboutUsVC.swift */; };
+		0426FBC42B3753A60017F12A /* aboutUsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0426FBC32B3753A60017F12A /* aboutUsVC.xib */; };
+		0426FBC72B37604C0017F12A /* languageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0426FBC62B37604C0017F12A /* languageVC.swift */; };
+		0426FBC92B37605C0017F12A /* languageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0426FBC82B37605C0017F12A /* languageVC.xib */; };
 		04658F522B3746B500470F0D /* presentWithBlurEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04658F512B3746B500470F0D /* presentWithBlurEffect.swift */; };
+		04658F552B374DF900470F0D /* baseSuccessAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04658F542B374DF900470F0D /* baseSuccessAlertVC.swift */; };
+		04658F572B374E0400470F0D /* baseSuccessAlertVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04658F562B374E0400470F0D /* baseSuccessAlertVC.xib */; };
 		04B4AFAC2B347F9100DAFEC2 /* cardsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B4AFAA2B347F9100DAFEC2 /* cardsCell.swift */; };
 		04B4AFAD2B347F9100DAFEC2 /* cardsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B4AFAB2B347F9100DAFEC2 /* cardsCell.xib */; };
 		04B4AFAF2B34830000DAFEC2 /* addamountVC+extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B4AFAE2B34830000DAFEC2 /* addamountVC+extentions.swift */; };
@@ -371,7 +377,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0426FBC12B3753970017F12A /* aboutUsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutUsVC.swift; sourceTree = "<group>"; };
+		0426FBC32B3753A60017F12A /* aboutUsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = aboutUsVC.xib; sourceTree = "<group>"; };
+		0426FBC62B37604C0017F12A /* languageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = languageVC.swift; sourceTree = "<group>"; };
+		0426FBC82B37605C0017F12A /* languageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = languageVC.xib; sourceTree = "<group>"; };
 		04658F512B3746B500470F0D /* presentWithBlurEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = presentWithBlurEffect.swift; sourceTree = "<group>"; };
+		04658F542B374DF900470F0D /* baseSuccessAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baseSuccessAlertVC.swift; sourceTree = "<group>"; };
+		04658F562B374E0400470F0D /* baseSuccessAlertVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = baseSuccessAlertVC.xib; sourceTree = "<group>"; };
 		04B4AFAA2B347F9100DAFEC2 /* cardsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardsCell.swift; sourceTree = "<group>"; };
 		04B4AFAB2B347F9100DAFEC2 /* cardsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cardsCell.xib; sourceTree = "<group>"; };
 		04B4AFAE2B34830000DAFEC2 /* addamountVC+extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "addamountVC+extentions.swift"; sourceTree = "<group>"; };
@@ -765,12 +777,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0426FBC02B37537B0017F12A /* aboutUs */ = {
+			isa = PBXGroup;
+			children = (
+				0426FBC12B3753970017F12A /* aboutUsVC.swift */,
+				0426FBC32B3753A60017F12A /* aboutUsVC.xib */,
+			);
+			path = aboutUs;
+			sourceTree = "<group>";
+		};
+		0426FBC52B375F640017F12A /* language */ = {
+			isa = PBXGroup;
+			children = (
+				0426FBC62B37604C0017F12A /* languageVC.swift */,
+				0426FBC82B37605C0017F12A /* languageVC.xib */,
+			);
+			path = language;
+			sourceTree = "<group>";
+		};
 		04658F502B3746A000470F0D /* present */ = {
 			isa = PBXGroup;
 			children = (
 				04658F512B3746B500470F0D /* presentWithBlurEffect.swift */,
 			);
 			path = present;
+			sourceTree = "<group>";
+		};
+		04658F532B374DDD00470F0D /* baseSuccessAlert */ = {
+			isa = PBXGroup;
+			children = (
+				04658F542B374DF900470F0D /* baseSuccessAlertVC.swift */,
+				04658F562B374E0400470F0D /* baseSuccessAlertVC.xib */,
+			);
+			path = baseSuccessAlert;
 			sourceTree = "<group>";
 		};
 		04B4AFA72B347F6400DAFEC2 /* cells */ = {
@@ -858,6 +897,8 @@
 		04C737B82B36D45B002AE59C /* settings */ = {
 			isa = PBXGroup;
 			children = (
+				0426FBC52B375F640017F12A /* language */,
+				0426FBC02B37537B0017F12A /* aboutUs */,
 				04C737CD2B370FF0002AE59C /* selectComplain */,
 				04C737C62B36E026002AE59C /* helpAndSupport */,
 				04C737BD2B36DB1E002AE59C /* policies */,
@@ -1085,6 +1126,7 @@
 		9694AB492A5DE9DA00BDF5F8 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				04658F532B374DDD00470F0D /* baseSuccessAlert */,
 				CE3B53B02B2B4BB6003D3043 /* reportOrCancel */,
 				CE3B53A32B2AFFD9003D3043 /* cancelTheTrip */,
 				CECA04552B29D2CB001AA89D /* rateTheDriver */,
@@ -2375,9 +2417,11 @@
 				CE3CEEE12B16532F00619C79 /* findingAdriverVC.xib in Resources */,
 				CE7D82F92AC3BC1D00C5B028 /* SelectYourLocationVc.xib in Resources */,
 				CE034F4D2B2B9E6C0040516E /* reportOrCandelCell.xib in Resources */,
+				0426FBC42B3753A60017F12A /* aboutUsVC.xib in Resources */,
 				CEF7B6EB2B2E2F7400E3FE5C /* favoritesVC.xib in Resources */,
 				CE034F462B2B5DC70040516E /* reportCancelVC.xib in Resources */,
 				CE9F3C572B1B4550004C3D24 /* wAY9ZXW4id.json in Resources */,
+				04658F572B374E0400470F0D /* baseSuccessAlertVC.xib in Resources */,
 				9694AC5F2A5E040D00BDF5F8 /* ArbFONTS-URW-DIN-Arabic-Medium.ttf in Resources */,
 				CE71F4712B16885B00E7B689 /* driversOffersCell.xib in Resources */,
 				CE9F3C5B2B1B4955004C3D24 /* u4F3iX2jrQ.json in Resources */,
@@ -2449,6 +2493,7 @@
 				CE2D4AF42B1863B9008D556E /* JwaDQrIWWe.json in Resources */,
 				04C737B52B36D1D7002AE59C /* tripsSideMenuVC.xib in Resources */,
 				CEEDC01F2B2E0FF40017C804 /* notificationViewVC.xib in Resources */,
+				0426FBC92B37605C0017F12A /* languageVC.xib in Resources */,
 				CE3021352ABB908E00572DE7 /* enterPasswordVC.xib in Resources */,
 				04C737D62B37142B002AE59C /* selectYourComplainCell.xib in Resources */,
 				9694AC692A5E040D00BDF5F8 /* CameraUI.strings in Resources */,
@@ -2550,6 +2595,7 @@
 				CE9EBFEB2B1393AE0080A0F2 /* reviewsViewVC+tableViewdelegate.swift in Sources */,
 				9694AB532A5DFA5000BDF5F8 /* BaseNav.swift in Sources */,
 				CE7576EF2AF2019D00AFF56A /* homeVC+collectionDelegate.swift in Sources */,
+				04658F552B374DF900470F0D /* baseSuccessAlertVC.swift in Sources */,
 				9694AB3A2A5DE9D500BDF5F8 /* ViewController.swift in Sources */,
 				04C737A82B36C77E002AE59C /* messagesViewVC.swift in Sources */,
 				CEF9737E2AC1D4FA00CDCCFD /* KeyboardAdaptive.swift in Sources */,
@@ -2611,6 +2657,7 @@
 				04D81F8C2B35BC8C00AAA66C /* firstAuthCell.swift in Sources */,
 				CE3B53AE2B2B2365003D3043 /* tipsCell.swift in Sources */,
 				04D81F912B35C03200AAA66C /* secauthCell.swift in Sources */,
+				0426FBC72B37604C0017F12A /* languageVC.swift in Sources */,
 				9694ABDE2A5DFACA00BDF5F8 /* String.swift in Sources */,
 				9694AC572A5E040D00BDF5F8 /* Color.swift in Sources */,
 				9694ABC02A5DFACA00BDF5F8 /* ServerPath.swift in Sources */,
@@ -2630,6 +2677,7 @@
 				CE6178AD2ACD23BD00AA8BB7 /* tipLabel.swift in Sources */,
 				CE3CEEDE2B1652DD00619C79 /* findingAdriverVC.swift in Sources */,
 				04B659DF2B343B5500E78752 /* walletCell.swift in Sources */,
+				0426FBC22B3753970017F12A /* aboutUsVC.swift in Sources */,
 				9694ABE02A5DFACA00BDF5F8 /* Optional.swift in Sources */,
 				CE3CACC72B2D8E3F0025990E /* animatedLoader.swift in Sources */,
 				CE6178AA2ACD104900AA8BB7 /* mapSearchVC.swift in Sources */,

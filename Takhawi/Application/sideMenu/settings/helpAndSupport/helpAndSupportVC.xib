@@ -125,6 +125,9 @@
                             <real key="value" value="25"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="sendAction:" destination="-1" eventType="touchUpInside" id="auI-Kq-xS8"/>
+                    </connections>
                 </button>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Grp-Rp-c95">
                     <rect key="frame" x="20" y="383" width="335" height="205"/>
