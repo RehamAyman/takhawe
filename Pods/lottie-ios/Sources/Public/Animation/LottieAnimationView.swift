@@ -981,7 +981,6 @@ final public class LottieAnimationView: LottieAnimationViewBase {
 
   fileprivate var _activeAnimationName: String = LottieAnimationView.animationName
   fileprivate var animationID = 0
-
   fileprivate var waitingToPlayAnimation = false
 
   fileprivate var activeAnimationName: String {

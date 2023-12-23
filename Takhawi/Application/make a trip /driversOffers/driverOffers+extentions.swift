@@ -32,6 +32,8 @@ extension driverOffersVC : UITableViewDelegate , UITableViewDataSource {
         cell.driverRate.rating = item.driverRate
         cell.driverPhoto.image = UIImage(named: item.driverPhoto)
         cell.action = {
+            let vc = driverProfileVC()
+            self.push(vc)
             
         }
         cell.cancel = {

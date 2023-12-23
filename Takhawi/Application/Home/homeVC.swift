@@ -85,7 +85,7 @@ class homeVC: BaseVC, sendDataBackDelegate{
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "sideMenuCell", bundle: nil), forCellReuseIdentifier: "sideMenuCell")
-        //
+        self.hotelIconOutlet.isHidden = false 
         
         
         
@@ -181,12 +181,15 @@ class homeVC: BaseVC, sendDataBackDelegate{
                 vc1.modalPresentationStyle = .overCurrentContext
                 self.bottomView.isHidden = true
                 self.segmentContainerView.isHidden = true
+                self.hotelIconOutlet.isHidden = true
                 self.present(vc1 , animated: true)
                 vc1.cancel = {
+                    self.hotelIconOutlet.isHidden = false
                     self.bottomView.isHidden = false
                     self.segmentContainerView.isHidden = false
                 }
                 vc1.didfindAdrivier = {
+                    self.hotelIconOutlet.isHidden = false
                     let vc = driverOffersVC()
                     self.bottomView.isHidden = false
                     self.segmentContainerView.isHidden = false

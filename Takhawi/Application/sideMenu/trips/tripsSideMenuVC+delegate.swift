@@ -5,4 +5,16 @@
 //  Created by Mac on 23/12/2023.
 //
 
-import Foundation
+import UIKit
+
+
+extension tripsSideMenuVC {
+    func setupsegment ( ) {
+        let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+             segment.setTitleTextAttributes(titleTextAttributes, for:.normal)
+        let titleTextAttributes1 = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        segment.setTitleTextAttributes(titleTextAttributes1 as [NSAttributedString.Key : Any], for:.selected)
+        segment.selectedSegmentTintColor = UIColor(named: "MainColor")
+        segment.backgroundColor = UIColor(named: "secFavSeg")
+    }
+}

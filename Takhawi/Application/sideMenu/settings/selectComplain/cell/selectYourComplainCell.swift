@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import Lottie
 
 class selectYourComplainCell: UITableViewCell {
-
+    @IBOutlet weak var complainLabel: UILabel!
+    @IBOutlet weak var checkBox: LottieAnimationView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

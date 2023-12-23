@@ -12,17 +12,16 @@ import UIKit
 class helpAndSupportVC: BaseVC {
     
     //MARK: - IBOutlets -
+    @IBOutlet weak var checkBoxIcon: UIImageView!
     
-    
+    @IBOutlet weak var complainTextView: UITextView!
+    @IBOutlet weak var chooseComplainHeight: NSLayoutConstraint!
+    @IBOutlet weak var chooseComplain: UIView!
+    @IBOutlet weak var complanView: UIView!
+   
     //MARK: - Properties -
-    
-    
-    //MARK: - Creation -
-    static func create() -> helpAndSupportVC {
-        let vc = AppStoryboards.<#StoryboardCase#>.instantiate(helpAndSupportVC.self)
-        vc.hidesBottomBarWhenPushed = true
-        return vc
-    }
+    var  complain : Bool = false
+
     
     // MARK: - Lifecycle -
     override func viewDidLoad() {
@@ -34,6 +33,37 @@ class helpAndSupportVC: BaseVC {
     //MARK: - Design Methods -
     private func configureInitialDesign() {
         self.title = "".localized
+        self.complainTextView.delegate = self
+        self.complainTextView.text = "Write your complain here (minimum 10 characters)"
+        self.complainTextView.textColor = UIColor.systemGray
+        self.complainTextView.contentInset = UIEdgeInsets(top: 8, left: 12, bottom: 8, right: 12)
+        self.chooseComplain.isHidden = true
+        self.chooseComplainHeight.constant = 0
+        
+        self.complanView.addTapGesture {
+            self.complain = self.complain ? false : true
+            self.checkBoxIcon.image = self.complain ? UIImage(named: "checkbox") : UIImage(named: "UNcheckbox")
+            if self.complain {
+               
+                UIView.animate(withDuration: 0.5) {
+                    self.chooseComplain.isHidden = false
+                    self.chooseComplainHeight.constant = 50
+                    self.view.layoutIfNeeded()
+                }
+            } else {
+                self.chooseComplain.isHidden = true
+                self.chooseComplainHeight.constant = 0
+                UIView.animate(withDuration: 0.3) {
+                    self.view.layoutIfNeeded()
+                }
+            }
+        }
+        self.chooseComplain.addTapGesture {
+           let vc = selectComplainVC()
+            vc.modalTransitionStyle = .crossDissolve
+            vc.modalPresentationStyle = .overCurrentContext
+            self.present(vc, animated: true )
+        }
     }
     
     //MARK: - Logic Methods -

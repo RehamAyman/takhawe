@@ -25,6 +25,22 @@
 		04B659EA2B34519B00E78752 /* animatedCartSwiftuiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B659E92B34519B00E78752 /* animatedCartSwiftuiView.swift */; };
 		04B659EC2B3451EB00E78752 /* cardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B659EB2B3451EB00E78752 /* cardModel.swift */; };
 		04B659F02B345DA800E78752 /* cartItemVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B659EF2B345DA800E78752 /* cartItemVView.swift */; };
+		04C737A82B36C77E002AE59C /* messagesViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C737A72B36C77E002AE59C /* messagesViewVC.swift */; };
+		04C737AA2B36C792002AE59C /* messagesViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C737A92B36C792002AE59C /* messagesViewVC.xib */; };
+		04C737B32B36D1C0002AE59C /* tripsSideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C737B22B36D1C0002AE59C /* tripsSideMenuVC.swift */; };
+		04C737B52B36D1D7002AE59C /* tripsSideMenuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C737B42B36D1D7002AE59C /* tripsSideMenuVC.xib */; };
+		04C737B72B36D388002AE59C /* tripsSideMenuVC+delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C737B62B36D388002AE59C /* tripsSideMenuVC+delegate.swift */; };
+		04C737BA2B36D4CF002AE59C /* settingsSideVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C737B92B36D4CF002AE59C /* settingsSideVC.swift */; };
+		04C737BC2B36D4EE002AE59C /* settingsSideVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C737BB2B36D4EE002AE59C /* settingsSideVC.xib */; };
+		04C737C32B36DE12002AE59C /* policesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C737C22B36DE12002AE59C /* policesVC.swift */; };
+		04C737C52B36DE27002AE59C /* policesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C737C42B36DE27002AE59C /* policesVC.xib */; };
+		04C737C82B36E044002AE59C /* helpAndSupportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C737C72B36E044002AE59C /* helpAndSupportVC.swift */; };
+		04C737CA2B36E04F002AE59C /* helpAndSupportVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C737C92B36E04F002AE59C /* helpAndSupportVC.xib */; };
+		04C737CC2B36FEDA002AE59C /* helpAndSupport+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C737CB2B36FEDA002AE59C /* helpAndSupport+extention.swift */; };
+		04C737CF2B371037002AE59C /* selectComplainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C737CE2B371037002AE59C /* selectComplainVC.swift */; };
+		04C737D12B371046002AE59C /* selectComplainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C737D02B371046002AE59C /* selectComplainVC.xib */; };
+		04C737D52B37142B002AE59C /* selectYourComplainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C737D32B37142B002AE59C /* selectYourComplainCell.swift */; };
+		04C737D62B37142B002AE59C /* selectYourComplainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C737D42B37142B002AE59C /* selectYourComplainCell.xib */; };
 		04D81F892B35BC1F00AAA66C /* swiftRegister+extention .swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D81F882B35BC1F00AAA66C /* swiftRegister+extention .swift */; };
 		04D81F8C2B35BC8C00AAA66C /* firstAuthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D81F8A2B35BC8C00AAA66C /* firstAuthCell.swift */; };
 		04D81F8D2B35BC8C00AAA66C /* firstAuthCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D81F8B2B35BC8C00AAA66C /* firstAuthCell.xib */; };
@@ -372,6 +388,22 @@
 		04B659E92B34519B00E78752 /* animatedCartSwiftuiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animatedCartSwiftuiView.swift; sourceTree = "<group>"; };
 		04B659EB2B3451EB00E78752 /* cardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardModel.swift; sourceTree = "<group>"; };
 		04B659EF2B345DA800E78752 /* cartItemVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cartItemVView.swift; sourceTree = "<group>"; };
+		04C737A72B36C77E002AE59C /* messagesViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = messagesViewVC.swift; sourceTree = "<group>"; };
+		04C737A92B36C792002AE59C /* messagesViewVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = messagesViewVC.xib; sourceTree = "<group>"; };
+		04C737B22B36D1C0002AE59C /* tripsSideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripsSideMenuVC.swift; sourceTree = "<group>"; };
+		04C737B42B36D1D7002AE59C /* tripsSideMenuVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = tripsSideMenuVC.xib; sourceTree = "<group>"; };
+		04C737B62B36D388002AE59C /* tripsSideMenuVC+delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "tripsSideMenuVC+delegate.swift"; sourceTree = "<group>"; };
+		04C737B92B36D4CF002AE59C /* settingsSideVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsSideVC.swift; sourceTree = "<group>"; };
+		04C737BB2B36D4EE002AE59C /* settingsSideVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = settingsSideVC.xib; sourceTree = "<group>"; };
+		04C737C22B36DE12002AE59C /* policesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = policesVC.swift; sourceTree = "<group>"; };
+		04C737C42B36DE27002AE59C /* policesVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = policesVC.xib; sourceTree = "<group>"; };
+		04C737C72B36E044002AE59C /* helpAndSupportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helpAndSupportVC.swift; sourceTree = "<group>"; };
+		04C737C92B36E04F002AE59C /* helpAndSupportVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = helpAndSupportVC.xib; sourceTree = "<group>"; };
+		04C737CB2B36FEDA002AE59C /* helpAndSupport+extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "helpAndSupport+extention.swift"; sourceTree = "<group>"; };
+		04C737CE2B371037002AE59C /* selectComplainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectComplainVC.swift; sourceTree = "<group>"; };
+		04C737D02B371046002AE59C /* selectComplainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = selectComplainVC.xib; sourceTree = "<group>"; };
+		04C737D32B37142B002AE59C /* selectYourComplainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectYourComplainCell.swift; sourceTree = "<group>"; };
+		04C737D42B37142B002AE59C /* selectYourComplainCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = selectYourComplainCell.xib; sourceTree = "<group>"; };
 		04D81F882B35BC1F00AAA66C /* swiftRegister+extention .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "swiftRegister+extention .swift"; sourceTree = "<group>"; };
 		04D81F8A2B35BC8C00AAA66C /* firstAuthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstAuthCell.swift; sourceTree = "<group>"; };
 		04D81F8B2B35BC8C00AAA66C /* firstAuthCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = firstAuthCell.xib; sourceTree = "<group>"; };
@@ -792,6 +824,75 @@
 				04B659EF2B345DA800E78752 /* cartItemVView.swift */,
 			);
 			path = animatedCart;
+			sourceTree = "<group>";
+		};
+		04C737A62B36C75F002AE59C /* messages */ = {
+			isa = PBXGroup;
+			children = (
+				04C737A72B36C77E002AE59C /* messagesViewVC.swift */,
+				04C737A92B36C792002AE59C /* messagesViewVC.xib */,
+			);
+			path = messages;
+			sourceTree = "<group>";
+		};
+		04C737AB2B36CB2B002AE59C /* trips */ = {
+			isa = PBXGroup;
+			children = (
+				04C737B22B36D1C0002AE59C /* tripsSideMenuVC.swift */,
+				04C737B42B36D1D7002AE59C /* tripsSideMenuVC.xib */,
+				04C737B62B36D388002AE59C /* tripsSideMenuVC+delegate.swift */,
+			);
+			path = trips;
+			sourceTree = "<group>";
+		};
+		04C737B82B36D45B002AE59C /* settings */ = {
+			isa = PBXGroup;
+			children = (
+				04C737CD2B370FF0002AE59C /* selectComplain */,
+				04C737C62B36E026002AE59C /* helpAndSupport */,
+				04C737BD2B36DB1E002AE59C /* policies */,
+				04C737B92B36D4CF002AE59C /* settingsSideVC.swift */,
+				04C737BB2B36D4EE002AE59C /* settingsSideVC.xib */,
+			);
+			path = settings;
+			sourceTree = "<group>";
+		};
+		04C737BD2B36DB1E002AE59C /* policies */ = {
+			isa = PBXGroup;
+			children = (
+				04C737C22B36DE12002AE59C /* policesVC.swift */,
+				04C737C42B36DE27002AE59C /* policesVC.xib */,
+			);
+			path = policies;
+			sourceTree = "<group>";
+		};
+		04C737C62B36E026002AE59C /* helpAndSupport */ = {
+			isa = PBXGroup;
+			children = (
+				04C737C72B36E044002AE59C /* helpAndSupportVC.swift */,
+				04C737C92B36E04F002AE59C /* helpAndSupportVC.xib */,
+				04C737CB2B36FEDA002AE59C /* helpAndSupport+extention.swift */,
+			);
+			path = helpAndSupport;
+			sourceTree = "<group>";
+		};
+		04C737CD2B370FF0002AE59C /* selectComplain */ = {
+			isa = PBXGroup;
+			children = (
+				04C737D22B371405002AE59C /* cell */,
+				04C737CE2B371037002AE59C /* selectComplainVC.swift */,
+				04C737D02B371046002AE59C /* selectComplainVC.xib */,
+			);
+			path = selectComplain;
+			sourceTree = "<group>";
+		};
+		04C737D22B371405002AE59C /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				04C737D32B37142B002AE59C /* selectYourComplainCell.swift */,
+				04C737D42B37142B002AE59C /* selectYourComplainCell.xib */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		04D81F8E2B35BC8F00AAA66C /* cells */ = {
@@ -2016,6 +2117,9 @@
 		CEBB8B942ADE95D300E70EC4 /* sideMenu */ = {
 			isa = PBXGroup;
 			children = (
+				04C737B82B36D45B002AE59C /* settings */,
+				04C737AB2B36CB2B002AE59C /* trips */,
+				04C737A62B36C75F002AE59C /* messages */,
 				04B659D32B3436E600E78752 /* wallet */,
 				CEF7B6E72B2E2AE800E3FE5C /* favourites */,
 				CEEDC01B2B2E0FC60017C804 /* notifications */,
@@ -2230,6 +2334,7 @@
 				96EA1E3C2A77006B00F39386 /* Alexandria-Black.ttf in Resources */,
 				96EA1E3D2A77006B00F39386 /* Alexandria-Bold.ttf in Resources */,
 				96EA1E3E2A77006B00F39386 /* Alexandria-ExtraBold.ttf in Resources */,
+				04C737C52B36DE27002AE59C /* policesVC.xib in Resources */,
 				CEDDBE192ACBDFA700677C94 /* sideMenuCell.xib in Resources */,
 				CE04D9C12B15E8BC00B41157 /* successBookViewVC.xib in Resources */,
 				CE71F47C2B17436500E7B689 /* selectTimeVC.xib in Resources */,
@@ -2295,7 +2400,9 @@
 				CEDDBE252ACC45AF00677C94 /* destinationSearchVCCell.xib in Resources */,
 				CE9EC0012B1466E70080A0F2 /* reserveTheTripCell.xib in Resources */,
 				9694AC5D2A5E040D00BDF5F8 /* 62623-warning.json in Resources */,
+				04C737D12B371046002AE59C /* selectComplainVC.xib in Resources */,
 				CE2292872B1E57C100E8AB42 /* hotelsVC.xib in Resources */,
+				04C737CA2B36E04F002AE59C /* helpAndSupportVC.xib in Resources */,
 				CE9F3C592B1B482E004C3D24 /* BDidekRogj.json in Resources */,
 				CE27F5432ADFB02F00DEA419 /* GoogleMapViewController.xib in Resources */,
 				04B4AFAD2B347F9100DAFEC2 /* cardsCell.xib in Resources */,
@@ -2329,10 +2436,14 @@
 				9694AC5C2A5E040D00BDF5F8 /* logo.json in Resources */,
 				9694AC682A5E040D00BDF5F8 /* PhotoLibraryServices.strings in Resources */,
 				CE2D4AF42B1863B9008D556E /* JwaDQrIWWe.json in Resources */,
+				04C737B52B36D1D7002AE59C /* tripsSideMenuVC.xib in Resources */,
 				CEEDC01F2B2E0FF40017C804 /* notificationViewVC.xib in Resources */,
 				CE3021352ABB908E00572DE7 /* enterPasswordVC.xib in Resources */,
+				04C737D62B37142B002AE59C /* selectYourComplainCell.xib in Resources */,
 				9694AC692A5E040D00BDF5F8 /* CameraUI.strings in Resources */,
 				CE3021412ABBAB2F00572DE7 /* verificationVC.xib in Resources */,
+				04C737BC2B36D4EE002AE59C /* settingsSideVC.xib in Resources */,
+				04C737AA2B36C792002AE59C /* messagesViewVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2429,6 +2540,7 @@
 				9694AB532A5DFA5000BDF5F8 /* BaseNav.swift in Sources */,
 				CE7576EF2AF2019D00AFF56A /* homeVC+collectionDelegate.swift in Sources */,
 				9694AB3A2A5DE9D500BDF5F8 /* ViewController.swift in Sources */,
+				04C737A82B36C77E002AE59C /* messagesViewVC.swift in Sources */,
 				CEF9737E2AC1D4FA00CDCCFD /* KeyboardAdaptive.swift in Sources */,
 				CEB5A8622ABCDAF700A7F4AD /* customSegmentController.swift in Sources */,
 				CEB5A8502ABC53C200A7F4AD /* underLineButton.swift in Sources */,
@@ -2442,6 +2554,7 @@
 				CEB5A8572ABC6D3700A7F4AD /* tap1.swift in Sources */,
 				9694ABFF2A5DFACA00BDF5F8 /* defult.swift in Sources */,
 				CE4477442AE0440E000D96F6 /* calendarWeekStore.swift in Sources */,
+				04C737C32B36DE12002AE59C /* policesVC.swift in Sources */,
 				9694AC6F2A5E040D00BDF5F8 /* localizeStringExtension.swift in Sources */,
 				9694ABFE2A5DFACA00BDF5F8 /* Constants.swift in Sources */,
 				9694ABD82A5DFACA00BDF5F8 /* extensionUITextField.swift in Sources */,
@@ -2511,6 +2624,7 @@
 				CE6178AA2ACD104900AA8BB7 /* mapSearchVC.swift in Sources */,
 				9694ABDC2A5DFACA00BDF5F8 /* Array.swift in Sources */,
 				9694AB382A5DE9D500BDF5F8 /* SceneDelegate.swift in Sources */,
+				04C737B72B36D388002AE59C /* tripsSideMenuVC+delegate.swift in Sources */,
 				963DAB2B2A7FDD27004ED3C7 /* DriverRegisterVC.swift in Sources */,
 				CE9F3C4B2B19D0B5004C3D24 /* fullScreenGoogleViewVC.swift in Sources */,
 				9694AC772A5E0D8B00BDF5F8 /* UserDefaultsExtensions.swift in Sources */,
@@ -2522,6 +2636,7 @@
 				04B659CE2B3421D600E78752 /* favlocationCell.swift in Sources */,
 				CEB5A85D2ABC909400A7F4AD /* registerTapsVC.swift in Sources */,
 				9694AC022A5DFACA00BDF5F8 /* AppHelper.swift in Sources */,
+				04C737CF2B371037002AE59C /* selectComplainVC.swift in Sources */,
 				9694ABBC2A5DFACA00BDF5F8 /* APIRouter.swift in Sources */,
 				CE3B53A22B2AFD6A003D3043 /* rateTheDriverDelegates.swift in Sources */,
 				CE385D972AE267A4008F2D50 /* LocationUtilities.swift in Sources */,
@@ -2530,6 +2645,7 @@
 				CE9757D52AE1B2B00014346E /* driverProfileVC.swift in Sources */,
 				CE30213A2ABBA4B200572DE7 /* forgetPasswordVCVC.swift in Sources */,
 				9694ABFD2A5DFACA00BDF5F8 /* AppAlert.swift in Sources */,
+				04C737B32B36D1C0002AE59C /* tripsSideMenuVC.swift in Sources */,
 				04B659EA2B34519B00E78752 /* animatedCartSwiftuiView.swift in Sources */,
 				9694ABC22A5DFACA00BDF5F8 /* Constant.swift in Sources */,
 				9694AC562A5E040D00BDF5F8 /* AppColor.swift in Sources */,
@@ -2548,6 +2664,7 @@
 				9694ABC42A5DFACA00BDF5F8 /* ExtensionNotification.swift in Sources */,
 				9694ABE32A5DFACA00BDF5F8 /* AppStoryBoard+UIViewController.swift in Sources */,
 				CEB5A8602ABCCD8C00A7F4AD /* secureTextField.swift in Sources */,
+				04C737BA2B36D4CF002AE59C /* settingsSideVC.swift in Sources */,
 				CE9EBFEE2B13941C0080A0F2 /* dummyData.swift in Sources */,
 				CE3CEEDA2B1648D400619C79 /* makeAtripAlertPopUpVC.swift in Sources */,
 				04B659D52B3437A200E78752 /* walletVC.swift in Sources */,
@@ -2557,6 +2674,7 @@
 				CEEDC0252B2E13890017C804 /* notificationCell.swift in Sources */,
 				9694ABFA2A5DFACA00BDF5F8 /* TopAlert.swift in Sources */,
 				9694ABEE2A5DFACA00BDF5F8 /* PushNotifcationManager.swift in Sources */,
+				04C737D52B37142B002AE59C /* selectYourComplainCell.swift in Sources */,
 				9694ABBF2A5DFACA00BDF5F8 /* APIGloabelResponse.swift in Sources */,
 				CE034F442B2B5D990040516E /* reportCancelVC.swift in Sources */,
 				9694ABDF2A5DFACA00BDF5F8 /* Double.swift in Sources */,
@@ -2572,6 +2690,7 @@
 				9694ABF82A5DFACA00BDF5F8 /* ImagePicker.swift in Sources */,
 				CE98110A2AC2CD2E00D99EC7 /* homeVc+delegate.swift in Sources */,
 				9694ABD62A5DFACA00BDF5F8 /* ExtensionUILable.swift in Sources */,
+				04C737CC2B36FEDA002AE59C /* helpAndSupport+extention.swift in Sources */,
 				CE3021432ABBB86500572DE7 /* phoneFormate.swift in Sources */,
 				9694AC712A5E040D00BDF5F8 /* Extensions+UITextView.swift in Sources */,
 				9694ABE92A5DFACA00BDF5F8 /* extensionUIImageView.swift in Sources */,
@@ -2617,6 +2736,7 @@
 				9694AC6E2A5E040D00BDF5F8 /* Extensions+UITextField.swift in Sources */,
 				CE9EBFF52B145CA20080A0F2 /* ReserveTheTripVC.swift in Sources */,
 				96B27F872A82F791006C8DB3 /* TermsOfUseVC.swift in Sources */,
+				04C737C82B36E044002AE59C /* helpAndSupportVC.swift in Sources */,
 				9694AC552A5E040D00BDF5F8 /* Themes.swift in Sources */,
 				9641AD342A6C2C1700A29046 /* OnboardingSlide.swift in Sources */,
 				9694AC042A5DFACA00BDF5F8 /* ValidationService.swift in Sources */,

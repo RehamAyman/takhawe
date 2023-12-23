@@ -1,18 +1,122 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="tripsSideMenuVC" customModule="Takhawi" customModuleProvider="target">
+            <connections>
+                <outlet property="segment" destination="2mi-V4-jrK" id="VrC-ie-maH"/>
+                <outlet property="view" destination="iN0-l3-epB" id="xCd-zF-Ajx"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trips" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2PP-BI-2x6">
+                    <rect key="frame" x="176.66666666666666" y="78.666666666666671" width="39.666666666666657" height="21"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                    <color key="textColor" name="MainColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YY0-Hm-Ptl" customClass="BackButton" customModule="Takhawi" customModuleProvider="target">
+                    <rect key="frame" x="20" y="69" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="TCA-V9-Z2q"/>
+                        <constraint firstAttribute="height" constant="40" id="p6p-8n-udB"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="Group 25"/>
+                </button>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2mi-V4-jrK" customClass="ColoredCustomUISegmentedControl" customModule="Takhawi" customModuleProvider="target">
+                    <rect key="frame" x="20" y="134" width="353" height="51"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="9SW-hz-XqJ"/>
+                    </constraints>
+                    <segments>
+                        <segment title="Upcoming"/>
+                        <segment title="Completed"/>
+                        <segment title="Cancelled"/>
+                    </segments>
+                </segmentedControl>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b0x-P2-PED">
+                    <rect key="frame" x="39" y="296" width="315.33333333333331" height="300"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="destination 1" translatesAutoresizingMaskIntoConstraints="NO" id="Wb7-Nh-cfD">
+                            <rect key="frame" x="37.666666666666686" y="10" width="240" height="128"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="128" id="cSY-fl-xpF"/>
+                                <constraint firstAttribute="width" constant="240" id="vNj-Dv-pJk"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There is no upcoming trips right now!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNC-CK-c4O">
+                            <rect key="frame" x="20" y="185" width="275.33333333333331" height="20"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zy4-Au-blO">
+                            <rect key="frame" x="78.666666666666671" y="230" width="157.66666666666663" height="50"/>
+                            <color key="backgroundColor" name="MainColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="0MV-qf-K3A"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Return to home"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="25"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" name="BackGroundColor"/>
+                    <constraints>
+                        <constraint firstItem="Wb7-Nh-cfD" firstAttribute="centerX" secondItem="b0x-P2-PED" secondAttribute="centerX" id="1Pg-UL-k23"/>
+                        <constraint firstAttribute="trailing" secondItem="pNC-CK-c4O" secondAttribute="trailing" constant="20" id="H6J-PB-puJ"/>
+                        <constraint firstItem="pNC-CK-c4O" firstAttribute="leading" secondItem="b0x-P2-PED" secondAttribute="leading" constant="20" id="Q8N-IN-Ck2"/>
+                        <constraint firstItem="Wb7-Nh-cfD" firstAttribute="top" secondItem="b0x-P2-PED" secondAttribute="top" constant="10" id="Xf6-4p-E0Y"/>
+                        <constraint firstItem="zy4-Au-blO" firstAttribute="centerX" secondItem="b0x-P2-PED" secondAttribute="centerX" id="dh1-U1-8VX"/>
+                        <constraint firstAttribute="bottom" secondItem="zy4-Au-blO" secondAttribute="bottom" constant="20" id="pvD-hl-Afu"/>
+                        <constraint firstItem="zy4-Au-blO" firstAttribute="top" secondItem="pNC-CK-c4O" secondAttribute="bottom" constant="25" id="rxn-Em-YZX"/>
+                        <constraint firstAttribute="height" constant="300" id="tEm-fB-XTl"/>
+                        <constraint firstItem="zy4-Au-blO" firstAttribute="width" secondItem="b0x-P2-PED" secondAttribute="width" multiplier="0.5" id="tq0-Pi-EZa"/>
+                    </constraints>
+                </view>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" name="BackGroundColor"/>
+            <constraints>
+                <constraint firstItem="b0x-P2-PED" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="5ba-xB-y92"/>
+                <constraint firstItem="YY0-Hm-Ptl" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="6Et-el-kvj"/>
+                <constraint firstItem="2mi-V4-jrK" firstAttribute="top" secondItem="YY0-Hm-Ptl" secondAttribute="bottom" constant="25" id="K15-IX-w3N"/>
+                <constraint firstItem="2PP-BI-2x6" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="M0M-QA-9qM"/>
+                <constraint firstItem="b0x-P2-PED" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="20" id="Ptg-Ge-1nz"/>
+                <constraint firstItem="YY0-Hm-Ptl" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="SyA-Ue-sfl"/>
+                <constraint firstItem="2mi-V4-jrK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="bZS-ni-PB0"/>
+                <constraint firstItem="2mi-V4-jrK" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="d19-so-bhH"/>
+                <constraint firstItem="2PP-BI-2x6" firstAttribute="centerY" secondItem="YY0-Hm-Ptl" secondAttribute="centerY" id="deI-ez-cXb"/>
+            </constraints>
+            <point key="canvasLocation" x="-24" y="20"/>
         </view>
     </objects>
+    <resources>
+        <image name="Group 25" width="41" height="40"/>
+        <image name="destination 1" width="120.33333587646484" height="120"/>
+        <namedColor name="BackGroundColor">
+            <color red="0.95300000905990601" green="0.95300000905990601" blue="0.97299998998641968" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="MainColor">
+            <color red="0.35294117647058826" green="0.25882352941176473" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

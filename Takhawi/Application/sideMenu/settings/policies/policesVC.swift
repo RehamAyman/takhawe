@@ -17,12 +17,7 @@ class policesVC: BaseVC {
     //MARK: - Properties -
     
     
-    //MARK: - Creation -
-    static func create() -> policesVC {
-        let vc = AppStoryboards.<#StoryboardCase#>.instantiate(policesVC.self)
-        vc.hidesBottomBarWhenPushed = true
-        return vc
-    }
+  
     
     // MARK: - Lifecycle -
     override func viewDidLoad() {

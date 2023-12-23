@@ -12,17 +12,13 @@ import UIKit
 class messagesViewVC: BaseVC {
     
     //MARK: - IBOutlets -
+    @IBOutlet weak var emptyView: UIView!
     
     
     //MARK: - Properties -
     
     
-    //MARK: - Creation -
-    static func create() -> messagesViewVC {
-        let vc = AppStoryboards.<#StoryboardCase#>.instantiate(messagesViewVC.self)
-        vc.hidesBottomBarWhenPushed = true
-        return vc
-    }
+  
     
     // MARK: - Lifecycle -
     override func viewDidLoad() {
@@ -41,6 +37,9 @@ class messagesViewVC: BaseVC {
     
     //MARK: - Actions -
     
+    @IBAction func gotoHome(_ sender: UIButton) {
+        self.pop(animated: true )
+    }
 }
 
 

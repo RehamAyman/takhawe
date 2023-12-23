@@ -37,12 +37,12 @@ class findingAdriverVC: BaseVC {
         loadingView.animationSpeed = 0.9
         loadingView.play()
         
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5 ) {
-//            if self.userCancel == false {
-//                self.didfindAdrivier?()
-//                self.dismiss(animated: true )
-//            }
-//        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5 ) {
+            if self.userCancel == false {
+                self.didfindAdrivier?()
+                self.dismiss(animated: true )
+            }
+        }
     }
     
 //MARK: - Logic Methods -

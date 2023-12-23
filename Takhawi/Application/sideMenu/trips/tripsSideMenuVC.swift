@@ -13,16 +13,13 @@ class tripsSideMenuVC: BaseVC {
     
     //MARK: - IBOutlets -
     
+    @IBOutlet weak var segment: ColoredCustomUISegmentedControl!
     
     //MARK: - Properties -
     
     
     //MARK: - Creation -
-    static func create() -> tripsSideMenuVC {
-        let vc = AppStoryboards.<#StoryboardCase#>.instantiate(tripsSideMenuVC.self)
-        vc.hidesBottomBarWhenPushed = true
-        return vc
-    }
+  
     
     // MARK: - Lifecycle -
     override func viewDidLoad() {
@@ -34,6 +31,7 @@ class tripsSideMenuVC: BaseVC {
     //MARK: - Design Methods -
     private func configureInitialDesign() {
         self.title = "".localized
+        self.setupsegment()
     }
     
     //MARK: - Logic Methods -

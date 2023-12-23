@@ -13,7 +13,9 @@ class settingsSideVC: BaseVC {
     
     //MARK: - IBOutlets -
     
+    @IBOutlet weak var logoutOutlet: UIButton!
     
+    @IBOutlet var stackViews: [UIView]!
     //MARK: - Properties -
     
     
@@ -29,11 +31,39 @@ class settingsSideVC: BaseVC {
     //MARK: - Design Methods -
     private func configureInitialDesign() {
         self.title = "".localized
+        self.logoutOutlet.imagePadding(spacing: 10)
+        for v in stackViews {
+            v.layer.addBasicShadow(cornerRadius: 12)
+            
+            switch v.tag {
+            case 1 : // polices
+                v.addTapGesture {
+                    let vc = policesVC()
+                    self.push(vc)
+                }
+               
+            case 2 : // support
+                v.addTapGesture {
+                   let vc = helpAndSupportVC()
+                    self.push(vc)
+                }
+            case 3 : // about us
+                print("about us ")
+                
+              
+                
+            default:
+                break
+            }
+        }
+        
+        
+        
     }
     
     //MARK: - Logic Methods -
     
-    
+   
     //MARK: - Actions -
     
 }
