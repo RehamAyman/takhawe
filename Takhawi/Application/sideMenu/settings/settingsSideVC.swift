@@ -55,6 +55,11 @@ class settingsSideVC: BaseVC {
                
             case 4 : // language
             print("lang")
+                v.addTapGesture {
+                    let vc = languageVC()
+                    self.push(vc)
+                }
+               
                 
               
                 
