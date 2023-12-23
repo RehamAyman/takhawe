@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04658F522B3746B500470F0D /* presentWithBlurEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04658F512B3746B500470F0D /* presentWithBlurEffect.swift */; };
 		04B4AFAC2B347F9100DAFEC2 /* cardsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B4AFAA2B347F9100DAFEC2 /* cardsCell.swift */; };
 		04B4AFAD2B347F9100DAFEC2 /* cardsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B4AFAB2B347F9100DAFEC2 /* cardsCell.xib */; };
 		04B4AFAF2B34830000DAFEC2 /* addamountVC+extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B4AFAE2B34830000DAFEC2 /* addamountVC+extentions.swift */; };
@@ -370,6 +371,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04658F512B3746B500470F0D /* presentWithBlurEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = presentWithBlurEffect.swift; sourceTree = "<group>"; };
 		04B4AFAA2B347F9100DAFEC2 /* cardsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardsCell.swift; sourceTree = "<group>"; };
 		04B4AFAB2B347F9100DAFEC2 /* cardsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cardsCell.xib; sourceTree = "<group>"; };
 		04B4AFAE2B34830000DAFEC2 /* addamountVC+extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "addamountVC+extentions.swift"; sourceTree = "<group>"; };
@@ -763,6 +765,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04658F502B3746A000470F0D /* present */ = {
+			isa = PBXGroup;
+			children = (
+				04658F512B3746B500470F0D /* presentWithBlurEffect.swift */,
+			);
+			path = present;
+			sourceTree = "<group>";
+		};
 		04B4AFA72B347F6400DAFEC2 /* cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -1177,6 +1187,7 @@
 		9694AB652A5DFACA00BDF5F8 /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
+				04658F502B3746A000470F0D /* present */,
 				CE3CACC52B2D8E2F0025990E /* animatedLoader */,
 				CE3B53AA2B2B18D8003D3043 /* appMainTextField */,
 				CE04D9C22B15F64000B41157 /* imageShimmering */,
@@ -2655,6 +2666,7 @@
 				9694ABC12A5DFACA00BDF5F8 /* APIParameters.swift in Sources */,
 				9694ABF62A5DFACA00BDF5F8 /* MarkerView.swift in Sources */,
 				9694ABFC2A5DFACA00BDF5F8 /* AlertView.swift in Sources */,
+				04658F522B3746B500470F0D /* presentWithBlurEffect.swift in Sources */,
 				CEF9737A2AC1D4B600CDCCFD /* UIResponder+Current.swift in Sources */,
 				CE22928B2B1E638300E8AB42 /* hotelCell.swift in Sources */,
 				963DAB362A803B64004ED3C7 /* RegisterDriverPersonalInfoCell.swift in Sources */,

@@ -9,7 +9,7 @@
 
 import UIKit
 
-class selectComplainVC: BaseVC, UITableViewDelegate, UITableViewDataSource {
+class selectComplainVC: BaseVC{
   
     
     
@@ -19,8 +19,20 @@ class selectComplainVC: BaseVC, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableview: UITableView!
     //MARK: - Properties -
+    var passComplainTitle : ((String) -> Void)?
+    var selectedItem : String = ""
+    var viewDismissed : (() -> Void)?
     
-    
+    var complains : [String] = [
+        "Vehicle not clean" ,
+        "Driver behavior" ,
+        "Route deviation" ,
+        "Fare disputes" ,
+        "Safety concerns" ,
+        "Lost items" ,
+        "Accessibility issues" ,
+       "Other issues"
+    ]
 
     
     // MARK: - Lifecycle -
@@ -41,29 +53,61 @@ class selectComplainVC: BaseVC, UITableViewDelegate, UITableViewDataSource {
     
     //MARK: - Logic Methods -
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "selectYourComplainCell", for: indexPath) as! selectYourComplainCell
-        
-        return cell
-    }
     
     
     
     //MARK: - Actions -
 
     @IBAction func selectItem(_ sender: UIButton) {
+        self.passComplainTitle?(self.selectedItem)
+        self.dismiss(animated: true )
     }
     @IBAction func dismiss(_ sender: UIButton) {
+        self.viewDismissed?()
+        self.dismiss(animated: true )
     }
 }
 
 
-//MARK: - Networking -
-extension selectComplainVC {
+//MARK: - tableview methods extention  -
+extension selectComplainVC : UITableViewDelegate, UITableViewDataSource   {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.complains.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "selectYourComplainCell", for: indexPath) as! selectYourComplainCell
+        let item = self.complains[indexPath.row]
+        cell.complainLabel.text = item
+       
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? selectYourComplainCell else {
+            return
+        }
+        cell.checkBox.isHidden = false
+        cell.checkBox.play()
+        self.selectedItem = cell.complainLabel.text ?? ""
+      
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as?  selectYourComplainCell else {
+            return
+        }
+        cell.checkBox.stop()
+        cell.checkBox.isHidden = true
+           
+       }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    
     
 }
 

@@ -1,0 +1,36 @@
+//
+//  presentWithBlurEffect.swift
+//  Takhawi
+//
+//  Created by Mac on 23/12/2023.
+//
+
+import Foundation
+
+
+
+extension BaseVC  {
+    func presentWithEffect ( vc : BaseVC ) {
+        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.light)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = self.view.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        blurEffectView.alpha = 0.8
+        blurEffectView.backgroundColor = UIColor(named: "MainColor")?.withAlphaComponent(0.12)
+        blurEffectView.tag = 101
+        self.view.addSubview(blurEffectView)
+        vc.modalTransitionStyle = .coverVertical
+        vc.modalPresentationStyle = .overCurrentContext
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.present( vc , animated: true )
+        }
+       
+        
+    }
+    
+    func removePresentEffect () {
+        if let viewWithTag = self.view.viewWithTag(101) {
+            viewWithTag.removeFromSuperview()
+        }
+    }
+}

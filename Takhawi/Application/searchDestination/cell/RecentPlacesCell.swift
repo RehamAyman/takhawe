@@ -18,7 +18,7 @@ class RecentPlacesCell: UITableViewCell {
         selectionStyle = .none
         checkMark.contentMode = .scaleAspectFit
         checkMark.loopMode = .playOnce
-        checkMark.animationSpeed = 0.5
+        checkMark.animationSpeed = 0.9
     }
 
     

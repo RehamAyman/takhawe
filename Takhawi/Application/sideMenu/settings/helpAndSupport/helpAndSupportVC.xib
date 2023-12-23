@@ -16,6 +16,7 @@
                 <outlet property="chooseComplain" destination="8qq-LL-SEu" id="lKl-Ka-Pjg"/>
                 <outlet property="chooseComplainHeight" destination="uyE-Pg-wSw" id="xB4-fj-ubT"/>
                 <outlet property="complainTextView" destination="Grp-Rp-c95" id="MtS-Nz-9Vd"/>
+                <outlet property="complaintextField" destination="Cmz-TV-45t" id="C50-Q4-vaB"/>
                 <outlet property="complanView" destination="cb5-35-8KI" id="iLy-wA-VhN"/>
                 <outlet property="view" destination="iN0-l3-epB" id="q71-XJ-Ikf"/>
             </connections>
@@ -77,12 +78,12 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8qq-LL-SEu">
                     <rect key="frame" x="20" y="313" width="335" height="50"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Your Complain" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXS-kK-bE8">
-                            <rect key="frame" x="15" y="16.666666666666686" width="144.66666666666666" height="17"/>
+                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cmz-TV-45t" customClass="MDCOutlinedTextField">
+                            <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                            <color key="textColor" systemColor="systemGrayColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 6" translatesAutoresizingMaskIntoConstraints="NO" id="C48-pL-ch7">
                             <rect key="frame" x="304" y="17" width="16" height="16"/>
                             <constraints>
@@ -93,19 +94,15 @@
                     </subviews>
                     <color key="backgroundColor" name="BackGroundColor"/>
                     <constraints>
-                        <constraint firstItem="aXS-kK-bE8" firstAttribute="leading" secondItem="8qq-LL-SEu" secondAttribute="leading" constant="15" id="2t8-3x-yLT"/>
+                        <constraint firstAttribute="bottom" secondItem="Cmz-TV-45t" secondAttribute="bottom" id="BYQ-DO-QL3"/>
                         <constraint firstItem="C48-pL-ch7" firstAttribute="centerY" secondItem="8qq-LL-SEu" secondAttribute="centerY" id="Tgi-JM-haU"/>
+                        <constraint firstItem="Cmz-TV-45t" firstAttribute="top" secondItem="8qq-LL-SEu" secondAttribute="top" id="evW-5X-eam"/>
                         <constraint firstAttribute="trailing" secondItem="C48-pL-ch7" secondAttribute="trailing" constant="15" id="swd-RY-kIJ"/>
-                        <constraint firstItem="aXS-kK-bE8" firstAttribute="centerY" secondItem="8qq-LL-SEu" secondAttribute="centerY" id="ugO-Yg-LUJ"/>
                         <constraint firstAttribute="height" constant="50" id="uyE-Pg-wSw"/>
+                        <constraint firstItem="Cmz-TV-45t" firstAttribute="leading" secondItem="8qq-LL-SEu" secondAttribute="leading" id="wzQ-Vl-Bqf"/>
+                        <constraint firstAttribute="trailing" secondItem="Cmz-TV-45t" secondAttribute="trailing" id="z8N-zc-VSY"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="25"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                            <real key="value" value="1.5"/>
-                        </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                             <color key="value" name="MainColor"/>
                         </userDefinedRuntimeAttribute>
@@ -188,9 +185,6 @@
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

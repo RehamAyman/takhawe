@@ -11,15 +11,16 @@ import Lottie
 class selectYourComplainCell: UITableViewCell {
     @IBOutlet weak var complainLabel: UILabel!
     @IBOutlet weak var checkBox: LottieAnimationView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.selectionStyle = .none
+        checkBox.contentMode = .scaleAspectFit
+        checkBox.loopMode = .playOnce
+        checkBox.animationSpeed = 0.9
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
-    }
     
 }

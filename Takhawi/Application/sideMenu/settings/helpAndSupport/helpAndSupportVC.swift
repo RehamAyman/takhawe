@@ -8,10 +8,12 @@
 
 
 import UIKit
+import MaterialComponents
 
 class helpAndSupportVC: BaseVC {
     
     //MARK: - IBOutlets -
+    @IBOutlet weak var complaintextField: MDCOutlinedTextField!
     @IBOutlet weak var checkBoxIcon: UIImageView!
     
     @IBOutlet weak var complainTextView: UITextView!
@@ -33,6 +35,8 @@ class helpAndSupportVC: BaseVC {
     //MARK: - Design Methods -
     private func configureInitialDesign() {
         self.title = "".localized
+        self.complaintextField.handelTextField(placeHolder: "Choose Your Complain")
+        self.complaintextField.label.text = "Your Complain"
         self.complainTextView.delegate = self
         self.complainTextView.text = "Write your complain here (minimum 10 characters)"
         self.complainTextView.textColor = UIColor.systemGray
@@ -59,10 +63,17 @@ class helpAndSupportVC: BaseVC {
             }
         }
         self.chooseComplain.addTapGesture {
-           let vc = selectComplainVC()
-            vc.modalTransitionStyle = .crossDissolve
-            vc.modalPresentationStyle = .overCurrentContext
-            self.present(vc, animated: true )
+
+       let vc = selectComplainVC()
+            vc.passComplainTitle = { text in
+                self.complaintextField.text = text
+                self.removePresentEffect()
+            }
+            vc.viewDismissed = {
+                self.removePresentEffect()
+            }
+            self.presentWithEffect(vc:  vc )
+
         }
     }
     
@@ -83,3 +94,4 @@ extension helpAndSupportVC {
 extension helpAndSupportVC {
     
 }
+

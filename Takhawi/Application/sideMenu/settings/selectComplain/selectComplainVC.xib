@@ -22,15 +22,6 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <visualEffectView opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hXq-H2-3zN">
-                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rqm-9a-l1o">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    </view>
-                    <color key="backgroundColor" red="0.35294117647058826" green="0.25882352941176473" blue="0.90196078431372551" alpha="0.11" colorSpace="custom" customColorSpace="sRGB"/>
-                    <blurEffect style="regular"/>
-                </visualEffectView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tcC-j6-Vhu">
                     <rect key="frame" x="0.0" y="255.66666666666669" width="393" height="596.33333333333326"/>
                     <subviews>
@@ -102,14 +93,10 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="hXq-H2-3zN" secondAttribute="bottom" id="5aW-fW-A8g"/>
-                <constraint firstAttribute="trailing" secondItem="hXq-H2-3zN" secondAttribute="trailing" id="5jd-aw-LWs"/>
                 <constraint firstItem="tcC-j6-Vhu" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.7" id="ULh-d5-ch0"/>
                 <constraint firstItem="tcC-j6-Vhu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="bkW-RI-ws8"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="tcC-j6-Vhu" secondAttribute="trailing" id="coF-bz-YZy"/>
                 <constraint firstAttribute="bottom" secondItem="tcC-j6-Vhu" secondAttribute="bottom" id="dDT-qa-aGn"/>
-                <constraint firstItem="hXq-H2-3zN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="tZk-ka-vKr"/>
-                <constraint firstItem="hXq-H2-3zN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="yhn-Fz-l3z"/>
             </constraints>
             <point key="canvasLocation" x="64.885496183206101" y="19.718309859154932"/>
         </view>
