@@ -27,7 +27,7 @@ class reserveTheTripCell: UITableViewCell {
         // Initialization code
     checkMarkView.contentMode = .scaleAspectFit
     checkMarkView.loopMode = .playOnce
-    checkMarkView.animationSpeed = 0.5
+    checkMarkView.animationSpeed = 0.9
 ////
   
     }

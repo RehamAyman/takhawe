@@ -12,7 +12,6 @@ import SwiftUI
 
 
 class selectDateVC: BaseVC {
-    @IBOutlet weak var amPmSegment: UISegmentedControl!
     
     @IBOutlet weak var containerHeight: NSLayoutConstraint!
     //MARK: - IBOutlets -
@@ -21,9 +20,8 @@ class selectDateVC: BaseVC {
     @IBOutlet weak var timeContainerView: UIView!
     
     @IBOutlet weak var calendarView: UIView!
-    @IBOutlet weak var visualView: UIVisualEffectView!
     @IBOutlet weak var mainView: UIView!
-    var action: (() -> Void)?
+    var dismissAction: (() -> Void)?
     
     @ObservedObject var weekStoreModel =  WeekStore()
 //MARK: - Properties -
@@ -61,11 +59,7 @@ class selectDateVC: BaseVC {
         
        
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4)  { [weak self] in
-            self?.visualView.isHidden = false
-            
-            
-        }
+    
           
     }
     
@@ -87,15 +81,11 @@ class selectDateVC: BaseVC {
     }
     
     
-    @IBAction func selectTime(_ sender: UIButton) {
-        self.action?()
-    
-      
-    }
+  
     
     
     @IBAction func cancel(_ sender: UIButton) {
-        self.visualView.isHidden = true
+        self.dismissAction?()
         self.dismiss(animated: true )
       
     }

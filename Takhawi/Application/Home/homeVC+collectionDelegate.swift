@@ -40,6 +40,7 @@ extension homeVC : UICollectionViewDelegate , UICollectionViewDataSource , UICol
           label.sizeToFit()
         return CGSize(width: 25  , height: 25 )
     }
+   
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

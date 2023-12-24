@@ -15,25 +15,17 @@ extension selectDateVC {
     
 
     func impedCalendarSwiftui () {
-     
        // swiftUIView.view.translatesAutoresizingMaskIntoConstraints = false
         addChild(swiftUIView)
-        swiftUIView.view.frame = calendarView.bounds
+       // swiftUIView.view.frame = calendarView.bounds
+        let screenSize = UIScreen.main.bounds
+        swiftUIView.view.centerInSuperview(size: CGSize(width: screenSize.width  , height: calendarView.frame.height))
         swiftUIView.view.sizeToFit()
         calendarView.addSubview(swiftUIView.view)
         swiftUIView.didMove(toParent: self)
     }
         
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
-       {
-           let touch = touches.first
-           
-        if touch?.view == self.visualView {
-            self.dismiss(animated: true, completion: nil)
-           }
-           
-       
-       }
+ 
     
     
 }

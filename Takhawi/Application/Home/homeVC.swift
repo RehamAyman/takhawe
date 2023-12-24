@@ -206,9 +206,22 @@ class homeVC: BaseVC, sendDataBackDelegate{
     
     
     @IBAction func joinatripsegmentbutton(_ sender: UIButton) {
+        let vc = homeSearchVC ()
+        vc.modalTransitionStyle = .coverVertical
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.selectAndDismiss = { string in
+            self.joinTripDestButton.setTitle( string , for: .normal)
+        }
         let pushVc = mapSearchVC()
-        pushVc.delegate = self 
-        self.push(pushVc)
+        pushVc.delegate = self
+        present( vc , animated: true )
+        vc.onCommit  = {  [weak self] in
+            self?.push(pushVc)
+        }
+            
+      //  pushVc.delegate = self
+        
+       // self.push(pushVc)
     }
     
     @IBAction func searchAction(_ sender: UIButton) {
@@ -244,21 +257,14 @@ class homeVC: BaseVC, sendDataBackDelegate{
     @IBAction func calendarAction(_ sender: UIButton) {
         
         let vc = selectDateVC()
-        vc.modalTransitionStyle = .coverVertical
-        vc.modalPresentationStyle = .overCurrentContext
         vc.comeFromMakeAtrip = segment.selectedSegmentIndex == 0 ? false : true
-        present(vc , animated: true )
+        self.presentWithEffect(vc:  vc )
         vc.change = {  [weak self] (value) in
-            
             self?.calendarOutlet.setTitle( value , for: .normal)
-            
-            
+            self?.removePresentEffect()
         }
-        vc.action = {
-            let vc = selectTimeVC()
-              vc.modalTransitionStyle = .coverVertical
-              vc.modalPresentationStyle = .overCurrentContext
-              self.present( vc , animated: true )
+        vc.dismissAction = {
+            self.removePresentEffect()
         }
         
 

@@ -70,10 +70,10 @@ class driverProfileVC: BaseVC {
     
     
     @IBAction func reserveYourSeatAction(_ sender: UIButton) {
-        sender.animateButtonWhenPressed {
+        
             let vc = ReserveTheTripVC()
             self.push(vc)
-        }
+       
     }
     
     @IBAction func fullGoogleView(_ sender: UIButton) {

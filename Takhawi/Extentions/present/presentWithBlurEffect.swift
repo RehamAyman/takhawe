@@ -21,9 +21,7 @@ extension BaseVC  {
         self.view.addSubview(blurEffectView)
         vc.modalTransitionStyle = .coverVertical
         vc.modalPresentationStyle = .overCurrentContext
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            self.present( vc , animated: true )
-        }
+        self.present( vc , animated: true )
        
         
     }

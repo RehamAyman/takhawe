@@ -10,7 +10,7 @@
 import UIKit
 import SwiftUI
 import CollectionViewPagingLayout
-import IQKeyboardManagerSwift
+
 
 class swiftRegisterVC: BaseVC {
     
@@ -28,8 +28,11 @@ class swiftRegisterVC: BaseVC {
 // MARK: - Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         self.configureInitialDesign()
     }
+  
+    
     
     
 //MARK: - Design Methods -
@@ -49,7 +52,6 @@ class swiftRegisterVC: BaseVC {
         collectionview.isPagingEnabled = true // enabling paging effect
         layout.numberOfVisibleItems = nil 
         
-        IQKeyboardManager.shared.enable = false 
         
     
     }

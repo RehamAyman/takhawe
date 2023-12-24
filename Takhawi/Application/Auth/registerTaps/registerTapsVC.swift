@@ -44,6 +44,10 @@ class registerTapsVC: BaseVC {
         self.navigationController?.navigationBar.isHidden = true
         self.importSwiftuiView()
     }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        IQKeyboardManager.shared.enable = true
+    }
     
     
 //MARK: - Design Methods -

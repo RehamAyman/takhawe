@@ -60,9 +60,11 @@ class tripListVC: BaseVC {
     @IBAction func filter(_ sender: UIButton) {
         sender.animateButtonWhenPressed {
             let vc = filterViewVC()
-            vc.modalTransitionStyle = .coverVertical
-            vc.modalPresentationStyle = .overCurrentContext
-            self.present( vc , animated: true )
+            vc.dismissAction = {
+                self.removePresentEffect()
+            }
+            self.presentWithEffect(vc: vc)
+            
         }
       
     }

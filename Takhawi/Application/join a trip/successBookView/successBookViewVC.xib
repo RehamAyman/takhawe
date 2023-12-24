@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -49,39 +49,44 @@
                             </connections>
                         </button>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="juicy-check-mark 1" translatesAutoresizingMaskIntoConstraints="NO" id="rt1-Pf-kwn">
-                            <rect key="frame" x="49" y="60" width="192" height="100"/>
+                            <rect key="frame" x="43.5" y="60" width="203" height="120"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="100" id="JuV-hE-NfR"/>
+                                <constraint firstAttribute="height" constant="120" id="JuV-hE-NfR"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yn-mf-Gvo">
-                            <rect key="frame" x="0.0" y="190" width="290" height="23"/>
-                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                            <rect key="frame" x="0.0" y="205" width="290" height="24"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                             <color key="textColor" name="MainColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your booking has been placed sent to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pcm-9v-RWo">
-                            <rect key="frame" x="26.5" y="221" width="237" height="16.5"/>
+                            <rect key="frame" x="26.5" y="237" width="237" height="16.5"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="driver name " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="0Bj-a7-cbG">
-                            <rect key="frame" x="10" y="240.5" width="270" height="15.5"/>
+                            <rect key="frame" x="10" y="256.5" width="270" height="15.5"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJy-ZM-2NP">
-                            <rect key="frame" x="20" y="320" width="250" height="50"/>
+                            <rect key="frame" x="25" y="310" width="240" height="55"/>
                             <color key="backgroundColor" name="MainColor"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="50" id="GVx-PS-dGI"/>
+                                <constraint firstAttribute="height" constant="55" id="GVx-PS-dGI"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title="Track your trip"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="27.5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="confirmAction:" destination="-1" eventType="touchUpInside" id="Drm-cq-sp7"/>
                             </connections>
@@ -89,21 +94,21 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="CJy-ZM-2NP" firstAttribute="leading" secondItem="xXz-ZK-cfH" secondAttribute="leading" constant="20" id="4tH-zA-9Yw"/>
+                        <constraint firstItem="CJy-ZM-2NP" firstAttribute="leading" secondItem="xXz-ZK-cfH" secondAttribute="leading" constant="25" id="4tH-zA-9Yw"/>
                         <constraint firstItem="4Ta-dN-NJX" firstAttribute="top" secondItem="xXz-ZK-cfH" secondAttribute="top" constant="20" id="5WZ-L4-8ow"/>
                         <constraint firstAttribute="trailing" secondItem="3yn-mf-Gvo" secondAttribute="trailing" id="6hV-ni-OsD"/>
                         <constraint firstItem="rt1-Pf-kwn" firstAttribute="top" secondItem="xXz-ZK-cfH" secondAttribute="top" constant="60" id="7jF-LP-S7j"/>
-                        <constraint firstAttribute="bottom" secondItem="CJy-ZM-2NP" secondAttribute="bottom" constant="10" id="F34-po-OUT"/>
+                        <constraint firstAttribute="bottom" secondItem="CJy-ZM-2NP" secondAttribute="bottom" constant="15" id="F34-po-OUT"/>
                         <constraint firstItem="0Bj-a7-cbG" firstAttribute="leading" secondItem="xXz-ZK-cfH" secondAttribute="leading" constant="10" id="GgR-vE-opO"/>
                         <constraint firstItem="Pcm-9v-RWo" firstAttribute="centerX" secondItem="xXz-ZK-cfH" secondAttribute="centerX" id="JpC-V0-KxW"/>
                         <constraint firstItem="0Bj-a7-cbG" firstAttribute="top" secondItem="Pcm-9v-RWo" secondAttribute="bottom" constant="3" id="LwS-yx-Lkd"/>
                         <constraint firstItem="0Bj-a7-cbG" firstAttribute="centerX" secondItem="xXz-ZK-cfH" secondAttribute="centerX" id="Yzh-48-yPe"/>
-                        <constraint firstAttribute="trailing" secondItem="CJy-ZM-2NP" secondAttribute="trailing" constant="20" id="ZEq-tW-SmQ"/>
+                        <constraint firstAttribute="trailing" secondItem="CJy-ZM-2NP" secondAttribute="trailing" constant="25" id="ZEq-tW-SmQ"/>
                         <constraint firstItem="rt1-Pf-kwn" firstAttribute="centerX" secondItem="xXz-ZK-cfH" secondAttribute="centerX" id="hMn-Ar-pgV"/>
-                        <constraint firstItem="rt1-Pf-kwn" firstAttribute="width" secondItem="xXz-ZK-cfH" secondAttribute="width" multiplier="0.661157" id="hR1-aW-D02"/>
+                        <constraint firstItem="rt1-Pf-kwn" firstAttribute="width" secondItem="xXz-ZK-cfH" secondAttribute="width" multiplier="0.7" id="hR1-aW-D02"/>
                         <constraint firstAttribute="height" constant="380" id="lPj-yU-WIu"/>
                         <constraint firstItem="Pcm-9v-RWo" firstAttribute="top" secondItem="3yn-mf-Gvo" secondAttribute="bottom" constant="8" id="nsl-cZ-K2l"/>
-                        <constraint firstItem="3yn-mf-Gvo" firstAttribute="top" secondItem="rt1-Pf-kwn" secondAttribute="bottom" constant="30" id="rmm-3e-Acl"/>
+                        <constraint firstItem="3yn-mf-Gvo" firstAttribute="top" secondItem="rt1-Pf-kwn" secondAttribute="bottom" constant="25" id="rmm-3e-Acl"/>
                         <constraint firstItem="3yn-mf-Gvo" firstAttribute="leading" secondItem="xXz-ZK-cfH" secondAttribute="leading" id="spu-Ln-Mk2"/>
                         <constraint firstAttribute="trailing" secondItem="4Ta-dN-NJX" secondAttribute="trailing" constant="20" id="xGz-fR-MQm"/>
                         <constraint firstAttribute="trailing" secondItem="0Bj-a7-cbG" secondAttribute="trailing" constant="10" id="xRk-p5-1Zm"/>

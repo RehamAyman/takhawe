@@ -188,61 +188,50 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
 //MARK: - SEGMENT VIEW ANIMATED METHODS
     
     func segmentOneAction () {
-    
+       
+      
         self.locationOutlet.isHidden = true
+        self.containetStackView.removeArrangedSubview(self.collectionContainerView)
         self.UserLocationOutlet.isHidden = true
         self.chooseFeatureCollection.isHidden = true
-   
-        
-        UIView.animate(withDuration: 0.8 , animations: {
-            
-            if self.tripHaveDestination {
-              
-                self.containetStackView.addArrangedSubview(self.joinTripDestButton)
+     
+        self.joinTripOutlet.setTitle("Join the trip" , for: .normal)
+        if self.tripHaveDestination {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
                 self.joinTripDestButton.isHidden = false
-            } else {
-                self.searchView.isHidden = false
-                self.searchViewContainerHeight.constant = 40
             }
+           
+            self.containetStackView.addArrangedSubview(self.joinTripDestButton)
+        } else {
+            self.searchView.isHidden = false
+            self.searchViewContainerHeight.constant = 40
+        }
+        
+        self.viewHeight.constant = 185
+        
+        UIView.animate(withDuration: 0.5 , animations: {
+           
+         
             
-            
-            
-            self.viewHeight.constant = 185
-            self.joinTripOutlet.setTitle("Join the trip" , for: .normal)
-          
-            self.containetStackView.removeArrangedSubview(self.collectionContainerView)
-          
-            
-            
-            
-          
-             self.view.layoutIfNeeded()
+            self.view.layoutIfNeeded()
         })
     }
   
     func segmentTwoAction () {
-
-        self.viewHeight.constant = 290
+     
+        self.searchViewContainerHeight.constant = 0
+        self.searchView.isHidden = true
+        self.joinTripOutlet.setTitle( "Create Trip", for: .normal)
         self.joinTripDestButton.isHidden = true
+        self.containetStackView.addArrangedSubview(self.collectionContainerView)
+        self.containetStackView.removeArrangedSubview( self.joinTripDestButton)
+        self.locationOutlet.isHidden = false
+        self.UserLocationOutlet.isHidden = false
+        self.chooseFeatureCollection.isHidden = false
+        self.viewHeight.constant = 290
         
-       
-        UIView.animate(withDuration: 0.8 , animations: {
-            self.joinTripOutlet.setTitle( "Create Trip", for: .normal)
-            self.searchView.isHidden = true
-            
-            self.searchViewContainerHeight.constant = 0
-            self.containetStackView.removeArrangedSubview( self.joinTripDestButton)
-            
-            self.locationOutlet.isHidden = false
-            self.UserLocationOutlet.isHidden = false
-            self.chooseFeatureCollection.isHidden = false
-            self.containetStackView.addArrangedSubview(self.collectionContainerView)
-            
-            
-            
-            
-            
-            
+        UIView.animate(withDuration: 0.5 , animations: {
+           
             self.view.layoutIfNeeded()
         })
       

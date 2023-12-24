@@ -35,9 +35,8 @@ class successBookViewVC: BaseVC {
 //MARK: - Design Methods -
     private func configureInitialDesign() {
         self.title = "".localized
-        self.mainView.layer.addBasicShadow(cornerRadius: 20)
-        self.confirmOutlet.layer.addBasicShadow(cornerRadius: Float(self.confirmOutlet.layer.frame.height) / 2  )
-        
+        self.mainView.layer.addBasicShadow(cornerRadius: 35 )
+      
        
         
        
