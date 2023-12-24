@@ -18,6 +18,7 @@ class addAmountVC : BaseVC  {
     
     @IBOutlet weak var addAmountTextField: MDCOutlinedTextField!
     @IBOutlet weak var cardeView: UIView!
+   
     //MARK: - Properties -
     lazy var swiftUIView = UIHostingController(rootView: animatedCartSwiftuiView())
 
@@ -39,15 +40,21 @@ class addAmountVC : BaseVC  {
   
         
         self.addChild(swiftUIView)
-        swiftUIView.view.frame = cardeView.frame
+        let screenSize: CGRect = UIScreen.main.bounds
+        
         swiftUIView.view.backgroundColor = UIColor.clear
-        swiftUIView.view.centerInSuperview(size: self.cardeView.frame.size)
+        
+        swiftUIView.view.centerInSuperview(size: CGSize(width: screenSize.width , height: 250 ))
+       
+        swiftUIView.view.tag = 909
         cardeView.addSubview(swiftUIView.view)
+        
         swiftUIView.didMove(toParent: self)
         
-        
+      
         
        
+        
        
 
         
@@ -58,6 +65,14 @@ class addAmountVC : BaseVC  {
     //MARK: - actions
     
     
+    @IBAction func backButton(_ sender: UIButton) {
+        
+        if let viewWithTag = self.view.viewWithTag(909) {
+            viewWithTag.removeFromSuperview()
+        }
+        self.pop(animated: true )
+        
+    }
     
 }
 

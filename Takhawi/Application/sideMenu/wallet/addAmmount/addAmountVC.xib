@@ -27,7 +27,7 @@
                     <color key="textColor" name="MainColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97A-AH-Tfl" customClass="BackButton" customModule="Takhawi" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97A-AH-Tfl">
                     <rect key="frame" x="20" y="69" width="40" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="ViL-Qg-x6Y"/>
@@ -35,6 +35,9 @@
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" image="Group 25"/>
+                    <connections>
+                        <action selector="backButton:" destination="-1" eventType="touchUpInside" id="3dv-Jf-IFa"/>
+                    </connections>
                 </button>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jQf-uK-9N5" customClass="MDCOutlinedTextField">
                     <rect key="frame" x="20" y="139" width="353" height="50"/>
@@ -106,6 +109,7 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jQf-uK-9N5" secondAttribute="trailing" constant="20" id="kD5-Rn-mwY"/>
                 <constraint firstItem="8fp-aH-dXV" firstAttribute="top" secondItem="9r1-XB-8WC" secondAttribute="bottom" constant="20" id="l8H-70-539"/>
                 <constraint firstItem="97A-AH-Tfl" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="m2c-F6-qyO"/>
+                <constraint firstItem="BBR-Af-LRn" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="nIh-gb-MCf"/>
                 <constraint firstItem="dHl-aX-l6v" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="qWQ-Yl-lIj"/>
                 <constraint firstItem="8fp-aH-dXV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="wry-Vb-RNe"/>
             </constraints>

@@ -14,6 +14,7 @@
 		04658F522B3746B500470F0D /* presentWithBlurEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04658F512B3746B500470F0D /* presentWithBlurEffect.swift */; };
 		04658F552B374DF900470F0D /* baseSuccessAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04658F542B374DF900470F0D /* baseSuccessAlertVC.swift */; };
 		04658F572B374E0400470F0D /* baseSuccessAlertVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04658F562B374E0400470F0D /* baseSuccessAlertVC.xib */; };
+		049F9F122B384E78003A8DAF /* cardsSwiftuiEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F9F112B384E78003A8DAF /* cardsSwiftuiEffect.swift */; };
 		04B4AFAC2B347F9100DAFEC2 /* cardsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B4AFAA2B347F9100DAFEC2 /* cardsCell.swift */; };
 		04B4AFAD2B347F9100DAFEC2 /* cardsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B4AFAB2B347F9100DAFEC2 /* cardsCell.xib */; };
 		04B4AFAF2B34830000DAFEC2 /* addamountVC+extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B4AFAE2B34830000DAFEC2 /* addamountVC+extentions.swift */; };
@@ -384,6 +385,7 @@
 		04658F512B3746B500470F0D /* presentWithBlurEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = presentWithBlurEffect.swift; sourceTree = "<group>"; };
 		04658F542B374DF900470F0D /* baseSuccessAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baseSuccessAlertVC.swift; sourceTree = "<group>"; };
 		04658F562B374E0400470F0D /* baseSuccessAlertVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = baseSuccessAlertVC.xib; sourceTree = "<group>"; };
+		049F9F112B384E78003A8DAF /* cardsSwiftuiEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardsSwiftuiEffect.swift; sourceTree = "<group>"; };
 		04B4AFAA2B347F9100DAFEC2 /* cardsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardsCell.swift; sourceTree = "<group>"; };
 		04B4AFAB2B347F9100DAFEC2 /* cardsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cardsCell.xib; sourceTree = "<group>"; };
 		04B4AFAE2B34830000DAFEC2 /* addamountVC+extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "addamountVC+extentions.swift"; sourceTree = "<group>"; };
@@ -871,6 +873,7 @@
 				04B659E92B34519B00E78752 /* animatedCartSwiftuiView.swift */,
 				04B659EB2B3451EB00E78752 /* cardModel.swift */,
 				04B659EF2B345DA800E78752 /* cartItemVView.swift */,
+				049F9F112B384E78003A8DAF /* cardsSwiftuiEffect.swift */,
 			);
 			path = animatedCart;
 			sourceTree = "<group>";
@@ -2777,6 +2780,7 @@
 				CEDDBE1C2ACC0DAB00677C94 /* sideMenuModel.swift in Sources */,
 				9694AC002A5DFACA00BDF5F8 /* Print.swift in Sources */,
 				CE9757C52AE0F0BD0014346E /* tripListVC.swift in Sources */,
+				049F9F122B384E78003A8DAF /* cardsSwiftuiEffect.swift in Sources */,
 				9694AC6B2A5E040D00BDF5F8 /* Language.swift in Sources */,
 				9694ABEA2A5DFACA00BDF5F8 /* extensionUIViewController.swift in Sources */,
 				9641AD312A6C29DD00A29046 /* OnboardingViewController.swift in Sources */,
