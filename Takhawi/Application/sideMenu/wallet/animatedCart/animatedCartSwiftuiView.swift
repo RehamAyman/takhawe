@@ -17,7 +17,7 @@ struct animatedCartSwiftuiView : View {
     var body: some View {
       
        
-        SnapCarousel(spacing: 15  , trialingSpace: 110, index: $currentIndex, items: CardModel.cards) { card in
+        SnapCarousel(spacing: 15  , trialingSpace: 100, index: $currentIndex, items: CardModel.cards) { card in
             GeometryReader{proxy in
              //   let size = proxy.size
                

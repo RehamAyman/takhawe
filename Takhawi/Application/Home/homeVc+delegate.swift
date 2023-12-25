@@ -16,12 +16,15 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
     
     func finishPassing(location: String, lat: Double, lng: Double) {
         
-        self.tripHaveDestination = true 
+        
+        self.tripHaveDestination = true
+        self.joinatripButtonHeight.constant = 40
         self.joinTripDestButton.isHidden = false
+        self.frchooseDestinationViewHeight.constant = 0
         self.searchView.isHidden = true
-        self.searchViewContainerHeight.constant = 0
         self.joinTripDestButton.setTitle(location, for: .normal)
-        self.containetStackView.addArrangedSubview(   self.joinTripDestButton )
+      
+    
         
         
     }
@@ -128,7 +131,7 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
 
                                 if let lines = place.lines {
                                     print("GEOCODE: Formatted Address: \(lines)")
-                                    self.UserLocationOutlet.setTitle(lines[0], for: .normal)
+                                 self.secMyLocationOutlet.setTitle(lines[0], for: .normal)
                                 }
 
                             } else {
@@ -188,24 +191,36 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
 //MARK: - SEGMENT VIEW ANIMATED METHODS
     
     func segmentOneAction () {
-       
+        self.containetStackView.isHidden = false
+        self.containetStackView.isUserInteractionEnabled = true
+        self.secMakeAtripStack.isHidden = true
+        self.secMakeAtripStack.isUserInteractionEnabled = false
+        
       
-        self.locationOutlet.isHidden = true
-        self.containetStackView.removeArrangedSubview(self.collectionContainerView)
-        self.UserLocationOutlet.isHidden = true
-        self.chooseFeatureCollection.isHidden = true
-     
-        self.joinTripOutlet.setTitle("Join the trip" , for: .normal)
+//        self.locationOutlet.isHidden = true
+//        self.containetStackView.removeArrangedSubview(self.collectionContainerView)
+//        self.UserLocationOutlet.isHidden = true
+//        self.chooseFeatureCollection.isHidden = true
+//     
+//        self.joinTripOutlet.setTitle("Join the trip" , for: .normal)
         if self.tripHaveDestination {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
-                self.joinTripDestButton.isHidden = false
-            }
-           
-            self.containetStackView.addArrangedSubview(self.joinTripDestButton)
+            self.joinatripButtonHeight.constant = 40
+            self.joinTripDestButton.isHidden = false
+            self.frchooseDestinationViewHeight.constant = 0
         } else {
-            self.searchView.isHidden = false
-            self.searchViewContainerHeight.constant = 40
+            self.frchooseDestinationViewHeight.constant = 45
+            self.joinatripButtonHeight.constant = 0
+            self.joinTripDestButton.isHidden = true
         }
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+//                self.joinTripDestButton.isHidden = false
+//            }
+//           
+//            self.containetStackView.addArrangedSubview(self.joinTripDestButton)
+//        } else {
+//            self.searchView.isHidden = false
+//            self.searchViewContainerHeight.constant = 40
+//        }
         
         self.viewHeight.constant = 185
         
@@ -218,17 +233,23 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
     }
   
     func segmentTwoAction () {
+        
+        self.containetStackView.isHidden = true
+        self.containetStackView.isUserInteractionEnabled = false
+        self.secMakeAtripStack.isHidden = false
+        self.secMakeAtripStack.isUserInteractionEnabled = true
+        
      
-        self.searchViewContainerHeight.constant = 0
-        self.searchView.isHidden = true
-        self.joinTripOutlet.setTitle( "Create Trip", for: .normal)
-        self.joinTripDestButton.isHidden = true
-        self.containetStackView.addArrangedSubview(self.collectionContainerView)
-        self.containetStackView.removeArrangedSubview( self.joinTripDestButton)
-        self.locationOutlet.isHidden = false
-        self.UserLocationOutlet.isHidden = false
-        self.chooseFeatureCollection.isHidden = false
-        self.viewHeight.constant = 290
+//        self.searchViewContainerHeight.constant = 0
+//        self.searchView.isHidden = true
+//        self.joinTripOutlet.setTitle( "Create Trip", for: .normal)
+//        self.joinTripDestButton.isHidden = true
+//        self.containetStackView.addArrangedSubview(self.collectionContainerView)
+//        self.containetStackView.removeArrangedSubview( self.joinTripDestButton)
+//        self.locationOutlet.isHidden = false
+//        self.UserLocationOutlet.isHidden = false
+//        self.chooseFeatureCollection.isHidden = false
+        self.viewHeight.constant = 320
         
         UIView.animate(withDuration: 0.5 , animations: {
            
@@ -247,15 +268,25 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
              let titleTextAttributes1 = [NSAttributedString.Key.foregroundColor: UIColor(named: "MainColor")]
         segment.setTitleTextAttributes(titleTextAttributes1 as [NSAttributedString.Key : Any], for:.selected)
         segmentContainerView.layer.applySketchShadow(color: .black)
+      //  segment.layer.masksToBounds = NO;
+        
+    
+       
+        
         
       //  self.containetStackView.removeFromSuperview(self.joinTripDestButton)
-        self.viewHeight.constant = 185
-        self.locationOutlet.isHidden = true
-        self.UserLocationOutlet.isHidden = true
-        self.chooseFeatureCollection.isHidden = true
-        self.containetStackView.removeArrangedSubview(self.collectionContainerView)
+          self.viewHeight.constant = 185
         self.joinTripDestButton.isHidden = true
-        self.containetStackView.removeArrangedSubview( self.joinTripDestButton)
+        self.joinatripButtonHeight.constant = 0
+        self.frchooseDestinationViewHeight.constant = 45
+//        self.locationOutlet.isHidden = true
+//        self.UserLocationOutlet.isHidden = true
+//        self.chooseFeatureCollection.isHidden = true
+//        self.containetStackView.removeArrangedSubview(self.collectionContainerView)
+//        self.joinTripDestButton.isHidden = true
+//        self.containetStackView.removeArrangedSubview( self.joinTripDestButton)
+        self.containetStackView.isHidden = false
+        self.secMakeAtripStack.isHidden = true
         
         self.view.layoutIfNeeded()
     }

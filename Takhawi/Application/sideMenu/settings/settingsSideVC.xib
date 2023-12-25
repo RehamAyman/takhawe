@@ -198,6 +198,9 @@
                             <real key="value" value="25"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="logout:" destination="-1" eventType="touchUpInside" id="mRb-7c-Ncv"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

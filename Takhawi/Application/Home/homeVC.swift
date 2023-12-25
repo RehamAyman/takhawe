@@ -21,16 +21,20 @@ class homeVC: BaseVC, sendDataBackDelegate{
     
 //MARK: - IBOutlets -
     
+    @IBOutlet weak var secCalendar: UIButton!
+    @IBOutlet weak var secMydestinationOutlet: UIButton!
+    @IBOutlet weak var secMyLocationOutlet: UIButton!
+    @IBOutlet weak var frchooseDestinationViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var joinatripButtonHeight: NSLayoutConstraint!
+    @IBOutlet weak var secMakeAtripStack: UIStackView!
     @IBOutlet weak var visualView: UIVisualEffectView!
     @IBOutlet weak var sideMenuContainer: UIView!
     @IBOutlet weak var hotelIconOutlet: UIButton!
     @IBOutlet weak var joinTripDestButton: UIButton!
-    @IBOutlet weak var searchViewContainerHeight: NSLayoutConstraint!
     @IBOutlet weak var containetStackView: UIStackView!
-    @IBOutlet weak var tapView: UIView!
+//    @IBOutlet weak var tapView: UIView!
     @IBOutlet weak var containerView: UIView!
     
-    @IBOutlet weak var collectionContainerView: UIView!
     @IBOutlet weak var chooseFeatureCollection: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var viewHeight: NSLayoutConstraint!
@@ -41,9 +45,7 @@ class homeVC: BaseVC, sendDataBackDelegate{
     @IBOutlet weak var segmentContainerView: UIView!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var segment: UISegmentedControl!
-    @IBOutlet weak var UserLocationOutlet: UIButton!
     @IBOutlet weak var calendarOutlet: UIButton!
-    @IBOutlet weak var locationOutlet: UIButton!
     
     
     @IBOutlet weak var joinTripOutlet: UIButton!
@@ -51,6 +53,11 @@ class homeVC: BaseVC, sendDataBackDelegate{
     @IBOutlet weak var sideMenuWidth: NSLayoutConstraint!
     
     
+    enum DispkayedTasks {
+        case jointrip
+        case maketrip
+    }
+    var displayedTask = DispkayedTasks.jointrip
     
     
 //MARK: - Properties -
@@ -86,13 +93,12 @@ class homeVC: BaseVC, sendDataBackDelegate{
         tableView.dataSource = self
         tableView.register(UINib(nibName: "sideMenuCell", bundle: nil), forCellReuseIdentifier: "sideMenuCell")
         self.hotelIconOutlet.isHidden = false 
-        
-        
-        
-        
-      
+        self.secCalendar.imagePadding(spacing: 8)
+        self.secMyLocationOutlet.imagePadding(spacing: 8)
+        self.secMydestinationOutlet.imagePadding(spacing: 8)
+        self.secCalendar.setTitle( "\(Date().dateToString ?? "--") , 3:00 PM " , for: .normal)
        
-       
+
         
 
     }
@@ -122,10 +128,9 @@ class homeVC: BaseVC, sendDataBackDelegate{
         self.chooseFeatureCollection.register(cellType: chooseFeatureCell.self)
         self.chooseFeatureCollection.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
 
-        calendarOutlet.imagePadding(spacing: 5)
-        locationOutlet.imagePadding(spacing: 5)
-        UserLocationOutlet.imagePadding(spacing: 5)
-        joinTripDestButton.imagePadding(spacing: 5)
+        calendarOutlet.imagePadding(spacing: 8)
+
+        joinTripDestButton.imagePadding(spacing: 8)
 
   
     }
@@ -138,6 +143,30 @@ class homeVC: BaseVC, sendDataBackDelegate{
  
     
 //MARK: - Actions -
+    
+    @IBAction func secMyLoactionAction(_ sender: UIButton) {
+    }
+    
+    @IBAction func secMyDestinationAction(_ sender: UIButton) {
+   
+        
+        
+    }
+    @IBAction func secCalendarAction(_ sender: UIButton) {
+        let vc = selectDateVC()
+        vc.comeFromMakeAtrip =  true
+        self.presentWithEffect(vc:  vc )
+        vc.makeAtripCalendar = {  [weak self] (value) in
+            self?.secCalendar.setTitle( value , for: .normal)
+            self?.removePresentEffect()
+        }
+        vc.dismissAction = {
+            self.removePresentEffect()
+        }
+        
+       
+    }
+    
     @IBAction func sideMenuAction(_ sender: UIButton) {
         menu  == false ? self.showMenu() : self.hideMenu()
        
@@ -211,6 +240,7 @@ class homeVC: BaseVC, sendDataBackDelegate{
         vc.modalPresentationStyle = .overCurrentContext
         vc.selectAndDismiss = { string in
             self.joinTripDestButton.setTitle( string , for: .normal)
+            
         }
         let pushVc = mapSearchVC()
         pushVc.delegate = self
@@ -238,9 +268,14 @@ class homeVC: BaseVC, sendDataBackDelegate{
                 self.tripHaveDestination = true
                 self.joinTripDestButton.isHidden = false
                 self.searchView.isHidden = true
-                self.searchViewContainerHeight.constant = 0
                 self.joinTripDestButton.setTitle( string , for: .normal)
-                self.containetStackView.addArrangedSubview(   self.joinTripDestButton )
+              
+                
+                self.joinatripButtonHeight.constant = 40
+                
+                self.frchooseDestinationViewHeight.constant = 0
+                
+              
             }
             
             
@@ -273,12 +308,7 @@ class homeVC: BaseVC, sendDataBackDelegate{
     }
     
     
-    @IBAction func changeMyLoacation(_ sender: UIButton) {
-        
-    }
-    @IBAction func chooseYourDestination(_ sender: UIButton) {
-    }
-    
+  
     @IBAction func hideSidemenuButton(_ sender: UIButton) {
         self.hideMenu()
     }
@@ -286,9 +316,11 @@ class homeVC: BaseVC, sendDataBackDelegate{
     @IBAction func segmentAction(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             print("hey iam 0 ")
+            self.displayedTask = .jointrip
             self.segmentOneAction()
         }  else {
             print("heey iam 1 ")
+            self.displayedTask = .maketrip
             self.segmentTwoAction()
         }
     }

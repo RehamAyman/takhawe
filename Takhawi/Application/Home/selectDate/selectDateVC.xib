@@ -17,6 +17,7 @@
                 <outlet property="mainView" destination="kUl-BI-gc1" id="f1e-1O-9fO"/>
                 <outlet property="timeContainerHeight" destination="TNQ-C4-2JV" id="0MK-fA-3f4"/>
                 <outlet property="timeContainerView" destination="53e-yG-8Gy" id="wqH-Uy-KoS"/>
+                <outlet property="timePicker" destination="pVB-c3-M67" id="XS3-ul-k8k"/>
                 <outlet property="view" destination="iN0-l3-epB" id="OwH-M5-03P"/>
             </connections>
         </placeholder>

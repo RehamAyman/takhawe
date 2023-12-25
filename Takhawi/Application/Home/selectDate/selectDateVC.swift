@@ -12,6 +12,7 @@ import SwiftUI
 
 
 class selectDateVC: BaseVC {
+    @IBOutlet weak var timePicker: UIDatePicker!
     
     @IBOutlet weak var containerHeight: NSLayoutConstraint!
     //MARK: - IBOutlets -
@@ -27,7 +28,8 @@ class selectDateVC: BaseVC {
 //MARK: - Properties -
     lazy var swiftUIView = UIHostingController(rootView: WeeksTabView(weekStoreModel: self.weekStoreModel) )
     var change : ((String) -> Void)?
-    var comeFromMakeAtrip : Bool = false 
+    var makeAtripCalendar : ((String) -> Void)?
+    var comeFromMakeAtrip : Bool = false
     
 // MARK: - Lifecycle -
     override func viewDidLoad() {
@@ -74,6 +76,9 @@ class selectDateVC: BaseVC {
         print(weekStoreModel.stringSelected)
         
         self.change?(weekStoreModel.stringSelected)
+        if comeFromMakeAtrip {
+            self.makeAtripCalendar?("\(weekStoreModel.stringSelected) ,\(self.timePicker.date.timeToString())")
+        }
         self.dismiss(animated: true )
         
         

@@ -39,8 +39,12 @@ struct SnapCarousel<Content: View, T: Identifiable>: View {
             HStack(spacing: spacing) {
                 ForEach(list){item in
                     content(item)
-                        .frame(width: proxy.size.width - trialingSpace)
-                      //  .offset(y: getOffset(item: item, width: width))
+                        .frame(width:   proxy.size.width - trialingSpace)
+                        
+                        .offset(y: getOffset(item: item, width: width))
+                       
+                    
+                    
                 }
             } // END HSTACK
             .padding(.horizontal, spacing)
@@ -81,7 +85,7 @@ struct SnapCarousel<Content: View, T: Identifiable>: View {
         let next = getIndex(item: item) + 1 == currentIndex ? (offset < 0 ? -topOffset : topOffset) : 0
         let checkBetween = currentIndex >= 0 && currentIndex < list.count ? (getIndex(item: item) - 1 == currentIndex ? previous : next) : 0
         
-        return getIndex(item: item) == currentIndex ? -60 - topOffset : checkBetween
+        return getIndex(item: item) == currentIndex ? -20 : checkBetween
     }
     
     // MARK: FETCH INDEX

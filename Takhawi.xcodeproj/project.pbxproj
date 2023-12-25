@@ -33,6 +33,8 @@
 		04B659EA2B34519B00E78752 /* animatedCartSwiftuiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B659E92B34519B00E78752 /* animatedCartSwiftuiView.swift */; };
 		04B659EC2B3451EB00E78752 /* cardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B659EB2B3451EB00E78752 /* cardModel.swift */; };
 		04B659F02B345DA800E78752 /* cartItemVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B659EF2B345DA800E78752 /* cartItemVView.swift */; };
+		04BE0D472B394BB3004E6EB1 /* logoutPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BE0D462B394BB3004E6EB1 /* logoutPopUp.xib */; };
+		04BE0D4B2B395194004E6EB1 /* logoutpopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BE0D4A2B395194004E6EB1 /* logoutpopVC.swift */; };
 		04C737A82B36C77E002AE59C /* messagesViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C737A72B36C77E002AE59C /* messagesViewVC.swift */; };
 		04C737AA2B36C792002AE59C /* messagesViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C737A92B36C792002AE59C /* messagesViewVC.xib */; };
 		04C737B32B36D1C0002AE59C /* tripsSideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C737B22B36D1C0002AE59C /* tripsSideMenuVC.swift */; };
@@ -404,6 +406,8 @@
 		04B659E92B34519B00E78752 /* animatedCartSwiftuiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animatedCartSwiftuiView.swift; sourceTree = "<group>"; };
 		04B659EB2B3451EB00E78752 /* cardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardModel.swift; sourceTree = "<group>"; };
 		04B659EF2B345DA800E78752 /* cartItemVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cartItemVView.swift; sourceTree = "<group>"; };
+		04BE0D462B394BB3004E6EB1 /* logoutPopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = logoutPopUp.xib; sourceTree = "<group>"; };
+		04BE0D4A2B395194004E6EB1 /* logoutpopVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logoutpopVC.swift; sourceTree = "<group>"; };
 		04C737A72B36C77E002AE59C /* messagesViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = messagesViewVC.swift; sourceTree = "<group>"; };
 		04C737A92B36C792002AE59C /* messagesViewVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = messagesViewVC.xib; sourceTree = "<group>"; };
 		04C737B22B36D1C0002AE59C /* tripsSideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripsSideMenuVC.swift; sourceTree = "<group>"; };
@@ -876,6 +880,15 @@
 				049F9F112B384E78003A8DAF /* cardsSwiftuiEffect.swift */,
 			);
 			path = animatedCart;
+			sourceTree = "<group>";
+		};
+		04BE0D432B394B8D004E6EB1 /* logOut */ = {
+			isa = PBXGroup;
+			children = (
+				04BE0D462B394BB3004E6EB1 /* logoutPopUp.xib */,
+				04BE0D4A2B395194004E6EB1 /* logoutpopVC.swift */,
+			);
+			path = logOut;
 			sourceTree = "<group>";
 		};
 		04C737A62B36C75F002AE59C /* messages */ = {
@@ -2173,6 +2186,7 @@
 		CEBB8B942ADE95D300E70EC4 /* sideMenu */ = {
 			isa = PBXGroup;
 			children = (
+				04BE0D432B394B8D004E6EB1 /* logOut */,
 				04C737B82B36D45B002AE59C /* settings */,
 				04C737AB2B36CB2B002AE59C /* trips */,
 				04C737A62B36C75F002AE59C /* messages */,
@@ -2496,6 +2510,7 @@
 				CE2D4AF42B1863B9008D556E /* JwaDQrIWWe.json in Resources */,
 				04C737B52B36D1D7002AE59C /* tripsSideMenuVC.xib in Resources */,
 				CEEDC01F2B2E0FF40017C804 /* notificationViewVC.xib in Resources */,
+				04BE0D472B394BB3004E6EB1 /* logoutPopUp.xib in Resources */,
 				0426FBC92B37605C0017F12A /* languageVC.xib in Resources */,
 				CE3021352ABB908E00572DE7 /* enterPasswordVC.xib in Resources */,
 				04C737D62B37142B002AE59C /* selectYourComplainCell.xib in Resources */,
@@ -2758,6 +2773,7 @@
 				9694AC712A5E040D00BDF5F8 /* Extensions+UITextView.swift in Sources */,
 				9694ABE92A5DFACA00BDF5F8 /* extensionUIImageView.swift in Sources */,
 				CE30213F2ABBAB1100572DE7 /* verificationVC.swift in Sources */,
+				04BE0D4B2B395194004E6EB1 /* logoutpopVC.swift in Sources */,
 				9694AC072A5DFACA00BDF5F8 /* NSNotificationNames.swift in Sources */,
 				CEBB8BA52ADEEC1900E70EC4 /* profileVc+delegate.swift in Sources */,
 				9694ABD52A5DFACA00BDF5F8 /* UIImageExtention.swift in Sources */,
@@ -3008,8 +3024,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
-				DEVELOPMENT_TEAM = 95K26889X5;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_TEAM = CA5NVSJ377;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
 				FRAMEWORK_SEARCH_PATHS = "${inherited}";
@@ -3049,8 +3065,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
-				DEVELOPMENT_TEAM = 95K26889X5;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_TEAM = CA5NVSJ377;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				FRAMEWORK_SEARCH_PATHS = "${inherited}";

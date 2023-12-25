@@ -66,7 +66,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BBR-Af-LRn">
-                    <rect key="frame" x="0.0" y="288.33333333333331" width="393" height="269.99999999999994"/>
+                    <rect key="frame" x="0.0" y="308.33333333333331" width="393" height="269.99999999999994"/>
                     <color key="backgroundColor" name="BackGroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="270" id="Dkt-LX-C8T"/>
@@ -95,7 +95,7 @@
             <constraints>
                 <constraint firstItem="BBR-Af-LRn" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="25C-dD-awq"/>
                 <constraint firstItem="jQf-uK-9N5" firstAttribute="top" secondItem="97A-AH-Tfl" secondAttribute="bottom" constant="30" id="GMK-6D-zGV"/>
-                <constraint firstItem="BBR-Af-LRn" firstAttribute="top" secondItem="8fp-aH-dXV" secondAttribute="bottom" constant="20" id="HeI-xG-6Hk"/>
+                <constraint firstItem="BBR-Af-LRn" firstAttribute="top" secondItem="8fp-aH-dXV" secondAttribute="bottom" constant="40" id="HeI-xG-6Hk"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="BBR-Af-LRn" secondAttribute="trailing" id="Ina-yS-bsG"/>
                 <constraint firstItem="8fp-aH-dXV" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Mus-tC-hrV"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="dHl-aX-l6v" secondAttribute="bottom" constant="10" id="O9C-UO-9Kz"/>
