@@ -12,6 +12,7 @@ PODS:
   - CountdownLabel (4.0.1)
   - EasyTipView (2.1.0)
   - EDCarousel (0.0.1)
+  - EMTNeumorphicView (1.0.4)
   - GoogleMaps (3.1.0):
     - GoogleMaps/Maps (= 3.1.0)
   - GoogleMaps/Base (3.1.0)
@@ -148,6 +149,7 @@ DEPENDENCIES:
   - CountdownLabel
   - EasyTipView (~> 2.1)
   - EDCarousel
+  - EMTNeumorphicView
   - GoogleMaps
   - GooglePlacePicker
   - GooglePlaces
@@ -169,6 +171,7 @@ SPEC REPOS:
     - CountdownLabel
     - EasyTipView
     - EDCarousel
+    - EMTNeumorphicView
     - GooglePlacePicker
     - HSCycleGalleryView
     - ImageSlideshow
@@ -196,6 +199,7 @@ SPEC CHECKSUMS:
   CountdownLabel: c9975e3f329140b5e7d1f45cd63b1300badd1712
   EasyTipView: a92b6edc377b81c5ac18e9fd35d5ee78e9409488
   EDCarousel: 758aeba7c487c52572d9a7faf80937d0b58e97ee
+  EMTNeumorphicView: cb5e92953e43b1872ab47fefd451a9ce0c16fc77
   GoogleMaps: 5c13302e6fe6bb6e686b267196586b91cd594225
   GooglePlacePicker: fa975116ac202ac29822c0a79758ea1c4db5a95f
   GooglePlaces: e874db179f2675c4f3eeda0b686b540273a578b0
@@ -208,6 +212,6 @@ SPEC CHECKSUMS:
   OTPFieldView: 700a752fe62c41d1c4914c78aa500fb30d97c255
   PureLayout: 5fb5e5429519627d60d079ccb1eaa7265ce7cf88
 
-PODFILE CHECKSUM: c3a3e9a5f590e7d4551a617788c714e36ccc5776
+PODFILE CHECKSUM: 277b5e051526ce4d2fe54db6f4c0600551725cbe
 
 COCOAPODS: 1.14.3

@@ -3,6 +3,7 @@ ${BUILT_PRODUCTS_DIR}/CHIOTPField/CHIOTPField.framework
 ${BUILT_PRODUCTS_DIR}/CollectionViewPagingLayout/CollectionViewPagingLayout.framework
 ${BUILT_PRODUCTS_DIR}/CountdownLabel/CountdownLabel.framework
 ${BUILT_PRODUCTS_DIR}/EDCarousel/EDCarousel.framework
+${BUILT_PRODUCTS_DIR}/EMTNeumorphicView/EMTNeumorphicView.framework
 ${BUILT_PRODUCTS_DIR}/EasyTipView/EasyTipView.framework
 ${BUILT_PRODUCTS_DIR}/HSCycleGalleryView/HSCycleGalleryView.framework
 ${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework

@@ -267,7 +267,13 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
 
              let titleTextAttributes1 = [NSAttributedString.Key.foregroundColor: UIColor(named: "MainColor")]
         segment.setTitleTextAttributes(titleTextAttributes1 as [NSAttributedString.Key : Any], for:.selected)
-        segmentContainerView.layer.applySketchShadow(color: .black)
+        
+        
+        let titleTextAttributes2 = [NSAttributedString.Key.foregroundColor: UIColor.lightGray]
+        segment.setTitleTextAttributes(titleTextAttributes2 as [NSAttributedString.Key : Any], for:.normal)
+        
+        
+//        segmentContainerView.layer.applySketchShadow(color: .black)
       //  segment.layer.masksToBounds = NO;
         
     

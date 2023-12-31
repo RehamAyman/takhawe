@@ -12,6 +12,7 @@ import CoreLocation
 import GoogleMaps
 
 import AlertKit
+import EMTNeumorphicView
 
 
 
@@ -21,6 +22,7 @@ class homeVC: BaseVC, sendDataBackDelegate{
     
 //MARK: - IBOutlets -
     
+    @IBOutlet weak var CContainerSegment: UIView!
     @IBOutlet weak var secCalendar: UIButton!
     @IBOutlet weak var secMydestinationOutlet: UIButton!
     @IBOutlet weak var secMyLocationOutlet: UIButton!
@@ -42,7 +44,7 @@ class homeVC: BaseVC, sendDataBackDelegate{
     @IBOutlet weak var menuOutlet: UIButton!
     @IBOutlet weak var googleMaps: GMSMapView!
     @IBOutlet weak var searchView: UIView!
-    @IBOutlet weak var segmentContainerView: UIView!
+    @IBOutlet weak var segmentContainerView: EMTNeumorphicView!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var segment: UISegmentedControl!
     @IBOutlet weak var calendarOutlet: UIButton!
@@ -97,8 +99,18 @@ class homeVC: BaseVC, sendDataBackDelegate{
         self.secMyLocationOutlet.imagePadding(spacing: 8)
         self.secMydestinationOutlet.imagePadding(spacing: 8)
         self.secCalendar.setTitle( "\(Date().dateToString ?? "--") , 3:00 PM " , for: .normal)
-       
-
+        
+        
+        
+        self.segmentContainerView.neumorphicLayer?.cornerType = .all
+        self.segmentContainerView.neumorphicLayer?.depthType = .concave
+        self.segmentContainerView.neumorphicLayer?.lightShadowOpacity = 0.4
+        self.segmentContainerView.neumorphicLayer?.shadowColor = UIColor(named: "seg")?.cgColor
+        //self.segmentContainerView.neumorphicLayer?.elementColor = UIColor.white.cgColor
+        self.segmentContainerView.neumorphicLayer?.elementDepth = 4
+        self.segmentContainerView.neumorphicLayer?.backgroundColor = UIColor.white.cgColor
+        self.segment.backgroundColor = UIColor.clear
+        self.CContainerSegment.layer.applySketchShadow(color: .black)
         
 
     }
@@ -121,7 +133,6 @@ class homeVC: BaseVC, sendDataBackDelegate{
         locationManager.requestLocation()
         self.initialSegment()
         self.sideMenuContainer.layer.addBasicShadow(cornerRadius: 25 )
-     
       
         chooseFeatureCollection.delegate = self
         chooseFeatureCollection.dataSource = self
@@ -131,6 +142,8 @@ class homeVC: BaseVC, sendDataBackDelegate{
         calendarOutlet.imagePadding(spacing: 8)
 
         joinTripDestButton.imagePadding(spacing: 8)
+        
+    
 
   
     }
@@ -209,19 +222,20 @@ class homeVC: BaseVC, sendDataBackDelegate{
                 vc1.modalTransitionStyle = .coverVertical
                 vc1.modalPresentationStyle = .overCurrentContext
                 self.bottomView.isHidden = true
-                self.segmentContainerView.isHidden = true
+                self.CContainerSegment.isHidden = true
+                
                 self.hotelIconOutlet.isHidden = true
                 self.present(vc1 , animated: true)
                 vc1.cancel = {
                     self.hotelIconOutlet.isHidden = false
                     self.bottomView.isHidden = false
-                    self.segmentContainerView.isHidden = false
+                    self.CContainerSegment.isHidden = false
                 }
                 vc1.didfindAdrivier = {
                     self.hotelIconOutlet.isHidden = false
                     let vc = driverOffersVC()
                     self.bottomView.isHidden = false
-                    self.segmentContainerView.isHidden = false
+                    self.CContainerSegment.isHidden = false
                     self.push(vc)
                 }
             }

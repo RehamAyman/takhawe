@@ -36,7 +36,6 @@ struct registerTabs: View {
                     Spacer()
                 }.padding(.leading)
                 .padding(.trailing)
-               
                 .padding(.top)
 
             Text ("Signup")
@@ -44,7 +43,7 @@ struct registerTabs: View {
                 .font(.custom(AppFont.Bold.rawValue, size: 33))
                
                  .foregroundColor(Color("MainColor"))
-                 .padding(12)
+                 .padding(8)
                 
            
         

@@ -35,6 +35,8 @@ target 'Takhawi' do
   pod 'HSCycleGalleryView'
   
   pod 'EDCarousel'
+  pod 'EMTNeumorphicView'
+  
 
   
   

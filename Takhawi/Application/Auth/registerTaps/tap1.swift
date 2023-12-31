@@ -10,14 +10,13 @@ import SwiftUI
 struct tap1: View {
     @State var email : String = ""
     var body: some View {
-        VStack ( spacing: 30) {
+        VStack ( spacing: 12) {
           
           Image("arroba 1")
                 .resizable()
-                .scaledToFit()
+         //       .scaledToFit()
                 .frame(width: 120, height: 120)
              
-                
             
             TextField( "Enter Your Email Address", text: $email)
                 .font(.custom(AppFont.Regular.rawValue, size: 14))

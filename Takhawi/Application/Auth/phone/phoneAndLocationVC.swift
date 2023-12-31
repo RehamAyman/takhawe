@@ -26,7 +26,14 @@ class phoneAndLocationVC: BaseVC, UITextFieldDelegate {
        // self.mainStackView.busAnimation(item: self.logoImage)
         self.passwordTextField.delegate = self
    
+     
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.passwordTextField.becomeFirstResponder()
+    }
+    
     
 //MARK: - actions
 

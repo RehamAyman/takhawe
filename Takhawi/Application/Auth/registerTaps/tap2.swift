@@ -17,7 +17,7 @@ struct tap2: View {
     
     
     var body: some View {
-        VStack ( spacing: 10) {
+        VStack ( spacing: 12) {
           
           Image("padlock 1")
                 .resizable()

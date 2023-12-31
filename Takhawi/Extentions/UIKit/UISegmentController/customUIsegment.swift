@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import EMTNeumorphicView
+
+
 
 
 
@@ -19,6 +22,7 @@ class CustomUISegmentedControl: UISegmentedControl{
         //background
         layer.cornerRadius = bounds.height/2
        
+       
         //foreground
         let foregroundIndex = numberOfSegments
         if subviews.indices.contains(foregroundIndex), let foregroundImageView = subviews[foregroundIndex] as? UIImageView
@@ -28,6 +32,10 @@ class CustomUISegmentedControl: UISegmentedControl{
             foregroundImageView.layer.removeAnimation(forKey: "SelectionBounds")    //this removes the weird scaling animation!
             foregroundImageView.layer.masksToBounds = true
             foregroundImageView.layer.cornerRadius = foregroundImageView.bounds.height/2
+            
+            
+            
+            
         }
     }
 }

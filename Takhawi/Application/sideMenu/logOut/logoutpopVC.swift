@@ -24,6 +24,7 @@ class logoutpopVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureInitialDesign()
+        view.layer.addBasicShadow(cornerRadius: 20)
     }
     
     
