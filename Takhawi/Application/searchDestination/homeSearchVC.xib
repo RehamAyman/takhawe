@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -60,6 +60,7 @@
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                             <real key="value" value="27.5"/>
                                         </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Search"/>
                                     </userDefinedRuntimeAttributes>
                                 </textField>
                             </subviews>
@@ -80,22 +81,28 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recent places" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRN-vs-Kf7">
-                            <rect key="frame" x="19.999999999999993" y="75" width="112.33333333333331" height="20.333333333333329"/>
+                            <rect key="frame" x="19.999999999999993" y="80" width="112.33333333333331" height="20.333333333333329"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Recent places"/>
+                            </userDefinedRuntimeAttributes>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nuy-Df-f3z">
-                            <rect key="frame" x="286" y="68" width="87" height="34.333333333333343"/>
+                            <rect key="frame" x="286" y="71" width="87" height="38.333333333333343"/>
                             <color key="tintColor" name="MainColor"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Clear All"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Clear All"/>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="clearAllAction:" destination="-1" eventType="touchUpInside" id="7AW-G3-um3"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SEu-vF-uGN">
-                            <rect key="frame" x="30" y="115.33333333333334" width="343" height="32"/>
+                            <rect key="frame" x="30" y="120.33333333333334" width="343" height="32"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="32" id="R5E-PN-Cqa"/>
                             </constraints>
@@ -103,6 +110,9 @@
                             <color key="tintColor" name="MainColor"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="8" maxY="0.0"/>
                             <state key="normal" title="Choose from Map" image="Vector 1"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Choose from Map"/>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="chooseOnMaps:" destination="-1" eventType="touchUpInside" id="rEp-el-bMt"/>
                             </connections>
@@ -122,6 +132,7 @@
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                             <real key="value" value="25"/>
                                         </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Select"/>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="selectPlace:" destination="-1" eventType="touchUpInside" id="D9x-F0-lnu"/>
@@ -139,6 +150,7 @@
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                             <real key="value" value="25"/>
                                         </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Cancel"/>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="cancel:" destination="-1" eventType="touchUpInside" id="wiK-NL-c0r"/>
@@ -150,7 +162,7 @@
                             </constraints>
                         </stackView>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="H4u-0O-Qd5">
-                            <rect key="frame" x="20" y="167.33333333333334" width="353" height="404.33333333333326"/>
+                            <rect key="frame" x="20" y="172.33333333333334" width="353" height="399.33333333333326"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </tableView>
                     </subviews>
@@ -169,7 +181,7 @@
                         <constraint firstAttribute="trailing" secondItem="SEu-vF-uGN" secondAttribute="trailing" constant="20" id="gu2-lO-V1K"/>
                         <constraint firstAttribute="bottom" secondItem="71p-AZ-8vU" secondAttribute="bottom" constant="50" id="l9i-4o-REK"/>
                         <constraint firstItem="nuy-Df-f3z" firstAttribute="centerY" secondItem="TRN-vs-Kf7" secondAttribute="centerY" id="lxY-qY-aNN"/>
-                        <constraint firstItem="TRN-vs-Kf7" firstAttribute="top" secondItem="8SO-14-A5Q" secondAttribute="bottom" constant="10" id="nfS-Wq-z0g"/>
+                        <constraint firstItem="TRN-vs-Kf7" firstAttribute="top" secondItem="8SO-14-A5Q" secondAttribute="bottom" constant="15" id="nfS-Wq-z0g"/>
                         <constraint firstAttribute="trailing" secondItem="8SO-14-A5Q" secondAttribute="trailing" constant="20" id="oCQ-RR-jZr"/>
                         <constraint firstItem="8SO-14-A5Q" firstAttribute="top" secondItem="tfq-2m-zCw" secondAttribute="top" constant="20" id="tgW-ku-c5a"/>
                         <constraint firstItem="H4u-0O-Qd5" firstAttribute="leading" secondItem="tfq-2m-zCw" secondAttribute="leading" constant="20" id="vef-9D-g66"/>

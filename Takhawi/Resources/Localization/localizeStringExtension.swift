@@ -53,35 +53,38 @@ extension StringProtocol {
     }
 }
 
-public extension UILabel {
-    @IBInspectable var localizeKey: String? {
-        get {
-            return text
-        }
-        set {
-            text = NSLocalizedString(newValue ?? "", comment: "")
-        }
-    }
-}
+//public extension UILabel {
+//    @IBInspectable var localizeKey: String? {
+//        get {
+//            return text
+//        }
+//        set {
+//            text = NSLocalizedString(newValue ?? "", comment: "")
+//        }
+//    }
+//}
 
-public extension UIButton {
-    @IBInspectable var localizeKey: String? {
-        get {
-            return titleLabel?.text
-        }
-        set {
-            setTitle(NSLocalizedString(newValue ?? "", comment: ""), for: .normal)
-        }
-    }
-}
 
-public extension UITextField {
-    @IBInspectable var localizeKey: String? {
-        get {
-            return placeholder
-        }
-        set {
-            placeholder = NSLocalizedString(newValue ?? "", comment: "")
-        }
-    }
-}
+
+//public extension UIButton {
+//    @IBInspectable var localizeKey: String? {
+//        get {
+//            return titleLabel?.text
+//        }
+//        set {
+//            
+//            setTitle(NSLocalizedString(newValue ?? "", comment: ""), for: .normal)
+//        }
+//    }
+//}
+
+//public extension UITextField {
+//    @IBInspectable var localizeKey: String? {
+//        get {
+//            return placeholder
+//        }
+//        set {
+//            placeholder = NSLocalizedString(newValue ?? "", comment: "")
+//        }
+//    }
+//}

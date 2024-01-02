@@ -7,16 +7,16 @@
 
 import Foundation
 struct publicSideMenu {
-   static let items : [sideMenuDataModel]  = [
+    let items : [sideMenuDataModel]  = [
         
-        sideMenuDataModel(name: "Switch to Driver", icon: "side2") ,
-        sideMenuDataModel(name: "Personal Info", icon: "side1") ,
-        sideMenuDataModel(name: "Notification", icon: "side3")  ,
-        sideMenuDataModel(name: "Messages", icon: "side4") ,
-        sideMenuDataModel(name: "Favorite", icon: "side5") ,
-        sideMenuDataModel(name: "Wallet", icon: "side6") ,
-        sideMenuDataModel(name: "Trips", icon: "side7") ,
-        sideMenuDataModel(name: "Settings", icon: "side8")
+    sideMenuDataModel(name: "Switch to Driver".localize, icon: "side2") ,
+    sideMenuDataModel(name: "Personal Info".localize, icon: "side1") ,
+        sideMenuDataModel(name: "Notification".localize, icon: "side3")  ,
+        sideMenuDataModel(name: "Messages".localize, icon: "side4") ,
+        sideMenuDataModel(name: "Favorite".localize, icon: "side5") ,
+        sideMenuDataModel(name: "Wallet".localize, icon: "side6") ,
+        sideMenuDataModel(name: "Trips".localize, icon: "side7") ,
+        sideMenuDataModel(name: "Settings".localize, icon: "side8")
     ]
     
     

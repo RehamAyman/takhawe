@@ -36,7 +36,7 @@ target 'Takhawi' do
   
   pod 'EDCarousel'
   pod 'EMTNeumorphicView'
-  
+  pod 'JDStatusBarNotification'
 
   
   

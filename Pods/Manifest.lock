@@ -27,6 +27,7 @@ PODS:
   - ImageSlideshow (1.9.2):
     - ImageSlideshow/Core (= 1.9.2)
   - ImageSlideshow/Core (1.9.2)
+  - JDStatusBarNotification (2.2.1)
   - lottie-ios (3.5.0)
   - MaterialComponents/AnimationTiming (124.2.0)
   - MaterialComponents/Availability (124.2.0)
@@ -155,6 +156,7 @@ DEPENDENCIES:
   - GooglePlaces
   - HSCycleGalleryView
   - ImageSlideshow (~> 1.9.0)
+  - JDStatusBarNotification
   - lottie-ios
   - "MaterialComponents/TextControls+FilledTextAreas"
   - "MaterialComponents/TextControls+FilledTextFields"
@@ -175,6 +177,7 @@ SPEC REPOS:
     - GooglePlacePicker
     - HSCycleGalleryView
     - ImageSlideshow
+    - JDStatusBarNotification
     - lottie-ios
     - MaterialComponents
     - MDFInternationalization
@@ -205,6 +208,7 @@ SPEC CHECKSUMS:
   GooglePlaces: e874db179f2675c4f3eeda0b686b540273a578b0
   HSCycleGalleryView: 5101435175a26d08f1c062cf6cb245f58f09b425
   ImageSlideshow: be305b54eaf2b2cfc7a7141c7c734605d44dc07d
+  JDStatusBarNotification: d43e8481174a2c5f195d16ce65c611f4a12bf507
   lottie-ios: c55158d67d0629a260625cc2ded2052b829e3c3e
   MaterialComponents: 1a9b2d9d45b1601ae544de85089adc4c464306d4
   MDFInternationalization: d697c55307816222a55685c4ccb1044ffb030c12
@@ -212,6 +216,6 @@ SPEC CHECKSUMS:
   OTPFieldView: 700a752fe62c41d1c4914c78aa500fb30d97c255
   PureLayout: 5fb5e5429519627d60d079ccb1eaa7265ce7cf88
 
-PODFILE CHECKSUM: 277b5e051526ce4d2fe54db6f4c0600551725cbe
+PODFILE CHECKSUM: 96cd90f7589227149dbae0b7ef921fe4974de3ff
 
 COCOAPODS: 1.14.3

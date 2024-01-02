@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSServices.provideAPIKey("AIzaSyA7nhBa7YZtIb6KoG47O0_y2PwxYfsHiBs")
         GMSPlacesClient.provideAPIKey("AIzaSyA7nhBa7YZtIb6KoG47O0_y2PwxYfsHiBs")
    
-        Language.setAppLanguage(lang: "en")
+        
         AppDelegate.window?.tintColor = UIColor(named: "MainColor")
         
         
@@ -64,3 +64,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 
 }
+
+

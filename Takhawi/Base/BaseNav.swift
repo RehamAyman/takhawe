@@ -30,7 +30,7 @@ class BaseNav: UINavigationController {
     }
     private func setupGester() {
         interactivePopGestureRecognizer?.delegate = self
-        self.view.semanticContentAttribute = Language.isRTL() ? .forceRightToLeft : .forceLeftToRight
+        self.view.semanticContentAttribute = LocalizationManager.shared.getLanguage() == .Arabic  ? .forceRightToLeft : .forceLeftToRight
     }
 
 }

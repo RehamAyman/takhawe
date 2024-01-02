@@ -36,7 +36,7 @@ class OTPVC: BaseVC, OTPFieldViewDelegate {
         setupView()
         otpStackView.animateToLeft()
         self.resendCodeButton.isHidden = true
-        if Language.isRTL() {
+        if LocalizationManager.shared.getLanguage() == .Arabic {
             otpStackView.semanticContentAttribute = .forceRightToLeft
         } else {
             otpStackView.semanticContentAttribute = .forceLeftToRight

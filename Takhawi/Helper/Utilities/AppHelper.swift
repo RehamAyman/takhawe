@@ -23,7 +23,7 @@ struct AppHelper {
         UIApplication.shared.windows.first?.rootViewController = vc
         let window = UIApplication.shared.windows.first { $0.isKeyWindow }
         guard let window = window else {return}
-        UIView.transition(with: window, duration: 0.3, options: Language.isRTL() ? .transitionCurlUp : .transitionCurlDown, animations: nil, completion: nil)
+        UIView.transition(with: window, duration: 0.3, options: LocalizationManager.shared.getLanguage() == .Arabic  ? .transitionCurlUp : .transitionCurlDown, animations: nil, completion: nil)
     }
 
     static func openUrl(_ url: String?) {

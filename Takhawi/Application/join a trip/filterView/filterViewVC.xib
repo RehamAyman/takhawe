@@ -30,6 +30,9 @@
                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Sort By"/>
+                            </userDefinedRuntimeAttributes>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="83a-bY-AAy">
                             <rect key="frame" x="20" y="355" width="353" height="45"/>
@@ -39,13 +42,14 @@
                                     <color key="backgroundColor" name="MainColor"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                    <state key="normal" title="select">
+                                    <state key="normal" title="Select">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                             <real key="value" value="22.5"/>
                                         </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Select"/>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="filterSelect:" destination="-1" eventType="touchUpInside" id="6a2-EB-gbk"/>
@@ -63,6 +67,7 @@
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                             <real key="value" value="22.5"/>
                                         </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Reset"/>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="reset:" destination="-1" eventType="touchUpInside" id="efe-UQ-sh5"/>

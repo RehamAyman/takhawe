@@ -22,7 +22,8 @@ class mapSearchVC: BaseVC {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var googleView: GMSMapView!
     
-//MARK: - Properties -
+    @IBOutlet weak var backOutlet: UIButton!
+    //MARK: - Properties -
     
     let locationManager = CLLocationManager()
     var matchingItems: [MKMapItem] = [MKMapItem]()
@@ -51,8 +52,10 @@ class mapSearchVC: BaseVC {
 //MARK: - Design Methods -
     private func configureInitialDesign() {
         self.title = "".localized
+        self.backOutlet.setImage( UIImage(named: "Group 25")?.imageFlippedForRightToLeftLayoutDirection(), for: .normal)
        
         setMapview()
+        
     }
     
 //MARK: - Logic Methods -
@@ -68,6 +71,7 @@ class mapSearchVC: BaseVC {
       
         self.googleView?.addSubview(imageView)
         googleView.isMyLocationEnabled = true
+        
      
         
         

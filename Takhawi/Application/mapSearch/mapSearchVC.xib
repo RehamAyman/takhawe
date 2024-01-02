@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -17,6 +17,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="mapSearchVC" customModule="Takhawi" customModuleProvider="target">
             <connections>
+                <outlet property="backOutlet" destination="Y2W-dv-tSQ" id="q6N-Oy-XO7"/>
                 <outlet property="googleView" destination="LcT-jv-LjI" id="Qpr-fU-J8P"/>
                 <outlet property="locationLabel" destination="EyV-tF-JgX" id="5b4-AD-cRm"/>
                 <outlet property="view" destination="iN0-l3-epB" id="nL5-X1-lIF"/>
@@ -91,6 +92,7 @@
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                     <real key="value" value="25"/>
                                 </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Confirm"/>
                             </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="confirm:" destination="-1" eventType="touchUpInside" id="gmM-GL-Jda"/>

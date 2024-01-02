@@ -28,7 +28,7 @@ extension UINavigationController: UIGestureRecognizerDelegate {
     override open func viewDidLoad() {
         super.viewDidLoad()
         interactivePopGestureRecognizer?.delegate = self
-        view.semanticContentAttribute = Language.isRTL() ? .forceRightToLeft : .forceLeftToRight
+        view.semanticContentAttribute = LocalizationManager.shared.getLanguage() == .Arabic ? .forceRightToLeft : .forceLeftToRight
     }
 
     public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {

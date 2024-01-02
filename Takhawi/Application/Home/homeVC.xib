@@ -18,6 +18,7 @@
                 <outlet property="chooseFeatureCollection" destination="yAE-fs-J8E" id="HCj-Uc-VmZ"/>
                 <outlet property="containerView" destination="kOb-jt-lur" id="SRR-Mt-mBv"/>
                 <outlet property="containetStackView" destination="rEl-cC-QuR" id="9tr-dU-68w"/>
+                <outlet property="destTextfield" destination="tYn-ct-ZxO" id="hoT-Yv-Glk"/>
                 <outlet property="frchooseDestinationViewHeight" destination="sa0-Oa-J8R" id="yIT-0p-okM"/>
                 <outlet property="googleMaps" destination="ikX-1o-drw" id="IYb-xe-Pj7"/>
                 <outlet property="hotelIconOutlet" destination="wej-V0-d54" id="TdS-nj-XD9"/>
@@ -116,6 +117,9 @@
                                                     <state key="normal" title="Destination" image="Vector 1">
                                                         <color key="titleColor" name="MainColor"/>
                                                     </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Destination"/>
+                                                    </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <action selector="secMyDestinationAction:" destination="-1" eventType="touchUpInside" id="wVd-6f-fBQ"/>
                                                     </connections>
@@ -148,6 +152,9 @@
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                     <color key="textColor" name="MainColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Choose Features"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </label>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="yAE-fs-J8E">
                                                     <rect key="frame" x="0.0" y="21.333333333333371" width="323" height="68.666666666666671"/>
@@ -222,7 +229,7 @@
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                             <color key="tintColor" name="MainColor"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
-                                            <state key="normal" title="Button" image="Vector"/>
+                                            <state key="normal" title="--" image="Vector"/>
                                             <connections>
                                                 <action selector="joinatripsegmentbutton:" destination="-1" eventType="touchUpInside" id="Urn-nH-SkJ"/>
                                             </connections>
@@ -361,6 +368,9 @@
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                     <color key="textColor" name="MainColor"/>
                                     <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Hala,"/>
+                                    </userDefinedRuntimeAttributes>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXN-f8-4v0">
                                     <rect key="frame" x="0.0" y="22.666666666666671" width="42.666666666666664" height="22.666666666666671"/>
@@ -528,7 +538,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

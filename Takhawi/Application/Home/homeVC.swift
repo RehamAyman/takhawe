@@ -22,6 +22,7 @@ class homeVC: BaseVC, sendDataBackDelegate{
     
 //MARK: - IBOutlets -
     
+    @IBOutlet weak var destTextfield: UITextField!
     @IBOutlet weak var CContainerSegment: UIView!
     @IBOutlet weak var secCalendar: UIButton!
     @IBOutlet weak var secMydestinationOutlet: UIButton!
@@ -77,8 +78,19 @@ class homeVC: BaseVC, sendDataBackDelegate{
     let screen = UIScreen.main.bounds
     var menu = false
     var home = CGAffineTransform()
-    var sideMenuItems  =  publicSideMenu.items
-    var tripHaveDestination : Bool = false 
+    var sideMenuItems  = [
+            sideMenuDataModel(name: "Switch to Driver".localize, icon: "side2") ,
+            sideMenuDataModel(name: "Personal Info".localize, icon: "side1") ,
+            sideMenuDataModel(name: "Notification".localize, icon: "side3")  ,
+            sideMenuDataModel(name: "Messages".localize, icon: "side4") ,
+            sideMenuDataModel(name: "Favorite".localize, icon: "side5") ,
+            sideMenuDataModel(name: "Wallet".localize, icon: "side6") ,
+            sideMenuDataModel(name: "Trips".localize, icon: "side7") ,
+            sideMenuDataModel(name: "Settings".localize, icon: "side8")
+        ]
+    
+    
+    var tripHaveDestination : Bool = false
     
 //MARK: - Creation -
   
@@ -100,8 +112,6 @@ class homeVC: BaseVC, sendDataBackDelegate{
         self.secMydestinationOutlet.imagePadding(spacing: 8)
         self.secCalendar.setTitle( "\(Date().dateToString ?? "--") , 3:00 PM " , for: .normal)
         
-        
-        
         self.segmentContainerView.neumorphicLayer?.cornerType = .all
         self.segmentContainerView.neumorphicLayer?.depthType = .concave
         self.segmentContainerView.neumorphicLayer?.lightShadowOpacity = 0.4
@@ -111,7 +121,8 @@ class homeVC: BaseVC, sendDataBackDelegate{
         self.segmentContainerView.neumorphicLayer?.backgroundColor = UIColor.white.cgColor
         self.segment.backgroundColor = UIColor.clear
         self.CContainerSegment.layer.applySketchShadow(color: .black)
-        
+        destTextfield.placeholder = "Choose your destination".localize
+        self.menuOutlet.setImage( UIImage(named: "menu 1")?.imageFlippedForRightToLeftLayoutDirection(), for: .normal)
 
     }
     
@@ -158,6 +169,8 @@ class homeVC: BaseVC, sendDataBackDelegate{
 //MARK: - Actions -
     
     @IBAction func secMyLoactionAction(_ sender: UIButton) {
+        
+        
     }
     
     @IBAction func secMyDestinationAction(_ sender: UIButton) {
@@ -166,6 +179,10 @@ class homeVC: BaseVC, sendDataBackDelegate{
         
     }
     @IBAction func secCalendarAction(_ sender: UIButton) {
+        
+       
+        
+        
         let vc = selectDateVC()
         vc.comeFromMakeAtrip =  true
         self.presentWithEffect(vc:  vc )
@@ -187,6 +204,7 @@ class homeVC: BaseVC, sendDataBackDelegate{
     
     
     @IBAction func hotelsAction(_ sender: UIButton) {
+      //  showPopTopAlert(title: "hello there ", withMessage: "any message to test .")
         sender.animateButtonWhenPressed {
             let vc = hotelsVC()
             self.push(vc)
@@ -202,7 +220,7 @@ class homeVC: BaseVC, sendDataBackDelegate{
                 self.push(vc)
             } else {
                 AlertKitAPI.present(
-                    title: "Sorry, but you need to select a destination first!" ,
+                    title: "Sorry, but you need to select a destination first!".localize ,
                     icon: .error,
                     style: .iOS17AppleMusic,
                     haptic: .success

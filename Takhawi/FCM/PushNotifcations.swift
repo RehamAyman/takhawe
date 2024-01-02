@@ -58,7 +58,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     }
 
     func resetApp() {
-        let language = Language.currentLanguage()
+       // let language = LocalizationManager.shared.getLanguage()
 
 //        SocketConnection.sharedInstance.socket.off("sendMessage")
 
@@ -66,7 +66,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
 
         UserDefaults.standard.removeObject(forKey: "token")
         defult.shared.removeAll()
-        Language.setAppLanguage(lang: language)
+        //Language.setAppLanguage(lang: language)
         defult.shared.setData(data: false, forKey: .isFiristLuanch)
 
 //        guard let window = UIApplication.shared.keyWindow else { return }

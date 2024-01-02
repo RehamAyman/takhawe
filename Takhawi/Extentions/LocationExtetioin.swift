@@ -22,7 +22,7 @@ func getAddressFromLatLon(withLatitude: String, withLongitude: String, completio
     let location: CLLocation = CLLocation(latitude: center.latitude, longitude: center.longitude)
 
     geocoder.reverseGeocodeLocation(location,
-                                    preferredLocale: Locale(identifier: Language.isRTL() ? "ar" : "en"),
+                                    preferredLocale: Locale(identifier: LocalizationManager.shared.getLanguage() == .Arabic ? "ar" : "en"),
                                     completionHandler: { placemarks, error in
                                         var placemark: CLPlacemark!
                                         var addressString: String = ""
@@ -93,7 +93,7 @@ func getAddressFromLocation(lat: String, long: String, target: [AddressFilter]? 
     let location: CLLocation = CLLocation(latitude: center.latitude, longitude: center.longitude)
 
     geocoder.reverseGeocodeLocation(location,
-                                    preferredLocale: Locale(identifier: Language.isRTL() ? "ar" : "en"),
+                                    preferredLocale: Locale(identifier: LocalizationManager.shared.getLanguage() == .Arabic ?  "ar" : "en"),
                                     completionHandler: { placemarks, error in
 
                                         var placemark: CLPlacemark!

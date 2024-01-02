@@ -5,3 +5,79 @@
   Created by Mac on 02/01/2024.
   
 */
+"Language" = "اللغة" ;
+"Choose" = "اختر"  ;
+"Sorry, but you need to select a destination first!" = "عذرًا، ولكن عليك تحديد الوجهة أولاً!" ;
+"Destination" = "الواجهه" ;
+"Join a trip" = "انضم إلى رحلة" ;
+"Make a trip" = "قم برحلة" ;
+"Choose your destination" =  "اختر وجهتك" ;
+"Join the trip" = "انضم الي الرحلة" ;
+"Create Trip" = "بدء الرحلة" ;
+"Hala," = "هلا،" ;
+"Choose Features" = "اضافة ميزات" ;
+
+
+"Switch to Driver" = "التحويل ل سائق" ;
+"Personal Info" = "معلومات شخصية" ;
+"Notification" = "الاشعارات" ;
+"Messages" = "الرسائل" ;
+"Favorite" = "المفضلات" ;
+"Wallet" = "المحفظة"  ;
+"Trips" = "الرحلات" ;
+"Settings" = "الاعدادات" ;
+
+"Recent places" = "الاماكن التي قمت بزيارتها مؤخرا" ;
+"Clear All" = "امسح الكل" ;
+"Choose from Map" = "اختر من الخريطة" ;
+"Cancel" = "الغاء" ;
+"Select" = "اختيار" ;
+"Search" = "البحث";
+"Confirm" = "تأكيد";
+"The cost will increase by a certain amount for this kind of request" = "هناك احتماليه زياده التكلفه بنسبه معينه لرحلتك" ;
+
+
+
+"Make a Trip" = "ابدأ الرحلة" ;
+"Ok" = "حسنا" ; 
+"Waiting for drivers’ offer" = "في انتظار عروض السائقين";
+"Distance" =  "المسافه" ;
+"Time" = "الوقت" ;
+"Price" = "التكلفة" ;
+"Select" = "اختيار";
+"Driver Profile" = "ملف السائق" ;
+"Reviews" = "التقييمات" ;
+"Trips: 22" = "الرحلات :٢٢" ;
+"number of children (optional)" = "عدد الاطفال (اختياري)" ;
+"Discount Code" = "كود الخصم" ;
+"SAR" = "ر.س" ;
+"Reserve your seat now!" = "احجز مقعدك الآن!" ;
+"◉ Children 0-10 years old: Parents can reserve a seat for them." = "◉ الأطفال من 0 إلى 10 سنوات: يمكن لولي الأمر حجز مقعد لهم." ;
+"◉ Children over 10 years old: Children must reserve their own seat using their own account." = "◉ الأطفال فوق 10 سنوات: يجب على الأطفال حجز مقعدهم الخاص باستخدام حسابهم الخاص." ;
+"Reset" = "إعادة ضبط" ;
+"Sort By" = "ترتيب حسب" ;
+"Relevent" = "شائع";
+"Most Rated" = "الأكثر تقييما" ;
+"Highest Priced" = "الأعلى سعراً" ;
+"Lowest Priced" = "الأقل سعراً" ;
+"Charge" = "التكلفة" ;
+"For a seat" = "للمقعد" ;
+"For Child" = "للطفل" ;
+"Vat (5%)" = "ضريبة القيمة المضافة (5%)";
+"Promo Code" = "كود الخصم";
+"Select payment method" = " اختار طريقة الدفع" ;
+"My Wallet" = "محفظتي" ;
+"Cash" = "كاش" ;
+"Confirm Trip" = "تأكيد الرحلة";
+"Your booking has been placed sent to" = "تم تأكيد الطلب الخاص بك و ارساله الي" ;
+
+"driver name" = "اسم السائق" ;
+"Track your trip" = "تتبع رحلتك" ;
+"Thank you" = "شكرا لك" ;
+"Reserve the trip" = "حجز الرحله" ;
+"Trip Tracker" = "تعقب الرحلة" ;
+"Your driver has been waiting for you" = "السائق في انتظارك" ;
+"Trip will start within 10 mins," = "ستبدأ الرحلة خلال 10 دقائق،" ;
+"Cancel Trip" = "إلغاء الرحلة" ;
+"Delivery Time" = "موعد الوصول" ;
+"Your driver is coming in" = "سوف ياتي السائق في خلال" ;

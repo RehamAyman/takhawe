@@ -11,7 +11,7 @@ import UIKit
 extension UITextView {
     open override func awakeFromNib() {
         super.awakeFromNib()
-        if Language.isRTL() {
+        if LocalizationManager.shared.getLanguage() == .Arabic  {
             if textAlignment == .natural {
                 self.textAlignment = .right
             }

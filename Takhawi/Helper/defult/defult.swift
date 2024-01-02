@@ -46,7 +46,7 @@ class defult {
     }
 
     func getAppCurrency() -> String? {
-        return Language.isRTL() ? UserDefaults.standard.string(forKey: userDefaultsNames.appCurrencyAr.rawValue) : UserDefaults.standard.string(forKey: userDefaultsNames.appCurrencyEn.rawValue)
+        return LocalizationManager.shared.getLanguage() == .Arabic  ? UserDefaults.standard.string(forKey: userDefaultsNames.appCurrencyAr.rawValue) : UserDefaults.standard.string(forKey: userDefaultsNames.appCurrencyEn.rawValue)
     }
 
     func removeAll() {

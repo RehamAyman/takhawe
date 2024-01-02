@@ -33,11 +33,11 @@ extension UIFont {
 
             switch self {
             case .light:
-                return Language.isRTL() ? lightNameAr : lightNameEn
+                return LocalizationManager.shared.getLanguage() == .Arabic ? lightNameAr : lightNameEn
             case .normal:
-                return Language.isRTL() ? normalNameAr : normalNameEn
+                return LocalizationManager.shared.getLanguage() == .Arabic ?  normalNameAr : normalNameEn
             case .bold:
-                return Language.isRTL() ? boldNameAr : boldNameEn
+                return LocalizationManager.shared.getLanguage() == .Arabic ? boldNameAr : boldNameEn
             }
         }
 

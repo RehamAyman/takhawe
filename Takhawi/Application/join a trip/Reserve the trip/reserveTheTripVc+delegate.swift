@@ -30,14 +30,14 @@ extension ReserveTheTripVC : UITableViewDelegate , UITableViewDataSource {
        
         
         if item.type == "wallet" {
-            cell.title.text = "My Wallet"
+            cell.title.text = "My Wallet".localize
             cell.iconimage.image = UIImage(named: "empty-wallet")
             cell.hint.text = ""
             cell.hint.isHidden = true
             
         }
         if item.type == "cash" {
-            cell.title.text = "Cash"
+            cell.title.text = "Cash".localize
             cell.iconimage.image = UIImage(named: "money 1")
             cell.hint.text = ""
             cell.hint.isHidden = true
@@ -45,7 +45,7 @@ extension ReserveTheTripVC : UITableViewDelegate , UITableViewDataSource {
         }
         
         if item.selected == true {
-            cell.title.text = "hello"
+          //  cell.title.text = "hello"
         }
         
      

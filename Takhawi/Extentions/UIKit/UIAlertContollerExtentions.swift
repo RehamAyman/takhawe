@@ -22,7 +22,7 @@ final class DatePickerViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
         datePicker.datePickerMode = mode
         datePicker.sizeToFit()
-        datePicker.locale = Language.isRTL() ? Locale(identifier: "ar") : Locale(identifier: "en")
+        datePicker.locale = LocalizationManager.shared.getLanguage() == .Arabic  ? Locale(identifier: "ar") : Locale(identifier: "en")
         datePicker.date = date ?? Date()
 
         if #available(iOS 13.4, *) {

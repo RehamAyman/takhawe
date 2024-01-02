@@ -11,7 +11,7 @@ extension UIButton {
     func imagePadding(spacing: CGFloat) {
         let insetAmount = spacing / 2
         let isRTL = UIView.userInterfaceLayoutDirection(for: semanticContentAttribute) == .rightToLeft
-        if Language.isRTL() {
+        if  LocalizationManager.shared.getLanguage() == .Arabic {
            imageEdgeInsets = UIEdgeInsets(top: 0, left: insetAmount, bottom: 0, right: -insetAmount)
            titleEdgeInsets = UIEdgeInsets(top: 0, left: -insetAmount, bottom: 0, right: insetAmount)
            contentEdgeInsets = UIEdgeInsets(top: 0, left: -insetAmount, bottom: 0, right: -insetAmount)

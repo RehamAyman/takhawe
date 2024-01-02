@@ -16,8 +16,10 @@ class BackButton: UIButton {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.setTitle(nil, for: .normal)
-       // self.setImage(UIImage(named: self.backBtnImage), for: .normal)
+       self.setImage( UIImage(named: "Group 25")?.imageFlippedForRightToLeftLayoutDirection(), for: .normal)
+        
         self.addTarget(self, action: #selector(self.action(_:)), for: .touchUpInside)
+        
     }
     
     

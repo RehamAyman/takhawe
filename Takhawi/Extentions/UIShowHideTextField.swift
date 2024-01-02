@@ -35,7 +35,7 @@ class UIShowHideTextField: UITextField {
         layer.cornerRadius = layer.frame.height / 2
         layer.shadowRadius = 5
      
-        if Language.isRTL() {
+        if LocalizationManager.shared.getLanguage() == .Arabic  {
             print("Right")
             self.setRightPaddingPoints(10)
             self.leftView = rightButton

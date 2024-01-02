@@ -16,7 +16,7 @@ extension UIViewController {
             return showPasswordButton
         }
          func add(secureButton: UIButton, for textField: UITextField) {
-            if Language.isRTL() {
+            if LocalizationManager.shared.getLanguage() == .Arabic  {
                 print("Righttttt")
                 textField.rightView = secureButton
                 textField.rightViewMode = .always

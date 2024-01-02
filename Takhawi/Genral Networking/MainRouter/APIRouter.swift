@@ -50,7 +50,7 @@ extension APIRouter {
         // MARK: - Common Headers -
         urlRequest.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.acceptType.rawValue)
         urlRequest.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.contentType.rawValue)
-        urlRequest.setValue(Language.apiLanguage(), forHTTPHeaderField: HTTPHeaderField.lang.rawValue)
+        urlRequest.setValue(LocalizationManager.shared.getLanguage() == .Arabic ? "ar" : "en", forHTTPHeaderField: HTTPHeaderField.lang.rawValue)
 
         // MARK: - Token -
         if  let token = defult.shared.user()?.token, !token.trimWhiteSpace().isEmpty {

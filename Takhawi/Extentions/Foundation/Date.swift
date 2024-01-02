@@ -72,11 +72,11 @@ extension Date {
     }
 
     var dateToString: String? {
-        return Language.isRTL() ? arabicDateToString() : englishDateToString()
+        return  englishDateToString()
     }
 
     func timeToString() -> String {
-        return Language.isRTL() ? arabicTimeToString() : englishTimeToString()
+        return englishTimeToString() //LocalizationManager.shared.getLanguage() == .Arabic ?  arabicTimeToString() : englishTimeToString()
     }
 
     static func - (recent: Date, previous: Date) -> (month: Int?, day: Int?, hour: Int?, minute: Int?, second: Int?) {

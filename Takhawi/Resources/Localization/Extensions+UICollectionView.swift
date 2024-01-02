@@ -9,6 +9,6 @@ import UIKit
 
 extension UICollectionViewFlowLayout {
     open override var flipsHorizontallyInOppositeLayoutDirection: Bool {
-        return Language.isRTL() ? true : false
+        return LocalizationManager.shared.getLanguage() == .Arabic  ? true : false
     }
 }

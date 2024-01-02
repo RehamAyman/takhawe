@@ -55,13 +55,14 @@
                                 <action selector="dismissview:" destination="-1" eventType="touchUpInside" id="sMT-Vg-hW1"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3N-C5-NLp">
-                            <rect key="frame" x="67.5" y="229" width="200" height="30.5"/>
-                            <string key="text">The cost will increase by a certain 
-amount for this kind of request</string>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The cost will increase by a certain amount for this kind of request" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3N-C5-NLp">
+                            <rect key="frame" x="40" y="229" width="255" height="30.5"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="The cost will increase by a certain amount for this kind of request"/>
+                            </userDefinedRuntimeAttributes>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rq4-ik-thu">
                             <rect key="frame" x="20" y="285" width="295" height="50"/>
@@ -74,6 +75,9 @@ amount for this kind of request</string>
                             <buttonConfiguration key="configuration" style="plain" title="Ok">
                                 <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                             </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Ok"/>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="okAction:" destination="-1" eventType="touchUpInside" id="rhR-NH-reG"/>
                             </connections>
@@ -83,10 +87,14 @@ amount for this kind of request</string>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
                             <color key="textColor" name="MainColor"/>
                             <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Make a Trip"/>
+                            </userDefinedRuntimeAttributes>
                         </label>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="R3N-C5-NLp" secondAttribute="trailing" constant="40" id="0b5-0t-2Wf"/>
                         <constraint firstItem="zpY-y1-4GG" firstAttribute="top" secondItem="YW0-jV-LGD" secondAttribute="top" constant="20" id="4JV-Ac-bPC"/>
                         <constraint firstAttribute="bottom" secondItem="Rq4-ik-thu" secondAttribute="bottom" constant="20" id="8yp-cV-qGj"/>
                         <constraint firstItem="R3N-C5-NLp" firstAttribute="top" secondItem="cAg-Y6-1Au" secondAttribute="bottom" constant="8" id="9Pb-Tc-P8F"/>
@@ -98,6 +106,7 @@ amount for this kind of request</string>
                         <constraint firstAttribute="trailing" secondItem="Rq4-ik-thu" secondAttribute="trailing" constant="20" id="XZ8-h5-AwS"/>
                         <constraint firstItem="cAg-Y6-1Au" firstAttribute="leading" secondItem="YW0-jV-LGD" secondAttribute="leading" id="bHn-2E-h6Q"/>
                         <constraint firstAttribute="trailing" secondItem="zpY-y1-4GG" secondAttribute="trailing" constant="20" id="iWl-lp-5Dc"/>
+                        <constraint firstItem="R3N-C5-NLp" firstAttribute="leading" secondItem="YW0-jV-LGD" secondAttribute="leading" constant="40" id="nbR-T9-COk"/>
                         <constraint firstItem="hR5-Yx-zGY" firstAttribute="top" secondItem="zpY-y1-4GG" secondAttribute="bottom" constant="10" id="q9k-GN-55v"/>
                         <constraint firstAttribute="height" constant="355" id="vUC-AR-y54"/>
                     </constraints>

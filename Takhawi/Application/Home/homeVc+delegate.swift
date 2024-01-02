@@ -202,7 +202,7 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
 //        self.UserLocationOutlet.isHidden = true
 //        self.chooseFeatureCollection.isHidden = true
 //     
-//        self.joinTripOutlet.setTitle("Join the trip" , for: .normal)
+        self.joinTripOutlet.setTitle("Join the trip".localize , for: .normal)
         if self.tripHaveDestination {
             self.joinatripButtonHeight.constant = 40
             self.joinTripDestButton.isHidden = false
@@ -242,7 +242,7 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
      
 //        self.searchViewContainerHeight.constant = 0
 //        self.searchView.isHidden = true
-//        self.joinTripOutlet.setTitle( "Create Trip", for: .normal)
+        self.joinTripOutlet.setTitle( "Create Trip".localize, for: .normal)
 //        self.joinTripDestButton.isHidden = true
 //        self.containetStackView.addArrangedSubview(self.collectionContainerView)
 //        self.containetStackView.removeArrangedSubview( self.joinTripDestButton)
@@ -262,39 +262,24 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
     
     
     func initialSegment () {
+        self.joinTripOutlet.setTitle("Join the trip".localize , for: .normal)
         let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.gray]
              segment.setTitleTextAttributes(titleTextAttributes, for:.normal)
 
              let titleTextAttributes1 = [NSAttributedString.Key.foregroundColor: UIColor(named: "MainColor")]
         segment.setTitleTextAttributes(titleTextAttributes1 as [NSAttributedString.Key : Any], for:.selected)
-        
-        
         let titleTextAttributes2 = [NSAttributedString.Key.foregroundColor: UIColor.lightGray]
         segment.setTitleTextAttributes(titleTextAttributes2 as [NSAttributedString.Key : Any], for:.normal)
-        
-        
-//        segmentContainerView.layer.applySketchShadow(color: .black)
-      //  segment.layer.masksToBounds = NO;
-        
-    
-       
-        
-        
-      //  self.containetStackView.removeFromSuperview(self.joinTripDestButton)
-          self.viewHeight.constant = 185
+        self.viewHeight.constant = 185
         self.joinTripDestButton.isHidden = true
         self.joinatripButtonHeight.constant = 0
         self.frchooseDestinationViewHeight.constant = 45
-//        self.locationOutlet.isHidden = true
-//        self.UserLocationOutlet.isHidden = true
-//        self.chooseFeatureCollection.isHidden = true
-//        self.containetStackView.removeArrangedSubview(self.collectionContainerView)
-//        self.joinTripDestButton.isHidden = true
-//        self.containetStackView.removeArrangedSubview( self.joinTripDestButton)
         self.containetStackView.isHidden = false
         self.secMakeAtripStack.isHidden = true
-        
+        segment.setTitle("Join a trip".localize, forSegmentAt: 0)
+        segment.setTitle("Make a trip".localize, forSegmentAt: 1)
         self.view.layoutIfNeeded()
+        
     }
     
     
@@ -320,7 +305,6 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
     
     
     func showMenu() {
-        
         self.sideMenuContainer.isHidden = false
         self.visualView.isHidden = false
         self.visualView.isUserInteractionEnabled = true
@@ -329,17 +313,15 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
         let x = UIScreen.main.bounds.width * 0.6
         let originalTransform = self.sideMenuContainer.transform
         let scaledTransform = originalTransform.scaledBy(x: 1, y: 1)
-            let scaledAndTranslatedTransform = scaledTransform.translatedBy(x: x, y: 0)
+        let lang = LocalizationManager.shared.getLanguage()
+        let scaledAndTranslatedTransform = scaledTransform.translatedBy(x: lang == .Arabic ? -x : x , y: 0)
             UIView.animate(withDuration: 0.5, animations: {
                 self.sideMenuContainer.transform = scaledAndTranslatedTransform
                 // stop google maps interaction
                 self.googleMaps.isUserInteractionEnabled = false
                 self.containerView.isUserInteractionEnabled = false
             })
-        
-        
         self.menu = true
-        
     }
   
    
@@ -356,7 +338,8 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
         let x = UIScreen.main.bounds.width * 0.6
         let originalTransform = self.sideMenuContainer.transform
         let scaledTransform = originalTransform.scaledBy(x: 1, y: 1)
-        let scaledAndTranslatedTransform = scaledTransform.translatedBy(x: -x, y: 0)
+        let lang = LocalizationManager.shared.getLanguage()
+        let scaledAndTranslatedTransform = scaledTransform.translatedBy(x: lang == .Arabic ? x :  -x, y: 0)
         self.sideMenuContainer.transform = scaledAndTranslatedTransform
         // stop google maps interaction
         self.googleMaps.isUserInteractionEnabled = true
@@ -368,15 +351,13 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
     }
     
     func hideMenu() {
-   
-        
-        
         self.visualView.isHidden = true
         self.visualView.isUserInteractionEnabled = false
         let x = UIScreen.main.bounds.width * 0.6
                let originalTransform = self.sideMenuContainer.transform
                let scaledTransform = originalTransform.scaledBy(x: 1, y: 1)
-                   let scaledAndTranslatedTransform = scaledTransform.translatedBy(x: -x, y: 0)
+               let lang = LocalizationManager.shared.getLanguage()
+        let scaledAndTranslatedTransform = scaledTransform.translatedBy(x: lang == .Arabic ? x :  -x, y: 0)
                    UIView.animate(withDuration: 0.5, animations: {
                        self.sideMenuContainer.transform = scaledAndTranslatedTransform
                        // stop google maps interaction

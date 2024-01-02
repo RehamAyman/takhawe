@@ -18,10 +18,10 @@ class filterViewVC: BaseVC {
     
 //MARK: - Properties -
     let dummyfilterData : [dummyFilterData] = [
-        dummyFilterData(name: "Relevent", selected: false ) ,
-        dummyFilterData(name: "Most Rated", selected: false ) ,
-        dummyFilterData(name: "Highest Priced", selected: false ) ,
-        dummyFilterData(name: "Lowest Priced", selected: false )
+        dummyFilterData(name: "Relevent".localize, selected: false ) ,
+        dummyFilterData(name: "Most Rated".localize, selected: false ) ,
+        dummyFilterData(name: "Highest Priced".localize, selected: false ) ,
+        dummyFilterData(name: "Lowest Priced".localize, selected: false )
     ]
     var dismissAction: (() -> Void)?
     
