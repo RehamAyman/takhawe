@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReserveTheTripVC" customModule="Takhawi" customModuleProvider="target">
             <connections>
+                <outlet property="dicountCodeTextField" destination="A04-T0-vJ6" id="XhI-rm-DW5"/>
                 <outlet property="driverImage" destination="anM-Z1-7Oe" id="REH-oA-x9o"/>
                 <outlet property="paymentMethodTable" destination="uMD-di-9hM" id="5LM-Sg-tX4"/>
                 <outlet property="tableviewHeight" destination="zbT-3z-ccl" id="t3t-rM-TyR"/>
@@ -46,7 +47,7 @@
                     <rect key="frame" x="0.0" y="139" width="393" height="713"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="VGG-V4-Q5D">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="805.33333333333337"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="925.33333333333337"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uSw-gP-3FR">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="220"/>
@@ -294,8 +295,66 @@
                                         <constraint firstAttribute="bottom" secondItem="fRa-py-gYx" secondAttribute="bottom" constant="10" id="vLX-EM-eim"/>
                                     </constraints>
                                 </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vnq-xv-FM8">
+                                    <rect key="frame" x="0.0" y="420" width="393" height="120"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VtP-2g-4Qy">
+                                            <rect key="frame" x="10" y="5" width="373" height="40"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 6" translatesAutoresizingMaskIntoConstraints="NO" id="xME-cq-ql1">
+                                                    <rect key="frame" x="0.0" y="0.0" width="30" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="hJE-pD-I7f"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discount Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KzQ-Op-YaE">
+                                                    <rect key="frame" x="38" y="0.0" width="335" height="40"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Discount Code"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="Gvq-A3-P4N"/>
+                                            </constraints>
+                                        </stackView>
+                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Your Discount Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A04-T0-vJ6">
+                                            <rect key="frame" x="10" y="55" width="373" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="z0i-A3-7Qq"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="25"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1.5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" name="MainColor"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Enter Your Discount Code"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </textField>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="VtP-2g-4Qy" secondAttribute="trailing" constant="10" id="CDO-Sm-6f6"/>
+                                        <constraint firstAttribute="trailing" secondItem="A04-T0-vJ6" secondAttribute="trailing" constant="10" id="IEX-3r-0pT"/>
+                                        <constraint firstAttribute="bottom" secondItem="A04-T0-vJ6" secondAttribute="bottom" constant="15" id="J4j-Hk-Qce"/>
+                                        <constraint firstItem="VtP-2g-4Qy" firstAttribute="top" secondItem="Vnq-xv-FM8" secondAttribute="top" constant="5" id="NJq-6z-Hmi"/>
+                                        <constraint firstAttribute="height" constant="120" id="Rjk-Cz-N8d"/>
+                                        <constraint firstItem="VtP-2g-4Qy" firstAttribute="leading" secondItem="Vnq-xv-FM8" secondAttribute="leading" constant="10" id="pDP-tb-5ia"/>
+                                        <constraint firstItem="A04-T0-vJ6" firstAttribute="leading" secondItem="Vnq-xv-FM8" secondAttribute="leading" constant="10" id="rqT-iY-7Py"/>
+                                    </constraints>
+                                </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select payment method" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQy-A0-uIM">
-                                    <rect key="frame" x="0.0" y="420" width="393" height="19.333333333333314"/>
+                                    <rect key="frame" x="0.0" y="540" width="393" height="19.333333333333371"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                                     <color key="textColor" name="MainColor"/>
                                     <nil key="highlightedColor"/>
@@ -304,14 +363,14 @@
                                     </userDefinedRuntimeAttributes>
                                 </label>
                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uMD-di-9hM">
-                                    <rect key="frame" x="0.0" y="439.33333333333337" width="393" height="300"/>
+                                    <rect key="frame" x="0.0" y="559.33333333333337" width="393" height="300"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="300" id="zbT-3z-ccl"/>
                                     </constraints>
                                 </tableView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sCm-AC-u9A">
-                                    <rect key="frame" x="0.0" y="739.33333333333337" width="393" height="66"/>
+                                    <rect key="frame" x="0.0" y="859.33333333333337" width="393" height="66"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivc-ix-Rm0">
                                             <rect key="frame" x="20" y="8" width="353" height="50"/>
@@ -374,6 +433,7 @@
         <image name="Frame 1000003142" width="8.3333330154418945" height="40.333332061767578"/>
         <image name="Group 1000002906" width="70" height="70"/>
         <image name="Group 25" width="41" height="40"/>
+        <image name="Group 6" width="23" height="14"/>
         <image name="calendar" width="20" height="20"/>
         <image name="star" width="16" height="16"/>
         <image name="star 1" width="16" height="16"/>

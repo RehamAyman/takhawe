@@ -24,14 +24,14 @@ class selectComplainVC: BaseVC{
     var viewDismissed : (() -> Void)?
     
     var complains : [String] = [
-        "Vehicle not clean" ,
-        "Driver behavior" ,
-        "Route deviation" ,
-        "Fare disputes" ,
-        "Safety concerns" ,
-        "Lost items" ,
-        "Accessibility issues" ,
-       "Other issues"
+        "Vehicle not clean".localize ,
+        "Driver behavior".localize ,
+        "Route deviation".localize ,
+        "Fare disputes".localize ,
+        "Safety concerns".localize ,
+        "Lost items".localize ,
+        "Accessibility issues".localize ,
+        "Other issues".localize
     ]
 
     

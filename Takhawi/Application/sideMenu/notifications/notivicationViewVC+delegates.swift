@@ -53,7 +53,7 @@ extension  notificationViewVC : UITableViewDelegate , UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
 
-            let contextItem = UIContextualAction(style: .destructive, title: "Delete") {  (contextualAction, view, boolValue) in
+        let contextItem = UIContextualAction(style: .destructive, title: "Delete".localize) {  (contextualAction, view, boolValue) in
 
                 let section = indexPath.section
                 let row = indexPath.row

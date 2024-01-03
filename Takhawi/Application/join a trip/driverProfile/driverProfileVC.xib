@@ -59,7 +59,7 @@
                     <rect key="frame" x="0.0" y="126.66666666666669" width="393" height="725.33333333333348"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="oft-2f-t8y">
-                            <rect key="frame" x="19.666666666666657" y="0.0" width="353.66666666666674" height="1114"/>
+                            <rect key="frame" x="19.666666666666657" y="0.0" width="353.66666666666674" height="1060"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ssM-QW-66i">
                                     <rect key="frame" x="0.0" y="0.0" width="353.66666666666669" height="330"/>
@@ -358,32 +358,8 @@
                                         <constraint firstItem="PHa-eo-AbY" firstAttribute="top" secondItem="kVo-Dj-WKd" secondAttribute="top" constant="10" id="sAf-9Z-zVA"/>
                                     </constraints>
                                 </view>
-                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NeG-x7-k9m">
-                                    <rect key="frame" x="0.0" y="1010" width="353.66666666666669" height="34"/>
-                                    <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INA-2z-937">
-                                            <rect key="frame" x="0.0" y="0.0" width="165" height="34"/>
-                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" image="Group 6" title="Discount Code" imagePadding="8">
-                                                <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
-                                            </buttonConfiguration>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Discount Code"/>
-                                            </userDefinedRuntimeAttributes>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M18-iG-QuJ">
-                                            <rect key="frame" x="263.66666666666669" y="0.0" width="90" height="34"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="90" id="ENP-44-uPL"/>
-                                            </constraints>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" image="Frame 1000002803"/>
-                                        </button>
-                                    </subviews>
-                                </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="UEl-hb-ba7">
-                                    <rect key="frame" x="0.0" y="1064" width="353.66666666666669" height="50"/>
+                                    <rect key="frame" x="0.0" y="1010" width="353.66666666666669" height="50"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Knl-Mh-QDZ">
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
@@ -493,13 +469,11 @@
         </view>
     </objects>
     <resources>
-        <image name="Frame 1000002803" width="61" height="20"/>
         <image name="Frame 1000003142" width="8.3333330154418945" height="40.333332061767578"/>
         <image name="Group 1000002906" width="70" height="70"/>
         <image name="Group 2" width="12" height="16"/>
         <image name="Group 25" width="41" height="40"/>
         <image name="Group 5" width="18" height="18"/>
-        <image name="Group 6" width="23" height="14"/>
         <image name="calendar" width="20" height="20"/>
         <image name="star" width="16" height="16"/>
         <image name="star 1" width="16" height="16"/>

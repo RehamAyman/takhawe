@@ -35,12 +35,13 @@ class helpAndSupportVC: BaseVC {
     //MARK: - Design Methods -
     private func configureInitialDesign() {
         self.title = "".localized
-        self.complaintextField.handelTextField(placeHolder: "Choose Your Complain")
-        self.complaintextField.label.text = "Your Complain"
+        self.complaintextField.handelTextField(placeHolder: "Choose Your Complain".localize)
+        self.complaintextField.label.text = "Your Complain".localize
         self.complainTextView.delegate = self
-        self.complainTextView.text = "Write your complain here (minimum 10 characters)"
+        self.complainTextView.text = "Write your complain here (minimum 10 characters)".localize
         self.complainTextView.textColor = UIColor.systemGray
-        self.complainTextView.contentInset = UIEdgeInsets(top: 8, left: 12, bottom: 8, right: 12)
+        //self.complainTextView.contentInset = UIEdgeInsets(top: 8, left: -20 , bottom: 8, right: -20)
+       
         self.chooseComplain.isHidden = true
         self.chooseComplainHeight.constant = 0
         
@@ -101,3 +102,9 @@ extension helpAndSupportVC {
     
 }
 
+class UITextViewPadding : UITextView {
+  required init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+    textContainerInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+  }
+}

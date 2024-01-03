@@ -14,6 +14,7 @@ class ReserveTheTripVC: BaseVC {
 //MARK: - IBOutlets -
     @IBOutlet weak var topBackView: UIView!
     
+    @IBOutlet weak var dicountCodeTextField: UITextField!
     @IBOutlet weak var tableviewHeight: NSLayoutConstraint!
     @IBOutlet weak var paymentMethodTable: UITableView!
     @IBOutlet weak var driverImage: UIImageView!
@@ -51,6 +52,8 @@ class ReserveTheTripVC: BaseVC {
         paymentMethodTable.delegate = self 
         paymentMethodTable.isScrollEnabled = false
         paymentMethodTable.register(UINib(nibName:"reserveTheTripCell", bundle: nil), forCellReuseIdentifier: "reserveTheTripCell")
+        self.dicountCodeTextField.setLeftPaddingPoints(12)
+        self.dicountCodeTextField.setRightPaddingPoints(12)
     }
     
 //MARK: - Logic Methods -

@@ -21,11 +21,11 @@ class profileVC: BaseVC {
 //MARK: - Properties -
     
     var dummyActivty : [dummyActivity] = [
-        dummyActivity(icon: "Group 1", name: "Basketball") ,
-        dummyActivity(icon: "03-hat", name: "Riding Horse") ,
-        dummyActivity(icon: "paint-palette 1", name: "Drawing") ,
-        dummyActivity(icon: "music 1", name: "Listen to music") ,
-        dummyActivity(icon: "airplane-around-earth 1", name: "Travelling")
+        dummyActivity(icon: "Group 1", name: "Basketball".localize) ,
+        dummyActivity(icon: "03-hat", name: "Riding Horse".localize) ,
+        dummyActivity(icon: "paint-palette 1", name: "Drawing".localize) ,
+        dummyActivity(icon: "music 1", name: "Listen to music".localize) ,
+        dummyActivity(icon: "airplane-around-earth 1", name: "Travelling".localize)
     ]
 
 // MARK: - Lifecycle -

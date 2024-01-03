@@ -128,3 +128,41 @@
 "About Us" = "من نحن" ;
 "Language" = "اللغة" ;
 "Log Out" = "تسجيل الخروج" ;
+"Its a complain" = "انها شكوي" ;
+"Send" = "ارسال" ;
+"Add complaint reason" = "اضف سبب الشكوي" ;
+"please select a complaint reason from the list first!" = "الرجاء تحديد سبب الشكوى من القائمة أولاً!" ;
+"please write any note before send" = "يرجى كتابة أي ملاحظة قبل الارسال" ;
+"Missing field!" = "حقل مفقود!" ;
+"Choose Your Complain" = "اختر شكواك" ;
+"Your Complain" = "شكوتك " ;
+"Write your complain here (minimum 10 characters)" = "اكتب شكواك هنا (10 أحرف على الأقل)" ;
+"Select your Complain" = "اختر شكواك من القائمه" ;
+"Vehicle not clean" = "السيارة غير نظيفة" ;
+"Driver behavior" = "سلوك السائق" ;
+"Route deviation" = "انحراف المسار" ;
+"Fare disputes" = "نزاعات الأجرة" ;
+"Safety concerns" = "مخاوف تتعلق بالسلامة" ;
+"Lost items" = "فقدت متعلقات" ;
+"Accessibility issues" = "قضايا إمكانية الوصول" ;
+"Other issues" = "حالات أخرى" ;
+"Who is Takhawy?" = "ما هو تخاوي ؟";
+"Arabic" = "العربية" ;
+"Drivers Offers" = "عروض السائقين";
+"Professional Rideshare Platform. Here we will provide you only interesting content, which you will like very much. We're dedicated to providing you the best of Rideshare, with a focus on dependability and Earning. We're working to turn our passion for Rideshare into a booming online website. We hope you enjoy our Rideshare as much as we enjoy offering them to you. I will keep posting more important posts on my Website for all of you. Please give your support and love.Professional Rideshare Platform. Here we will provide you only interesting content, which you will like very much. We're dedicated to providing you the best of Rideshare, with a focus on dependability and Earning. We're working to turn our passion for Rideshare into a booming online website. We hope you enjoy our Rideshare as much as we enjoy offering them to you. I will keep posting more important posts on my Website for all of you. Please give your support and love." = "منصة مشاركة الرحلات الاحترافية. سنقدم لك هنا المحتوى المثير للاهتمام فقط، والذي سيعجبك كثيرًا. نحن ملتزمون بتزويدك بأفضل ما في تخاوي، مع التركيز على الاعتمادية والأرباح. نحن نعمل على تحويل شغفنا بـ تخاوي إلى موقع ويب مزدهر على الإنترنت. نأمل أن تستمتع ببرنامج تخاوي الخاص بنا بقدر ما نستمتع بتقديمها لك. سأستمر في نشر المزيد من المشاركات المهمة على موقع الويب الخاص بي لكم جميعًا. يرجى تقديم دعمك وحبك. منصة تخاوي الاحترافية. سنقدم لك هنا المحتوى المثير للاهتمام فقط، والذي سيعجبك كثيرًا. نحن ملتزمون بتزويدك بأفضل ما في تخاوي، مع التركيز على الاعتمادية والأرباح. نحن نعمل على تحويل شغفنا بـ تخاوي إلى موقع ويب مزدهر على الإنترنت. نأمل أن تستمتع ببرنامج تخاوي الخاص بنا بقدر ما نستمتع بتقديمها لك. سأستمر في نشر المزيد من المشاركات المهمة على موقع الويب الخاص بي لكم جميعًا. يرجى تقديم دعمكم والحب." ;
+"50% of your profile completed" = "اكتمل 50% من ملفك الشخصي" ;
+
+"Profile" = "الحساب الشخصي"  ;
+"National ID Verification" = "التحقق من الهوية الوطنية" ;
+"Notification" = "الاشعارات" ;
+"Credit Card added!" = "تمت إضافة بطاقة الائتمان!" ;
+"Payment Successfully!" = "تم الدفع بنجاح!" ;
+"Lorem ipsum dolor sit amet consectetur. Ultrici es tincidunt eleifend vitae" = "Lorem ipsum dolor sit amet consectetur. Ultrici es tincidunt eleifend vitae" ;
+"Today" = "اليوم" ;
+"Dec, 17 2023" = "17 ديسمبر 2023" ;
+ "Delete" =  "مسح" ;
+
+"30% Special Discount!" = "خصم خاص 30%!" ;
+"Enter Your Discount Code" = "أدخل رمز الخصم الخاص بك"  ;
+
+"Notifications" = "الاشعارات" ; 

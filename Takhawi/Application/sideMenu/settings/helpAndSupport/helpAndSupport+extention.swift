@@ -19,7 +19,7 @@ extension helpAndSupportVC : UITextViewDelegate   {
     
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text.isEmpty {
-            textView.text = "Write your complain here (minimum 10 characters)"
+            textView.text = "Write your complain here (minimum 10 characters)".localize
             textView.textColor = UIColor.systemGray
         }
     }
@@ -28,12 +28,8 @@ extension helpAndSupportVC : UITextViewDelegate   {
         
         if self.complain {
             if self.complaintextField.text == "" {
-                AlertKitAPI.present(
-                    title: "please select a complaint reason from the list first!",
-                    icon: .error,
-                    style: .iOS17AppleMusic,
-                    haptic: .error
-                )
+                showPopTopAlert(title: "Add complaint reason".localize, withMessage: "please select a complaint reason from the list first!".localize, success: false )
+             
                 
             } else {
                 let vc = baseSuccessAlertVC()
@@ -42,8 +38,9 @@ extension helpAndSupportVC : UITextViewDelegate   {
                 self.present(vc, animated: true)
             }
         } else {
-            if self.complainTextView.text == "Write your complain here (minimum 10 characters)" {
-                print("please write any note before send ")
+            if self.complainTextView.text == "Write your complain here (minimum 10 characters)".localize {
+                showPopTopAlert(title: "Missing field!".localize, withMessage: "please write any note before send".localize, success: false )
+               
             } else {
                 let vc = baseSuccessAlertVC()
                 vc.modalTransitionStyle = .crossDissolve
