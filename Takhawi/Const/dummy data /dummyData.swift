@@ -69,24 +69,24 @@ struct dummyLocations {
 
 
 let dummyCancelationResons  : [String] = [
-"Waiting for long time" ,
-"Driver denied to go to destination" ,
-"Unable to contact driver" ,
-"Driver denied to come to pickup" ,
-"Wrong address shown" ,
-"The price is not reasonable"
+    "Waiting for long time".localize ,
+"Driver denied to go to destination".localize ,
+"Unable to contact driver".localize ,
+"Driver denied to come to pickup".localize ,
+"Wrong address shown".localize ,
+"The price is not reasonable".localize
 
 
 ]
 
 
 let dummyReportResons : [String] = [
-"Waiting for long time" ,
-"Driver denied to go to destination" ,
-"Driver denied to come to pickup" ,
-"Unable to contact driver" , 
-"Wrong address shown" ,
-"The price is not reasonable"
+    "Waiting for long time".localize ,
+    "Driver denied to go to destination".localize ,
+    "Driver denied to come to pickup".localize ,
+    "Unable to contact driver".localize ,
+    "Wrong address shown".localize ,
+    "The price is not reasonable".localize
 
 
 ]

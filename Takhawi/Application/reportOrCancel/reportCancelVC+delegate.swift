@@ -14,15 +14,15 @@ extension reportCancelVC : UITableViewDelegate , UITableViewDataSource {
  //MARK: - MAIN VIEW DESIGN METHODS
     
     func setupMainView () {
-        noteText.label.text = "Note"
-        noteText.handelTextArea(placeHolder: "Note")
+        noteText.label.text = "Note".localize
+        noteText.handelTextArea(placeHolder: "Note".localize)
        
         if report {
-            self.screenTitle.text = "Report an Issue"
-            self.subTitleHint.text = "Please select the reason of Report"
+            self.screenTitle.text = "Report an Issue".localize
+            self.subTitleHint.text = "Please select the reason of Report".localize
         } else { // cancelation
-            self.screenTitle.text = "Cancel Trip"
-            self.subTitleHint.text = "Please select the reason of cancellation"
+            self.screenTitle.text = "Cancel Trip".localize
+            self.subTitleHint.text = "Please select the reason of cancellation".localize
         }
     }
     

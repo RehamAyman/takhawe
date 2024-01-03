@@ -13,6 +13,11 @@ class settingsSideVC: BaseVC {
     
     //MARK: - IBOutlets -
     
+    @IBOutlet var backButtonsImg: [UIImageView]!
+    
+    
+    
+    
     @IBOutlet weak var logoutOutlet: UIButton!
     
     @IBOutlet var stackViews: [UIView]!
@@ -32,6 +37,9 @@ class settingsSideVC: BaseVC {
     private func configureInitialDesign() {
         self.title = "".localized
         self.logoutOutlet.imagePadding(spacing: 10)
+        for img in backButtonsImg {
+            img.image = UIImage(named: "Group 11")?.imageFlippedForRightToLeftLayoutDirection()
+        }
         for v in stackViews {
             v.layer.addBasicShadow(cornerRadius: 12)
             

@@ -34,8 +34,8 @@ class cancelTheTripVC: BaseVC {
         self.title = "".localized
         self.mainView.layer.addBasicShadow(cornerRadius: 20)
         if report {
-            self.screenTitle.text = "We're so sad about your Report"
-            self.subTitle.text = "We will continue to improve our service & satisfy you on the next trip."
+            self.screenTitle.text = "We're so sad about your Report".localize
+            self.subTitle.text = "We will continue to improve our service & satisfy you on the next trip.".localize
         }
     }
     

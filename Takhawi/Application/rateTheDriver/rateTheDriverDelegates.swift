@@ -23,24 +23,24 @@ extension rateTheDriverVC : UICollectionViewDelegate , UICollectionViewDataSourc
             switch rate {
             case 1 :
                 print("poor")
-                self.rateLabel.text = "Poor"
-                self.rateSecLabel.text = "You rated ( driver name) 1 star"
+                self.rateLabel.text = "Poor".localize
+                self.rateSecLabel.text = "You rated ( driver name) 1 star".localize
             case 2:
                 print("not bad")
-                self.rateLabel.text = "Not Bad"
-                self.rateSecLabel.text = "You rated ( driver name) 2 stars"
+                self.rateLabel.text = "Not Bad".localize
+                self.rateSecLabel.text = "You rated ( driver name) 2 stars".localize
             case 3:
                 print("good")
-                self.rateLabel.text = "Good"
-                self.rateSecLabel.text = "You rated ( driver name) 3 stars"
+                self.rateLabel.text = "Good".localize
+                self.rateSecLabel.text = "You rated ( driver name) 3 stars".localize
             case 4:
                 print("very good")
-                self.rateLabel.text = "Very Good"
-                self.rateSecLabel.text = "You rated ( driver name) 4 stars"
+                self.rateLabel.text = "Very Good".localize
+                self.rateSecLabel.text = "You rated ( driver name) 4 stars".localize
             case 5 :
                 print("Excellent")
-                self.rateLabel.text = "Excellent"
-                self.rateSecLabel.text = "You rated ( driver name) 5 stars"
+                self.rateLabel.text = "Excellent".localize
+                self.rateSecLabel.text = "You rated ( driver name) 5 stars".localize
             default:
                 return
             }

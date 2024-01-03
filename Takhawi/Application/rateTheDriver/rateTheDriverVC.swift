@@ -32,8 +32,8 @@ class rateTheDriverVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureInitialDesign()
-        self.notes.label.text  = "Note"
-        self.notes.handelTextArea(placeHolder: "Note")
+        self.notes.label.text  = "Note".localize
+        self.notes.handelTextArea(placeHolder: "Note".localize)
     }
     
     
