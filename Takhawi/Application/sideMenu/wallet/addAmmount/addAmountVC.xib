@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="addAmountVC" customModule="Takhawi" customModuleProvider="target">
             <connections>
                 <outlet property="addAmountTextField" destination="jQf-uK-9N5" id="mpp-Pg-V3S"/>
+                <outlet property="backOutlet" destination="97A-AH-Tfl" id="004-Q5-VXt"/>
                 <outlet property="cardeView" destination="BBR-Af-LRn" id="hJc-de-4O1"/>
                 <outlet property="view" destination="iN0-l3-epB" id="ZsU-nR-LLE"/>
             </connections>
@@ -26,6 +27,9 @@
                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                     <color key="textColor" name="MainColor"/>
                     <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Amount"/>
+                    </userDefinedRuntimeAttributes>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97A-AH-Tfl">
                     <rect key="frame" x="20" y="69" width="40" height="40"/>
@@ -58,12 +62,18 @@
                     <state key="normal" title="Add payment Method" image="plus" catalog="system">
                         <color key="titleColor" name="MainColor"/>
                     </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Add payment Method"/>
+                    </userDefinedRuntimeAttributes>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Payment Method" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fp-aH-dXV">
                     <rect key="frame" x="20" y="249.00000000000003" width="353" height="19.333333333333343"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Select payment method"/>
+                    </userDefinedRuntimeAttributes>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BBR-Af-LRn">
                     <rect key="frame" x="0.0" y="308.33333333333331" width="393" height="269.99999999999994"/>
@@ -87,6 +97,7 @@
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                             <real key="value" value="25"/>
                         </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Confirm"/>
                     </userDefinedRuntimeAttributes>
                 </button>
             </subviews>

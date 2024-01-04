@@ -19,7 +19,10 @@ extension swiftRegisterVC : UICollectionViewDelegate , UICollectionViewDataSourc
         if indexPath.item == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "firstAuthCell", for: indexPath) as! firstAuthCell
             cell.emailTextField.handelTextField(placeHolder: "Enter Your Email Address")
-            cell.emailTextField.label.text = "Email"
+            if LocalizationManager.shared.getLanguage() == .English {
+                cell.emailTextField.label.text = "Email"
+            }
+           
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "secauthCell", for: indexPath) as! secauthCell

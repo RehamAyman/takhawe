@@ -16,5 +16,11 @@ extension tripsSideMenuVC {
         segment.setTitleTextAttributes(titleTextAttributes1 as [NSAttributedString.Key : Any], for:.selected)
         segment.selectedSegmentTintColor = UIColor(named: "MainColor")
         segment.backgroundColor = UIColor(named: "secFavSeg")
+       
+       
+        self.segment.setTitle(  "Upcoming".localize , forSegmentAt: 0)
+        self.segment.setTitle(  "Completed".localize , forSegmentAt: 1)
+        self.segment.setTitle(  "Cancelled".localize , forSegmentAt: 2)
+        
     }
 }

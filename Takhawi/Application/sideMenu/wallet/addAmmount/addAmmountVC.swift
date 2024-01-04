@@ -16,6 +16,7 @@ class addAmountVC : BaseVC  {
     
     //MARK: - IBOutlets -
     
+    @IBOutlet weak var backOutlet: UIButton!
     @IBOutlet weak var addAmountTextField: MDCOutlinedTextField!
     @IBOutlet weak var cardeView: UIView!
    
@@ -35,8 +36,11 @@ class addAmountVC : BaseVC  {
     //MARK: - Design Methods -
     private func configureInitialDesign() {
         self.title = "".localized
-        self.addAmountTextField.handelTextField(placeHolder: "Enter Amount")
-        self.addAmountTextField.label.text = "Enter Amount"
+        self.addAmountTextField.handelTextField(placeHolder: "Enter Amount".localize)
+        if LocalizationManager.shared.getLanguage() == .English {
+            self.addAmountTextField.label.text = "Enter Amount".localize
+        }
+        
   
         
         self.addChild(swiftUIView)
@@ -50,7 +54,7 @@ class addAmountVC : BaseVC  {
         cardeView.addSubview(swiftUIView.view)
         
         swiftUIView.didMove(toParent: self)
-        
+        self.backOutlet.setImage( UIImage(named: "Group 25")?.imageFlippedForRightToLeftLayoutDirection(), for: .normal)
       
         
        

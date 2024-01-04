@@ -18,9 +18,9 @@ class favoritesVC: BaseVC {
     
 //MARK: - Properties -
     let dummyLocationData : [dummyLocations] = [
-        dummyLocations(location:  "home" , locationDetails: "2972 Westheimer Rd. Santa Ana, Illinois 85486 ") ,
-        dummyLocations(location: "Office", locationDetails: "2972 Westheimer Rd. Santa Ana, Illinois 85486 ") ,
-        dummyLocations(location: "Hospital", locationDetails: "2972 Westheimer Rd. Santa Ana, Illinois 85486 ")
+        dummyLocations(location:  "Home".localize , locationDetails: "2972 Westheimer Rd. Santa Ana, Illinois 85486 ") ,
+        dummyLocations(location: "Office".localize, locationDetails: "2972 Westheimer Rd. Santa Ana, Illinois 85486 ") ,
+        dummyLocations(location: "Hospital".localize, locationDetails: "2972 Westheimer Rd. Santa Ana, Illinois 85486 ")
         
     ]
     let dummyDriversData : [NotificationData] = [
@@ -62,6 +62,8 @@ class favoritesVC: BaseVC {
         tableView.dataSource = self
         tableView.register(cellType: favlocationCell.self)
         tableView.register(cellType: favDriverCell.self)
+        self.segment.setTitle("Locations".localize , forSegmentAt: 0 )
+        self.segment.setTitle("Drivers".localize , forSegmentAt: 1)
         
        
     }

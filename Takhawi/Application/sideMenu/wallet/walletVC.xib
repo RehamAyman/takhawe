@@ -25,6 +25,9 @@
                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                     <color key="textColor" name="MainColor"/>
                     <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Wallet"/>
+                    </userDefinedRuntimeAttributes>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxW-xb-Dny" customClass="BackButton" customModule="Takhawi" customModuleProvider="target">
                     <rect key="frame" x="20" y="69" width="40" height="40"/>
@@ -39,31 +42,49 @@
                     <rect key="frame" x="16" y="119.00000000000001" width="361" height="136.33333333333337"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available Balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0RS-gQ-seU">
-                            <rect key="frame" x="129.33333333333334" y="29.999999999999996" width="102.66666666666666" height="15.333333333333332"/>
-                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                            <rect key="frame" x="119" y="30" width="123" height="18"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Available Balance"/>
+                            </userDefinedRuntimeAttributes>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="400" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bh5-ry-eev">
-                            <rect key="frame" x="145.66666666666666" y="65.333333333333343" width="42" height="30"/>
-                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VpZ-JQ-ULZ">
-                            <rect key="frame" x="189.66666666666666" y="78.333333333333343" width="24" height="14"/>
-                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MT9-rN-aNn">
+                            <rect key="frame" x="130.66666666666666" y="64" width="100" height="40"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="400" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bh5-ry-eev">
+                                    <rect key="frame" x="20" y="5" width="42" height="30"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VpZ-JQ-ULZ">
+                                    <rect key="frame" x="64" y="18" width="24" height="14"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="SAR"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="VpZ-JQ-ULZ" firstAttribute="bottom" secondItem="bh5-ry-eev" secondAttribute="bottom" constant="-3" id="4ke-Bu-Wxh"/>
+                                <constraint firstItem="bh5-ry-eev" firstAttribute="centerY" secondItem="MT9-rN-aNn" secondAttribute="centerY" id="c8r-09-vUD"/>
+                                <constraint firstItem="bh5-ry-eev" firstAttribute="leading" secondItem="MT9-rN-aNn" secondAttribute="leading" constant="20" id="djt-cM-eHu"/>
+                                <constraint firstItem="VpZ-JQ-ULZ" firstAttribute="leading" secondItem="bh5-ry-eev" secondAttribute="trailing" constant="2" id="tkL-zu-EZL"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" name="MainColor"/>
                     <constraints>
-                        <constraint firstItem="VpZ-JQ-ULZ" firstAttribute="bottom" secondItem="bh5-ry-eev" secondAttribute="bottom" constant="-3" id="1QE-ha-33K"/>
-                        <constraint firstItem="bh5-ry-eev" firstAttribute="centerX" secondItem="E7j-BR-yc5" secondAttribute="centerX" constant="-14" id="2kv-d7-eOV"/>
-                        <constraint firstItem="VpZ-JQ-ULZ" firstAttribute="leading" secondItem="bh5-ry-eev" secondAttribute="trailing" constant="2" id="63V-R4-UIc"/>
-                        <constraint firstItem="bh5-ry-eev" firstAttribute="top" secondItem="0RS-gQ-seU" secondAttribute="bottom" constant="20" id="ILG-u3-hKk"/>
+                        <constraint firstItem="MT9-rN-aNn" firstAttribute="centerX" secondItem="0RS-gQ-seU" secondAttribute="centerX" id="7vh-zd-bgZ"/>
+                        <constraint firstItem="MT9-rN-aNn" firstAttribute="height" secondItem="E7j-BR-yc5" secondAttribute="height" multiplier="0.293399" id="JVx-F1-exM"/>
+                        <constraint firstItem="MT9-rN-aNn" firstAttribute="top" secondItem="0RS-gQ-seU" secondAttribute="bottom" constant="16" id="MDb-ZQ-4cO"/>
                         <constraint firstItem="0RS-gQ-seU" firstAttribute="top" secondItem="E7j-BR-yc5" secondAttribute="top" constant="30" id="k0a-rW-xX3"/>
+                        <constraint firstItem="MT9-rN-aNn" firstAttribute="width" secondItem="E7j-BR-yc5" secondAttribute="width" multiplier="0.277008" id="pu2-u1-7C6"/>
                         <constraint firstItem="0RS-gQ-seU" firstAttribute="centerX" secondItem="E7j-BR-yc5" secondAttribute="centerX" id="wvX-VY-9Q7"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
@@ -80,6 +101,9 @@
                     <state key="normal" title="Add Money" image="plus" catalog="system">
                         <color key="titleColor" name="MainColor"/>
                     </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Add Money"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="addMonyAction:" destination="-1" eventType="touchUpInside" id="5ge-Qi-nKb"/>
                     </connections>
@@ -89,6 +113,9 @@
                     <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Transections"/>
+                    </userDefinedRuntimeAttributes>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KhS-Lu-8wL">
                     <rect key="frame" x="308.33333333333331" y="314.33333333333331" width="68.666666666666686" height="31"/>
@@ -97,6 +124,9 @@
                     <buttonConfiguration key="configuration" style="plain" title="See All">
                         <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
                     </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="See All"/>
+                    </userDefinedRuntimeAttributes>
                 </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="b4b-Pe-fcX">
                     <rect key="frame" x="5" y="348.66666666666674" width="383" height="469.33333333333326"/>
@@ -125,7 +155,7 @@
                 <constraint firstItem="b4b-Pe-fcX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="viK-03-7Ri"/>
                 <constraint firstItem="KhS-Lu-8wL" firstAttribute="top" secondItem="w8N-9F-zl5" secondAttribute="bottom" constant="25" id="wA1-Mp-5DW"/>
             </constraints>
-            <point key="canvasLocation" x="137" y="20"/>
+            <point key="canvasLocation" x="136.64122137404578" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>

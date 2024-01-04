@@ -166,3 +166,27 @@
 "Enter Your Discount Code" = "أدخل رمز الخصم الخاص بك"  ;
 
 "Notifications" = "الاشعارات" ; 
+"Favourite" = "المفضلات"  ; 
+"Home" = "المنزل" ;
+"Office" = "المكتب" ;
+"Hospital" = "المستشفي" ;
+"Locations" = "المواقع" ;
+"Drivers" = "السائقين" ;
+"There is no Messages yet!" = "لا توجد رسائل حتى الآن!" ;
+"Return to home page" = "العوده للرئيسية" ;
+"Messages" = "الرسائل" ;
+"Available Balance" = "الرصيد المتاح"  ;
+"Add Money" = "اضافة رصيد" ;
+"See All" = "عرض الكل" ;
+"Transections" = "التحويلات" ;
+"Wallet" = "المحفظة" ;
+
+"Add payment Method" = "إضافة طريقة دفع" ;
+"Amount" = "المبلغ" ;
+"Enter Amount" = "اضافة مبلغ" ;
+"Trips" = "الرحلات";
+"Completed" = "مكتمله";
+"Cancelled" = "ملغية";
+"Upcoming" = "القادمة";
+"Return to home" = "العودة للرئيسية" ;
+"There is no upcoming trips right now!" = "لا توجد رحلات قادمة الآن!" ;

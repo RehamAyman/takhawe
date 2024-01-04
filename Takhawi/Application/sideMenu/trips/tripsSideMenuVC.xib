@@ -25,6 +25,9 @@
                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                     <color key="textColor" name="MainColor"/>
                     <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Trips"/>
+                    </userDefinedRuntimeAttributes>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YY0-Hm-Ptl" customClass="BackButton" customModule="Takhawi" customModuleProvider="target">
                     <rect key="frame" x="20" y="69" width="40" height="40"/>
@@ -61,12 +64,16 @@
                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="There is no upcoming trips right now!"/>
+                            </userDefinedRuntimeAttributes>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zy4-Au-blO">
-                            <rect key="frame" x="78.666666666666671" y="230" width="157.66666666666663" height="50"/>
+                            <rect key="frame" x="72.666666666666686" y="230" width="170" height="50"/>
                             <color key="backgroundColor" name="MainColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="0MV-qf-K3A"/>
+                                <constraint firstAttribute="width" constant="170" id="3HO-hl-8gy"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -76,6 +83,7 @@
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                     <real key="value" value="25"/>
                                 </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Return to home"/>
                             </userDefinedRuntimeAttributes>
                         </button>
                     </subviews>
@@ -89,7 +97,6 @@
                         <constraint firstAttribute="bottom" secondItem="zy4-Au-blO" secondAttribute="bottom" constant="20" id="pvD-hl-Afu"/>
                         <constraint firstItem="zy4-Au-blO" firstAttribute="top" secondItem="pNC-CK-c4O" secondAttribute="bottom" constant="25" id="rxn-Em-YZX"/>
                         <constraint firstAttribute="height" constant="300" id="tEm-fB-XTl"/>
-                        <constraint firstItem="zy4-Au-blO" firstAttribute="width" secondItem="b0x-P2-PED" secondAttribute="width" multiplier="0.5" id="tq0-Pi-EZa"/>
                     </constraints>
                 </view>
             </subviews>
