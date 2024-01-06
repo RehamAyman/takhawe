@@ -261,17 +261,30 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
     
     
     func initialSegment () {
+      
+        
+        
+       
+        
+        
+//        segment.setTitleTextAttributes([NSAttributedString.Key.font: font] ,
+//                                                for: .normal)
         self.joinTripOutlet.setTitle("Join the trip".localize , for: .normal)
-        let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.gray]
-             segment.setTitleTextAttributes(titleTextAttributes, for:.normal)
+      //  let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.gray]
+           
 
              let titleTextAttributes1 = [NSAttributedString.Key.foregroundColor: UIColor(named: "MainColor")]
         segment.setTitleTextAttributes(titleTextAttributes1 as [NSAttributedString.Key : Any], for:.selected)
-        let titleTextAttributes2 = [NSAttributedString.Key.foregroundColor: UIColor.lightGray]
-        segment.setTitleTextAttributes(titleTextAttributes2 as [NSAttributedString.Key : Any], for:.normal)
+      //  let titleTextAttributes2 = [NSAttributedString.Key.foregroundColor: UIColor.lightGray]
+      //  segment.setTitleTextAttributes(titleTextAttributes2 as [NSAttributedString.Key : Any], for:.normal)
+        
+        
+        
         let font = UIFont.systemFont(ofSize: 12)
-        segment.setTitleTextAttributes([NSAttributedString.Key.font: font],
-                                                for: .normal)
+        let attributes = [ NSAttributedString.Key.foregroundColor : UIColor.lightGray,
+                           NSAttributedString.Key.font : font ]
+        segment.setTitleTextAttributes(attributes, for:.normal)
+        
         
         
         self.viewHeight.constant = 185

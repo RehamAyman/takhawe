@@ -36,9 +36,9 @@ class helpAndSupportVC: BaseVC {
     private func configureInitialDesign() {
         self.title = "".localized
         self.complaintextField.handelTextField(placeHolder: "Choose Your Complain".localize)
-        if LocalizationManager.shared.getLanguage() == .English {
+     
             self.complaintextField.label.text = "Your Complain".localize
-        }
+      
         self.complainTextView.delegate = self
         self.complainTextView.text = "Write your complain here (minimum 10 characters)".localize
         self.complainTextView.textColor = UIColor.systemGray

@@ -128,6 +128,9 @@
                             </constraints>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" image="Vector 2"/>
+                            <connections>
+                                <action selector="editProfileActtion:" destination="-1" eventType="touchUpInside" id="obc-cp-xkA"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>

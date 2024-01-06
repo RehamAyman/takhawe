@@ -43,9 +43,11 @@ extension MDCOutlinedTextField {
         
         
         self.preferredContainerHeight = 50
-        self.leadingEdgePaddingOverride = 25
+        self.leadingEdgePaddingOverride = 20
+        self.setLeftPaddingPoints(5)
+       self.setRightPaddingPoints(5)
         self.containerRadius = 25
-        
+        self.sizeToFit()
         
         
     }

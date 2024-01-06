@@ -52,8 +52,6 @@ class favoritesVC: BaseVC {
 //MARK: - Design Methods -
     private func configureInitialDesign() {
         self.title = "".localized
-        let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-             segment.setTitleTextAttributes(titleTextAttributes, for:.normal)
         let titleTextAttributes1 = [NSAttributedString.Key.foregroundColor: UIColor.white]
         segment.setTitleTextAttributes(titleTextAttributes1 as [NSAttributedString.Key : Any], for:.selected)
         segment.selectedSegmentTintColor = UIColor(named: "MainColor")
@@ -65,7 +63,13 @@ class favoritesVC: BaseVC {
         self.segment.setTitle("Locations".localize , forSegmentAt: 0 )
         self.segment.setTitle("Drivers".localize , forSegmentAt: 1)
         
+        
+        let font = UIFont.systemFont(ofSize: 12)
+        let attributes = [ NSAttributedString.Key.foregroundColor : UIColor.white,
+                           NSAttributedString.Key.font : font ]
+        
        
+        segment.setTitleTextAttributes( attributes,for: .normal)
     }
     
 

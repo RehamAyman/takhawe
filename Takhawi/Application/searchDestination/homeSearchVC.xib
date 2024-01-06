@@ -81,8 +81,8 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recent places" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRN-vs-Kf7">
-                            <rect key="frame" x="20" y="80" width="103" height="18"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <rect key="frame" x="19.999999999999993" y="80" width="93.333333333333314" height="17"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                             <userDefinedRuntimeAttributes>
@@ -90,12 +90,14 @@
                             </userDefinedRuntimeAttributes>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nuy-Df-f3z">
-                            <rect key="frame" x="295" y="73.666666666666657" width="78" height="31"/>
+                            <rect key="frame" x="294" y="74.666666666666657" width="79" height="28"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="28" id="04e-sk-U9G"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <color key="tintColor" name="MainColor"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Clear All">
-                                <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
-                            </buttonConfiguration>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Clear All"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Clear All"/>
                             </userDefinedRuntimeAttributes>
@@ -104,7 +106,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SEu-vF-uGN">
-                            <rect key="frame" x="30" y="117.99999999999997" width="343" height="32"/>
+                            <rect key="frame" x="30" y="116.99999999999997" width="343" height="32"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="32" id="R5E-PN-Cqa"/>
                             </constraints>
@@ -162,7 +164,7 @@
                             </constraints>
                         </stackView>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="H4u-0O-Qd5">
-                            <rect key="frame" x="20" y="169.99999999999997" width="353" height="401.66666666666663"/>
+                            <rect key="frame" x="20" y="168.99999999999997" width="353" height="402.66666666666663"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </tableView>
                     </subviews>
@@ -194,6 +196,7 @@
                 <constraint firstItem="tfq-2m-zCw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="AQO-An-WOJ"/>
                 <constraint firstAttribute="trailing" secondItem="30t-6K-9Fp" secondAttribute="trailing" id="Fxv-ii-ma2"/>
                 <constraint firstItem="30t-6K-9Fp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="KUC-1g-ZtJ"/>
+                <constraint firstItem="nuy-Df-f3z" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.201018" id="RzA-7G-7A2"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="tfq-2m-zCw" secondAttribute="trailing" id="V1q-nG-GvW"/>
                 <constraint firstItem="tfq-2m-zCw" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.8" id="Vxl-R8-YXw"/>
                 <constraint firstItem="30t-6K-9Fp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bLf-rp-94M"/>

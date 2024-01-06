@@ -195,6 +195,17 @@
 "Return to home" = "Return to home" ;
 "There is no upcoming trips right now!" = "There is no upcoming trips right now!" ;
 "Destination!" = "Destination!" ;
-"User" = "User" ; 
+
 "Select Time" = "Select Time" ;
 "Select Date" = "Select Date" ; 
+"Edit Profile" = "Edit Profile" ; 
+"Name" = "Name" ;
+"Email address" = "Email address" ;
+"City" = "City" ;
+"Birthday" = "Birthday" ;
+"Phone Number" = "Phone Number" ;
+"Gender" = "Gender" ;
+"Hobbies" = "Hobbies" ; 
+"Favourites" = "Favourites" ; 
+"Update Profile" = "Update Profile" ; 
+"Delete Profile" = "Delete Profile"  ; 

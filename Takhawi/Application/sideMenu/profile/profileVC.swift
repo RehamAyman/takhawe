@@ -53,6 +53,11 @@ class profileVC: BaseVC {
     
 //MARK: - Actions -
     
+    
+    @IBAction func editProfileActtion(_ sender: UIButton) {
+        self.push(editProfileVC())
+    }
+    
 }
 
 

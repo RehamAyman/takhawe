@@ -29,7 +29,7 @@ extension profileVC : UICollectionViewDelegate , UICollectionViewDataSource , UI
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let label = UILabel(frame: CGRect.zero)
         label.text = self.dummyActivty[indexPath.item].name
-          label.sizeToFit()
+        label.sizeToFit()
         return CGSize(width: label.frame.width  , height: 55)
     }
     

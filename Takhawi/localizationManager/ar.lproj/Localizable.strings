@@ -191,7 +191,18 @@
 "Return to home" = "العودة للرئيسية" ;
 "There is no upcoming trips right now!" = "لا توجد رحلات قادمة الآن!" ;
 "Destination!" = "وين الوجهه" ;
-"User" = "زياد" ; 
+
 
 "Select Time" = "حدد الوقت" ;
 "Select Date" = "حدد تاريخ" ;
+"Edit Profile" = "تعديل معلومات الحساب" ; 
+"Name" = "الاسم" ;
+"Email address" = "البريد الالكتروني" ;
+"City" = "المدينه" ;
+"Birthday" = "تاريخ الميلاد" ;
+"Phone Number" = "الجوال" ;
+"Gender" = "النوع" ;
+"Hobbies" = "الهوايات" ;
+"Favourites" = "المفضلات" ;
+"Update Profile" = "حفظ التعديلات" ; 
+"Delete Profile" = "حذف حسابي"  ; 

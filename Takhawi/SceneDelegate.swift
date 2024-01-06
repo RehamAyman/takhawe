@@ -36,7 +36,7 @@ extension SceneDelegate : LocalizationDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "OnboardingViewController")
         window.rootViewController = vc
-        let options: UIView.AnimationOptions = .curveEaseInOut
+        let options: UIView.AnimationOptions = .transitionFlipFromLeft
         let duration: TimeInterval = 0.4
         UIView.transition(with: window, duration: duration, options: options, animations: nil, completion: nil)
         

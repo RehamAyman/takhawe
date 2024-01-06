@@ -336,6 +336,8 @@
 		CE9F3C572B1B4550004C3D24 /* wAY9ZXW4id.json in Resources */ = {isa = PBXBuildFile; fileRef = CE9F3C562B1B4550004C3D24 /* wAY9ZXW4id.json */; };
 		CE9F3C592B1B482E004C3D24 /* BDidekRogj.json in Resources */ = {isa = PBXBuildFile; fileRef = CE9F3C582B1B482D004C3D24 /* BDidekRogj.json */; };
 		CE9F3C5B2B1B4955004C3D24 /* u4F3iX2jrQ.json in Resources */ = {isa = PBXBuildFile; fileRef = CE9F3C5A2B1B4954004C3D24 /* u4F3iX2jrQ.json */; };
+		CEB29E582B49892C00F64ED8 /* editProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB29E572B49892C00F64ED8 /* editProfileVC.swift */; };
+		CEB29E5A2B49894900F64ED8 /* editProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB29E592B49894900F64ED8 /* editProfileVC.xib */; };
 		CEB5A8492ABC489200A7F4AD /* MIOTPVerificationSPM in Frameworks */ = {isa = PBXBuildFile; productRef = CEB5A8482ABC489200A7F4AD /* MIOTPVerificationSPM */; };
 		CEB5A84B2ABC4DEC00A7F4AD /* shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB5A84A2ABC4DEC00A7F4AD /* shadow.swift */; };
 		CEB5A84E2ABC4F7500A7F4AD /* backButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB5A84D2ABC4F7500A7F4AD /* backButton.swift */; };
@@ -360,6 +362,9 @@
 		CECA04572B29D2EF001AA89D /* rateTheDriverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA04562B29D2EF001AA89D /* rateTheDriverVC.swift */; };
 		CED0C29D2B49322A00BCD6D0 /* overrideFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0C29C2B49322A00BCD6D0 /* overrideFont.swift */; };
 		CED0C29F2B4936B600BCD6D0 /* alfont_com_هلفيتيكا-عربي-.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED0C29E2B4936B600BCD6D0 /* alfont_com_هلفيتيكا-عربي-.ttf */; };
+		CED288902B49B7EB00E075CE /* editProfileVC+extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED2888F2B49B7EB00E075CE /* editProfileVC+extentions.swift */; };
+		CED288942B49B87B00E075CE /* hobbiesCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED288922B49B87B00E075CE /* hobbiesCellCollectionViewCell.swift */; };
+		CED288952B49B87B00E075CE /* hobbiesCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CED288932B49B87B00E075CE /* hobbiesCellCollectionViewCell.xib */; };
 		CED51ED32AE1B86D00603151 /* driverProfile+collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED51ED22AE1B86D00603151 /* driverProfile+collection.swift */; };
 		CEDDBE182ACBDFA700677C94 /* sideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDDBE162ACBDFA700677C94 /* sideMenuCell.swift */; };
 		CEDDBE192ACBDFA700677C94 /* sideMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDDBE172ACBDFA700677C94 /* sideMenuCell.xib */; };
@@ -716,6 +721,8 @@
 		CE9F3C562B1B4550004C3D24 /* wAY9ZXW4id.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wAY9ZXW4id.json; sourceTree = "<group>"; };
 		CE9F3C582B1B482D004C3D24 /* BDidekRogj.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BDidekRogj.json; sourceTree = "<group>"; };
 		CE9F3C5A2B1B4954004C3D24 /* u4F3iX2jrQ.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = u4F3iX2jrQ.json; sourceTree = "<group>"; };
+		CEB29E572B49892C00F64ED8 /* editProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editProfileVC.swift; sourceTree = "<group>"; };
+		CEB29E592B49894900F64ED8 /* editProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = editProfileVC.xib; sourceTree = "<group>"; };
 		CEB5A84A2ABC4DEC00A7F4AD /* shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shadow.swift; sourceTree = "<group>"; };
 		CEB5A84D2ABC4F7500A7F4AD /* backButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backButton.swift; sourceTree = "<group>"; };
 		CEB5A84F2ABC53C200A7F4AD /* underLineButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = underLineButton.swift; sourceTree = "<group>"; };
@@ -739,6 +746,9 @@
 		CECA04562B29D2EF001AA89D /* rateTheDriverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rateTheDriverVC.swift; sourceTree = "<group>"; };
 		CED0C29C2B49322A00BCD6D0 /* overrideFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = overrideFont.swift; sourceTree = "<group>"; };
 		CED0C29E2B4936B600BCD6D0 /* alfont_com_هلفيتيكا-عربي-.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "alfont_com_هلفيتيكا-عربي-.ttf"; sourceTree = "<group>"; };
+		CED2888F2B49B7EB00E075CE /* editProfileVC+extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "editProfileVC+extentions.swift"; sourceTree = "<group>"; };
+		CED288922B49B87B00E075CE /* hobbiesCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hobbiesCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		CED288932B49B87B00E075CE /* hobbiesCellCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = hobbiesCellCollectionViewCell.xib; sourceTree = "<group>"; };
 		CED51ED22AE1B86D00603151 /* driverProfile+collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "driverProfile+collection.swift"; sourceTree = "<group>"; };
 		CEDDBE162ACBDFA700677C94 /* sideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sideMenuCell.swift; sourceTree = "<group>"; };
 		CEDDBE172ACBDFA700677C94 /* sideMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = sideMenuCell.xib; sourceTree = "<group>"; };
@@ -2148,6 +2158,17 @@
 			path = hotelsScreens;
 			sourceTree = "<group>";
 		};
+		CEB29E562B49890400F64ED8 /* editProfile */ = {
+			isa = PBXGroup;
+			children = (
+				CED288912B49B85E00E075CE /* cells */,
+				CED2888F2B49B7EB00E075CE /* editProfileVC+extentions.swift */,
+				CEB29E572B49892C00F64ED8 /* editProfileVC.swift */,
+				CEB29E592B49894900F64ED8 /* editProfileVC.xib */,
+			);
+			path = editProfile;
+			sourceTree = "<group>";
+		};
 		CEB5A84C2ABC4F6600A7F4AD /* UIButtons */ = {
 			isa = PBXGroup;
 			children = (
@@ -2202,6 +2223,7 @@
 		CEBB8B952ADE95D900E70EC4 /* profile */ = {
 			isa = PBXGroup;
 			children = (
+				CEB29E562B49890400F64ED8 /* editProfile */,
 				CEBB8B9F2ADEB8CE00E70EC4 /* cell */,
 				CEBB8B962ADE95F200E70EC4 /* profileVC.xib */,
 				CEBB8B982ADE960100E70EC4 /* profileVC.swift */,
@@ -2236,6 +2258,15 @@
 				CED0C29C2B49322A00BCD6D0 /* overrideFont.swift */,
 			);
 			path = overrideFont;
+			sourceTree = "<group>";
+		};
+		CED288912B49B85E00E075CE /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				CED288922B49B87B00E075CE /* hobbiesCellCollectionViewCell.swift */,
+				CED288932B49B87B00E075CE /* hobbiesCellCollectionViewCell.xib */,
+			);
+			path = cells;
 			sourceTree = "<group>";
 		};
 		CEDDBE152ACBDF8500677C94 /* cell */ = {
@@ -2415,6 +2446,7 @@
 				96EA1E3E2A77006B00F39386 /* Alexandria-ExtraBold.ttf in Resources */,
 				04C737C52B36DE27002AE59C /* policesVC.xib in Resources */,
 				CEDDBE192ACBDFA700677C94 /* sideMenuCell.xib in Resources */,
+				CEB29E5A2B49894900F64ED8 /* editProfileVC.xib in Resources */,
 				CE04D9C12B15E8BC00B41157 /* successBookViewVC.xib in Resources */,
 				CE71F47C2B17436500E7B689 /* selectTimeVC.xib in Resources */,
 				96EA1E3F2A77006B00F39386 /* Alexandria-ExtraLight.ttf in Resources */,
@@ -2479,6 +2511,7 @@
 				CE996B562B25AC6F0089D2F4 /* trackYourTripVC.xib in Resources */,
 				CEDDBE252ACC45AF00677C94 /* destinationSearchVCCell.xib in Resources */,
 				CE9EC0012B1466E70080A0F2 /* reserveTheTripCell.xib in Resources */,
+				CED288952B49B87B00E075CE /* hobbiesCellCollectionViewCell.xib in Resources */,
 				9694AC5D2A5E040D00BDF5F8 /* 62623-warning.json in Resources */,
 				04C737D12B371046002AE59C /* selectComplainVC.xib in Resources */,
 				CE2292872B1E57C100E8AB42 /* hotelsVC.xib in Resources */,
@@ -2598,6 +2631,7 @@
 				CEB5A8592ABC6DF000A7F4AD /* tap2.swift in Sources */,
 				9694ABF32A5DFACA00BDF5F8 /* CustomizedTabBar.swift in Sources */,
 				9694ABE62A5DFACA00BDF5F8 /* FiristStrpProgressCell.swift in Sources */,
+				CED288942B49B87B00E075CE /* hobbiesCellCollectionViewCell.swift in Sources */,
 				CE3CACF02B2DA7A50025990E /* swiftRegisterVC.swift in Sources */,
 				CEBB8B932ADE77FB00E70EC4 /* mapSearchExtention.swift in Sources */,
 				CEB5A8642ABD7ECD00A7F4AD /* tab4.swift in Sources */,
@@ -2640,6 +2674,7 @@
 				9694ABFE2A5DFACA00BDF5F8 /* Constants.swift in Sources */,
 				9694ABD82A5DFACA00BDF5F8 /* extensionUITextField.swift in Sources */,
 				9694ABE12A5DFACA00BDF5F8 /* badgedButton.swift in Sources */,
+				CED288902B49B7EB00E075CE /* editProfileVC+extentions.swift in Sources */,
 				9694ABEC2A5DFACA00BDF5F8 /* CustomNavigationController.swift in Sources */,
 				9694ABDD2A5DFACA00BDF5F8 /* Collection.swift in Sources */,
 				04B659D92B343AF200E78752 /* walletVC+extentions.swift in Sources */,
@@ -2829,6 +2864,7 @@
 				9694AC552A5E040D00BDF5F8 /* Themes.swift in Sources */,
 				9641AD342A6C2C1700A29046 /* OnboardingSlide.swift in Sources */,
 				9694AC042A5DFACA00BDF5F8 /* ValidationService.swift in Sources */,
+				CEB29E582B49892C00F64ED8 /* editProfileVC.swift in Sources */,
 				CE27F53E2ADFAD8500DEA419 /* JStarRatingView.swift in Sources */,
 				9694ABF22A5DFACA00BDF5F8 /* CustomViews.swift in Sources */,
 				9694ABDB2A5DFACA00BDF5F8 /* Date.swift in Sources */,
@@ -3002,8 +3038,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
-				DEVELOPMENT_TEAM = 95K26889X5;
+				CURRENT_PROJECT_VERSION = 9;
+				DEVELOPMENT_TEAM = CA5NVSJ377;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
 				FRAMEWORK_SEARCH_PATHS = "${inherited}";
@@ -3022,7 +3058,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.takhawi.Takhawia;
+				PRODUCT_BUNDLE_IDENTIFIER = com.takhawi.Takhawiapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -3043,8 +3079,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
-				DEVELOPMENT_TEAM = 95K26889X5;
+				CURRENT_PROJECT_VERSION = 9;
+				DEVELOPMENT_TEAM = CA5NVSJ377;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				FRAMEWORK_SEARCH_PATHS = "${inherited}";
@@ -3063,7 +3099,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.takhawi.Takhawia;
+				PRODUCT_BUNDLE_IDENTIFIER = com.takhawi.Takhawiapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
