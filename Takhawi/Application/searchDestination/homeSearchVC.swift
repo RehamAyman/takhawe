@@ -82,7 +82,7 @@ class homeSearchVC: BaseVC{
       
             if self.selectedPlace == "" {
                 AlertKitAPI.present(
-                    title: "Sorry, but you need to select a destination first!" ,
+                    title: "Sorry, but you need to select a destination first!".localize ,
                     icon: .error,
                     style: .iOS17AppleMusic,
                     haptic: .success

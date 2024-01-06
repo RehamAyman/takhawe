@@ -21,21 +21,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     static let GoogleAPI = "AIzaSyALVzDd_-YceNQIpzRFq0w60jTU3RhV22I"
     var location:CLLocationManager?
     
-    
-    
+   
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-       
+    //AIzaSyDS61p6luMp1Kfj8xmfIvjYz-mBQF9Noo8 // hayah
+    //AIzaSyA7nhBa7YZtIb6KoG47O0_y2PwxYfsHiBs // ageeba
+        
         GMSServices.provideAPIKey("AIzaSyA7nhBa7YZtIb6KoG47O0_y2PwxYfsHiBs")
         GMSPlacesClient.provideAPIKey("AIzaSyA7nhBa7YZtIb6KoG47O0_y2PwxYfsHiBs")
-   
         
         AppDelegate.window?.tintColor = UIColor(named: "MainColor")
-        
-        
         self.location?.requestAlwaysAuthorization()
         self.location?.requestWhenInUseAuthorization()
+        
+    
+      
+        
         
         
   // check here  if authenticated User go to home else go to auth cycle

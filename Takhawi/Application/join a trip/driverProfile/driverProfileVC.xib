@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="driverProfileVC" customModule="Takhawi" customModuleProvider="target">
             <connections>
+                <outlet property="BottomcontainerStack" destination="UEl-hb-ba7" id="0vr-hw-pKd"/>
                 <outlet property="collectionView" destination="7mh-CN-Dfo" id="ahz-cl-gt6"/>
                 <outlet property="containerView" destination="wTq-9C-DMp" id="dIu-U1-xVG"/>
                 <outlet property="googleView" destination="ag7-m0-5iV" id="PYU-s2-rdE"/>
@@ -29,8 +30,8 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="59.666666666666657"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Driver Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZC-Kd-P8g">
-                            <rect key="frame" x="143.33333333333334" y="19.666666666666671" width="106.33333333333334" height="20.333333333333329"/>
-                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                            <rect key="frame" x="145.66666666666666" y="20" width="102" height="19.333333333333329"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                             <color key="textColor" name="MainColor"/>
                             <nil key="highlightedColor"/>
                             <userDefinedRuntimeAttributes>
@@ -56,7 +57,7 @@
                     </constraints>
                 </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2KU-Bh-dIX">
-                    <rect key="frame" x="0.0" y="126.66666666666669" width="393" height="725.33333333333348"/>
+                    <rect key="frame" x="0.0" y="126.66666666666669" width="393" height="725.33333333333326"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="oft-2f-t8y">
                             <rect key="frame" x="19.666666666666657" y="0.0" width="353.66666666666674" height="1060"/>
@@ -101,12 +102,12 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wnE-Yl-zqp">
-                                                    <rect key="frame" x="67" y="125.33333333333334" width="220" height="35"/>
+                                                    <rect key="frame" x="77" y="125.33333333333334" width="200" height="35"/>
                                                     <subviews>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trips: 22" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTa-8g-a8U">
-                                                            <rect key="frame" x="0.0" y="0.0" width="105" height="35"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="95" height="35"/>
                                                             <color key="backgroundColor" red="0.96470588450000005" green="0.96470588450000005" blue="0.96470588450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <color key="textColor" name="MainColor"/>
                                                             <nil key="highlightedColor"/>
                                                             <userDefinedRuntimeAttributes>
@@ -117,13 +118,12 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x6H-Yl-tEZ">
-                                                            <rect key="frame" x="115" y="0.0" width="105" height="35"/>
+                                                            <rect key="frame" x="105" y="0.0" width="95" height="35"/>
                                                             <color key="backgroundColor" name="MainColor"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain" image="Group 5" title="Reviews" imagePadding="3">
-                                                                <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                                            </buttonConfiguration>
+                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="3" maxY="0.0"/>
+                                                            <state key="normal" title="Reviews" image="Group 5"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                     <real key="value" value="17"/>
@@ -316,7 +316,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="45" id="NKA-bv-RGE"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <textInputTraits key="textInputTraits" keyboardType="ASCIICapableNumberPad"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="number of children (optional)"/>
@@ -327,7 +327,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="◉ Children 0-10 years old: Parents can reserve a seat for them." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VuU-aH-Cnr">
                                                     <rect key="frame" x="0.0" y="0.0" width="343.66666666666669" height="14.333333333333334"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="9"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                                     <color key="textColor" name="AppRed"/>
                                                     <nil key="highlightedColor"/>
                                                     <userDefinedRuntimeAttributes>
@@ -336,7 +336,7 @@
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="◉ Children over 10 years old: Children must reserve their own seat using their own account." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o0c-er-I86">
                                                     <rect key="frame" x="0.0" y="14.333333333333258" width="343.66666666666669" height="14.666666666666664"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="8"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                                     <color key="textColor" name="AppRed"/>
                                                     <nil key="highlightedColor"/>
                                                     <userDefinedRuntimeAttributes>
@@ -378,8 +378,8 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2t-69-Ohh">
-                                                    <rect key="frame" x="57" y="22" width="20" height="11.666666666666664"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
+                                                    <rect key="frame" x="57" y="21.666666666666515" width="20" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <color key="textColor" name="MainColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <userDefinedRuntimeAttributes>
@@ -406,11 +406,10 @@
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="453-3j-2vz">
                                             <rect key="frame" x="160" y="0.0" width="193.66666666666663" height="50"/>
                                             <color key="backgroundColor" name="MainColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" title="Reserve your seat now!">
-                                                <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                            </buttonConfiguration>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Reserve your seat now!"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="25"/>
@@ -458,6 +457,7 @@
                 <constraint firstAttribute="trailing" secondItem="Jzp-JM-D0R" secondAttribute="trailing" id="95s-H1-sjI"/>
                 <constraint firstItem="Jzp-JM-D0R" firstAttribute="height" secondItem="o2g-cy-0xQ" secondAttribute="height" multiplier="0.07" id="IWs-sE-nB1"/>
                 <constraint firstItem="2KU-Bh-dIX" firstAttribute="top" secondItem="Jzp-JM-D0R" secondAttribute="bottom" constant="8" id="MAp-Zp-ozh"/>
+                <constraint firstItem="wnE-Yl-zqp" firstAttribute="width" secondItem="o2g-cy-0xQ" secondAttribute="width" multiplier="0.508906" id="Mq4-OA-Jng"/>
                 <constraint firstItem="oft-2f-t8y" firstAttribute="centerX" secondItem="Qkj-0p-fM0" secondAttribute="centerX" id="O0h-gb-CKp"/>
                 <constraint firstAttribute="bottom" secondItem="2KU-Bh-dIX" secondAttribute="bottom" id="R2M-F1-QcC"/>
                 <constraint firstItem="2KU-Bh-dIX" firstAttribute="trailing" secondItem="Qkj-0p-fM0" secondAttribute="trailing" id="ZRL-yL-cb2"/>

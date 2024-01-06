@@ -102,7 +102,7 @@ class LocalizationManager: NSObject {
         UITextView.appearance().textAlignment = dir == .leftToRight ? .left : .right
         UITextField.appearance().semanticContentAttribute = semantic
         UILabel.appearance().semanticContentAttribute = semantic
-        
+      
         //
 //        
 //        UIPageControl.appearance().semanticContentAttribute = Language.isRTL() ? .forceRightToLeft : .forceLeftToRight

@@ -59,7 +59,6 @@
 		04D81F8D2B35BC8C00AAA66C /* firstAuthCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D81F8B2B35BC8C00AAA66C /* firstAuthCell.xib */; };
 		04D81F912B35C03200AAA66C /* secauthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D81F8F2B35C03100AAA66C /* secauthCell.swift */; };
 		04D81F922B35C03200AAA66C /* secauthCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D81F902B35C03100AAA66C /* secauthCell.xib */; };
-		0F2615D7CCB4F4B462FB2D66 /* Pods_Takhawi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F82324004936416986DA34AA /* Pods_Takhawi.framework */; };
 		96202C792A7FAE2800053C5B /* OTPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96202C782A7FAE2700053C5B /* OTPVC.swift */; };
 		96202C7B2A7FAE3300053C5B /* OTPVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96202C7A2A7FAE3300053C5B /* OTPVC.xib */; };
 		96202C832A7FB97B00053C5B /* EnterMobileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96202C822A7FB97B00053C5B /* EnterMobileVC.swift */; };
@@ -217,6 +216,7 @@
 		96EA1E422A77006B00F39386 /* Alexandria-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9641AD3F2A6C8BAF00A29046 /* Alexandria-Regular.ttf */; };
 		96EA1E432A77006B00F39386 /* Alexandria-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9641AD392A6C8BAE00A29046 /* Alexandria-SemiBold.ttf */; };
 		96EA1E442A77006B00F39386 /* Alexandria-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9641AD402A6C8BAF00A29046 /* Alexandria-Thin.ttf */; };
+		C8F589A9825138701BF0AC8B /* Pods_Takhawi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 359B3FAF41FA19C66E6333D2 /* Pods_Takhawi.framework */; };
 		CE034F442B2B5D990040516E /* reportCancelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE034F432B2B5D990040516E /* reportCancelVC.swift */; };
 		CE034F462B2B5DC70040516E /* reportCancelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE034F452B2B5DC70040516E /* reportCancelVC.xib */; };
 		CE034F482B2B9D940040516E /* reportCancelVC+delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE034F472B2B9D940040516E /* reportCancelVC+delegate.swift */; };
@@ -358,6 +358,8 @@
 		CEBB8BA32ADEB8ED00E70EC4 /* profileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEBB8BA12ADEB8ED00E70EC4 /* profileCell.xib */; };
 		CEBB8BA52ADEEC1900E70EC4 /* profileVc+delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB8BA42ADEEC1900E70EC4 /* profileVc+delegate.swift */; };
 		CECA04572B29D2EF001AA89D /* rateTheDriverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA04562B29D2EF001AA89D /* rateTheDriverVC.swift */; };
+		CED0C29D2B49322A00BCD6D0 /* overrideFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0C29C2B49322A00BCD6D0 /* overrideFont.swift */; };
+		CED0C29F2B4936B600BCD6D0 /* alfont_com_هلفيتيكا-عربي-.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED0C29E2B4936B600BCD6D0 /* alfont_com_هلفيتيكا-عربي-.ttf */; };
 		CED51ED32AE1B86D00603151 /* driverProfile+collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED51ED22AE1B86D00603151 /* driverProfile+collection.swift */; };
 		CEDDBE182ACBDFA700677C94 /* sideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDDBE162ACBDFA700677C94 /* sideMenuCell.swift */; };
 		CEDDBE192ACBDFA700677C94 /* sideMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDDBE172ACBDFA700677C94 /* sideMenuCell.xib */; };
@@ -432,6 +434,7 @@
 		04D81F8B2B35BC8C00AAA66C /* firstAuthCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = firstAuthCell.xib; sourceTree = "<group>"; };
 		04D81F8F2B35C03100AAA66C /* secauthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secauthCell.swift; sourceTree = "<group>"; };
 		04D81F902B35C03100AAA66C /* secauthCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = secauthCell.xib; sourceTree = "<group>"; };
+		359B3FAF41FA19C66E6333D2 /* Pods_Takhawi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Takhawi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96202C782A7FAE2700053C5B /* OTPVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVC.swift; sourceTree = "<group>"; };
 		96202C7A2A7FAE3300053C5B /* OTPVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPVC.xib; sourceTree = "<group>"; };
 		96202C822A7FB97B00053C5B /* EnterMobileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterMobileVC.swift; sourceTree = "<group>"; };
@@ -579,7 +582,7 @@
 		9694AC762A5E0D8B00BDF5F8 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
 		96B27F862A82F791006C8DB3 /* TermsOfUseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseVC.swift; sourceTree = "<group>"; };
 		96B27F8A2A82F7BE006C8DB3 /* TermsOfUseVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermsOfUseVC.xib; sourceTree = "<group>"; };
-		A8CF50C0964AF25CF2EE7BB5 /* Pods-Takhawi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Takhawi.debug.xcconfig"; path = "Target Support Files/Pods-Takhawi/Pods-Takhawi.debug.xcconfig"; sourceTree = "<group>"; };
+		B3BB194E16A562E98DC22FBA /* Pods-Takhawi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Takhawi.release.xcconfig"; path = "Target Support Files/Pods-Takhawi/Pods-Takhawi.release.xcconfig"; sourceTree = "<group>"; };
 		CE034F432B2B5D990040516E /* reportCancelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reportCancelVC.swift; sourceTree = "<group>"; };
 		CE034F452B2B5DC70040516E /* reportCancelVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = reportCancelVC.xib; sourceTree = "<group>"; };
 		CE034F472B2B9D940040516E /* reportCancelVC+delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "reportCancelVC+delegate.swift"; sourceTree = "<group>"; };
@@ -734,6 +737,8 @@
 		CEBB8BA12ADEB8ED00E70EC4 /* profileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = profileCell.xib; sourceTree = "<group>"; };
 		CEBB8BA42ADEEC1900E70EC4 /* profileVc+delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "profileVc+delegate.swift"; sourceTree = "<group>"; };
 		CECA04562B29D2EF001AA89D /* rateTheDriverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rateTheDriverVC.swift; sourceTree = "<group>"; };
+		CED0C29C2B49322A00BCD6D0 /* overrideFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = overrideFont.swift; sourceTree = "<group>"; };
+		CED0C29E2B4936B600BCD6D0 /* alfont_com_هلفيتيكا-عربي-.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "alfont_com_هلفيتيكا-عربي-.ttf"; sourceTree = "<group>"; };
 		CED51ED22AE1B86D00603151 /* driverProfile+collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "driverProfile+collection.swift"; sourceTree = "<group>"; };
 		CEDDBE162ACBDFA700677C94 /* sideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sideMenuCell.swift; sourceTree = "<group>"; };
 		CEDDBE172ACBDFA700677C94 /* sideMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = sideMenuCell.xib; sourceTree = "<group>"; };
@@ -751,8 +756,7 @@
 		CEF973792AC1D4B600CDCCFD /* UIResponder+Current.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIResponder+Current.swift"; sourceTree = "<group>"; };
 		CEF9737B2AC1D4D700CDCCFD /* KeyboardHeightPublisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardHeightPublisher.swift; sourceTree = "<group>"; };
 		CEF9737D2AC1D4FA00CDCCFD /* KeyboardAdaptive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardAdaptive.swift; sourceTree = "<group>"; };
-		F82324004936416986DA34AA /* Pods_Takhawi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Takhawi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F95E0EA69C2F77C68BC9BA23 /* Pods-Takhawi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Takhawi.release.xcconfig"; path = "Target Support Files/Pods-Takhawi/Pods-Takhawi.release.xcconfig"; sourceTree = "<group>"; };
+		F3047DA9E7818C7FFEFB71D9 /* Pods-Takhawi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Takhawi.debug.xcconfig"; path = "Target Support Files/Pods-Takhawi/Pods-Takhawi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -773,7 +777,7 @@
 				96EA1E3B2A76EDF900F39386 /* M13Checkbox in Frameworks */,
 				9694AC0A2A5DFB6300BDF5F8 /* Alamofire in Frameworks */,
 				9694AC152A5E013100BDF5F8 /* Kingfisher in Frameworks */,
-				0F2615D7CCB4F4B462FB2D66 /* Pods_Takhawi.framework in Frameworks */,
+				C8F589A9825138701BF0AC8B /* Pods_Takhawi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -818,6 +822,8 @@
 		0493588A2B43D823004E5259 /* localizationManager */ = {
 			isa = PBXGroup;
 			children = (
+				CED0C29E2B4936B600BCD6D0 /* alfont_com_هلفيتيكا-عربي-.ttf */,
+				CED0C29B2B49321200BCD6D0 /* overrideFont */,
 				0493588B2B43D838004E5259 /* localizationManager.swift */,
 				049358922B43DA81004E5259 /* Localizable.strings */,
 			);
@@ -1588,7 +1594,7 @@
 				CE44772F2AE01599000D96F6 /* HorizontalCalendar.framework */,
 				CE27F5372ADF96C400DEA419 /* EasyTipView.framework */,
 				CE27F5352ADF947C00DEA419 /* EasyTipView.framework */,
-				F82324004936416986DA34AA /* Pods_Takhawi.framework */,
+				359B3FAF41FA19C66E6333D2 /* Pods_Takhawi.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1596,8 +1602,8 @@
 		C935BC724100C1DFE068F48E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A8CF50C0964AF25CF2EE7BB5 /* Pods-Takhawi.debug.xcconfig */,
-				F95E0EA69C2F77C68BC9BA23 /* Pods-Takhawi.release.xcconfig */,
+				F3047DA9E7818C7FFEFB71D9 /* Pods-Takhawi.debug.xcconfig */,
+				B3BB194E16A562E98DC22FBA /* Pods-Takhawi.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -2224,6 +2230,14 @@
 			path = rateTheDriver;
 			sourceTree = "<group>";
 		};
+		CED0C29B2B49321200BCD6D0 /* overrideFont */ = {
+			isa = PBXGroup;
+			children = (
+				CED0C29C2B49322A00BCD6D0 /* overrideFont.swift */,
+			);
+			path = overrideFont;
+			sourceTree = "<group>";
+		};
 		CEDDBE152ACBDF8500677C94 /* cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -2311,12 +2325,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9694AB462A5DE9D600BDF5F8 /* Build configuration list for PBXNativeTarget "Takhawi" */;
 			buildPhases = (
-				B9A80043DEC906FFEBE6DACC /* [CP] Check Pods Manifest.lock */,
+				23C11B85E62750C727B75E80 /* [CP] Check Pods Manifest.lock */,
 				9694AB2E2A5DE9D500BDF5F8 /* Sources */,
 				9694AB2F2A5DE9D500BDF5F8 /* Frameworks */,
 				9694AB302A5DE9D500BDF5F8 /* Resources */,
-				A64CA494ED7DEFF4B46F8644 /* [CP] Embed Pods Frameworks */,
-				671BC6DCBF5B35E55F29BBC5 /* [CP] Copy Pods Resources */,
+				B322E3F962E0245A927B4570 /* [CP] Embed Pods Frameworks */,
+				05A9FB8CB956DA8B36CCBFDF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2484,6 +2498,7 @@
 				CE115E5B2ABED5CC00972CC9 /* homeVC.xib in Resources */,
 				9641AD2C2A6AD38C00A29046 /* LoginVC.xib in Resources */,
 				04B659D72B3437F300E78752 /* walletVC.xib in Resources */,
+				CED0C29F2B4936B600BCD6D0 /* alfont_com_هلفيتيكا-عربي-.ttf in Resources */,
 				9694AC612A5E040D00BDF5F8 /* ArbFONTS-URW-DIN-Arabic-Light.ttf in Resources */,
 				9694AC642A5E040D00BDF5F8 /* ArbFONTS-URW-DIN-Arabic-Black.ttf in Resources */,
 				9694ABEF2A5DFACA00BDF5F8 /* GoogleService-Info.plist in Resources */,
@@ -2515,7 +2530,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		671BC6DCBF5B35E55F29BBC5 /* [CP] Copy Pods Resources */ = {
+		05A9FB8CB956DA8B36CCBFDF /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -2532,24 +2547,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Takhawi/Pods-Takhawi-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A64CA494ED7DEFF4B46F8644 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Takhawi/Pods-Takhawi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Takhawi/Pods-Takhawi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Takhawi/Pods-Takhawi-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B9A80043DEC906FFEBE6DACC /* [CP] Check Pods Manifest.lock */ = {
+		23C11B85E62750C727B75E80 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -2569,6 +2567,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B322E3F962E0245A927B4570 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Takhawi/Pods-Takhawi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Takhawi/Pods-Takhawi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Takhawi/Pods-Takhawi-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -2649,6 +2664,7 @@
 				CE9757C42AE0F0BD0014346E /* tripListCell.swift in Sources */,
 				0493588C2B43D838004E5259 /* localizationManager.swift in Sources */,
 				963DAB352A803B64004ED3C7 /* RegisterDriverPersonalInfoVC.swift in Sources */,
+				CED0C29D2B49322A00BCD6D0 /* overrideFont.swift in Sources */,
 				CE7576F22AF2041100AFF56A /* chooseFeatureCell.swift in Sources */,
 				9694AC622A5E040D00BDF5F8 /* Fonts.swift in Sources */,
 				04B659F02B345DA800E78752 /* cartItemVView.swift in Sources */,
@@ -2979,7 +2995,7 @@
 		};
 		9694AB472A5DE9D600BDF5F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A8CF50C0964AF25CF2EE7BB5 /* Pods-Takhawi.debug.xcconfig */;
+			baseConfigurationReference = F3047DA9E7818C7FFEFB71D9 /* Pods-Takhawi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -2987,7 +3003,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 8;
-				DEVELOPMENT_TEAM = CA5NVSJ377;
+				DEVELOPMENT_TEAM = 95K26889X5;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
 				FRAMEWORK_SEARCH_PATHS = "${inherited}";
@@ -3006,7 +3022,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.takhawi.Takhawiapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.takhawi.Takhawia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -3020,7 +3036,7 @@
 		};
 		9694AB482A5DE9D600BDF5F8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F95E0EA69C2F77C68BC9BA23 /* Pods-Takhawi.release.xcconfig */;
+			baseConfigurationReference = B3BB194E16A562E98DC22FBA /* Pods-Takhawi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -3028,7 +3044,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 8;
-				DEVELOPMENT_TEAM = CA5NVSJ377;
+				DEVELOPMENT_TEAM = 95K26889X5;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				FRAMEWORK_SEARCH_PATHS = "${inherited}";
@@ -3047,7 +3063,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.takhawi.Takhawiapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.takhawi.Takhawia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

@@ -57,8 +57,9 @@ class languageVC: BaseVC {
         self.arabicCheckIcon.image = UIImage(named: "checkbox")
         self.englishCheckIcon.image = UIImage(named: "UNcheckbox")
      
-        LocalizationManager.shared.setLanguage(language: .Arabic)
-       
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5 ) {
+            LocalizationManager.shared.setLanguage(language: .Arabic)
+        }
        
   
         
@@ -73,7 +74,10 @@ class languageVC: BaseVC {
         self.arabicContainerView.borderWidth = 0
         self.arabicContainerView.backgroundColor = UIColor.systemGray4.withAlphaComponent(0.5 )
         self.englishContainerView.backgroundColor = UIColor.white
-        LocalizationManager.shared.setLanguage(language: .English)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5 ) {
+            LocalizationManager.shared.setLanguage(language: .English)
+        }
         
     }
     

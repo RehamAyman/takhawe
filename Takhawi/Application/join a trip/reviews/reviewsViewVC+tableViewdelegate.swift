@@ -13,7 +13,7 @@ extension reviewsViewVC  : UITableViewDelegate , UITableViewDataSource {
     //MARK: - TABLE VIEW METHODS
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        headerTitle.text = "Reviews (\(dummyreviews.count))"
+        headerTitle.text = "Reviews".localize + " (\(dummyreviews.count))"
         return dummyreviews.count
     }
     

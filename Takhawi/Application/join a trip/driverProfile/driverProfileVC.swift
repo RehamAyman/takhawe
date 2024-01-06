@@ -13,7 +13,8 @@ import GoogleMaps
 
 class driverProfileVC: BaseVC {
     
-//MARK: - IBOutlets -
+    @IBOutlet weak var BottomcontainerStack: UIStackView!
+    //MARK: - IBOutlets -
     @IBOutlet weak var tripCountLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -58,7 +59,9 @@ class driverProfileVC: BaseVC {
         self.numberOfChildrenText.layer.addBasicShadow(cornerRadius: 22.5)
         self.numberOfChildrenText.setLeftPaddingPoints(8)
         self.numberOfChildrenText.setRightPaddingPoints(8)
-        
+// force the bottom view  to be in the left according to client requirement
+        self.BottomcontainerStack.semanticContentAttribute = .forceLeftToRight
+    
         
     }
     

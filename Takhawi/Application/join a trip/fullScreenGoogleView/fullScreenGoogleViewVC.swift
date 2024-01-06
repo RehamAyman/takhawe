@@ -14,6 +14,7 @@ class fullScreenGoogleViewVC: BaseVC {
     
 //MARK: - IBOutlets -
     
+    @IBOutlet weak var backOutlet: UIButton!
     
     @IBOutlet var GoogleView: GMSMapView!
     //MARK: - Properties -
@@ -25,6 +26,7 @@ class fullScreenGoogleViewVC: BaseVC {
         super.viewDidLoad()
         self.configureInitialDesign()
         self.setUpGoogleView()
+        self.backOutlet.setImage( UIImage(named: "Group 25")?.imageFlippedForRightToLeftLayoutDirection(), for: .normal)
     }
     
     

@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="fullScreenGoogleViewVC" customModule="Takhawi" customModuleProvider="target">
             <connections>
                 <outlet property="GoogleView" destination="hxW-wg-ORw" id="gxu-Cu-cjO"/>
+                <outlet property="backOutlet" destination="hgo-L4-SnG" id="6u3-Vs-vHT"/>
                 <outlet property="view" destination="iN0-l3-epB" id="JaE-fr-Fqz"/>
             </connections>
         </placeholder>

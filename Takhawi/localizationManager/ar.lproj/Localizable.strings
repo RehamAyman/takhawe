@@ -9,8 +9,8 @@
 "Choose" = "اختر"  ;
 "Sorry, but you need to select a destination first!" = "عذرًا، ولكن عليك تحديد الوجهة أولاً!" ;
 "Destination" = "الواجهه" ;
-"Join a trip" = "انضم إلى رحلة" ;
-"Make a trip" = "قم برحلة" ;
+"Join a trip" = "رحلات جاهزة" ;
+"Make a trip" = "انشيء رحلتك" ;
 "Choose your destination" =  "اختر وجهتك" ;
 "Join the trip" = "انضم الي الرحلة" ;
 "Create Trip" = "بدء الرحلة" ;
@@ -47,7 +47,7 @@
 "Select" = "اختيار";
 "Driver Profile" = "ملف السائق" ;
 "Reviews" = "التقييمات" ;
-"Trips: 22" = "الرحلات :٢٢" ;
+"Trips: 22" = "الرحلات: 22" ;
 "number of children (optional)" = "عدد الاطفال (اختياري)" ;
 "Discount Code" = "كود الخصم" ;
 "SAR" = "ر.س" ;
@@ -56,7 +56,7 @@
 "◉ Children over 10 years old: Children must reserve their own seat using their own account." = "◉ الأطفال فوق 10 سنوات: يجب على الأطفال حجز مقعدهم الخاص باستخدام حسابهم الخاص." ;
 "Reset" = "إعادة ضبط" ;
 "Sort By" = "ترتيب حسب" ;
-"Relevent" = "شائع";
+"Relevent" = "الاقرب لاهتماماتك";
 "Most Rated" = "الأكثر تقييما" ;
 "Highest Priced" = "الأعلى سعراً" ;
 "Lowest Priced" = "الأقل سعراً" ;
@@ -119,10 +119,10 @@
 "Listen to music" = "الموسيقي" ;
 "Travelling" = "السفر" ;
 "Hotels" = "الفنادق" ;
-"2222 reviews" = "٢٢٢٢ تقييم" ; 
+"2222 reviews" = "2222 تعليق" ;
 "SAR165" = "ر.س 165"  ;
 "Price for 1 night" = "السعر لليلة واحدة"  ;
-"533 m from destination" = "موقعك يبعد ٥٣٣ م من الفندق";
+"533 m from destination" = "533 م من الوجهة";
 "Policies" = "سياسات الاستخدام" ;
 "Help and Support" = "المساعده و الدعم";
 "About Us" = "من نحن" ;
@@ -190,3 +190,8 @@
 "Upcoming" = "القادمة";
 "Return to home" = "العودة للرئيسية" ;
 "There is no upcoming trips right now!" = "لا توجد رحلات قادمة الآن!" ;
+"Destination!" = "وين الوجهه" ;
+"User" = "زياد" ; 
+
+"Select Time" = "حدد الوقت" ;
+"Select Date" = "حدد تاريخ" ;

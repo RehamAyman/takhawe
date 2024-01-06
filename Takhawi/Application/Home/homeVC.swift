@@ -123,7 +123,8 @@ class homeVC: BaseVC, sendDataBackDelegate{
         self.CContainerSegment.layer.applySketchShadow(color: .black)
         destTextfield.placeholder = "Choose your destination".localize
         self.menuOutlet.setImage( UIImage(named: "menu 1")?.imageFlippedForRightToLeftLayoutDirection(), for: .normal)
-
+        
+        
     }
     
     
@@ -144,16 +145,20 @@ class homeVC: BaseVC, sendDataBackDelegate{
         locationManager.requestLocation()
         self.initialSegment()
         self.sideMenuContainer.layer.addBasicShadow(cornerRadius: 25 )
-      
         chooseFeatureCollection.delegate = self
         chooseFeatureCollection.dataSource = self
         self.chooseFeatureCollection.register(cellType: chooseFeatureCell.self)
         self.chooseFeatureCollection.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-
         calendarOutlet.imagePadding(spacing: 8)
-
         joinTripDestButton.imagePadding(spacing: 8)
         
+       
+        // force hotel button to be on the left acoording to client requirement 
+        if LocalizationManager.shared.getLanguage() == .Arabic  {
+            hotelIconOutlet.centerXAnchor.constraint(equalTo: view.leadingAnchor, constant: 40).isActive = true
+        } else {
+            hotelIconOutlet.centerXAnchor.constraint(equalTo: view.trailingAnchor, constant: -40).isActive = true
+        }
     
 
   
@@ -204,7 +209,6 @@ class homeVC: BaseVC, sendDataBackDelegate{
     
     
     @IBAction func hotelsAction(_ sender: UIButton) {
-      //  showPopTopAlert(title: "hello there ", withMessage: "any message to test .")
         sender.animateButtonWhenPressed {
             let vc = hotelsVC()
             self.push(vc)

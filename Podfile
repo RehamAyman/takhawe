@@ -33,11 +33,10 @@ target 'Takhawi' do
   pod 'PureLayout'
   pod 'CollectionViewPagingLayout'
   pod 'HSCycleGalleryView'
-  
   pod 'EDCarousel'
   pod 'EMTNeumorphicView'
   pod 'JDStatusBarNotification'
-
+  pod 'FontBlaster', :git => 'https://github.com/ArtSabintsev/FontBlaster.git', :branch => 'swift5.0'
   
   
 

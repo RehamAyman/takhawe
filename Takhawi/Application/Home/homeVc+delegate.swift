@@ -164,7 +164,6 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
         self.googleMaps.animate(toZoom: 16)
         
         
-        
     }
     
     
@@ -249,7 +248,7 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
 //        self.locationOutlet.isHidden = false
 //        self.UserLocationOutlet.isHidden = false
 //        self.chooseFeatureCollection.isHidden = false
-        self.viewHeight.constant = 320
+        self.viewHeight.constant = 310
         
         UIView.animate(withDuration: 0.5 , animations: {
            
@@ -270,6 +269,11 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
         segment.setTitleTextAttributes(titleTextAttributes1 as [NSAttributedString.Key : Any], for:.selected)
         let titleTextAttributes2 = [NSAttributedString.Key.foregroundColor: UIColor.lightGray]
         segment.setTitleTextAttributes(titleTextAttributes2 as [NSAttributedString.Key : Any], for:.normal)
+        let font = UIFont.systemFont(ofSize: 12)
+        segment.setTitleTextAttributes([NSAttributedString.Key.font: font],
+                                                for: .normal)
+        
+        
         self.viewHeight.constant = 185
         self.joinTripDestButton.isHidden = true
         self.joinatripButtonHeight.constant = 0

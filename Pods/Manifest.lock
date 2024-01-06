@@ -13,6 +13,7 @@ PODS:
   - EasyTipView (2.1.0)
   - EDCarousel (0.0.1)
   - EMTNeumorphicView (1.0.4)
+  - FontBlaster (5.0.1)
   - GoogleMaps (3.1.0):
     - GoogleMaps/Maps (= 3.1.0)
   - GoogleMaps/Base (3.1.0)
@@ -28,7 +29,7 @@ PODS:
     - ImageSlideshow/Core (= 1.9.2)
   - ImageSlideshow/Core (1.9.2)
   - JDStatusBarNotification (2.2.1)
-  - lottie-ios (3.5.0)
+  - lottie-ios (4.3.4)
   - MaterialComponents/AnimationTiming (124.2.0)
   - MaterialComponents/Availability (124.2.0)
   - MaterialComponents/Buttons (124.2.0):
@@ -151,6 +152,7 @@ DEPENDENCIES:
   - EasyTipView (~> 2.1)
   - EDCarousel
   - EMTNeumorphicView
+  - FontBlaster (from `https://github.com/ArtSabintsev/FontBlaster.git`, branch `swift5.0`)
   - GoogleMaps
   - GooglePlacePicker
   - GooglePlaces
@@ -188,10 +190,16 @@ SPEC REPOS:
     - GooglePlaces
 
 EXTERNAL SOURCES:
+  FontBlaster:
+    :branch: swift5.0
+    :git: https://github.com/ArtSabintsev/FontBlaster.git
   OTPFieldView:
     :git: https://github.com/AbdallaTarek/OTPFieldView.git
 
 CHECKOUT OPTIONS:
+  FontBlaster:
+    :commit: b06b0f63742c214d92512260d61f87b16cf24434
+    :git: https://github.com/ArtSabintsev/FontBlaster.git
   OTPFieldView:
     :commit: 04d2a7231cc0bb455a57612980703473cb81cb52
     :git: https://github.com/AbdallaTarek/OTPFieldView.git
@@ -203,19 +211,20 @@ SPEC CHECKSUMS:
   EasyTipView: a92b6edc377b81c5ac18e9fd35d5ee78e9409488
   EDCarousel: 758aeba7c487c52572d9a7faf80937d0b58e97ee
   EMTNeumorphicView: cb5e92953e43b1872ab47fefd451a9ce0c16fc77
+  FontBlaster: 98f474d14dd22d965a8c834b07fb9e280c07d590
   GoogleMaps: 5c13302e6fe6bb6e686b267196586b91cd594225
   GooglePlacePicker: fa975116ac202ac29822c0a79758ea1c4db5a95f
   GooglePlaces: e874db179f2675c4f3eeda0b686b540273a578b0
   HSCycleGalleryView: 5101435175a26d08f1c062cf6cb245f58f09b425
   ImageSlideshow: be305b54eaf2b2cfc7a7141c7c734605d44dc07d
   JDStatusBarNotification: d43e8481174a2c5f195d16ce65c611f4a12bf507
-  lottie-ios: c55158d67d0629a260625cc2ded2052b829e3c3e
+  lottie-ios: 3d98679b41fa6fd6aff2352b3953dbd3df8a397e
   MaterialComponents: 1a9b2d9d45b1601ae544de85089adc4c464306d4
   MDFInternationalization: d697c55307816222a55685c4ccb1044ffb030c12
   MDFTextAccessibility: f4bb4cc2194286651b59a215fdeaa0e05dc90ba5
   OTPFieldView: 700a752fe62c41d1c4914c78aa500fb30d97c255
   PureLayout: 5fb5e5429519627d60d079ccb1eaa7265ce7cf88
 
-PODFILE CHECKSUM: 96cd90f7589227149dbae0b7ef921fe4974de3ff
+PODFILE CHECKSUM: 97eee60447c91194a3db230ae850e6d091897727
 
 COCOAPODS: 1.14.3
