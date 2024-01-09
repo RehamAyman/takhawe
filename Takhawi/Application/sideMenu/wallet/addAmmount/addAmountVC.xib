@@ -8,6 +8,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="ArbFONTS-URW-DIN-Arabic.ttf">
+            <string>URWDINArabic-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="addAmountVC" customModule="Takhawi" customModuleProvider="target">
             <connections>
@@ -23,8 +28,8 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sms-M3-BII">
-                    <rect key="frame" x="167.33333333333334" y="79.333333333333329" width="58.666666666666657" height="19.333333333333329"/>
-                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                    <rect key="frame" x="164.33333333333334" y="84" width="64.666666666666657" height="20.333333333333329"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                     <color key="textColor" name="MainColor"/>
                     <nil key="highlightedColor"/>
                     <userDefinedRuntimeAttributes>
@@ -32,7 +37,7 @@
                     </userDefinedRuntimeAttributes>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97A-AH-Tfl">
-                    <rect key="frame" x="20" y="69" width="40" height="40"/>
+                    <rect key="frame" x="20" y="74" width="40" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="ViL-Qg-x6Y"/>
                         <constraint firstAttribute="height" constant="40" id="dUC-lY-dV6"/>
@@ -44,19 +49,19 @@
                     </connections>
                 </button>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jQf-uK-9N5" customClass="MDCOutlinedTextField">
-                    <rect key="frame" x="20" y="139" width="353" height="50"/>
+                    <rect key="frame" x="20" y="144" width="353" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="83L-Gb-m5g"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                    <fontDescription key="fontDescription" name="URWDINArabic-Regular" family="URW DIN Arabic" pointSize="13"/>
                     <textInputTraits key="textInputTraits" keyboardType="ASCIICapableNumberPad"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9r1-XB-8WC">
-                    <rect key="frame" x="230" y="199" width="143" height="30"/>
+                    <rect key="frame" x="221" y="219" width="152" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="vpm-ie-d3j"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                     <color key="tintColor" name="MainColor"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title="Add payment Method" image="plus" catalog="system">
@@ -67,8 +72,8 @@
                     </userDefinedRuntimeAttributes>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select payment method" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fp-aH-dXV">
-                    <rect key="frame" x="20" y="249" width="353" height="17"/>
-                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                    <rect key="frame" x="20" y="269" width="353" height="18"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                     <userDefinedRuntimeAttributes>
@@ -76,7 +81,7 @@
                     </userDefinedRuntimeAttributes>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BBR-Af-LRn">
-                    <rect key="frame" x="0.0" y="306" width="393" height="270"/>
+                    <rect key="frame" x="0.0" y="327" width="393" height="270"/>
                     <color key="backgroundColor" name="BackGroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="270" id="Dkt-LX-C8T"/>
@@ -112,10 +117,10 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="dHl-aX-l6v" secondAttribute="bottom" constant="10" id="O9C-UO-9Kz"/>
                 <constraint firstItem="Sms-M3-BII" firstAttribute="centerY" secondItem="97A-AH-Tfl" secondAttribute="centerY" id="Wg4-f4-KHx"/>
                 <constraint firstItem="jQf-uK-9N5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="XIm-mI-Jah"/>
-                <constraint firstItem="97A-AH-Tfl" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="YWk-gZ-cIQ"/>
+                <constraint firstItem="97A-AH-Tfl" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="YWk-gZ-cIQ"/>
                 <constraint firstItem="Sms-M3-BII" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="e10-Bm-MwB"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9r1-XB-8WC" secondAttribute="trailing" constant="20" id="g77-Dk-og9"/>
-                <constraint firstItem="9r1-XB-8WC" firstAttribute="top" secondItem="jQf-uK-9N5" secondAttribute="bottom" constant="10" id="gfK-BF-pOg"/>
+                <constraint firstItem="9r1-XB-8WC" firstAttribute="top" secondItem="jQf-uK-9N5" secondAttribute="bottom" constant="25" id="gfK-BF-pOg"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dHl-aX-l6v" secondAttribute="trailing" constant="25" id="hyB-m1-gTk"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jQf-uK-9N5" secondAttribute="trailing" constant="20" id="kD5-Rn-mwY"/>
                 <constraint firstItem="8fp-aH-dXV" firstAttribute="top" secondItem="9r1-XB-8WC" secondAttribute="bottom" constant="20" id="l8H-70-539"/>

@@ -29,7 +29,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OeG-FY-JwM">
-                                <rect key="frame" x="2" y="39" width="110" height="14"/>
+                                <rect key="frame" x="2" y="35" width="110" height="14"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -40,7 +40,7 @@
                             <constraint firstItem="f8i-Zf-lsv" firstAttribute="top" secondItem="8ie-hh-fUf" secondAttribute="top" constant="5" id="ZNS-dj-ZaN"/>
                             <constraint firstItem="OeG-FY-JwM" firstAttribute="leading" secondItem="8ie-hh-fUf" secondAttribute="leading" constant="2" id="f6g-ib-ytn"/>
                             <constraint firstItem="f8i-Zf-lsv" firstAttribute="centerX" secondItem="8ie-hh-fUf" secondAttribute="centerX" id="m8z-X7-F7s"/>
-                            <constraint firstItem="OeG-FY-JwM" firstAttribute="top" secondItem="f8i-Zf-lsv" secondAttribute="bottom" constant="8" id="wU6-2j-Zh0"/>
+                            <constraint firstItem="OeG-FY-JwM" firstAttribute="top" secondItem="f8i-Zf-lsv" secondAttribute="bottom" constant="4" id="wU6-2j-Zh0"/>
                             <constraint firstAttribute="trailing" secondItem="OeG-FY-JwM" secondAttribute="trailing" constant="2" id="z7m-dK-UTv"/>
                         </constraints>
                     </view>

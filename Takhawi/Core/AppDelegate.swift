@@ -34,7 +34,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppDelegate.window?.tintColor = UIColor(named: "MainColor")
         self.location?.requestAlwaysAuthorization()
         self.location?.requestWhenInUseAuthorization()
-        
+        for family in UIFont.familyNames.sorted() {
+            let names = UIFont.fontNames(forFamilyName: family)
+            print("Family: \(family) Font names: \(names)")
+        }
     
       
         

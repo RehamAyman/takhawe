@@ -246,7 +246,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="TrB-Fl-DeX"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                             <color key="tintColor" name="MainColor"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
                                             <state key="normal" title="--" image="Vector"/>
@@ -256,7 +256,7 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ii-wh-81a">
                                             <rect key="frame" x="0.0" y="101" width="323" height="164"/>
-                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                             <color key="tintColor" name="MainColor"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
                                             <state key="normal" title="Button" image="calendar"/>
@@ -382,11 +382,11 @@
                             </userDefinedRuntimeAttributes>
                         </imageView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Q3i-Fj-QBb">
-                            <rect key="frame" x="280.33333333333331" y="67.333333333333329" width="42.666666666666686" height="45.333333333333329"/>
+                            <rect key="frame" x="278" y="66" width="45" height="48"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hala," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8AZ-9C-ibo">
-                                    <rect key="frame" x="0.0" y="0.0" width="42.666666666666664" height="22.666666666666668"/>
-                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="45" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                     <color key="textColor" name="MainColor"/>
                                     <nil key="highlightedColor"/>
                                     <userDefinedRuntimeAttributes>
@@ -394,8 +394,8 @@
                                     </userDefinedRuntimeAttributes>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXN-f8-4v0">
-                                    <rect key="frame" x="0.0" y="22.666666666666671" width="42.666666666666664" height="22.666666666666671"/>
-                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                    <rect key="frame" x="0.0" y="24" width="45" height="24"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                     <color key="textColor" name="MainColor"/>
                                     <nil key="highlightedColor"/>
                                     <userDefinedRuntimeAttributes>

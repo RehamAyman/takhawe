@@ -372,6 +372,12 @@
 		CEDDBE232ACC45AF00677C94 /* destinationSearchVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDDBE202ACC45AF00677C94 /* destinationSearchVCCell.swift */; };
 		CEDDBE252ACC45AF00677C94 /* destinationSearchVCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDDBE222ACC45AF00677C94 /* destinationSearchVCCell.xib */; };
 		CEDDBE292ACC5C3700677C94 /* blurEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDDBE282ACC5C3700677C94 /* blurEffect.swift */; };
+		CEE69AE32B4C344200E2E58D /* Cairo-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEE69ADC2B4C344100E2E58D /* Cairo-Black.ttf */; };
+		CEE69AE52B4C344200E2E58D /* Cairo-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEE69ADE2B4C344200E2E58D /* Cairo-ExtraLight.ttf */; };
+		CEE69AE62B4C344200E2E58D /* Cairo-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEE69ADF2B4C344200E2E58D /* Cairo-Light.ttf */; };
+		CEE69AE72B4C344200E2E58D /* Cairo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEE69AE02B4C344200E2E58D /* Cairo-Regular.ttf */; };
+		CEE69AE82B4C344200E2E58D /* Cairo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEE69AE12B4C344200E2E58D /* Cairo-SemiBold.ttf */; };
+		CEE69AE92B4C344200E2E58D /* Cairo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEE69AE22B4C344200E2E58D /* Cairo-Bold.ttf */; };
 		CEEDC01D2B2E0FE10017C804 /* notificationViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEDC01C2B2E0FE10017C804 /* notificationViewVC.swift */; };
 		CEEDC01F2B2E0FF40017C804 /* notificationViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEEDC01E2B2E0FF40017C804 /* notificationViewVC.xib */; };
 		CEEDC0212B2E10F10017C804 /* notivicationViewVC+delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEDC0202B2E10F10017C804 /* notivicationViewVC+delegates.swift */; };
@@ -756,6 +762,12 @@
 		CEDDBE202ACC45AF00677C94 /* destinationSearchVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = destinationSearchVCCell.swift; sourceTree = "<group>"; };
 		CEDDBE222ACC45AF00677C94 /* destinationSearchVCCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = destinationSearchVCCell.xib; sourceTree = "<group>"; };
 		CEDDBE282ACC5C3700677C94 /* blurEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blurEffect.swift; sourceTree = "<group>"; };
+		CEE69ADC2B4C344100E2E58D /* Cairo-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Black.ttf"; sourceTree = "<group>"; };
+		CEE69ADE2B4C344200E2E58D /* Cairo-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-ExtraLight.ttf"; sourceTree = "<group>"; };
+		CEE69ADF2B4C344200E2E58D /* Cairo-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Light.ttf"; sourceTree = "<group>"; };
+		CEE69AE02B4C344200E2E58D /* Cairo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Regular.ttf"; sourceTree = "<group>"; };
+		CEE69AE12B4C344200E2E58D /* Cairo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-SemiBold.ttf"; sourceTree = "<group>"; };
+		CEE69AE22B4C344200E2E58D /* Cairo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Bold.ttf"; sourceTree = "<group>"; };
 		CEEDC01C2B2E0FE10017C804 /* notificationViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notificationViewVC.swift; sourceTree = "<group>"; };
 		CEEDC01E2B2E0FF40017C804 /* notificationViewVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = notificationViewVC.xib; sourceTree = "<group>"; };
 		CEEDC0202B2E10F10017C804 /* notivicationViewVC+delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "notivicationViewVC+delegates.swift"; sourceTree = "<group>"; };
@@ -1539,6 +1551,12 @@
 			isa = PBXGroup;
 			children = (
 				9694AC342A5E040D00BDF5F8 /* Fonts.swift */,
+				CEE69ADC2B4C344100E2E58D /* Cairo-Black.ttf */,
+				CEE69AE22B4C344200E2E58D /* Cairo-Bold.ttf */,
+				CEE69ADE2B4C344200E2E58D /* Cairo-ExtraLight.ttf */,
+				CEE69ADF2B4C344200E2E58D /* Cairo-Light.ttf */,
+				CEE69AE02B4C344200E2E58D /* Cairo-Regular.ttf */,
+				CEE69AE12B4C344200E2E58D /* Cairo-SemiBold.ttf */,
 				9641AD3D2A6C8BAF00A29046 /* Alexandria-Black.ttf */,
 				9641AD412A6C8BAF00A29046 /* Alexandria-Bold.ttf */,
 				9641AD3B2A6C8BAE00A29046 /* Alexandria-ExtraBold.ttf */,
@@ -2457,6 +2475,7 @@
 				CE3CEEDC2B1648FC00619C79 /* makeAtripAlertPopUpVC.xib in Resources */,
 				96202C852A7FB98800053C5B /* EnterMobileVC.xib in Resources */,
 				04B659E52B34443D00E78752 /* addAmountVC.xib in Resources */,
+				CEE69AE72B4C344200E2E58D /* Cairo-Regular.ttf in Resources */,
 				96EA1E422A77006B00F39386 /* Alexandria-Regular.ttf in Resources */,
 				04B659CF2B3421D600E78752 /* favlocationCell.xib in Resources */,
 				CE3CACF22B2DA7B80025990E /* swiftRegisterVC.xib in Resources */,
@@ -2487,6 +2506,7 @@
 				9694AC5B2A5E040D00BDF5F8 /* no-search-result.json in Resources */,
 				CE22928C2B1E638300E8AB42 /* hotelCell.xib in Resources */,
 				CE30212A2ABB275400572DE7 /* phoneAndLocationVC.xib in Resources */,
+				CEE69AE52B4C344200E2E58D /* Cairo-ExtraLight.ttf in Resources */,
 				9694AC632A5E040D00BDF5F8 /* ArbFONTS-URW-DIN-Arabic-Demi.ttf in Resources */,
 				CE3B53AF2B2B2365003D3043 /* tipsCell.xib in Resources */,
 				CE7576F32AF2041100AFF56A /* chooseFeatureCell.xib in Resources */,
@@ -2501,6 +2521,7 @@
 				CE7434F12B223C5D0023DC17 /* hotelDetailsVC.xib in Resources */,
 				CEBB8BA32ADEB8ED00E70EC4 /* profileCell.xib in Resources */,
 				9694AC592A5E040D00BDF5F8 /* empty-box-animation.json in Resources */,
+				CEE69AE32B4C344200E2E58D /* Cairo-Black.ttf in Resources */,
 				9694AC582A5E040D00BDF5F8 /* 108106-empty-cart.json in Resources */,
 				CE30213C2ABBA4D400572DE7 /* forgetPasswordVC.xib in Resources */,
 				CE9EBFF72B145CC10080A0F2 /* ReserveTheTripVC.xib in Resources */,
@@ -2508,6 +2529,7 @@
 				04B659E02B343B5500E78752 /* walletCell.xib in Resources */,
 				9641AD2E2A6C1ADD00A29046 /* Main.storyboard in Resources */,
 				9694AC5E2A5E040D00BDF5F8 /* 116102-check-in-blue.json in Resources */,
+				CEE69AE62B4C344200E2E58D /* Cairo-Light.ttf in Resources */,
 				CE996B562B25AC6F0089D2F4 /* trackYourTripVC.xib in Resources */,
 				CEDDBE252ACC45AF00677C94 /* destinationSearchVCCell.xib in Resources */,
 				CE9EC0012B1466E70080A0F2 /* reserveTheTripCell.xib in Resources */,
@@ -2533,7 +2555,9 @@
 				04B659D72B3437F300E78752 /* walletVC.xib in Resources */,
 				CED0C29F2B4936B600BCD6D0 /* alfont_com_هلفيتيكا-عربي-.ttf in Resources */,
 				9694AC612A5E040D00BDF5F8 /* ArbFONTS-URW-DIN-Arabic-Light.ttf in Resources */,
+				CEE69AE92B4C344200E2E58D /* Cairo-Bold.ttf in Resources */,
 				9694AC642A5E040D00BDF5F8 /* ArbFONTS-URW-DIN-Arabic-Black.ttf in Resources */,
+				CEE69AE82B4C344200E2E58D /* Cairo-SemiBold.ttf in Resources */,
 				9694ABEF2A5DFACA00BDF5F8 /* GoogleService-Info.plist in Resources */,
 				CE2D4AF22B185483008D556E /* filterCell.xib in Resources */,
 				9694ABFB2A5DFACA00BDF5F8 /* AlertView.xib in Resources */,
@@ -3038,7 +3062,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = CA5NVSJ377;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
@@ -3079,7 +3103,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = CA5NVSJ377;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;

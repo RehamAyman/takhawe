@@ -9,6 +9,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="ArbFONTS-URW-DIN-Arabic.ttf">
+            <string>URWDINArabic-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="helpAndSupportVC" customModule="Takhawi" customModuleProvider="target">
             <connections>
@@ -36,8 +41,8 @@
                     <state key="normal" image="Group 25"/>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help and Support" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u6U-He-yhO">
-                    <rect key="frame" x="119.66666666666667" y="70" width="135.66666666666663" height="20"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                    <rect key="frame" x="116.33333333333333" y="70" width="142.66666666666669" height="20"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                     <color key="textColor" name="MainColor"/>
                     <nil key="highlightedColor"/>
                     <userDefinedRuntimeAttributes>
@@ -84,10 +89,10 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8qq-LL-SEu">
                     <rect key="frame" x="20" y="313" width="335" height="50"/>
                     <subviews>
-                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cmz-TV-45t" customClass="MDCOutlinedTextField">
+                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cmz-TV-45t" customClass="MDCOutlinedTextField">
                             <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <fontDescription key="fontDescription" name="URWDINArabic-Regular" family="URW DIN Arabic" pointSize="13"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 6" translatesAutoresizingMaskIntoConstraints="NO" id="C48-pL-ch7">

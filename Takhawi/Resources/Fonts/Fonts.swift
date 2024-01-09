@@ -22,12 +22,15 @@ extension UIFont {
         case normal
         case bold
 
+        
+    //    ["Cairo-Regular", "Cairo-Bold"]
+     //["Cairo-SemiBold"] // Cairo-Black
         var name: String {
 
-            let lightNameAr = "Alexandria-Regular"
-            let normalNameAr = "Alexandria-Medium"
-            let boldNameAr = "Alexandria-Bold"
-            let lightNameEn = "HelveticaNeue-Medium"
+            let lightNameAr = "Cairo-SemiBold"
+            let normalNameAr = "Cairo-Bold"
+            let boldNameAr = "Cairo-Black"
+            let lightNameEn = "HelveticaNeue"
             let normalNameEn = "HelveticaNeue-Medium"
             let boldNameEn = "HelveticaNeue-Bold"
 

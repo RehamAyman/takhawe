@@ -10,15 +10,15 @@
 "Sorry, but you need to select a destination first!" = "عذرًا، ولكن عليك تحديد الوجهة أولاً!" ;
 "Destination" = "الواجهه" ;
 "Join a trip" = "رحلات جاهزة" ;
-"Make a trip" = "انشيء رحلتك" ;
+"Make a trip" = "أنشىء رحلتك" ;
 "Choose your destination" =  "اختر وجهتك" ;
 "Join the trip" = "انضم الي الرحلة" ;
 "Create Trip" = "بدء الرحلة" ;
 "Hala," = "هلا،" ;
-"Choose Features" = "اضافة ميزات" ;
+"Choose Features" = "إضافة مميزات" ;
 
 
-"Switch to Driver" = "التحويل ل سائق" ;
+"Switch to Driver" = "تغيير الحالة" ;
 "Personal Info" = "معلومات شخصية" ;
 "Notification" = "الاشعارات" ;
 "Messages" = "الرسائل" ;
@@ -123,8 +123,8 @@
 "SAR165" = "ر.س 165"  ;
 "Price for 1 night" = "السعر لليلة واحدة"  ;
 "533 m from destination" = "533 م من الوجهة";
-"Policies" = "سياسات الاستخدام" ;
-"Help and Support" = "المساعده و الدعم";
+"Policies" = "سياسات الإستخدام" ;
+"Help and Support" = "المساعدة و الدعم";
 "About Us" = "من نحن" ;
 "Language" = "اللغة" ;
 "Log Out" = "تسجيل الخروج" ;
@@ -190,7 +190,7 @@
 "Upcoming" = "القادمة";
 "Return to home" = "العودة للرئيسية" ;
 "There is no upcoming trips right now!" = "لا توجد رحلات قادمة الآن!" ;
-"Destination!" = "وين الوجهه" ;
+"Destination!" = "وين الوجهة" ;
 
 
 "Select Time" = "حدد الوقت" ;
@@ -198,7 +198,7 @@
 "Edit Profile" = "تعديل معلومات الحساب" ; 
 "Name" = "الاسم" ;
 "Email address" = "البريد الالكتروني" ;
-"City" = "المدينه" ;
+"City" = "المدينة" ;
 "Birthday" = "تاريخ الميلاد" ;
 "Phone Number" = "الجوال" ;
 "Gender" = "النوع" ;

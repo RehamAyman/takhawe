@@ -37,9 +37,9 @@ class addAmountVC : BaseVC  {
     private func configureInitialDesign() {
         self.title = "".localized
         self.addAmountTextField.handelTextField(placeHolder: "Enter Amount".localize)
-        if LocalizationManager.shared.getLanguage() == .English {
+        
             self.addAmountTextField.label.text = "Enter Amount".localize
-        }
+       
         
   
         

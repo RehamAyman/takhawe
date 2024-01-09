@@ -35,9 +35,11 @@ extension MDCOutlinedTextField {
         
         self.setOutlineColor(UIColor( named: "MainColor") ?? UIColor.black, for: .normal)
         self.setOutlineColor(UIColor( named: "MainColor") ?? UIColor.black, for: .editing)
+        
         self.placeholder = placeHolder
       
         self.setFloatingLabelColor( UIColor( named: "MainColor") ?? UIColor.gray , for: .editing)
+        self.setFloatingLabelColor( UIColor( named: "MainColor") ?? UIColor.gray , for: .normal )
         
         self.setNormalLabelColor( UIColor.gray  , for: .normal)
         
@@ -45,9 +47,9 @@ extension MDCOutlinedTextField {
         self.preferredContainerHeight = 50
         self.leadingEdgePaddingOverride = 20
         self.setLeftPaddingPoints(5)
-       self.setRightPaddingPoints(5)
+        self.setRightPaddingPoints(5)
         self.containerRadius = 25
-        self.sizeToFit()
+       // self.sizeToFit()
         
         
     }
