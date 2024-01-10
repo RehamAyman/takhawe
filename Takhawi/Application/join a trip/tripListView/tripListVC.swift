@@ -58,14 +58,14 @@ class tripListVC: BaseVC {
     
     
     @IBAction func filter(_ sender: UIButton) {
-        sender.animateButtonWhenPressed {
+      //  sender.animateButtonWhenPressed {
             let vc = filterViewVC()
             vc.dismissAction = {
                 self.removePresentEffect()
             }
             self.presentWithEffect(vc: vc)
             
-        }
+     //   }
       
     }
     

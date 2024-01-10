@@ -209,10 +209,10 @@ class homeVC: BaseVC, sendDataBackDelegate{
     
     
     @IBAction func hotelsAction(_ sender: UIButton) {
-        sender.animateButtonWhenPressed {
+      //  sender.animateButtonWhenPressed {
             let vc = hotelsVC()
             self.push(vc)
-        }
+      //  }
     }
     
     

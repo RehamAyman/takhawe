@@ -67,10 +67,10 @@ class makeAtripAlertPopUpVC: BaseVC {
         self.action?()
     }
     @IBAction func dismissview(_ sender: UIButton) {
-        sender.animateButtonWhenPressed {
+     //   sender.animateButtonWhenPressed {
             self.dismiss(animated: true )
             
-        }
+      //  }
     }
 }
 

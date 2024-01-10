@@ -27,15 +27,15 @@ class driversOffersCell: UITableViewCell {
 
     
     @IBAction func selectItem(_ sender: UIButton) {
-        sender.animateButtonWhenPressed {
+      //  sender.animateButtonWhenPressed {
             self.action?()
-        }
+       // }
     }
     @IBAction func cancel(_ sender: UIButton) {
-        sender.animateButtonWhenPressed {
+    //    sender.animateButtonWhenPressed {
             self.cancel?()
             
-        }
+      //  }
     }
     
 }

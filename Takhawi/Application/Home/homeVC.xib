@@ -405,18 +405,17 @@
                             </subviews>
                         </stackView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wej-V0-d54">
-                            <rect key="frame" x="333" y="307" width="40" height="40"/>
+                            <rect key="frame" x="176.66666666666666" y="307" width="40" height="40"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="40" id="BQy-BT-dy3"/>
                                 <constraint firstAttribute="height" constant="40" id="qhz-fs-LCd"/>
                             </constraints>
-                            <state key="normal" title="Button"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title=" " image="menu 2">
+                                <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
                             <buttonConfiguration key="configuration" style="plain" image="menu 2" title=" "/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                    <real key="value" value="20"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="hotelsAction:" destination="-1" eventType="touchUpInside" id="pn4-J0-ONF"/>
                             </connections>
@@ -459,10 +458,10 @@
                         <constraint firstItem="Lgb-I8-ALx" firstAttribute="top" secondItem="kOb-jt-lur" secondAttribute="top" constant="70" id="ZdW-OX-OlB"/>
                         <constraint firstItem="8DR-5k-IEh" firstAttribute="leading" secondItem="kOb-jt-lur" secondAttribute="leading" constant="-20" id="d7n-zY-ld5"/>
                         <constraint firstItem="PvL-J3-rq8" firstAttribute="leading" secondItem="Q3i-Fj-QBb" secondAttribute="trailing" constant="10" id="ecI-ZV-nx2"/>
+                        <constraint firstItem="wej-V0-d54" firstAttribute="centerX" secondItem="kOb-jt-lur" secondAttribute="centerX" id="fMc-8S-nae"/>
                         <constraint firstAttribute="trailing" secondItem="Ihg-WG-lMq" secondAttribute="trailing" constant="15" id="j7r-0C-gk6"/>
                         <constraint firstAttribute="trailing" secondItem="uU2-Be-F1I" secondAttribute="trailing" constant="20" id="kw7-O4-BYd"/>
                         <constraint firstItem="MRd-Yd-ij6" firstAttribute="centerX" secondItem="UGQ-k0-NnC" secondAttribute="centerX" id="lPH-4w-ABu"/>
-                        <constraint firstAttribute="trailing" secondItem="wej-V0-d54" secondAttribute="trailing" constant="20" id="mfb-2Q-fdS"/>
                         <constraint firstItem="Lgb-I8-ALx" firstAttribute="leading" secondItem="kOb-jt-lur" secondAttribute="leading" constant="20" id="pfN-YX-Y4a"/>
                         <constraint firstItem="ikX-1o-drw" firstAttribute="leading" secondItem="kOb-jt-lur" secondAttribute="leading" id="rXt-fL-a2a"/>
                         <constraint firstItem="uU2-Be-F1I" firstAttribute="leading" secondItem="kOb-jt-lur" secondAttribute="leading" constant="20" id="u8r-aa-1BP"/>

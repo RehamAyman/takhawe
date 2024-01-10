@@ -44,9 +44,9 @@ class cancelTheTripVC: BaseVC {
 //MARK: - Actions -
     
     @IBAction func dismiss(_ sender: UIButton) {
-        sender.animateButtonWhenPressed {
+     //   sender.animateButtonWhenPressed {
             self.dismiss(animated: true )
-        }
+      //  }
     }
 }
 

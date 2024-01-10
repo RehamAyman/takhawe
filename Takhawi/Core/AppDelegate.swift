@@ -18,22 +18,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     static let appGroupKey = "group.HomeCooking"
     let gcmMessageIDKey = "gcm.message_id"
     static var FCMToken = "xnx'_'xnx"
-    static let GoogleAPI = "AIzaSyALVzDd_-YceNQIpzRFq0w60jTU3RhV22I"
+    static let GoogleAPI = "AIzaSyBaLRq-LbUQmWZkJkfwjWcJyoxWlhyQ35s"
     var location:CLLocationManager?
     
-   
+   //AIzaSyBaLRq-LbUQmWZkJkfwjWcJyoxWlhyQ35s
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+     //AIzaSyBaLRq-LbUQmWZkJkfwjWcJyoxWlhyQ35s
     //AIzaSyDS61p6luMp1Kfj8xmfIvjYz-mBQF9Noo8 // hayah
     //AIzaSyA7nhBa7YZtIb6KoG47O0_y2PwxYfsHiBs // ageeba
         
-        GMSServices.provideAPIKey("AIzaSyA7nhBa7YZtIb6KoG47O0_y2PwxYfsHiBs")
-        GMSPlacesClient.provideAPIKey("AIzaSyA7nhBa7YZtIb6KoG47O0_y2PwxYfsHiBs")
-        
-        AppDelegate.window?.tintColor = UIColor(named: "MainColor")
+        GMSServices.provideAPIKey("AIzaSyBaLRq-LbUQmWZkJkfwjWcJyoxWlhyQ35s")
+        GMSPlacesClient.provideAPIKey("AIzaSyBaLRq-LbUQmWZkJkfwjWcJyoxWlhyQ35s")
         self.location?.requestAlwaysAuthorization()
         self.location?.requestWhenInUseAuthorization()
+
+        AppDelegate.window?.tintColor = UIColor(named: "MainColor")
+        
         for family in UIFont.familyNames.sorted() {
             let names = UIFont.fontNames(forFamilyName: family)
             print("Family: \(family) Font names: \(names)")

@@ -88,10 +88,10 @@ class homeSearchVC: BaseVC{
                     haptic: .success
                 )
             } else {
-                sender.animateButtonWhenPressed {
+              //  sender.animateButtonWhenPressed {
                 self.selectAndDismiss?(self.selectedPlace)
                 self.dismiss(animated: true )
-            }
+          //  }
         }
     }
     @IBAction func clearAllAction(_ sender: UIButton) {
@@ -104,9 +104,9 @@ class homeSearchVC: BaseVC{
     
     
     @IBAction func cancel(_ sender: UIButton) {
-        sender.animateButtonWhenPressed {
+   //    sender.animateButtonWhenPressed {
             self.dismiss(animated: true)
-        }
+       // }
        
     }
     @IBAction func chooseOnMaps(_ sender: UIButton) {

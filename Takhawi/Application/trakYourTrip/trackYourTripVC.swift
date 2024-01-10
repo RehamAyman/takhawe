@@ -99,13 +99,13 @@ class trackYourTripVC: BaseVC {
     
 //MARK: - Actions -
     @IBAction func flagAction(_ sender: UIButton) {
-        sender.animateButtonWhenPressed {
+     //   sender.animateButtonWhenPressed {
             self.stopCompleteTheTrip = true
             let vc = reportCancelVC()
             vc.report = true
             vc.items = dummyReportResons
             self.push(vc)
-        }
+      //  }
        
         
         

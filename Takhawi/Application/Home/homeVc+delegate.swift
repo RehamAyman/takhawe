@@ -248,7 +248,7 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
 //        self.locationOutlet.isHidden = false
 //        self.UserLocationOutlet.isHidden = false
 //        self.chooseFeatureCollection.isHidden = false
-        self.viewHeight.constant = 310
+        self.viewHeight.constant = 320
         
         UIView.animate(withDuration: 0.5 , animations: {
            
@@ -280,7 +280,7 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
         
         
         
-        let font = UIFont.systemFont(ofSize: 12)
+        let font = UIFont.boldSystemFont(ofSize: 12 )
         let attributes = [ NSAttributedString.Key.foregroundColor : UIColor.lightGray,
                            NSAttributedString.Key.font : font ]
         segment.setTitleTextAttributes(attributes, for:.normal)

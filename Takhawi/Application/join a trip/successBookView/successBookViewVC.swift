@@ -93,10 +93,10 @@ override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
     
     
     @IBAction func dismissAction(_ sender: UIButton) {
-        sender.animateButtonWhenPressed {
+     //   sender.animateButtonWhenPressed {
             self.visualView.isHidden = true
             self.dismiss(animated: true )
-        }
+      //  }
     }
     
     

@@ -43,7 +43,7 @@ class hotelsVC: BaseVC {
 //MARK: - Actions -
     
     @IBAction func filterAction(_ sender: UIButton) {
-        sender.animateButtonWhenPressed {
+      //  sender.animateButtonWhenPressed {
             let vc = filterViewVC()
             vc.dismissAction = {
                 self.removePresentEffect()
@@ -51,7 +51,7 @@ class hotelsVC: BaseVC {
             self.presentWithEffect(vc: vc)
         }
        
-    }
+   // }
 }
 
 

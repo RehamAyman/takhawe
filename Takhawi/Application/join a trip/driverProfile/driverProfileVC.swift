@@ -88,9 +88,9 @@ class driverProfileVC: BaseVC {
     
     
     @IBAction func reviewsAction(_ sender: UIButton) {
-        sender.animateButtonWhenPressed {
+    //    sender.animateButtonWhenPressed {
             self.push(reviewsViewVC())
-        }
+    //    }
         
         
         

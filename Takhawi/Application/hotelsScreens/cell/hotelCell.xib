@@ -40,7 +40,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4hU-A7-zHg" customClass="CosmosView" customModule="Cosmos">
-                                <rect key="frame" x="12" y="170" width="117" height="25"/>
+                                <rect key="frame" x="20" y="170" width="117" height="25"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="P3b-t9-lMP"/>
@@ -56,8 +56,8 @@
                                     <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="star"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="533 m from destination" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djf-Pc-zlL">
-                                <rect key="frame" x="184" y="176" width="210" height="13.333333333333343"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="533 m from destination" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djf-Pc-zlL">
+                                <rect key="frame" x="251.33333333333329" y="176" width="122.66666666666666" height="13.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" name="stepLineColor"/>
                                 <nil key="highlightedColor"/>
@@ -155,10 +155,10 @@
                         <constraints>
                             <constraint firstItem="2A4-be-YVD" firstAttribute="top" secondItem="COW-ou-Xko" secondAttribute="top" constant="8" id="8Pq-wE-uer"/>
                             <constraint firstItem="Mln-Qy-sYJ" firstAttribute="leading" secondItem="COW-ou-Xko" secondAttribute="leading" constant="8" id="BXg-Vj-bow"/>
+                            <constraint firstAttribute="trailing" secondItem="djf-Pc-zlL" secondAttribute="trailing" constant="40" id="EDP-2n-nY1"/>
                             <constraint firstItem="4hU-A7-zHg" firstAttribute="width" secondItem="2A4-be-YVD" secondAttribute="width" multiplier="0.3" id="FMT-NX-Bmj"/>
                             <constraint firstItem="JJe-S6-oOQ" firstAttribute="height" secondItem="Mln-Qy-sYJ" secondAttribute="height" multiplier="0.8" id="I8t-rM-JZE"/>
                             <constraint firstItem="djf-Pc-zlL" firstAttribute="centerY" secondItem="4hU-A7-zHg" secondAttribute="centerY" id="KEq-Ff-GKi"/>
-                            <constraint firstAttribute="trailing" secondItem="djf-Pc-zlL" secondAttribute="trailing" constant="20" id="PPC-g3-vh8"/>
                             <constraint firstItem="3Mc-nf-qSD" firstAttribute="top" secondItem="2A4-be-YVD" secondAttribute="bottom" constant="10" id="Rob-cr-adD"/>
                             <constraint firstAttribute="trailing" secondItem="JJe-S6-oOQ" secondAttribute="trailing" constant="10" id="V9Z-TI-7Sw"/>
                             <constraint firstItem="3Mc-nf-qSD" firstAttribute="leading" secondItem="2A4-be-YVD" secondAttribute="leading" id="afY-hw-RPx"/>
@@ -169,8 +169,7 @@
                             <constraint firstItem="Mln-Qy-sYJ" firstAttribute="top" secondItem="4hU-A7-zHg" secondAttribute="bottom" constant="8" id="jb8-m7-aKb"/>
                             <constraint firstItem="JJe-S6-oOQ" firstAttribute="centerY" secondItem="Mln-Qy-sYJ" secondAttribute="centerY" id="ltN-mC-Y4y"/>
                             <constraint firstAttribute="bottom" secondItem="Mln-Qy-sYJ" secondAttribute="bottom" constant="8" id="nPX-mg-FbD"/>
-                            <constraint firstItem="djf-Pc-zlL" firstAttribute="leading" secondItem="4hU-A7-zHg" secondAttribute="trailing" constant="55" id="pGU-y3-efI"/>
-                            <constraint firstItem="4hU-A7-zHg" firstAttribute="leading" secondItem="2A4-be-YVD" secondAttribute="leading" id="vx6-QN-RK4"/>
+                            <constraint firstItem="4hU-A7-zHg" firstAttribute="leading" secondItem="COW-ou-Xko" secondAttribute="leading" constant="20" id="p4q-H9-yKC"/>
                             <constraint firstItem="3Mc-nf-qSD" firstAttribute="trailing" secondItem="2A4-be-YVD" secondAttribute="trailing" id="wuq-EN-cGl"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>

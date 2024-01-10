@@ -40,8 +40,8 @@ class SelectLocationViewController: UIViewController ,CLLocationManagerDelegate,
         requestLocationAccess()
         
         locationManager.delegate = self
-               locationManager.requestWhenInUseAuthorization()
-               locationManager.requestLocation()
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestLocation()
         setMapview()
     }
     
