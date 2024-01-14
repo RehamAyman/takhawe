@@ -16,92 +16,80 @@ struct onboardingSwiftuiView : View {
   
   @State private var buttonWidth: Double = UIScreen.main.bounds.width - 80
   @State private var buttonOffset: CGFloat = 0
-  @State private var isAnimating: Bool = false
-  @State private var imageOffset: CGSize = .zero
+  @State var isAnimating: Bool = false
+  @State var imageOffset: CGSize = .zero
   @State private var indicatorOpacity: Double = 1.0
-  @State private var textTitle: String = "Share."
-  
+  @State private var textTitle: String = "Welcome to Takhawi"
+  @State var tabSelection : Int = 0
+  @State private var progress: CGFloat = 0.25
+    
+    
+    
+@GestureState var offset : CGFloat = 0
+    
   let hapticFeedback = UINotificationFeedbackGenerator()
   
+    
   // MARK: - BODY
   
   var body: some View {
     ZStack {
-        Color( "secFavSeg")
+        Color.gray
         .ignoresSafeArea(.all, edges: .all)
       
       VStack(spacing: 20) {
    
-        
-        // MARK: - CENTER
-        
-        ZStack {
-          CircleGroupView(ShapeColor: .white, ShapeOpacity: 0.2)
-            .offset(x: imageOffset.width * -1)
-            .blur(radius: abs(imageOffset.width / 5))
-            .animation(.easeOut(duration: 1), value: imageOffset)
+          Spacer()
           
-            
-            RoundedRectangle(cornerRadius: 25)
-                .fill(Color.white)
-                .shadow(radius: 10)
-                .frame( width: 200 , height: 400)
-                .padding()
-            
-         // Image("character-1")
-           // .resizable()
-          //  .scaledToFit()
-            .opacity(isAnimating ? 1 : 0)
-            .animation(.easeOut(duration: 0.5), value: isAnimating)
-            .offset(x: imageOffset.width * 1.2, y: 0)
-            .rotationEffect(.degrees(Double(imageOffset.width / 20)))
-            .gesture(
-              DragGesture()
-                .onChanged { gesture in
-                  if abs(imageOffset.width) <= 150 {
-                    imageOffset = gesture.translation
-                    
-                    withAnimation(.linear(duration: 0.25)) {
-                      indicatorOpacity = 0
-                      textTitle = "Give."
-                    }
+
+          SecSnapCarousel(index: $tabSelection  , imgOffset: $imageOffset, items: OnboardingModel.cards, content: { id  in
+              firstOnboardingView(imageOffset: $imageOffset, isAnimating: $isAnimating  , indicatorOpacity: $indicatorOpacity , textTitle: $textTitle , tabselection: $tabSelection)
+                  .tag(0)
+              firstOnboardingView(imageOffset: $imageOffset, isAnimating: $isAnimating  , indicatorOpacity: $indicatorOpacity , textTitle: $textTitle , tabselection: $tabSelection)
+                  .tag(1)
+              VStack {
+                      Color.red
                   }
-                }
-                .onEnded { _ in
-                  imageOffset = .zero
-                  
-                  withAnimation(.linear(duration: 0.25)) {
-                    indicatorOpacity = 1
-                    textTitle = "Share."
-                  }
-                }
-            ) //: GESTURE
-            .animation(.easeOut(duration: 1), value: imageOffset)
-        } //: CENTER
-//
-          
-          
+              .tag(2)
+              
+          })
             
+        
+         
+              
+              
+        
+          
+          
+          
+          
+             
+             
+   
+        .background(Color.gray)
+       
+
+            Spacer()
               
               VStack {
                   VStack(spacing: 0) {
                       Text(textTitle)
-                          .font(.system(size: 60))
+                          .font(.system(size: 30))
                           .fontWeight(.heavy)
                           .foregroundColor(.black)
                           .transition(.opacity)
                           .id(textTitle)
                           .padding(.top)
+                          .padding(.bottom , 4 )
                       
-                      Text("""
-            It's not how much we give but
-            how much love we put into giving.
-            """)
-                      .font(.title3)
+                      Text("It's not how much we give but how much love we put into giving.")
+                      .font(.system(size: 15))
                       .fontWeight(.light)
                       .foregroundColor(.black)
                       .multilineTextAlignment(.center)
                       .padding(.horizontal, 10)
+                      
+                     
                   } //: HEADER
                   .opacity(isAnimating ? 1 : 0)
                   .offset(y: isAnimating ? 0 : -40)
@@ -110,88 +98,59 @@ struct onboardingSwiftuiView : View {
                   Spacer()
                   
                   // MARK: - FOOTER
-                  
-                  ZStack {
-                      // PARTS OF THE CUSTOM BUTTON
+                 
+               
                       
-                      // 1. BACKGROUND (STATIC)
-                      
-                      Capsule()
-                          .fill(Color.white.opacity(0.5))
-                      
-                      Capsule()
-                          .fill(Color.white.opacity(0.5))
-                          .padding(8)
-                      
-                      // 2. CALL-TO-ACTION (STATIC)
-                      
-                      Text("Get Started")
-                          .font(.system(.title3, design: .rounded))
-                          .fontWeight(.bold)
-                          .foregroundColor(Color("MainColor"))
-                          .offset(x: 20)
-                      
-                      // 3. CAPSULE (DYNAMIC WIDTH)
-                      
-                      HStack {
-                          Capsule()
-                              .fill(Color("MainColor"))
-                              .frame(width: buttonOffset + 80)
-                          
-                          Spacer()
-                      }
-                      
-                      // 4. CIRCLE (DRAGGABLE)
-                      
-                      HStack {
+                      ZStack {
+                          CircularProgressView(progress: progress)
+                                 .frame(width: 66, height: 66)
                           ZStack {
                               Circle()
                                   .fill(Color("MainColor"))
-                              Circle()
-                                  .fill(.black.opacity(0.15))
-                                  .padding(8)
-                              Image(systemName: "chevron.right.2")
-                                  .font(.system(size: 24, weight: .bold))
+                            
+                              Image(systemName: "chevron.right")
+                                  .font(.system(size: 26, weight: .medium))
+                                  .foregroundColor(.white)
+                              
+                              
                           }
                           .foregroundColor(.gray)
-                          .frame(width: 80, height: 80, alignment: .center)
+                          .frame(width: 50 , height: 50, alignment: .center)
+                          
+                          
+                          
                           .offset(x: buttonOffset)
-                          .gesture(
-                            DragGesture()
-                                .onChanged { gesture in
-                                    if gesture.translation.width > 0 && buttonOffset <= buttonWidth - 80 {
-                                        buttonOffset = gesture.translation.width
-                                    }
-                                }
-                                .onEnded { _ in
-                                   
-                                    withAnimation(Animation.easeOut(duration: 0.4)) {
-                                        if buttonOffset > buttonWidth / 2 {
-                                            hapticFeedback.notificationOccurred(.success)
-                                            playSound(sound: "chimeup", type: "mp3")
-                                            buttonOffset = buttonWidth - 80
-                                            isOnboardingViewActive = false
-                                        } else {
-                                            hapticFeedback.notificationOccurred(.warning)
-                                            buttonOffset = 0
-                                        }
-                                    }
-                                }
-                          ) //: GESTURE
+                         
+                        
                           
                           Spacer()
                       } //: HSTACK
-                  } //: FOOTER
-                  .frame(width: buttonWidth, height: 80, alignment: .center)
+                      .onTapGesture {
+                          withAnimation(Animation.easeOut(duration: 0.4)) {
+                              
+                              if self.progress == 0.75 {
+                                  self.progress = progress + 0.25
+                                  hapticFeedback.notificationOccurred(.success)
+                                  playSound(sound: "chimeup", type: "mp3")
+                                  
+                              } else {
+                                  self.progress = progress + 0.25
+                              }
+                                
+                              
+                          }
+                      }
+                  .frame(width: 80 , height: 80 , alignment: .center)
                   .padding()
                   .opacity(isAnimating ? 1 : 0)
-                  .offset(y: isAnimating ? 0 : 40)
+                  .offset(y: isAnimating ? 0 : 40 )
                   .animation(.easeOut(duration: 1), value: isAnimating)
                   
               }
               
               
               .frame(maxWidth: .infinity)
+              .frame(height:  UIScreen.main.bounds.height * 0.28)
               .background(Color.white.opacity(0.2))
        
           
@@ -202,6 +161,8 @@ struct onboardingSwiftuiView : View {
     } //: ZSTACK
     .onAppear(perform: {
       isAnimating = true
+        UIScrollView.appearance().bounces = false
+        
     })
     .preferredColorScheme(.dark)
   }
@@ -213,4 +174,5 @@ struct onboardingSwiftuiView_Previews: PreviewProvider {
       onboardingSwiftuiView()
   }
 }
+
 
