@@ -39,8 +39,8 @@ struct firstOnboardingView: View {
                     .shadow(radius: 20)
                       .opacity(isAnimating ? 1 : 0)
                       .animation(.easeOut(duration: 0.5), value: isAnimating)
-                      .offset(x: imageOffset.width * 1.2, y: 0)     //imageOffset.height * 1.2  )
-                     .rotationEffect(.degrees(Double(imageOffset.width / 90 )))
+                      .offset(x: imageOffset.width * 1.2, y: imageOffset.height  )     //imageOffset.height * 1.2  )
+                    // .rotationEffect(.degrees(Double(imageOffset.width / 20 )))
 //                      .gesture(
 //                        DragGesture()
 //                            .onChanged { gesture in

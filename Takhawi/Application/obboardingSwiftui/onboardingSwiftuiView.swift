@@ -56,18 +56,7 @@ struct onboardingSwiftuiView : View {
             
               
           })
-            
-        
-         
-              
-              
-        
-          
-          
-          
-          
-             
-             
+           
    
         .background( Color ( "BackGroundColor"))
        
@@ -138,13 +127,27 @@ struct onboardingSwiftuiView : View {
                               self.progress = 2/3
                           } else {
                               self.progress = 1
-                              hapticFeedback.notificationOccurred(.success)
-                             
+                            //  hapticFeedback.notificationOccurred(.success)
+                              playSound(sound: "chimeup", type: "mp3")
                           }
                         
                          
                                  }
                   
+                      .onTapGesture {
+                          withAnimation(Animation.easeOut(duration: 0.4)) {
+                              
+                              if tabSelection == 0 {
+                                 tabSelection = 1
+                              } else if tabSelection == 1 {
+                                  tabSelection = 2
+                              } else if tabSelection == 2  {
+                                  
+                                 
+                              }
+     
+                          }
+                      }
                   .frame(width: 80 , height: 80 , alignment: .center)
                   .padding()
                   .opacity(isAnimating ? 1 : 0)

@@ -149,7 +149,7 @@ struct SecSnapCarousel<Content: View, T: Identifiable>: View {
             } // END HSTACK
             .padding(.horizontal, spacing)
             .offset(x: (CGFloat(currentIndex) * -width) + (currentIndex != 0 ? adjustmentWidth : 0) + offset)
-            .rotationEffect(.degrees(Double(offset / 30 )))
+         //   .rotationEffect(.degrees(Double(offset / 30 )))
             .gesture(
                 DragGesture()
                     .updating($offset, body: {value, out, _ in
