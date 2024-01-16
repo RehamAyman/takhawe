@@ -34,23 +34,26 @@ struct onboardingSwiftuiView : View {
   
   var body: some View {
     ZStack {
-        Color.gray
+        Color ( "BackGroundColor")
         .ignoresSafeArea(.all, edges: .all)
-      
+        
+       
       VStack(spacing: 20) {
-   
           Spacer()
           
-
           SecSnapCarousel(index: $tabSelection  , imgOffset: $imageOffset, items: OnboardingModel.cards, content: { id  in
               firstOnboardingView(imageOffset: $imageOffset, isAnimating: $isAnimating  , indicatorOpacity: $indicatorOpacity , textTitle: $textTitle , tabselection: $tabSelection)
                   .tag(0)
-              firstOnboardingView(imageOffset: $imageOffset, isAnimating: $isAnimating  , indicatorOpacity: $indicatorOpacity , textTitle: $textTitle , tabselection: $tabSelection)
+              secOnboardingView(imageOffset: $imageOffset, isAnimating: $isAnimating  , indicatorOpacity: $indicatorOpacity , textTitle: $textTitle , tabselection: $tabSelection)
                   .tag(1)
+              thirdOnboardingView(imageOffset: $imageOffset, isAnimating: $isAnimating  , indicatorOpacity: $indicatorOpacity , textTitle: $textTitle , tabselection: $tabSelection)
+                  .tag(2)
               VStack {
-                      Color.red
-                  }
-              .tag(2)
+                  
+              }
+                  .frame(width:  400 , height:  400)
+                  .tag(3)
+            
               
           })
             
@@ -66,14 +69,14 @@ struct onboardingSwiftuiView : View {
              
              
    
-        .background(Color.gray)
+        .background( Color ( "BackGroundColor"))
        
 
-            Spacer()
+           // Spacer()
               
               VStack {
                   VStack(spacing: 0) {
-                      Text(textTitle)
+                      Text( tabSelection == 0 ? textTitle : tabSelection == 1 ? "choose your Driver" : "Track Your Trip" )
                           .font(.system(size: 30))
                           .fontWeight(.heavy)
                           .foregroundColor(.black)
@@ -81,8 +84,8 @@ struct onboardingSwiftuiView : View {
                           .id(textTitle)
                           .padding(.top)
                           .padding(.bottom , 4 )
-                      
-                      Text("It's not how much we give but how much love we put into giving.")
+                     
+                      Text(tabSelection == 0 ? "Book Your Trip Now  In A minute easily and quickly!" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy")
                       .font(.system(size: 15))
                       .fontWeight(.light)
                       .foregroundColor(.black)
@@ -95,7 +98,7 @@ struct onboardingSwiftuiView : View {
                   .offset(y: isAnimating ? 0 : -40)
                   .animation(.easeOut(duration: 1), value: isAnimating)
                   
-                  Spacer()
+               //   Spacer()
                   
                   // MARK: - FOOTER
                  
@@ -125,21 +128,23 @@ struct onboardingSwiftuiView : View {
                           
                           Spacer()
                       } //: HSTACK
-                      .onTapGesture {
-                          withAnimation(Animation.easeOut(duration: 0.4)) {
-                              
-                              if self.progress == 0.75 {
-                                  self.progress = progress + 0.25
-                                  hapticFeedback.notificationOccurred(.success)
-                                  playSound(sound: "chimeup", type: "mp3")
-                                  
-                              } else {
-                                  self.progress = progress + 0.25
-                              }
-                                
-                              
+                    
+                  
+                      .onChange(of: tabSelection ) { newValue in
+                                     print("Name changed to")
+                          if newValue == 0 {
+                              self.progress = 1/3
+                          } else if newValue == 1 {
+                              self.progress = 2/3
+                          } else {
+                              self.progress = 1
+                              hapticFeedback.notificationOccurred(.success)
+                             
                           }
-                      }
+                        
+                         
+                                 }
+                  
                   .frame(width: 80 , height: 80 , alignment: .center)
                   .padding()
                   .opacity(isAnimating ? 1 : 0)
@@ -149,8 +154,8 @@ struct onboardingSwiftuiView : View {
               }
               
               
-              .frame(maxWidth: .infinity)
-              .frame(height:  UIScreen.main.bounds.height * 0.28)
+              .frame(maxWidth: .infinity )
+              .frame(height:  UIScreen.main.bounds.height * 0.26)
               .background(Color.white.opacity(0.2))
        
           
@@ -158,7 +163,10 @@ struct onboardingSwiftuiView : View {
              
              
       } //: VSTACK
+      .environment(\.layoutDirection,   .leftToRight  )
+      
     } //: ZSTACK
+   
     .onAppear(perform: {
       isAnimating = true
         UIScrollView.appearance().bounces = false

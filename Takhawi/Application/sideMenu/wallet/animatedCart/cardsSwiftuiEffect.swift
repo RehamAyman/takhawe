@@ -160,9 +160,7 @@ struct SecSnapCarousel<Content: View, T: Identifiable>: View {
                         let offsetX = value.translation.width
                         let progress = -offsetX / width
                         let roundIndex = progress.rounded()
-                       // imgOffset = .zero
                         currentIndex = max(min(currentIndex + Int(roundIndex), list.count - 1), 0)
-                        
                         currentIndex = index
                         imgOffset = .zero
                         

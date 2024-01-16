@@ -32,6 +32,7 @@ class LocalizationManager: NSObject {
     // get currently selected language from el user defaults
     func getLanguage() -> Language? {
         if let languageCode = UserDefaults.standard.string(forKey: languageKey), let language = Language(rawValue: languageCode) {
+           
             return language
         }
         return nil
@@ -123,8 +124,16 @@ class LocalizationManager: NSObject {
     func setAppInnitLanguage() {
         if let selectedLanguage = getLanguage() {
             setLanguage(language: selectedLanguage)
+            
+            
+            
+            
+            
         } else {
             // no language was selected
+            
+            
+            
             let languageCode = Locale.preferredLanguages.first
             if let code = languageCode, let language = isLanguageAvailable(code) {
                 setLanguage(language: language)

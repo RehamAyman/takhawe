@@ -227,6 +227,7 @@
 		CE04D9BD2B15DD0000B41157 /* successBookViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE04D9BC2B15DD0000B41157 /* successBookViewVC.swift */; };
 		CE04D9C12B15E8BC00B41157 /* successBookViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE04D9C02B15E8BC00B41157 /* successBookViewVC.xib */; };
 		CE04D9C42B15F65300B41157 /* shimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE04D9C32B15F65300B41157 /* shimmer.swift */; };
+		CE06550E2B56B3D6003535EE /* thirdOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE06550D2B56B3D6003535EE /* thirdOnboardingView.swift */; };
 		CE0F42F72B4D0F55005694AC /* onboardingSwiftuiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F42F62B4D0F55005694AC /* onboardingSwiftuiVC.swift */; };
 		CE0F42F92B4D0F6E005694AC /* onboardingSwiftuiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F42F82B4D0F6E005694AC /* onboardingSwiftuiView.swift */; };
 		CE115E5B2ABED5CC00972CC9 /* homeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE115E5A2ABED5CC00972CC9 /* homeVC.xib */; };
@@ -383,6 +384,7 @@
 		CEE69AE72B4C344200E2E58D /* Cairo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEE69AE02B4C344200E2E58D /* Cairo-Regular.ttf */; };
 		CEE69AE82B4C344200E2E58D /* Cairo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEE69AE12B4C344200E2E58D /* Cairo-SemiBold.ttf */; };
 		CEE69AE92B4C344200E2E58D /* Cairo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEE69AE22B4C344200E2E58D /* Cairo-Bold.ttf */; };
+		CEE8739D2B53BE40003914AB /* secOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8739C2B53BE40003914AB /* secOnboardingView.swift */; };
 		CEEDC01D2B2E0FE10017C804 /* notificationViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEDC01C2B2E0FE10017C804 /* notificationViewVC.swift */; };
 		CEEDC01F2B2E0FF40017C804 /* notificationViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEEDC01E2B2E0FF40017C804 /* notificationViewVC.xib */; };
 		CEEDC0212B2E10F10017C804 /* notivicationViewVC+delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEDC0202B2E10F10017C804 /* notivicationViewVC+delegates.swift */; };
@@ -614,6 +616,7 @@
 		CE04D9BC2B15DD0000B41157 /* successBookViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = successBookViewVC.swift; sourceTree = "<group>"; };
 		CE04D9C02B15E8BC00B41157 /* successBookViewVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = successBookViewVC.xib; sourceTree = "<group>"; };
 		CE04D9C32B15F65300B41157 /* shimmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shimmer.swift; sourceTree = "<group>"; };
+		CE06550D2B56B3D6003535EE /* thirdOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thirdOnboardingView.swift; sourceTree = "<group>"; };
 		CE0F42F62B4D0F55005694AC /* onboardingSwiftuiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onboardingSwiftuiVC.swift; sourceTree = "<group>"; };
 		CE0F42F82B4D0F6E005694AC /* onboardingSwiftuiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onboardingSwiftuiView.swift; sourceTree = "<group>"; };
 		CE115E5A2ABED5CC00972CC9 /* homeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = homeVC.xib; sourceTree = "<group>"; };
@@ -783,6 +786,7 @@
 		CEE69AE02B4C344200E2E58D /* Cairo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Regular.ttf"; sourceTree = "<group>"; };
 		CEE69AE12B4C344200E2E58D /* Cairo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-SemiBold.ttf"; sourceTree = "<group>"; };
 		CEE69AE22B4C344200E2E58D /* Cairo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Bold.ttf"; sourceTree = "<group>"; };
+		CEE8739C2B53BE40003914AB /* secOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secOnboardingView.swift; sourceTree = "<group>"; };
 		CEEDC01C2B2E0FE10017C804 /* notificationViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notificationViewVC.swift; sourceTree = "<group>"; };
 		CEEDC01E2B2E0FF40017C804 /* notificationViewVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = notificationViewVC.xib; sourceTree = "<group>"; };
 		CEEDC0202B2E10F10017C804 /* notivicationViewVC+delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "notivicationViewVC+delegates.swift"; sourceTree = "<group>"; };
@@ -1694,6 +1698,8 @@
 				CE00B7F02B4D33DD00995823 /* oneCartSwiftuiView.swift */,
 				CEF0E7DB2B4F3AE700DCBD69 /* circularGroupView.swift */,
 				CEF0E7E42B511BC800DCBD69 /* firstOnboardingView.swift */,
+				CEE8739C2B53BE40003914AB /* secOnboardingView.swift */,
+				CE06550D2B56B3D6003535EE /* thirdOnboardingView.swift */,
 			);
 			path = obboardingSwiftui;
 			sourceTree = "<group>";
@@ -2715,6 +2721,7 @@
 				CE3CACF02B2DA7A50025990E /* swiftRegisterVC.swift in Sources */,
 				CEBB8B932ADE77FB00E70EC4 /* mapSearchExtention.swift in Sources */,
 				CEB5A8642ABD7ECD00A7F4AD /* tab4.swift in Sources */,
+				CE06550E2B56B3D6003535EE /* thirdOnboardingView.swift in Sources */,
 				CE115E5D2ABED5E800972CC9 /* homeVC.swift in Sources */,
 				CE3B53A92B2B18D2003D3043 /* appMainTextField.swift in Sources */,
 				9694ABE82A5DFACA00BDF5F8 /* LocationExtetioin.swift in Sources */,
@@ -2901,6 +2908,7 @@
 				CE3021432ABBB86500572DE7 /* phoneFormate.swift in Sources */,
 				9694AC712A5E040D00BDF5F8 /* Extensions+UITextView.swift in Sources */,
 				9694ABE92A5DFACA00BDF5F8 /* extensionUIImageView.swift in Sources */,
+				CEE8739D2B53BE40003914AB /* secOnboardingView.swift in Sources */,
 				CE30213F2ABBAB1100572DE7 /* verificationVC.swift in Sources */,
 				04BE0D4B2B395194004E6EB1 /* logoutpopVC.swift in Sources */,
 				9694AC072A5DFACA00BDF5F8 /* NSNotificationNames.swift in Sources */,
