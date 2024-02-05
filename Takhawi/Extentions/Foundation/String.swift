@@ -9,7 +9,10 @@ import UIKit
 
 // MARK: - Validate
 extension String {
-
+    
+    
+    
+    
     func isValidPhoneNumber(pattern: String) -> Bool {
 //        return self.range(of: pattern ,options: .regularExpression) != nil
         return self.count > 8

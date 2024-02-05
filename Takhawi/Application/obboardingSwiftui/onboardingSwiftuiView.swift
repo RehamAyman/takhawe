@@ -134,20 +134,20 @@ struct onboardingSwiftuiView : View {
                          
                                  }
                   
-                      .onTapGesture {
-                          withAnimation(Animation.easeOut(duration: 0.4)) {
-                              
-                              if tabSelection == 0 {
-                                 tabSelection = 1
-                              } else if tabSelection == 1 {
-                                  tabSelection = 2
-                              } else if tabSelection == 2  {
-                                  
-                                 
-                              }
-     
-                          }
-                      }
+//                      .onTapGesture {
+//                          withAnimation(Animation.easeOut(duration: 0.4)) {
+//                              
+//                              if tabSelection == 0 {
+//                                 tabSelection = 1
+//                              } else if tabSelection == 1 {
+//                                  tabSelection = 2
+//                              } else if tabSelection == 2  {
+//                                  
+//                                 
+//                              }
+//     
+//                          }
+//                      }
                   .frame(width: 80 , height: 80 , alignment: .center)
                   .padding()
                   .opacity(isAnimating ? 1 : 0)

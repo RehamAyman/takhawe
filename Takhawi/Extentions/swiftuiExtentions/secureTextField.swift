@@ -25,9 +25,13 @@ struct SecureInputView: View {
             Group {
                 if isSecured {
                     SecureField(title, text: $text)
+                        .font(.custom( LocalizationManager.shared.getLanguage() == .Arabic ?  AppFont.arRegular.rawValue :  AppFont.Regular.rawValue , size: 13))
+                    
                         
                 } else {
                     TextField(title, text: $text)
+                        .font(.custom( LocalizationManager.shared.getLanguage() == .Arabic ?  AppFont.arRegular.rawValue :  AppFont.Regular.rawValue , size: 13))
+                    
                        
                 }
             }.padding(.trailing, 32)

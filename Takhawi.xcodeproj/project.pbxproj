@@ -232,6 +232,7 @@
 		CE0F42F92B4D0F6E005694AC /* onboardingSwiftuiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F42F82B4D0F6E005694AC /* onboardingSwiftuiView.swift */; };
 		CE115E5B2ABED5CC00972CC9 /* homeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE115E5A2ABED5CC00972CC9 /* homeVC.xib */; };
 		CE115E5D2ABED5E800972CC9 /* homeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE115E5C2ABED5E800972CC9 /* homeVC.swift */; };
+		CE1A94E02B6CD549003C50EF /* fileUploadedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1A94DF2B6CD549003C50EF /* fileUploadedView.swift */; };
 		CE2292852B1E57B300E8AB42 /* hotelsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2292842B1E57B300E8AB42 /* hotelsVC.swift */; };
 		CE2292872B1E57C100E8AB42 /* hotelsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2292862B1E57C100E8AB42 /* hotelsVC.xib */; };
 		CE22928B2B1E638300E8AB42 /* hotelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2292892B1E638300E8AB42 /* hotelCell.swift */; };
@@ -342,6 +343,9 @@
 		CE9F3C572B1B4550004C3D24 /* wAY9ZXW4id.json in Resources */ = {isa = PBXBuildFile; fileRef = CE9F3C562B1B4550004C3D24 /* wAY9ZXW4id.json */; };
 		CE9F3C592B1B482E004C3D24 /* BDidekRogj.json in Resources */ = {isa = PBXBuildFile; fileRef = CE9F3C582B1B482D004C3D24 /* BDidekRogj.json */; };
 		CE9F3C5B2B1B4955004C3D24 /* u4F3iX2jrQ.json in Resources */ = {isa = PBXBuildFile; fileRef = CE9F3C5A2B1B4954004C3D24 /* u4F3iX2jrQ.json */; };
+		CEB1387F2B615BC00070DBA8 /* driverUploadIdAuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB1387E2B615BC00070DBA8 /* driverUploadIdAuthVC.swift */; };
+		CEB138812B615BE70070DBA8 /* driverUploadIdAuthVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB138802B615BE70070DBA8 /* driverUploadIdAuthVC.xib */; };
+		CEB138852B61B2360070DBA8 /* driverAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB138842B61B2360070DBA8 /* driverAuthView.swift */; };
 		CEB29E582B49892C00F64ED8 /* editProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB29E572B49892C00F64ED8 /* editProfileVC.swift */; };
 		CEB29E5A2B49894900F64ED8 /* editProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB29E592B49894900F64ED8 /* editProfileVC.xib */; };
 		CEB5A8492ABC489200A7F4AD /* MIOTPVerificationSPM in Frameworks */ = {isa = PBXBuildFile; productRef = CEB5A8482ABC489200A7F4AD /* MIOTPVerificationSPM */; };
@@ -366,18 +370,29 @@
 		CEBB8BA32ADEB8ED00E70EC4 /* profileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEBB8BA12ADEB8ED00E70EC4 /* profileCell.xib */; };
 		CEBB8BA52ADEEC1900E70EC4 /* profileVc+delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB8BA42ADEEC1900E70EC4 /* profileVc+delegate.swift */; };
 		CECA04572B29D2EF001AA89D /* rateTheDriverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA04562B29D2EF001AA89D /* rateTheDriverVC.swift */; };
-		CED0C29D2B49322A00BCD6D0 /* overrideFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0C29C2B49322A00BCD6D0 /* overrideFont.swift */; };
 		CED0C29F2B4936B600BCD6D0 /* alfont_com_هلفيتيكا-عربي-.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED0C29E2B4936B600BCD6D0 /* alfont_com_هلفيتيكا-عربي-.ttf */; };
 		CED288902B49B7EB00E075CE /* editProfileVC+extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED2888F2B49B7EB00E075CE /* editProfileVC+extentions.swift */; };
 		CED288942B49B87B00E075CE /* hobbiesCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED288922B49B87B00E075CE /* hobbiesCellCollectionViewCell.swift */; };
 		CED288952B49B87B00E075CE /* hobbiesCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CED288932B49B87B00E075CE /* hobbiesCellCollectionViewCell.xib */; };
 		CED51ED32AE1B86D00603151 /* driverProfile+collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED51ED22AE1B86D00603151 /* driverProfile+collection.swift */; };
+		CED77C052B635F5300962E83 /* tab1UploadId .swift in Sources */ = {isa = PBXBuildFile; fileRef = CED77C042B635F5300962E83 /* tab1UploadId .swift */; };
+		CED77C082B6365FF00962E83 /* Neumorphic in Frameworks */ = {isa = PBXBuildFile; productRef = CED77C072B6365FF00962E83 /* Neumorphic */; };
+		CED77C0C2B64FD0900962E83 /* floatinglabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED77C0B2B64FD0900962E83 /* floatinglabelTextField.swift */; };
 		CEDDBE182ACBDFA700677C94 /* sideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDDBE162ACBDFA700677C94 /* sideMenuCell.swift */; };
 		CEDDBE192ACBDFA700677C94 /* sideMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDDBE172ACBDFA700677C94 /* sideMenuCell.xib */; };
 		CEDDBE1C2ACC0DAB00677C94 /* sideMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDDBE1B2ACC0DAB00677C94 /* sideMenuModel.swift */; };
 		CEDDBE232ACC45AF00677C94 /* destinationSearchVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDDBE202ACC45AF00677C94 /* destinationSearchVCCell.swift */; };
 		CEDDBE252ACC45AF00677C94 /* destinationSearchVCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDDBE222ACC45AF00677C94 /* destinationSearchVCCell.xib */; };
 		CEDDBE292ACC5C3700677C94 /* blurEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDDBE282ACC5C3700677C94 /* blurEffect.swift */; };
+		CEDF18A32B6E291900B03B44 /* camerapicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF18A22B6E291900B03B44 /* camerapicker.swift */; };
+		CEDF18A62B6E297C00B03B44 /* MediaPicker in Frameworks */ = {isa = PBXBuildFile; productRef = CEDF18A52B6E297C00B03B44 /* MediaPicker */; };
+		CEDF18A82B6FB02200B03B44 /* tab2DrivingLicenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF18A72B6FB02200B03B44 /* tab2DrivingLicenseView.swift */; };
+		CEDF18AA2B6FB42B00B03B44 /* tab3authDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF18A92B6FB42B00B03B44 /* tab3authDriver.swift */; };
+		CEDF18AC2B6FBB3600B03B44 /* tab4DriverAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF18AB2B6FBB3600B03B44 /* tab4DriverAuthView.swift */; };
+		CEDF18AE2B70AD6500B03B44 /* tab5DriverAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF18AD2B70AD6500B03B44 /* tab5DriverAuth.swift */; };
+		CEDF18B02B70AFA500B03B44 /* tab6DriverAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF18AF2B70AFA500B03B44 /* tab6DriverAuth.swift */; };
+		CEDF18B22B70B83200B03B44 /* otpModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF18B12B70B83200B03B44 /* otpModifier.swift */; };
+		CEDF18B72B70D31D00B03B44 /* swiftuiOTPview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF18B62B70D31C00B03B44 /* swiftuiOTPview.swift */; };
 		CEE69AE32B4C344200E2E58D /* Cairo-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEE69ADC2B4C344100E2E58D /* Cairo-Black.ttf */; };
 		CEE69AE52B4C344200E2E58D /* Cairo-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEE69ADE2B4C344200E2E58D /* Cairo-ExtraLight.ttf */; };
 		CEE69AE62B4C344200E2E58D /* Cairo-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEE69ADF2B4C344200E2E58D /* Cairo-Light.ttf */; };
@@ -621,6 +636,7 @@
 		CE0F42F82B4D0F6E005694AC /* onboardingSwiftuiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onboardingSwiftuiView.swift; sourceTree = "<group>"; };
 		CE115E5A2ABED5CC00972CC9 /* homeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = homeVC.xib; sourceTree = "<group>"; };
 		CE115E5C2ABED5E800972CC9 /* homeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeVC.swift; sourceTree = "<group>"; };
+		CE1A94DF2B6CD549003C50EF /* fileUploadedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fileUploadedView.swift; sourceTree = "<group>"; };
 		CE2292842B1E57B300E8AB42 /* hotelsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hotelsVC.swift; sourceTree = "<group>"; };
 		CE2292862B1E57C100E8AB42 /* hotelsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = hotelsVC.xib; sourceTree = "<group>"; };
 		CE2292892B1E638300E8AB42 /* hotelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hotelCell.swift; sourceTree = "<group>"; };
@@ -745,6 +761,9 @@
 		CE9F3C562B1B4550004C3D24 /* wAY9ZXW4id.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wAY9ZXW4id.json; sourceTree = "<group>"; };
 		CE9F3C582B1B482D004C3D24 /* BDidekRogj.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BDidekRogj.json; sourceTree = "<group>"; };
 		CE9F3C5A2B1B4954004C3D24 /* u4F3iX2jrQ.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = u4F3iX2jrQ.json; sourceTree = "<group>"; };
+		CEB1387E2B615BC00070DBA8 /* driverUploadIdAuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = driverUploadIdAuthVC.swift; sourceTree = "<group>"; };
+		CEB138802B615BE70070DBA8 /* driverUploadIdAuthVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = driverUploadIdAuthVC.xib; sourceTree = "<group>"; };
+		CEB138842B61B2360070DBA8 /* driverAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = driverAuthView.swift; sourceTree = "<group>"; };
 		CEB29E572B49892C00F64ED8 /* editProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editProfileVC.swift; sourceTree = "<group>"; };
 		CEB29E592B49894900F64ED8 /* editProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = editProfileVC.xib; sourceTree = "<group>"; };
 		CEB5A84A2ABC4DEC00A7F4AD /* shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shadow.swift; sourceTree = "<group>"; };
@@ -768,18 +787,27 @@
 		CEBB8BA12ADEB8ED00E70EC4 /* profileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = profileCell.xib; sourceTree = "<group>"; };
 		CEBB8BA42ADEEC1900E70EC4 /* profileVc+delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "profileVc+delegate.swift"; sourceTree = "<group>"; };
 		CECA04562B29D2EF001AA89D /* rateTheDriverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rateTheDriverVC.swift; sourceTree = "<group>"; };
-		CED0C29C2B49322A00BCD6D0 /* overrideFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = overrideFont.swift; sourceTree = "<group>"; };
 		CED0C29E2B4936B600BCD6D0 /* alfont_com_هلفيتيكا-عربي-.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "alfont_com_هلفيتيكا-عربي-.ttf"; sourceTree = "<group>"; };
 		CED2888F2B49B7EB00E075CE /* editProfileVC+extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "editProfileVC+extentions.swift"; sourceTree = "<group>"; };
 		CED288922B49B87B00E075CE /* hobbiesCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hobbiesCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		CED288932B49B87B00E075CE /* hobbiesCellCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = hobbiesCellCollectionViewCell.xib; sourceTree = "<group>"; };
 		CED51ED22AE1B86D00603151 /* driverProfile+collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "driverProfile+collection.swift"; sourceTree = "<group>"; };
+		CED77C042B635F5300962E83 /* tab1UploadId .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "tab1UploadId .swift"; sourceTree = "<group>"; };
+		CED77C0B2B64FD0900962E83 /* floatinglabelTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = floatinglabelTextField.swift; sourceTree = "<group>"; };
 		CEDDBE162ACBDFA700677C94 /* sideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sideMenuCell.swift; sourceTree = "<group>"; };
 		CEDDBE172ACBDFA700677C94 /* sideMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = sideMenuCell.xib; sourceTree = "<group>"; };
 		CEDDBE1B2ACC0DAB00677C94 /* sideMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sideMenuModel.swift; sourceTree = "<group>"; };
 		CEDDBE202ACC45AF00677C94 /* destinationSearchVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = destinationSearchVCCell.swift; sourceTree = "<group>"; };
 		CEDDBE222ACC45AF00677C94 /* destinationSearchVCCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = destinationSearchVCCell.xib; sourceTree = "<group>"; };
 		CEDDBE282ACC5C3700677C94 /* blurEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blurEffect.swift; sourceTree = "<group>"; };
+		CEDF18A22B6E291900B03B44 /* camerapicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = camerapicker.swift; sourceTree = "<group>"; };
+		CEDF18A72B6FB02200B03B44 /* tab2DrivingLicenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tab2DrivingLicenseView.swift; sourceTree = "<group>"; };
+		CEDF18A92B6FB42B00B03B44 /* tab3authDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tab3authDriver.swift; sourceTree = "<group>"; };
+		CEDF18AB2B6FBB3600B03B44 /* tab4DriverAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tab4DriverAuthView.swift; sourceTree = "<group>"; };
+		CEDF18AD2B70AD6500B03B44 /* tab5DriverAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tab5DriverAuth.swift; sourceTree = "<group>"; };
+		CEDF18AF2B70AFA500B03B44 /* tab6DriverAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tab6DriverAuth.swift; sourceTree = "<group>"; };
+		CEDF18B12B70B83200B03B44 /* otpModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = otpModifier.swift; sourceTree = "<group>"; };
+		CEDF18B62B70D31C00B03B44 /* swiftuiOTPview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftuiOTPview.swift; sourceTree = "<group>"; };
 		CEE69ADC2B4C344100E2E58D /* Cairo-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Black.ttf"; sourceTree = "<group>"; };
 		CEE69ADE2B4C344200E2E58D /* Cairo-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-ExtraLight.ttf"; sourceTree = "<group>"; };
 		CEE69ADF2B4C344200E2E58D /* Cairo-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Light.ttf"; sourceTree = "<group>"; };
@@ -818,6 +846,8 @@
 				963DAB262A7FDAE8004ED3C7 /* AlertKit in Frameworks */,
 				CEB5A8492ABC489200A7F4AD /* MIOTPVerificationSPM in Frameworks */,
 				9694AC202A5E03AF00BDF5F8 /* BottomPopup in Frameworks */,
+				CED77C082B6365FF00962E83 /* Neumorphic in Frameworks */,
+				CEDF18A62B6E297C00B03B44 /* MediaPicker in Frameworks */,
 				9694AC182A5E028800BDF5F8 /* NVActivityIndicatorView in Frameworks */,
 				9694AC0D2A5DFC1400BDF5F8 /* SwiftMessages in Frameworks */,
 				96EA1E3B2A76EDF900F39386 /* M13Checkbox in Frameworks */,
@@ -869,7 +899,6 @@
 			isa = PBXGroup;
 			children = (
 				CED0C29E2B4936B600BCD6D0 /* alfont_com_هلفيتيكا-عربي-.ttf */,
-				CED0C29B2B49321200BCD6D0 /* overrideFont */,
 				0493588B2B43D838004E5259 /* localizationManager.swift */,
 				049358922B43DA81004E5259 /* Localizable.strings */,
 			);
@@ -1115,6 +1144,7 @@
 		9641AD242A6965B900A29046 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				CED77C092B6375CD00962E83 /* driver */,
 				CE3CACEE2B2DA7760025990E /* swiftRegister */,
 				CEB5A8552ABC6D1F00A7F4AD /* registerTaps */,
 				CE30213D2ABBAAF800572DE7 /* verification */,
@@ -2227,6 +2257,26 @@
 			path = hotelsScreens;
 			sourceTree = "<group>";
 		};
+		CEB138822B61B2080070DBA8 /* driverAuthentication */ = {
+			isa = PBXGroup;
+			children = (
+				CEB138832B61B21F0070DBA8 /* swiftui */,
+				CEB1387E2B615BC00070DBA8 /* driverUploadIdAuthVC.swift */,
+				CEB138802B615BE70070DBA8 /* driverUploadIdAuthVC.xib */,
+			);
+			path = driverAuthentication;
+			sourceTree = "<group>";
+		};
+		CEB138832B61B21F0070DBA8 /* swiftui */ = {
+			isa = PBXGroup;
+			children = (
+				CED77C0A2B64FCB100962E83 /* swiftuiHelper */,
+				CED77C032B635F3700962E83 /* authTabs */,
+				CEB138842B61B2360070DBA8 /* driverAuthView.swift */,
+			);
+			path = swiftui;
+			sourceTree = "<group>";
+		};
 		CEB29E562B49890400F64ED8 /* editProfile */ = {
 			isa = PBXGroup;
 			children = (
@@ -2321,14 +2371,6 @@
 			path = rateTheDriver;
 			sourceTree = "<group>";
 		};
-		CED0C29B2B49321200BCD6D0 /* overrideFont */ = {
-			isa = PBXGroup;
-			children = (
-				CED0C29C2B49322A00BCD6D0 /* overrideFont.swift */,
-			);
-			path = overrideFont;
-			sourceTree = "<group>";
-		};
 		CED288912B49B85E00E075CE /* cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -2336,6 +2378,39 @@
 				CED288932B49B87B00E075CE /* hobbiesCellCollectionViewCell.xib */,
 			);
 			path = cells;
+			sourceTree = "<group>";
+		};
+		CED77C032B635F3700962E83 /* authTabs */ = {
+			isa = PBXGroup;
+			children = (
+				CED77C042B635F5300962E83 /* tab1UploadId .swift */,
+				CEDF18A72B6FB02200B03B44 /* tab2DrivingLicenseView.swift */,
+				CEDF18A92B6FB42B00B03B44 /* tab3authDriver.swift */,
+				CEDF18AB2B6FBB3600B03B44 /* tab4DriverAuthView.swift */,
+				CEDF18AD2B70AD6500B03B44 /* tab5DriverAuth.swift */,
+				CEDF18AF2B70AFA500B03B44 /* tab6DriverAuth.swift */,
+			);
+			path = authTabs;
+			sourceTree = "<group>";
+		};
+		CED77C092B6375CD00962E83 /* driver */ = {
+			isa = PBXGroup;
+			children = (
+				CEB138822B61B2080070DBA8 /* driverAuthentication */,
+			);
+			path = driver;
+			sourceTree = "<group>";
+		};
+		CED77C0A2B64FCB100962E83 /* swiftuiHelper */ = {
+			isa = PBXGroup;
+			children = (
+				CED77C0B2B64FD0900962E83 /* floatinglabelTextField.swift */,
+				CE1A94DF2B6CD549003C50EF /* fileUploadedView.swift */,
+				CEDF18A22B6E291900B03B44 /* camerapicker.swift */,
+				CEDF18B12B70B83200B03B44 /* otpModifier.swift */,
+				CEDF18B62B70D31C00B03B44 /* swiftuiOTPview.swift */,
+			);
+			path = swiftuiHelper;
 			sourceTree = "<group>";
 		};
 		CEDDBE152ACBDF8500677C94 /* cell */ = {
@@ -2460,6 +2535,8 @@
 				96EA1E3A2A76EDF900F39386 /* M13Checkbox */,
 				963DAB252A7FDAE8004ED3C7 /* AlertKit */,
 				CEB5A8482ABC489200A7F4AD /* MIOTPVerificationSPM */,
+				CED77C072B6365FF00962E83 /* Neumorphic */,
+				CEDF18A52B6E297C00B03B44 /* MediaPicker */,
 			);
 			productName = Takhawi;
 			productReference = 9694AB322A5DE9D500BDF5F8 /* Takhawi.app */;
@@ -2503,6 +2580,8 @@
 				96EA1E392A76EDF900F39386 /* XCRemoteSwiftPackageReference "M13Checkbox" */,
 				963DAB242A7FDAE7004ED3C7 /* XCRemoteSwiftPackageReference "AlertKit" */,
 				CEB5A8472ABC489200A7F4AD /* XCRemoteSwiftPackageReference "MIOTPVerificationSPM" */,
+				CED77C062B6365FF00962E83 /* XCRemoteSwiftPackageReference "neumorphic" */,
+				CEDF18A42B6E297C00B03B44 /* XCRemoteSwiftPackageReference "SwiftUI-MediaPicker" */,
 			);
 			productRefGroup = 9694AB332A5DE9D500BDF5F8 /* Products */;
 			projectDirPath = "";
@@ -2544,6 +2623,7 @@
 				96EA1E432A77006B00F39386 /* Alexandria-SemiBold.ttf in Resources */,
 				CEBB8B972ADE95F200E70EC4 /* profileVC.xib in Resources */,
 				CE9EBFE82B1393710080A0F2 /* reviewsViewVC.xib in Resources */,
+				CEB138812B615BE70070DBA8 /* driverUploadIdAuthVC.xib in Resources */,
 				CE7D82FC2AC3CA8300C5B028 /* googleMapsStyle.json in Resources */,
 				04D81F922B35C03200AAA66C /* secauthCell.xib in Resources */,
 				CE71F4772B17351800E7B689 /* i29sRturwt.json in Resources */,
@@ -2720,7 +2800,9 @@
 				CED288942B49B87B00E075CE /* hobbiesCellCollectionViewCell.swift in Sources */,
 				CE3CACF02B2DA7A50025990E /* swiftRegisterVC.swift in Sources */,
 				CEBB8B932ADE77FB00E70EC4 /* mapSearchExtention.swift in Sources */,
+				CED77C052B635F5300962E83 /* tab1UploadId .swift in Sources */,
 				CEB5A8642ABD7ECD00A7F4AD /* tab4.swift in Sources */,
+				CEDF18B02B70AFA500B03B44 /* tab6DriverAuth.swift in Sources */,
 				CE06550E2B56B3D6003535EE /* thirdOnboardingView.swift in Sources */,
 				CE115E5D2ABED5E800972CC9 /* homeVC.swift in Sources */,
 				CE3B53A92B2B18D2003D3043 /* appMainTextField.swift in Sources */,
@@ -2732,6 +2814,7 @@
 				9694ABD92A5DFACA00BDF5F8 /* UIDeviceExtention.swift in Sources */,
 				96202C882A7FBB0A00053C5B /* ReseatPasswordVC.swift in Sources */,
 				96202C832A7FB97B00053C5B /* EnterMobileVC.swift in Sources */,
+				CEB138852B61B2360070DBA8 /* driverAuthView.swift in Sources */,
 				CE772FBA2ADD458600BDEDC9 /* sideMenuItems.swift in Sources */,
 				CE6178A42ACD08DE00AA8BB7 /* homeSearch+textfieldDelegate.swift in Sources */,
 				9694AC012A5DFACA00BDF5F8 /* SocialMedia.swift in Sources */,
@@ -2756,6 +2839,8 @@
 				CE27F53F2ADFAD8500DEA419 /* StarRatingStackView.swift in Sources */,
 				CE3B53A52B2AFFFF003D3043 /* cancelTheTripVC.swift in Sources */,
 				CEB5A8572ABC6D3700A7F4AD /* tap1.swift in Sources */,
+				CEB1387F2B615BC00070DBA8 /* driverUploadIdAuthVC.swift in Sources */,
+				CEDF18A32B6E291900B03B44 /* camerapicker.swift in Sources */,
 				9694ABFF2A5DFACA00BDF5F8 /* defult.swift in Sources */,
 				CE4477442AE0440E000D96F6 /* calendarWeekStore.swift in Sources */,
 				04C737C32B36DE12002AE59C /* policesVC.swift in Sources */,
@@ -2777,19 +2862,21 @@
 				CEF0E7DC2B4F3AE700DCBD69 /* circularGroupView.swift in Sources */,
 				CE4477412AE04392000D96F6 /* oneWeekView.swift in Sources */,
 				9694ABDA2A5DFACA00BDF5F8 /* FileDownloader.swift in Sources */,
+				CEDF18A82B6FB02200B03B44 /* tab2DrivingLicenseView.swift in Sources */,
 				9694ABC62A5DFACA00BDF5F8 /* UIAlertContollerExtentions.swift in Sources */,
 				CEBB8B992ADE960100E70EC4 /* profileVC.swift in Sources */,
 				9694ABE22A5DFACA00BDF5F8 /* extensionUIView.swift in Sources */,
 				CEDDBE292ACC5C3700677C94 /* blurEffect.swift in Sources */,
 				9694ABD02A5DFACA00BDF5F8 /* UIWindow+Extensions.swift in Sources */,
+				CEDF18B72B70D31D00B03B44 /* swiftuiOTPview.swift in Sources */,
 				04B4AFAC2B347F9100DAFEC2 /* cardsCell.swift in Sources */,
 				9694ABBA2A5DFACA00BDF5F8 /* CodableInit.swift in Sources */,
 				CEB5A84E2ABC4F7500A7F4AD /* backButton.swift in Sources */,
+				CEDF18AE2B70AD6500B03B44 /* tab5DriverAuth.swift in Sources */,
 				9694ABD42A5DFACA00BDF5F8 /* TableView&CollectionView.swift in Sources */,
 				CE9757C42AE0F0BD0014346E /* tripListCell.swift in Sources */,
 				0493588C2B43D838004E5259 /* localizationManager.swift in Sources */,
 				963DAB352A803B64004ED3C7 /* RegisterDriverPersonalInfoVC.swift in Sources */,
-				CED0C29D2B49322A00BCD6D0 /* overrideFont.swift in Sources */,
 				CE7576F22AF2041100AFF56A /* chooseFeatureCell.swift in Sources */,
 				9694AC622A5E040D00BDF5F8 /* Fonts.swift in Sources */,
 				04B659F02B345DA800E78752 /* cartItemVView.swift in Sources */,
@@ -2825,6 +2912,7 @@
 				9694ABE42A5DFACA00BDF5F8 /* AnimateGifImage.swift in Sources */,
 				CED51ED32AE1B86D00603151 /* driverProfile+collection.swift in Sources */,
 				9694AB362A5DE9D500BDF5F8 /* AppDelegate.swift in Sources */,
+				CED77C0C2B64FD0900962E83 /* floatinglabelTextField.swift in Sources */,
 				CE6178A22ACCF9F700AA8BB7 /* homeSearchVC.swift in Sources */,
 				CE6178AD2ACD23BD00AA8BB7 /* tipLabel.swift in Sources */,
 				CE3CEEDE2B1652DD00619C79 /* findingAdriverVC.swift in Sources */,
@@ -2836,9 +2924,11 @@
 				9694ABDC2A5DFACA00BDF5F8 /* Array.swift in Sources */,
 				9694AB382A5DE9D500BDF5F8 /* SceneDelegate.swift in Sources */,
 				04C737B72B36D388002AE59C /* tripsSideMenuVC+delegate.swift in Sources */,
+				CEDF18AA2B6FB42B00B03B44 /* tab3authDriver.swift in Sources */,
 				963DAB2B2A7FDD27004ED3C7 /* DriverRegisterVC.swift in Sources */,
 				CE9F3C4B2B19D0B5004C3D24 /* fullScreenGoogleViewVC.swift in Sources */,
 				9694AC772A5E0D8B00BDF5F8 /* UserDefaultsExtensions.swift in Sources */,
+				CEDF18AC2B6FBB3600B03B44 /* tab4DriverAuthView.swift in Sources */,
 				CE385D942AE267A4008F2D50 /* AnimatePolyline.swift in Sources */,
 				CE3021372ABB9B7A00572DE7 /* enterpassword+textfielddelegate.swift in Sources */,
 				9694ABCE2A5DFACA00BDF5F8 /* UITextViewExtesion.swift in Sources */,
@@ -2915,6 +3005,7 @@
 				CEBB8BA52ADEEC1900E70EC4 /* profileVc+delegate.swift in Sources */,
 				9694ABD52A5DFACA00BDF5F8 /* UIImageExtention.swift in Sources */,
 				04B659CA2B341D6A00E78752 /* favDriverCell.swift in Sources */,
+				CE1A94E02B6CD549003C50EF /* fileUploadedView.swift in Sources */,
 				9694ABC72A5DFACA00BDF5F8 /* RoundImage.swift in Sources */,
 				CE44773A2AE03DBD000D96F6 /* selectDateExtention.swift in Sources */,
 				CEDDBE232ACC45AF00677C94 /* destinationSearchVCCell.swift in Sources */,
@@ -2958,6 +3049,7 @@
 				96B27F872A82F791006C8DB3 /* TermsOfUseVC.swift in Sources */,
 				04C737C82B36E044002AE59C /* helpAndSupportVC.swift in Sources */,
 				9694AC552A5E040D00BDF5F8 /* Themes.swift in Sources */,
+				CEDF18B22B70B83200B03B44 /* otpModifier.swift in Sources */,
 				9641AD342A6C2C1700A29046 /* OnboardingSlide.swift in Sources */,
 				9694AC042A5DFACA00BDF5F8 /* ValidationService.swift in Sources */,
 				CEB29E582B49892C00F64ED8 /* editProfileVC.swift in Sources */,
@@ -3317,6 +3409,22 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		CED77C062B6365FF00962E83 /* XCRemoteSwiftPackageReference "neumorphic" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/costachung/neumorphic/";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		CEDF18A42B6E297C00B03B44 /* XCRemoteSwiftPackageReference "SwiftUI-MediaPicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/UWAppDev/SwiftUI-MediaPicker";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -3384,6 +3492,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CEB5A8472ABC489200A7F4AD /* XCRemoteSwiftPackageReference "MIOTPVerificationSPM" */;
 			productName = MIOTPVerificationSPM;
+		};
+		CED77C072B6365FF00962E83 /* Neumorphic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CED77C062B6365FF00962E83 /* XCRemoteSwiftPackageReference "neumorphic" */;
+			productName = Neumorphic;
+		};
+		CEDF18A52B6E297C00B03B44 /* MediaPicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEDF18A42B6E297C00B03B44 /* XCRemoteSwiftPackageReference "SwiftUI-MediaPicker" */;
+			productName = MediaPicker;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

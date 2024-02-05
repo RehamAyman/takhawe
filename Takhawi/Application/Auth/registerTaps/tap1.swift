@@ -5,9 +5,19 @@
 //  Created by Reham Ayman on 21/09/2023.
 //
 
+
+
 import SwiftUI
 
 struct tap1: View {
+    var IsArabicLang : Bool {
+        if LocalizationManager.shared.getLanguage() == .Arabic {
+            return true
+        } else {
+            return false
+        }
+    }
+    
     @State var email : String = ""
     var body: some View {
         VStack ( spacing: 12) {
@@ -18,8 +28,11 @@ struct tap1: View {
                 .frame(width: 120, height: 120)
              
             
-            TextField( "Enter Your Email Address", text: $email)
-                .font(.custom(AppFont.Regular.rawValue, size: 14))
+            
+            
+            
+            TextField( "Enter Your Email Address".localize, text: $email)
+                .font(.custom( LocalizationManager.shared.getLanguage() == .English ?   AppFont.Regular.rawValue : AppFont.arRegular.rawValue , size: 14))
                 .padding()
                 .frame(height: 50)
                 .overlay(

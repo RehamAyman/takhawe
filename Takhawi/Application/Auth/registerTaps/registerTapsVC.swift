@@ -11,6 +11,8 @@ import UIKit
 import SwiftUI
 import IQKeyboardManagerSwift
 
+
+
 class registerTapsVC: BaseVC {
    
     
@@ -19,8 +21,6 @@ class registerTapsVC: BaseVC {
     
     
 //MARK: - Properties -
-    
-    
     
    lazy var swiftUIView = UIHostingController(rootView: registerTabs{
         print("here i catch next button  well 🥳")
@@ -44,6 +44,9 @@ class registerTapsVC: BaseVC {
         self.navigationController?.navigationBar.isHidden = true
         self.importSwiftuiView()
     }
+    
+    
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
         IQKeyboardManager.shared.enable = true
@@ -54,20 +57,14 @@ class registerTapsVC: BaseVC {
     private func configureInitialDesign() {
         self.title = "".localized
     }
+    
+    
     private func importSwiftuiView () {
-        
-        
-        
-        
         addChild(swiftUIView)
         swiftUIView.view.frame = view.frame
         view.addSubview(swiftUIView.view)
-        
         swiftUIView.didMove(toParent: self)
-        
-        
-        
-        
+
     }
     
     

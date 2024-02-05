@@ -24,8 +24,8 @@ struct tap2: View {
              //   .scaledToFit()
                 .frame(width: 120 , height: 120)
             
-            SecureInputView( "Enter New Password" , text: $email)
-            SecureInputView( "Confirm Password" , text: $confirmPassword)
+            SecureInputView( "Enter New Password".localize , text: $email)
+            SecureInputView( "Confirm Password".localize , text: $confirmPassword)
             
             
             HStack{
@@ -44,8 +44,8 @@ struct tap2: View {
                 
                 
                 
-                Text( "I agree to the terms and conditions")
-                    .font(.custom(AppFont.Regular.rawValue, size: 14))
+                Text( "I agree to the terms and conditions".localize)
+                    .font(.custom( LocalizationManager.shared.getLanguage() == .Arabic ?  AppFont.arRegular.rawValue :  AppFont.Regular.rawValue , size: 13))
                     .fixedSize()
                     .frame(maxWidth: .infinity , alignment : .leading)
                 

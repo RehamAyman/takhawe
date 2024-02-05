@@ -206,3 +206,21 @@
 "Favourites" = "المفضلات" ;
 "Update Profile" = "حفظ التعديلات" ; 
 "Delete Profile" = "حذف حسابي"  ; 
+"Signup" = "تسجيل الدخول" ; 
+"Please " = "من فضلك " ;
+"provide following details " = "ادخل التفاصيل التالية " ; 
+"for your new account" = "لحسابك الجديد" ;
+"Enter Your Email Address" = "أدخل عنوان بريدك الالكتروني" ;
+"Enter New Password"  = "أدخل كلمة المرور الجديدة" ;
+"Confirm Password" = "تأكيد كلمة المرور" ;
+"I agree to the terms and conditions" = "أوافق على الشروط و الاحكام" ;
+"Please enter your phone number and location so we can verify you." = "يرجى إدخال رقم هاتفك وموقعك حتى نتمكن من التحقق منك." ;
+
+"Enter Your Phone Number" = "أدخل رقم هاتفك" ;
+"Enter Your Full Name" =  "أدخل اسمك الكامل" ; 
+"Female" = "أنثى" ;
+ "Male" =  "ذكر" ;
+"Next" = "التالي" ;
+"Please" = "من فضلك" ;
+" provide following details" = "ادخل التفاصيل التالية " ;
+" for your new account" = " لانشاء حساب جديد"  ;

@@ -176,6 +176,7 @@ SPEC REPOS:
     - EasyTipView
     - EDCarousel
     - EMTNeumorphicView
+    - GoogleMaps
     - GooglePlacePicker
     - HSCycleGalleryView
     - ImageSlideshow
@@ -225,6 +226,6 @@ SPEC CHECKSUMS:
   OTPFieldView: 700a752fe62c41d1c4914c78aa500fb30d97c255
   PureLayout: 5fb5e5429519627d60d079ccb1eaa7265ce7cf88
 
-PODFILE CHECKSUM: 97eee60447c91194a3db230ae850e6d091897727
+PODFILE CHECKSUM: 57be44f1da4db03c907da3238170223c53f1e254
 
 COCOAPODS: 1.14.3

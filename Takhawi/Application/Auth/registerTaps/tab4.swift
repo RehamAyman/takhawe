@@ -16,8 +16,9 @@ struct tab4: View {
                 .frame(width:  UIScreen.main.bounds.width * 0.3)
                 .frame(height:  UIScreen.main.bounds.height * 0.15)
             
-            TextField( "Enter Your Full Name" , text: $fullName )
-                .font(.custom(AppFont.Regular.rawValue, size: 14))
+            TextField( "Enter Your Full Name".localize , text: $fullName )
+                
+                .font(.custom( LocalizationManager.shared.getLanguage() == .Arabic ?  AppFont.arRegular.rawValue :  AppFont.Regular.rawValue , size: 14))
                     .padding()
                     .overlay(
                         RoundedRectangle(cornerRadius: 25 )

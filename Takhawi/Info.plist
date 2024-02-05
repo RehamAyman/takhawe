@@ -30,5 +30,7 @@
 			</array>
 		</dict>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>This app needs to capture image to show in the app.</string>
 </dict>
 </plist>

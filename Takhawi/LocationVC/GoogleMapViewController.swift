@@ -27,6 +27,7 @@ class GoogleMapViewController: BaseVC {
     static func create() -> GoogleMapViewController {
         let vc = GoogleMapViewController()
         return vc
+        
     }
     
     
@@ -47,6 +48,7 @@ class GoogleMapViewController: BaseVC {
         super.viewDidLoad()
         handelInitialState()
         setUpDesign()
+      
         
     }
     

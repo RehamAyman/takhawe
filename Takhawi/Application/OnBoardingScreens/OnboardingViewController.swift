@@ -30,8 +30,8 @@ class OnboardingViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
 
-       //   let vc =   phoneAndLocationVC()  //  LoginVC()//
-   let vc =    onboardingSwiftuiVC()  // homeVC()   // onboardingSwiftuiVC()      // homeVC()   //  trackYourTripVC()  //  homeVC()    //trackYourTripVC()
+       //   let vc =    //  LoginVC()//
+        let vc =  driverAuthVC() //phoneAndLocationVC() //  onboardingSwiftuiVC()  // homeVC()   // onboardingSwiftuiVC()      // homeVC()   //  trackYourTripVC()  //     //trackYourTripVC()
 //        self.navigationController?.pushViewController(vc, animated: true)
 
         let nav = CustomNavigationController(rootViewController: vc)

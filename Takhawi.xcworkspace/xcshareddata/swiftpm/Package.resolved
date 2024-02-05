@@ -154,6 +154,15 @@
       }
     },
     {
+      "identity" : "neumorphic",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/costachung/neumorphic/",
+      "state" : {
+        "branch" : "master",
+        "revision" : "03c6f7b3d27bfb28a082db2e9ffae45fbc69cb8b"
+      }
+    },
+    {
       "identity" : "nvactivityindicatorview",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ninjaprox/NVActivityIndicatorView.git",
@@ -187,6 +196,15 @@
       "state" : {
         "revision" : "b29dd21090b708aa0ae9ecbaf6e2d0487028dc3f",
         "version" : "9.0.6"
+      }
+    },
+    {
+      "identity" : "swiftui-mediapicker",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/UWAppDev/SwiftUI-MediaPicker",
+      "state" : {
+        "revision" : "96f18b1350873dec0a76355c7060cd0a06100901",
+        "version" : "0.2.0"
       }
     }
   ],

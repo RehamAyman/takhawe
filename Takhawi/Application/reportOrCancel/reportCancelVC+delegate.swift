@@ -53,7 +53,7 @@ extension reportCancelVC : UITableViewDelegate , UITableViewDataSource {
         
             cell.checkBox.image = UIImage(named:"Element")
           
-
+     
         
     }
     

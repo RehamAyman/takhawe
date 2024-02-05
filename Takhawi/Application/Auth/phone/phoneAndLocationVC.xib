@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,6 +19,7 @@
                 <outlet property="logoImage" destination="rNf-4D-MZC" id="hN3-cU-i9p"/>
                 <outlet property="mainStackView" destination="iOp-aF-T4I" id="Mjr-MO-rcx"/>
                 <outlet property="passwordTextField" destination="gdR-2r-XDJ" id="Nri-jL-8VY"/>
+                <outlet property="titileLabel" destination="S3Y-kc-AjZ" id="uwh-du-rAb"/>
                 <outlet property="view" destination="haF-AY-gvC" id="wOg-gb-tiC"/>
             </connections>
         </placeholder>
@@ -28,52 +29,30 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="iOp-aF-T4I">
-                    <rect key="frame" x="30" y="150" width="315" height="300"/>
+                    <rect key="frame" x="30" y="150" width="315" height="310"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="S3Y-kc-AjZ">
-                            <rect key="frame" x="0.0" y="0.0" width="315" height="43"/>
-                            <attributedString key="attributedText">
-                                <fragment content="Please enter ">
-                                    <attributes>
-                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <font key="NSFont" size="18" name="HelveticaNeue"/>
-                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                    </attributes>
-                                </fragment>
-                                <fragment content="your phone number">
-                                    <attributes>
-                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <font key="NSFont" size="18" name="HelveticaNeue-Bold"/>
-                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                    </attributes>
-                                </fragment>
-                                <fragment content=" and ">
-                                    <attributes>
-                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <font key="NSFont" size="18" name="HelveticaNeue"/>
-                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                    </attributes>
-                                </fragment>
-                                <fragment content="location">
-                                    <attributes>
-                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <font key="NSFont" size="18" name="HelveticaNeue-Bold"/>
-                                        <font key="NSOriginalFont" size="18" name="HelveticaNeue-Bold"/>
-                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                    </attributes>
-                                </fragment>
-                                <fragment content=" so we can verify you.">
-                                    <attributes>
-                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <font key="NSFont" size="18" name="HelveticaNeue"/>
-                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                    </attributes>
-                                </fragment>
-                            </attributedString>
-                            <nil key="highlightedColor"/>
-                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i9y-sc-01N">
+                            <rect key="frame" x="0.0" y="0.0" width="315" height="53"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your phone number and location so we can verify you." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="S3Y-kc-AjZ">
+                                    <rect key="frame" x="10" y="0.0" width="295" height="53"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="S3Y-kc-AjZ" firstAttribute="top" secondItem="i9y-sc-01N" secondAttribute="top" id="I72-fg-FA8"/>
+                                <constraint firstItem="S3Y-kc-AjZ" firstAttribute="centerY" secondItem="i9y-sc-01N" secondAttribute="centerY" id="IQ2-sB-aXd"/>
+                                <constraint firstAttribute="trailing" secondItem="S3Y-kc-AjZ" secondAttribute="trailing" constant="10" id="IgW-jX-Eca"/>
+                                <constraint firstItem="S3Y-kc-AjZ" firstAttribute="leading" secondItem="i9y-sc-01N" secondAttribute="leading" constant="10" id="d25-Ea-zPo"/>
+                                <constraint firstAttribute="bottom" secondItem="S3Y-kc-AjZ" secondAttribute="bottom" id="qW4-4L-Sc9"/>
+                                <constraint firstItem="S3Y-kc-AjZ" firstAttribute="centerX" secondItem="i9y-sc-01N" secondAttribute="centerX" id="y2J-x4-bdC"/>
+                            </constraints>
+                        </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GAs-Xz-hr8">
-                            <rect key="frame" x="0.0" y="68" width="315" height="157"/>
+                            <rect key="frame" x="0.0" y="78" width="315" height="157"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="rNf-4D-MZC">
                                     <rect key="frame" x="57.666666666666686" y="3.6666666666666572" width="200" height="150"/>
@@ -91,7 +70,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1VW-Bv-6JV">
-                            <rect key="frame" x="0.0" y="250" width="315" height="50"/>
+                            <rect key="frame" x="0.0" y="260" width="315" height="50"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="pzp-pb-mMT">
                                     <rect key="frame" x="10" y="0.0" width="295" height="50"/>
@@ -112,12 +91,13 @@
                                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Your Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gdR-2r-XDJ" customClass="MainAppTextFaild" customModule="Takhawi" customModuleProvider="target">
                                             <rect key="frame" x="76" y="0.0" width="219" height="50"/>
                                             <color key="backgroundColor" name="BackGroundColor"/>
-                                            <fontDescription key="fontDescription" name="Alexandria-Regular" family="Alexandria" pointSize="14"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" keyboardType="ASCIICapableNumberPad"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                     <color key="value" name="MainColor"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Enter Your Phone Number"/>
                                             </userDefinedRuntimeAttributes>
                                         </textField>
                                     </subviews>
@@ -145,7 +125,7 @@
                         </view>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="height" constant="300" id="maN-yU-sh6"/>
+                        <constraint firstAttribute="height" constant="310" id="maN-yU-sh6"/>
                     </constraints>
                 </stackView>
             </subviews>
@@ -164,7 +144,7 @@
         <image name="Logo" width="171" height="170.66667175292969"/>
         <image name="flag" width="26" height="26"/>
         <namedColor name="BackGroundColor">
-            <color red="0.95300000905990601" green="0.95300000905990601" blue="0.97299998998641968" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.95294117647058818" green="0.95294117647058818" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="MainColor">
             <color red="0.35294117647058826" green="0.25882352941176473" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -17,15 +17,19 @@ struct registerTabs: View {
     @State var test : String = ""
     var action: () -> Void
     var BackAction: () -> Void
-    
+    var IsArabicLang : Bool {
+        if LocalizationManager.shared.getLanguage() == .Arabic {
+            return true
+        } else {
+            return false
+        }
+    }
     
     var body: some View {
        
         
         VStack  {
-            
-            
-          
+
                 HStack {
                     Image( "Group 25")
                         .resizable()
@@ -38,24 +42,22 @@ struct registerTabs: View {
                 .padding(.trailing)
                 .padding(.top)
 
-            Text ("Signup")
+            Text ("Signup".localize)
                 
-                .font(.custom(AppFont.Bold.rawValue, size: 33))
+                .font(.custom( IsArabicLang ? AppFont.arBold.rawValue : AppFont.Bold.rawValue, size: 33))
                
                  .foregroundColor(Color("MainColor"))
                  .padding(8)
-                
-           
-        
+
             Group {
-                    Text("Please ")
-                    .font(.custom(AppFont.Regular.rawValue, size: 18))
+                Text("Please ".localize)
+                    .font(.custom(IsArabicLang ? AppFont.arRegular.rawValue : AppFont.Regular.rawValue , size: 18))
                 +
-                    Text("provide following details ")
-                    .font(.custom(AppFont.Bold.rawValue, size: 18))
+                Text("provide following details ".localize)
+                    .font(.custom(IsArabicLang ? AppFont.arBold.rawValue : AppFont.Bold.rawValue , size: 18))
                 +
-                    Text("for your new account")
-                    .font(.custom(AppFont.Regular.rawValue, size: 18))
+                Text("for your new account".localize)
+                    .font(.custom(IsArabicLang ? AppFont.arRegular.rawValue : AppFont.Regular.rawValue , size: 18))
                     
                        
                 }
@@ -136,8 +138,8 @@ struct registerTabs: View {
                     
                 }
             } label: {
-                Text( "Next")
-                    .font(.custom(AppFont.Bold.rawValue, size: 20))
+                Text( "Next".localize)
+                    .font(.custom(IsArabicLang ? AppFont.arBold.rawValue : AppFont.Bold.rawValue , size: 20))
                     .foregroundColor(.white)
                     .frame(height: 55)
                     .frame(maxWidth: .infinity)
@@ -154,7 +156,7 @@ struct registerTabs: View {
         //.ignoresSafeArea(.keyboard, edges: .bottom)
         
           //  force app to be left just for now
-        .environment(\.layoutDirection,   .leftToRight  )
+    //    .environment(\.layoutDirection,   .leftToRight  )
         .ignoresSafeArea(.keyboard, edges: .bottom)
            
         

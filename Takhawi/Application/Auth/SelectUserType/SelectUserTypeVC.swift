@@ -80,20 +80,27 @@ class SelectUserTypeVC: BaseVC {
            
         }
 
-        print("Driver")
+      
     }
 
     // MARK: - Actions -
 
     @IBAction func continueAction(_ sender: Any) {
-        let vc =  homeVC()
+        if selectedType == "Driver" {
+            let vc = driverAuthVC()
+            self.push(vc)
+        } else {
+            let vc =  homeVC()
+            self.push(vc)
+        }
+     
 
 //        if selectedType == "User" {
 //            vc.typeOfLogin = .user
 //        } else {
 //            vc.typeOfLogin = .driver
 //        }
-        self.push(vc)
+       
     }
 }
 

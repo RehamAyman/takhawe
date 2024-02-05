@@ -21,14 +21,17 @@ struct tab3: View {
             
             
             HStack {
-                Text ( "Female")
+                Text ( "Female".localize)
                     .frame(width: 100 , alignment: .center)
+                  
                 Spacer()
-                Text ( "male")
+                Text ( "Male".localize)
                     .frame(width: 100 , alignment: .center)
                 
             }.foregroundColor(.gray)
-                .font(.custom(AppFont.Regular.rawValue, size: 14))
+                
+                .font(.custom( LocalizationManager.shared.getLanguage() == .Arabic ?  AppFont.arRegular.rawValue :  AppFont.Regular.rawValue , size: 14))
+            
             .padding()
             .padding(.top)
           .frame(width: 250)
