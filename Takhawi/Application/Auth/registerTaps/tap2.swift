@@ -40,9 +40,7 @@ struct tap2: View {
                        
                     }
                     .shadow(color: Color("MainColor"), radius: 1)
-                
-                
-                
+
                 
                 Text( "I agree to the terms and conditions".localize)
                     .font(.custom( LocalizationManager.shared.getLanguage() == .Arabic ?  AppFont.arRegular.rawValue :  AppFont.Regular.rawValue , size: 13))

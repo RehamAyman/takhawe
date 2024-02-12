@@ -13,11 +13,14 @@ import GoogleMaps
 
 class driverProfileVC: BaseVC {
     
+    @IBOutlet weak var driverContainerView: UIView!
+    @IBOutlet weak var mainStack: UIStackView!
     @IBOutlet weak var BottomcontainerStack: UIStackView!
     //MARK: - IBOutlets -
     @IBOutlet weak var tripCountLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var chenldirenContainerView: UIView!
     @IBOutlet weak var numberOfChildrenText: UITextField!
     @IBOutlet weak var googleView: GMSMapView!
     @IBOutlet weak var containerView: UIView!
@@ -32,7 +35,7 @@ class driverProfileVC: BaseVC {
     ]
 
     var animatePolyline: AnimatePolyline?
-    
+    var isDriverAcc : Bool = false
     
     
 // MARK: - Lifecycle -
@@ -61,6 +64,15 @@ class driverProfileVC: BaseVC {
         self.numberOfChildrenText.setRightPaddingPoints(8)
 // force the bottom view  to be in the left according to client requirement
         self.BottomcontainerStack.semanticContentAttribute = .forceLeftToRight
+        if isDriverAcc {
+            self.mainStack.removeArrangedSubview(self.BottomcontainerStack)
+            self.mainStack.removeArrangedSubview(self.chenldirenContainerView)
+            self.BottomcontainerStack.removeFromSuperview()
+            self.chenldirenContainerView.removeFromSuperview()
+        } else {
+            self.mainStack.removeArrangedSubview(self.driverContainerView)
+            self.driverContainerView.removeFromSuperview()
+        }
     
         
     }

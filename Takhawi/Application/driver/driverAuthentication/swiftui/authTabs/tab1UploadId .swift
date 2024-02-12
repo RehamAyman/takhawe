@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-import MediaPicker
+
 
 struct tab1UploadIdView : View {
     @State var IDNumber : String = ""
@@ -84,7 +84,7 @@ struct tab1UploadIdView : View {
       
             
             
-           FloatingTextField(title: "Enter Your ID Number" , text:  $IDNumber )
+            FloatingTextField(numKeyboard: true, title: "Enter Your ID Number" , text:  $IDNumber  )
                 .padding(.horizontal , 10)
             Spacer()
         }

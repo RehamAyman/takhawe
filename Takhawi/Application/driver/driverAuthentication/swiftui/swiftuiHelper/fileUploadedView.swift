@@ -37,9 +37,9 @@ struct fileUploadedView: View {
                 Spacer()
                 
                 Button(action: {
-                    withAnimation {
+                 
                         self.AllUrls = AllUrls.filter { $0 != url }
-                    }
+                   
                    
                    
                 }, label: {

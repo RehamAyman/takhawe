@@ -28,8 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //AIzaSyDS61p6luMp1Kfj8xmfIvjYz-mBQF9Noo8 // hayah
     //AIzaSyA7nhBa7YZtIb6KoG47O0_y2PwxYfsHiBs // ageeba
         
-        GMSServices.provideAPIKey("AIzaSyBaLRq-LbUQmWZkJkfwjWcJyoxWlhyQ35s")
-        GMSPlacesClient.provideAPIKey("AIzaSyBaLRq-LbUQmWZkJkfwjWcJyoxWlhyQ35s")
+        GMSServices.provideAPIKey("AIzaSyA7nhBa7YZtIb6KoG47O0_y2PwxYfsHiBs")
+        GMSPlacesClient.provideAPIKey("AIzaSyA7nhBa7YZtIb6KoG47O0_y2PwxYfsHiBs")
         self.location?.requestAlwaysAuthorization()
         self.location?.requestWhenInUseAuthorization()
 

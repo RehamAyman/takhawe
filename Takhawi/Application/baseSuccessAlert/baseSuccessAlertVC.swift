@@ -18,6 +18,10 @@ class baseSuccessAlertVC: BaseVC {
     
     //MARK: - Properties -
     
+    var mainTitleText : String = ""
+    var subTitleText : String = ""
+    var driver : Bool = false
+    var DriverAction : (() -> Void)?
     
  
     // MARK: - Lifecycle -
@@ -30,6 +34,12 @@ class baseSuccessAlertVC: BaseVC {
     //MARK: - Design Methods -
     private func configureInitialDesign() {
         self.title = "".localized
+        if self.mainTitleText != "" {
+            self.mainTitle.text = self.mainTitleText
+        }
+        if self.subTitleText != "" {
+            self.subTitle.text = self.subTitleText
+        }
     }
     
     //MARK: - Logic Methods -
@@ -41,6 +51,11 @@ class baseSuccessAlertVC: BaseVC {
         self.dismiss(animated: true )
     }
     @IBAction func backToHome(_ sender: UIButton) {
+        if driver {
+         
+            self.DriverAction?()
+            self.dismiss(animated: true )
+        }
     }
 }
 

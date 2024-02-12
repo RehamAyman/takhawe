@@ -5,55 +5,15 @@
 //  Created by Reham Ayman on 27/01/2024.
 //
 
-import SwiftUI
 
-//struct FloatingTextField: View {
-//    let textFieldHeight: CGFloat = 50
-//    private let placeHolderText: String
-//    @Binding var text: String
-//    @State private var isEditing = false
-//    @State private var textColor : Color = .secondary
-//    public init(placeHolder: String,
-//                text: Binding<String>) {
-//        self._text = text
-//        self.placeHolderText = placeHolder
-//    }
-//    var shouldPlaceHolderMove: Bool {
-//        isEditing || (text.count != 0)
-//    }
-//    var body: some View {
-//        ZStack(alignment: .leading) {
-//            TextField("", text: $text, onEditingChanged: { (edit) in
-//                withAnimation {
-//                    isEditing = edit
-//                    textColor = Color ( "MainColor")
-//                }
-//               
-//            })
-//            .padding()
-//            .overlay(RoundedRectangle(cornerRadius: 8)
-//            .stroke(textColor , lineWidth: 1)
-//            .frame(height: textFieldHeight))
-//            .foregroundColor(Color.primary)
-//            .accentColor(Color.secondary)
-//         //   .animation(.linear)
-//            ///Floating Placeholder
-//            Text(placeHolderText)
-//            .foregroundColor(textColor)
-//             .background(Color( "BackGroundColor"))
-//            .padding(shouldPlaceHolderMove ?
-//                     EdgeInsets(top: 0, leading:15, bottom: textFieldHeight, trailing: 0) :
-//                     EdgeInsets(top: 0, leading:15, bottom: 0, trailing: 0))
-//            .scaleEffect(shouldPlaceHolderMove ? 1.0 : 1.2)
-//           // .animation(.linear)
-//        }
-//    }
-//}
 
 
 import SwiftUI
+
+
 
 struct FloatingTextField: View {
+    var numKeyboard : Bool = false
     var IsArabicLang : Bool {
         if LocalizationManager.shared.getLanguage() == .Arabic {
             return true
@@ -77,29 +37,35 @@ struct FloatingTextField: View {
     
     @available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
     @FocusState private var focusField: Field?
+  
+    
+    
     
     var body: some View {
         ZStack(alignment: .leading) {
-            if #available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *) {
+           // if #available (iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *) {
                 TextField("", text: $text)
                     .focused($focusField, equals: .focused)
                     .frame(height: 50, alignment: .leading)
                     .padding(.horizontal, 16)
+                    .keyboardType( numKeyboard ? .asciiCapableNumberPad : .default )
+                    .autocorrectionDisabled(true)
                     .textFieldStyle(PlainTextFieldStyle())
                     .background(
                         RoundedRectangle(cornerRadius: 25 )
                             .strokeBorder(Color ( "MainColor"), lineWidth: 2)
                     )
-            } else {
-                LegacyTextField(isFirstResponderSender: $isFocused, text: $text)
-                    .frame(height: 50, alignment: .leading)
-                    .padding(.horizontal, 16)
-                    .textFieldStyle(PlainTextFieldStyle())
-                    .background(
-                        RoundedRectangle(cornerRadius: 25)
-                            .strokeBorder(Color( "MainColor"), lineWidth: 2)
-                    )
-            }
+            
+//            } else {
+//                LegacyTextField(isFirstResponderSender: $isFocused, text: $text)
+//                    .frame(height: 50, alignment: .leading)
+//                    .padding(.horizontal, 16)
+//                    .textFieldStyle(PlainTextFieldStyle())
+//                    .background(
+//                        RoundedRectangle(cornerRadius: 25)
+//                            .strokeBorder(Color( "MainColor"), lineWidth: 2)
+//                    )
+//            }
             
             Text(text.isEmpty ? title : title.withSingleLeadingSpace.withSingleTrailingSpace)
                 .font(.custom(  (IsArabicLang ? AppFont.arRegular : AppFont.Regular).rawValue , size: 14))
@@ -112,11 +78,13 @@ struct FloatingTextField: View {
                 .padding(.horizontal, 16)
                 .onTapGesture {
                    
-                    if #available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *) {
                         focusField = .focused
-                    } else {
-                        isFocused = true
-                    }
+                    
+//                    if #available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *) {
+//                        focusField = .focused
+//                    } else {
+//                        isFocused = true
+//                    }
                 }
         }
         .padding(15)
