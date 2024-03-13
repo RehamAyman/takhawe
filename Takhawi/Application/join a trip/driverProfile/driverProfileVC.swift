@@ -25,7 +25,8 @@ class driverProfileVC: BaseVC {
     @IBOutlet weak var googleView: GMSMapView!
     @IBOutlet weak var containerView: UIView!
     
-//MARK: - Properties -
+    @IBOutlet weak var sendOfferContainerView: UIView!
+    //MARK: - Properties -
     var dummyActivty : [dummyActivity] = [
         dummyActivity(icon: "Group 1", name: "Basketball".localize) ,
         dummyActivity(icon: "03-hat", name: "Riding Horse".localize) ,
@@ -64,14 +65,18 @@ class driverProfileVC: BaseVC {
         self.numberOfChildrenText.setRightPaddingPoints(8)
 // force the bottom view  to be in the left according to client requirement
         self.BottomcontainerStack.semanticContentAttribute = .forceLeftToRight
+// arrange views according to the account type
         if isDriverAcc {
             self.mainStack.removeArrangedSubview(self.BottomcontainerStack)
             self.mainStack.removeArrangedSubview(self.chenldirenContainerView)
             self.BottomcontainerStack.removeFromSuperview()
             self.chenldirenContainerView.removeFromSuperview()
+
         } else {
+            self.mainStack.removeArrangedSubview(self.sendOfferContainerView)
             self.mainStack.removeArrangedSubview(self.driverContainerView)
             self.driverContainerView.removeFromSuperview()
+            self.sendOfferContainerView.removeFromSuperview()
         }
     
         

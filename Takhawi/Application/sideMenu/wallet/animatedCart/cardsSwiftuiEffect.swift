@@ -113,10 +113,11 @@ struct SecSnapCarousel<Content: View, T: Identifiable>: View {
     
     @Binding var imgOffset : CGSize
     @Binding var index: Int
+    @Binding var doAction : Bool
     
+   
     
-    
-    init(spacing: CGFloat = 15, trialingSpace: CGFloat = 0  , imgofset : CGSize  = .zero , index: Binding<Int>, imgOffset : Binding<CGSize>  , items: [T], @ViewBuilder content: @escaping (T)->Content) {
+    init(spacing: CGFloat = 15, trialingSpace: CGFloat = 0  , imgofset : CGSize  = .zero , index: Binding<Int> , doAction: Binding<Bool>  , imgOffset : Binding<CGSize>  , items: [T], @ViewBuilder content: @escaping (T)->Content) {
         
         self.list = items
         self.spacing = spacing
@@ -124,12 +125,13 @@ struct SecSnapCarousel<Content: View, T: Identifiable>: View {
         self._index = index
         self._imgOffset = imgOffset
         self.content = content
+        self._doAction = doAction
         
     }
     
     @GestureState var offset: CGFloat = 0
     @State var currentIndex: Int = 0
-    
+  
     var body: some View {
         GeometryReader{proxy in
             
@@ -141,7 +143,6 @@ struct SecSnapCarousel<Content: View, T: Identifiable>: View {
                     content(item)
                         .frame(width:   proxy.size.width - trialingSpace)
                         .offset(y:  getOffset(item: item, width: width) )
-                    
                        
                     
                     
@@ -149,8 +150,9 @@ struct SecSnapCarousel<Content: View, T: Identifiable>: View {
             } // END HSTACK
             .padding(.horizontal, spacing)
             .offset(x: (CGFloat(currentIndex) * -width) + (currentIndex != 0 ? adjustmentWidth : 0) + offset)
-         //   .rotationEffect(.degrees(Double(offset / 30 )))
+          
             .gesture(
+               
                 DragGesture()
                     .updating($offset, body: {value, out, _ in
                         out = (value.translation.width / 2)
@@ -171,8 +173,52 @@ struct SecSnapCarousel<Content: View, T: Identifiable>: View {
                         let progress = -offsetX / width
                         let roundIndex = progress.rounded()
                         index = max(min(currentIndex + Int(roundIndex), list.count - 1), 0)
+                        
+                        
+//                        //
+//                        let currentLocation = value.location
+//                        let center = CGPoint(x: 100 , y: 100)
+//                        let distance = center.distance(to:currentLocation)
+//                        if distance > value.translation.width / 2 {
+//                            let k = (value.translation.width / 2) / distance
+//                            let newLocationX = (currentLocation.x - center.x) * k+center.x
+//                            let newLocationY = (currentLocation.y - center.y) * k+center.y
+//                            self.position = CGPoint(x: newLocationX, y: newLocationY)
+//                        } else {
+//                            self.position = value.location
+//                        }
+                        
+                        
                     })
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
             )
+            .onChange(of: self.index) { newvalue  in
+             print("new value \(newvalue)")
+            print("cuurent Index :\(currentIndex)")
+               
+           
+                if currentIndex != newvalue {
+                    if doAction {
+                        withAnimation {
+                            currentIndex = newvalue
+                            self.doAction = false
+                        }
+                    }
+                   
+                }
+               
+            }
         } // END GR
         .animation(.easeInOut, value: offset == 0)
     } // END BODY
@@ -199,3 +245,8 @@ struct SecSnapCarousel<Content: View, T: Identifiable>: View {
     
 }
 
+extension CGPoint {
+    func distance(to point: CGPoint) -> CGFloat {
+        return sqrt(pow((point.x - x), 2) + pow((point.y - y), 2))
+    }
+}

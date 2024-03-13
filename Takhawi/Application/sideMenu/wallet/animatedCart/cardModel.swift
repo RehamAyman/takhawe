@@ -29,16 +29,17 @@ struct Colors {
     static let lightIPink = "lightIPink"
     static let main = "MainColor"
 }
-struct OnboardingModel: Identifiable {
+struct OnboardingModel: Identifiable , Hashable {
     
-    var id = UUID().uuidString
+    var id : Int
     
     var colors: [Color]
     
     static let cards : [OnboardingModel] = [
-        OnboardingModel(colors: [Color(Colors.main), Color(Colors.main).opacity(0.4)]),
-        OnboardingModel(colors: [Color(Colors.lightIndigo), Color(Colors.lightBlue)]) ,
-        OnboardingModel(colors: [Color(Colors.lightIndigo), Color(Colors.lightBlue)]) 
+        OnboardingModel(id: 0, colors: [Color(Colors.main), Color(Colors.main).opacity(0.4)]),
+        OnboardingModel(id: 1, colors: [Color(Colors.lightIndigo), Color(Colors.lightBlue)]) ,
+        OnboardingModel(id: 2, colors: [Color(Colors.lightIndigo), Color(Colors.lightBlue)]) ,
+        OnboardingModel(id: 3, colors: [Color(Colors.lightIndigo), Color(Colors.lightBlue)]) 
        
     ]
 }

@@ -356,6 +356,7 @@
 		CE9F3C572B1B4550004C3D24 /* wAY9ZXW4id.json in Resources */ = {isa = PBXBuildFile; fileRef = CE9F3C562B1B4550004C3D24 /* wAY9ZXW4id.json */; };
 		CE9F3C592B1B482E004C3D24 /* BDidekRogj.json in Resources */ = {isa = PBXBuildFile; fileRef = CE9F3C582B1B482D004C3D24 /* BDidekRogj.json */; };
 		CE9F3C5B2B1B4955004C3D24 /* u4F3iX2jrQ.json in Resources */ = {isa = PBXBuildFile; fileRef = CE9F3C5A2B1B4954004C3D24 /* u4F3iX2jrQ.json */; };
+		CEA164912B8387CB0063ED8A /* forthOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA164902B8387CB0063ED8A /* forthOnboardingView.swift */; };
 		CEB1387F2B615BC00070DBA8 /* driverUploadIdAuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB1387E2B615BC00070DBA8 /* driverUploadIdAuthVC.swift */; };
 		CEB138812B615BE70070DBA8 /* driverUploadIdAuthVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB138802B615BE70070DBA8 /* driverUploadIdAuthVC.xib */; };
 		CEB138852B61B2360070DBA8 /* driverAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB138842B61B2360070DBA8 /* driverAuthView.swift */; };
@@ -786,6 +787,7 @@
 		CE9F3C562B1B4550004C3D24 /* wAY9ZXW4id.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wAY9ZXW4id.json; sourceTree = "<group>"; };
 		CE9F3C582B1B482D004C3D24 /* BDidekRogj.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BDidekRogj.json; sourceTree = "<group>"; };
 		CE9F3C5A2B1B4954004C3D24 /* u4F3iX2jrQ.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = u4F3iX2jrQ.json; sourceTree = "<group>"; };
+		CEA164902B8387CB0063ED8A /* forthOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forthOnboardingView.swift; sourceTree = "<group>"; };
 		CEB1387E2B615BC00070DBA8 /* driverUploadIdAuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = driverUploadIdAuthVC.swift; sourceTree = "<group>"; };
 		CEB138802B615BE70070DBA8 /* driverUploadIdAuthVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = driverUploadIdAuthVC.xib; sourceTree = "<group>"; };
 		CEB138842B61B2360070DBA8 /* driverAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = driverAuthView.swift; sourceTree = "<group>"; };
@@ -1754,6 +1756,7 @@
 				CEF0E7E42B511BC800DCBD69 /* firstOnboardingView.swift */,
 				CEE8739C2B53BE40003914AB /* secOnboardingView.swift */,
 				CE06550D2B56B3D6003535EE /* thirdOnboardingView.swift */,
+				CEA164902B8387CB0063ED8A /* forthOnboardingView.swift */,
 			);
 			path = obboardingSwiftui;
 			sourceTree = "<group>";
@@ -3088,6 +3091,7 @@
 				9694ABBE2A5DFACA00BDF5F8 /* UserModel.swift in Sources */,
 				CE7576ED2AF1FE2500AFF56A /* innerShadow.swift in Sources */,
 				CE9DB3992AC1AD58000759B8 /* customUIsegment.swift in Sources */,
+				CEA164912B8387CB0063ED8A /* forthOnboardingView.swift in Sources */,
 				CE034F4C2B2B9E6C0040516E /* reportOrCandelCell.swift in Sources */,
 				CE71F47A2B17435A00E7B689 /* selectTimeVC.swift in Sources */,
 				CEF0E7E52B511BC800DCBD69 /* firstOnboardingView.swift in Sources */,

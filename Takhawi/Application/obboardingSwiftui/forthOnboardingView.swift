@@ -1,15 +1,16 @@
 //
-//  thirdOnboardingView.swift
+//  forthOnboardingView.swift
 //  Takhawi
 //
-//  Created by Reham Ayman on 16/01/2024.
+//  Created by Reham Ayman on 19/02/2024.
 //
 
+import Foundation
 import SwiftUI
 // Group 200
 
 
-struct thirdOnboardingView: View {
+struct forthOnboardingView: View {
     @Binding var imageOffset: CGSize
     @Binding  var isAnimating: Bool
     @Binding var indicatorOpacity: Double
@@ -22,17 +23,17 @@ struct thirdOnboardingView: View {
 
 
               ZStack {
-                  Image ( "Group 2 9")
+                  Image ( "Group 1000003063")
                       .resizable()
                     
                       .blur(radius: isAnimating ? 0 : 10)
                       .opacity(isAnimating ? 1 : 0)
-                      .scaleEffect(isAnimating ? 1 : 0.5)
+                      .scaleEffect(isAnimating ? 1 : 0.4)
                       .animation(.easeOut(duration: 1), value: isAnimating)
                       .offset(x: imageOffset.width * -1)
-                      .frame(width: 250 , height: 300)
-                      .rotationEffect(.degrees(10))
-                      .padding(.leading , 70)
+                     
+                     
+                      .padding()
 
                   
                   
@@ -40,7 +41,7 @@ struct thirdOnboardingView: View {
                   
                   ZStack (alignment: .leading){
                     
-                      Image("iPhone 2")
+                      Image("iPhone 3")
                           .resizable()
                           .scaledToFit()
                           .padding()
@@ -53,25 +54,7 @@ struct thirdOnboardingView: View {
                           .animation(.easeOut(duration: 1), value: imageOffset)
                       
                       
-                      VStack {
-                          Image ("Group 1000003062")
-                              .resizable()
-                              .frame(width: 180 , height: 180)
-                              .padding(.leading , -70)
-                              .padding(.top , 60 )
-                          Spacer()
-                          Image ( "coins-cash-svgrepo-com 1")
-                              .resizable()
-                              .frame(width: 100 , height: 110)
-                              .padding(.leading , -60)
-                              .blur(radius: isAnimating ? 0 : 10)
-                              .opacity(isAnimating ? 1 : 0)
-                              .scaleEffect(isAnimating ? 1 : 0.5)
-                              .animation(.easeOut(duration: 1), value: isAnimating)
-                              .offset(x: imageOffset.width * -1)
-                          
-                          
-                      }
+                    
                           
                   }
               } //: CENTER
@@ -87,7 +70,7 @@ struct thirdOnboardingView: View {
         
     }
 }
-struct nboardingSwiftuiView_Previews: PreviewProvider {
+struct forthOnboardingView_Previews: PreviewProvider {
   static var previews: some View {
       onboardingSwiftuiView()
   }

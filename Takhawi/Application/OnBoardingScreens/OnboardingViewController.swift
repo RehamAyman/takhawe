@@ -29,9 +29,10 @@ class OnboardingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
-
+        let storyboard = UIStoryboard(name: "Main", bundle: nil ) 
+        let vc = storyboard.instantiateViewController(withIdentifier: "DriverTabbar") as! DriverTabbar
        //   let vc =    //  LoginVC()//
-        let vc =  driverAuthVC() //phoneAndLocationVC() //  onboardingSwiftuiVC()  // homeVC()   // onboardingSwiftuiVC()      // homeVC()   //  trackYourTripVC()  //     //trackYourTripVC()
+    //    let vc = phoneAndLocationVC()  // onboardingSwiftuiVC()   // driverAuthVC() //phoneAndLocationVC() //  onboardingSwiftuiVC()  // homeVC()      //  trackYourTripVC()  //     //  trackYourTripVC()
 //        self.navigationController?.pushViewController(vc, animated: true)
 
         let nav = CustomNavigationController(rootViewController: vc)

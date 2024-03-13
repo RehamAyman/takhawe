@@ -20,45 +20,44 @@ struct secOnboardingView: View {
 
 
               ZStack {
-                  CircleGroupView(ShapeColor: Color( "MainColor"), ShapeOpacity: 0.2)
-                      .offset(x: imageOffset.width * -1)
-                      .blur(radius: abs(imageOffset.width / 5))
-                      .animation(.easeOut(duration: 1), value: imageOffset)
-                  
-            
-                  
-                  RoundedRectangle(cornerRadius: 25)
-                      .foregroundColor(.white)
-                      .shadow(radius: 20)
-                      .frame(   height: 250)
+                  // onboarding 2
+                  Image ( "onboarding 2")
+                      .resizable()
+                     
+                      .blur(radius: isAnimating ? 0 : 10)
                       .opacity(isAnimating ? 1 : 0)
-                      .animation(.easeOut(duration: 0.5), value: isAnimating)
-                      .offset(x: imageOffset.width * 1.2, y: 0)
-                      .animation(.easeOut(duration: 1), value: imageOffset)
-                      .padding(15)
+                      .scaleEffect(isAnimating ? 1 : 0.5)
+                      .animation(.easeOut(duration: 1), value: isAnimating)
+                      .offset(x: imageOffset.width * -1)
+                  
+                  
                      
                   
                   
                   
-                  Image("Frame 1000003134")
+                  Image("iPhone 1")
                       .resizable()
                       .scaledToFit()
                       .padding()
                 
                      // .fill(Color.white)
                       .shadow(radius: 20)
-                      .frame(   height: 250)
+                     
                   
                       .padding()
                       .opacity(isAnimating ? 1 : 0)
                       .animation(.easeOut(duration: 0.5), value: isAnimating)
                       .offset(x: imageOffset.width * 1.2, y: 0)     //imageOffset.height * 1.2  )
                       .rotationEffect(.degrees(Double(imageOffset.width / 20 )))
+                  
+                  
+                  
 
                       .animation(.easeOut(duration: 1), value: imageOffset)
+                  
+                  
               } //: CENTER
               //
-              
               
            
         

@@ -20,11 +20,22 @@ struct firstOnboardingView: View {
 
 
               ZStack {
-                  CircleGroupView(ShapeColor: Color( "MainColor"), ShapeOpacity: 0.2)
-                      .offset(x: imageOffset.width * -1)
-                      .blur(radius: abs(imageOffset.width / 5))
-                      .animation(.easeOut(duration: 1), value: imageOffset)
+//                  CircleGroupView(ShapeColor: Color( "MainColor"), ShapeOpacity: 0.2)
+//                      .offset(x: imageOffset.width * -1)
+//                      .blur(radius: abs(imageOffset.width / 5))
+//                      .animation(.easeOut(duration: 1), value: imageOffset)
+//                  
                   
+                  Image ( "onboarding 1")
+                      .resizable()
+                     
+                      .blur(radius: isAnimating ? 0 : 10)
+                      .opacity(isAnimating ? 1 : 0)
+                      .scaleEffect(isAnimating ? 1 : 0.5)
+                      .animation(.easeOut(duration: 1), value: isAnimating)
+                      .offset(x: imageOffset.width * -1)
+                      
+                      
                      
 //                  RoundedRectangle(cornerRadius: 25)
 //                      .fill(Color.white)
@@ -32,11 +43,13 @@ struct firstOnboardingView: View {
 //                      .frame( width: 200 , height: 400)
 //                      .padding()
 //                  
-                   Image("Group 13")
+                   Image("iPhone")
                    .resizable()
                     .scaledToFit()
                     .padding()
+                    .padding(.top)
                     .shadow(radius: 20)
+                  //  .rotationEffect(.degrees( Double( imageOffset.width / 2)  ))
                       .opacity(isAnimating ? 1 : 0)
                       .animation(.easeOut(duration: 0.5), value: isAnimating)
                       .offset(x: imageOffset.width * 1.2, y: imageOffset.height  )     //imageOffset.height * 1.2  )
