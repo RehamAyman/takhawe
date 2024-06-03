@@ -23,7 +23,6 @@ struct secOnboardingView: View {
                   // onboarding 2
                   Image ( "onboarding 2")
                       .resizable()
-                     
                       .blur(radius: isAnimating ? 0 : 10)
                       .opacity(isAnimating ? 1 : 0)
                       .scaleEffect(isAnimating ? 1 : 0.5)
@@ -32,27 +31,18 @@ struct secOnboardingView: View {
                   
                   
                      
-                  
+                   
                   
                   
                   Image("iPhone 1")
                       .resizable()
                       .scaledToFit()
                       .padding()
-                
-                     // .fill(Color.white)
                       .shadow(radius: 20)
-                     
-                  
                       .padding()
                       .opacity(isAnimating ? 1 : 0)
                       .animation(.easeOut(duration: 0.5), value: isAnimating)
-                      .offset(x: imageOffset.width * 1.2, y: 0)     //imageOffset.height * 1.2  )
-                      .rotationEffect(.degrees(Double(imageOffset.width / 20 )))
-                  
-                  
-                  
-
+                      .offset(x: tabselection == 1 ?  imageOffset.width : 0   , y: tabselection == 1 ? -imageOffset.width : 0  )
                       .animation(.easeOut(duration: 1), value: imageOffset)
                   
                   

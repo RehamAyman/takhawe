@@ -25,7 +25,7 @@ struct forthOnboardingView: View {
               ZStack {
                   Image ( "Group 1000003063")
                       .resizable()
-                    
+                      .scaledToFit()
                       .blur(radius: isAnimating ? 0 : 10)
                       .opacity(isAnimating ? 1 : 0)
                       .scaleEffect(isAnimating ? 1 : 0.4)
@@ -48,10 +48,13 @@ struct forthOnboardingView: View {
                           .shadow(radius: 20)
                           .opacity(isAnimating ? 1 : 0)
                           .animation(.easeOut(duration: 0.5), value: isAnimating)
-                          .offset(x: imageOffset.width * 1.2, y: 0)     //imageOffset.height * 1.2  )
-                          .rotationEffect(.degrees(Double(imageOffset.width / 90 )))
-                      
+                       
+                          .offset(x: tabselection == 3 ?  imageOffset.width : 0   , y: tabselection == 3 ? -imageOffset.width : 0  )
                           .animation(.easeOut(duration: 1), value: imageOffset)
+                      
+                      
+                      
+                      
                       
                       
                     

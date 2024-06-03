@@ -41,21 +41,21 @@ class CustomActivityIndicator: UIView {
 
             backgroundColor = .clear
 
-            let blurEffect = UIBlurEffect(style: .light)
+            let blurEffect = UIBlurEffect(style: .regular )
 
             let blurView = UIVisualEffectView(effect: blurEffect)
-
+           blurView.alpha = 0.9
             insertSubview(blurView, at: 0)
 
             blurView.autoPinEdgesToSuperviewEdges()
-
-            self.lottieView = .init(name:  "ShvaeVGKuz") //"uaRUu5r4gI" )
+       
+            self.lottieView = .init(name:  "9t8knRBCgn") //"uaRUu5r4gI" )
 
             if let lottieView = lottieView {
 
                 addSubview(lottieView)
 
-                let size = self.frame.width * 0.95
+                let size = self.frame.width * 0.8
 
                 lottieView.autoSetDimensions(to: CGSize(width: size, height: size))
 
@@ -113,7 +113,7 @@ class CustomActivityIndicator: UIView {
         
         UIApplication.shared.windows.first?.addSubview(self)
         
-        self.isUserInteractionEnabled = false
+       // self.isUserInteractionEnabled = false
         
     }
     

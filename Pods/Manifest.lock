@@ -1,13 +1,5 @@
 PODS:
-  - CHIOTPField (0.1.0):
-    - CHIOTPField/Four (= 0.1.0)
-    - CHIOTPField/One (= 0.1.0)
-    - CHIOTPField/Three (= 0.1.0)
-    - CHIOTPField/Two (= 0.1.0)
-  - CHIOTPField/Four (0.1.0)
-  - CHIOTPField/One (0.1.0)
-  - CHIOTPField/Three (0.1.0)
-  - CHIOTPField/Two (0.1.0)
+  - AEOTPTextField (1.2.6)
   - CollectionViewPagingLayout (1.1.0)
   - CountdownLabel (4.0.1)
   - EasyTipView (2.1.0)
@@ -146,7 +138,7 @@ PODS:
   - PureLayout (3.1.9)
 
 DEPENDENCIES:
-  - CHIOTPField (~> 0.1)
+  - AEOTPTextField
   - CollectionViewPagingLayout
   - CountdownLabel
   - EasyTipView (~> 2.1)
@@ -170,13 +162,12 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
-    - CHIOTPField
+    - AEOTPTextField
     - CollectionViewPagingLayout
     - CountdownLabel
     - EasyTipView
     - EDCarousel
     - EMTNeumorphicView
-    - GoogleMaps
     - GooglePlacePicker
     - HSCycleGalleryView
     - ImageSlideshow
@@ -206,7 +197,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/AbdallaTarek/OTPFieldView.git
 
 SPEC CHECKSUMS:
-  CHIOTPField: 5df19b433ccfad2a80e944d3abde128a236aaf01
+  AEOTPTextField: a275823fde05601c5da7f8fb66aaecb41289b370
   CollectionViewPagingLayout: 2f8d50683bae57ca88f47fa4ab0195c9079582cf
   CountdownLabel: c9975e3f329140b5e7d1f45cd63b1300badd1712
   EasyTipView: a92b6edc377b81c5ac18e9fd35d5ee78e9409488
@@ -226,6 +217,6 @@ SPEC CHECKSUMS:
   OTPFieldView: 700a752fe62c41d1c4914c78aa500fb30d97c255
   PureLayout: 5fb5e5429519627d60d079ccb1eaa7265ce7cf88
 
-PODFILE CHECKSUM: 57be44f1da4db03c907da3238170223c53f1e254
+PODFILE CHECKSUM: 5f5c91646398c15fd5dd00467a11a87bde31dae9
 
-COCOAPODS: 1.14.3
+COCOAPODS: 1.15.0

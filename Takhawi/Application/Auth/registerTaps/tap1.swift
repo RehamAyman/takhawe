@@ -18,7 +18,7 @@ struct tap1: View {
         }
     }
     
-    @State var email : String = ""
+    @Binding var email : String
     var body: some View {
         VStack ( spacing: 12) {
           
@@ -26,8 +26,7 @@ struct tap1: View {
                 .resizable()
          //       .scaledToFit()
                 .frame(width: 120, height: 120)
-             
-            
+ 
             
             
             
@@ -51,6 +50,6 @@ struct tap1: View {
 
 struct tap1_Previews: PreviewProvider {
     static var previews: some View {
-        tap1()
+        tap1(email: Binding.constant(""))
     }
 }

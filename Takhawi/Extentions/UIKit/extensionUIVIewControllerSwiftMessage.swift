@@ -38,7 +38,7 @@ extension UIViewController {
 
 }
 
-func show(title: String? = nil, sub: String?, type: Theme = .warning, layout: MessageView.Layout = .statusLine) {
+@MainActor func show(title: String? = nil, sub: String?, type: Theme = .warning, layout: MessageView.Layout = .statusLine) {
     // Instantiate a message view from the provided card view layout. SwiftMessages searches for nib
     // files in the main bundle first, so you can easily copy them into your project and make changes.
     let view = MessageView.viewFromNib(layout: layout)

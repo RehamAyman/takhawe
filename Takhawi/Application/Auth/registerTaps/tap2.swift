@@ -10,8 +10,9 @@ import SwiftUI
 struct tap2: View {
     
     
-    @State var email : String = ""
-    @State var confirmPassword : String = ""
+    
+    @Binding var confirmPassword : String 
+    @Binding var password : String
     @State var checkTerms : Bool = true
     
     
@@ -24,7 +25,7 @@ struct tap2: View {
              //   .scaledToFit()
                 .frame(width: 120 , height: 120)
             
-            SecureInputView( "Enter New Password".localize , text: $email)
+            SecureInputView( "Enter New Password".localize , text: $password)
             SecureInputView( "Confirm Password".localize , text: $confirmPassword)
             
             
@@ -57,7 +58,7 @@ struct tap2: View {
 
 struct tap2_Previews: PreviewProvider {
     static var previews: some View {
-        tap2()
+        tap2(confirmPassword: Binding.constant("") , password: Binding.constant(""))
     }
 }
 

@@ -20,7 +20,7 @@ target 'Takhawi' do
   pod 'GooglePlaces'
   pod 'GooglePlacePicker'
   pod 'OTPFieldView', :git => 'https://github.com/AbdallaTarek/OTPFieldView.git'
-  pod 'CHIOTPField', '~> 0.1'
+ 
   pod 'EasyTipView', '~> 2.1'
   pod 'lottie-ios'
   pod 'ImageSlideshow', '~> 1.9.0'
@@ -36,6 +36,7 @@ target 'Takhawi' do
   pod 'EDCarousel'
   pod 'EMTNeumorphicView'
   pod 'JDStatusBarNotification'
+  pod 'AEOTPTextField'
   pod 'FontBlaster', :git => 'https://github.com/ArtSabintsev/FontBlaster.git', :branch => 'swift5.0'
   
   

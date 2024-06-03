@@ -21,10 +21,19 @@ class registerTapsVC: BaseVC {
     
     
 //MARK: - Properties -
+   
     
-   lazy var swiftUIView = UIHostingController(rootView: registerTabs{
+    var phone : String = "" 
+    
+    lazy var swiftUIView = UIHostingController(rootView: registerTabs(phone : phone  ) {name,email,password,phone ,gender   in
         print("here i catch next button  well 🥳")
         let vc = SelectUserTypeVC()
+        vc.email = email
+        vc.fullname = name
+        vc.password = password
+        vc.phone = phone
+        vc.genderIndex = gender
+        
         self.navigationController?.pushViewController(vc, animated: true)
    } BackAction: {
        print("hello i catch back action well 🥳 ")

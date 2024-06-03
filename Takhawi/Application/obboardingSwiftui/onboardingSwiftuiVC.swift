@@ -17,7 +17,11 @@ class onboardingSwiftuiVC: BaseVC {
     
 //MARK: - Properties -
     
-    lazy var swiftUIView = UIHostingController(rootView: onboardingSwiftuiView() ) 
+    lazy var swiftUIView = UIHostingController(rootView: onboardingSwiftuiView {
+        let vc = phoneAndLocationVC()
+        self.push(vc)
+        
+    } )
                                                 
 //MARK: - Creation -
  

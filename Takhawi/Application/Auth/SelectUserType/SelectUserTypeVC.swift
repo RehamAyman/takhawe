@@ -19,6 +19,12 @@ class SelectUserTypeVC: BaseVC {
 
     // MARK: - Properties -
     var selectedType = "User"
+    var email : String = ""
+    var password : String = ""
+    var fullname : String = "" 
+    var phone : String = ""
+    var genderIndex : Int = 0
+    
 
     // MARK: - Lifecycle -
     override func viewDidLoad() {
@@ -90,8 +96,9 @@ class SelectUserTypeVC: BaseVC {
             let vc = driverAuthVC()
             self.push(vc)
         } else {
-            let vc =  homeVC()
-            self.push(vc)
+            self.signupUser(name: self.fullname, email: self.email , password: self.password, phone: self.phone, genderIndex: self.genderIndex)
+ 
+           
         }
      
 
@@ -106,6 +113,22 @@ class SelectUserTypeVC: BaseVC {
 
 // MARK: - Networking -
 extension SelectUserTypeVC {
+    
+    func signupUser (name : String , email : String , password : String  , phone : String , genderIndex: Int ) {
+           activityIndicatorr.startAnimating()
+           AuthRouter.signUp(name: name  , email: email , password: password , role: "USER", phone: phone, gender: genderIndex == 0 ? "Female" : "Male"  ).send {  (response: APIGenericResponse<LoginModelData>) in
+               if response.status == true {
+                   if let data = response.result {
+                       showPopTopAlert(title: "Done Successfully".localize , withMessage: response.message  ?? "" , success: true )
+                       UserDefaults.isLogin = true
+                       UserDefaults.user = data
+                       UserDefaults.accessToken = response.result?.accessToken
+                       let vc =  homeVC()
+                       self.push(vc)
+                   }
+               }
+           }
+    }
 
 }
 

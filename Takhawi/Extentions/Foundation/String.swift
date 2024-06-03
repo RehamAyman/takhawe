@@ -13,7 +13,7 @@ extension String {
     
     
     
-    func isValidPhoneNumber(pattern: String) -> Bool {
+    func isValidPhoneNumber() -> Bool {
 //        return self.range(of: pattern ,options: .regularExpression) != nil
         return self.count > 8
     }

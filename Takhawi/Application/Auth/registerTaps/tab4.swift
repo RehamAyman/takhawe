@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct tab4: View {
-    @State var fullName : String = ""
+    @Binding var fullName : String
+    
+    
+    
     var body: some View {
         VStack {
          Image ( "id-card 1")
@@ -35,6 +38,6 @@ struct tab4: View {
 
 struct tab4_Previews: PreviewProvider {
     static var previews: some View {
-        tab4()
+        tab4(fullName: Binding.constant(""))
     }
 }

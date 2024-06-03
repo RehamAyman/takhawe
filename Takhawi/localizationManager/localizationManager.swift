@@ -122,29 +122,22 @@ class LocalizationManager: NSObject {
     
     // configure startup language
     func setAppInnitLanguage() {
-        setLanguage(language: .English)
-        
-        
-//        if let selectedLanguage = getLanguage() {
-//            setLanguage(language: selectedLanguage)
-//            
-//            
-//            
-//            
-//            
-//        } else {
-            // no language was selected
+
+        if let selectedLanguage = getLanguage() {
+            setLanguage(language: selectedLanguage)
+            
+        } else {
+          //   no language was selected
             
             
-//            
-//            let languageCode = Locale.preferredLanguages.first
-//            if let code = languageCode, let language = isLanguageAvailable(code) {
-//                setLanguage(language: language)
-//            } else {
-//                // default fall back
-//                setLanguage(language: .English)
-//            }
-       // }
+            let languageCode = Locale.preferredLanguages.first
+            if let code = languageCode, let language = isLanguageAvailable(code) {
+                setLanguage(language: language)
+            } else {
+                // default fall back
+                setLanguage(language: .English)
+            }
+        }
         resetApp()
     }
 }

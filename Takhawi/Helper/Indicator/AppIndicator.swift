@@ -33,7 +33,7 @@ class AppIndicator {
         self.indicatorView.backgroundColor = .clear
         self.indicatorImageView.contentMode = .scaleAspectFit
         if isGif {
-            self.indicatorImageView.image = UIImage.gifImageWithName("indicatorGifImage")
+            self.indicatorImageView.image = UIImage.gifImageWithName("9t8knRBCgn")
         } else {
             self.indicatorImageView.image = UIImage(named: "indicatorImage")
         }

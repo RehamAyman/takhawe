@@ -71,7 +71,7 @@ extension UserDefaults {
     static var themeStyle: Themes.Style
 
     @ModelsDefault(key: Keys.user.rawValue, defualtValue: nil)
-    static var user: UserModel?
+    static var user: LoginModelData?
 
 //    @ModelsDefault(key: Keys.userCountry.rawValue, defualtValue: nil)
 //    static var userCountry: Country?

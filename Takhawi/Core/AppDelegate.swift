@@ -32,16 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSPlacesClient.provideAPIKey("AIzaSyA7nhBa7YZtIb6KoG47O0_y2PwxYfsHiBs")
         self.location?.requestAlwaysAuthorization()
         self.location?.requestWhenInUseAuthorization()
-
         AppDelegate.window?.tintColor = UIColor(named: "MainColor")
-        
-        for family in UIFont.familyNames.sorted() {
-            let names = UIFont.fontNames(forFamilyName: family)
-            print("Family: \(family) Font names: \(names)")
-        }
-    
-      
-        
         
         
   // check here  if authenticated User go to home else go to auth cycle

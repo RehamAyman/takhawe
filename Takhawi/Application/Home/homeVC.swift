@@ -22,6 +22,7 @@ class homeVC: BaseVC, sendDataBackDelegate{
     
 //MARK: - IBOutlets -
     
+    @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var destTextfield: UITextField!
     @IBOutlet weak var CContainerSegment: UIView!
     @IBOutlet weak var secCalendar: UIButton!
@@ -102,6 +103,7 @@ class homeVC: BaseVC, sendDataBackDelegate{
         self.setUpGoogleMapView()
         self.setTodayDateINformate()
         self.initialSideMenu()
+        self.userName.text = UserDefaults.user?.user?.name ?? "User"
         home = self.containerView.transform
         tableView.delegate = self
         tableView.dataSource = self

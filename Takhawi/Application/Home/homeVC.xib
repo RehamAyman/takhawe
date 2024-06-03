@@ -36,6 +36,7 @@
                 <outlet property="sideMenuContainer" destination="GN7-yJ-Lwa" id="wsr-Tw-hjI"/>
                 <outlet property="sideMenuWidth" destination="QRV-qL-Zl7" id="2dC-Oq-6mj"/>
                 <outlet property="tableView" destination="d2n-zT-x41" id="inF-8f-8sm"/>
+                <outlet property="userName" destination="lXN-f8-4v0" id="WnJ-xH-HmX"/>
                 <outlet property="userimageOutlet" destination="PvL-J3-rq8" id="psM-Bl-eHl"/>
                 <outlet property="view" destination="swR-fg-SGS" id="TzP-7h-Ji2"/>
                 <outlet property="viewHeight" destination="Hh6-wh-1kx" id="luB-f4-bvl"/>
@@ -368,9 +369,9 @@
                                 <action selector="sideMenuAction:" destination="-1" eventType="touchUpInside" id="FNG-fl-lsp"/>
                             </connections>
                         </button>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="PvL-J3-rq8">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="PvL-J3-rq8">
                             <rect key="frame" x="333" y="70" width="40" height="40"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="RZa-ng-YI9"/>
                                 <constraint firstAttribute="width" constant="40" id="ZrO-MB-x4m"/>
@@ -384,7 +385,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Q3i-Fj-QBb">
                             <rect key="frame" x="278" y="66" width="45" height="48"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hala," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8AZ-9C-ibo">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hala," textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8AZ-9C-ibo">
                                     <rect key="frame" x="0.0" y="0.0" width="45" height="24"/>
                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                     <color key="textColor" name="MainColor"/>
@@ -546,12 +547,12 @@
     <resources>
         <image name="Group 1000002907" width="70" height="70"/>
         <image name="Group 25" width="41" height="40"/>
-        <image name="Logo" width="171" height="170.66667175292969"/>
         <image name="Search" width="17.333333969116211" height="17.666666030883789"/>
         <image name="Vector" width="13.666666984558105" height="16"/>
         <image name="Vector 1" width="13.666666984558105" height="16"/>
         <image name="calendar" width="20" height="20"/>
         <image name="focus 1" width="16" height="16"/>
+        <image name="logo" width="698.66668701171875" height="693"/>
         <image name="menu 1" width="32" height="32"/>
         <image name="menu 2" width="48" height="48.333332061767578"/>
         <namedColor name="MainColor">

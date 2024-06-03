@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct tab3: View {
-    @State private var selected = 0
-    @State private var currentSegment = 0
+    
+    @Binding var index : Int
  
     
     
     var body: some View {
         VStack {
-         //   CustomSegmentedControl(selectedIndex: $selected)
-            CustomSegmentedPickerView()
+      
+            CustomSegmentedPickerView(currentIndex: $index)
                 .padding(.top)
             
             
@@ -51,7 +51,7 @@ struct tab3: View {
 
 struct tab3_Previews: PreviewProvider {
     static var previews: some View {
-        tab3()
+        tab3(index: Binding.constant(0))
     }
 }
 

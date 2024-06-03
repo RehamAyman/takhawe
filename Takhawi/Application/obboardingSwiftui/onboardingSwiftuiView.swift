@@ -19,11 +19,12 @@ struct onboardingSwiftuiView : View {
   @State var isAnimating: Bool = false
   @State var imageOffset: CGSize = .zero
   @State private var indicatorOpacity: Double = 1.0
-  @State private var textTitle: String = "Whenever you go, You will find a friend"
+    @State private var textTitle: String = "Whenever you go, You will find a friend".localize
   @State var tabSelection : Int = 0
   @State private var progress: CGFloat = 0.25
   @State var doAction : Bool = false
-    
+    var GotoPhoneAction: (() -> Void)?
+    @State var langIcon : String = "Frame 1000003388"
     
 @GestureState var offset : CGFloat = 0
     
@@ -45,9 +46,23 @@ struct onboardingSwiftuiView : View {
                   .resizable()
                   .frame(width: 45 , height: 40)
               Spacer()
-              Image ("Frame 1000003388")
+              Image (langIcon)
                   .resizable()
                   .frame(width: 80 , height: 50)
+                  .onTapGesture {
+                      print("change language ")
+                      
+                      if LocalizationManager.shared.getLanguage() == .Arabic {
+                          LocalizationManager.shared.setLanguage(language: .English)
+                          self.langIcon = "Frame 1000003388"
+                      } else {
+                          LocalizationManager.shared.setLanguage(language: .Arabic)
+                         
+                          self.langIcon = "Frame 1000003387"
+                      }
+                      
+                    
+                  }
           }
           .padding(.horizontal)
           
@@ -59,6 +74,7 @@ struct onboardingSwiftuiView : View {
       
           
           SecSnapCarousel(index: $tabSelection  , doAction: $doAction, imgOffset: $imageOffset, items: OnboardingModel.cards, content: { id  in
+              
               firstOnboardingView(imageOffset: $imageOffset, isAnimating: $isAnimating  , indicatorOpacity: $indicatorOpacity , textTitle: $textTitle , tabselection: $tabSelection)
                   .tag(0)
                   .id(0)
@@ -89,25 +105,21 @@ struct onboardingSwiftuiView : View {
               
         
                   VStack(spacing: 0) {
-                      Text( tabSelection == 0 ? textTitle : tabSelection == 1 ? "We connect you with someone who understands you" : tabSelection == 2 ? "Increase your income on your way" : "Start creating your Trip now" )
-                          .font(.system(size: 28))
-                          .fontWeight(.semibold)
+                      Text( tabSelection == 0 ? textTitle : tabSelection == 1 ? "We connect you with someone who understands you".localize : tabSelection == 2 ? "Increase your income on your way".localize : "Start creating your Trip now".localize )
                           .foregroundColor(.black)
                           .transition(.opacity)
                           .multilineTextAlignment(.center)
                           .id(textTitle)
                           .frame( height: 70 )
                           .padding()
+                          .font(.custom( LocalizationManager.shared.getLanguage() == .Arabic ?  AppFont.arMedium.rawValue :  AppFont.Bold.rawValue , size: 26))
                          
-                     
-                      
                       HStack ( spacing: 10) {
                           ForEach((0...3), id: \.self) { item in
                               if item == tabSelection {
                                   Capsule()
                                       .frame(width: 25 , height: 10 , alignment: .center)
                                       .foregroundStyle(Color( "MainColor"))
-                                    
                                   
                               } else {
                                   Circle()
@@ -117,21 +129,15 @@ struct onboardingSwiftuiView : View {
                           }
                           
                       }
-                    
-                    
-                      
-                     
+
                   }
                   .opacity(isAnimating ? 1 : 0)
                   .offset(y: isAnimating ? 0 : -40)
                   .animation(.easeOut(duration: 1), value: isAnimating)
                   
-               //   Spacer()
                   
                   // MARK: - FOOTER
-                 
-               
-                      
+    
                       ZStack {
                           CircularProgressView(progress: progress)
                                  .frame(width: 66, height: 66 )
@@ -140,11 +146,7 @@ struct onboardingSwiftuiView : View {
                               Image("Icon_arrow")
                                   .resizable()
                                   .frame(width: 50, height: 50, alignment: .center)
-                                 
-                                 
-                              
-                              
-                          }
+                    }
                           .foregroundColor(.gray)
                           .frame(width: 50 , height: 50, alignment: .center)
                           
@@ -167,12 +169,16 @@ struct onboardingSwiftuiView : View {
                                   self.tabSelection += 1
                                   isAnimating = true
                                  
+                              } else if self.tabSelection == 3  {
+                                  print("now we done intro go to add phone  ")
+                                 // playSound(sound: "chimeup", type: "mp3")
+                                  self.GotoPhoneAction?()
                               }
                           }
                          
                       }
                       .onChange(of: tabSelection ) { newValue in
-                                     print("Name changed to")
+                                  
                           if newValue == 0 {
                               self.progress = 1/4
                           } else if newValue == 1 {
@@ -180,7 +186,10 @@ struct onboardingSwiftuiView : View {
                           } else if newValue == 2 {
                               self.progress = 3/4
                           } else {
+                            //  playSound(sound: "chimeup", type: "mp3")
                               self.progress = 1
+                              
+                              
                             //  hapticFeedback.notificationOccurred(.success)
 //                              playSound(sound: "chimeup", type: "mp3")
                           }
@@ -188,20 +197,7 @@ struct onboardingSwiftuiView : View {
                          
                                  }
                   
-//                      .onTapGesture {
-//                          withAnimation(Animation.easeOut(duration: 0.4)) {
-//                              
-//                              if tabSelection == 0 {
-//                                 tabSelection = 1
-//                              } else if tabSelection == 1 {
-//                                  tabSelection = 2
-//                              } else if tabSelection == 2  {
-//                                  
-//                                 
-//                              }
-//     
-//                          }
-//                      }
+
                   .frame(width: 80 , height: 80 , alignment: .center)
                   .padding()
                   .opacity(isAnimating ? 1 : 0)
@@ -223,14 +219,24 @@ struct onboardingSwiftuiView : View {
       .environment(\.layoutDirection,  .leftToRight  )
       
     } //: ZSTACK
-   
+    .navigationBarTitle("")
+    .navigationBarHidden(true)
+
     .onAppear(perform: {
       isAnimating = true
+        
+        if LocalizationManager.shared.getLanguage() == .Arabic {
+            self.langIcon = "Frame 1000003387"
+        } else {
+            self.langIcon = "Frame 1000003388"
+        }
         UIScrollView.appearance().bounces = false
         
+        
     })
-    .preferredColorScheme(.dark)
+  //  .preferredColorScheme(.dark)
   }
+        
 }
 
 // MARK: - PREVIEW

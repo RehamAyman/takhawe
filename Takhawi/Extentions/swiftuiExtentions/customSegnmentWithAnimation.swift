@@ -13,7 +13,7 @@ import SwiftUI
 struct CustomSegmentedPickerView: View {
 
 
-    @State private var currentIndex: Int = 0
+    @Binding  var currentIndex: Int
 
     /// - Returns the width of a picker item
     private func itemWidth(availableWidth: CGFloat) -> CGFloat {

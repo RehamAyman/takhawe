@@ -13,9 +13,19 @@ import SwiftUI
 
 
 struct registerTabs: View {
-    @State private var tabSelection = 1
+    @State var tabSelection = 1
     @State var test : String = ""
-    var action: () -> Void
+    @State var imageData : Data?
+    @State var email : String = ""
+    @State var password : String = ""
+    @State var confirmPassword : String = ""
+    @State var genderIndex : Int = 0
+    @State var fullName : String = ""
+    
+    var phone : String = ""
+    
+    
+    var action: (_ name : String , _ email : String , _ password : String , _ phone : String , _ genderIndex : Int ) -> Void
     var BackAction: () -> Void
     var IsArabicLang : Bool {
         if LocalizationManager.shared.getLanguage() == .Arabic {
@@ -27,9 +37,8 @@ struct registerTabs: View {
     
     var body: some View {
        
-        
-        VStack  {
-
+        ScrollView( showsIndicators: false )  {
+            
                 HStack {
                     Image( "Group 25")
                         .resizable()
@@ -41,13 +50,13 @@ struct registerTabs: View {
                 }.padding(.leading)
                 .padding(.trailing)
                 .padding(.top)
+             
 
             Text ("Signup".localize)
                 
                 .font(.custom( IsArabicLang ? AppFont.arBold.rawValue : AppFont.Bold.rawValue, size: 33))
-               
-                 .foregroundColor(Color("MainColor"))
-                 .padding(8)
+                .foregroundColor(Color("MainColor"))
+                .padding(8)
 
             Group {
                 Text("Please ".localize)
@@ -59,7 +68,6 @@ struct registerTabs: View {
                 Text("for your new account".localize)
                     .font(.custom(IsArabicLang ? AppFont.arRegular.rawValue : AppFont.Regular.rawValue , size: 18))
                     
-                       
                 }
                 
                 .fixedSize(horizontal: false, vertical: true)
@@ -69,16 +77,16 @@ struct registerTabs: View {
                 .padding(.horizontal)
                 TabView (selection: $tabSelection) {
                     
-                    tap1()
+                    tap1(email: $email)
                        
                         .tag(1)
-                    tap2()
+                    tap2( confirmPassword:  $confirmPassword , password: $password )
                        
                         .tag(2)
-                    tab3()
+                    tab3(index: $genderIndex)
                         
                         .tag(3)
-                    tab4()
+                    tab4(fullName: $fullName )
                       
                         .tag(4)
                     
@@ -86,8 +94,15 @@ struct registerTabs: View {
                 } .tabViewStyle(.page(indexDisplayMode: .never))
                 .padding(.leading , 25 )
                 .padding(.trailing , 25 )
-               
-            //    .frame(height: UIScreen.main.bounds.size.height * 0.5)
+                .onChange(of: tabSelection) { newtabSelection in
+                    
+                    self.userSignUpValidation(newTab: newtabSelection )
+                }
+            
+            
+            
+            
+             .frame(height: UIScreen.main.bounds.size.height * 0.45)
                
             
             HStack ( spacing: 10) {
@@ -104,8 +119,23 @@ struct registerTabs: View {
             
             Button {
                
-                if tabSelection == 4 { // push the next swift screen :)
-                    self.action()
+                if tabSelection == 4 {
+                    // validation + end point
+                   
+                    
+                  
+                        if self.fullName == "" {
+                            showPopTopAlert(title: "Error!".localize  , withMessage: "Please add your fullname first!".localize , success: false )
+                        } else {
+                            // signup request
+                            self.sighUp(name: self.fullName, email: self.email, password: self.password, gender: self.genderIndex, phone: self.phone)
+                        }
+                        
+                    
+                    
+                    
+                 
+                   
                 } else {
                     
                     
@@ -154,22 +184,13 @@ struct registerTabs: View {
         .frame( maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
         .background(Color("BackGroundColor"))
         //.ignoresSafeArea(.keyboard, edges: .bottom)
-        
+     
           //  force app to be left just for now
-    //    .environment(\.layoutDirection,   .leftToRight  )
-        .ignoresSafeArea(.keyboard, edges: .bottom)
+        .environment(\.layoutDirection,   .leftToRight  )
+      //  .ignoresSafeArea(.keyboard, edges: .bottom)
            
         
     }
 }
 
-struct registerTabs_Previews: PreviewProvider {
-    static var previews: some View {
-        registerTabs {
-            
-        } BackAction: {
-            
-        }
-    }
-}
 

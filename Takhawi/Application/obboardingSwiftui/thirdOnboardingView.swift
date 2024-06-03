@@ -24,61 +24,84 @@ struct thirdOnboardingView: View {
               ZStack {
                   Image ( "Group 2 9")
                       .resizable()
-                    
                       .blur(radius: isAnimating ? 0 : 10)
                       .opacity(isAnimating ? 1 : 0)
                       .scaleEffect(isAnimating ? 1 : 0.5)
                       .animation(.easeOut(duration: 1), value: isAnimating)
                       .offset(x: imageOffset.width * -1)
                       .frame(width: 250 , height: 300)
-                      .rotationEffect(.degrees(10))
+                      //.rotationEffect(.degrees(10))
                       .padding(.leading , 70)
 
-                  
-                  
-                  
-                  
-                  ZStack (alignment: .leading){
-                    
-                      Image("iPhone 2")
-                          .resizable()
-                          .scaledToFit()
-                          .padding()
-                          .shadow(radius: 20)
-                          .opacity(isAnimating ? 1 : 0)
-                          .animation(.easeOut(duration: 0.5), value: isAnimating)
-                          .offset(x: imageOffset.width * 1.2, y: 0)     //imageOffset.height * 1.2  )
-                          .rotationEffect(.degrees(Double(imageOffset.width / 90 )))
-                      
-                          .animation(.easeOut(duration: 1), value: imageOffset)
-                      
-                      
-                      VStack {
-                          Image ("Group 1000003062")
+              
+                  ZStack( alignment: .bottomTrailing) {
+                      ZStack (alignment: .leading){
+                          
+                          
+                          
+                 
+                          
+                          Image("iPhone 2")
                               .resizable()
-                              .frame(width: 180 , height: 180)
-                              .padding(.leading , -70)
-                              .padding(.top , 60 )
-                          Spacer()
-                          Image ( "coins-cash-svgrepo-com 1")
-                              .resizable()
-                              .frame(width: 100 , height: 110)
-                              .padding(.leading , -60)
-                              .blur(radius: isAnimating ? 0 : 10)
+                              .scaledToFit()
+                              .padding()
+                              .shadow(radius: 20)
                               .opacity(isAnimating ? 1 : 0)
-                              .scaleEffect(isAnimating ? 1 : 0.5)
-                              .animation(.easeOut(duration: 1), value: isAnimating)
-                              .offset(x: imageOffset.width * -1)
+                              .animation(.easeOut(duration: 0.5), value: isAnimating)
+                              .offset(x: tabselection == 2 ?  imageOffset.width : 0   , y: tabselection == 2 ? -imageOffset.width : 0  )
+                              .animation(.easeOut(duration: 1), value: imageOffset)
+                          
+
+                          
+                          
+                          VStack {
+                              Image ("Group 1000003062")
+                                  .resizable()
+                                  .frame(width: 180 , height: 180)
+                                  .padding(.leading , -70)
+                                  .padding(.top , 60 )
+                              Spacer()
+                              HStack {
+                                  Image ( "coins-cash-svgrepo-com 1")
+                                      .resizable()
+                                      .frame(width: 100 , height: 110)
+                                      .blur(radius: isAnimating ? 0 : 10)
+                                      .opacity(isAnimating ? 1 : 0)
+                                      .scaleEffect(isAnimating ? 1 : 0.5)
+                                      .animation(.easeOut(duration: 1), value: isAnimating)
+                                     // .offset(x: imageOffset.width * -1)
+                                      .padding(.leading , -70)
+                                  
+                              }
+                              
+                          }
+                          
                           
                           
                       }
-                          
+                    
+                      
+                      // additional image
+                      Image ( LocalizationManager.shared.getLanguage() == .Arabic ?  "onar" : "onen" )
+                          .resizable()
+                          .scaledToFit()
+                          .frame(width: 80 , height: 60 )
+                          .blur(radius: isAnimating ? 0 : 10)
+                          .opacity(isAnimating ? 1 : 0)
+                          .scaleEffect(isAnimating ? 1 : 0.5)
+                          .animation(.easeOut(duration: 1), value: isAnimating)
+                       //   .offset(x: imageOffset.width * -1)
+                          .padding(.trailing , -60)
+                      
+                      
+                      
                   }
-              } //: CENTER
-              //
-              
-              
+                  
+                  
+              }
         
+           
+            
         
         
         

@@ -5,6 +5,7 @@
 //
 
 import UIKit
+import Lottie
 
 // MARK: - Alert Action Types -
 private enum AlertActions {
@@ -90,29 +91,66 @@ private func createAlert(action: AlertActions, completion: @escaping(() -> Void)
     actionSheet.view.addSubview(view)
 
     // MARK: - Image Design -
-    let imageView = UIImageView()
-    imageView.image = UIImage(named: action.imageName)
-    imageView.tintColor = .white
-    imageView.contentMode = .scaleAspectFit
-    imageView.translatesAutoresizingMaskIntoConstraints = false
-    view.addSubview(imageView)
-    imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-    imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 10).isActive = true
-    imageView.widthAnchor.constraint(equalToConstant: 45).isActive = true
-    imageView.heightAnchor.constraint(equalToConstant: 45).isActive = true
+    //OIuR07TvQK
+    
+    if action == .internetConnection {
+         var  lottieView: LottieAnimationView?
+        lottieView = .init(name:  "OIuR07TvQK")
+        lottieView?.translatesAutoresizingMaskIntoConstraints = false
+        
+        if let lotti = lottieView {
+            view.addSubview(lotti)
+            lotti.loopMode = .loop
+            lotti.contentMode = .scaleAspectFit
+            lotti.play()
+            lotti.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+            lotti.topAnchor.constraint(equalTo: view.topAnchor, constant: 10).isActive = true
+            lotti.widthAnchor.constraint(equalToConstant: 45).isActive = true
+            lotti.heightAnchor.constraint(equalToConstant: 45).isActive = true
+            // MARK: - Message Body -
+            let title = UILabel()
+            title.textAlignment = .center
+            title.numberOfLines = 0
+            title.text = action.message
+            title.textColor = .white
+            title.translatesAutoresizingMaskIntoConstraints = false
+            view.addSubview(title)
+            title.topAnchor.constraint(equalTo: lotti.bottomAnchor).isActive = true
+            title.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+            title.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+            title.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+            
+            
+        }
 
-    // MARK: - Message Body -
-    let title = UILabel()
-    title.textAlignment = .center
-    title.numberOfLines = 0
-    title.text = action.message
-    title.textColor = .white
-    title.translatesAutoresizingMaskIntoConstraints = false
-    view.addSubview(title)
-    title.topAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
-    title.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-    title.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-    title.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+          
+    } else {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: action.imageName)
+        imageView.tintColor = .white
+        imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(imageView)
+        imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 10).isActive = true
+        imageView.widthAnchor.constraint(equalToConstant: 45).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: 45).isActive = true
+        // MARK: - Message Body -
+        let title = UILabel()
+        title.textAlignment = .center
+        title.numberOfLines = 0
+        title.text = action.message
+        title.textColor = .white
+        title.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(title)
+        title.topAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
+        title.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        title.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        title.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+
+    }
+
+   
 
     // MARK: - present the action sheet -
     let window = UIApplication.shared.windows.first { $0.isKeyWindow }
@@ -125,21 +163,30 @@ class AppAlert {
 
     // MARK: - Alert Without Action -
     static func showErrorAlert(error: String?) {
-
-        createAlert(message: error ?? "Error".localized, type: .error)
+        activityIndicatorr.stopAnimating()
+        showPopTopAlert(title:  "Error!".localized, withMessage: error ?? ""  , success: false )
+       // createAlert(message: error ?? "Error".localized, type: .error)
     }
     static func showSuccessAlert(message: String?) {
-        createAlert(message: message ?? "Success".localized, type: .success)
+       // createAlert(message: message ?? "Success".localized, type: .success)
+        activityIndicatorr.stopAnimating()
+        showPopTopAlert(title:  "Success".localized, withMessage: message ??  "", success: true  )
+        
     }
     static func showSomethingError() {
-        createAlert(message: "Something worng please try again later.".localized, type: .error)
+        activityIndicatorr.stopAnimating()
+        showPopTopAlert(title:  "Error!".localized, withMessage: "Something worng please try again later.".localized, success: false )
+//        createAlert(message: "Something worng please try again later.".localized, type: .error)
     }
 
     static func showunaUthenticatedError(msg: String) {
-        createAlert(message: msg, type: .error)
+        activityIndicatorr.stopAnimating()
+        showPopTopAlert(title:  "Error!".localized, withMessage:  msg   , success: false )
+        //createAlert(message: msg, type: .error)
     }
     // MARK: - Alert With Action -
     static func showInternetConnectionErrorAlert(completion: @escaping(() -> Void)) {
+        activityIndicatorr.stopAnimating()
         createAlert(action: .internetConnection, completion: completion)
     }
     static func showDeleteAlert(complation: @escaping () -> Void) {
@@ -155,3 +202,4 @@ class AppAlert {
         createAlert(action: .refuse, completion: complation)
     }
 }
+
