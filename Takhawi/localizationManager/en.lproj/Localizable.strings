@@ -261,3 +261,4 @@
 "invalid Email" = "invalid Email" ; 
 "Please add your fullname first!" = "Please add your fullname first!" ; 
 "Done Successfully" = "Done Successfully" ;
+"Passwrord and ConfirmPassword must be the same1" = "Wrong Passwrord  or mismatch passwords" ;

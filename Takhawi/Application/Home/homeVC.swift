@@ -22,6 +22,8 @@ class homeVC: BaseVC, sendDataBackDelegate{
     
 //MARK: - IBOutlets -
     
+    @IBOutlet weak var sideMenuEmail: UILabel!
+    @IBOutlet weak var sideMenuUserName: UILabel!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var destTextfield: UITextField!
     @IBOutlet weak var CContainerSegment: UIView!
@@ -125,8 +127,7 @@ class homeVC: BaseVC, sendDataBackDelegate{
         self.CContainerSegment.layer.applySketchShadow(color: .black)
         destTextfield.placeholder = "Choose your destination".localize
         self.menuOutlet.setImage( UIImage(named: "menu 1")?.imageFlippedForRightToLeftLayoutDirection(), for: .normal)
-        
-        
+  
     }
     
     

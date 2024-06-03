@@ -34,6 +34,8 @@
                 <outlet property="segment" destination="xhk-dz-j19" id="YD0-UL-M7j"/>
                 <outlet property="segmentContainerView" destination="tT1-1b-Yy2" id="owP-B4-y79"/>
                 <outlet property="sideMenuContainer" destination="GN7-yJ-Lwa" id="wsr-Tw-hjI"/>
+                <outlet property="sideMenuEmail" destination="yuk-ah-0kH" id="GTs-1E-iGt"/>
+                <outlet property="sideMenuUserName" destination="wjQ-Mr-GqY" id="GUx-8C-oHO"/>
                 <outlet property="sideMenuWidth" destination="QRV-qL-Zl7" id="2dC-Oq-6mj"/>
                 <outlet property="tableView" destination="d2n-zT-x41" id="inF-8f-8sm"/>
                 <outlet property="userName" destination="lXN-f8-4v0" id="WnJ-xH-HmX"/>

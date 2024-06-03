@@ -258,3 +258,4 @@
 "invalid Email" = "بريد الكتروني خاطئ" ;
 "Please add your fullname first!" = "ادخل الاسم بالكامل اولا " ; 
 "Done Successfully" = "تم بنجاح" ;
+"Passwrord and ConfirmPassword must be the same1" = "صيغة كلمه المرور خاطئة او غير متطابقه " ;

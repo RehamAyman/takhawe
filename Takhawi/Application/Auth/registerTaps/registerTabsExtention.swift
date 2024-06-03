@@ -19,7 +19,7 @@ extension registerTabs {
             self.tabSelection = 1
         } else if newTab == 3  && self.validateStep2() == false   { // password + confirm password
             self.tabSelection = 2
-            showPopTopAlert(title: "Error!".localize  , withMessage: "Passwrord and ConfirmPassword must be the same".localize , success: false )
+            showPopTopAlert(title: "Error!".localize  , withMessage: "Passwrord and ConfirmPassword must be the same1".localize , success: false )
         } 
         
   

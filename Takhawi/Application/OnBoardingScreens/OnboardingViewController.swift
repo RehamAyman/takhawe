@@ -30,7 +30,18 @@ class OnboardingViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
         let storyboard = UIStoryboard(name: "Main", bundle: nil ) 
-        let vc =  onboardingSwiftuiVC()
+        if UserDefaults.user != nil && UserDefaults.isLogin == true{
+            let vc =  homeVC()
+            let nav = CustomNavigationController(rootViewController: vc)
+            AppHelper.changeWindowRoot(vc: nav)
+            
+        } else {
+            let vc =  onboardingSwiftuiVC()
+            let nav = CustomNavigationController(rootViewController: vc)
+            AppHelper.changeWindowRoot(vc: nav)
+        }
+       
+     
         
         
         //storyboard.instantiateViewController(withIdentifier: "DriverTabbar") as! DriverTabbar
@@ -38,8 +49,7 @@ class OnboardingViewController: UIViewController {
     //    let vc = phoneAndLocationVC()  // onboardingSwiftuiVC()   // driverAuthVC() //phoneAndLocationVC() //  onboardingSwiftuiVC()  // homeVC()      //  trackYourTripVC()  //     //  trackYourTripVC()
 //        self.navigationController?.pushViewController(vc, animated: true)
 
-        let nav = CustomNavigationController(rootViewController: vc)
-        AppHelper.changeWindowRoot(vc: nav)
+       
 
         slides = [
             OnboardingSlide(title: "Delicious Dishes", description: "Experience a variety of amazing dishes from different cultures around the world.", image: UIImage(named: "download")!),
