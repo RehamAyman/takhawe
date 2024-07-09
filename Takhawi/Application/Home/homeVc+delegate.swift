@@ -11,18 +11,35 @@ import GoogleMaps
 
 
 extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableViewDelegate , UITableViewDataSource {
+
+    
+    func continueToVipTripCycle () {
+        let vc = makeAtripAlertPopUpVC()
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.action = {
+            
+            self.createVipTrip()
+           
+        }
+        self.present(vc , animated: true)
+    }
     
     
-    
-    func finishPassing(location: String, lat: Double, lng: Double) {
-        
-        
-        self.tripHaveDestination = true
-        self.joinatripButtonHeight.constant = 40
-        self.joinTripDestButton.isHidden = false
-        self.frchooseDestinationViewHeight.constant = 0
-        self.searchView.isHidden = true
-        self.joinTripDestButton.setTitle(location, for: .normal)
+    func finishPassing(location: String, lat: Double, lng: Double ) {
+        self.destLat = lat
+        self.destLong = lng
+        if self.segment.selectedSegmentIndex == 0 { // join a trip
+            self.tripHaveDestination = true
+            self.joinatripButtonHeight.constant = 40
+            self.joinTripDestButton.isHidden = false
+            self.frchooseDestinationViewHeight.constant = 0
+            self.searchView.isHidden = true
+            self.joinTripDestButton.setTitle(location, for: .normal)
+        } else { // vip trip
+            self.secMydestinationOutlet.setTitle(location, for: .normal)
+        }
+       
       
     
         
@@ -261,11 +278,6 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
     
     
     func initialSegment () {
-      
-        
-        
-       
-        
         
 //        segment.setTitleTextAttributes([NSAttributedString.Key.font: font] ,
 //                                                for: .normal)
@@ -342,6 +354,42 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
     }
   
    
+    
+   //MARK: - GET YOUR DESTINATION FROM GOOGLE MAPS METHOD
+    
+    func getDestinationFromMaps ( vip : Bool) {
+       
+        
+        
+        let vc = homeSearchVC ()
+        
+        vc.modalTransitionStyle = .coverVertical
+        vc.modalPresentationStyle = .overCurrentContext
+        let pushVc = mapSearchVC()
+        pushVc.delegate = self
+        vc.selectAndDismiss = { string in
+            
+            if vip {
+                self.secMydestinationOutlet.setTitle(string, for: .normal)
+            } else {
+                self.tripHaveDestination = true
+                self.joinTripDestButton.isHidden = false
+                self.searchView.isHidden = true
+                self.joinTripDestButton.setTitle( string , for: .normal)
+                self.joinatripButtonHeight.constant = 40
+                self.frchooseDestinationViewHeight.constant = 0
+            }
+  
+        }
+        
+        
+        
+        present(vc , animated: true )
+        vc.onCommit  = {  [weak self] in
+           
+            self?.push(pushVc)
+        }
+    }
     
 //MARK: - hide side menu with animation  function
     

@@ -12,31 +12,40 @@ struct tab2DrivingLicenseView: View {
     @State var isShowingMediaPicker = false
     @State var showDocsPicker = false
     @State var urls: [URL] = []
+    var IsArabicLang : Bool {
+        if LocalizationManager.shared.getLanguage() == .Arabic {
+            return true
+        } else {
+            return false
+        }
+    }
     
     var body: some View {
         ScrollView {
             VStack ( alignment: .leading ) {
-                Text("Take a photo of the front and back of your driving license ")
-                Text ( "Make sure all information is readable, not blurry and that all corners of the document are visible. If you are uploading a PDF, insert all pages together in one file.")}
-            .font(.custom( AppFont.Regular.rawValue , size: 13))
+                Text("Take a photo of the front and back of your driving license ".localize)
+                Text ( "Make sure all information is readable, not blurry and that all corners of the document are visible. If you are uploading a PDF, insert all pages together in one file.".localize)}
+           
+            .font(.custom((IsArabicLang ? AppFont.arRegular : AppFont.Regular).rawValue , size: 13))
             .padding(10)
             .foregroundColor(Color.black.opacity(0.6))
             
-            
+            .environment(\.layoutDirection,  IsArabicLang ? .rightToLeft :  .leftToRight  )
             
             
             VStack {
                 Image( "driverLicense")
                     .resizable()
                     .frame(width: 85 , height:  55 )
-                Text ( "Please Upload Your Driving License")
-                    .font(.custom(   AppFont.Regular.rawValue , size: 13) )
+                Text ( "Please Upload Your Driving License".localize)
+                    .font(.custom((IsArabicLang ? AppFont.arRegular : AppFont.Regular).rawValue , size: 13))
+                    
                     .padding(5)
                 Button(action: { self.showingConfirmation.toggle() }, label: {
-                    Text("Upload")
+                    Text("Upload".localize)
                         .foregroundStyle(Color.white)
-                        .font(.custom(AppFont.Bold.rawValue , size: 13))
-                        .frame(width: 125 , height: 40)
+                        .font(.custom((IsArabicLang ? AppFont.arBold : AppFont.Bold).rawValue , size: 13))
+                                               .frame(width: 125 , height: 40)
                         .background(Color( "MainColor"))
                         .cornerRadius(20)
                 })
@@ -62,12 +71,12 @@ struct tab2DrivingLicenseView: View {
             
         }
         
-        .confirmationDialog("Change background", isPresented: $showingConfirmation) {
-            Button("Using your Photos") { isShowingMediaPicker.toggle() }
-            Button("Using your Files") { showDocsPicker.toggle() }
-            Button("Cancel", role: .cancel) { }
+        .confirmationDialog("Change", isPresented: $showingConfirmation) {
+            Button("Using your Photos".localize) { isShowingMediaPicker.toggle() }
+            Button("Using your Files".localize) { showDocsPicker.toggle() }
+            Button("Cancel".localize, role: .cancel) { }
         } message: {
-            Text("Choose a method")
+            Text("Choose a method".localize)
         }
         
         //MARK: - MEDIA PICKER

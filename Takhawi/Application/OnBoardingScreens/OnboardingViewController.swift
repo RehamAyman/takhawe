@@ -29,7 +29,7 @@ class OnboardingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
-        let storyboard = UIStoryboard(name: "Main", bundle: nil ) 
+       
         if UserDefaults.user != nil && UserDefaults.isLogin == true{
             let vc =  homeVC()
             let nav = CustomNavigationController(rootViewController: vc)

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -34,14 +34,18 @@
                             </constraints>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="decline 1"/>
+                            <connections>
+                                <action selector="dismissScreen:" destination="-1" eventType="touchUpInside" id="8xQ-Ev-5pn"/>
+                            </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URF-de-eOU">
-                            <rect key="frame" x="10" y="218.00000000000003" width="314.33333333333331" height="47.999999999999972"/>
-                            <string key="text">Are you sure 
-you want to log out?</string>
-                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you sure you want to log out?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URF-de-eOU">
+                            <rect key="frame" x="20" y="218.00000000000003" width="294.33333333333331" height="50.333333333333343"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Are you sure you want to log out?"/>
+                            </userDefinedRuntimeAttributes>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8yn-mU-i2t">
                             <rect key="frame" x="16" y="328.33333333333337" width="302.33333333333331" height="52.333333333333314"/>
@@ -49,22 +53,40 @@ you want to log out?</string>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8YI-B4-LiR">
                                     <rect key="frame" x="0.0" y="0.0" width="141.33333333333334" height="52.333333333333336"/>
                                     <color key="backgroundColor" name="MainColor"/>
-                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="Back to Home">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Back to Home"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="25"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="backToHome:" destination="-1" eventType="touchUpInside" id="aUu-Kk-V2Q"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tju-tD-2DI">
                                     <rect key="frame" x="161.33333333333331" y="0.0" width="141" height="52.333333333333336"/>
                                     <color key="backgroundColor" name="AppRed"/>
-                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="Yes">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Yes"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="25"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="confirm:" destination="-1" eventType="touchUpInside" id="aam-bi-rjb"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
@@ -78,11 +100,11 @@ you want to log out?</string>
                         <constraint firstItem="8yn-mU-i2t" firstAttribute="height" secondItem="ykt-kX-iG3" secondAttribute="height" multiplier="0.13" id="TFJ-Wd-2AP"/>
                         <constraint firstItem="Mgj-hb-nyN" firstAttribute="top" secondItem="Ezm-PR-JnF" secondAttribute="bottom" constant="15" id="V6E-jR-A6L"/>
                         <constraint firstAttribute="trailing" secondItem="Ezm-PR-JnF" secondAttribute="trailing" constant="20" id="WCr-id-fYc"/>
-                        <constraint firstItem="URF-de-eOU" firstAttribute="leading" secondItem="ykt-kX-iG3" secondAttribute="leading" constant="10" id="Yy4-iT-Ny1"/>
+                        <constraint firstItem="URF-de-eOU" firstAttribute="leading" secondItem="ykt-kX-iG3" secondAttribute="leading" constant="20" id="Yy4-iT-Ny1"/>
                         <constraint firstItem="Ezm-PR-JnF" firstAttribute="top" secondItem="ykt-kX-iG3" secondAttribute="top" constant="20" id="awD-Bm-CYx"/>
                         <constraint firstItem="8yn-mU-i2t" firstAttribute="leading" secondItem="ykt-kX-iG3" secondAttribute="leading" constant="16" id="gL1-NW-1ZI"/>
                         <constraint firstItem="URF-de-eOU" firstAttribute="top" secondItem="Mgj-hb-nyN" secondAttribute="bottom" constant="25" id="l0G-qj-6Sr"/>
-                        <constraint firstAttribute="trailing" secondItem="URF-de-eOU" secondAttribute="trailing" constant="10" id="osV-ga-LW5"/>
+                        <constraint firstAttribute="trailing" secondItem="URF-de-eOU" secondAttribute="trailing" constant="20" id="osV-ga-LW5"/>
                         <constraint firstItem="Mgj-hb-nyN" firstAttribute="width" secondItem="ykt-kX-iG3" secondAttribute="width" multiplier="0.717846" id="uGh-9M-eGg"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>

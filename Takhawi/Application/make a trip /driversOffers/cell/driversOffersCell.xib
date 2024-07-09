@@ -41,7 +41,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qz5-vv-2TT" customClass="CosmosView" customModule="Cosmos">
-                                <rect key="frame" x="88.000000000000014" y="43.666666666666671" width="141.33333333333337" height="25"/>
+                                <rect key="frame" x="90.000000000000014" y="43.666666666666671" width="141.33333333333337" height="25"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="dxl-dB-YtU"/>
@@ -240,7 +240,7 @@
                             <constraint firstItem="Evd-vE-2ht" firstAttribute="width" secondItem="nM6-Um-1cT" secondAttribute="width" multiplier="0.6" id="WsQ-VE-chy"/>
                             <constraint firstItem="Evd-vE-2ht" firstAttribute="top" secondItem="8W7-hM-BuC" secondAttribute="bottom" constant="8" id="aot-5J-9l3"/>
                             <constraint firstItem="TP6-Pe-uIs" firstAttribute="top" secondItem="4IY-Lk-Zup" secondAttribute="bottom" constant="5" id="grq-95-r6J"/>
-                            <constraint firstItem="Qz5-vv-2TT" firstAttribute="leading" secondItem="4IY-Lk-Zup" secondAttribute="trailing" constant="8" id="i0o-RK-bFs"/>
+                            <constraint firstItem="Qz5-vv-2TT" firstAttribute="leading" secondItem="4IY-Lk-Zup" secondAttribute="trailing" constant="10" id="i0o-RK-bFs"/>
                             <constraint firstItem="f40-03-93J" firstAttribute="top" secondItem="Evd-vE-2ht" secondAttribute="bottom" constant="12" id="woD-0E-5qA"/>
                             <constraint firstItem="4IY-Lk-Zup" firstAttribute="top" secondItem="nM6-Um-1cT" secondAttribute="top" constant="20" id="y3m-u4-fe9"/>
                             <constraint firstItem="8eJ-fd-vxn" firstAttribute="leading" secondItem="4IY-Lk-Zup" secondAttribute="trailing" constant="8" id="yn1-iZ-1PX"/>
@@ -260,10 +260,25 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="airCondIcon" destination="FD3-9w-ZXo" id="nrg-u3-KeG"/>
+                <outlet property="babyIcon" destination="ZeG-Jw-qkL" id="bwx-oj-fK1"/>
+                <outlet property="distance" destination="H0P-ha-gCN" id="W2l-tX-Aqf"/>
                 <outlet property="driverName" destination="8eJ-fd-vxn" id="OmN-jc-qtt"/>
                 <outlet property="driverPhoto" destination="4IY-Lk-Zup" id="Ojg-EF-a29"/>
                 <outlet property="driverRate" destination="Qz5-vv-2TT" id="qHP-S2-tAy"/>
+                <outlet property="foodicon" destination="Ui7-go-VVh" id="Y5a-dT-ucR"/>
                 <outlet property="mainView" destination="nM6-Um-1cT" id="Dny-1Y-tjJ"/>
+                <outlet property="musicIcon" destination="mKu-Cq-ols" id="b3J-rc-Oy4"/>
+                <outlet property="price" destination="xiy-cs-fZe" id="vmk-bJ-NYp"/>
+                <outlet property="smokingIcon" destination="9RZ-vp-QWv" id="acb-YD-it1"/>
+                <outlet property="time" destination="pWT-ed-9Nl" id="1m8-W3-Dgl"/>
+                <outlet property="wifiIcon" destination="N4z-rU-kmN" id="Ppt-8w-Tmy"/>
+                <outletCollection property="featureIcons" destination="ZeG-Jw-qkL" collectionClass="NSMutableArray" id="KVs-Dr-iH6"/>
+                <outletCollection property="featureIcons" destination="FD3-9w-ZXo" collectionClass="NSMutableArray" id="jaT-t2-3rg"/>
+                <outletCollection property="featureIcons" destination="N4z-rU-kmN" collectionClass="NSMutableArray" id="2NU-sw-pF7"/>
+                <outletCollection property="featureIcons" destination="mKu-Cq-ols" collectionClass="NSMutableArray" id="uL7-YU-A8n"/>
+                <outletCollection property="featureIcons" destination="9RZ-vp-QWv" collectionClass="NSMutableArray" id="tMB-pR-enf"/>
+                <outletCollection property="featureIcons" destination="Ui7-go-VVh" collectionClass="NSMutableArray" id="l0n-rA-brp"/>
             </connections>
             <point key="canvasLocation" x="225.19083969465649" y="26.760563380281692"/>
         </tableViewCell>

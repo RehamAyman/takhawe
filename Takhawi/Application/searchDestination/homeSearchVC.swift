@@ -17,6 +17,7 @@ class homeSearchVC: BaseVC{
     
 //MARK: - IBOutlets -
     
+    @IBOutlet weak var googleTableView: UITableView!
     @IBOutlet weak var chooseFromMapsOutlet: UIButton!
     
     @IBOutlet weak var searchContainerView: UIView!
@@ -27,7 +28,7 @@ class homeSearchVC: BaseVC{
     
     
 //MARK: - Properties -
-   
+    var placesClient: GMSPlacesClient!
     var onCommit: (() -> Void)? = nil
     var selectedPlace : String = ""
     var selectAndDismiss : ((String) -> Void)?
@@ -37,8 +38,9 @@ class homeSearchVC: BaseVC{
         recentPlace(placeName: "Fakieh Aquarium" , city: "Jeddah")
     ]
         
-  
+    let results: [GMSAutocompletePrediction] = []
     
+    var fetcher: GMSAutocompleteFetcher?
     
 
     
@@ -46,11 +48,42 @@ class homeSearchVC: BaseVC{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureInitialDesign()
-       
+        placesClient = GMSPlacesClient.shared()
+        self.googleTableView.isHidden = true
+        self.googleTableView.isUserInteractionEnabled = false
     }
     
     
+
 //MARK: - Design Methods -
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+                placeAutoComplete()
+                return true
+            }
+        
+        
+        func placeAutoComplete() {
+           
+             let filter = GMSAutocompleteFilter()
+             filter.type = .city
+             placesClient.autocompleteQuery(searchTextField.text!, bounds: nil, filter: filter, callback: {(results, error) -> Void in
+                 if let error = error {
+                     print("Autocomplete error \(error)")
+                     return
+                 }
+                 if let results = results {
+                     for result in results {
+                         print("Result \(result.attributedPrimaryText)")
+                     }
+                 } else {
+                    print("no results ")
+                 }
+             })
+
+         }
+    
+    
     private func configureInitialDesign() {
         self.title = "".localized
 
@@ -69,7 +102,10 @@ class homeSearchVC: BaseVC{
     private func setUpTableView () {
         tableview.delegate = self
         tableview.dataSource = self
+        googleTableView.delegate = self
+        googleTableView.dataSource = self
         tableview.register(UINib(nibName:"RecentPlacesCell", bundle: nil), forCellReuseIdentifier: "RecentPlacesCell")
+        googleTableView.register(UINib(nibName:"RecentPlacesCell", bundle: nil), forCellReuseIdentifier: "RecentPlacesCell")
     }
     
 //MARK: - Logic Methods -

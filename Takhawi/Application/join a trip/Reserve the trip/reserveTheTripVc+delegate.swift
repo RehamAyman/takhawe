@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 extension ReserveTheTripVC : UITableViewDelegate , UITableViewDataSource {
     
@@ -67,9 +68,10 @@ extension ReserveTheTripVC : UITableViewDelegate , UITableViewDataSource {
         guard let cell = tableView.cellForRow(at: indexPath) as? reserveTheTripCell else {
             return
         }
+        let item = self.DummyPaymentMethods[indexPath.row]
         cell.checkMarkView.isHidden = false
-    //   
-    cell.checkMarkView.play()
+        cell.checkMarkView.play()
+        self.paymentMethod = item.id
     }
     
     
@@ -82,8 +84,35 @@ extension ReserveTheTripVC : UITableViewDelegate , UITableViewDataSource {
        }
         
     
+//MARK: - GET VIP TRIP DETAILS
+    
+    func getVipDetails () {
+        if let image =  self.offer?.driver?.avatar  {
+            self.driverImage.setImage(image: image)
+        }
+        self.driverName.text = offer?.driver?.name ?? ""
+        self.tripDate.text = offer?.createdAt?.convertFromIso()
+        self.from.text = self.locationDetails?.currentAddress
+        self.to.text = self.locationDetails?.destAddress
+        self.destance.text = self.getDestanceBetween()
+        self.seatPrice.text =  "\(self.offer?.price ?? 0.0 )" + "SAR".localize
+    }
+    
     
 
+//MARK: - GET DESTANCE METHOD
+    
+    
+    private func getDestanceBetween () -> String {
+        let coordinatesA = (latitude: self.locationDetails?.CurrentLat ?? 0.0 , longitude: self.locationDetails?.currentLng ?? 0.0)
+        let coordinatesB = (latitude: self.locationDetails?.desLat ?? 0.0  , longitude: self.locationDetails?.destLng ?? 0.0 )
+
+        let locationA = CLLocation(latitude: coordinatesA.latitude, longitude: coordinatesA.longitude)
+        let locationB = CLLocation(latitude: coordinatesB.latitude , longitude: coordinatesB.longitude)
+        let distanceInKM =  ( locationA.distance(from: locationB) / 100 ).rounded()
+        let string = String (distanceInKM ) + " " + "km"
+      return string
+    }
     
     
 }

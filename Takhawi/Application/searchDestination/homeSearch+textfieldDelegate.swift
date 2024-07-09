@@ -13,16 +13,17 @@ import GooglePlaces
 
 extension homeSearchVC : UITextFieldDelegate  , UITableViewDelegate , UITableViewDataSource   {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return recentPlaces.count
+        return tableView == self.googleTableView ? self.results.count : recentPlaces.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecentPlacesCell", for: indexPath) as! RecentPlacesCell
-        
-        cell.placeName.text = recentPlaces[indexPath.row].placeName
-        cell.city.text = "Jeddah"
-      
-     
+        if tableView ==  self.googleTableView  {
+            cell.placeName.text = results[indexPath.row].accessibilityLabel
+        } else {
+            cell.placeName.text = recentPlaces[indexPath.row].placeName
+            cell.city.text = "Jeddah"
+        }
         
         return cell
     }

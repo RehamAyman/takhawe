@@ -6,12 +6,13 @@
 //
 
 import UIKit
+import CoreLocation
 
 
 extension driverOffersVC : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if self.dummyOffers.count == 0 {
+        if self.offers.count == 0 {
             self.noOffersView.isHidden = false
             UIView.animate(withDuration: 0.5) {
                 self.animationView.play()
@@ -21,27 +22,38 @@ extension driverOffersVC : UITableViewDelegate , UITableViewDataSource {
             self.noOffersView.isHidden = true
             self.noOffersViewHeight.constant = 0
         }
-        return self.dummyOffers.count
+        return self.offers.count
     }
+    
+    
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "driversOffersCell", for: indexPath) as! driversOffersCell
-        let item = self.dummyOffers[indexPath.row]
-        
-        cell.driverName.text = item.driverName
-        cell.driverRate.rating = item.driverRate
-        cell.driverPhoto.image = UIImage(named: item.driverPhoto)
+        let item = self.offers[indexPath.row]
+        if let features = item.features {
+            cell.airCondIcon.image = features.contains("IR CONDITIONER") ?  UIImage(named: "") : UIImage(named: "")
+        }
+        cell.driverName.text = item.driver?.name
+        cell.price.text = String ( item.price ?? 0.0 )
+        cell.distance.text = self.getDestanceBetween()
+        cell.driverRate.rating = 4 // item.driverRate
+        if let driverImage = item.driver?.avatar {
+            cell.driverPhoto.setImage(image: driverImage )
+        }
+       
         cell.action = {
-            let vc = driverProfileVC()
+            let vc =  ReserveTheTripVC()
+            vc.viptrip = true
+            vc.offer = item
+            vc.locationDetails = self.locationDetails
             self.push(vc)
             
         }
+        
         cell.cancel = {
-         //   self.tableview.deleteRows(at: [IndexPath(row: indexPath.row, section: 0)], with: .left)
-            self.dummyOffers.remove(at: indexPath.row)
-            
+            self.offers.remove(at: indexPath.row)
             UIView.animate(withDuration: 0.5) {
-                
                 tableView.reloadData()
             }
         }
@@ -52,7 +64,16 @@ extension driverOffersVC : UITableViewDelegate , UITableViewDataSource {
         return UITableView.automaticDimension
     }
     
-    
+    private func getDestanceBetween () -> String {
+        let coordinatesA = (latitude: self.locationDetails?.CurrentLat ?? 0.0 , longitude: self.locationDetails?.currentLng ?? 0.0)
+        let coordinatesB = (latitude: self.locationDetails?.desLat ?? 0.0  , longitude: self.locationDetails?.destLng ?? 0.0 )
+
+        let locationA = CLLocation(latitude: coordinatesA.latitude, longitude: coordinatesA.longitude)
+        let locationB = CLLocation(latitude: coordinatesB.latitude , longitude: coordinatesB.longitude)
+        let distanceInKM =  ( locationA.distance(from: locationB) / 100 ).rounded()
+        let string = String (distanceInKM ) + " " + "km"
+      return string
+    }
     
     
 }

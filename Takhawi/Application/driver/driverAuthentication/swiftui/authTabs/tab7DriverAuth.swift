@@ -10,31 +10,40 @@ import SwiftUI
 struct tab7DriverAuth: View {
     @State var isShowingMediaPicker : Bool = false
     @State var urls : [URL] = []
+    var IsArabicLang : Bool {
+        if LocalizationManager.shared.getLanguage() == .Arabic {
+            return true
+        } else {
+            return false
+        }
+    }
     
     var body: some View {
         ScrollView ( showsIndicators: false )  {
             VStack ( alignment: .leading , spacing: 3) {
-                Text ( "1. Access the designated section and click on the upload button.")
-                Text ( "2. Take clear pictures of the car's front, back, left side, and right side.")
-                Text ( "3.  Select the image files and upload them using the provided prompt.")
-                Text ( "4. Review the uploaded images and save or submit to complete the process.")
+                Text ( "1. Access the designated section and click on the upload button.".localize)
+                Text ( "2. Take clear pictures of the car's front, back, left side, and right side.".localize)
+                Text ( "3.  Select the image files and upload them using the provided prompt.".localize)
+                Text ( "4. Review the uploaded images and save or submit to complete the process.".localize)
                 
             }
-            .font(.custom( AppFont.Regular.rawValue , size: 12))
+            .font(.custom((IsArabicLang ? AppFont.arRegular : AppFont.Regular).rawValue , size: 12))
             .padding(10)
             .foregroundColor(Color.black.opacity(0.6))
+            .environment(\.layoutDirection,  IsArabicLang ? .rightToLeft :  .leftToRight  )
             
             VStack {
                 Image( "car 1")
                     .resizable()
                     .frame(width: 80 , height:  80 )
-                Text ( "Please Upload 4 side photos of your vehicles ")
-                    .font(.custom(AppFont.Regular.rawValue , size: 12))
+                Text ( "Please Upload 4 side photos of your vehicles ".localize)
+                    .font(.custom((IsArabicLang ? AppFont.arRegular : AppFont.Regular).rawValue , size: 12))
+                  
                     .padding(5)
                 Button(action: { isShowingMediaPicker.toggle() }, label: {
-                    Text("Upload")
+                    Text("Upload".localize)
                         .foregroundStyle(Color.white)
-                        .font(.custom(AppFont.Bold.rawValue , size: 13))
+                        .font(.custom((IsArabicLang ? AppFont.arBold : AppFont.Bold).rawValue , size: 13))
                         .frame(width: 125 , height: 40)
                         .background(Color( "MainColor"))
                         .cornerRadius(20)

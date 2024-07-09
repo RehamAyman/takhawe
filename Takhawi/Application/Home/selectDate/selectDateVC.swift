@@ -28,7 +28,7 @@ class selectDateVC: BaseVC {
 //MARK: - Properties -
     lazy var swiftUIView = UIHostingController(rootView: WeeksTabView(weekStoreModel: self.weekStoreModel) )
     var change : ((String) -> Void)?
-    var makeAtripCalendar : ((String) -> Void)?
+    var makeAtripCalendar : ((String , Date) -> Void)?
     var comeFromMakeAtrip : Bool = false
     
 // MARK: - Lifecycle -
@@ -48,6 +48,7 @@ class selectDateVC: BaseVC {
         self.title = "".localized
         self.impedCalendarSwiftui()
         self.mainView.layer.addBasicShadow(cornerRadius: 35 )
+
         if comeFromMakeAtrip == true  {
             self.timeContainerHeight.constant = 60
             self.containerHeight.constant = 400
@@ -72,17 +73,15 @@ class selectDateVC: BaseVC {
 //MARK: - Actions -
     
     @IBAction func selectADate(_ sender: UIButton) {
-       
+    
         print(weekStoreModel.stringSelected)
-        
         self.change?(weekStoreModel.stringSelected)
         if comeFromMakeAtrip {
-            self.makeAtripCalendar?("\(weekStoreModel.stringSelected) ,\(self.timePicker.date.timeToString())")
+            self.makeAtripCalendar?("\(weekStoreModel.stringSelected) ,\(self.timePicker.date.timeToString())", weekStoreModel.selectedDate)
         }
         self.dismiss(animated: true )
         
-        
-        
+                
     }
     
     

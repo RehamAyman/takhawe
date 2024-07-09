@@ -36,24 +36,22 @@ struct tab1UploadIdView : View {
     var body: some View {
         ScrollView {
             VStack ( alignment: .leading ) {
-            Text("Congratulations for taking the first step in becoming a driver on the Takhawy platform.")
-            Text ( "Please Upload your front and back photo of your National ID, Make sure all information is readable, not blurry and that all corners of the document are visible. If you are uploading a PDF, insert all pages together in one file.")}
+                Text("Congratulations for taking the first step in becoming a driver on the Takhawy platform.".localize)
+                Text ( "Please Upload your front and back photo of your National ID, Make sure all information is readable, not blurry and that all corners of the document are visible. If you are uploading a PDF, insert all pages together in one file.".localize)}
                 .font(.custom((IsArabicLang ? AppFont.arRegular : AppFont.Regular).rawValue , size: 13))
                 .padding(10)
                 .foregroundColor(Color.black.opacity(0.6))
-            
-            
-            
+                .environment(\.layoutDirection,  IsArabicLang ? .rightToLeft :  .leftToRight  )
             
             VStack {
                Image( "Vector 8")
                     .resizable()
                     .frame(width: 70 , height:  50 )
-                Text ( "Please Upload Your ID ")
+                Text ( "Please Upload Your ID ".localize)
                     .font(.custom(  (IsArabicLang ? AppFont.arRegular : AppFont.Regular).rawValue , size: 13))
                     .padding(5)
                 Button(action: { self.showingConfirmation.toggle() }, label: {
-                    Text("Upload")
+                    Text("Upload".localize)
                         .foregroundStyle(Color.white)
                         .font(.custom(  (IsArabicLang ? AppFont.arBold : AppFont.Bold).rawValue , size: 13))
                         .frame(width: 125 , height: 40)
@@ -61,8 +59,6 @@ struct tab1UploadIdView : View {
                         .cornerRadius(20)
                 })
                  
-                
-                
             }.frame(height: 180)
                 .frame(maxWidth: .infinity)
                 .overlay(
@@ -71,33 +67,26 @@ struct tab1UploadIdView : View {
                 )
                 .padding(.horizontal , 25 )
                 .padding(.bottom , 5 )
-            
-            
-            
+                        
 //MARK: - docs LIST
           
             ForEach ( $urls , id: \.self) {   url  in
                 fileUploadedView(url: url, AllUrls: $urls)
             }
-            
-            
-      
-            
-            
-            FloatingTextField(numKeyboard: true, title: "Enter Your ID Number" , text:  $IDNumber  )
+
+            FloatingTextField(numKeyboard: true, title: "Enter Your ID Number".localize , text:  $IDNumber  )
                 .padding(.horizontal , 10)
             Spacer()
+            
         }
+
         
-        
-        
-        
-        .confirmationDialog("Change background", isPresented: $showingConfirmation) {
-            Button("Using your Photos") { isShowingMediaPicker.toggle() }
-            Button("Using your Files") { showDocsPicker.toggle() }
-            Button("Cancel", role: .cancel) { }
+        .confirmationDialog("Choose a method", isPresented: $showingConfirmation ) {
+            Button("Using your Photos".localize) { isShowingMediaPicker.toggle() }
+            Button("Using your Files".localize) { showDocsPicker.toggle() }
+            Button("Cancel".localize, role: .cancel) { }
         } message: {
-            Text("Choose a method")
+            Text("Choose a method".localize)
         }
         
         

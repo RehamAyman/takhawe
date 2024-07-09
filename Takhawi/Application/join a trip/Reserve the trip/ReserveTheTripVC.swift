@@ -14,19 +14,32 @@ class ReserveTheTripVC: BaseVC {
 //MARK: - IBOutlets -
     @IBOutlet weak var topBackView: UIView!
     
+    @IBOutlet weak var seatPrice: UILabel!
+    @IBOutlet weak var destance: UILabel!
+    @IBOutlet weak var to: UILabel!
+    @IBOutlet weak var from: UILabel!
+    @IBOutlet weak var driverName: UILabel!
     @IBOutlet weak var dicountCodeTextField: UITextField!
     @IBOutlet weak var tableviewHeight: NSLayoutConstraint!
     @IBOutlet weak var paymentMethodTable: UITableView!
     @IBOutlet weak var driverImage: UIImageView!
+    @IBOutlet weak var tripDate: UILabel!
+    @IBOutlet weak var codePrice: UILabel!
     
-//MARK: - Properties -
+    @IBOutlet weak var vatCost: UILabel!
+    //MARK: - Properties -
     var selectedItem : Int = 0 
-   
+    var viptrip : Bool = false 
+    var offer : offerResult?
+    var paymentMethod : paymentMethod = .cash
+    var locationDetails : offerLocation?
+    
+    
     let DummyPaymentMethods : [dummyPaymentMethods] = [
-        dummyPaymentMethods(icon:"Payment" , number: "**** **** **** 8970", expireIn: "Expires: 12/26", type: "visa", selected: false ) ,
-        dummyPaymentMethods(icon:"Payment" , number: "**** **** **** 8970", expireIn: "Expires: 12/26", type: "visa", selected: false ) ,
-        dummyPaymentMethods(icon:"" , number: "**** **** **** 8970", expireIn: "Expires: 12/26", type: "wallet", selected: false ) ,
-        dummyPaymentMethods(icon:"" , number: "**** **** **** 8970", expireIn: "Expires: 12/26", type: "cash", selected: false) 
+        dummyPaymentMethods(icon:"Payment" , number: "**** **** **** 8970", expireIn: "Expires: 12/26", type: "visa", selected: false , id : .cash) ,
+        dummyPaymentMethods(icon:"Payment" , number: "**** **** **** 8970", expireIn: "Expires: 12/26", type: "visa", selected: false , id: .card ) ,
+        dummyPaymentMethods(icon:"" , number: "**** **** **** 8970", expireIn: "Expires: 12/26", type: "wallet", selected: false , id: .wallet ) ,
+        dummyPaymentMethods(icon:"" , number: "**** **** **** 8970", expireIn: "Expires: 12/26", type: "cash", selected: false , id: .cash)
         
         
         
@@ -54,7 +67,16 @@ class ReserveTheTripVC: BaseVC {
         paymentMethodTable.register(UINib(nibName:"reserveTheTripCell", bundle: nil), forCellReuseIdentifier: "reserveTheTripCell")
         self.dicountCodeTextField.setLeftPaddingPoints(12)
         self.dicountCodeTextField.setRightPaddingPoints(12)
+        
+        if self.viptrip {
+            self.getVipDetails()
+        }
+        
+      
+       
     }
+    
+    
     
 //MARK: - Logic Methods -
     
@@ -63,16 +85,26 @@ class ReserveTheTripVC: BaseVC {
     
     @IBAction func confirmTrip(_ sender: UIButton) {
 
-            let vc = successBookViewVC()
-            vc.modalTransitionStyle = .crossDissolve
-            vc.modalPresentationStyle = .overCurrentContext
-        vc.action = {
-            let vc = trackYourTripVC()
-            self.push(vc)
-        }
-            self.present( vc , animated: true )
-            
         
+        if viptrip {
+            self.confirmOffer()
+        } else {
+            self.GotoNextStep()
+        }
+    }
+    
+    
+    
+    
+    func GotoNextStep () {
+        let vc = successBookViewVC()
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .overCurrentContext
+    vc.action = {
+        let vc = trackYourTripVC()
+        self.push(vc)
+    }
+        self.present( vc , animated: true )
     }
 }
 
@@ -80,6 +112,20 @@ class ReserveTheTripVC: BaseVC {
 //MARK: - Networking -
 extension ReserveTheTripVC {
     
+    
+    func confirmOffer ( ) {
+        print(self.paymentMethod)
+        print(self.paymentMethod.rawValue)
+        activityIndicatorr.startAnimating()
+        UserRouter.acceptOffer(id: offer?.id ?? 0 , paymentMethod: self.paymentMethod).send { [weak self ] (response: APIGlobalResponse) in
+            guard let self = self else { return }
+            if response.status == true {
+                self.GotoNextStep()
+            } else {
+               
+            }
+        }
+    }
 }
 
 //MARK: - Routes -

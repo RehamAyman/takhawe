@@ -33,3 +33,28 @@ func showPopTopAlert ( title : String ,withMessage : String , success : Bool) {
     
    
 }
+
+
+func showInfoTopAlert ( withMessage : String ) {
+    let image = UIImageView(image: UIImage(named: "sun 1"))
+   
+    NotificationPresenter.shared.displayLeftView(image)
+    NotificationPresenter.shared.updateDefaultStyle { style in
+        style.backgroundStyle.backgroundColor =    UIColor.lightGray
+        style.textStyle.textColor = .white
+        
+    
+    style.textStyle.font = UIFont(name: "HelveticaNeue-Medium", size: 15)
+        
+       // and many more options
+       return style
+    }
+    
+    NotificationPresenter.shared.present( withMessage )
+    DispatchQueue.main.asyncAfter(deadline: .now() + 1.8 ) {
+        NotificationPresenter.shared.dismiss(animated: true )
+    }
+    
+    
+   
+}

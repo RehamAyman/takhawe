@@ -24,8 +24,13 @@ extension homeVC : UICollectionViewDelegate , UICollectionViewDataSource , UICol
         cell.featureImage.addTapGesture {
             if cell.featureImage.tintColor == UIColor.lightGray  {
                 cell.featureImage.tintColor = UIColor(named: "MainColor")
+                self.selectedFeatures.append(item.name)
             } else {
+                
                 cell.featureImage.tintColor = UIColor.lightGray
+                if self.selectedFeatures.contains(item.name) {
+                    self.selectedFeatures.removeAll { $0 == item.name }
+                }
             }
         }
       

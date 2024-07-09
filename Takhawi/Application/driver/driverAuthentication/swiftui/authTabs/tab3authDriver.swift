@@ -12,32 +12,40 @@ struct tab3authDriver: View {
     @State var isShowingMediaPicker = false
     @State var showDocsPicker = false
     @State var urls: [URL] = []
-    
+    var IsArabicLang : Bool {
+        if LocalizationManager.shared.getLanguage() == .Arabic {
+            return true
+        } else {
+            return false
+        }
+    }
     
     
     var body: some View {
         ScrollView {
             VStack ( alignment: .leading ) {
          
-            Text ( "Make sure all information is readable, not blurry and that all corners of the document are visible. If you are uploading a PDF, insert all pages together in one file.")}
-                .font(.custom( AppFont.Regular.rawValue , size: 13))
+                Text ( "Make sure all information is readable, not blurry and that all corners of the document are visible. If you are uploading a PDF, insert all pages together in one file.".localize)}
+            .font(.custom((IsArabicLang ? AppFont.arRegular : AppFont.Regular).rawValue , size: 13))
+              
                 .padding(10)
                 .foregroundColor(Color.black.opacity(0.6))
-            
-            
+                .environment(\.layoutDirection,  IsArabicLang ? .rightToLeft :  .leftToRight  )
             
             
             VStack {
                Image( "Layer 3")
                     .resizable()
                     .frame(width: 70 , height:  60 )
-                Text ( "Please Upload Your Vehicle Registration")
-                    .font(.custom(AppFont.Regular.rawValue , size: 13))
+                Text ( "Please Upload Your Vehicle Registration".localize)
+                    .font(.custom((IsArabicLang ? AppFont.arRegular : AppFont.Regular).rawValue , size: 13))
+                   
                     .padding(5)
                 Button(action: { self.showingConfirmation.toggle() }, label: {
-                    Text("Upload")
+                    Text("Upload".localize)
                         .foregroundStyle(Color.white)
-                        .font(.custom(   AppFont.Bold.rawValue , size: 13))
+                        .font(.custom((IsArabicLang ? AppFont.arBold : AppFont.Bold).rawValue , size: 13))
+                        
                         .frame(width: 125 , height: 40)
                         .background(Color( "MainColor"))
                         .cornerRadius(20)
@@ -71,12 +79,12 @@ struct tab3authDriver: View {
         
         
         
-        .confirmationDialog("Change background", isPresented: $showingConfirmation) {
-            Button("Using your Photos") { isShowingMediaPicker.toggle() }
-            Button("Using your Files") { showDocsPicker.toggle() }
-            Button("Cancel", role: .cancel) { }
+        .confirmationDialog("", isPresented: $showingConfirmation) {
+            Button("Using your Photos".localize) { isShowingMediaPicker.toggle() }
+            Button("Using your Files".localize) { showDocsPicker.toggle() }
+            Button("Cancel".localize, role: .cancel) { }
         } message: {
-            Text("Choose a method")
+            Text("Choose a method".localize)
         }
         
         

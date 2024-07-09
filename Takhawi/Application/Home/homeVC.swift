@@ -38,7 +38,6 @@ class homeVC: BaseVC, sendDataBackDelegate{
     @IBOutlet weak var hotelIconOutlet: UIButton!
     @IBOutlet weak var joinTripDestButton: UIButton!
     @IBOutlet weak var containetStackView: UIStackView!
-//    @IBOutlet weak var tapView: UIView!
     @IBOutlet weak var containerView: UIView!
     
     @IBOutlet weak var chooseFeatureCollection: UICollectionView!
@@ -64,18 +63,20 @@ class homeVC: BaseVC, sendDataBackDelegate{
         case maketrip
     }
     var displayedTask = DispkayedTasks.jointrip
-    
+    var destLat : Double = 0.0
+    var destLong : Double = 0.0 
+    var selectedDate : Date = Date()
     
 //MARK: - Properties -
     
     var dummyActivty : [dummyActivity] = [
-        dummyActivity(icon: "Food", name: "Basketball") ,
-        dummyActivity(icon: "smoke", name: "Riding Horse") ,
-        dummyActivity(icon: "Vector 3", name: "Drawing") ,
-        dummyActivity(icon: "music 1", name: "Listen to music") ,
-        dummyActivity(icon: "AC", name: "Travelling")
+        dummyActivity(icon: "Food", name: "FOOD") ,
+        dummyActivity(icon: "smoke", name: "NO SMOKING") ,
+        dummyActivity(icon: "Vector 3", name: "WIFI") ,
+        dummyActivity(icon: "music 1", name: "MUSIC") ,
+        dummyActivity(icon: "AC", name: "AIR CONDITIONER")
     ]
-    
+    var selectedFeatures : [String] = []
     
     let locationManager = CLLocationManager()
     let screen = UIScreen.main.bounds
@@ -173,29 +174,32 @@ class homeVC: BaseVC, sendDataBackDelegate{
     
 //MARK: - Logic Methods -
  
+ 
     
 //MARK: - Actions -
     
     @IBAction func secMyLoactionAction(_ sender: UIButton) {
-        
+      print("current location action")
         
     }
     
-    @IBAction func secMyDestinationAction(_ sender: UIButton) {
+    
+    
    
-        
+    
+    @IBAction func secMyDestinationAction(_ sender: UIButton) {
+       print("destination location vip ")
+        self.getDestinationFromMaps(vip: true )
         
     }
     @IBAction func secCalendarAction(_ sender: UIButton) {
-        
-       
-        
-        
+   
         let vc = selectDateVC()
         vc.comeFromMakeAtrip =  true
         self.presentWithEffect(vc:  vc )
-        vc.makeAtripCalendar = {  [weak self] (value) in
+        vc.makeAtripCalendar = {  [weak self] (value , date ) in
             self?.secCalendar.setTitle( value , for: .normal)
+            self?.selectedDate = date
             self?.removePresentEffect()
         }
         vc.dismissAction = {
@@ -236,38 +240,15 @@ class homeVC: BaseVC, sendDataBackDelegate{
             
         } else {
            // check if the user select an destination or not then move to make a trip popup :)
-            
-            
-            
-            let vc = makeAtripAlertPopUpVC()
-            vc.modalTransitionStyle = .crossDissolve
-            vc.modalPresentationStyle = .overCurrentContext
-            vc.action = {
-                let vc1 = findingAdriverVC()
-                vc1.modalTransitionStyle = .coverVertical
-                vc1.modalPresentationStyle = .overCurrentContext
-                self.bottomView.isHidden = true
-                self.CContainerSegment.isHidden = true
+            if self.secMydestinationOutlet.titleLabel?.text == "Destination!".localized {
+                showInfoTopAlert(withMessage:  "you should select a destination first!.".localize )
+            } else {
+                print(self.selectedFeatures)
+                self.continueToVipTripCycle()
+               
                 
-                self.hotelIconOutlet.isHidden = true
-                self.present(vc1 , animated: true)
-                vc1.cancel = {
-                    self.hotelIconOutlet.isHidden = false
-                    self.bottomView.isHidden = false
-                    self.CContainerSegment.isHidden = false
-                }
-                vc1.didfindAdrivier = {
-                    self.hotelIconOutlet.isHidden = false
-                    let vc = driverOffersVC()
-                    self.bottomView.isHidden = false
-                    self.CContainerSegment.isHidden = false
-                    self.push(vc)
-                }
+              
             }
-            
-            
-            self.present(vc , animated: true)
-            
         }
     }
     
@@ -297,33 +278,8 @@ class homeVC: BaseVC, sendDataBackDelegate{
         
         // present search view
         if segment.selectedSegmentIndex == 0 {
-            let vc = homeSearchVC ()
             
-            vc.modalTransitionStyle = .coverVertical
-            vc.modalPresentationStyle = .overCurrentContext
-            let pushVc = mapSearchVC()
-            pushVc.delegate = self
-            vc.selectAndDismiss = { string in
-                self.tripHaveDestination = true
-                self.joinTripDestButton.isHidden = false
-                self.searchView.isHidden = true
-                self.joinTripDestButton.setTitle( string , for: .normal)
-              
-                
-                self.joinatripButtonHeight.constant = 40
-                
-                self.frchooseDestinationViewHeight.constant = 0
-                
-              
-            }
-            
-            
-            
-            present(vc , animated: true )
-            vc.onCommit  = {  [weak self] in
-               
-                self?.push(pushVc)
-            }
+            self.getDestinationFromMaps(vip: false )
         }
     }
     
@@ -371,6 +327,42 @@ class homeVC: BaseVC, sendDataBackDelegate{
 
 //MARK: - Networking -
 extension homeVC {
+    
+    func createVipTrip () {
+        activityIndicatorr.startAnimating()
+        let currentLat = self.locationManager.location?.coordinate.latitude ?? 0.0
+        let currentLng = self.locationManager.location?.coordinate.longitude ?? 0.0
+        UserRouter.createVipTrip(destinationLong: self.destLong, destinationLat: self.destLat, currentLat: currentLat , currentLong: currentLng , features: self.selectedFeatures , date: self.selectedDate.ISO8601Format()).send { [weak self] (response: APIGenericResponse<vipData>) in
+            guard let self = self else { return }
+            if response.status == true {
+                
+                let vc1 = findingAdriverVC()
+                vc1.modalTransitionStyle = .coverVertical
+                vc1.modalPresentationStyle = .overCurrentContext
+                vc1.tripId = response.result?.vIP_Trip?.trip_id ?? 0
+                self.bottomView.isHidden = true
+                self.CContainerSegment.isHidden = true
+                
+                self.hotelIconOutlet.isHidden = true
+                self.present(vc1 , animated: true)
+                vc1.cancel = {
+                    self.hotelIconOutlet.isHidden = false
+                    self.bottomView.isHidden = false
+                    self.CContainerSegment.isHidden = false
+                }
+                vc1.didfindAdrivier = { offers in
+                    self.hotelIconOutlet.isHidden = false
+                    let vc = driverOffersVC()
+                    vc.tripId = response.result?.vIP_Trip?.trip_id ?? 0
+                    vc.offers = offers
+                    vc.locationDetails = offerLocation(CurrentLat: currentLat  , currentLng: currentLng, desLat: self.destLat, destLng: self.destLong, currentAddress: self.secMyLocationOutlet.titleLabel?.text ?? ""  , destAddress: self.secMydestinationOutlet.titleLabel?.text ?? ""  )
+                    self.bottomView.isHidden = false
+                    self.CContainerSegment.isHidden = false
+                    self.push(vc)
+                }
+            }
+        }
+    }
     
 }
 

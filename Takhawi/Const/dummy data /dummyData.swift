@@ -24,6 +24,7 @@ struct dummyPaymentMethods {
     let expireIn : String 
     let type : String
     var selected : Bool 
+    let id : paymentMethod
 }
 
 
@@ -49,6 +50,7 @@ struct NotificationData {
 struct dummyActivity  {
     let icon : String
     let name : String
+  
 }
 
 
@@ -91,3 +93,15 @@ let dummyReportResons : [String] = [
 
 ]
 
+
+
+
+
+struct  offerLocation  {
+    let CurrentLat  : Double
+    let currentLng : Double
+    let desLat : Double
+    let destLng : Double
+    let currentAddress : String
+    let destAddress : String
+}

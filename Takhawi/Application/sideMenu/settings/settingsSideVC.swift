@@ -86,10 +86,10 @@ class settingsSideVC: BaseVC {
     //MARK: - Actions -
     
     @IBAction func logout(_ sender: UIButton) {
-        let vc = logoutpopVC()
+        let vc =    logoutpopVC()
         vc.modalTransitionStyle = .crossDissolve
         vc.modalPresentationStyle = .overCurrentContext
-        //self.present(vc, animated: true )
+        self.present(vc, animated: true )
     }
     
     

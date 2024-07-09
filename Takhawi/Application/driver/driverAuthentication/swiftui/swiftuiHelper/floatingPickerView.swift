@@ -11,6 +11,13 @@ struct floatingPickerView: View {
     var placeHolder : String
     @Binding var text : String
     @State var menuItems : [String] = [ "item1" , "item2" , "item3" , "item4"]
+    var IsArabicLang : Bool {
+        if LocalizationManager.shared.getLanguage() == .Arabic {
+            return true
+        } else {
+            return false
+        }
+    }
     
     
     var body: some View {
@@ -24,7 +31,7 @@ struct floatingPickerView: View {
                     }
                    
                 } label: {
-                    ZStack ( alignment: .trailing ) {
+                    ZStack ( alignment: IsArabicLang ? .leading : .trailing ) {
                         FloatingTextField(title: placeHolder , text: $text)
                     
                    Image ( "Vector 9")

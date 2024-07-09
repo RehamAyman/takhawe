@@ -103,7 +103,7 @@ struct driverAuthView: View {
         }
       //  .frame(maxWidth: .infinity , maxHeight: .infinity , alignment: .center)
         .background(Color ("BackGroundColor" ))
-        
+        .environment(\.layoutDirection,   .leftToRight  )
       
       
       

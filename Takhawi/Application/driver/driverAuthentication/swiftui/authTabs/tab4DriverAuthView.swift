@@ -13,24 +13,34 @@ struct tab4DriverAuthView: View {
     @State var isShowingMediaPicker : Bool = false
     @State var imageUrl : URL?
     @State var profileImage : UIImage?
+    var IsArabicLang : Bool {
+        if LocalizationManager.shared.getLanguage() == .Arabic {
+            return true
+        } else {
+            return false
+        }
+    }
     
     
     var body: some View {
         
         VStack {
             VStack ( alignment: .leading , spacing: 3) {
-                Text ( "Your profile photo helps people recognize you. Please note that once you submit your profile photo it cannot be changed.")
-                Text ( "1. Face the camera directly with your eyes and mouth clearly visible")
-                Text ( "2. Make sure the photo is well lit, free of glare, and in focus")
-                Text ( "3. No photos of a photo, filters, or alterations")
+                Text ( "Your profile photo helps people recognize you. Please note that once you submit your profile photo it cannot be changed.".localize)
+                Text ( "1. Face the camera directly with your eyes and mouth clearly visible".localize)
+                Text ( "2. Make sure the photo is well lit, free of glare, and in focus".localize)
+                Text ( "3. No photos of a photo, filters, or alterations".localize)
                 
             }
-            .font(.custom( AppFont.Regular.rawValue , size: 12))
+           
+            .font(.custom((IsArabicLang ? AppFont.arRegular : AppFont.Regular).rawValue , size: 12))
             .padding(10)
             .foregroundColor(Color.black.opacity(0.6))
+            .environment(\.layoutDirection,  IsArabicLang ? .rightToLeft :  .leftToRight  )
             
-            Text ( "Profile Picture")
-                .font(.custom( AppFont.Bold.rawValue , size: 20))
+            Text ( "Profile Picture".localize)
+                .font(.custom((IsArabicLang ? AppFont.arBold : AppFont.Bold).rawValue , size: 20))
+                
                 .foregroundStyle(Color( "MainColor"))
             
             if self.profileImage == nil {

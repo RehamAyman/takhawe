@@ -23,7 +23,6 @@ struct User : Codable {
     let bio : String?
     let national_id : String?
     let gender : String?
-    let location : String?
     let prefered_language : String?
     let is_verified : Bool?
     let is_blocked : Bool?
@@ -54,7 +53,6 @@ struct User : Codable {
         case bio = "bio"
         case national_id = "national_id"
         case gender = "gender"
-        case location = "location"
         case prefered_language = "prefered_language"
         case is_verified = "is_verified"
         case is_blocked = "is_blocked"

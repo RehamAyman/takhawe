@@ -18,13 +18,16 @@ class findingAdriverVC: BaseVC {
     
 //MARK: - Properties -
     var cancel : (() -> Void)?
-    var  didfindAdrivier : (() -> Void)?
+    var  didfindAdrivier : (([offerResult]) -> Void)?
     var userCancel : Bool = false
+    var tripId : Int = 0 
+    var count : Int = 0
     
 // MARK: - Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureInitialDesign()
+        self.getAllVipTrips()
     }
     
     
@@ -32,17 +35,11 @@ class findingAdriverVC: BaseVC {
     private func configureInitialDesign() {
         self.title = "".localized
         loadingView.contentMode = .scaleAspectFit
-  
         loadingView.loopMode = .loop
         loadingView.animationSpeed = 0.9
         loadingView.play()
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5 ) {
-            if self.userCancel == false {
-                self.didfindAdrivier?()
-                self.dismiss(animated: true )
-            }
-        }
+       
+
     }
     
 //MARK: - Logic Methods -
@@ -62,6 +59,26 @@ class findingAdriverVC: BaseVC {
 
 //MARK: - Networking -
 extension findingAdriverVC {
+    func getAllVipTrips () {
+      
+        UserRouter.getAllVipOffers(id: self.tripId).send { [weak self ] (response:APIGenericResponse<[offerResult]> ) in
+            guard let self = self else { return }
+            if response.result?.isEmpty == true {
+                
+                if self.count < 20 {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 60) {
+                        self.getAllVipTrips()
+                        self.count += 1
+                    }
+                }
+            } else {
+                guard let offers = response.result else { return}
+                self.didfindAdrivier?(offers)
+                    self.dismiss(animated: true )
+                }
+            
+        }
+    }
     
 }
 

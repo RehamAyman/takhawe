@@ -88,6 +88,7 @@ struct FloatingTextField: View {
                 }
         }
         .padding(15)
+        .environment(\.layoutDirection,  IsArabicLang ? .rightToLeft :  .leftToRight  )
     }
 }
 

@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.location?.requestWhenInUseAuthorization()
         AppDelegate.window?.tintColor = UIColor(named: "MainColor")
         
-        
+        print("🤠 userToken: \(UserDefaults.user?.accessToken ?? "-- no saved token --" )")
   // check here  if authenticated User go to home else go to auth cycle
         return true
     }

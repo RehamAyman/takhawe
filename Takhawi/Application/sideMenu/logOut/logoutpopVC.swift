@@ -16,9 +16,7 @@ class logoutpopVC: BaseVC {
     
     //MARK: - Properties -
     
-    
-    //MARK: - Creation -
-  
+
     
     // MARK: - Lifecycle -
     override func viewDidLoad() {
@@ -35,8 +33,33 @@ class logoutpopVC: BaseVC {
     
     //MARK: - Logic Methods -
     
+    @IBAction func dismissScreen(_ sender: UIButton) {
+        self.dismiss(animated: true)
+    }
+    @IBAction func backToHome(_ sender: UIButton) {
+       
+        if UserDefaults.user?.user?.accountType == .user {
+            let vc = homeVC()
+            let nav = CustomNavigationController(rootViewController: vc)
+            AppHelper.changeWindowRoot(vc: nav)
+        } else  if UserDefaults.user?.user?.accountType == .delegate   {
+            let vc = DriverHomeVC()
+            let nav = CustomNavigationController(rootViewController: vc)
+            AppHelper.changeWindowRoot(vc: nav)
+        }
+      
+    }
     
     //MARK: - Actions -
+    @IBAction func confirm(_ sender: UIButton) {
+        UserDefaults.isLogin = false
+        UserDefaults.user = nil
+        UserDefaults.accessToken = nil
+        let vc = phoneAndLocationVC()
+        let nav = CustomNavigationController(rootViewController: vc)
+        AppHelper.changeWindowRoot(vc: nav)
+       
+    }
     
 }
 

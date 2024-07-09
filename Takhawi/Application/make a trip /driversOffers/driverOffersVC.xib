@@ -75,6 +75,19 @@
                         <constraint firstAttribute="trailing" secondItem="QUt-4O-FYY" secondAttribute="trailing" id="u0M-FA-fW1"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xq4-Xs-MG5">
+                    <rect key="frame" x="343" y="76.666666666666671" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="lFS-tV-yfR"/>
+                        <constraint firstAttribute="height" constant="40" id="lpD-hH-Puf"/>
+                    </constraints>
+                    <color key="tintColor" name="MainColor"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="arrow.clockwise" catalog="system"/>
+                    <connections>
+                        <action selector="refresh:" destination="-1" eventType="touchUpInside" id="hRT-3W-c7P"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" name="BackGroundColor"/>
@@ -84,6 +97,8 @@
                 <constraint firstItem="MJQ-HC-mNA" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="A9u-gb-xdA"/>
                 <constraint firstAttribute="trailing" secondItem="310-Fk-1hc" secondAttribute="trailing" id="F27-93-4fl"/>
                 <constraint firstItem="tLQ-2Y-q0l" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="GwT-KH-wTH"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Xq4-Xs-MG5" secondAttribute="trailing" constant="10" id="I5O-j8-nUU"/>
+                <constraint firstItem="Xq4-Xs-MG5" firstAttribute="centerY" secondItem="EW9-kN-j3O" secondAttribute="centerY" id="I99-Ak-bu6"/>
                 <constraint firstItem="EW9-kN-j3O" firstAttribute="centerY" secondItem="tLQ-2Y-q0l" secondAttribute="centerY" id="Ptf-5b-M9Q"/>
                 <constraint firstItem="310-Fk-1hc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="SKs-BI-rsH"/>
                 <constraint firstItem="tLQ-2Y-q0l" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="jCd-LE-SLV"/>
@@ -96,8 +111,9 @@
     </objects>
     <resources>
         <image name="Group 25" width="41" height="40"/>
+        <image name="arrow.clockwise" catalog="system" width="113" height="128"/>
         <namedColor name="BackGroundColor">
-            <color red="0.95300000905990601" green="0.95300000905990601" blue="0.97299998998641968" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.95294117647058818" green="0.95294117647058818" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="MainColor">
             <color red="0.35294117647058826" green="0.25882352941176473" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

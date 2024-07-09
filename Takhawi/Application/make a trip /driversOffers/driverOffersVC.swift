@@ -20,12 +20,11 @@ class driverOffersVC: BaseVC {
     @IBOutlet weak var tableview: UITableView!
     
 //MARK: - Properties -
-    var dummyOffers : [dummyOffer] = [
-        dummyOffer(driverPhoto: "3", driverRate: 3, driverName: "abdullah waleed")
-        
-    ]
+ 
     
-    
+    var offers : [offerResult] = []
+    var tripId : Int = 0
+    var locationDetails : offerLocation? 
 
     
 // MARK: - Lifecycle -
@@ -34,6 +33,9 @@ class driverOffersVC: BaseVC {
         self.configureInitialDesign()
     }
     
+    @IBAction func refresh(_ sender: UIButton) {
+        self.refreshOffer( sender : sender)
+    }
     
 //MARK: - Design Methods -
     private func configureInitialDesign() {
@@ -49,12 +51,12 @@ class driverOffersVC: BaseVC {
         animationView.animationSpeed = 0.4
        
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3 ) {
-            self.dummyOffers.append(
-            dummyOffer(driverPhoto: "5", driverRate: 4, driverName: "hassan ahmed ali")
-            )
-            self.tableview.reloadData()
-        }
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 3 ) {
+//            self.dummyOffers.append(
+//            dummyOffer(driverPhoto: "5", driverRate: 4, driverName: "hassan ahmed ali")
+//            )
+//            self.tableview.reloadData()
+//        }
     }
     
 //MARK: - Logic Methods -
@@ -67,6 +69,18 @@ class driverOffersVC: BaseVC {
 
 //MARK: - Networking -
 extension driverOffersVC {
+    
+    func refreshOffer(sender : UIButton) {
+       
+        UserRouter.getAllVipOffers(id: self.tripId).send { [weak self ] (response:APIGenericResponse<[offerResult]> ) in
+            guard let self = self else { return }
+           
+            self.offers = response.result ?? []
+            self.tableview.reloadData()
+           
+            
+        }
+    }
     
 }
 

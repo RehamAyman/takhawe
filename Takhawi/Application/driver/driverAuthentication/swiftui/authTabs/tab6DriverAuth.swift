@@ -21,6 +21,13 @@ struct tab6DriverAuth: View {
     @State var pinTwo: String = ""
     @State var pinThree: String = ""
     @State var pinFour: String = ""
+    var IsArabicLang : Bool {
+        if LocalizationManager.shared.getLanguage() == .Arabic {
+            return true
+        } else {
+            return false
+        }
+    }
     
     
     
@@ -29,15 +36,17 @@ struct tab6DriverAuth: View {
         ScrollView ( showsIndicators: false ) {
         
             VStack ( alignment: .leading , spacing: 3) {
-                Text ( "1. Locate the Vehicle Number input field.")
-                Text ( "2. Enter the numerical part, then the alphabetical part.")
-                Text ( "3. Verify the entered information for accuracy.")
-                Text ( "4. Submit or save to store the vehicle number and alphabet.")
+                Text ( "1. Locate the Vehicle Number input field.".localize)
+                Text ( "2. Enter the numerical part, then the alphabetical part.".localize)
+                Text ( "3. Verify the entered information for accuracy.".localize)
+                Text ( "4. Submit or save to store the vehicle number and alphabet.".localize)
                 
             }
-            .font(.custom( AppFont.Regular.rawValue , size: 12))
+            .font(.custom((IsArabicLang ? AppFont.arRegular : AppFont.Regular).rawValue , size: 12))
+           
             .padding(10)
             .foregroundColor(Color.black.opacity(0.6))
+            .environment(\.layoutDirection,  IsArabicLang ? .rightToLeft :  .leftToRight  )
             
             HStack {
                 
@@ -76,8 +85,9 @@ struct tab6DriverAuth: View {
                )
             
             
-            Text ( "Vehicle Alphabet")
-                .font(.custom( AppFont.Bold.rawValue , size: 16))
+            Text ( "Vehicle Alphabet".localize)
+                .font(.custom((IsArabicLang ? AppFont.arBold : AppFont.Bold).rawValue , size: 16))
+                
                 .padding(.top)
             
             OtpFormFieldView(pinOne: $AOne, pinTwo: $ATwo, pinThree: $AThree, pinFour: $AFour , numKeyboard: false  , threeItems: true)
@@ -94,8 +104,8 @@ struct tab6DriverAuth: View {
             
             
             
-            Text ( "Vehicle Number")
-                .font(.custom( AppFont.Bold.rawValue , size: 16))
+            Text ( "Vehicle Number".localize)
+                .font(.custom((IsArabicLang ? AppFont.arBold : AppFont.Bold).rawValue , size: 16))
                 .padding(.top)
             
             OtpFormFieldView(pinOne: $pinOne, pinTwo: $pinTwo, pinThree: $pinThree, pinFour: $pinFour , numKeyboard: true   )
