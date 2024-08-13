@@ -54,4 +54,12 @@ extension homeVC : UICollectionViewDelegate , UICollectionViewDataSource , UICol
     
     
     
+    
+    
+    //MARK: - DROP DOWN LIST SELECTING CITY
+    
+    
+    
+    
+    
 }

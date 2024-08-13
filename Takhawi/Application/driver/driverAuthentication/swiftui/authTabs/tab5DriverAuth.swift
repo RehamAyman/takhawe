@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct tab5DriverAuth: View {
-    @State var serialNumber : String = ""
+    @Binding var serialNumber : String
     var IsArabicLang : Bool {
         if LocalizationManager.shared.getLanguage() == .Arabic {
             return true
@@ -44,6 +44,3 @@ struct tab5DriverAuth: View {
     }
 }
 
-#Preview {
-    tab5DriverAuth()
-}

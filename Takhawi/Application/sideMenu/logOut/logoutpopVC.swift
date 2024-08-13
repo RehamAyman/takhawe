@@ -38,11 +38,11 @@ class logoutpopVC: BaseVC {
     }
     @IBAction func backToHome(_ sender: UIButton) {
        
-        if UserDefaults.user?.user?.accountType == .user {
+        if UserDefaults.user?.user?.role == role.user.rawValue {
             let vc = homeVC()
             let nav = CustomNavigationController(rootViewController: vc)
             AppHelper.changeWindowRoot(vc: nav)
-        } else  if UserDefaults.user?.user?.accountType == .delegate   {
+        } else  if UserDefaults.user?.user?.role == role.driver.rawValue  {
             let vc = DriverHomeVC()
             let nav = CustomNavigationController(rootViewController: vc)
             AppHelper.changeWindowRoot(vc: nav)

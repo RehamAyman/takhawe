@@ -22,6 +22,8 @@ class homeVC: BaseVC, sendDataBackDelegate{
     
 //MARK: - IBOutlets -
     
+    @IBOutlet weak var startingCityText: UITextField!
+    @IBOutlet weak var cityContainerView: UIView!
     @IBOutlet weak var sideMenuEmail: UILabel!
     @IBOutlet weak var sideMenuUserName: UILabel!
     @IBOutlet weak var userName: UILabel!
@@ -66,15 +68,17 @@ class homeVC: BaseVC, sendDataBackDelegate{
     var destLat : Double = 0.0
     var destLong : Double = 0.0 
     var selectedDate : Date = Date()
+    var selectedCityId : Int = 0
+
     
 //MARK: - Properties -
     
     var dummyActivty : [dummyActivity] = [
-        dummyActivity(icon: "Food", name: "FOOD") ,
-        dummyActivity(icon: "smoke", name: "NO SMOKING") ,
-        dummyActivity(icon: "Vector 3", name: "WIFI") ,
-        dummyActivity(icon: "music 1", name: "MUSIC") ,
-        dummyActivity(icon: "AC", name: "AIR CONDITIONER")
+        dummyActivity(icon: "Food", name: "FOOD" ) ,
+        dummyActivity(icon: "smoke", name: "NO SMOKING" ) ,
+        dummyActivity(icon: "Vector 3", name: "WIFI"  ) ,
+        dummyActivity(icon: "music 1", name: "MUSIC"  ) ,
+        dummyActivity(icon: "AC", name: "AIR CONDITIONER" )
     ]
     var selectedFeatures : [String] = []
     
@@ -141,6 +145,7 @@ class homeVC: BaseVC, sendDataBackDelegate{
         self.title = "".localized
         self.bottomView.layer.applySketchShadow()
         self.searchView.layer.applySketchShadow()
+        self.cityContainerView.layer.applySketchShadow()
         self.userimageOutlet.layer.applySketchShadow(color: .black)
         self.menuOutlet.layer.applySketchShadow()
         self.requestLocationAccess()
@@ -155,7 +160,14 @@ class homeVC: BaseVC, sendDataBackDelegate{
         self.chooseFeatureCollection.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         calendarOutlet.imagePadding(spacing: 8)
         joinTripDestButton.imagePadding(spacing: 8)
-        
+        self.cityContainerView.addTapGesture {
+            let vc = chooseCityVC()
+            vc.action = { cityModel in
+                self.startingCityText.text = cityModel.name ?? ""
+                self.selectedCityId = cityModel.id ?? 0
+            }
+            self.present(vc, animated: true )
+        }
        
         // force hotel button to be on the left acoording to client requirement 
         if LocalizationManager.shared.getLanguage() == .Arabic  {
@@ -226,12 +238,24 @@ class homeVC: BaseVC, sendDataBackDelegate{
     @IBAction func joinAction(_ sender: UIButton) {
         if segment.selectedSegmentIndex == 0 {
             //check if i have a destination to go  then  move to trip list :D
-            if tripHaveDestination {
+            if tripHaveDestination && self.selectedCityId != 0  {
+                print("selectedCityId : \(self.selectedCityId)")
+                print("destination : \(self.destLat ) , \(self.destLong)")
+                print("date : \(self.selectedDate.ISO8601Format())")
+                
                 let vc = tripListVC()
+              
+                vc.tripLat = self.destLat
+                vc.tripLong = self.destLong
+                vc.tripDate = self.selectedDate.ISO8601Format()
+                vc.cityId = self.selectedCityId
+                vc.selectedDate = self.selectedDate.ISO8601Format()
                 self.push(vc)
+                
+                
             } else {
                 AlertKitAPI.present(
-                    title: "Sorry, but you need to select a destination first!".localize ,
+                    title: "complete your data first!".localize ,
                     icon: .error,
                     style: .iOS17AppleMusic,
                     haptic: .success
@@ -258,7 +282,9 @@ class homeVC: BaseVC, sendDataBackDelegate{
         let vc = homeSearchVC ()
         vc.modalTransitionStyle = .coverVertical
         vc.modalPresentationStyle = .overCurrentContext
-        vc.selectAndDismiss = { string in
+        vc.selectAndDismiss = { string , lat , long  in
+            self.destLat = lat
+            self.destLong = long
             self.joinTripDestButton.setTitle( string , for: .normal)
             
         }
@@ -291,7 +317,9 @@ class homeVC: BaseVC, sendDataBackDelegate{
         self.presentWithEffect(vc:  vc )
         vc.change = {  [weak self] (value) in
             self?.calendarOutlet.setTitle( value , for: .normal)
+            print(value)
             self?.removePresentEffect()
+            print("hello i select join a trip date btw ")
         }
         vc.dismissAction = {
             self.removePresentEffect()

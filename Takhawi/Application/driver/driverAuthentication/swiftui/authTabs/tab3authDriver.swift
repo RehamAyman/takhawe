@@ -11,7 +11,7 @@ struct tab3authDriver: View {
     @State var showingConfirmation = false
     @State var isShowingMediaPicker = false
     @State var showDocsPicker = false
-    @State var urls: [URL] = []
+    @Binding var urls: [URL] 
     var IsArabicLang : Bool {
         if LocalizationManager.shared.getLanguage() == .Arabic {
             return true
@@ -41,7 +41,14 @@ struct tab3authDriver: View {
                     .font(.custom((IsArabicLang ? AppFont.arRegular : AppFont.Regular).rawValue , size: 13))
                    
                     .padding(5)
-                Button(action: { self.showingConfirmation.toggle() }, label: {
+                Button(action: {
+                //    self.showingConfirmation.toggle()
+                    if self.urls.count < 2 {
+                    isShowingMediaPicker.toggle()
+                } else {
+                    showInfoTopAlert(withMessage: "You cant upload more than 2 fiels".localize)
+                }
+                }, label: {
                     Text("Upload".localize)
                         .foregroundStyle(Color.white)
                         .font(.custom((IsArabicLang ? AppFont.arBold : AppFont.Bold).rawValue , size: 13))
@@ -79,9 +86,21 @@ struct tab3authDriver: View {
         
         
         
-        .confirmationDialog("", isPresented: $showingConfirmation) {
-            Button("Using your Photos".localize) { isShowingMediaPicker.toggle() }
-            Button("Using your Files".localize) { showDocsPicker.toggle() }
+        .confirmationDialog("Change", isPresented: $showingConfirmation) {
+            Button("Using your Photos".localize) {
+                if self.urls.count < 2 {
+                isShowingMediaPicker.toggle()
+            } else {
+                showInfoTopAlert(withMessage: "You cant upload more than 2 fiels".localize)
+            }
+            }
+            Button("Using your Files".localize) {
+                if self.urls.count < 2 {
+                    showDocsPicker.toggle()
+                } else {
+                    showInfoTopAlert(withMessage: "You cant upload more than 2 fiels".localize) }
+                }
+               
             Button("Cancel".localize, role: .cancel) { }
         } message: {
             Text("Choose a method".localize)
@@ -92,14 +111,16 @@ struct tab3authDriver: View {
         
         .mediaImporter(isPresented: $isShowingMediaPicker,
                         allowedMediaTypes: .images,
-                       allowsMultipleSelection: true) { result in
+                       allowsMultipleSelection: false ) { result in
             switch result {
             case .success(let urls):
                 
                 for i in urls {
-                    self.urls.append(i)
-                    print("--------")
-                    print(i)
+                    if self.urls.contains(i) {
+                        
+                    } else {
+                        self.urls.append(i)
+                    }
                 }
             case .failure(let error):
                 print(error)
@@ -107,7 +128,7 @@ struct tab3authDriver: View {
             }
         }
    .fileImporter(isPresented: $showDocsPicker ,
-                 allowedContentTypes: [.pdf , .png , .jpeg , .plainText , .text , .image ,.svg ,.plainText] ,
+                 allowedContentTypes: [.pdf ] ,
     allowsMultipleSelection: true)
                                { result in
                                    switch result {
@@ -115,7 +136,11 @@ struct tab3authDriver: View {
                                        print(url)
                                        //use `url.startAccessingSecurityScopedResource()` if you are going to read the data
                                        for i in url {
-                                           self.urls.append(i)
+                                           if self.urls.contains(i) {
+                                               
+                                           } else {
+                                               self.urls.append(i)
+                                           }
                                        }
                                    case .failure(let error):
                                        print(error)
@@ -126,6 +151,3 @@ struct tab3authDriver: View {
     }
 }
 
-#Preview {
-    tab3authDriver()
-}

@@ -25,7 +25,7 @@ class driverOffersVC: BaseVC {
     var offers : [offerResult] = []
     var tripId : Int = 0
     var locationDetails : offerLocation? 
-
+    var time : String = "" 
     
 // MARK: - Lifecycle -
     override func viewDidLoad() {
@@ -46,10 +46,10 @@ class driverOffersVC: BaseVC {
         self.noOffersView.isHidden = true
         self.noOffersViewHeight.constant = 0 
         animationView.contentMode = .scaleAspectFit
-  
+       
         animationView.loopMode = .loop
         animationView.animationSpeed = 0.4
-       
+        self.getTravilTime()
         
 //        DispatchQueue.main.asyncAfter(deadline: .now() + 3 ) {
 //            self.dummyOffers.append(

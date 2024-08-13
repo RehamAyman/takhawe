@@ -22,7 +22,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nM6-Um-1cT">
                         <rect key="frame" x="15" y="50" width="471" height="262"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="4IY-Lk-Zup">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 1000002906" translatesAutoresizingMaskIntoConstraints="NO" id="4IY-Lk-Zup">
                                 <rect key="frame" x="20" y="20" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="fpl-86-TMz"/>
@@ -171,7 +171,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 7" translatesAutoresizingMaskIntoConstraints="NO" id="FD3-9w-ZXo">
                                         <rect key="frame" x="195" y="0.0" width="38.666666666666657" height="35"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 1000003061" translatesAutoresizingMaskIntoConstraints="NO" id="ZeG-Jw-qkL">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pets" translatesAutoresizingMaskIntoConstraints="NO" id="ZeG-Jw-qkL">
                                         <rect key="frame" x="243.66666666666666" y="0.0" width="38.666666666666657" height="35"/>
                                     </imageView>
                                 </subviews>
@@ -285,13 +285,13 @@
     </objects>
     <resources>
         <image name="2017_Toyota_C-HR___3D_Model___Download__90891842___Pond5-removebg-preview 1" width="105" height="105.33333587646484"/>
-        <image name="3" width="564" height="846"/>
-        <image name="Group 1000003061" width="20.333333969116211" height="20.333333969116211"/>
+        <image name="Group 1000002906" width="70" height="70"/>
         <image name="Group 3" width="20" height="20"/>
         <image name="Group 4" width="20" height="20"/>
         <image name="Group 7" width="23" height="20.333333969116211"/>
         <image name="Vector 3" width="20" height="20"/>
         <image name="music 1" width="24" height="24"/>
+        <image name="pets" width="32" height="32"/>
         <image name="star" width="16" height="16"/>
         <image name="star 1" width="16" height="16"/>
         <namedColor name="AppRed">

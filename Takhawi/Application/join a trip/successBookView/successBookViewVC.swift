@@ -13,6 +13,7 @@ class successBookViewVC: BaseVC {
     
 //MARK: - IBOutlets -
     
+    @IBOutlet weak var driverName: UILabel!
     @IBOutlet weak var checkMark: UIImageView!
     @IBOutlet weak var confirmOutlet: UIButton!
     @IBOutlet weak var mainView: UIView!
@@ -20,7 +21,7 @@ class successBookViewVC: BaseVC {
     
 //MARK: - Properties -
     var action: (() -> Void)?
-    
+    var drivername : String = ""
 //MARK: - Creation -
     
    
@@ -36,17 +37,8 @@ class successBookViewVC: BaseVC {
     private func configureInitialDesign() {
         self.title = "".localized
         self.mainView.layer.addBasicShadow(cornerRadius: 35 )
-      
-       
-        
-       
-        
-        
-        
-        
-        
-        
-        
+        self.driverName.text = self.drivername
+ 
         
     }
     
@@ -93,10 +85,11 @@ override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
     
     
     @IBAction func dismissAction(_ sender: UIButton) {
-     //   sender.animateButtonWhenPressed {
+   
             self.visualView.isHidden = true
             self.dismiss(animated: true )
-      //  }
+            AppHelper.changeWindowRoot(vc: homeVC())
+      
     }
     
     

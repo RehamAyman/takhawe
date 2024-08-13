@@ -13,8 +13,12 @@ import Alamofire
 
 enum UserRouter {
     case createVipTrip( destinationLong : Double , destinationLat : Double , currentLat : Double , currentLong : Double , features : [String] , date : String)
-   case getAllVipOffers(id : Int)
-    case acceptOffer ( id : Int , paymentMethod : paymentMethod )
+    case getAllVipOffers(id : Int)
+    case acceptOffer ( id : Int , paymentMethod : String )
+    case getAllCities ( page : Int)
+    case getAllBasicTrips ( cityId : Int  , lat : Double , lng : Double , StartdDate : String)
+    case recentAddress
+    
     
 }
 
@@ -31,7 +35,7 @@ extension UserRouter : APIRouter {
         case .createVipTrip , .acceptOffer :
             return .post
         
-       case .getAllVipOffers:
+        case .getAllVipOffers , .getAllCities , .getAllBasicTrips  , .recentAddress :
           return .get
             
         }
@@ -47,7 +51,12 @@ extension UserRouter : APIRouter {
             return userServerPath.getVipOffers(id: id)
         case .acceptOffer(id: let id  , paymentMethod : let payment):
             return userServerPath.acceptOffer(id: id, paymentMethod: payment )
-        
+        case .getAllCities:
+            return userServerPath.allCityies
+        case .getAllBasicTrips:
+            return userServerPath.getAllBasicTrips
+        case .recentAddress:
+            return userServerPath.recentAddress
        
         }
     }
@@ -66,12 +75,26 @@ extension UserRouter : APIRouter {
                "start_date" : date
             ]
             
-        case .acceptOffer(let id ,  let method):
+        case .getAllCities (let page ):
+            return [
+                "page" : page ,
+                "limit" : 50
+            ]
+        case .acceptOffer( _ ,  let method):
             return [
                 "payment_method" : method
             ]
-        
-        case .getAllVipOffers   :
+        case .getAllBasicTrips(cityId: let cityId , lat: let lat , lng: let lng  , StartdDate : let startdate):
+            
+            return [
+                "cityPickupId" : cityId ,
+                "destinationLat" : lat ,
+                "destinationLng" : lng ,
+                "startDate" : startdate
+            ]
+            
+            
+        case .getAllVipOffers  , .recentAddress   :
             return nil
             
         }

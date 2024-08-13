@@ -30,16 +30,8 @@ struct User : Codable {
     let updatedAt : String?
     let deletedAt : String?
     let cityId : Int?
-    var accountType: AccountType {
-        switch role {
-        case AccountType.user.rawValue:
-            return .user
-        case AccountType.delegate.rawValue:
-            return .delegate
-        default:
-            return .unknown
-        }
-    }
+    let driver_status : String?
+  
     enum CodingKeys: String, CodingKey {
 
         case id = "id"
@@ -60,6 +52,8 @@ struct User : Codable {
         case updatedAt = "updatedAt"
         case deletedAt = "deletedAt"
         case cityId = "cityId"
+        case driver_status = "driver_status"
+        
     }
 
     

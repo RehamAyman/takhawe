@@ -39,7 +39,7 @@ struct OtpFormFieldView: View {
                             }
                         }
                         .focused($pinFocusState, equals: .pinOne)
-
+                        
                     TextField("", text:  $pinTwo)
                         .modifier(OtpModifer(pin:$pinTwo, numKeyboard:  $numKeyboard))
                         .onChange(of:pinTwo){newVal in
@@ -77,33 +77,23 @@ struct OtpFormFieldView: View {
                             }
                             .focused($pinFocusState, equals: .pinFour)
                     }
-                   
-
-
                 })
                 .padding(.vertical)
                
             }
             .toolbar {
-              
                 ToolbarItem(placement: .keyboard ) {
-                    if threeItems == false {
                         HStack {
                             Spacer()
                             Button {
                                 pinFocusState = nil
                             } label: {
-                                Text ("Done" )
-                                    .foregroundStyle(Color( "MainColor"))
+                                Text ("done" )
+                                    .foregroundStyle( threeItems ? Color.white :  Color( "MainColor")  )
                             }
-
-                         
                         }
-                 
-                    }
                 }
             }
-
     }
 }
 

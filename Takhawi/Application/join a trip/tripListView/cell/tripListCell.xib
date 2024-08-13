@@ -51,7 +51,7 @@
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="rating">
-                                                <real key="value" value="5"/>
+                                                <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="starColor">
                                                 <color key="value" red="0.96470588450000005" green="0.76470589639999997" blue="0.26666668059999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -64,6 +64,9 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="image" keyPath="filledImage" value="star 1"/>
                                             <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="star"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
@@ -182,15 +185,19 @@
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 3" translatesAutoresizingMaskIntoConstraints="NO" id="tDB-jJ-3Be">
                                         <rect key="frame" x="0.0" y="0.0" width="31" height="35"/>
+                                        <color key="tintColor" name="MainColor"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music 1" translatesAutoresizingMaskIntoConstraints="NO" id="82k-nP-3IT">
                                         <rect key="frame" x="47" y="0.0" width="31" height="35"/>
+                                        <color key="tintColor" name="MainColor"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 3" translatesAutoresizingMaskIntoConstraints="NO" id="UTI-gq-18F">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Food" translatesAutoresizingMaskIntoConstraints="NO" id="UTI-gq-18F">
                                         <rect key="frame" x="94" y="0.0" width="31" height="35"/>
+                                        <color key="tintColor" name="MainColor"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 4" translatesAutoresizingMaskIntoConstraints="NO" id="Hkg-8k-wUq">
                                         <rect key="frame" x="141" y="0.0" width="31" height="35"/>
+                                        <color key="tintColor" name="MainColor"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AC" translatesAutoresizingMaskIntoConstraints="NO" id="ISC-k1-m27">
                                         <rect key="frame" x="188" y="0.0" width="31" height="35"/>
@@ -264,18 +271,29 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="ACicon" destination="ISC-k1-m27" id="34l-Vn-bRh"/>
+                <outlet property="TripDate" destination="tGp-v7-e4w" id="W1u-Lr-vMV"/>
+                <outlet property="availableSeatsLabel" destination="y0h-bT-qmU" id="B1M-U8-jD5"/>
                 <outlet property="driverName" destination="6OO-Of-8In" id="fKJ-df-yu7"/>
+                <outlet property="driverPhoto" destination="FXD-Or-a4L" id="89W-ep-Bbf"/>
                 <outlet property="driverRate" destination="StO-Si-Glf" id="c2h-Lm-BOl"/>
+                <outlet property="endTime" destination="bbM-v8-qle" id="AGX-k8-4cn"/>
+                <outlet property="foodIcon" destination="UTI-gq-18F" id="U8f-BD-Y2W"/>
+                <outlet property="musicicon" destination="82k-nP-3IT" id="Mrj-Ck-l2k"/>
+                <outlet property="seatPrice" destination="j82-eo-xht" id="PoZ-4D-lyH"/>
+                <outlet property="smokeIcon" destination="Hkg-8k-wUq" id="vv4-il-Qzk"/>
+                <outlet property="startTime" destination="9hW-cn-oil" id="23t-0A-Zle"/>
+                <outlet property="wifiIcon" destination="tDB-jJ-3Be" id="BcU-4L-sNb"/>
             </connections>
             <point key="canvasLocation" x="231.8840579710145" y="2.0089285714285712"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="AC" width="24" height="22"/>
+        <image name="Food" width="20" height="20"/>
         <image name="Frame 1000003142" width="8.5" height="40.5"/>
         <image name="Group 1000002906" width="70" height="70"/>
         <image name="Group 2" width="12" height="16"/>
-        <image name="Group 3" width="20" height="20"/>
         <image name="Group 4" width="20" height="20"/>
         <image name="Vector 3" width="20" height="20"/>
         <image name="calendar" width="20" height="20"/>
@@ -293,7 +311,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray5Color">
-            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

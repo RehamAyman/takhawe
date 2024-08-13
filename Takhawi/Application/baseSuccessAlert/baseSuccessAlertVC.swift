@@ -52,7 +52,8 @@ class baseSuccessAlertVC: BaseVC {
     }
     @IBAction func backToHome(_ sender: UIButton) {
         if driver {
-         
+//         let vc = LoginVC()
+//            self.push(vc)
             self.DriverAction?()
             self.dismiss(animated: true )
         }

@@ -14,6 +14,7 @@ import SwiftUI
 class driverAuthVC: BaseVC {
     
 //MARK: - IBOutlets -
+     var selection : Int = 1
     
     
     
@@ -24,19 +25,20 @@ class driverAuthVC: BaseVC {
     lazy var swiftUIView = UIHostingController(rootView:
                                            
                                              
-    driverAuthView {
+            driverAuthView (tabSelection: selection ){
         print("driver done in his authentication .. present popup .. .")
         let vc = baseSuccessAlertVC()
-        vc.mainTitleText = "Thank you"
-        vc.subTitleText = "Your account has been created "
+        vc.mainTitleText = "Thank you".localize
+        vc.subTitleText = "Your account has been created successfully and is awaiting review by the administration.".localize
         vc.driver = true
         
         vc.modalTransitionStyle = .crossDissolve
         vc.modalPresentationStyle = .overCurrentContext
         vc.DriverAction  = {
             // go to driver home 
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "DriverTabbar") as! DriverTabbar
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let vc = storyboard.instantiateViewController(withIdentifier: "DriverTabbar") as! DriverTabbar
+            let vc = LoginVC()
             self.push(vc)
             
         }
@@ -53,6 +55,9 @@ class driverAuthVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureInitialDesign()
+       
+       
+      
     }
     
     

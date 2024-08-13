@@ -18,7 +18,7 @@ class findingAdriverVC: BaseVC {
     
 //MARK: - Properties -
     var cancel : (() -> Void)?
-    var  didfindAdrivier : (([offerResult]) -> Void)?
+    var didfindAdrivier : (([offerResult]) -> Void)?
     var userCancel : Bool = false
     var tripId : Int = 0 
     var count : Int = 0
@@ -65,8 +65,8 @@ extension findingAdriverVC {
             guard let self = self else { return }
             if response.result?.isEmpty == true {
                 
-                if self.count < 20 {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 60) {
+                if self.count < 100 {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 20) {
                         self.getAllVipTrips()
                         self.count += 1
                     }

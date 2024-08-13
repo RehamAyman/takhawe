@@ -18,6 +18,14 @@ enum AuthRouter {
     case forgetPassword ( phone : String)
     case verifyResetCode ( phone : String , code : String)
     case resetPassword ( phone : String , comfirmPassword : String)
+    case driverUploadNationalId ( nationalId : String )
+    case driverUploadDrivingLicens
+    case uploadCarLicense
+    case driverImage
+    case uploadCarImages
+    case uploadCarInsurance
+    case allCarDetails
+    
 
     
 }
@@ -35,11 +43,13 @@ extension AuthRouter: APIRouter {
     var method: HTTPMethod {
         switch self {
             
-        case .login , .signUp , .checkPhone , .forgetPassword  , .verifyResetCode , .resetPassword :
+        case .login , .signUp , .checkPhone , .forgetPassword  , .verifyResetCode , .resetPassword  , .driverUploadNationalId , .driverUploadDrivingLicens , .uploadCarLicense , .uploadCarImages , .uploadCarInsurance  :
             return .post
         
-        case .regoins:
+        case .regoins , .allCarDetails :
             return .get
+        case .driverImage :
+            return .patch
             
         }
     }
@@ -60,6 +70,21 @@ extension AuthRouter: APIRouter {
             return AuthServerPath.verifyResetCode
         case  .resetPassword :
             return AuthServerPath.resetPassword
+        case .driverUploadNationalId :
+            return AuthServerPath.driverUploadNationalId
+        case .driverUploadDrivingLicens :
+            return AuthServerPath.driverUploadDrivinglicence
+        case .uploadCarLicense :
+            return AuthServerPath.UploadcCarLicence
+        case .driverImage :
+            return AuthServerPath.driverImage
+        case .uploadCarImages :
+            return AuthServerPath.uploadCarImages
+        case .uploadCarInsurance :
+            return AuthServerPath.uploadCarInsurance
+        case .allCarDetails :
+            return AuthServerPath.allCarData
+       
        
         }
     }
@@ -98,8 +123,12 @@ extension AuthRouter: APIRouter {
                 "password" : confirmPassword
             ]
             
+        case .driverUploadNationalId( let nationalId ) :
+            return [
+                "national_id" : nationalId
+            ]
             
-        case .regoins:
+        case .regoins , .driverUploadDrivingLicens , .uploadCarLicense , .driverImage , .uploadCarImages , .uploadCarInsurance , .allCarDetails :
             return nil
         }
     }

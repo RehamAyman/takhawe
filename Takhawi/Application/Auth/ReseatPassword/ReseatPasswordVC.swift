@@ -9,15 +9,18 @@
 import UIKit
 import AlertKit
 
-class ReseatPasswordVC: BaseVC {
+class ReseatPasswordVC: BaseVC  , UITextFieldDelegate {
 
     // MARK: - IBOutlets -
 
     @IBOutlet weak var confirmPassword: UIShowHideTextField!
     @IBOutlet weak var newPassword: UIShowHideTextField!
     @IBOutlet weak var mainStack: UIStackView!
-
     @IBOutlet weak var nextButtonOutlet: MainButton!
+    
+    
+    
+    
     // MARK: - Properties -
     var phone : String = ""
     // MARK: - Lifecycle -
@@ -30,6 +33,8 @@ class ReseatPasswordVC: BaseVC {
     private func configureInitialDesign() {
         self.title = "".localized
         mainStack.animateToTop()
+        newPassword.delegate = self
+        confirmPassword.delegate = self
         self.disapleConfirmButton()
         self.confirmPassword.addTarget(self, action: #selector(textFieldDidEndEditing(_:)), for: .editingChanged)
         self.newPassword.addTarget(self, action: #selector(textFieldDidEndEditing(_:)), for: .editingChanged)
@@ -53,6 +58,7 @@ private func enableConfirmButton () {
     // MARK: - Actions -
     
     @objc func textFieldDidEndEditing(_ sender: UITextField) {
+        
         if self.newPassword.text?.isEmpty  ==  true || self.confirmPassword.text?.isEmpty == true   {
             self.disapleConfirmButton()
         } else {
@@ -61,7 +67,13 @@ private func enableConfirmButton () {
         
     }
     
-    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let maxLength = 5
+        let currentString = (textField.text ?? "") as NSString
+        let newString = currentString.replacingCharacters(in: range, with: string)
+
+        return newString.count <= maxLength
+    }
     
 
     @IBAction func confirmAction(_ sender: Any) {

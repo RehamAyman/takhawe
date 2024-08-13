@@ -10,16 +10,14 @@ import SwiftUI
 
 
 struct tab1UploadIdView : View {
-    @State var IDNumber : String = ""
+    @Binding var IDNumber : String 
     @State private var showingConfirmation = false
     @State var isShowingMediaPicker = false
-    @State var urls: [URL] = []
+    @Binding var urls: [URL]
     @State var showDocsPicker : Bool = false
-  //  @State private var CameraImage: UIImage?
-  //  @State  var AllImages : [UIImage] = []
-  //  @State private var showCamera = false
- 
-    
+  
+
+   
     
     
 //MARK: - VARS
@@ -34,7 +32,7 @@ struct tab1UploadIdView : View {
     
     
     var body: some View {
-        ScrollView {
+        VStack {
             VStack ( alignment: .leading ) {
                 Text("Congratulations for taking the first step in becoming a driver on the Takhawy platform.".localize)
                 Text ( "Please Upload your front and back photo of your National ID, Make sure all information is readable, not blurry and that all corners of the document are visible. If you are uploading a PDF, insert all pages together in one file.".localize)}
@@ -50,7 +48,14 @@ struct tab1UploadIdView : View {
                 Text ( "Please Upload Your ID ".localize)
                     .font(.custom(  (IsArabicLang ? AppFont.arRegular : AppFont.Regular).rawValue , size: 13))
                     .padding(5)
-                Button(action: { self.showingConfirmation.toggle() }, label: {
+                Button(action: { // self.showingConfirmation.toggle()
+                    if self.urls.count < 2 {
+                    isShowingMediaPicker.toggle()
+                } else {
+                    showInfoTopAlert(withMessage: "You cant upload more than 2 fiels".localize)
+                }
+                    
+                }, label: {
                     Text("Upload".localize)
                         .foregroundStyle(Color.white)
                         .font(.custom(  (IsArabicLang ? AppFont.arBold : AppFont.Bold).rawValue , size: 13))
@@ -69,21 +74,37 @@ struct tab1UploadIdView : View {
                 .padding(.bottom , 5 )
                         
 //MARK: - docs LIST
+           
+         
           
-            ForEach ( $urls , id: \.self) {   url  in
-                fileUploadedView(url: url, AllUrls: $urls)
-            }
-
-            FloatingTextField(numKeyboard: true, title: "Enter Your ID Number".localize , text:  $IDNumber  )
-                .padding(.horizontal , 10)
-            Spacer()
+          
+                ForEach ( $urls , id: \.self) {   url  in
+                    fileUploadedView(url: url, AllUrls: $urls)
+                }
+                
+       
+            FloatingTextField(numKeyboard: true, title: "Enter Your ID Number".localize , text:  $IDNumber   )
+               .padding(.horizontal , 10)
             
+            Spacer(minLength: 180 )
+               
         }
-
+       
         
         .confirmationDialog("Choose a method", isPresented: $showingConfirmation ) {
-            Button("Using your Photos".localize) { isShowingMediaPicker.toggle() }
-            Button("Using your Files".localize) { showDocsPicker.toggle() }
+            Button("Using your Photos".localize) {
+                if self.urls.count < 2 {
+                isShowingMediaPicker.toggle()
+            } else {
+                showInfoTopAlert(withMessage: "You cant upload more than 2 fiels".localize)
+            }
+            }
+            Button("Using your Files".localize) {
+                if self.urls.count < 2 {
+                    showDocsPicker.toggle()
+                } else {
+                    showInfoTopAlert(withMessage: "You cant upload more than 2 fiels".localize) }
+                }
             Button("Cancel".localize, role: .cancel) { }
         } message: {
             Text("Choose a method".localize)
@@ -94,14 +115,17 @@ struct tab1UploadIdView : View {
         
         .mediaImporter(isPresented: $isShowingMediaPicker,
                         allowedMediaTypes: .images,
-                       allowsMultipleSelection: true) { result in
+                       allowsMultipleSelection: false  ) { result in
             switch result {
             case .success(let urls):
                 
                 for i in urls {
-                    self.urls.append(i)
-                    print("--------")
-                    print(i)
+                    if self.urls.contains(i) {
+                   
+                    } else {
+                        self.urls.append(i)
+                    }
+                   
                 }
             case .failure(let error):
                 print(error)
@@ -109,15 +133,20 @@ struct tab1UploadIdView : View {
             }
         }
    .fileImporter(isPresented: $showDocsPicker ,
-                 allowedContentTypes: [.pdf , .png , .jpeg , .plainText , .text , .image ,.svg ,.plainText] ,
-    allowsMultipleSelection: true)
+                 allowedContentTypes: [.pdf ] ,
+    allowsMultipleSelection: false )
                                { result in
                                    switch result {
                                    case .success(let url):
                                        print(url)
                                        //use `url.startAccessingSecurityScopedResource()` if you are going to read the data
+                                      
                                        for i in url {
-                                           self.urls.append(i)
+                                           if self.urls.contains(i) {
+                                              
+                                           } else {
+                                               self.urls.append(i)
+                                           }
                                        }
                                    case .failure(let error):
                                        print(error)
@@ -128,19 +157,10 @@ struct tab1UploadIdView : View {
         
 //MARK: - CAMERA PICKER
         
-//   .fullScreenCover(isPresented: $showCamera) {
-//    CameraPickerView() { cameraModel  in
-//        self.CameraImage = cameraModel.image
-//        self.urls.append(cameraModel.url)
-//        } }
-        
+
     }
 }
 
-#Preview {
-    driverAuthView()
-  //  tab1UploadIdView()
-}
 
 
 

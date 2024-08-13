@@ -11,16 +11,17 @@ struct tab6DriverAuth: View {
     @State var VehicleAlphabetText : String = ""
     
     //Vehicle alphapit
-    @State var AOne: String = ""
-    @State var ATwo: String = ""
-    @State var AThree: String = ""
+    @Binding var AOne: String
+    @Binding var ATwo: String
+    @Binding var AThree: String
     @State var AFour: String = ""
     
     // Vehicle Number
-    @State var pinOne: String = ""
-    @State var pinTwo: String = ""
-    @State var pinThree: String = ""
-    @State var pinFour: String = ""
+    @Binding var pinOne: String
+    @Binding var pinTwo: String
+    @Binding var pinThree: String
+    @Binding var pinFour: String
+    
     var IsArabicLang : Bool {
         if LocalizationManager.shared.getLanguage() == .Arabic {
             return true
@@ -33,7 +34,7 @@ struct tab6DriverAuth: View {
     
     
     var body: some View {
-        ScrollView ( showsIndicators: false ) {
+        VStack  {
         
             VStack ( alignment: .leading , spacing: 3) {
                 Text ( "1. Locate the Vehicle Number input field.".localize)
@@ -47,12 +48,10 @@ struct tab6DriverAuth: View {
             .padding(10)
             .foregroundColor(Color.black.opacity(0.6))
             .environment(\.layoutDirection,  IsArabicLang ? .rightToLeft :  .leftToRight  )
-            
+            .frame(maxWidth: .infinity , alignment:  IsArabicLang ? .trailing  : .leading)
             HStack {
-                
-                
                     VStack(alignment: .center ,spacing: 2){
-                        Text ( pinOne + pinTwo + pinThree + pinFour )
+                        Text ( pinOne.changeToAr() + pinTwo.changeToAr() + pinThree.changeToAr() + pinFour.changeToAr() )
                         Text ( pinOne + pinTwo + pinThree + pinFour )
                     }.font(.custom( AppFont.Regular.rawValue , size: 12))
                     .padding(3)
@@ -62,8 +61,10 @@ struct tab6DriverAuth: View {
                         .frame(width: 40, height: 50  , alignment: .center)
                     
                     VStack(alignment: .center , spacing: 2){
-                        Text ( AOne + ATwo + AThree )
-                        Text ( AOne + ATwo + AThree )
+                        Text ( convertToArabic(text: AOne) + " " +  convertToArabic(text: ATwo) + " " +  convertToArabic(text: AThree)   )
+                        Text ( AOne + " " + ATwo + " " + AThree )
+                      
+                        
                     }.font(.custom( AppFont.Regular.rawValue , size: 12))
                     .padding(3)
                     Divider()
@@ -89,9 +90,9 @@ struct tab6DriverAuth: View {
                 .font(.custom((IsArabicLang ? AppFont.arBold : AppFont.Bold).rawValue , size: 16))
                 
                 .padding(.top)
-            
+           
             OtpFormFieldView(pinOne: $AOne, pinTwo: $ATwo, pinThree: $AThree, pinFour: $AFour , numKeyboard: false  , threeItems: true)
-            
+                .keyboardType(.asciiCapable)
             
             
 //            OtpView(activeIndicatorColor: Color.black, inactiveIndicatorColor: Color( "MainColor"),  length: 3, numKeyboard: false , doSomething: { value in
@@ -110,17 +111,17 @@ struct tab6DriverAuth: View {
             
             OtpFormFieldView(pinOne: $pinOne, pinTwo: $pinTwo, pinThree: $pinThree, pinFour: $pinFour , numKeyboard: true   )
             
-          Spacer()
+         Spacer()
         }
-        
+        .frame( height: 900)
         
         
     }
 }
 
-#Preview {
-    tab6DriverAuth()
-}
+
+
+
 struct ExDivider: View {
     let color: Color = .black
     
@@ -132,4 +133,24 @@ struct ExDivider: View {
           
             
     }
+}
+
+
+extension String {
+    func changeToAr () -> String {
+        let number = NSNumber(value: Int(self) ?? 0 )
+        let format = NumberFormatter()
+        format.locale = Locale(identifier: "ar") // You can set locale of your language
+        format.allowsFloats = true
+        format.numberStyle = .decimal
+        let formatedNumber = format.string(from: number)
+        print("\(formatedNumber)")
+        return formatedNumber ?? self
+    }
+   
+    
+    
+    
+    
+   
 }

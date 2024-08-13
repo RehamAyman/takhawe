@@ -9,10 +9,18 @@
 
 import UIKit
 import GoogleMaps
-
+import Cosmos
 
 class driverProfileVC: BaseVC {
+    @IBOutlet weak var driverRate: CosmosView!
     
+    @IBOutlet weak var weatherContainerProg: UIView!
+    @IBOutlet weak var weatherIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var weatherIcon: UIImageView!
+    @IBOutlet weak var weatherLabel: UILabel!
+    @IBOutlet weak var tripDate: UILabel!
+    @IBOutlet weak var driverTripscount: UILabel!
+    @IBOutlet weak var driverName: UILabel!
     @IBOutlet weak var driverContainerView: UIView!
     @IBOutlet weak var mainStack: UIStackView!
     @IBOutlet weak var BottomcontainerStack: UIStackView!
@@ -20,29 +28,38 @@ class driverProfileVC: BaseVC {
     @IBOutlet weak var tripCountLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    @IBOutlet weak var chenldirenContainerView: UIView!
-    @IBOutlet weak var numberOfChildrenText: UITextField!
+   
     @IBOutlet weak var googleView: GMSMapView!
     @IBOutlet weak var containerView: UIView!
     
     @IBOutlet weak var sendOfferContainerView: UIView!
     //MARK: - Properties -
     var dummyActivty : [dummyActivity] = [
-        dummyActivity(icon: "Group 1", name: "Basketball".localize) ,
-        dummyActivity(icon: "03-hat", name: "Riding Horse".localize) ,
-        dummyActivity(icon: "paint-palette 1", name: "Drawing".localize) ,
-        dummyActivity(icon: "music 1", name: "Listen to music".localize) ,
-        dummyActivity(icon: "airplane-around-earth 1", name: "Travelling".localize)
+        dummyActivity(icon: "Group 1", name: "Basketball".localize ) ,
+        dummyActivity(icon: "03-hat", name: "Riding Horse".localize ) ,
+        dummyActivity(icon: "paint-palette 1", name: "Drawing".localize ) ,
+        dummyActivity(icon: "music 1", name: "Listen to music".localize ) ,
+        dummyActivity(icon: "airplane-around-earth 1", name: "Travelling".localize )
     ]
 
     var animatePolyline: AnimatePolyline?
     var isDriverAcc : Bool = false
+    var tripDetails : BasicTripResult?
+    var weatherManager = WeatherManager()
+    let locationManager = CLLocationManager()
     
     
 // MARK: - Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureInitialDesign()
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestLocation()
+        weatherManager.delegate = self
+        
+        self.weatherIndicator.startAnimating()
+       
    
     }
 
@@ -60,17 +77,15 @@ class driverProfileVC: BaseVC {
         self.setUpGoogleView()
         self.tripCountLabel.cornerRadius = 17
         self.tripCountLabel.layer.masksToBounds = true 
-        self.numberOfChildrenText.layer.addBasicShadow(cornerRadius: 22.5)
-        self.numberOfChildrenText.setLeftPaddingPoints(8)
-        self.numberOfChildrenText.setRightPaddingPoints(8)
+     
 // force the bottom view  to be in the left according to client requirement
         self.BottomcontainerStack.semanticContentAttribute = .forceLeftToRight
 // arrange views according to the account type
         if isDriverAcc {
             self.mainStack.removeArrangedSubview(self.BottomcontainerStack)
-            self.mainStack.removeArrangedSubview(self.chenldirenContainerView)
+         
             self.BottomcontainerStack.removeFromSuperview()
-            self.chenldirenContainerView.removeFromSuperview()
+           
 
         } else {
             self.mainStack.removeArrangedSubview(self.sendOfferContainerView)
@@ -78,9 +93,11 @@ class driverProfileVC: BaseVC {
             self.driverContainerView.removeFromSuperview()
             self.sendOfferContainerView.removeFromSuperview()
         }
-    
+        self.setMainDataInfo()
         
     }
+    
+    
     
 //MARK: - Logic Methods -
     

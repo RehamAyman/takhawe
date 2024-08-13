@@ -19,12 +19,22 @@ class tripListVC: BaseVC {
     
     @IBOutlet weak var searchContainerView: UIView!
     //MARK: - Properties -
-    private var items: [Dummydrivers] = [
-        Dummydrivers(name: "Ali Adam", rate: 4) ,
-        Dummydrivers(name: "Ahmed Omar ", rate: 2) ,
-        Dummydrivers(name: "Waleed Ismail", rate: 3)
-    ]
     
+    
+    var cityId : Int = 0
+    var tripDate : String = Date().ISO8601Format()
+    var tripLat : Double = 0.0
+    var tripLong : Double = 0.0
+    var selectedDate : String = ""
+    var allTrips : [BasicTripResult] = []
+    var selectedTrip : BasicTripResult?
+    
+//    private var items: [Dummydrivers] = [
+//        Dummydrivers(name: "Ali Adam", rate: 4) ,
+//        Dummydrivers(name: "Ahmed Omar ", rate: 2) ,
+//        Dummydrivers(name: "Waleed Ismail", rate: 3)
+//    ]
+//    
     
    
     
@@ -33,6 +43,7 @@ class tripListVC: BaseVC {
         super.viewDidLoad()
         self.configureInitialDesign()
         self.setupTableView()
+        self.getAllTrips()
     }
     
     
@@ -70,6 +81,17 @@ class tripListVC: BaseVC {
     }
     
     
+    private func getAllTrips () {
+        activityIndicatorr.startAnimating()
+        UserRouter.getAllBasicTrips(cityId: self.cityId, lat: self.tripLat, lng: self.tripLong, StartdDate: self.selectedDate).send { (response: APIGenericResponse<[BasicTripResult]>) in
+          
+            guard let data =  response.result else { return }
+            self.allTrips = data 
+            self.tableView.reloadData()
+            }
+       
+    }
+    
 }
 
 
@@ -89,11 +111,11 @@ extension tripListVC {
 }
 extension tripListVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return self.allTrips.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tripListCell") as! tripListCell
-        let item = self.items[indexPath.row]
+        let item = self.allTrips[indexPath.row]
         cell.configureWith(data: item)
         return cell
     }
@@ -101,7 +123,9 @@ extension tripListVC: UITableViewDataSource {
 extension tripListVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
+        let item = self.allTrips[indexPath.row]
         let vc = driverProfileVC()
+        vc.tripDetails = item
         push(vc)
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

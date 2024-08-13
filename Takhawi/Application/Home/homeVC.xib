@@ -16,6 +16,7 @@
                 <outlet property="bottomView" destination="Ihg-WG-lMq" id="VCu-l4-HKD"/>
                 <outlet property="calendarOutlet" destination="8Ii-wh-81a" id="F1L-zh-Jd0"/>
                 <outlet property="chooseFeatureCollection" destination="yAE-fs-J8E" id="HCj-Uc-VmZ"/>
+                <outlet property="cityContainerView" destination="Gnk-Ja-xpi" id="1MZ-gI-hWh"/>
                 <outlet property="containerView" destination="kOb-jt-lur" id="SRR-Mt-mBv"/>
                 <outlet property="containetStackView" destination="rEl-cC-QuR" id="9tr-dU-68w"/>
                 <outlet property="destTextfield" destination="tYn-ct-ZxO" id="hoT-Yv-Glk"/>
@@ -37,6 +38,7 @@
                 <outlet property="sideMenuEmail" destination="yuk-ah-0kH" id="GTs-1E-iGt"/>
                 <outlet property="sideMenuUserName" destination="wjQ-Mr-GqY" id="GUx-8C-oHO"/>
                 <outlet property="sideMenuWidth" destination="QRV-qL-Zl7" id="2dC-Oq-6mj"/>
+                <outlet property="startingCityText" destination="veB-p0-kb9" id="C4R-h2-Nmy"/>
                 <outlet property="tableView" destination="d2n-zT-x41" id="inF-8f-8sm"/>
                 <outlet property="userName" destination="lXN-f8-4v0" id="WnJ-xH-HmX"/>
                 <outlet property="userimageOutlet" destination="PvL-J3-rq8" id="psM-Bl-eHl"/>
@@ -206,11 +208,55 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rEl-cC-QuR">
                                     <rect key="frame" x="20" y="10" width="323" height="265"/>
                                     <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gnk-Ja-xpi">
+                                            <rect key="frame" x="0.0" y="0.0" width="323" height="40"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 5" translatesAutoresizingMaskIntoConstraints="NO" id="mpC-AO-t1D">
+                                                    <rect key="frame" x="10" y="12.666666666666686" width="15" height="15"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="15" id="7fa-aG-3vr"/>
+                                                        <constraint firstAttribute="width" constant="15" id="s7P-BS-DY3"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Choose Starting City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="veB-p0-kb9">
+                                                    <rect key="frame" x="30" y="0.0" width="258" height="40"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Choose Starting City"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 9" translatesAutoresizingMaskIntoConstraints="NO" id="Z1a-77-cN9">
+                                                    <rect key="frame" x="293" y="15" width="15" height="10"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="15" id="Mw7-E7-h81"/>
+                                                        <constraint firstAttribute="height" constant="10" id="jat-yu-ewp"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <constraints>
+                                                <constraint firstItem="mpC-AO-t1D" firstAttribute="leading" secondItem="Gnk-Ja-xpi" secondAttribute="leading" constant="10" id="0bT-cG-Jt8"/>
+                                                <constraint firstItem="veB-p0-kb9" firstAttribute="top" secondItem="Gnk-Ja-xpi" secondAttribute="top" id="Aw7-sH-MId"/>
+                                                <constraint firstItem="Z1a-77-cN9" firstAttribute="centerY" secondItem="Gnk-Ja-xpi" secondAttribute="centerY" id="Nju-D4-meZ"/>
+                                                <constraint firstAttribute="height" constant="40" id="OOW-8v-HdT"/>
+                                                <constraint firstAttribute="trailing" secondItem="Z1a-77-cN9" secondAttribute="trailing" constant="15" id="cLX-Gm-br0"/>
+                                                <constraint firstItem="mpC-AO-t1D" firstAttribute="centerY" secondItem="Gnk-Ja-xpi" secondAttribute="centerY" id="dmC-hA-iNr"/>
+                                                <constraint firstItem="veB-p0-kb9" firstAttribute="leading" secondItem="mpC-AO-t1D" secondAttribute="trailing" constant="5" id="dol-nR-uVx"/>
+                                                <constraint firstItem="Z1a-77-cN9" firstAttribute="leading" secondItem="veB-p0-kb9" secondAttribute="trailing" constant="5" id="oP7-7Z-hoJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="veB-p0-kb9" secondAttribute="bottom" id="q49-Zf-ewI"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="20"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UGQ-k0-NnC">
-                                            <rect key="frame" x="0.0" y="0.0" width="323" height="45"/>
+                                            <rect key="frame" x="0.0" y="48" width="323" height="45"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Search" translatesAutoresizingMaskIntoConstraints="NO" id="N61-MQ-Nmc">
-                                                    <rect key="frame" x="10" y="12.666666666666686" width="20" height="20"/>
+                                                    <rect key="frame" x="10" y="12.666666666666629" width="20" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="20" id="COB-mX-bNC"/>
                                                         <constraint firstAttribute="height" constant="20" id="aU9-Ym-kr6"/>
@@ -245,7 +291,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZw-hz-e1E">
-                                            <rect key="frame" x="0.0" y="53" width="323" height="40"/>
+                                            <rect key="frame" x="0.0" y="101" width="323" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="TrB-Fl-DeX"/>
                                             </constraints>
@@ -258,7 +304,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ii-wh-81a">
-                                            <rect key="frame" x="0.0" y="101" width="323" height="164"/>
+                                            <rect key="frame" x="0.0" y="149" width="323" height="116"/>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                             <color key="tintColor" name="MainColor"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
@@ -424,7 +470,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MRd-Yd-ij6">
-                            <rect key="frame" x="35" y="457" width="323" height="45"/>
+                            <rect key="frame" x="35" y="505" width="323" height="45"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title=" "/>
                             <connections>
@@ -552,9 +598,11 @@
         <image name="Search" width="17.333333969116211" height="17.666666030883789"/>
         <image name="Vector" width="13.666666984558105" height="16"/>
         <image name="Vector 1" width="13.666666984558105" height="16"/>
+        <image name="Vector 5" width="18.333333969116211" height="22"/>
+        <image name="Vector 9" width="12.666666984558105" height="8.6666669845581055"/>
         <image name="calendar" width="20" height="20"/>
         <image name="focus 1" width="16" height="16"/>
-        <image name="logo" width="698.66668701171875" height="693"/>
+        <image name="logo" width="131" height="115"/>
         <image name="menu 1" width="32" height="32"/>
         <image name="menu 2" width="48" height="48.333332061767578"/>
         <namedColor name="MainColor">
@@ -564,7 +612,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

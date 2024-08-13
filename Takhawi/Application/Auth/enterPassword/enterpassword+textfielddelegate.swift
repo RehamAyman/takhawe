@@ -43,7 +43,7 @@ extension enterPasswordVC : AEOTPTextFieldDelegate  {
         otpTextField.cornerRadius = 10
       //  otpTextField.isSecureTextEntry = true
         otpTextField.keyboardType = .asciiCapableNumberPad
-        otpTextField.configure(with: 6)
+        otpTextField.configure(with: 5)
         AEOTPTextField.appearance().semanticContentAttribute = .forceLeftToRight
         //self.otpTextField.textAlignment = .left
       

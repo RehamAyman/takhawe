@@ -96,6 +96,9 @@ extension ReserveTheTripVC : UITableViewDelegate , UITableViewDataSource {
         self.to.text = self.locationDetails?.destAddress
         self.destance.text = self.getDestanceBetween()
         self.seatPrice.text =  "\(self.offer?.price ?? 0.0 )" + "SAR".localize
+        // backend didnot add it yet
+        self.vatCost.text = " -- " + "SAR".localize
+        self.codePrice.text = " -- " + "SAR".localize
     }
     
     

@@ -93,20 +93,16 @@ class SelectUserTypeVC: BaseVC {
 
     @IBAction func continueAction(_ sender: Any) {
         if selectedType == "Driver" {
-            let vc = driverAuthVC()
-            self.push(vc)
+           
+            self.signupUser(name: self.fullname, email: self.email , password: self.password, phone: self.phone, genderIndex: self.genderIndex, role: role.driver.rawValue)
+            
         } else {
-            self.signupUser(name: self.fullname, email: self.email , password: self.password, phone: self.phone, genderIndex: self.genderIndex)
+            self.signupUser(name: self.fullname, email: self.email , password: self.password, phone: self.phone, genderIndex: self.genderIndex, role: role.user.rawValue)
  
            
         }
      
 
-//        if selectedType == "User" {
-//            vc.typeOfLogin = .user
-//        } else {
-//            vc.typeOfLogin = .driver
-//        }
        
     }
 }
@@ -114,16 +110,19 @@ class SelectUserTypeVC: BaseVC {
 // MARK: - Networking -
 extension SelectUserTypeVC {
     
-    func signupUser (name : String , email : String , password : String  , phone : String , genderIndex: Int ) {
+    func signupUser (name : String , email : String , password : String  , phone : String , genderIndex: Int , role : String ) {
            activityIndicatorr.startAnimating()
-           AuthRouter.signUp(name: name  , email: email , password: password , role: "USER", phone: phone, gender: genderIndex == 0 ? "Female" : "Male"  ).send {  (response: APIGenericResponse<LoginModelData>) in
+           AuthRouter.signUp(name: name  , email: email , password: password , role: role, phone: phone, gender: genderIndex == 0 ? "Female" : "Male"  ).send {  (response: APIGenericResponse<LoginModelData>) in
                if response.status == true {
                    if let data = response.result {
                        showPopTopAlert(title: "Done Successfully".localize , withMessage: response.message  ?? "" , success: true )
-                       UserDefaults.isLogin = true
-                       UserDefaults.user = data
-                       UserDefaults.accessToken = response.result?.accessToken
-                       let vc =  homeVC()
+                       if role == "USER" {
+                           UserDefaults.isLogin = true
+                           UserDefaults.user = data
+                       }
+                           UserDefaults.accessToken = response.result?.accessToken
+                      
+                       let vc = role == "USER" ?  homeVC() : driverAuthVC()
                        self.push(vc)
                    }
                }

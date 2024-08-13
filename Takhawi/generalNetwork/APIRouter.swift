@@ -205,6 +205,7 @@ extension APIRouter {
                 if let value = valueObject as? APIGlobalResponse {
                     if response.response?.statusCode == 401 {
                         // handle unauthenticated token
+                        // refresh token 
                         activityIndicatorr.stopAnimating()
                         
                         UserDefaults.accessToken = nil

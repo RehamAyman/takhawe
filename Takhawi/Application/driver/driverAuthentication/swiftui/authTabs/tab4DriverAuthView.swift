@@ -12,7 +12,7 @@ struct tab4DriverAuthView: View {
    
     @State var isShowingMediaPicker : Bool = false
     @State var imageUrl : URL?
-    @State var profileImage : UIImage?
+    @Binding var profileImage : UIImage?
     var IsArabicLang : Bool {
         if LocalizationManager.shared.getLanguage() == .Arabic {
             return true
@@ -91,8 +91,4 @@ struct tab4DriverAuthView: View {
     
     
     
-}
-
-#Preview {
-    tab4DriverAuthView()
 }

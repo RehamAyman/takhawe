@@ -71,9 +71,7 @@ class ReserveTheTripVC: BaseVC {
         if self.viptrip {
             self.getVipDetails()
         }
-        
-      
-       
+  
     }
     
     
@@ -100,6 +98,7 @@ class ReserveTheTripVC: BaseVC {
         let vc = successBookViewVC()
         vc.modalTransitionStyle = .crossDissolve
         vc.modalPresentationStyle = .overCurrentContext
+        vc.drivername = self.offer?.driver?.name ?? ""
     vc.action = {
         let vc = trackYourTripVC()
         self.push(vc)
@@ -117,7 +116,8 @@ extension ReserveTheTripVC {
         print(self.paymentMethod)
         print(self.paymentMethod.rawValue)
         activityIndicatorr.startAnimating()
-        UserRouter.acceptOffer(id: offer?.id ?? 0 , paymentMethod: self.paymentMethod).send { [weak self ] (response: APIGlobalResponse) in
+     
+        UserRouter.acceptOffer(id: offer?.id ?? 0 , paymentMethod: self.paymentMethod.rawValue  ).send { [weak self ] (response: APIGlobalResponse) in
             guard let self = self else { return }
             if response.status == true {
                 self.GotoNextStep()

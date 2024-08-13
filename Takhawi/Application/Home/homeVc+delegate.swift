@@ -212,12 +212,8 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
         self.secMakeAtripStack.isHidden = true
         self.secMakeAtripStack.isUserInteractionEnabled = false
         
-      
-//        self.locationOutlet.isHidden = true
-//        self.containetStackView.removeArrangedSubview(self.collectionContainerView)
-//        self.UserLocationOutlet.isHidden = true
-//        self.chooseFeatureCollection.isHidden = true
-//     
+
+        
         self.joinTripOutlet.setTitle("Join the trip".localize , for: .normal)
         if self.tripHaveDestination {
             self.joinatripButtonHeight.constant = 40
@@ -228,17 +224,8 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
             self.joinatripButtonHeight.constant = 0
             self.joinTripDestButton.isHidden = true
         }
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
-//                self.joinTripDestButton.isHidden = false
-//            }
-//           
-//            self.containetStackView.addArrangedSubview(self.joinTripDestButton)
-//        } else {
-//            self.searchView.isHidden = false
-//            self.searchViewContainerHeight.constant = 40
-//        }
-        
-        self.viewHeight.constant = 185
+
+        self.viewHeight.constant = 230
         
         UIView.animate(withDuration: 0.5 , animations: {
            
@@ -255,16 +242,8 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
         self.secMakeAtripStack.isHidden = false
         self.secMakeAtripStack.isUserInteractionEnabled = true
         
-     
-//        self.searchViewContainerHeight.constant = 0
-//        self.searchView.isHidden = true
         self.joinTripOutlet.setTitle( "Create Trip".localize, for: .normal)
-//        self.joinTripDestButton.isHidden = true
-//        self.containetStackView.addArrangedSubview(self.collectionContainerView)
-//        self.containetStackView.removeArrangedSubview( self.joinTripDestButton)
-//        self.locationOutlet.isHidden = false
-//        self.UserLocationOutlet.isHidden = false
-//        self.chooseFeatureCollection.isHidden = false
+
         self.viewHeight.constant = 320
         
         UIView.animate(withDuration: 0.5 , animations: {
@@ -279,18 +258,12 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
     
     func initialSegment () {
         
-//        segment.setTitleTextAttributes([NSAttributedString.Key.font: font] ,
-//                                                for: .normal)
+                                         
         self.joinTripOutlet.setTitle("Join the trip".localize , for: .normal)
-      //  let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.gray]
-           
 
              let titleTextAttributes1 = [NSAttributedString.Key.foregroundColor: UIColor(named: "MainColor")]
         segment.setTitleTextAttributes(titleTextAttributes1 as [NSAttributedString.Key : Any], for:.selected)
-      //  let titleTextAttributes2 = [NSAttributedString.Key.foregroundColor: UIColor.lightGray]
-      //  segment.setTitleTextAttributes(titleTextAttributes2 as [NSAttributedString.Key : Any], for:.normal)
-        
-        
+      
         
         let font = UIFont.boldSystemFont(ofSize: 12 )
         let attributes = [ NSAttributedString.Key.foregroundColor : UIColor.lightGray,
@@ -299,7 +272,7 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
         
         
         
-        self.viewHeight.constant = 185
+        self.viewHeight.constant = 230
         self.joinTripDestButton.isHidden = true
         self.joinatripButtonHeight.constant = 0
         self.frchooseDestinationViewHeight.constant = 45
@@ -325,12 +298,6 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
     
    
 //MARK: - show side menu with animation function
-    
-    
-    
-    
-    
-    
     
     
     func showMenu() {
@@ -367,10 +334,15 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
         vc.modalPresentationStyle = .overCurrentContext
         let pushVc = mapSearchVC()
         pushVc.delegate = self
-        vc.selectAndDismiss = { string in
+        vc.selectAndDismiss = { string , lat , long  in
+            
+            self.destLat =  lat  // 21.492500
+            self.destLong =  long
             
             if vip {
                 self.secMydestinationOutlet.setTitle(string, for: .normal)
+
+              // 39.177570
             } else {
                 self.tripHaveDestination = true
                 self.joinTripDestButton.isHidden = false

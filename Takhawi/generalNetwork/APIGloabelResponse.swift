@@ -9,7 +9,8 @@ import Foundation
 class APIGlobalResponse: Codable {
     //   var key: APIServerResponseKey?
     var status : Bool?
-    var message : String?
+    var message : String = ""
+    var paginate: Pagination?
   //  var resultt : Bool?
     
     
@@ -17,16 +18,16 @@ class APIGlobalResponse: Codable {
         //   case key
         case message
         case status
-      //  case resultt = "result"
+        case paginate = "pagination"
         
     }
     
     required init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        //   key = try values.decode(APIServerResponseKey.self, forKey: .key)
         message = try values.decode(String.self, forKey: .message)
         status = try values.decode(Bool.self, forKey: .status)
-      //  resultt = try values.decodeIfPresent(Bool.self, forKey: .resultt )
+        paginate = try values.decodeIfPresent(Pagination.self, forKey: .paginate)
+     
         
     }
     
@@ -56,22 +57,19 @@ class APIGenericResponse<T: Codable>: APIGlobalResponse {
 
 
 
-
 // MARK: - Pagination
 struct Pagination: Codable {
-    let totalItems, countItems, perPage, totalPages: Int
-    let currentPage: Int
-    let nextPageURL: String
-    let pervPageURL: String
+    let totalPages :  Int
+    let totalItems : Int
+    let page : Int
+    let limit : Int
 
     enum CodingKeys: String, CodingKey {
-        case totalItems = "total_items"
-        case countItems = "count_items"
-        case perPage = "per_page"
-        case totalPages = "total_pages"
-        case currentPage = "current_page"
-        case nextPageURL = "next_page_url"
-        case pervPageURL = "perv_page_url"
+        case totalPages = "totalPages"
+        case totalItems = "totalItems"
+        case page = "page"
+        case limit = "limit"
+       
     }
 }
 
@@ -80,7 +78,7 @@ struct Pagination: Codable {
 class CheckphoneResponse: Codable {
     //   var key: APIServerResponseKey?
     var status : Bool?
-    var message : String?
+    var message : String = "" 
     var resultt : Bool?
     
     

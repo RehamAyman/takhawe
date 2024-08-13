@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     static let appGroupKey = "group.HomeCooking"
     let gcmMessageIDKey = "gcm.message_id"
     static var FCMToken = "xnx'_'xnx"
-    static let GoogleAPI = "AIzaSyBaLRq-LbUQmWZkJkfwjWcJyoxWlhyQ35s"
+    static let GoogleAPI = "AIzaSyAfTSBkcXfJa5Zf0YHN3-m-gJFFhvzVu4U" // "AIzaSyBaLRq-LbUQmWZkJkfwjWcJyoxWlhyQ35s"
     var location:CLLocationManager?
     
    //AIzaSyBaLRq-LbUQmWZkJkfwjWcJyoxWlhyQ35s
@@ -27,9 +27,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
      //AIzaSyBaLRq-LbUQmWZkJkfwjWcJyoxWlhyQ35s
     //AIzaSyDS61p6luMp1Kfj8xmfIvjYz-mBQF9Noo8 // hayah
     //AIzaSyA7nhBa7YZtIb6KoG47O0_y2PwxYfsHiBs // ageeba
-        
-        GMSServices.provideAPIKey("AIzaSyA7nhBa7YZtIb6KoG47O0_y2PwxYfsHiBs")
-        GMSPlacesClient.provideAPIKey("AIzaSyA7nhBa7YZtIb6KoG47O0_y2PwxYfsHiBs")
+        //AIzaSyAfTSBkcXfJa5Zf0YHN3-m-gJFFhvzVu4U
+        //AIzaSyA7nhBa7YZtIb6KoG47O0_y2PwxYfsHiBs
+        GMSServices.provideAPIKey("AIzaSyAfTSBkcXfJa5Zf0YHN3-m-gJFFhvzVu4U")
+        GMSPlacesClient.provideAPIKey("AIzaSyAfTSBkcXfJa5Zf0YHN3-m-gJFFhvzVu4U")
         self.location?.requestAlwaysAuthorization()
         self.location?.requestWhenInUseAuthorization()
         AppDelegate.window?.tintColor = UIColor(named: "MainColor")

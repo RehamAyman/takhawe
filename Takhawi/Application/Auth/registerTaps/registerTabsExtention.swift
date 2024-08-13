@@ -28,7 +28,7 @@ extension registerTabs {
    
     
     private func validateStep2 () -> Bool  {
-        if self.password == "" || self.confirmPassword == "" || self.password != self.confirmPassword || self.password.count < 6 {
+        if self.password == "" || self.confirmPassword == "" || self.password != self.confirmPassword || self.password.count != 5 {
            
             return false
         } else {

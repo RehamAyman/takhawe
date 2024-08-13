@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Cosmos
 
 
 protocol LocalizationDelegate: AnyObject {
@@ -103,6 +104,7 @@ class LocalizationManager: NSObject {
         UITextView.appearance().textAlignment = dir == .leftToRight ? .left : .right
         UITextField.appearance().semanticContentAttribute = semantic
         UILabel.appearance().semanticContentAttribute = semantic
+        CosmosView.appearance().semanticContentAttribute = semantic
       
         //
 //        
@@ -113,9 +115,7 @@ class LocalizationManager: NSObject {
 //        UICollectionView.appearance().semanticContentAttribute = Language.isRTL() ? .forceRightToLeft : .forceLeftToRight
 //        UIDatePicker.appearance().semanticContentAttribute = Language.isRTL() ? .forceRightToLeft : .forceLeftToRight
 //        UIPickerView.appearance().semanticContentAttribute = Language.isRTL() ? .forceRightToLeft : .forceLeftToRight
-//        CosmosView.appearance().semanticContentAttribute = Language.isRTL() ? .forceRightToLeft : .forceLeftToRight
-//       
-//        
+      
         
         delegate?.resetApp()
     }

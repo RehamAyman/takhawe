@@ -31,7 +31,10 @@ class OnboardingViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
        
         if UserDefaults.user != nil && UserDefaults.isLogin == true{
-            let vc =  homeVC()
+           
+            
+            let userType = UserDefaults.user?.user?.role
+            let vc = userType == role.user.rawValue ?  homeVC() : DriverHomeVC()
             let nav = CustomNavigationController(rootViewController: vc)
             AppHelper.changeWindowRoot(vc: nav)
             

@@ -46,8 +46,7 @@ class DriverHomeVC: BaseVC  {
         switchButton.status = false
         self.view.addSubview(switchButton)
         self.switchButtonAction()
-        
-        
+        self.checkDriverStatus()
         
        
         
@@ -64,7 +63,9 @@ class DriverHomeVC: BaseVC  {
     }
     
 //MARK: - FUNCTIONS
-    
+    private func checkDriverStatus () {
+        
+    }
 
 
 }

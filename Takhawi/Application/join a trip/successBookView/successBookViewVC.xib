@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="checkMark" destination="rt1-Pf-kwn" id="lWx-Us-bLH"/>
                 <outlet property="confirmOutlet" destination="CJy-ZM-2NP" id="a7q-wB-4C9"/>
+                <outlet property="driverName" destination="0Bj-a7-cbG" id="E3q-3J-M8O"/>
                 <outlet property="mainView" destination="xXz-ZK-cfH" id="TCv-Rg-g1b"/>
                 <outlet property="view" destination="iN0-l3-epB" id="1GI-xa-65X"/>
                 <outlet property="visualView" destination="Y6i-GP-qSE" id="BMh-Gq-Ajb"/>

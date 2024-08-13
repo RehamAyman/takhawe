@@ -29,7 +29,7 @@ enum HTTPHeaderField: String {
     case contentType = "Content-Type"
     case acceptType = "Accept"
     case acceptEncoding = "Accept-Encoding"
-    case lang = "lang"
+    case lang = "Accept-Language" //"lang"
 }
 enum ContentType: String {
     case json = "application/json"

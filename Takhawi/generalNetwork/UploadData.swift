@@ -9,7 +9,7 @@ import Foundation
 struct UploadData {
     var data: Data
     var fileName: String
-    var mimeType: mimeType
+    var mimeType:   mimeType
     var name: String
 }
 

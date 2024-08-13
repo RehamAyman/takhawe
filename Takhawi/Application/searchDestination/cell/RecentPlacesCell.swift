@@ -11,6 +11,7 @@ import Lottie
 class RecentPlacesCell: UITableViewCell {
     @IBOutlet weak var checkMark: LottieAnimationView!
     
+    @IBOutlet weak var cornerIcon: UIImageView!
     @IBOutlet weak var city: UILabel!
     @IBOutlet weak var placeName: UILabel!
     override func awakeFromNib() {

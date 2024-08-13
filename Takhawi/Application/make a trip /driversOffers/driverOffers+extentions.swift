@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreLocation
+import MapKit
 
 
 extension driverOffersVC : UITableViewDelegate , UITableViewDataSource {
@@ -31,12 +32,30 @@ extension driverOffersVC : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "driversOffersCell", for: indexPath) as! driversOffersCell
         let item = self.offers[indexPath.row]
+        
+        
+        
+        for i in cell.featureIcons {
+            i.image = i.image?.withRenderingMode(.alwaysTemplate)
+            i.tintColor = UIColor.systemGray5
+        }
+        
+        
+        
         if let features = item.features {
-            cell.airCondIcon.image = features.contains("IR CONDITIONER") ?  UIImage(named: "") : UIImage(named: "")
+           
+            cell.airCondIcon.tintColor = features.contains("AIR CONDITIONER") ?  UIColor(named: "MainColor") : UIColor.systemGray5
+            cell.wifiIcon.tintColor = features.contains(Features.wifi.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
+            cell.musicIcon.tintColor = features.contains(Features.music.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
+            cell.foodicon.tintColor = features.contains(Features.food.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
+            cell.smokingIcon.tintColor = features.contains(Features.noSmoking.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
+            cell.babyIcon.tintColor = features.contains(Features.pet.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
+           
         }
         cell.driverName.text = item.driver?.name
         cell.price.text = String ( item.price ?? 0.0 )
         cell.distance.text = self.getDestanceBetween()
+        cell.time.text = self.time
         cell.driverRate.rating = 4 // item.driverRate
         if let driverImage = item.driver?.avatar {
             cell.driverPhoto.setImage(image: driverImage )
@@ -73,6 +92,50 @@ extension driverOffersVC : UITableViewDelegate , UITableViewDataSource {
         let distanceInKM =  ( locationA.distance(from: locationB) / 100 ).rounded()
         let string = String (distanceInKM ) + " " + "km"
       return string
+    }
+    
+  func getTravilTime ()  {
+        let request = MKDirections.Request()
+        let latA = self.locationDetails?.CurrentLat ?? 0.0
+        let lngA = self.locationDetails?.currentLng ?? 0.0
+        let latB = self.locationDetails?.desLat ?? 0.0
+        let lngB = self.locationDetails?.destLng ?? 0.0
+        
+        request.source = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: latA, longitude: lngA ), addressDictionary: nil))
+        request.destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: latB , longitude: lngB ), addressDictionary: nil))
+        request.requestsAlternateRoutes = true
+        request.transportType = .automobile  // will be good for cars
+        let directions = MKDirections(request: request)
+    
+                directions.calculate {(response, error) -> Void in
+
+                    guard let response = response else {
+                        if let error = error {
+                            print("Error: \(error)")
+                        }
+                        return
+                    }
+
+                  // Lets Get the first suggested route and its travel time
+                    
+                   if response.routes.count > 0 {
+                        let route = response.routes[0]
+                        print("⏰⏰⏰⏰⏰⏰")
+                        print("\(route.expectedTravelTime / 60 )" + "mins".localize)
+                        print(route.expectedTravelTime) // it will be in seconds
+                       self.time =  "\( (route.expectedTravelTime / 60 ).rounded() )" + "mins".localize
+                       self.tableview.reloadData()
+                   } else {
+                       let coordinatesA = (latitude: self.locationDetails?.CurrentLat ?? 0.0 , longitude: self.locationDetails?.currentLng ?? 0.0)
+                       let coordinatesB = (latitude: self.locationDetails?.desLat ?? 0.0  , longitude: self.locationDetails?.destLng ?? 0.0 )
+
+                       let locationA = CLLocation(latitude: coordinatesA.latitude, longitude: coordinatesA.longitude)
+                       let locationB = CLLocation(latitude: coordinatesB.latitude , longitude: coordinatesB.longitude)
+                       let distanceInKM =  ( locationA.distance(from: locationB) / 100 ).rounded()
+                       self.time = "\(distanceInKM.rounded() + 2  )" + "mins".localize
+                       self.tableview.reloadData()
+                   }
+                }
     }
     
     

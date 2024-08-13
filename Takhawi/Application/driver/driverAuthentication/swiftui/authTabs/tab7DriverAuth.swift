@@ -9,7 +9,7 @@ import SwiftUI
 
 struct tab7DriverAuth: View {
     @State var isShowingMediaPicker : Bool = false
-    @State var urls : [URL] = []
+    @Binding var urls : [URL] 
     var IsArabicLang : Bool {
         if LocalizationManager.shared.getLanguage() == .Arabic {
             return true
@@ -19,7 +19,7 @@ struct tab7DriverAuth: View {
     }
     
     var body: some View {
-        ScrollView ( showsIndicators: false )  {
+        VStack {
             VStack ( alignment: .leading , spacing: 3) {
                 Text ( "1. Access the designated section and click on the upload button.".localize)
                 Text ( "2. Take clear pictures of the car's front, back, left side, and right side.".localize)
@@ -188,6 +188,4 @@ struct tab7DriverAuth: View {
     }
 }
 
-#Preview {
-    tab7DriverAuth()
-}
+

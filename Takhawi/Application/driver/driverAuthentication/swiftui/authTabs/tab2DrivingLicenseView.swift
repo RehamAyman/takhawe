@@ -11,7 +11,9 @@ struct tab2DrivingLicenseView: View {
     @State var showingConfirmation = false
     @State var isShowingMediaPicker = false
     @State var showDocsPicker = false
-    @State var urls: [URL] = []
+    @Binding var urls: [URL]
+    
+    
     var IsArabicLang : Bool {
         if LocalizationManager.shared.getLanguage() == .Arabic {
             return true
@@ -21,7 +23,7 @@ struct tab2DrivingLicenseView: View {
     }
     
     var body: some View {
-        ScrollView {
+        VStack {
             VStack ( alignment: .leading ) {
                 Text("Take a photo of the front and back of your driving license ".localize)
                 Text ( "Make sure all information is readable, not blurry and that all corners of the document are visible. If you are uploading a PDF, insert all pages together in one file.".localize)}
@@ -29,7 +31,6 @@ struct tab2DrivingLicenseView: View {
             .font(.custom((IsArabicLang ? AppFont.arRegular : AppFont.Regular).rawValue , size: 13))
             .padding(10)
             .foregroundColor(Color.black.opacity(0.6))
-            
             .environment(\.layoutDirection,  IsArabicLang ? .rightToLeft :  .leftToRight  )
             
             
@@ -41,7 +42,13 @@ struct tab2DrivingLicenseView: View {
                     .font(.custom((IsArabicLang ? AppFont.arRegular : AppFont.Regular).rawValue , size: 13))
                     
                     .padding(5)
-                Button(action: { self.showingConfirmation.toggle() }, label: {
+                Button(action: {  // self.showingConfirmation.toggle()
+                    if self.urls.count < 2 {
+                    isShowingMediaPicker.toggle()
+                } else {
+                    showInfoTopAlert(withMessage: "You cant upload more than 2 fiels".localize)
+                }
+                }, label: {
                     Text("Upload".localize)
                         .foregroundStyle(Color.white)
                         .font(.custom((IsArabicLang ? AppFont.arBold : AppFont.Bold).rawValue , size: 13))
@@ -72,8 +79,20 @@ struct tab2DrivingLicenseView: View {
         }
         
         .confirmationDialog("Change", isPresented: $showingConfirmation) {
-            Button("Using your Photos".localize) { isShowingMediaPicker.toggle() }
-            Button("Using your Files".localize) { showDocsPicker.toggle() }
+            Button("Using your Photos".localize) {
+                if self.urls.count < 2 {
+                isShowingMediaPicker.toggle()
+            } else {
+                showInfoTopAlert(withMessage: "You cant upload more than 2 fiels".localize)
+            }
+            }
+            Button("Using your Files".localize) {
+                if self.urls.count < 2 {
+                    showDocsPicker.toggle()
+                } else {
+                    showInfoTopAlert(withMessage: "You cant upload more than 2 fiels".localize) }
+                }
+               
             Button("Cancel".localize, role: .cancel) { }
         } message: {
             Text("Choose a method".localize)
@@ -83,14 +102,19 @@ struct tab2DrivingLicenseView: View {
                 
         .mediaImporter(isPresented: $isShowingMediaPicker,
                                 allowedMediaTypes: .images,
-                               allowsMultipleSelection: true) { result in
+                               allowsMultipleSelection: false ) { result in
                     switch result {
                     case .success(let urls):
                         
                         for i in urls {
-                            self.urls.append(i)
-                            print("--------")
-                            print(i)
+                            if self.urls.contains(i) {
+                            } else {
+                                withAnimation {
+                                    self.urls.append(i)
+                                }
+                               
+                            }
+                          
                         }
                     case .failure(let error):
                         print(error)
@@ -98,15 +122,22 @@ struct tab2DrivingLicenseView: View {
                     }
                 }
            .fileImporter(isPresented: $showDocsPicker ,
-                         allowedContentTypes: [.pdf , .png , .jpeg , .plainText , .text , .image ,.svg ,.plainText] ,
-            allowsMultipleSelection: true)
+                         allowedContentTypes: [.pdf ] ,
+            allowsMultipleSelection: false )
                                        { result in
                                            switch result {
                                            case .success(let url):
                                                print(url)
                                                //use `url.startAccessingSecurityScopedResource()` if you are going to read the data
                                                for i in url {
-                                                   self.urls.append(i)
+                                                   if self.urls.contains(i) {
+                                                       
+                                                   } else {
+                                                       withAnimation {
+                                                           self.urls.append(i)
+                                                       }
+                                                      
+                                                   }
                                                }
                                            case .failure(let error):
                                                print(error)
@@ -120,6 +151,3 @@ struct tab2DrivingLicenseView: View {
     }
 }
 
-#Preview {
-    tab2DrivingLicenseView()
-}

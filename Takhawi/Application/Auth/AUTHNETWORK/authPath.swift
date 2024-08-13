@@ -17,6 +17,15 @@ enum AuthServerPath {
     case forgetPassword
     case verifyResetCode
     case resetPassword
+    case driverUploadNationalId
+    case driverUploadDrivinglicence
+    case UploadcCarLicence
+    case driverImage
+    case uploadCarImages
+    case uploadCarInsurance
+    
+    case allCarData
+    case refreshToken
     
    
 }
@@ -40,6 +49,22 @@ extension AuthServerPath : ServerPath {
             return "auth/verify-reset-code"
         case .resetPassword :
             return "auth/reset-password"
+        case .driverUploadNationalId :
+            return "driver/upload-national-id"
+        case .driverUploadDrivinglicence :
+            return "driver/upload-driving-licence"
+        case .UploadcCarLicence:
+            return "vehicle/licence-images"
+        case .driverImage :
+            return "user/profile"
+        case .uploadCarImages:
+            return "vehicle/upload-images"
+        case .uploadCarInsurance:
+            return "vehicle/insurance-image"
+        case .allCarData :
+            return "vehicle-details"
+        case .refreshToken:
+            return ""
         }
     }
 }

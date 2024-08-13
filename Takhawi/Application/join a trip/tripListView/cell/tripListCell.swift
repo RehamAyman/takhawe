@@ -14,9 +14,24 @@ class tripListCell: UITableViewCell {
     
     //MARK: - IBOutlets -
     
+    @IBOutlet weak var driverPhoto: UIImageView!
+    @IBOutlet weak var endTime: UILabel!
+    @IBOutlet weak var startTime: UILabel!
     @IBOutlet weak var driverRate: JStarRatingView!
     @IBOutlet weak var driverName: UILabel!
    
+    @IBOutlet weak var TripDate: UILabel!
+    @IBOutlet weak var seatPrice: UILabel!
+    
+    @IBOutlet weak var availableSeatsLabel: UILabel!
+    
+    @IBOutlet weak var wifiIcon: UIImageView!
+    @IBOutlet weak var ACicon: UIImageView!
+    
+    @IBOutlet weak var smokeIcon: UIImageView!
+    @IBOutlet weak var foodIcon: UIImageView!
+    @IBOutlet weak var musicicon: UIImageView!
+    
     
     
     //MARK: - properties -
@@ -41,7 +56,28 @@ class tripListCell: UITableViewCell {
     }
     
     //MARK: - Configure Data -
-    func configureWith(data: Dummydrivers ) {
+    func configureWith(data: BasicTripResult ) {
+        self.driverName.text = data.driver_name ?? "--"
+        self.seatPrice.text = "\(data.basic_trip_price_per_seat ?? 0)"
+        self.startTime.text = data.start_date?.convertFromIsoToTimee()
+        self.endTime.text = data.end_date?.convertFromIsoToTimee()
+        self.TripDate.text = data.start_date?.convertFromIso()
+        self.availableSeatsLabel.text =  "\(data.basic_trip_available_seats_no ?? 0 ) " +  "seats are Available".localize
+        if let imageurl = URL(string: data.driver_avatar ?? "" )  {
+            self.driverPhoto.setImage(image: data.driver_avatar ?? "" )
+        }
+        if let features = data.features {
+           
+            self.ACicon.tintColor = features.contains("AIR CONDITIONER") ?  UIColor(named: "MainColor") : UIColor.systemGray5
+            self.wifiIcon.tintColor = features.contains(Features.wifi.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
+            self.musicicon.tintColor = features.contains(Features.music.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
+            self.foodIcon.tintColor = features.contains(Features.food.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
+            self.smokeIcon.tintColor = features.contains(Features.noSmoking.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
+           
+           // cell.babyIcon.tintColor = features.contains(Features.pet.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
+           
+        }
+        
         
     }
     
@@ -50,3 +86,4 @@ class tripListCell: UITableViewCell {
     
     
 }
+

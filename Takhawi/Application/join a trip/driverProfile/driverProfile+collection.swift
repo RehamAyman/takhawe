@@ -21,8 +21,13 @@ extension driverProfileVC : UICollectionViewDelegate , UICollectionViewDataSourc
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "profileCell", for: indexPath) as! profileCell
         let item = self.dummyActivty[indexPath.row]
         cell.name.text = item.name
-        cell.icon.image = UIImage(named: item.icon)
-      
+        cell.icon.image =  UIImage(named: item.icon)
+        if let mainColor = UIColor(named: "MainColor") {
+            
+            cell.icon.tintColor = UIColor.systemGray5
+           
+        }
+       
         return cell
     }
     
@@ -31,7 +36,7 @@ extension driverProfileVC : UICollectionViewDelegate , UICollectionViewDataSourc
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let label = UILabel(frame: CGRect.zero)
         label.text = self.dummyActivty[indexPath.item].name
-          label.sizeToFit()
+        label.sizeToFit()
         return CGSize(width: label.frame.width  , height: 55)
     }
     
@@ -76,4 +81,11 @@ extension driverProfileVC : UICollectionViewDelegate , UICollectionViewDataSourc
 
 
     
+    func setMainDataInfo () {
+        self.driverName.text = self.tripDetails?.driver_name ?? "--"
+        //driver rate
+        // trips
+        self.tripDate.text = self.tripDetails?.start_date?.convertFromIso()
+        
+    }
 }

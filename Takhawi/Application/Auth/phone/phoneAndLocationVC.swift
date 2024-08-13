@@ -95,7 +95,6 @@ class phoneAndLocationVC: BaseVC, UITextFieldDelegate {
                     
                     
                     if response.status == true {
-                        
                         if response.resultt == true {   // old user
                             let vc = enterPasswordVC()
                             vc.phone = phoneText
