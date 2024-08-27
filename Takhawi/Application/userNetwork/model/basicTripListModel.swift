@@ -24,6 +24,10 @@ struct BasicTripResult : Codable {
     let basic_trip_destination_id : Int?
     let basic_trip_pickup_location_id : Int?
     let distance : Double?
+    let destinationlocationname : String?
+    let startLocation : String?
+    let pickuplocation : Pickuplocation?
+    let destinationlocation : Destinationlocation?
 
     enum CodingKeys: String, CodingKey {
 
@@ -43,6 +47,10 @@ struct BasicTripResult : Codable {
         case basic_trip_destination_id = "basic_trip_destination_id"
         case basic_trip_pickup_location_id = "basic_trip_pickup_location_id"
         case distance = "distance"
+        case destinationlocationname = "destinationlocationname"
+        case startLocation = "pickuplocationname"
+        case pickuplocation = "pickuplocation"
+        case destinationlocation = "destinationlocation"
     }
 
     init(from decoder: Decoder) throws {
@@ -63,6 +71,10 @@ struct BasicTripResult : Codable {
         basic_trip_destination_id = try values.decodeIfPresent(Int.self, forKey: .basic_trip_destination_id)
         basic_trip_pickup_location_id = try values.decodeIfPresent(Int.self, forKey: .basic_trip_pickup_location_id)
         distance = try values.decodeIfPresent(Double.self, forKey: .distance)
+        destinationlocationname = try values.decodeIfPresent(String.self, forKey: .destinationlocationname)
+        startLocation = try values.decodeIfPresent(String.self, forKey: .startLocation)
+        pickuplocation = try values.decodeIfPresent(Pickuplocation.self, forKey: .pickuplocation)
+        destinationlocation = try values.decodeIfPresent(Destinationlocation.self, forKey: .destinationlocation)
     }
 
 }
@@ -84,3 +96,39 @@ struct Driver_location : Codable {
     }
 
 }
+struct Pickuplocation : Codable {
+    let lat : Double?
+    let lng : Double?
+
+    enum CodingKeys: String, CodingKey {
+
+        case lat = "lat"
+        case lng = "lng"
+    }
+
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        lat = try values.decodeIfPresent(Double.self, forKey: .lat)
+        lng = try values.decodeIfPresent(Double.self, forKey: .lng)
+    }
+
+}
+
+struct Destinationlocation : Codable {
+    let lat : Double?
+    let lng : Double?
+
+    enum CodingKeys: String, CodingKey {
+
+        case lat = "lat"
+        case lng = "lng"
+    }
+
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        lat = try values.decodeIfPresent(Double.self, forKey: .lat)
+        lng = try values.decodeIfPresent(Double.self, forKey: .lng)
+    }
+
+}
+

@@ -88,7 +88,14 @@ override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
    
             self.visualView.isHidden = true
             self.dismiss(animated: true )
-            AppHelper.changeWindowRoot(vc: homeVC())
+           
+        let vc =   homeVC()
+        let nav = CustomNavigationController(rootViewController: vc)
+        AppHelper.changeWindowRoot(vc: nav)
+        
+        
+        
+        
       
     }
     

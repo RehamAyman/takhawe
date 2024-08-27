@@ -27,7 +27,7 @@ class selectDateVC: BaseVC {
     @ObservedObject var weekStoreModel =  WeekStore()
 //MARK: - Properties -
     lazy var swiftUIView = UIHostingController(rootView: WeeksTabView(weekStoreModel: self.weekStoreModel) )
-    var change : ((String) -> Void)?
+    var change : ((String , Date ) -> Void)?
     var makeAtripCalendar : ((String , Date) -> Void)?
     var comeFromMakeAtrip : Bool = false
     
@@ -73,9 +73,15 @@ class selectDateVC: BaseVC {
 //MARK: - Actions -
     
     @IBAction func selectADate(_ sender: UIButton) {
-    
+        let ksaTimeZone = TimeZone(identifier: "Asia/Riyadh")!
+        
         print(weekStoreModel.stringSelected)
-        self.change?(weekStoreModel.stringSelected)
+        print(weekStoreModel.selectedDate)
+        print(weekStoreModel.selectedDate.tomorrow.ISO8601Format() )
+        print(weekStoreModel.selectedDate.tomorrow)
+        print(weekStoreModel.selectedDate.dateToString)
+        
+        self.change?(weekStoreModel.stringSelected , weekStoreModel.selectedDate)
         if comeFromMakeAtrip {
             self.makeAtripCalendar?("\(weekStoreModel.stringSelected) ,\(self.timePicker.date.timeToString())", weekStoreModel.selectedDate)
         }

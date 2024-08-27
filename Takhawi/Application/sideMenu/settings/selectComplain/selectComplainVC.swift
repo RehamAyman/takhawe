@@ -19,19 +19,23 @@ class selectComplainVC: BaseVC{
     
     @IBOutlet weak var tableview: UITableView!
     //MARK: - Properties -
-    var passComplainTitle : ((String) -> Void)?
+    var passComplainTitle : ((String ) -> Void)?
     var selectedItem : String = ""
     var viewDismissed : (() -> Void)?
     
+    
+    
     var complains : [String] = [
-        "Vehicle not clean".localize ,
-        "Driver behavior".localize ,
-        "Route deviation".localize ,
-        "Fare disputes".localize ,
-        "Safety concerns".localize ,
-        "Lost items".localize ,
-        "Accessibility issues".localize ,
-        "Other issues".localize
+        "Vehicle not clean" ,
+        "Driver behavior" ,
+        "Route deviation" ,
+        "Fare disputes" ,
+        "Safety concerns" ,
+        "Lost items" ,
+        "Accessibility issues",
+        "Vehicle condition" , 
+        "Other issues"
+        
     ]
 
     
@@ -78,7 +82,7 @@ extension selectComplainVC : UITableViewDelegate, UITableViewDataSource   {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "selectYourComplainCell", for: indexPath) as! selectYourComplainCell
-        let item = self.complains[indexPath.row]
+        let item = self.complains[indexPath.row].localize
         cell.complainLabel.text = item
        
         return cell
@@ -90,7 +94,8 @@ extension selectComplainVC : UITableViewDelegate, UITableViewDataSource   {
         }
         cell.checkBox.isHidden = false
         cell.checkBox.play()
-        self.selectedItem = cell.complainLabel.text ?? ""
+        let item = self.complains[indexPath.row]
+        self.selectedItem = item
       
     }
     

@@ -12,15 +12,17 @@ class walletVC : BaseVC {
     //MARK: - IBOutlets -
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var totalAmmount: UILabel!
     
     //MARK: - Properties -
     
-    
+    var walletTransactions : [WalletResult] = []
     
     // MARK: - Lifecycle -
         override func viewDidLoad() {
             super.viewDidLoad()
             self.configureInitialDesign()
+            self.getUserAmmount()
         }
         
     //MARK: - Design Methods -
@@ -38,6 +40,8 @@ class walletVC : BaseVC {
         let vc = addAmountVC()
         push(vc)
     }
+    
+    
     
     
 }

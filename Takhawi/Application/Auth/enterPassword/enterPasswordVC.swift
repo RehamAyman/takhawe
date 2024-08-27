@@ -90,10 +90,12 @@ extension enterPasswordVC {
                         // check driver status
                      
                         if response.result?.user?.driver_status == "APPROVED" {
-                            let vc = DriverHomeVC()
-                            self?.push(vc)
+                            UserDefaults.isLogin = true
+                            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                            let vc = storyboard.instantiateViewController(withIdentifier: "DriverTabbar") as! DriverTabbar
+                            self?.navigationController?.pushViewController(vc, animated: true)
+                         
                         } else if response.result?.user?.driver_status == "REGISTERED" {
-                            
                             
                             self?.showDriverStatusLoading(bool: true )
                            // self?.getCarDetails()

@@ -7,6 +7,7 @@
 
 import UIKit
 import GoogleMaps
+import Lottie
 
 
 
@@ -18,9 +19,7 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
         vc.modalTransitionStyle = .crossDissolve
         vc.modalPresentationStyle = .overCurrentContext
         vc.action = {
-            
             self.createVipTrip()
-           
         }
         self.present(vc , animated: true)
     }
@@ -40,10 +39,7 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
             self.secMydestinationOutlet.setTitle(location, for: .normal)
         }
        
-      
-    
-        
-        
+ 
     }
     
 //MARK: - TABLE VIEW METHODS
@@ -86,8 +82,9 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
         locationManager.requestLocation()
         locationManager.startUpdatingLocation()
         googleMaps.delegate = self
-        googleMaps.isMyLocationEnabled = true
-        
+     
+       
+        setupLottieView()
         do {
                     // Set the map style by passing the URL of the local file.
                     if let styleURL = Bundle.main.url(forResource: "googleMapsStyle", withExtension: "json") {
@@ -99,9 +96,31 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
                 } catch {
                     NSLog("One or more of the map styles failed to load. \(error)")
                 }
+     
+      googleMaps.settings.myLocationButton = false
+      googleMaps.isMyLocationEnabled = true
     }
 
     
+    func setupLottieView() {
+           // Initialize Lottie animation view with your animation JSON file
+           lottieAnimationView = LottieAnimationView(name: "z2vKVVJpIc")
+           lottieAnimationView.frame = CGRect(x: 0, y: 0, width: 200, height: 200) // Adjust size as needed
+           lottieAnimationView.contentMode = .scaleAspectFit
+           lottieAnimationView.loopMode = .loop
+           lottieAnimationView.play()
+           
+           // Start the animation
+         //  lottieAnimationView.play()
+           
+           // Add the Lottie view to the view hierarchy
+           lottieAnimationView.isHidden = true
+           self.googleMaps.addSubview(lottieAnimationView)
+       
+       }
+
+
+
     
     func requestLocationAccess() {
         let status = CLLocationManager.authorizationStatus()
@@ -126,11 +145,18 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
        
         centerMapOnLocation(location: locationManager.location!)
         self.locationManager.stopUpdatingLocation()
-        let lat = "\(locationManager.location?.coordinate.latitude ?? 0.0)"
-        let long = "\(locationManager.location?.coordinate.longitude ?? 0.0 )"
+        
         guard let latitude = locationManager.location?.coordinate.latitude else { return}
         guard let longitude =  locationManager.location?.coordinate.longitude else { return}
         getAddress(lat: latitude , Lng: longitude)
+        
+        if let location = locations.last {
+            let userLocation = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+            let point = googleMaps.projection.point(for: userLocation)
+            lottieAnimationView.center = point
+            lottieAnimationView.isHidden = false
+        }
+        
       
     }
     
@@ -159,34 +185,21 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
                         }
                     }
         }
-     
     }
-    
-    
-    
-    
-    
-    
-    
-    
+     
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         Alertt.showAlertOnVC(target: self, title: "Make sure GPS is open".localized, message: "")
     }
     
     func centerMapOnLocation(location: CLLocation){
-        let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude, longitude: location.coordinate.longitude, zoom: 12.0)
-      
+        let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude, longitude: location.coordinate.longitude, zoom: 13.0)
         self.googleMaps.camera = camera
         self.googleMaps.animate(toZoom: 16)
-        
-        
     }
     
     
-    
-    
-    
+   
     func getCoordinateBounds(latitude:CLLocationDegrees ,
                              longitude:CLLocationDegrees,
                              distance:Double = 0.23)->GMSCoordinateBounds{

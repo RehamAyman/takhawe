@@ -14,7 +14,7 @@ struct vipData : Codable {
     let start_date : String?
     let end_date : String?
     let status : String?
-    let price : String?
+    let price : Int?
     let gender : String?
     let type : String?
     let createdAt : String?
@@ -47,7 +47,7 @@ struct vipData : Codable {
         start_date = try values.decodeIfPresent(String.self, forKey: .start_date)
         end_date = try values.decodeIfPresent(String.self, forKey: .end_date)
         status = try values.decodeIfPresent(String.self, forKey: .status)
-        price = try values.decodeIfPresent(String.self, forKey: .price)
+        price = try values.decodeIfPresent(Int.self, forKey: .price)
         gender = try values.decodeIfPresent(String.self, forKey: .gender)
         type = try values.decodeIfPresent(String.self, forKey: .type)
         createdAt = try values.decodeIfPresent(String.self, forKey: .createdAt)

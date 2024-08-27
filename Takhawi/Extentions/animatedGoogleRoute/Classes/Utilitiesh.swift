@@ -28,6 +28,9 @@ class Utilities {
         let directions = MKDirections(request: directionRequest)
 
         directions.calculate { (response, error) in
+            
+            
+          
             onCompleted(response?.routes.first?.polyline.coordinates)
         }
     }

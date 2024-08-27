@@ -18,7 +18,13 @@ class DriverHomeVC: BaseVC  {
     
 //MARK: - OUTLETS
     
+    @IBOutlet weak var createAtrip: UIImageView!
     
+    @IBOutlet weak var switchContainer: UIView!
+    
+    
+    @IBOutlet weak var driverName: UILabel!
+    @IBOutlet weak var userName: UILabel!
     
     @IBOutlet weak var buttomContainerView: UIView!
     @IBOutlet weak var notificationView: UIView!
@@ -33,7 +39,7 @@ class DriverHomeVC: BaseVC  {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.driverImage.layer.applySketchShadow(color: .black)
+    
         self.requestLocationAccess()
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
@@ -41,15 +47,25 @@ class DriverHomeVC: BaseVC  {
         self.notificationView.layer.addBasicShadow(cornerRadius: 16)
         self.buttomContainerView.layer.addBasicShadow(cornerRadius: 20)
         self.setUpGoogleMapView()
-        
-        switchButton = SwitchButton(frame: CGRect(x: self.view.frame.width/1.6 , y: 58, width: 165, height: 75))
+       
+        switchButton = SwitchButton(frame: self.switchContainer.frame)
         switchButton.status = false
         self.view.addSubview(switchButton)
+        
+        
+        switchButton.translatesAutoresizingMaskIntoConstraints = false
+
+        switchButton.leadingAnchor.constraint(equalTo: self.switchContainer.leadingAnchor).isActive = true
+        switchButton.trailingAnchor.constraint(equalTo: self.switchContainer.trailingAnchor).isActive = true
+        switchButton.topAnchor.constraint(equalTo: self.switchContainer.topAnchor).isActive = true
+        switchButton.bottomAnchor.constraint(equalTo: self.switchContainer.bottomAnchor).isActive = true
+      
+        self.driverName.text = UserDefaults.user?.user?.name ?? ""
+        
         self.switchButtonAction()
-        self.checkDriverStatus()
+        self.createAtripAction()
         
-       
-        
+  
     }
     
     

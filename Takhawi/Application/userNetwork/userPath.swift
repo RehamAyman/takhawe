@@ -15,8 +15,15 @@ enum userServerPath {
     case allCityies
     case getAllBasicTrips
     case recentAddress
-  
-    
+    case getOneBasicTripDetails ( id : Int)
+    case complain
+    case getProfile
+    case addAddressToFavs
+    case calculateBasicPrice ( id : Int )
+    case joinAbasicTrip
+    case calculateVipPrice ( id : Int )
+    case getWalletData
+    case getAllHobiies
     
    
 }
@@ -38,7 +45,24 @@ extension userServerPath : ServerPath {
             return "basic-trip/"
         case .recentAddress:
             return "recent-address"
-      
+        case .getOneBasicTripDetails(id: let id ) :
+            return "basic-trip/\(id)"
+        case .complain:
+            return "complaint/"
+        case .getProfile:
+            return "user/profile"
+        case .addAddressToFavs:
+            return "address/"
+        case .calculateBasicPrice( id : let id ):
+            return "basic-trip/calculate-price/\(id)"
+        case .joinAbasicTrip:
+            return "basic-trip/join"
+        case .calculateVipPrice(id: let id ):
+            return "vip-trip/calculate-price/\(id)"
+        case .getWalletData:
+            return "wallet/user-transactions"
+        case .getAllHobiies :
+            return "hobby/"
     
         }
     }

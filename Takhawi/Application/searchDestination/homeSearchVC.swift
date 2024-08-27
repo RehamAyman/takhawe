@@ -37,11 +37,11 @@ class homeSearchVC: BaseVC{
     
     var selectAndDismiss : ((String , Double , Double ) -> Void)?
         
-    var results: [GMSAutocompletePrediction] = []
+    var results: [googleResult] = []
     
     var fetcher: GMSAutocompleteFetcher?
     var recentPlaces : [RecentAddressResult] = []
-   
+    var selectedIndexPath: IndexPath?
     
 // MARK: - Lifecycle -
     override func viewDidLoad() {
@@ -62,26 +62,11 @@ class homeSearchVC: BaseVC{
         
         func placeAutoComplete() {
            
-             let filter = GMSAutocompleteFilter()
-             filter.type = .city
             
-//            placesClient?.findAutocompletePredictions(fromQuery: searchTextField.text! ,
-//                                                      bounds: nil,
-//                                                      boundsMode: GMSAutocompleteBoundsMode.restrict ,
-//                                                      filter: filter,
-//                                                      sessionToken: GMSAutocompleteSessionToken() ,
-//                                                      callback: { (results, error) in
-//                if let error = error {
-//                  print("Autocomplete error: \(error)")
-//                  return
-//                }
-//                if let results = results {
-//                  for result in results {
-//                    print("Result \(result.attributedFullText) with placeID \(result.placeID)")
-//                  }
-//                }
-//            })
-          
+            
+            
+             let filter = GMSAutocompleteFilter()
+            filter.type = .address
             
              placesClient.autocompleteQuery(searchTextField.text!, bounds: nil, filter: filter, callback: {(results, error) -> Void in
                  if let error = error {
@@ -89,24 +74,29 @@ class homeSearchVC: BaseVC{
                      return
                  }
                  if let results = results {
-                     self.results = results
+                     
+                  
+                     let output : [googleResult] = results.map { p in
+                         googleResult(fullText: p.attributedFullText.string , secText: p.attributedSecondaryText?.string ?? "" , selected: false , placeID: p.placeID, PlaceSelected: false , description: p.description)
+                     }
+                     
+                     self.results = output
+                     
+                 
+                     
+                   
+//                     for i in results {
+//                         
+//                         
+//                         let res = googleResult(fullText: i.attributedFullText.string , secText: i.attributedSecondaryText?.string ?? "" , selected: false, placeID: i.placeID, PlaceSelected: false, description: i.description  )
+//                         self.results.append(res)
+//                     }
+//                     
                      self.googleTableView.reloadData()
                      self.googleTableView.isHidden = false
                      self.googleTableView.isUserInteractionEnabled = true
                      
-                     for result in results {
-                         print("Result \(result.attributedPrimaryText)")
-                         print("⏰⏰⏰⏰⏰⏰⏰")
-                         print(result.placeID)
-                         
-                         print(result.description)
-                         print(result.debugDescription)
-                         print(result.attributedFullText.string)
-                         
-                         
-                       
-                        
-                     }
+                    
                  } else {
                     print("no results ")
                      self.googleTableView.isHidden = true
@@ -220,3 +210,13 @@ extension homeSearchVC {
 }
 
 
+
+struct googleResult {
+    let fullText : String
+    let secText : String
+    var selected : Bool
+    let placeID : String
+    var PlaceSelected : Bool 
+    let description : String
+    
+}

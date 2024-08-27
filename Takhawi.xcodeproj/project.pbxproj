@@ -222,6 +222,8 @@
 		CE0F42F92B4D0F6E005694AC /* onboardingSwiftuiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F42F82B4D0F6E005694AC /* onboardingSwiftuiView.swift */; };
 		CE115E5B2ABED5CC00972CC9 /* homeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE115E5A2ABED5CC00972CC9 /* homeVC.xib */; };
 		CE115E5D2ABED5E800972CC9 /* homeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE115E5C2ABED5E800972CC9 /* homeVC.swift */; };
+		CE1A11D12C6C9D7A00F6FDE2 /* validationUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1A11D02C6C9D7A00F6FDE2 /* validationUrl.swift */; };
+		CE1A11D32C6CA3FF00F6FDE2 /* oneBasicTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1A11D22C6CA3FF00F6FDE2 /* oneBasicTrip.swift */; };
 		CE1A94E02B6CD549003C50EF /* fileUploadedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1A94DF2B6CD549003C50EF /* fileUploadedView.swift */; };
 		CE2292852B1E57B300E8AB42 /* hotelsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2292842B1E57B300E8AB42 /* hotelsVC.swift */; };
 		CE2292872B1E57C100E8AB42 /* hotelsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2292862B1E57C100E8AB42 /* hotelsVC.xib */; };
@@ -235,6 +237,7 @@
 		CE27F5442ADFB02F00DEA419 /* GoogleMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27F5422ADFB02F00DEA419 /* GoogleMapViewController.swift */; };
 		CE27F5472ADFD3B700DEA419 /* selectDateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27F5462ADFD3B700DEA419 /* selectDateVC.swift */; };
 		CE27F5492ADFD3D200DEA419 /* selectDateVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE27F5482ADFD3D200DEA419 /* selectDateVC.xib */; };
+		CE2A8ECA2C7793D000112D2F /* basicPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2A8EC92C7793D000112D2F /* basicPrice.swift */; };
 		CE2BA6222B72DA6A0027DCA2 /* tab7DriverAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BA6212B72DA6A0027DCA2 /* tab7DriverAuth.swift */; };
 		CE2D4AEC2B184E99008D556E /* filterViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D4AEB2B184E99008D556E /* filterViewVC.swift */; };
 		CE2D4AEE2B184EA5008D556E /* filterViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2D4AED2B184EA5008D556E /* filterViewVC.xib */; };
@@ -273,6 +276,8 @@
 		CE3CEEE32B1654B400619C79 /* rAjz5wfQVS.json in Resources */ = {isa = PBXBuildFile; fileRef = CE3CEEE22B1654B400619C79 /* rAjz5wfQVS.json */; };
 		CE3D2B3C2B780A860067E63B /* customSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D2B3B2B780A860067E63B /* customSwitch.swift */; };
 		CE3D2B3F2B78195B0067E63B /* driverHome+functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D2B3E2B78195B0067E63B /* driverHome+functions.swift */; };
+		CE3FDC5D2C795424000C2BDC /* driverCreateTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3FDC5C2C795424000C2BDC /* driverCreateTripVC.swift */; };
+		CE3FDC5F2C795441000C2BDC /* driverCreateTripVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE3FDC5E2C795441000C2BDC /* driverCreateTripVC.xib */; };
 		CE41C63B2BA4FE3800DBE739 /* 9t8knRBCgn.json in Resources */ = {isa = PBXBuildFile; fileRef = CE41C63A2BA4FE3800DBE739 /* 9t8knRBCgn.json */; };
 		CE44773A2AE03DBD000D96F6 /* selectDateExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4477392AE03DBD000D96F6 /* selectDateExtention.swift */; };
 		CE44773D2AE042D5000D96F6 /* calendarSwiftui.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE44773C2AE042D5000D96F6 /* calendarSwiftui.swift */; };
@@ -281,6 +286,7 @@
 		CE4477442AE0440E000D96F6 /* calendarWeekStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4477432AE0440E000D96F6 /* calendarWeekStore.swift */; };
 		CE4843D72B245FE200FFAD1D /* amenitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4843D52B245FE200FFAD1D /* amenitiesCell.swift */; };
 		CE4843D82B245FE200FFAD1D /* amenitiesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE4843D62B245FE200FFAD1D /* amenitiesCell.xib */; };
+		CE4B81022C7427EC0009714C /* profileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4B81012C7427EC0009714C /* profileData.swift */; };
 		CE4E22CD2C0CE4C60092AE16 /* registerTabsExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4E22CC2C0CE4C60092AE16 /* registerTabsExtention.swift */; };
 		CE4E22D82C0DDFC40092AE16 /* APIGloabelResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4E22D72C0DDFC40092AE16 /* APIGloabelResponse.swift */; };
 		CE4E22DA2C0DDFD30092AE16 /* APIParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4E22D92C0DDFD30092AE16 /* APIParameters.swift */; };
@@ -342,6 +348,8 @@
 		CE8291F42C414CF500E289EF /* genericConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8291F32C414CF500E289EF /* genericConst.swift */; };
 		CE8291F82C41752500E289EF /* driverRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8291F72C41752500E289EF /* driverRouter.swift */; };
 		CE8291FA2C41753400E289EF /* driverPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8291F92C41753400E289EF /* driverPath.swift */; };
+		CE8DE1462C7B8945005B139F /* walletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8DE1452C7B8945005B139F /* walletModel.swift */; };
+		CE8DE1482C7BF93D005B139F /* z2vKVVJpIc.json in Resources */ = {isa = PBXBuildFile; fileRef = CE8DE1472C7BF93D005B139F /* z2vKVVJpIc.json */; };
 		CE9757C42AE0F0BD0014346E /* tripListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9757C12AE0F0BD0014346E /* tripListCell.swift */; };
 		CE9757C52AE0F0BD0014346E /* tripListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9757C22AE0F0BD0014346E /* tripListVC.swift */; };
 		CE9757C62AE0F0BD0014346E /* tripListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9757C32AE0F0BD0014346E /* tripListCell.xib */; };
@@ -673,6 +681,8 @@
 		CE0F42F82B4D0F6E005694AC /* onboardingSwiftuiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onboardingSwiftuiView.swift; sourceTree = "<group>"; };
 		CE115E5A2ABED5CC00972CC9 /* homeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = homeVC.xib; sourceTree = "<group>"; };
 		CE115E5C2ABED5E800972CC9 /* homeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeVC.swift; sourceTree = "<group>"; };
+		CE1A11D02C6C9D7A00F6FDE2 /* validationUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = validationUrl.swift; sourceTree = "<group>"; };
+		CE1A11D22C6CA3FF00F6FDE2 /* oneBasicTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oneBasicTrip.swift; sourceTree = "<group>"; };
 		CE1A94DF2B6CD549003C50EF /* fileUploadedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fileUploadedView.swift; sourceTree = "<group>"; };
 		CE2292842B1E57B300E8AB42 /* hotelsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hotelsVC.swift; sourceTree = "<group>"; };
 		CE2292862B1E57C100E8AB42 /* hotelsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = hotelsVC.xib; sourceTree = "<group>"; };
@@ -688,6 +698,7 @@
 		CE27F5422ADFB02F00DEA419 /* GoogleMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleMapViewController.swift; sourceTree = "<group>"; };
 		CE27F5462ADFD3B700DEA419 /* selectDateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectDateVC.swift; sourceTree = "<group>"; };
 		CE27F5482ADFD3D200DEA419 /* selectDateVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = selectDateVC.xib; sourceTree = "<group>"; };
+		CE2A8EC92C7793D000112D2F /* basicPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = basicPrice.swift; sourceTree = "<group>"; };
 		CE2BA6212B72DA6A0027DCA2 /* tab7DriverAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tab7DriverAuth.swift; sourceTree = "<group>"; };
 		CE2D4AEB2B184E99008D556E /* filterViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = filterViewVC.swift; sourceTree = "<group>"; };
 		CE2D4AED2B184EA5008D556E /* filterViewVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = filterViewVC.xib; sourceTree = "<group>"; };
@@ -726,6 +737,8 @@
 		CE3CEEE22B1654B400619C79 /* rAjz5wfQVS.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rAjz5wfQVS.json; sourceTree = "<group>"; };
 		CE3D2B3B2B780A860067E63B /* customSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customSwitch.swift; sourceTree = "<group>"; };
 		CE3D2B3E2B78195B0067E63B /* driverHome+functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "driverHome+functions.swift"; sourceTree = "<group>"; };
+		CE3FDC5C2C795424000C2BDC /* driverCreateTripVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = driverCreateTripVC.swift; sourceTree = "<group>"; };
+		CE3FDC5E2C795441000C2BDC /* driverCreateTripVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = driverCreateTripVC.xib; sourceTree = "<group>"; };
 		CE41C63A2BA4FE3800DBE739 /* 9t8knRBCgn.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 9t8knRBCgn.json; sourceTree = "<group>"; };
 		CE44772F2AE01599000D96F6 /* HorizontalCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HorizontalCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4477392AE03DBD000D96F6 /* selectDateExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectDateExtention.swift; sourceTree = "<group>"; };
@@ -735,6 +748,7 @@
 		CE4477432AE0440E000D96F6 /* calendarWeekStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calendarWeekStore.swift; sourceTree = "<group>"; };
 		CE4843D52B245FE200FFAD1D /* amenitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = amenitiesCell.swift; sourceTree = "<group>"; };
 		CE4843D62B245FE200FFAD1D /* amenitiesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = amenitiesCell.xib; sourceTree = "<group>"; };
+		CE4B81012C7427EC0009714C /* profileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileData.swift; sourceTree = "<group>"; };
 		CE4E22CC2C0CE4C60092AE16 /* registerTabsExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerTabsExtention.swift; sourceTree = "<group>"; };
 		CE4E22D72C0DDFC40092AE16 /* APIGloabelResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIGloabelResponse.swift; sourceTree = "<group>"; };
 		CE4E22D92C0DDFD30092AE16 /* APIParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIParameters.swift; sourceTree = "<group>"; };
@@ -796,6 +810,8 @@
 		CE8291F32C414CF500E289EF /* genericConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = genericConst.swift; sourceTree = "<group>"; };
 		CE8291F72C41752500E289EF /* driverRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = driverRouter.swift; sourceTree = "<group>"; };
 		CE8291F92C41753400E289EF /* driverPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = driverPath.swift; sourceTree = "<group>"; };
+		CE8DE1452C7B8945005B139F /* walletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = walletModel.swift; sourceTree = "<group>"; };
+		CE8DE1472C7BF93D005B139F /* z2vKVVJpIc.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = z2vKVVJpIc.json; sourceTree = "<group>"; };
 		CE9035E72B1483350033D1C1 /* Lottie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Lottie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9757C12AE0F0BD0014346E /* tripListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripListCell.swift; sourceTree = "<group>"; };
 		CE9757C22AE0F0BD0014346E /* tripListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripListVC.swift; sourceTree = "<group>"; };
@@ -1392,6 +1408,7 @@
 				9694AB932A5DFACA00BDF5F8 /* Extention+Material.swift */,
 				9668D9192A6EAD7D0075CC56 /* UIShowHideTextField.swift */,
 				CE3021422ABBB86500572DE7 /* phoneFormate.swift */,
+				CE1A11D02C6C9D7A00F6FDE2 /* validationUrl.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -1929,6 +1946,7 @@
 		CE3CACC52B2D8E2F0025990E /* animatedLoader */ = {
 			isa = PBXGroup;
 			children = (
+				CE8DE1472C7BF93D005B139F /* z2vKVVJpIc.json */,
 				CE3CACC62B2D8E3F0025990E /* animatedLoader.swift */,
 			);
 			path = animatedLoader;
@@ -1961,6 +1979,15 @@
 				CE3CEEE02B16532F00619C79 /* findingAdriverVC.xib */,
 			);
 			path = findingAdriver;
+			sourceTree = "<group>";
+		};
+		CE3FDC5B2C79540E000C2BDC /* createAtrip */ = {
+			isa = PBXGroup;
+			children = (
+				CE3FDC5C2C795424000C2BDC /* driverCreateTripVC.swift */,
+				CE3FDC5E2C795441000C2BDC /* driverCreateTripVC.xib */,
+			);
+			path = createAtrip;
 			sourceTree = "<group>";
 		};
 		CE44773B2AE042C4000D96F6 /* calendar */ = {
@@ -2011,6 +2038,7 @@
 		CE4F0BA42B764A2200337A49 /* DriverHome */ = {
 			isa = PBXGroup;
 			children = (
+				CE3FDC5B2C79540E000C2BDC /* createAtrip */,
 				CE4F0BAD2B77974F00337A49 /* home */,
 				CE4F0BA92B777B8D00337A49 /* DriverTabbar.swift */,
 			);
@@ -2549,6 +2577,10 @@
 				CEEE6E332C5FADE500AB7435 /* cities.swift */,
 				CEEE6E3F2C619D0200AB7435 /* basicTripListModel.swift */,
 				CEEC5B3C2C636410004CC98C /* recentAddressModel.swift */,
+				CE1A11D22C6CA3FF00F6FDE2 /* oneBasicTrip.swift */,
+				CE4B81012C7427EC0009714C /* profileData.swift */,
+				CE2A8EC92C7793D000112D2F /* basicPrice.swift */,
+				CE8DE1452C7B8945005B139F /* walletModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -2815,6 +2847,7 @@
 				9694AC5B2A5E040D00BDF5F8 /* no-search-result.json in Resources */,
 				CE22928C2B1E638300E8AB42 /* hotelCell.xib in Resources */,
 				CE30212A2ABB275400572DE7 /* phoneAndLocationVC.xib in Resources */,
+				CE3FDC5F2C795441000C2BDC /* driverCreateTripVC.xib in Resources */,
 				CEE69AE52B4C344200E2E58D /* Cairo-ExtraLight.ttf in Resources */,
 				9694AC632A5E040D00BDF5F8 /* ArbFONTS-URW-DIN-Arabic-Demi.ttf in Resources */,
 				CE3B53AF2B2B2365003D3043 /* tipsCell.xib in Resources */,
@@ -2849,6 +2882,7 @@
 				CE2292872B1E57C100E8AB42 /* hotelsVC.xib in Resources */,
 				049358902B43DA81004E5259 /* Localizable.strings in Resources */,
 				CEEE6E322C5FAA5100AB7435 /* chooseCityVC.xib in Resources */,
+				CE8DE1482C7BF93D005B139F /* z2vKVVJpIc.json in Resources */,
 				04C737CA2B36E04F002AE59C /* helpAndSupportVC.xib in Resources */,
 				CE9F3C592B1B482E004C3D24 /* BDidekRogj.json in Resources */,
 				CE27F5432ADFB02F00DEA419 /* GoogleMapViewController.xib in Resources */,
@@ -3071,6 +3105,7 @@
 				9694ABC82A5DFACA00BDF5F8 /* UIlableExtension.swift in Sources */,
 				CEBB8B902ADE489A00E70EC4 /* RecentPlacesCell.swift in Sources */,
 				9694ABCB2A5DFACA00BDF5F8 /* extensionUIStoryBoard.swift in Sources */,
+				CE2A8ECA2C7793D000112D2F /* basicPrice.swift in Sources */,
 				CEEFF5A62C63E1C300337CC2 /* googleplacesCell.swift in Sources */,
 				CE3D2B3F2B78195B0067E63B /* driverHome+functions.swift in Sources */,
 				9641AD362A6C2C4200A29046 /* OnboardingCollectionViewCell.swift in Sources */,
@@ -3115,6 +3150,7 @@
 				CE4E22CD2C0CE4C60092AE16 /* registerTabsExtention.swift in Sources */,
 				9694ABE02A5DFACA00BDF5F8 /* Optional.swift in Sources */,
 				CE72B0212C0353C2009AC905 /* checkPhoneModel.swift in Sources */,
+				CE1A11D32C6CA3FF00F6FDE2 /* oneBasicTrip.swift in Sources */,
 				CE3CACC72B2D8E3F0025990E /* animatedLoader.swift in Sources */,
 				CE6178AA2ACD104900AA8BB7 /* mapSearchVC.swift in Sources */,
 				9694ABDC2A5DFACA00BDF5F8 /* Array.swift in Sources */,
@@ -3140,6 +3176,7 @@
 				04C737CF2B371037002AE59C /* selectComplainVC.swift in Sources */,
 				CE3B53A22B2AFD6A003D3043 /* rateTheDriverDelegates.swift in Sources */,
 				CE4F0BAC2B77962700337A49 /* DriverHomeVC.swift in Sources */,
+				CE3FDC5D2C795424000C2BDC /* driverCreateTripVC.swift in Sources */,
 				CEF0E7E32B4F3B5900DCBD69 /* AudioPlayer.swift in Sources */,
 				CE385D972AE267A4008F2D50 /* LocationUtilities.swift in Sources */,
 				CEEDC0212B2E10F10017C804 /* notivicationViewVC+delegates.swift in Sources */,
@@ -3155,6 +3192,7 @@
 				04C737B32B36D1C0002AE59C /* tripsSideMenuVC.swift in Sources */,
 				CEA4B1352C05FD7500DCAB48 /* loginModel.swift in Sources */,
 				04B659EA2B34519B00E78752 /* animatedCartSwiftuiView.swift in Sources */,
+				CE1A11D12C6C9D7A00F6FDE2 /* validationUrl.swift in Sources */,
 				9694AC562A5E040D00BDF5F8 /* AppColor.swift in Sources */,
 				CE3021282ABB274100572DE7 /* phoneAndLocationVC.swift in Sources */,
 				CECC3D4A2C6B250B007AD2D4 /* vehicle.swift in Sources */,
@@ -3164,6 +3202,7 @@
 				CE4E22E62C0DE0190092AE16 /* Utilities.swift in Sources */,
 				CEDAC5722C36E3F70054028E /* features.swift in Sources */,
 				CE0F42F92B4D0F6E005694AC /* onboardingSwiftuiView.swift in Sources */,
+				CE4B81022C7427EC0009714C /* profileData.swift in Sources */,
 				9694ABF62A5DFACA00BDF5F8 /* MarkerView.swift in Sources */,
 				9694ABFC2A5DFACA00BDF5F8 /* AlertView.swift in Sources */,
 				04658F522B3746B500470F0D /* presentWithBlurEffect.swift in Sources */,
@@ -3256,6 +3295,7 @@
 				CE4843D72B245FE200FFAD1D /* amenitiesCell.swift in Sources */,
 				CE71F4702B16885B00E7B689 /* driversOffersCell.swift in Sources */,
 				9694ABC92A5DFACA00BDF5F8 /* UIViewLayout.swift in Sources */,
+				CE8DE1462C7B8945005B139F /* walletModel.swift in Sources */,
 				04B659E32B3443AF00E78752 /* addAmmountVC.swift in Sources */,
 				CE44773F2AE04355000D96F6 /* weeksTabView.swift in Sources */,
 				9694AC6E2A5E040D00BDF5F8 /* Extensions+UITextField.swift in Sources */,

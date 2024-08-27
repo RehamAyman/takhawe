@@ -16,6 +16,8 @@ struct offerResult : Codable {
     let trip_id : Int?
     let createdAt : String?
     let driver : Driver?
+    let Vehicle_Color : itemObj?
+    let Vehicle_Class : itemObj?
 
     enum CodingKeys: String, CodingKey {
 
@@ -28,6 +30,8 @@ struct offerResult : Codable {
         case trip_id = "trip_id"
         case createdAt = "createdAt"
         case driver = "Driver"
+        case Vehicle_Color = "Vehicle_Color"
+        case Vehicle_Class = "Vehicle_Class"
     }
 
     init(from decoder: Decoder) throws {
@@ -41,6 +45,8 @@ struct offerResult : Codable {
         trip_id = try values.decodeIfPresent(Int.self, forKey: .trip_id)
         createdAt = try values.decodeIfPresent(String.self, forKey: .createdAt)
         driver = try values.decodeIfPresent(Driver.self, forKey: .driver)
+        Vehicle_Color = try values.decodeIfPresent(itemObj.self, forKey: .Vehicle_Color)
+        Vehicle_Class = try values.decodeIfPresent(itemObj.self, forKey: .Vehicle_Class)
     }
 
 }
@@ -58,6 +64,25 @@ struct Driver : Codable {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         name = try values.decodeIfPresent(String.self, forKey: .name)
         avatar = try values.decodeIfPresent(String.self, forKey: .avatar)
+    }
+
+}
+
+//itemObj
+struct itemObj : Codable {
+    let name : String?
+    
+
+    enum CodingKeys: String, CodingKey {
+
+        case name = "name"
+       
+    }
+
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        name = try values.decodeIfPresent(String.self, forKey: .name)
+       
     }
 
 }

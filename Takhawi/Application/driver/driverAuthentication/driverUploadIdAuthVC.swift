@@ -38,7 +38,7 @@ class driverAuthVC: BaseVC {
             // go to driver home 
 //            let storyboard = UIStoryboard(name: "Main", bundle: nil)
 //            let vc = storyboard.instantiateViewController(withIdentifier: "DriverTabbar") as! DriverTabbar
-            let vc = LoginVC()
+            let vc =  phoneAndLocationVC() //   LoginVC()
             self.push(vc)
             
         }

@@ -22,6 +22,7 @@ class WeekStore: ObservableObject {
 
     init(with date: Date = Date()) {
         self.selectedDate = Calendar.current.startOfDay(for: date)
+        
         self.stringSelected = selectedDate.dateToString ?? ""
         calcWeeks(with: selectedDate)
     }

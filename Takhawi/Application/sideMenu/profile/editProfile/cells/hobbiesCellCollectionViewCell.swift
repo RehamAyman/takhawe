@@ -9,6 +9,7 @@ import UIKit
 
 class hobbiesCellCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var crossAction: UIImageView!
     @IBOutlet weak var hobbieName: UILabel!
     @IBOutlet weak var icon: UIImageView!
     override func awakeFromNib() {

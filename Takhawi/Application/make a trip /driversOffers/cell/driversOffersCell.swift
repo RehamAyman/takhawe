@@ -11,6 +11,7 @@ import Cosmos
 class driversOffersCell: UITableViewCell {
     @IBOutlet weak var distance: UILabel!
     
+    @IBOutlet weak var carName: UILabel!
     @IBOutlet var featureIcons: [UIImageView]!
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var price: UILabel!

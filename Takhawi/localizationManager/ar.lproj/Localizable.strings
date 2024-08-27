@@ -325,3 +325,8 @@
 "seats" =  "مقعد" ; 
 "please enter your plate num first! " = "من فضلك ادخل حروف وارقام اللوحة اولا ." ;
 "Your account has been created successfully and is awaiting review by the administration." = "تم انشاء حسابك بنجاح وفي انتظار مراجعته من قبل الاداره" ;
+"trips: " = "الرحلات: " ; 
+"Your Complain has been sent successfully" = "تم ارسال شكوتك للاداره بنجاح .." ;
+"Vehicle condition" = "حالة السياره" ; 
+"App Share" = "عموله التطبيق" ; 
+"Total" = "الاجمالي" ;

@@ -20,7 +20,10 @@ extension profileVC : UICollectionViewDelegate , UICollectionViewDataSource , UI
         let item = self.dummyActivty[indexPath.row]
         cell.name.text = item.name
         cell.icon.image = UIImage(named: item.icon)
+        cell.icon.tintColor = UIColor.systemGray4
       
+        
+        
         return cell
     }
     

@@ -13,7 +13,10 @@ class ReserveTheTripVC: BaseVC {
     
 //MARK: - IBOutlets -
     @IBOutlet weak var topBackView: UIView!
+    @IBOutlet weak var promorCodeStack: UIStackView!
     
+    @IBOutlet weak var totalPrice: UILabel!
+    @IBOutlet weak var priceIndicator: UIActivityIndicatorView!
     @IBOutlet weak var seatPrice: UILabel!
     @IBOutlet weak var destance: UILabel!
     @IBOutlet weak var to: UILabel!
@@ -34,10 +37,11 @@ class ReserveTheTripVC: BaseVC {
     var paymentMethod : paymentMethod = .cash
     var locationDetails : offerLocation?
     
+    var tripDetails : BasicTripResult?
     
     let DummyPaymentMethods : [dummyPaymentMethods] = [
-        dummyPaymentMethods(icon:"Payment" , number: "**** **** **** 8970", expireIn: "Expires: 12/26", type: "visa", selected: false , id : .cash) ,
-        dummyPaymentMethods(icon:"Payment" , number: "**** **** **** 8970", expireIn: "Expires: 12/26", type: "visa", selected: false , id: .card ) ,
+      
+        
         dummyPaymentMethods(icon:"" , number: "**** **** **** 8970", expireIn: "Expires: 12/26", type: "wallet", selected: false , id: .wallet ) ,
         dummyPaymentMethods(icon:"" , number: "**** **** **** 8970", expireIn: "Expires: 12/26", type: "cash", selected: false , id: .cash)
         
@@ -70,6 +74,10 @@ class ReserveTheTripVC: BaseVC {
         
         if self.viptrip {
             self.getVipDetails()
+            self.calculateVipPrice()
+        } else {
+            self.getBasicTripDetails()
+            self.calculateTheBasicPrice()
         }
   
     }
@@ -87,7 +95,8 @@ class ReserveTheTripVC: BaseVC {
         if viptrip {
             self.confirmOffer()
         } else {
-            self.GotoNextStep()
+            self.joinAbasicTrip()
+           
         }
     }
     
@@ -98,7 +107,11 @@ class ReserveTheTripVC: BaseVC {
         let vc = successBookViewVC()
         vc.modalTransitionStyle = .crossDissolve
         vc.modalPresentationStyle = .overCurrentContext
-        vc.drivername = self.offer?.driver?.name ?? ""
+        if viptrip {
+            vc.drivername = self.offer?.driver?.name ?? ""
+        } else {
+            vc.drivername = self.tripDetails?.driver_name ?? ""
+        }
     vc.action = {
         let vc = trackYourTripVC()
         self.push(vc)
@@ -123,6 +136,74 @@ extension ReserveTheTripVC {
                 self.GotoNextStep()
             } else {
                
+            }
+        }
+    }
+    
+    func joinAbasicTrip () {
+        print(self.paymentMethod)
+        print(self.paymentMethod.rawValue)
+        activityIndicatorr.startAnimating()
+        UserRouter.joinABasicTrip(id: tripDetails?.id ?? 0 , paymentMethod: self.paymentMethod.rawValue , copon: "").send {[weak self] ( response : APIGlobalResponse ) in
+            guard let self = self else { return }
+            if  response.status == true  {
+                self.GotoNextStep()
+            }
+            
+        }
+        
+    }
+    
+    func calculateTheBasicPrice () {
+     
+        if let id = self.tripDetails?.id {
+            priceIndicator.startAnimating()
+            priceIndicator.isHidden = false
+            UserRouter.claculateBasicPrice(id: id).send { [weak self ] (response : APIGenericResponse<BasicPriceResult>) in
+                guard let self = self else { return }
+                self.priceIndicator.stopAnimating()
+                self.priceIndicator.isHidden = true
+               
+                if let res =  response.result {
+                    self.totalPrice.text =  "\(res.total_price ?? 0)" + " " + "SAR".localize
+                    self.vatCost.text = "\(res.app_share ?? 0)" + " " + "SAR".localize
+                    if res.discount != 0 {
+                        self.codePrice.text =  "\(res.discount ?? 0)" + " " + "SAR".localize
+                        self.promorCodeStack.isHidden = false
+                    }else {
+                        self.codePrice.text = "--"
+                        self.promorCodeStack.isHidden = true
+                    }
+                }
+                
+
+            }
+        }
+    }
+    
+    func calculateVipPrice () {
+        
+        if let id = self.offer?.id {
+            priceIndicator.startAnimating()
+            priceIndicator.isHidden = false
+            UserRouter.calculateVipPrice(id: id).send { [weak self ] (response : APIGenericResponse<BasicPriceResult>) in
+                guard let self = self else { return }
+                self.priceIndicator.stopAnimating()
+                self.priceIndicator.isHidden = true
+               
+                if let res =  response.result {
+                    self.totalPrice.text =  "\(res.total_price ?? 0)" + " " + "SAR".localize
+                    self.vatCost.text = "\(res.app_share ?? 0)" + " " + "SAR".localize
+                    if res.discount != 0 {
+                        self.codePrice.text =  "\(res.discount ?? 0)" + " " + "SAR".localize
+                        self.promorCodeStack.isHidden = false
+                    }else {
+                        self.codePrice.text = "--"
+                        self.promorCodeStack.isHidden = true
+                    }
+                }
+                
+
             }
         }
     }

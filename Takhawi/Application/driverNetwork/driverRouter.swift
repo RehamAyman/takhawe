@@ -16,6 +16,7 @@ enum DriverRouter {
     case driverStatus
     case vehicleDetials
     case createAvehicle ( serialNum : String , plateAlphabet : String , plateNum : String , year : Int , seats : Int , class : Int , color : Int , type : Int , name : Int)
+    case createBasic (endDate : String , startDate : String , seatsNo : Int , PickLocationId  : Int  , destLocationId : Int , features : [String]  , vehicleID : Int , price : Int  )
     
 }
 
@@ -29,7 +30,7 @@ extension DriverRouter : APIRouter {
     var method: HTTPMethod {
         switch self {
             
-        case .createAvehicle :
+        case .createAvehicle , .createBasic  :
             return .post
         
         case  .driverStatus , .vehicleDetials :
@@ -49,6 +50,9 @@ extension DriverRouter : APIRouter {
             return driverServerPath.vehicleDetails
         case .createAvehicle :
             return driverServerPath.createAVehicle
+        case .createBasic :
+            return driverServerPath.createBasicTrip
+  
        
         }
     }
@@ -69,6 +73,21 @@ extension DriverRouter : APIRouter {
                  "vehicle_type_id": type ,
                  "vehicle_name_id": name
             ]
+            
+        case .createBasic(endDate: let endDate , startDate: let startDate , seatsNo: let seats , PickLocationId: let pickLocation , destLocationId: let destLocation , features: let features , vehicleID: let vehicleId , price : let price ):
+            return [
+                
+                    "end_date": endDate ,
+                    "start_date": startDate ,
+                    "seats_no": seats ,
+                    "price_per_seat":  price ,
+                    "pickup_location_id":  pickLocation ,
+                    "destination_id": destLocation,
+                    "features": features ,
+                    "vehicle_id": vehicleId
+            ]
+                
+         
         
         case  .driverStatus , .vehicleDetials  :
             return nil

@@ -14,12 +14,14 @@ import Cosmos
 class driverProfileVC: BaseVC {
     @IBOutlet weak var driverRate: CosmosView!
     
+    @IBOutlet weak var seatPrice: UILabel!
+    @IBOutlet weak var to: UILabel!
+    @IBOutlet weak var from: UILabel!
     @IBOutlet weak var weatherContainerProg: UIView!
     @IBOutlet weak var weatherIndicator: UIActivityIndicatorView!
     @IBOutlet weak var weatherIcon: UIImageView!
     @IBOutlet weak var weatherLabel: UILabel!
     @IBOutlet weak var tripDate: UILabel!
-    @IBOutlet weak var driverTripscount: UILabel!
     @IBOutlet weak var driverName: UILabel!
     @IBOutlet weak var driverContainerView: UIView!
     @IBOutlet weak var mainStack: UIStackView!
@@ -28,7 +30,8 @@ class driverProfileVC: BaseVC {
     @IBOutlet weak var tripCountLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
-   
+    @IBOutlet weak var driverImage: UIImageView!
+    
     @IBOutlet weak var googleView: GMSMapView!
     @IBOutlet weak var containerView: UIView!
     
@@ -47,8 +50,13 @@ class driverProfileVC: BaseVC {
     var tripDetails : BasicTripResult?
     var weatherManager = WeatherManager()
     let locationManager = CLLocationManager()
+   
+    var pickupLat : Double = 0.0
+    var pickupLong : Double = 0.0
+    var destLat : Double = 0.0
+    var destLong : Double = 0.0
     
-    
+    var comeFromBasicTrip : Bool = false
 // MARK: - Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,8 +67,12 @@ class driverProfileVC: BaseVC {
         weatherManager.delegate = self
         
         self.weatherIndicator.startAnimating()
-       
-   
+        if comeFromBasicTrip {
+            self.from.text = self.tripDetails?.startLocation ?? "--"
+            self.to.text = self.tripDetails?.destinationlocationname ?? "--"
+            self.seatPrice.text = "\(self.tripDetails?.basic_trip_price_per_seat ?? 0 )"
+            self.getOneBasicTrip()
+        }
     }
 
     
@@ -107,14 +119,17 @@ class driverProfileVC: BaseVC {
     
     
     @IBAction func reserveYourSeatAction(_ sender: UIButton) {
-        
-            let vc = ReserveTheTripVC()
-            self.push(vc)
-       
+        let vc = ReserveTheTripVC()
+        vc.viptrip = false
+        vc.tripDetails = self.tripDetails
+        self.push(vc)
     }
+    
+    
     
     @IBAction func fullGoogleView(_ sender: UIButton) {
         let vc = fullScreenGoogleViewVC()
+        vc.tripDetails = self.tripDetails
         vc.modalPresentationStyle = .fullScreen
         self.present(vc , animated: true )
     }
@@ -138,6 +153,20 @@ class driverProfileVC: BaseVC {
 
 //MARK: - Networking -
 extension driverProfileVC {
+    
+    func getOneBasicTrip () {
+        activityIndicatorr.startAnimating()
+        UserRouter.getOneTrip(id: self.tripDetails?.id ?? 0 ).send { [weak self] (response : APIGenericResponse< OneBasicResult >)  in
+            guard let self = self else { return }
+              
+            if let result = response.result {
+                self.tripCountLabel.text =  "trips: ".localize + "\( result.completed_trips_count ?? 0)"
+                
+            }
+           
+          
+        }
+    }
     
 }
 

@@ -18,8 +18,15 @@ enum UserRouter {
     case getAllCities ( page : Int)
     case getAllBasicTrips ( cityId : Int  , lat : Double , lng : Double , StartdDate : String)
     case recentAddress
-    
-    
+    case getOneTrip ( id : Int)
+    case complain ( category : String , note : String , isComplain : Bool)
+    case getProfile
+    case addAddressToFav ( alias : String , lat : Double , lng : Double , isFav : Bool)
+    case claculateBasicPrice ( id : Int )
+    case joinABasicTrip ( id : Int , paymentMethod : String , copon : String)
+    case calculateVipPrice ( id : Int )
+    case walletData ( page : Int)
+    case getAllHobbies
 }
 
 extension UserRouter : APIRouter {
@@ -32,10 +39,10 @@ extension UserRouter : APIRouter {
     var method: HTTPMethod {
         switch self {
             
-        case .createVipTrip , .acceptOffer :
+        case .createVipTrip , .acceptOffer  , .complain , .addAddressToFav , .claculateBasicPrice  , .joinABasicTrip , .calculateVipPrice  :
             return .post
         
-        case .getAllVipOffers , .getAllCities , .getAllBasicTrips  , .recentAddress :
+        case .getAllVipOffers , .getAllCities , .getAllBasicTrips  , .recentAddress  , .getOneTrip , .getProfile , .walletData , .getAllHobbies :
           return .get
             
         }
@@ -57,7 +64,24 @@ extension UserRouter : APIRouter {
             return userServerPath.getAllBasicTrips
         case .recentAddress:
             return userServerPath.recentAddress
-       
+        case .getOneTrip ( id : let id ):
+            return userServerPath.getOneBasicTripDetails ( id:  id)
+        case .complain :
+            return userServerPath.complain
+        case .getProfile :
+            return userServerPath.getProfile
+        case .addAddressToFav :
+          return  userServerPath.addAddressToFavs
+        case .claculateBasicPrice(id: let id ):
+            return userServerPath.calculateBasicPrice(id: id )
+        case .joinABasicTrip :
+            return userServerPath.joinAbasicTrip
+        case .calculateVipPrice(id: let id ) :
+            return userServerPath.calculateVipPrice(id: id )
+        case .walletData:
+            return userServerPath.getWalletData
+        case .getAllHobbies:
+            return userServerPath.getAllHobiies
         }
     }
     
@@ -75,6 +99,17 @@ extension UserRouter : APIRouter {
                "start_date" : date
             ]
             
+        case .getAllHobbies :
+            return [
+                "limit" : 60
+            ]
+            
+        case .walletData(page: let page ) :
+            return [
+                "page" : page ,
+                "limit" : 50
+            ]
+            
         case .getAllCities (let page ):
             return [
                 "page" : page ,
@@ -84,6 +119,14 @@ extension UserRouter : APIRouter {
             return [
                 "payment_method" : method
             ]
+        
+        case .addAddressToFav(alias: let alias, lat: let lat , lng: let lng , isFav: let isFav ):
+            return [
+                "lat": lat ,
+                "lng": lng ,
+                "alias": alias ,
+                "is_favorite": isFav
+            ]
         case .getAllBasicTrips(cityId: let cityId , lat: let lat , lng: let lng  , StartdDate : let startdate):
             
             return [
@@ -92,9 +135,30 @@ extension UserRouter : APIRouter {
                 "destinationLng" : lng ,
                 "startDate" : startdate
             ]
+        
             
+        case .complain(category: let category , note: let note , isComplain: let isComplain ) :
+            var dic : [String : Any] = [ "note" : note , "is_complaint" :  isComplain ]
             
-        case .getAllVipOffers  , .recentAddress   :
+            if isComplain {
+               dic["category"]  =  category
+            }
+            return dic
+            
+        case .joinABasicTrip(id: let id , paymentMethod: let payment , copon : let copon  ) :
+            var dic1 : [String : Any]  = [
+                "trip_id": id ,
+                "payment_method": payment
+            ]
+            
+            if copon != "" {
+                dic1["coupon"] = copon
+            }
+            return dic1
+            
+          
+            
+        case .getAllVipOffers  , .recentAddress , .getOneTrip , .getProfile  , .claculateBasicPrice , .calculateVipPrice   :
             return nil
             
         }

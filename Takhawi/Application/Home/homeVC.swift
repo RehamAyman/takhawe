@@ -13,6 +13,7 @@ import GoogleMaps
 
 import AlertKit
 import EMTNeumorphicView
+import Lottie
 
 
 
@@ -22,6 +23,7 @@ class homeVC: BaseVC, sendDataBackDelegate{
     
 //MARK: - IBOutlets -
     
+    @IBOutlet weak var lottieContainer: UIView!
     @IBOutlet weak var startingCityText: UITextField!
     @IBOutlet weak var cityContainerView: UIView!
     @IBOutlet weak var sideMenuEmail: UILabel!
@@ -69,7 +71,8 @@ class homeVC: BaseVC, sendDataBackDelegate{
     var destLong : Double = 0.0 
     var selectedDate : Date = Date()
     var selectedCityId : Int = 0
-
+    var lottieAnimationView: LottieAnimationView!
+    
     
 //MARK: - Properties -
     
@@ -249,7 +252,7 @@ class homeVC: BaseVC, sendDataBackDelegate{
                 vc.tripLong = self.destLong
                 vc.tripDate = self.selectedDate.ISO8601Format()
                 vc.cityId = self.selectedCityId
-                vc.selectedDate = self.selectedDate.ISO8601Format()
+                
                 self.push(vc)
                 
                 
@@ -315,8 +318,9 @@ class homeVC: BaseVC, sendDataBackDelegate{
         let vc = selectDateVC()
         vc.comeFromMakeAtrip = segment.selectedSegmentIndex == 0 ? false : true
         self.presentWithEffect(vc:  vc )
-        vc.change = {  [weak self] (value) in
+        vc.change = {  [weak self] (value , date ) in
             self?.calendarOutlet.setTitle( value , for: .normal)
+            self?.selectedDate = date.tomorrow
             print(value)
             self?.removePresentEffect()
             print("hello i select join a trip date btw ")

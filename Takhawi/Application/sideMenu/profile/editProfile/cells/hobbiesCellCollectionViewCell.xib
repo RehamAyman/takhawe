@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aV1-fx-sLu">
-                        <rect key="frame" x="0.0" y="2" width="275" height="46"/>
+                        <rect key="frame" x="3" y="2" width="269" height="46"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2bB-QP-Glx">
                                 <rect key="frame" x="8" y="10.666666666666664" width="25" height="25"/>
@@ -29,13 +29,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zlz-0w-pAz">
-                                <rect key="frame" x="38" y="17" width="205" height="12"/>
+                                <rect key="frame" x="38" y="17" width="199" height="12"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 7" translatesAutoresizingMaskIntoConstraints="NO" id="bjo-Tv-22M">
-                                <rect key="frame" x="251" y="15" width="16" height="16"/>
+                                <rect key="frame" x="245" y="15" width="16" height="16"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="16" id="ibG-UW-mBn"/>
@@ -64,14 +64,15 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="aV1-fx-sLu" secondAttribute="bottom" constant="2" id="DkK-Vt-eJW"/>
-                <constraint firstItem="aV1-fx-sLu" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="aZo-yD-Rsc"/>
+                <constraint firstItem="aV1-fx-sLu" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="3" id="aZo-yD-Rsc"/>
                 <constraint firstItem="aV1-fx-sLu" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="fRc-FS-4Py"/>
                 <constraint firstItem="aV1-fx-sLu" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="n4Y-oO-cwA"/>
                 <constraint firstItem="aV1-fx-sLu" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="ttH-Dj-gUO"/>
-                <constraint firstAttribute="trailing" secondItem="aV1-fx-sLu" secondAttribute="trailing" id="xRn-cW-dOs"/>
+                <constraint firstAttribute="trailing" secondItem="aV1-fx-sLu" secondAttribute="trailing" constant="3" id="xRn-cW-dOs"/>
             </constraints>
             <size key="customSize" width="275" height="50"/>
             <connections>
+                <outlet property="crossAction" destination="bjo-Tv-22M" id="CWy-f7-REs"/>
                 <outlet property="hobbieName" destination="Zlz-0w-pAz" id="7w4-It-K3v"/>
                 <outlet property="icon" destination="2bB-QP-Glx" id="KZv-d7-qfm"/>
             </connections>

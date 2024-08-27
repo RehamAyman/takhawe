@@ -25,7 +25,7 @@ class tripListVC: BaseVC {
     var tripDate : String = Date().ISO8601Format()
     var tripLat : Double = 0.0
     var tripLong : Double = 0.0
-    var selectedDate : String = ""
+    
     var allTrips : [BasicTripResult] = []
     var selectedTrip : BasicTripResult?
     
@@ -83,7 +83,7 @@ class tripListVC: BaseVC {
     
     private func getAllTrips () {
         activityIndicatorr.startAnimating()
-        UserRouter.getAllBasicTrips(cityId: self.cityId, lat: self.tripLat, lng: self.tripLong, StartdDate: self.selectedDate).send { (response: APIGenericResponse<[BasicTripResult]>) in
+        UserRouter.getAllBasicTrips(cityId: self.cityId, lat: self.tripLat, lng: self.tripLong, StartdDate: self.tripDate).send { (response: APIGenericResponse<[BasicTripResult]>) in
           
             guard let data =  response.result else { return }
             self.allTrips = data 
@@ -125,6 +125,7 @@ extension tripListVC: UITableViewDelegate {
         print(indexPath.row)
         let item = self.allTrips[indexPath.row]
         let vc = driverProfileVC()
+        vc.comeFromBasicTrip = true 
         vc.tripDetails = item
         push(vc)
     }

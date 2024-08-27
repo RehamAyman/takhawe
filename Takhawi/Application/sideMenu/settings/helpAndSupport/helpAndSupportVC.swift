@@ -14,6 +14,7 @@ class helpAndSupportVC: BaseVC {
     
     //MARK: - IBOutlets -
     @IBOutlet weak var complaintextField: MDCOutlinedTextField!
+    
     @IBOutlet weak var checkBoxIcon: UIImageView!
     
     @IBOutlet weak var complainTextView: UITextView!
@@ -23,7 +24,7 @@ class helpAndSupportVC: BaseVC {
    
     //MARK: - Properties -
     var  complain : Bool = false
-
+    var selectedReson : String = ""
     
     // MARK: - Lifecycle -
     override func viewDidLoad() {
@@ -69,7 +70,8 @@ class helpAndSupportVC: BaseVC {
 
        let vc = selectComplainVC()
             vc.passComplainTitle = { text in
-                self.complaintextField.text = text
+                self.complaintextField.text = text.localize
+                self.selectedReson = text
                 self.removePresentEffect()
             }
             vc.viewDismissed = {

@@ -12,6 +12,7 @@ import UIKit
 class profileVC: BaseVC {
     
 //MARK: - IBOutlets -
+    @IBOutlet weak var userName: UILabel!
     
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -28,10 +29,13 @@ class profileVC: BaseVC {
         dummyActivity(icon: "airplane-around-earth 1", name: "Travelling".localize)
     ]
 
+    var profileData : profileResult?
 // MARK: - Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureInitialDesign()
+        self.getProfileDetails()
+        
     }
     
     
@@ -39,6 +43,7 @@ class profileVC: BaseVC {
     private func configureInitialDesign() {
         self.title = "".localized
         self.setUpMain()
+        
     }
     
 //MARK: - Logic Methods -
@@ -55,7 +60,9 @@ class profileVC: BaseVC {
     
     
     @IBAction func editProfileActtion(_ sender: UIButton) {
-        self.push(editProfileVC())
+        let vc = editProfileVC()
+        vc.profileData = self.profileData
+        self.push(vc)
     }
     
 }
@@ -64,6 +71,22 @@ class profileVC: BaseVC {
 //MARK: - Networking -
 extension profileVC {
     
+    func getProfileDetails () {
+        activityIndicatorr.startAnimating()
+        UserRouter.getProfile.send { [weak self ]  ( response : APIGenericResponse<profileResult> ) in
+            guard let self = self else { return }
+           
+            if let result = response.result {
+                self.profileData = result
+                if let avatar = result.avatar {
+                    self.userImage.setImage(image: avatar)
+                }
+                
+                self.userName.text = result.name ?? ""
+                self.collectionView.reloadData()
+            }
+        }
+    }
 }
 
 //MARK: - Routes -

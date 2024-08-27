@@ -56,6 +56,11 @@ class baseSuccessAlertVC: BaseVC {
 //            self.push(vc)
             self.DriverAction?()
             self.dismiss(animated: true )
+        } else {
+            self.dismiss(animated: true )
+            let vc = homeVC()
+            let nav = CustomNavigationController(rootViewController: vc)
+            AppHelper.changeWindowRoot(vc: nav)
         }
     }
 }

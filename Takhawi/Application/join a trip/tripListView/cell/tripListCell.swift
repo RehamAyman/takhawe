@@ -23,6 +23,7 @@ class tripListCell: UITableViewCell {
     @IBOutlet weak var TripDate: UILabel!
     @IBOutlet weak var seatPrice: UILabel!
     
+    @IBOutlet weak var destinationName: UILabel!
     @IBOutlet weak var availableSeatsLabel: UILabel!
     
     @IBOutlet weak var wifiIcon: UIImageView!
@@ -31,6 +32,7 @@ class tripListCell: UITableViewCell {
     @IBOutlet weak var smokeIcon: UIImageView!
     @IBOutlet weak var foodIcon: UIImageView!
     @IBOutlet weak var musicicon: UIImageView!
+    @IBOutlet weak var startLocation: UILabel!
     
     
     
@@ -57,15 +59,22 @@ class tripListCell: UITableViewCell {
     
     //MARK: - Configure Data -
     func configureWith(data: BasicTripResult ) {
+        self.startLocation.text = data.startLocation ?? ""
+        self.destinationName.text = data.destinationlocationname ?? ""
         self.driverName.text = data.driver_name ?? "--"
         self.seatPrice.text = "\(data.basic_trip_price_per_seat ?? 0)"
         self.startTime.text = data.start_date?.convertFromIsoToTimee()
         self.endTime.text = data.end_date?.convertFromIsoToTimee()
         self.TripDate.text = data.start_date?.convertFromIso()
         self.availableSeatsLabel.text =  "\(data.basic_trip_available_seats_no ?? 0 ) " +  "seats are Available".localize
-        if let imageurl = URL(string: data.driver_avatar ?? "" )  {
-            self.driverPhoto.setImage(image: data.driver_avatar ?? "" )
+        if let avatar = data.driver_avatar {
+            if avatar.isValidHttpsUrl() {
+                self.driverPhoto.setImage(image: avatar)
+            }
         }
+         
+        
+       
         if let features = data.features {
            
             self.ACicon.tintColor = features.contains("AIR CONDITIONER") ?  UIColor(named: "MainColor") : UIColor.systemGray5

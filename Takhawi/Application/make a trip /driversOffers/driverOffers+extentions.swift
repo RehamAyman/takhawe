@@ -58,16 +58,18 @@ extension driverOffersVC : UITableViewDelegate , UITableViewDataSource {
         cell.time.text = self.time
         cell.driverRate.rating = 4 // item.driverRate
         if let driverImage = item.driver?.avatar {
-            cell.driverPhoto.setImage(image: driverImage )
+            if driverImage.isValidHttpsUrl() {
+                cell.driverPhoto.setImage(image: driverImage )
+            }
         }
        
+        cell.carName.text = "red nissan sedan ARC 1233"
         cell.action = {
             let vc =  ReserveTheTripVC()
             vc.viptrip = true
             vc.offer = item
             vc.locationDetails = self.locationDetails
             self.push(vc)
-            
         }
         
         cell.cancel = {

@@ -16,12 +16,15 @@
                 <outlet property="collectionView" destination="7mh-CN-Dfo" id="ahz-cl-gt6"/>
                 <outlet property="containerView" destination="wTq-9C-DMp" id="dIu-U1-xVG"/>
                 <outlet property="driverContainerView" destination="Dr2-8p-2Br" id="QTh-5I-s8g"/>
+                <outlet property="driverImage" destination="WHC-ht-xYX" id="mYp-Gd-R0X"/>
                 <outlet property="driverName" destination="pmt-cx-mWT" id="nWX-ao-Rfs"/>
                 <outlet property="driverRate" destination="jSO-Km-BMr" id="Ohz-cG-Dar"/>
-                <outlet property="driverTripscount" destination="gTa-8g-a8U" id="TjP-9I-1ML"/>
+                <outlet property="from" destination="229-RJ-tFm" id="fPA-GC-moM"/>
                 <outlet property="googleView" destination="ag7-m0-5iV" id="PYU-s2-rdE"/>
                 <outlet property="mainStack" destination="oft-2f-t8y" id="6so-HM-rfA"/>
+                <outlet property="seatPrice" destination="dlz-kG-iPO" id="9sc-EE-bRF"/>
                 <outlet property="sendOfferContainerView" destination="dqc-Vu-3BB" id="b9w-si-9aT"/>
+                <outlet property="to" destination="yga-3n-x7v" id="nBM-uY-h1w"/>
                 <outlet property="tripCountLabel" destination="gTa-8g-a8U" id="8nP-SO-iH6"/>
                 <outlet property="tripDate" destination="evc-si-NQo" id="Gyl-zR-SYf"/>
                 <outlet property="view" destination="o2g-cy-0xQ" id="339-f4-k3I"/>
@@ -145,7 +148,6 @@
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                     <real key="value" value="17"/>
                                                                 </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Trips: 22"/>
                                                             </userDefinedRuntimeAttributes>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x6H-Yl-tEZ">

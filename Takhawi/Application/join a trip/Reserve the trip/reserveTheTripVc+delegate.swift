@@ -97,11 +97,33 @@ extension ReserveTheTripVC : UITableViewDelegate , UITableViewDataSource {
         self.destance.text = self.getDestanceBetween()
         self.seatPrice.text =  "\(self.offer?.price ?? 0.0 )" + "SAR".localize
         // backend didnot add it yet
-        self.vatCost.text = " -- " + "SAR".localize
-        self.codePrice.text = " -- " + "SAR".localize
+      
+        let percentage = 0.05 // 5% as a decimal
+        if let  price = self.offer?.price {
+            let result = Int(Double(price) * percentage)
+            self.vatCost.text = "\(result)" + " " + "SAR".localize
+        }
+        
+        
     }
     
     
+    
+    func getBasicTripDetails () {
+        self.driverName.text = self.tripDetails?.driver_name
+        self.tripDate.text = self.tripDetails?.start_date?.convertFromIso()
+        self.from.text = self.tripDetails?.startLocation ?? "--"
+        self.to.text = self.tripDetails?.destinationlocationname ?? "--"
+        if let dist =  self.tripDetails?.distance {
+            let km = dist / 1000
+            self.destance.text = "\(dist.rounded())" + "KM"
+        }
+        if let price = self.tripDetails?.basic_trip_price_per_seat  {
+            self.seatPrice.text = "\(price )" + " " + "SAR".localize
+            
+        }
+        
+    }
 
 //MARK: - GET DESTANCE METHOD
     

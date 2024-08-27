@@ -22,6 +22,12 @@ extension DriverHomeVC {
     }
     
     
+    func createAtripAction() {
+        self.createAtrip.addTapGesture {
+          let vc = driverCreateTripVC()
+            self.push(vc)
+        }
+    }
     
     
    private func handelOffView () {

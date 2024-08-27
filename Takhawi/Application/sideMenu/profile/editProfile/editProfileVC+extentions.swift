@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension editProfileVC   {
+extension editProfileVC  : UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout  {
  
     
     func handleTextfields () {
@@ -40,32 +40,91 @@ extension editProfileVC   {
  //MARK: - COLLECTION VIEW METHODS
     
     
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return self.dummyHobbies.count
-//    }
-//    
-//    
-//    
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-////        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "hobbiesCellCollectionViewCell", for: indexPath) as! hobbiesCellCollectionViewCell
-////        cell.hobbieName.text = self.dummyHobbies[indexPath.item].name
-////        cell.icon.image = UIImage(named:  self.dummyHobbies[indexPath.item].icon )
-//        return cell
-//    }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if self.hobbiesArray.count == 0 {
+            self.collectionViewHeight.constant = 0
+        } else {
+            self.collectionViewHeight.constant = 120
+        }
+        return  self.hobbiesArray.count
+    }
+    
+ 
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "hobbiesCellCollectionViewCell", for: indexPath) as! hobbiesCellCollectionViewCell
+        let item = self.hobbiesArray[indexPath.item]
+        cell.hobbieName.text = item
+        cell.crossAction.addTapGesture {
+            if indexPath.item < self.hobbiesArray.count {
+                self.hobbiesArray.remove(at: indexPath.item)
+                self.collectionView.reloadData()
+            }
+        }
+        return cell
+    }
     
     
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-////        let label = UILabel(frame: CGRect.zero)
-////        label.text = self.dummyHobbies[indexPath.item].name
-////        label.sizeToFit()
-//        return CGSize(width: self.collectionview.frame.width * 0.3  , height: 45  )
-//    }
-//    
+
     
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+       
+        return CGSize(width: self.collectionView.frame.width * 0.35  , height: 45  )
+    }
+    
+    
+    func handleOpenListAction () {
+        self.openHobbiesList.addTapGesture {
+            
+        }
+        
+    }
+    
+    func getAllBobbies () {
+        UserRouter.getAllHobbies.send { [weak self ] ( response : APIGenericResponse<[VehicleClass]> )  in
+            guard let self = self else { return }
+            self.mainHobbies = response.result ?? []
+            self.selectFromMainHobbies(button: self.chooseFromMain , textField: self.hobbies)
+        }
+    }
+    
+    private func selectFromMainHobbies (button : UIButton , textField : UITextField  ) {
+
+        if self.mainHobbies.isEmpty == false {
+            let actionClosure = { (action: UIAction) in
+                print("👀✋🏻 i select regon name : \(action.title ) with id : \(action.identifier.rawValue)")
+              
+                textField.text = action.title
+                if self.hobbiesArray.contains(action.title) {
+                    print("added before ")
+                } else {
+                    
+                    self.hobbiesArray.append(action.title)
+                    self.collectionView.reloadData()
+                  
+                   
+                }
+               // self.regoinId = Int ( action.identifier.rawValue ) ?? 0
+              
+            }
+    
+            var menuChildren: [UIMenuElement] = []
+            for i in self.mainHobbies {
+                menuChildren.append(UIAction(title: i.name ?? "" , identifier: UIAction.Identifier( String ( i.id ?? 0 ) )  , handler: actionClosure))
+            }
+    
+            button.menu = UIMenu( children: menuChildren)
+            button.showsMenuAsPrimaryAction = true
+            button.tintColor = UIColor.clear
+            
+           
+        }else {
+            print("✋🏻empty array ")
+        }
+    }
    
-    
-    
     
     
 }

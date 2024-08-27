@@ -31,12 +31,20 @@ class OnboardingViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
        
         if UserDefaults.user != nil && UserDefaults.isLogin == true{
-           
-            
             let userType = UserDefaults.user?.user?.role
-            let vc = userType == role.user.rawValue ?  homeVC() : DriverHomeVC()
-            let nav = CustomNavigationController(rootViewController: vc)
-            AppHelper.changeWindowRoot(vc: nav)
+            if userType == role.user.rawValue {
+                let vc =  homeVC()
+                let nav = CustomNavigationController(rootViewController: vc)
+                AppHelper.changeWindowRoot(vc: nav)
+            } else {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "DriverTabbar") as! DriverTabbar
+                let nav = CustomNavigationController(rootViewController: vc)
+                AppHelper.changeWindowRoot(vc: nav)
+            }
+                
+         
+            
             
         } else {
             let vc =  onboardingSwiftuiVC()
