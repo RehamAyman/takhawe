@@ -28,10 +28,10 @@ class hotelDetailsVC: BaseVC {
     
     //MARK: - Properties -
     let dummydate : [dummyActivity] = [
-        dummyActivity(icon: "Vector 3", name: "Free Wifi") ,
-        dummyActivity(icon: "AC", name: "Air Condition") ,
-        dummyActivity(icon: "Group 8", name: "No Smoking") ,
-        dummyActivity(icon: "Food", name: "Breakfast")
+        dummyActivity(icon: "Vector 3", name: "Free Wifi" , id: 2 ) ,
+        dummyActivity(icon: "AC", name: "Air Condition" , id: 2 ) ,
+        dummyActivity(icon: "Group 8", name: "No Smoking" , id: 2 ) ,
+        dummyActivity(icon: "Food", name: "Breakfast" , id: 2)
         
     ]
     

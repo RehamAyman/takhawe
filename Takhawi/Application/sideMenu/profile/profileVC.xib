@@ -73,7 +73,7 @@
                             </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="rating">
-                                    <real key="value" value="3.5"/>
+                                    <real key="value" value="0.0"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="color" keyPath="starColor">
                                     <color key="value" red="0.96470588450000005" green="0.76470589639999997" blue="0.26666668059999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

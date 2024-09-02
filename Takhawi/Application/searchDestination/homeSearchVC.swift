@@ -52,6 +52,7 @@ class homeSearchVC: BaseVC{
         self.googleTableView.isUserInteractionEnabled = false
         self.recentAddIndicator.isHidden = true
         self.getRecentAddress()
+        self.googleTableView.allowsMultipleSelection = true
     }
     
     

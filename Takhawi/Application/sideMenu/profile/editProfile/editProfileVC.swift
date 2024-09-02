@@ -15,6 +15,8 @@ class editProfileVC: BaseVC {
 //MARK: - IBOutlets -
     @IBOutlet weak var profileIcon: UIImageView!
     
+    @IBOutlet weak var selectCityId: UIButton!
+    @IBOutlet weak var selectGenderOutlet: UIButton!
     @IBOutlet weak var chooseFromMain: UIButton!
     @IBOutlet weak var openHobbiesList: UIView!
     @IBOutlet weak var collectionViewHeight: NSLayoutConstraint!
@@ -29,13 +31,15 @@ class editProfileVC: BaseVC {
     @IBOutlet weak var name: MDCOutlinedTextField!
     
 //MARK: - Properties -
-    
+    var action: (() -> Void)?
     var profileData : profileResult?
     
-    var hobbiesArray : [String] = []
-    var mainHobbies : [VehicleClass] = []
+    var hobbiesArray : [HobbiesClass] = []
+    var mainHobbies : [HobbiesClass] = []
 
-    
+    var genders : [String] = ["Male" , "Female"]
+    var allCities : [CitiesResult] = []
+    var selectedCityId : Int = 0 
 //
 // MARK: - Lifecycle -
     override func viewDidLoad() {
@@ -43,37 +47,20 @@ class editProfileVC: BaseVC {
         self.configureInitialDesign()
         self.handleOpenListAction()
         self.getAllBobbies()
+        self.selectGender(button: self.selectGenderOutlet , textField: self.genderText)
+        self.getAllCities()
     }
     
     
 //MARK: - Design Methods -
     private func configureInitialDesign() {
         self.title = "".localized
-     
-  self.handleTextfields()
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(cellType: hobbiesCellCollectionViewCell.self )
-        self.name.text = self.profileData?.name ?? ""
-        self.emailTextField.text = self.profileData?.email ?? ""
-        self.birthdateText.text = self.profileData?.birth_date ?? ""
-        self.cityText.text = self.profileData?.city ?? ""
-        self.phoneNumber.text = self.profileData?.phone ?? ""
-        self.genderText.text = self.profileData?.gender ?? ""
-        self.FavouritesTextArea.textView.text = self.profileData?.bio ?? ""
-        if let image = self.profileData?.avatar {
-            self.profileIcon.setImage(image:image )
-        }
-        self.hobbiesArray =  self.profileData?.hobbies ?? []
-        self.collectionView.reloadData()
-        if self.profileData?.hobbies?.isEmpty == true  {
-            self.collectionViewHeight.constant = 0
-        } 
-       
-      //  self.birthDayAction()
-       // collectionview.delegate = self
-      //  collectionview.dataSource = self
-       // collectionview.register(cellType: hobbiesCellCollectionViewCell.self)
+        self.setUpMainView()
+        
+    
            
     }
     
@@ -81,6 +68,9 @@ class editProfileVC: BaseVC {
     
     
 //MARK: - Actions -
+    @IBAction func updatePro(_ sender: UIButton) {
+        self.updateMyProfile()
+    }
     
 }
 

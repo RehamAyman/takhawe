@@ -38,6 +38,7 @@ struct driverAuthView: View {
     @State var n2 : String = ""
     @State var n3 : String = ""
     @State var n4 : String = ""
+   
     
     var IsArabicLang : Bool {
         if LocalizationManager.shared.getLanguage() == .Arabic    {
@@ -229,7 +230,4 @@ func convertToArabic(text: String) -> String {
     return String(text.lowercased().compactMap { englishToArabicMapping[$0] })
 }
 
-//// Example usage
-//let englishText = "hello"
-//let arabicText = convertToArabic(text: englishText)
-//print(arabicText) // Output: "هللو"
+

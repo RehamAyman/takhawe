@@ -14,6 +14,8 @@ enum driverServerPath {
     case vehicleDetails
     case createAVehicle
     case createBasicTrip
+    case meetingLocations
+    
     
     
     
@@ -33,6 +35,8 @@ extension driverServerPath : ServerPath {
             return "vehicle/"
         case .createBasicTrip:
             return "basic-trip/" 
+        case .meetingLocations:
+         return "meeting-location/"
     
         }
     }

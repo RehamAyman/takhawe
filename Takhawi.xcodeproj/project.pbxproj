@@ -361,6 +361,13 @@
 		CE996B562B25AC6F0089D2F4 /* trackYourTripVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE996B552B25AC6F0089D2F4 /* trackYourTripVC.xib */; };
 		CE996B602B25DA530089D2F4 /* trackYourTripVC+delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE996B5F2B25DA530089D2F4 /* trackYourTripVC+delegate.swift */; };
 		CE9D270C2C4E803300A18F18 /* driverStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D270B2C4E803300A18F18 /* driverStatus.swift */; };
+		CE9D3CA32C82AD80007E872D /* openCalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D3CA22C82AD7F007E872D /* openCalendarVC.swift */; };
+		CE9D3CA52C82AD96007E872D /* openCalendarVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9D3CA42C82AD96007E872D /* openCalendarVC.xib */; };
+		CE9D3CA82C82B2A6007E872D /* datePickereExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D3CA72C82B2A6007E872D /* datePickereExtention.swift */; };
+		CE9D3CAA2C83E3CB007E872D /* meetingLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D3CA92C83E3CB007E872D /* meetingLocations.swift */; };
+		CE9D3CAD2C83E560007E872D /* selectMeetingLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D3CAC2C83E560007E872D /* selectMeetingLocation.swift */; };
+		CE9D3CB02C853BEF007E872D /* DriverMoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D3CAF2C853BEF007E872D /* DriverMoreVC.swift */; };
+		CE9D3CB22C85AC46007E872D /* collection+createTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D3CB12C85AC46007E872D /* collection+createTripVC.swift */; };
 		CE9DB3962AC18346000759B8 /* customSegnmentWithAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9DB3952AC18346000759B8 /* customSegnmentWithAnimation.swift */; };
 		CE9DB3992AC1AD58000759B8 /* customUIsegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9DB3982AC1AD58000759B8 /* customUIsegment.swift */; };
 		CE9EBFE62B1393520080A0F2 /* reviewsViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9EBFE52B1393520080A0F2 /* reviewsViewVC.swift */; };
@@ -824,6 +831,13 @@
 		CE996B552B25AC6F0089D2F4 /* trackYourTripVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = trackYourTripVC.xib; sourceTree = "<group>"; };
 		CE996B5F2B25DA530089D2F4 /* trackYourTripVC+delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "trackYourTripVC+delegate.swift"; sourceTree = "<group>"; };
 		CE9D270B2C4E803300A18F18 /* driverStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = driverStatus.swift; sourceTree = "<group>"; };
+		CE9D3CA22C82AD7F007E872D /* openCalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = openCalendarVC.swift; sourceTree = "<group>"; };
+		CE9D3CA42C82AD96007E872D /* openCalendarVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = openCalendarVC.xib; sourceTree = "<group>"; };
+		CE9D3CA72C82B2A6007E872D /* datePickereExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = datePickereExtention.swift; sourceTree = "<group>"; };
+		CE9D3CA92C83E3CB007E872D /* meetingLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meetingLocations.swift; sourceTree = "<group>"; };
+		CE9D3CAC2C83E560007E872D /* selectMeetingLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectMeetingLocation.swift; sourceTree = "<group>"; };
+		CE9D3CAF2C853BEF007E872D /* DriverMoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverMoreVC.swift; sourceTree = "<group>"; };
+		CE9D3CB12C85AC46007E872D /* collection+createTripVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "collection+createTripVC.swift"; sourceTree = "<group>"; };
 		CE9DB3952AC18346000759B8 /* customSegnmentWithAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customSegnmentWithAnimation.swift; sourceTree = "<group>"; };
 		CE9DB3982AC1AD58000759B8 /* customUIsegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customUIsegment.swift; sourceTree = "<group>"; };
 		CE9EBFE52B1393520080A0F2 /* reviewsViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reviewsViewVC.swift; sourceTree = "<group>"; };
@@ -1381,6 +1395,7 @@
 		9694AB652A5DFACA00BDF5F8 /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
+				CE9D3CA62C82B28B007E872D /* datePicker */,
 				04658F502B3746A000470F0D /* present */,
 				CE3CACC52B2D8E2F0025990E /* animatedLoader */,
 				CE3B53AA2B2B18D8003D3043 /* appMainTextField */,
@@ -1986,6 +2001,7 @@
 			children = (
 				CE3FDC5C2C795424000C2BDC /* driverCreateTripVC.swift */,
 				CE3FDC5E2C795441000C2BDC /* driverCreateTripVC.xib */,
+				CE9D3CB12C85AC46007E872D /* collection+createTripVC.swift */,
 			);
 			path = createAtrip;
 			sourceTree = "<group>";
@@ -2038,6 +2054,8 @@
 		CE4F0BA42B764A2200337A49 /* DriverHome */ = {
 			isa = PBXGroup;
 			children = (
+				CE9D3CAB2C83E52E007E872D /* selectMeetingLocation */,
+				CE9D3CA12C82AD5C007E872D /* selectDate */,
 				CE3FDC5B2C79540E000C2BDC /* createAtrip */,
 				CE4F0BAD2B77974F00337A49 /* home */,
 				CE4F0BA92B777B8D00337A49 /* DriverTabbar.swift */,
@@ -2233,6 +2251,7 @@
 			children = (
 				CE9D270B2C4E803300A18F18 /* driverStatus.swift */,
 				CECC3D492C6B250A007AD2D4 /* vehicle.swift */,
+				CE9D3CA92C83E3CB007E872D /* meetingLocations.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -2276,6 +2295,39 @@
 				CE996B5F2B25DA530089D2F4 /* trackYourTripVC+delegate.swift */,
 			);
 			path = trakYourTrip;
+			sourceTree = "<group>";
+		};
+		CE9D3CA12C82AD5C007E872D /* selectDate */ = {
+			isa = PBXGroup;
+			children = (
+				CE9D3CA22C82AD7F007E872D /* openCalendarVC.swift */,
+				CE9D3CA42C82AD96007E872D /* openCalendarVC.xib */,
+			);
+			path = selectDate;
+			sourceTree = "<group>";
+		};
+		CE9D3CA62C82B28B007E872D /* datePicker */ = {
+			isa = PBXGroup;
+			children = (
+				CE9D3CA72C82B2A6007E872D /* datePickereExtention.swift */,
+			);
+			path = datePicker;
+			sourceTree = "<group>";
+		};
+		CE9D3CAB2C83E52E007E872D /* selectMeetingLocation */ = {
+			isa = PBXGroup;
+			children = (
+				CE9D3CAC2C83E560007E872D /* selectMeetingLocation.swift */,
+			);
+			path = selectMeetingLocation;
+			sourceTree = "<group>";
+		};
+		CE9D3CAE2C853B99007E872D /* DriverMore */ = {
+			isa = PBXGroup;
+			children = (
+				CE9D3CAF2C853BEF007E872D /* DriverMoreVC.swift */,
+			);
+			path = DriverMore;
 			sourceTree = "<group>";
 		};
 		CE9DB3972AC1AD30000759B8 /* UISegmentController */ = {
@@ -2540,6 +2592,7 @@
 		CED77C092B6375CD00962E83 /* driver */ = {
 			isa = PBXGroup;
 			children = (
+				CE9D3CAE2C853B99007E872D /* DriverMore */,
 				CE4F0BA42B764A2200337A49 /* DriverHome */,
 				CEB138822B61B2080070DBA8 /* driverAuthentication */,
 			);
@@ -2802,6 +2855,7 @@
 				96EA1E3E2A77006B00F39386 /* Alexandria-ExtraBold.ttf in Resources */,
 				04C737C52B36DE27002AE59C /* policesVC.xib in Resources */,
 				CEDDBE192ACBDFA700677C94 /* sideMenuCell.xib in Resources */,
+				CE9D3CA52C82AD96007E872D /* openCalendarVC.xib in Resources */,
 				CEB29E5A2B49894900F64ED8 /* editProfileVC.xib in Resources */,
 				CE04D9C12B15E8BC00B41157 /* successBookViewVC.xib in Resources */,
 				CE71F47C2B17436500E7B689 /* selectTimeVC.xib in Resources */,
@@ -3099,6 +3153,7 @@
 				0493588C2B43D838004E5259 /* localizationManager.swift in Sources */,
 				963DAB352A803B64004ED3C7 /* RegisterDriverPersonalInfoVC.swift in Sources */,
 				CE7576F22AF2041100AFF56A /* chooseFeatureCell.swift in Sources */,
+				CE9D3CA82C82B2A6007E872D /* datePickereExtention.swift in Sources */,
 				9694AC622A5E040D00BDF5F8 /* Fonts.swift in Sources */,
 				CE4E22E42C0DE0120092AE16 /* UploadData.swift in Sources */,
 				04B659F02B345DA800E78752 /* cartItemVView.swift in Sources */,
@@ -3110,12 +3165,14 @@
 				CE3D2B3F2B78195B0067E63B /* driverHome+functions.swift in Sources */,
 				9641AD362A6C2C4200A29046 /* OnboardingCollectionViewCell.swift in Sources */,
 				9694ABC52A5DFACA00BDF5F8 /* Alert.swift in Sources */,
+				CE9D3CAA2C83E3CB007E872D /* meetingLocations.swift in Sources */,
 				CE7434F32B2254CD0023DC17 /* hotelDetailsExtention.swift in Sources */,
 				CE034F482B2B9D940040516E /* reportCancelVC+delegate.swift in Sources */,
 				CEBB8BA22ADEB8ED00E70EC4 /* profileCell.swift in Sources */,
 				CEF9737C2AC1D4D800CDCCFD /* KeyboardHeightPublisher.swift in Sources */,
 				963007132A7671020075DBFE /* RegisterVC.swift in Sources */,
 				CE72B01F2C02E20A009AC905 /* SignInModel.swift in Sources */,
+				CE9D3CB22C85AC46007E872D /* collection+createTripVC.swift in Sources */,
 				CE2292852B1E57B300E8AB42 /* hotelsVC.swift in Sources */,
 				049358982B445A16004E5259 /* alertTopPop.swift in Sources */,
 				CE635D512B74D91500FC12A5 /* floatingPickerView.swift in Sources */,
@@ -3178,6 +3235,8 @@
 				CE4F0BAC2B77962700337A49 /* DriverHomeVC.swift in Sources */,
 				CE3FDC5D2C795424000C2BDC /* driverCreateTripVC.swift in Sources */,
 				CEF0E7E32B4F3B5900DCBD69 /* AudioPlayer.swift in Sources */,
+				CE9D3CA32C82AD80007E872D /* openCalendarVC.swift in Sources */,
+				CE9D3CAD2C83E560007E872D /* selectMeetingLocation.swift in Sources */,
 				CE385D972AE267A4008F2D50 /* LocationUtilities.swift in Sources */,
 				CEEDC0212B2E10F10017C804 /* notivicationViewVC+delegates.swift in Sources */,
 				CE7A34D12B7373A9009B52CD /* MediaOptions.swift in Sources */,
@@ -3298,6 +3357,7 @@
 				CE8DE1462C7B8945005B139F /* walletModel.swift in Sources */,
 				04B659E32B3443AF00E78752 /* addAmmountVC.swift in Sources */,
 				CE44773F2AE04355000D96F6 /* weeksTabView.swift in Sources */,
+				CE9D3CB02C853BEF007E872D /* DriverMoreVC.swift in Sources */,
 				9694AC6E2A5E040D00BDF5F8 /* Extensions+UITextField.swift in Sources */,
 				CE9EBFF52B145CA20080A0F2 /* ReserveTheTripVC.swift in Sources */,
 				96B27F872A82F791006C8DB3 /* TermsOfUseVC.swift in Sources */,

@@ -38,11 +38,11 @@ class driverProfileVC: BaseVC {
     @IBOutlet weak var sendOfferContainerView: UIView!
     //MARK: - Properties -
     var dummyActivty : [dummyActivity] = [
-        dummyActivity(icon: "Group 1", name: "Basketball".localize ) ,
-        dummyActivity(icon: "03-hat", name: "Riding Horse".localize ) ,
-        dummyActivity(icon: "paint-palette 1", name: "Drawing".localize ) ,
-        dummyActivity(icon: "music 1", name: "Listen to music".localize ) ,
-        dummyActivity(icon: "airplane-around-earth 1", name: "Travelling".localize )
+        dummyActivity(icon: "Group 1", name: "Basketball".localize, id: 0 ) ,
+        dummyActivity(icon: "03-hat", name: "Riding Horse".localize, id: 1 ) ,
+        dummyActivity(icon: "paint-palette 1", name: "Drawing".localize, id: 2 ) ,
+        dummyActivity(icon: "music 1", name: "Listen to music".localize, id: 3 ) ,
+        dummyActivity(icon: "airplane-around-earth 1", name: "Travelling".localize, id: 4 )
     ]
 
     var animatePolyline: AnimatePolyline?

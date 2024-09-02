@@ -27,6 +27,7 @@ enum UserRouter {
     case calculateVipPrice ( id : Int )
     case walletData ( page : Int)
     case getAllHobbies
+    case updateProfile ( name : String , email : String , birthDate : String , bio : String , cityId : Int , gender : String , hobbies : [HobbiesClass])
 }
 
 extension UserRouter : APIRouter {
@@ -44,6 +45,10 @@ extension UserRouter : APIRouter {
         
         case .getAllVipOffers , .getAllCities , .getAllBasicTrips  , .recentAddress  , .getOneTrip , .getProfile , .walletData , .getAllHobbies :
           return .get
+            
+            
+        case  .updateProfile :
+            return .patch
             
         }
     }
@@ -82,6 +87,8 @@ extension UserRouter : APIRouter {
             return userServerPath.getWalletData
         case .getAllHobbies:
             return userServerPath.getAllHobiies
+        case .updateProfile :
+            return userServerPath.updateProfile
         }
     }
     
@@ -98,6 +105,29 @@ extension UserRouter : APIRouter {
                "features" : features ,
                "start_date" : date
             ]
+            
+        case .updateProfile(name: let name , email: let email , birthDate: let birthDate , bio: let bio , cityId: let cityId , gender: let gender , hobbies: let hobboies ) :
+            var dict : [String : Any] = [
+                "name" : name ,
+                "email" : email ,
+           //     "birth_date" : birthDate ,
+             
+                "cityId" :  cityId ,
+                "gender" : gender
+            ]
+            var index = 0
+            for i in hobboies {
+                dict["hobbies[\(index)]"] = i.id
+                index += 1
+            }
+            if bio != "" {
+                dict["bio"] = bio
+            }
+            
+            
+            
+            return dict
+           
             
         case .getAllHobbies :
             return [

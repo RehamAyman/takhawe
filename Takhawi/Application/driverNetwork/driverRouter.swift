@@ -16,8 +16,9 @@ enum DriverRouter {
     case driverStatus
     case vehicleDetials
     case createAvehicle ( serialNum : String , plateAlphabet : String , plateNum : String , year : Int , seats : Int , class : Int , color : Int , type : Int , name : Int)
-    case createBasic (endDate : String , startDate : String , seatsNo : Int , PickLocationId  : Int  , destLocationId : Int , features : [String]  , vehicleID : Int , price : Int  )
+    case createBasic (endDate : String , startDate : String , seatsNo : Int , PickLocationId  : Int  , destLocationId : Int , features : [String]   , price : Int  )
     
+    case getMeetingLocations
 }
 
 extension DriverRouter : APIRouter {
@@ -33,7 +34,7 @@ extension DriverRouter : APIRouter {
         case .createAvehicle , .createBasic  :
             return .post
         
-        case  .driverStatus , .vehicleDetials :
+        case  .driverStatus , .vehicleDetials , .getMeetingLocations :
           return .get
             
         }
@@ -52,6 +53,8 @@ extension DriverRouter : APIRouter {
             return driverServerPath.createAVehicle
         case .createBasic :
             return driverServerPath.createBasicTrip
+        case .getMeetingLocations :
+            return driverServerPath.meetingLocations
   
        
         }
@@ -74,7 +77,7 @@ extension DriverRouter : APIRouter {
                  "vehicle_name_id": name
             ]
             
-        case .createBasic(endDate: let endDate , startDate: let startDate , seatsNo: let seats , PickLocationId: let pickLocation , destLocationId: let destLocation , features: let features , vehicleID: let vehicleId , price : let price ):
+        case .createBasic(endDate: let endDate , startDate: let startDate , seatsNo: let seats , PickLocationId: let pickLocation , destLocationId: let destLocation , features: let features  , price : let price ):
             return [
                 
                     "end_date": endDate ,
@@ -83,13 +86,17 @@ extension DriverRouter : APIRouter {
                     "price_per_seat":  price ,
                     "pickup_location_id":  pickLocation ,
                     "destination_id": destLocation,
-                    "features": features ,
-                    "vehicle_id": vehicleId
+                    "features": features 
+                   
             ]
-                
+              
+        case .getMeetingLocations:
+            return [
+                "limit" : 100
+            ]
          
         
-        case  .driverStatus , .vehicleDetials  :
+        case  .driverStatus , .vehicleDetials   :
             return nil
             
         }

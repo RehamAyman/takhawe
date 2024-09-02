@@ -82,8 +82,6 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
         locationManager.requestLocation()
         locationManager.startUpdatingLocation()
         googleMaps.delegate = self
-     
-       
         setupLottieView()
         do {
                     // Set the map style by passing the URL of the local file.
@@ -109,14 +107,9 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
            lottieAnimationView.contentMode = .scaleAspectFit
            lottieAnimationView.loopMode = .loop
            lottieAnimationView.play()
-           
-           // Start the animation
-         //  lottieAnimationView.play()
-           
            // Add the Lottie view to the view hierarchy
            lottieAnimationView.isHidden = true
            self.googleMaps.addSubview(lottieAnimationView)
-       
        }
 
 
@@ -138,6 +131,14 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
     }
    
     
+    func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
+           // Ensure the Lottie marker moves with the map
+           if let coordinate = mapView.myLocation?.coordinate {
+               let point = mapView.projection.point(for: coordinate)
+               lottieAnimationView.center = point
+           }
+       }
+    
     
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -156,9 +157,10 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
             lottieAnimationView.center = point
             lottieAnimationView.isHidden = false
         }
-        
-      
     }
+    
+    
+    
     
     func getAddress(lat: Double , Lng: Double){
         
@@ -186,7 +188,9 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
                     }
         }
     }
-     
+   
+    
+    
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         Alertt.showAlertOnVC(target: self, title: "Make sure GPS is open".localized, message: "")

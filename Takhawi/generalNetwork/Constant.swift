@@ -9,14 +9,9 @@ import Foundation
 // MARK: - Request Enums -
 
 enum Server: String {
-//https://dev-dashboard.ecal.sa/
-    
- //"https://sea-lion-app-adsdm.ondigitalocean.app/"
-    //https://takhawi.onrender.com/api
-//https://dev-ecal-dash.hayah.tech/ar/api/v1
-    
+//https://takhawi.onrender.com/api/
    
-    case baseURL = "https://takhawi.onrender.com/api/"
+    case baseURL = "https://dev-dash-takhawe.hayah.tech/api/"
     case socetURL = "https://writingservices.aait-sa.com:4705"
     case socetPort = "4705"
     case rechargeURL = "https://writingservices.aait-sa.com/wallet/charge/"

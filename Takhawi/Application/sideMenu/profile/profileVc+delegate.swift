@@ -21,7 +21,12 @@ extension profileVC : UICollectionViewDelegate , UICollectionViewDataSource , UI
         cell.name.text = item.name
         cell.icon.image = UIImage(named: item.icon)
         cell.icon.tintColor = UIColor.systemGray4
-      
+        
+       
+        if (self.hobbies.first(where: { $0.id == item.id }) != nil) {
+            cell.icon.tintColor = UIColor(named: "MainColor")
+            }
+       
         
         
         return cell

@@ -330,3 +330,12 @@
 "Vehicle condition" = "حالة السياره" ; 
 "App Share" = "عموله التطبيق" ; 
 "Total" = "الاجمالي" ;
+"Search for Gathering Point" = "اختر نقطه التجمع"  ; 
+"number of available seats" = "حدد عدد المقاعد المتاحة" ;
+"Choose Date and Time" = "اختر الوقت والميعاد "  ;
+"Search for Destination" = "حدد وجهتك " ;
+"price of the Seat" = "سعر المقعد " ;
+"Back" = "الرجوع" ; 
+"Select The Trip Date" = "حدد وقت الرحله ";
+"All Fields are required " = "جميع الحقول مطلوبه" ;
+"Add Trip" = "اضافه الرحله" ;

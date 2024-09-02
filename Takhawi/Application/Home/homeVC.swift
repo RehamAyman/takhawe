@@ -72,16 +72,17 @@ class homeVC: BaseVC, sendDataBackDelegate{
     var selectedDate : Date = Date()
     var selectedCityId : Int = 0
     var lottieAnimationView: LottieAnimationView!
+   
     
     
 //MARK: - Properties -
     
     var dummyActivty : [dummyActivity] = [
-        dummyActivity(icon: "Food", name: "FOOD" ) ,
-        dummyActivity(icon: "smoke", name: "NO SMOKING" ) ,
-        dummyActivity(icon: "Vector 3", name: "WIFI"  ) ,
-        dummyActivity(icon: "music 1", name: "MUSIC"  ) ,
-        dummyActivity(icon: "AC", name: "AIR CONDITIONER" )
+        dummyActivity(icon: "Food", name: "FOOD", id: 1 ) ,
+        dummyActivity(icon: "smoke", name: "NO SMOKING", id: 2 ) ,
+        dummyActivity(icon: "Vector 3", name: "WIFI", id: 3  ) ,
+        dummyActivity(icon: "music 1", name: "MUSIC", id: 4  ) ,
+        dummyActivity(icon: "AC", name: "AIR CONDITIONER", id: 5 )
     ]
     var selectedFeatures : [String] = []
     

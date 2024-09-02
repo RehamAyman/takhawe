@@ -24,6 +24,7 @@ enum userServerPath {
     case calculateVipPrice ( id : Int )
     case getWalletData
     case getAllHobiies
+    case updateProfile
     
    
 }
@@ -63,6 +64,8 @@ extension userServerPath : ServerPath {
             return "wallet/user-transactions"
         case .getAllHobiies :
             return "hobby/"
+        case .updateProfile:
+            return "user/profile" 
     
         }
     }

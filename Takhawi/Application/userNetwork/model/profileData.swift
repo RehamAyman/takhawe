@@ -18,8 +18,8 @@ struct profileResult : Codable {
     let gender : String?
     let bio : String?
     let prefered_language : String?
-    let city : String?
-    let hobbies : [String]?
+    let city : cityDataModel?
+    let hobbies : [HobbiesClass]?
 
     enum CodingKeys: String, CodingKey {
 
@@ -47,8 +47,18 @@ struct profileResult : Codable {
         gender = try values.decodeIfPresent(String.self, forKey: .gender)
         bio = try values.decodeIfPresent(String.self, forKey: .bio)
         prefered_language = try values.decodeIfPresent(String.self, forKey: .prefered_language)
-        city = try values.decodeIfPresent(String.self, forKey: .city)
-        hobbies = try values.decodeIfPresent([String].self, forKey: .hobbies)
+        city = try values.decodeIfPresent(cityDataModel.self, forKey: .city)
+        hobbies = try values.decodeIfPresent([HobbiesClass].self, forKey: .hobbies)
     }
 
+}
+
+
+struct cityDataModel  : Codable {
+    let id : Int?
+    let ar_name : String?
+    let en_name : String?
+    
+    
+    
 }

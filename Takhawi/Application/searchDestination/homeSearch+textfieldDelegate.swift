@@ -25,23 +25,24 @@ extension homeSearchVC : UITableViewDelegate , UITableViewDataSource   {
             cell.subLbl.text = item.secText
             if item.selected == true {
                 cell.favIcon.image = UIImage(named: "Vector 4")
+            } else {
+                cell.favIcon.image = UIImage(named: "heart (1) 1")
             }
-            
-            
             
             cell.favIcon.addTapGesture {
                 print("hello , ...... ...")
                 if  item.selected { // unfav
-                   // cell.favIcon.image = UIImage(named: "heart (1) 1")
+                   
                     item.selected = false
-                    self.googleTableView.reloadData()
+                    cell.favIcon.image = UIImage(named: "heart (1) 1")
+                   // self.googleTableView.reloadData()
                 } else { // fav
                     
                     self.addPlaceToFav(alias: item.fullText ,placeId: item.placeID, isFav: true ) { bool  in
                         if bool {
-                          //  cell.favIcon.image = UIImage(named: "Vector 4")
                             item.selected = true
-                            self.googleTableView.reloadData()
+                            cell.favIcon.image = UIImage(named: "Vector 4")
+                         
                         }
                     }
                 }
@@ -136,12 +137,6 @@ extension homeSearchVC : UITableViewDelegate , UITableViewDataSource   {
         }
   
     }
-    
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-
-      }
-    
 
     
 

@@ -31,7 +31,7 @@ struct floatingPickerViews: View {
     let currentYear = Calendar.current.component(.year, from: Date())
 
     // Create an array containing years from 2011 to the current year
-    let startYear = 2011
+   
    
     
     var IsArabicLang : Bool {
@@ -164,7 +164,8 @@ struct floatingPickerViews: View {
                 // 6
                 
                 Menu {
-                    ForEach (  (startYear...currentYear).map { String($0) }   , id: \.self ) { item in
+                    let start_year = carDetails.start_year ?? 2000
+                    ForEach (  (start_year...currentYear).map { String($0) }   , id: \.self ) { item in
                         Button( item , action: {
                             self.selectedYear =  Int ( item ) ?? 2011
                             self.yearText =  item
