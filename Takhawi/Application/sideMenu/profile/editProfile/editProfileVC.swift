@@ -40,6 +40,8 @@ class editProfileVC: BaseVC {
     var genders : [String] = ["Male" , "Female"]
     var allCities : [CitiesResult] = []
     var selectedCityId : Int = 0 
+    var profileImageDate : Data?
+    
 //
 // MARK: - Lifecycle -
     override func viewDidLoad() {

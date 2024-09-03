@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension editProfileVC  : UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout  {
+extension editProfileVC  : UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout ,  UIImagePickerControllerDelegate  ,  UINavigationControllerDelegate  {
  
 //MARK: - VIEWS DSIGN  HELPER  METHODS
    private func handleTextfields () {
@@ -46,8 +46,8 @@ extension editProfileVC  : UICollectionViewDelegate , UICollectionViewDataSource
         self.selectedCityId = self.profileData?.city?.id ?? 0
         
       
-        if let image = self.profileData?.avatar {
-            self.profileIcon.setImage(image:image )
+        if  self.profileData?.avatar?.isValidHttpsUrl() == true {
+            self.profileIcon.setImage(image: profileData?.avatar ?? ""  )
         }
         self.hobbiesArray =  self.profileData?.hobbies ?? []
         self.collectionView.reloadData()
@@ -56,7 +56,7 @@ extension editProfileVC  : UICollectionViewDelegate , UICollectionViewDataSource
         }
         
         self.profileIcon.addTapGesture {
-            
+            self.uploadImage(mediaType: [mediaTypes.publicImage.rawValue])
         }
        
         
@@ -109,8 +109,19 @@ extension editProfileVC  : UICollectionViewDelegate , UICollectionViewDataSource
         return CGSize(width: self.collectionView.frame.width * 0.35  , height: 45  )
     }
     
-    
-   
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        
+        
+        if let image = info[.editedImage] as! UIImage? {
+            let imageData = image.jpegData(compressionQuality: 0.4)!
+            self.profileIcon.image = image
+            self.profileImageDate = imageData
+//            self.profileImage.contentMode = .scaleAspectFill
+//            self.profileImage.layer.cornerRadius = 50
+            picker.dismiss(animated: true, completion: nil)
+        }
+
+    }
     
 
     
@@ -212,8 +223,12 @@ extension editProfileVC  : UICollectionViewDelegate , UICollectionViewDataSource
     //MARK: - UPDATE PROFILE
     func updateMyProfile () {
         activityIndicatorr.startAnimating()
+        var uploadedData = [UploadData]()
+        if let image =   self.profileImageDate {
+            uploadedData.append((UploadData(data: image, fileName: "\(Date().timeIntervalSince1970).jpeg", mimeType: .jpg, name: "avatar")))
+        }
      
-        UserRouter.updateProfile(name: self.name.text ?? "" , email: self.emailTextField.text ?? "" , birthDate: self.birthdateText.text ?? "" , bio: self.FavouritesTextArea.textView.text , cityId: self.selectedCityId , gender: self.genderText.text ?? "" , hobbies: self.hobbiesArray).send(data: []) { [weak self ] ( response : APIGlobalResponse )  in
+        UserRouter.updateProfile(name: self.name.text ?? "" , email: self.emailTextField.text ?? "" , birthDate: self.birthdateText.text ?? "" , bio: self.FavouritesTextArea.textView.text , cityId: self.selectedCityId , gender: self.genderText.text ?? "" , hobbies: self.hobbiesArray).send(data: uploadedData.isEmpty ?  [] : uploadedData ) { [weak self ] ( response : APIGlobalResponse )  in
             guard let self = self else { return}
             if response.status == true  {
                 showPopTopAlert(title: "Done Successfully".localize , withMessage: response.message , success: true )

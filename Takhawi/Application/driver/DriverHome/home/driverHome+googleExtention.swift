@@ -17,7 +17,7 @@ extension DriverHomeVC :  CLLocationManagerDelegate  , GMSMapViewDelegate  {
             locationManager.requestLocation()
             locationManager.startUpdatingLocation()
          googleMaps.delegate = self
-            googleMaps.isMyLocationEnabled = true
+            googleMaps.isMyLocationEnabled = false 
             
             do {
                         // Set the map style by passing the URL of the local file.
@@ -62,7 +62,7 @@ extension DriverHomeVC :  CLLocationManagerDelegate  , GMSMapViewDelegate  {
 
                                 if let lines = place.lines {
                                     print("GEOCODE: Formatted Address: \(lines)")
-//                                 self.secMyLocationOutlet.setTitle(lines[0], for: .normal)
+                             //    self.secMyLocationOutlet.setTitle(lines[0], for: .normal)
                                 }
 
                             } else {

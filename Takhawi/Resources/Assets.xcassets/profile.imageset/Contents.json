@@ -1,21 +1,18 @@
 {
   "images" : [
     {
-      "filename" : "Group 6.png",
+      "filename" : "profile.png",
       "idiom" : "universal",
-      "language-direction" : "left-to-right",
       "scale" : "1x"
     },
     {
-      "filename" : "Group 6@2x.png",
+      "filename" : "profile@2x.png",
       "idiom" : "universal",
-      "language-direction" : "left-to-right",
       "scale" : "2x"
     },
     {
-      "filename" : "Group 6@3x.png",
+      "filename" : "profile@3x.png",
       "idiom" : "universal",
-      "language-direction" : "left-to-right",
       "scale" : "3x"
     }
   ],

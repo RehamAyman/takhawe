@@ -70,7 +70,7 @@ class mapSearchVC: BaseVC {
         imageView.center = self.view.center
       
         self.googleView?.addSubview(imageView)
-        googleView.isMyLocationEnabled = true
+        googleView.isMyLocationEnabled = false 
         
      
         

@@ -39,7 +39,7 @@ struct tab5DriverAuth: View {
                 .padding()
             FloatingTextField(title: "vehicle serial Number".localize , text:  $serialNumber )
                  .padding(.horizontal , 10)
-             Spacer()
+             Spacer(minLength: 170 )
         }
     }
 }

@@ -57,7 +57,7 @@ class SelectLocationViewController: UIViewController ,CLLocationManagerDelegate,
         imageView.center = self.view.center
         self.googleMap?.addSubview(imageView)
         self.googleMap.settings.myLocationButton = true
-        googleMap.isMyLocationEnabled = true
+        googleMap.isMyLocationEnabled = false 
       
 
         self.locationLabel.text = "Your Location".localized

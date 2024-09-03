@@ -24,8 +24,9 @@ class DriverMoreVC: UIViewController {
         if let user = UserDefaults.user?.user {
             self.userEmail.text = user.email
             self.userName.text = user.name
-            self.userImage.setImage(image: user.avatar ?? "" )
+            if user.avatar?.isValidHttpsUrl() == true {
+                self.userImage.setImage(image: user.avatar ?? "" )
+            }
         }
     }
-
 }

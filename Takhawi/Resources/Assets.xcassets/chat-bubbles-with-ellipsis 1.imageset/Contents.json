@@ -1,21 +1,18 @@
 {
   "images" : [
     {
-      "filename" : "Group 6.png",
+      "filename" : "chat-bubbles-with-ellipsis 1.png",
       "idiom" : "universal",
-      "language-direction" : "left-to-right",
       "scale" : "1x"
     },
     {
-      "filename" : "Group 6@2x.png",
+      "filename" : "chat-bubbles-with-ellipsis 1@2x.png",
       "idiom" : "universal",
-      "language-direction" : "left-to-right",
       "scale" : "2x"
     },
     {
-      "filename" : "Group 6@3x.png",
+      "filename" : "chat-bubbles-with-ellipsis 1@3x.png",
       "idiom" : "universal",
-      "language-direction" : "left-to-right",
       "scale" : "3x"
     }
   ],

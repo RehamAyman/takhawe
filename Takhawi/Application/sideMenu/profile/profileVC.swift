@@ -85,8 +85,8 @@ extension profileVC {
                 
                 self.profileData = result
                 self.hobbies = result.hobbies ?? []
-                if let avatar = result.avatar {
-                    self.userImage.setImage(image: avatar)
+                if result.avatar?.isValidHttpsUrl() == true  {
+                    self.userImage.setImage(image: result.avatar ?? "" )
                 }
                 
                 self.userName.text = result.name ?? ""

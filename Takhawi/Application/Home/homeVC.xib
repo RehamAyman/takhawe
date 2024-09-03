@@ -73,7 +73,7 @@
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
                                                     <color key="tintColor" name="MainColor"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
-                                                    <state key="normal" title="Button" image="focus 1"/>
+                                                    <state key="normal" title="--" image="focus 1"/>
                                                     <connections>
                                                         <action selector="secMyLoactionAction:" destination="-1" eventType="touchUpInside" id="4Hk-TX-Vvg"/>
                                                     </connections>
@@ -102,7 +102,10 @@
                                             <rect key="frame" x="0.0" y="53" width="323" height="45"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P2H-3D-jYO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="323" height="43.666666666666664"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="323" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="9A2-aO-wJK"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                     <color key="tintColor" name="MainColor"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
@@ -126,7 +129,6 @@
                                                 <constraint firstItem="P2H-3D-jYO" firstAttribute="top" secondItem="TUs-lL-O8l" secondAttribute="top" id="hte-r4-NAz"/>
                                                 <constraint firstAttribute="bottom" secondItem="Tqm-lS-dg6" secondAttribute="bottom" id="lDN-Ao-X6a"/>
                                                 <constraint firstAttribute="height" constant="45" id="sa7-oC-tlK"/>
-                                                <constraint firstAttribute="bottom" secondItem="P2H-3D-jYO" secondAttribute="bottom" constant="1.5" id="vdl-c9-Ige"/>
                                                 <constraint firstItem="Tqm-lS-dg6" firstAttribute="leading" secondItem="TUs-lL-O8l" secondAttribute="leading" id="xTN-kB-hIp"/>
                                                 <constraint firstAttribute="trailing" secondItem="P2H-3D-jYO" secondAttribute="trailing" id="xow-OB-DAu"/>
                                             </constraints>

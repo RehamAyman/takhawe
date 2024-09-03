@@ -96,7 +96,7 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
                 }
      
       googleMaps.settings.myLocationButton = false
-      googleMaps.isMyLocationEnabled = true
+      googleMaps.isMyLocationEnabled = false
     }
 
     
@@ -146,16 +146,15 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
        
         centerMapOnLocation(location: locationManager.location!)
         self.locationManager.stopUpdatingLocation()
-        
-        guard let latitude = locationManager.location?.coordinate.latitude else { return}
-        guard let longitude =  locationManager.location?.coordinate.longitude else { return}
-        getAddress(lat: latitude , Lng: longitude)
+  
         
         if let location = locations.last {
             let userLocation = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
             let point = googleMaps.projection.point(for: userLocation)
             lottieAnimationView.center = point
             lottieAnimationView.isHidden = false
+            getAddress(lat: location.coordinate.latitude , Lng: location.coordinate.longitude)
+            
         }
     }
     
@@ -176,6 +175,7 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
 
                                 if let lines = place.lines {
                                     print("GEOCODE: Formatted Address: \(lines)")
+                                    
                                  self.secMyLocationOutlet.setTitle(lines[0], for: .normal)
                                 }
 

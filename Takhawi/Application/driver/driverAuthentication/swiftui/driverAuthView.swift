@@ -186,7 +186,9 @@ struct driverAuthView: View {
         .onAppear {
             print("🥳🥳🥳🥳on appear function 🥳🥳🥳🥳")
             self.getCarDetails()
+           
         }
+        .navigationBarBackButtonHidden(true)
     }
        
 }

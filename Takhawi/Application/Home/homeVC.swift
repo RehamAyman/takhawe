@@ -23,7 +23,7 @@ class homeVC: BaseVC, sendDataBackDelegate{
     
 //MARK: - IBOutlets -
     
-    @IBOutlet weak var lottieContainer: UIView!
+   
     @IBOutlet weak var startingCityText: UITextField!
     @IBOutlet weak var cityContainerView: UIView!
     @IBOutlet weak var sideMenuEmail: UILabel!
