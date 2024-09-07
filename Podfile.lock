@@ -20,6 +20,7 @@ PODS:
   - ImageSlideshow (1.9.2):
     - ImageSlideshow/Core (= 1.9.2)
   - ImageSlideshow/Core (1.9.2)
+  - Intercom (17.4.0)
   - JDStatusBarNotification (2.2.1)
   - lottie-ios (4.3.4)
   - MaterialComponents/AnimationTiming (124.2.0)
@@ -150,6 +151,7 @@ DEPENDENCIES:
   - GooglePlaces
   - HSCycleGalleryView
   - ImageSlideshow (~> 1.9.0)
+  - Intercom
   - JDStatusBarNotification
   - lottie-ios
   - "MaterialComponents/TextControls+FilledTextAreas"
@@ -180,6 +182,7 @@ SPEC REPOS:
   trunk:
     - GoogleMaps
     - GooglePlaces
+    - Intercom
 
 EXTERNAL SOURCES:
   FontBlaster:
@@ -209,6 +212,7 @@ SPEC CHECKSUMS:
   GooglePlaces: e874db179f2675c4f3eeda0b686b540273a578b0
   HSCycleGalleryView: 5101435175a26d08f1c062cf6cb245f58f09b425
   ImageSlideshow: be305b54eaf2b2cfc7a7141c7c734605d44dc07d
+  Intercom: 1117de17e36a21a8a02bec401665fd8c6770e763
   JDStatusBarNotification: d43e8481174a2c5f195d16ce65c611f4a12bf507
   lottie-ios: 3d98679b41fa6fd6aff2352b3953dbd3df8a397e
   MaterialComponents: 1a9b2d9d45b1601ae544de85089adc4c464306d4
@@ -217,6 +221,6 @@ SPEC CHECKSUMS:
   OTPFieldView: 700a752fe62c41d1c4914c78aa500fb30d97c255
   PureLayout: 5fb5e5429519627d60d079ccb1eaa7265ce7cf88
 
-PODFILE CHECKSUM: 5f5c91646398c15fd5dd00467a11a87bde31dae9
+PODFILE CHECKSUM: 71d52834ead6b7c22b0d9c32e00aaad5bb7feb84
 
 COCOAPODS: 1.15.0

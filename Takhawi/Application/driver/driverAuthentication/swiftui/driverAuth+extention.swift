@@ -210,7 +210,7 @@ extension driverAuthView {
     
     private func uploadCarNum () {
        
-        if self.n1 == "" || self.n2 == "" || self.n3 == "" || self.n4 == ""  || self.A1 == "" || self.A2 == "" || self.A3 == ""  {
+        if self.n1 == "" && self.n2 == "" &&  self.n3 == "" && self.n4 == ""  || (self.A1 == "" &&  self.A2 == "" && self.A3 == "" )   {
             showInfoTopAlert(withMessage: "please enter your plate num first! ".localize)
         } else {
             print(n1 + n2 + n3)
@@ -219,9 +219,6 @@ extension driverAuthView {
                 self.tabSelection = 9
             }
         }
-        
-        
-        
     }
     
     //MARK: - create a vehicle  STEP 9

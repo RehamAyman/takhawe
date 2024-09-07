@@ -72,7 +72,7 @@ class homeVC: BaseVC, sendDataBackDelegate{
     var selectedDate : Date = Date()
     var selectedCityId : Int = 0
     var lottieAnimationView: LottieAnimationView!
-   
+    var currentUserLocation: CLLocationCoordinate2D?
     
     
 //MARK: - Properties -
@@ -114,7 +114,15 @@ class homeVC: BaseVC, sendDataBackDelegate{
         self.setUpGoogleMapView()
         self.setTodayDateINformate()
         self.initialSideMenu()
-        self.userName.text = UserDefaults.user?.user?.name ?? "User"
+       
+        if let firstWord = UserDefaults.user?.user?.name?.split(separator: " ").first {
+            print(firstWord)
+            self.userName.text = String(firstWord)
+        } else {
+            self.userName.text = UserDefaults.user?.user?.name ?? "User"
+            print("No words found") // Output: No words found
+        }
+        
         home = self.containerView.transform
         tableView.delegate = self
         tableView.dataSource = self

@@ -10,6 +10,8 @@ import SwiftUI
 struct tab7DriverAuth: View {
     @State var isShowingMediaPicker : Bool = false
     @Binding var urls : [URL] 
+    @State private var showAlert = false
+    
     var IsArabicLang : Bool {
         if LocalizationManager.shared.getLanguage() == .Arabic {
             return true
@@ -40,7 +42,13 @@ struct tab7DriverAuth: View {
                     .font(.custom((IsArabicLang ? AppFont.arRegular : AppFont.Regular).rawValue , size: 12))
                   
                     .padding(5)
-                Button(action: { isShowingMediaPicker.toggle() }, label: {
+                Button(action: {
+                    if self.urls.count == 4 {
+                        showInfoTopAlert(withMessage: "you cant upload more than 4 images ".localize)
+                    } else {
+                        isShowingMediaPicker.toggle()
+                    }
+                    }, label: {
                     Text("Upload".localize)
                         .foregroundStyle(Color.white)
                         .font(.custom((IsArabicLang ? AppFont.arBold : AppFont.Bold).rawValue , size: 13))
@@ -167,13 +175,29 @@ struct tab7DriverAuth: View {
                 
            
         }
+        .alert("Error!".localize, isPresented: $showAlert) {
+            Button("OK".localize, role: .cancel) { }
+                  } message: {
+                      Text("you cant upload more than 4 images ".localize)
+                  }
+        
         .mediaImporter(isPresented: $isShowingMediaPicker,
                         allowedMediaTypes: .images,
                        allowsMultipleSelection: true ) { result in
             switch result {
             case .success(let urls):
-              
+                
+                if urls.count == 4 {
                     self.urls =  Array(urls.prefix(4))
+                } else  if (self.urls + urls ).count > 4 {
+                    showAlert = true
+//                    showInfoTopAlert(withMessage: "you cant upload more than 4 images ".localize)
+                } else {
+                    for i in urls {
+                        self.urls.append(i)
+                    }
+                }
+                  //  self.urls =  Array(urls.prefix(4))
                
               
        

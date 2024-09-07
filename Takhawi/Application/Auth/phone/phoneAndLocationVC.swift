@@ -78,9 +78,9 @@ class phoneAndLocationVC: BaseVC, UITextFieldDelegate {
         guard let text = textField.text else { return false }
         
         let newString = (text as NSString).replacingCharacters(in: range, with: string)
-        textField.text = format(with: "XX XXX XXXXX", phone: newString)
+        textField.text = format(with: "XX XXX XXXX", phone: newString)
       
-        if passwordTextField.text?.count == 12  { // saudi arabia number length
+        if passwordTextField.text?.count == 11  { // saudi arabia number length
             dismissKeyboard()
             // call the end point
 

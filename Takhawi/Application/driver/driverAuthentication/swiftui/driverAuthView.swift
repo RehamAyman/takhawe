@@ -57,20 +57,20 @@ struct driverAuthView: View {
                 //  VStack ( alignment: .center ){
                 
              
-                HStack {
-                    Button(action: { self.BackAction?() }, label: {
-                        Image("Group 25")
-                    })
-                    
-                    Spacer()
-                }
-                .padding(.horizontal)
-                .padding(.top , 50 )
+//                HStack {
+//                    Button(action: { self.BackAction?() }, label: {
+//                        Image("Group 25")
+//                    })
+//                    
+//                    Spacer()
+//                }
+//                .padding(.horizontal)
+//                .padding(.top , 50 )
                 
                 Text ("Driver Profile".localize)
                     .foregroundStyle(Color( "MainColor"))
                     .font(.custom(  (IsArabicLang ? AppFont.arBold : AppFont.Bold).rawValue , size: 28))
-               
+                    .padding(.top , 55 )
               
                 
                 
@@ -198,33 +198,63 @@ struct driverAuthView: View {
 
 
 
+//let englishToArabicMapping: [Character: Character] = [
+//    "a": "ا",
+//    "b": "ب",
+//    "c": "ج",
+//    "d": "د",
+//    "e": "ه",
+//    "f": "و",
+//    "g": "ز",
+//    "h": "ح",
+//    "i": "ط",
+//    "j": "ي",
+//    "k": "ك",
+//    "l": "ل",
+//    "m": "م",
+//    "n": "ن",
+//    "o": "س",
+//    "p": "ع",
+//    "q": "ف",
+//    "r": "ص",
+//    "s": "ق",
+//    "t": "ر",
+//    "u": "ش",
+//    "v": "ت",
+//    "w": "ث",
+//    "x": "خ",
+//    "y": "ذ",
+//    "z": "ض"
+//]
+
+
 let englishToArabicMapping: [Character: Character] = [
     "a": "ا",
     "b": "ب",
     "c": "ج",
     "d": "د",
     "e": "ه",
-    "f": "و",
-    "g": "ز",
+    "f": "ف",
+    "g": "ق",
     "h": "ح",
     "i": "ط",
-    "j": "ي",
+    "j": "ج",
     "k": "ك",
     "l": "ل",
     "m": "م",
     "n": "ن",
-    "o": "س",
-    "p": "ع",
-    "q": "ف",
-    "r": "ص",
-    "s": "ق",
-    "t": "ر",
-    "u": "ش",
-    "v": "ت",
-    "w": "ث",
-    "x": "خ",
-    "y": "ذ",
-    "z": "ض"
+    "o": "و",
+    "p": "ب",
+    "q": "ق",
+    "r": "ر",
+    "s": "س",
+    "t": "ت",
+    "u": "و",
+    "v": "ف",
+    "w": "و",
+    "x": "س",
+    "y": "ي",
+    "z": "ز"
 ]
 
 // Function to convert English text to Arabic text

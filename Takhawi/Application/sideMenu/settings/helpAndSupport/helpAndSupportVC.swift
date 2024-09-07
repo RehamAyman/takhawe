@@ -9,6 +9,7 @@
 
 import UIKit
 import MaterialComponents
+import Intercom
 
 class helpAndSupportVC: BaseVC {
     
@@ -30,8 +31,17 @@ class helpAndSupportVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureInitialDesign()
+       
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+            super.viewDidAppear(animated)
+            Intercom.setLauncherVisible(true)  // Show the Intercom pod here
+        }
+
+        override func viewWillDisappear(_ animated: Bool) {
+            super.viewWillDisappear(animated)
+            Intercom.setLauncherVisible(false)  // Hide the Intercom pod when leaving the view
+        }
     
     //MARK: - Design Methods -
     private func configureInitialDesign() {

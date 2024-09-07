@@ -107,13 +107,16 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
            lottieAnimationView.contentMode = .scaleAspectFit
            lottieAnimationView.loopMode = .loop
            lottieAnimationView.play()
+        lottieAnimationView.isUserInteractionEnabled = false
            // Add the Lottie view to the view hierarchy
            lottieAnimationView.isHidden = true
            self.googleMaps.addSubview(lottieAnimationView)
        }
 
 
-
+  
+    
+    
     
     func requestLocationAccess() {
         let status = CLLocationManager.authorizationStatus()
@@ -133,22 +136,32 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
     
     func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
            // Ensure the Lottie marker moves with the map
+        print("iam moving ")
            if let coordinate = mapView.myLocation?.coordinate {
+               print("here my location \(coordinate)")
                let point = mapView.projection.point(for: coordinate)
+               lottieAnimationView.center = point
+           } else if let currentLocation = self.currentUserLocation {
+               print("here my second chance ")
+               let point =  mapView.projection.point(for: currentLocation)
                lottieAnimationView.center = point
            }
        }
     
     
+
+    
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print("listen")
        
+     
         centerMapOnLocation(location: locationManager.location!)
         self.locationManager.stopUpdatingLocation()
-  
-        
+          
         if let location = locations.last {
+            print("last detect")
+            currentUserLocation = location.coordinate
             let userLocation = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
             let point = googleMaps.projection.point(for: userLocation)
             lottieAnimationView.center = point
@@ -245,9 +258,6 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
         self.viewHeight.constant = 230
         
         UIView.animate(withDuration: 0.5 , animations: {
-           
-         
-            
             self.view.layoutIfNeeded()
         })
     }

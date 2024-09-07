@@ -37,6 +37,7 @@ target 'Takhawi' do
   pod 'EMTNeumorphicView'
   pod 'JDStatusBarNotification'
   pod 'AEOTPTextField'
+  pod 'Intercom'
   pod 'FontBlaster', :git => 'https://github.com/ArtSabintsev/FontBlaster.git', :branch => 'swift5.0'
   
   

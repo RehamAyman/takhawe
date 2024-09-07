@@ -123,12 +123,8 @@ extension UserRouter : APIRouter {
             if bio != "" {
                 dict["bio"] = bio
             }
-            
-            
-            
             return dict
            
-            
         case .getAllHobbies :
             return [
                 "limit" : 60
@@ -143,7 +139,7 @@ extension UserRouter : APIRouter {
         case .getAllCities (let page ):
             return [
                 "page" : page ,
-                "limit" : 50
+                "limit" : 100
             ]
         case .acceptOffer( _ ,  let method):
             return [

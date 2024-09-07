@@ -9,6 +9,7 @@
 
 import UIKit
 import AEOTPTextField
+import Intercom
 
 
 
@@ -86,6 +87,15 @@ extension enterPasswordVC {
                         UserDefaults.isLogin = true
                         let vc =  homeVC()
                         self?.push(vc)
+                        let ic = ICMUserAttributes()
+                        ic.email = UserDefaults.user?.user?.email ?? ""
+                        ic.name = UserDefaults.user?.user?.name ?? ""
+                        ic.phone = UserDefaults.user?.user?.phone ?? ""
+                        Intercom.loginUser(with: ic ) { result  in
+                            print("🤠🤠🤠🤠")
+                            print(result)
+                        }
+                        
                     } else if userType == role.driver.rawValue  {
                         // check driver status
                      

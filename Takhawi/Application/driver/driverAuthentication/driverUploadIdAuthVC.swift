@@ -24,8 +24,7 @@ class driverAuthVC: BaseVC {
     
     lazy var swiftUIView = UIHostingController(rootView:
                                            
-                                             
-            driverAuthView (tabSelection: selection ){
+          driverAuthView (tabSelection: selection ){
         print("driver done in his authentication .. present popup .. .")
         let vc = baseSuccessAlertVC()
         vc.mainTitleText = "Thank you".localize

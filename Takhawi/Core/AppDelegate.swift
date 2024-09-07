@@ -8,6 +8,7 @@
 import UIKit
 import GoogleMaps
 import GooglePlaces
+import Intercom
 
 
 
@@ -21,20 +22,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     static let GoogleAPI = "AIzaSyAfTSBkcXfJa5Zf0YHN3-m-gJFFhvzVu4U" // "AIzaSyBaLRq-LbUQmWZkJkfwjWcJyoxWlhyQ35s"
     var location:CLLocationManager?
     
-   //AIzaSyBaLRq-LbUQmWZkJkfwjWcJyoxWlhyQ35s
+   
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-     //AIzaSyBaLRq-LbUQmWZkJkfwjWcJyoxWlhyQ35s
-    //AIzaSyDS61p6luMp1Kfj8xmfIvjYz-mBQF9Noo8 // hayah
-    //AIzaSyA7nhBa7YZtIb6KoG47O0_y2PwxYfsHiBs // ageeba
-        //AIzaSyAfTSBkcXfJa5Zf0YHN3-m-gJFFhvzVu4U
-        //AIzaSyA7nhBa7YZtIb6KoG47O0_y2PwxYfsHiBs
+  
+        
         GMSServices.provideAPIKey("AIzaSyAfTSBkcXfJa5Zf0YHN3-m-gJFFhvzVu4U")
         GMSPlacesClient.provideAPIKey("AIzaSyAfTSBkcXfJa5Zf0YHN3-m-gJFFhvzVu4U")
         self.location?.requestAlwaysAuthorization()
         self.location?.requestWhenInUseAuthorization()
         AppDelegate.window?.tintColor = UIColor(named: "MainColor")
         
+        Intercom.setBottomPadding(90)
+      
+        
+        Intercom.setApiKey("ios_sdk-e6a2bb07aa9d964c423aca0f19b83e7288022f6e", forAppId: "yqdxwqwt")
+        Intercom.setLauncherVisible(false )
+
+        let ic = ICMUserAttributes()
+        ic.email = UserDefaults.user?.user?.email ?? ""
+        ic.name = UserDefaults.user?.user?.name ?? ""
+        ic.phone = UserDefaults.user?.user?.phone ?? ""
+        Intercom.loginUser(with: ic ) { result  in
+            print("🤠🤠🤠🤠")
+            print(result)
+        }
+       
         print("🤠 userToken: \(UserDefaults.user?.accessToken ?? "-- no saved token --" )")
   // check here  if authenticated User go to home else go to auth cycle
         return true
