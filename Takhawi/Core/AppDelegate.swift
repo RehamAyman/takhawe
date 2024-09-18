@@ -38,6 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Intercom.setApiKey("ios_sdk-e6a2bb07aa9d964c423aca0f19b83e7288022f6e", forAppId: "yqdxwqwt")
         Intercom.setLauncherVisible(false )
+       
 
         let ic = ICMUserAttributes()
         ic.email = UserDefaults.user?.user?.email ?? ""

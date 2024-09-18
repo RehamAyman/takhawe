@@ -19,6 +19,10 @@ extension Notification.Name {
     static let reloadMyOrders = Notification.Name(
         rawValue: "reloadMyOrders")
 
-    static let updateHome = Notification.Name(
-        rawValue: "updateHome")
+   
+    
+    static let updateHomeProfile = Notification.Name("customNotification")
+    
+  
+    
 }

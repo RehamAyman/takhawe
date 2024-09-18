@@ -56,8 +56,8 @@ struct profileResult : Codable {
 
 struct cityDataModel  : Codable {
     let id : Int?
-    let ar_name : String?
-    let en_name : String?
+    let name : String?
+   
     
     
     

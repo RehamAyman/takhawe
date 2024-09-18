@@ -58,6 +58,7 @@ struct dummyActivity  {
 
 
 struct dummyFilterData {
+    let id : Int
     let name : String
     var selected : Bool = false 
 }
@@ -84,16 +85,18 @@ let dummyCancelationResons  : [String] = [
 ]
 
 
-let dummyReportResons : [String] = [
-    "Waiting for long time".localize ,
-    "Driver denied to go to destination".localize ,
-    "Driver denied to come to pickup".localize ,
-    "Unable to contact driver".localize ,
-    "Wrong address shown".localize ,
-    "The price is not reasonable".localize
 
 
-]
+
+
+
+
+
+struct cancellationReason  {
+    let id = UUID().uuidString
+    let name : String
+    let key : String
+}
 
 
 

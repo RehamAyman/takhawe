@@ -68,9 +68,11 @@ class tripListCell: UITableViewCell {
         self.TripDate.text = data.start_date?.convertFromIso()
         self.availableSeatsLabel.text =  "\(data.basic_trip_available_seats_no ?? 0 ) " +  "seats are Available".localize
         if let avatar = data.driver_avatar {
-            if avatar.isValidHttpsUrl() {
-                self.driverPhoto.setImage(image: avatar)
-            }
+            let url = Server.imageBase.rawValue + avatar
+            self.driverPhoto.setImage(image: url)
+            
+            
+            
         }
          
         

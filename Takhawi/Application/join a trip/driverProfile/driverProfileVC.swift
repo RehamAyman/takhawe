@@ -161,6 +161,7 @@ extension driverProfileVC {
               
             if let result = response.result {
                 self.tripCountLabel.text =  "trips: ".localize + "\( result.completed_trips_count ?? 0)"
+                self.driverImage.setImage(image: Server.imageBase.rawValue + (result.driver?.avatar ?? "" ) )
                 
             }
            

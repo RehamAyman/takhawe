@@ -38,7 +38,7 @@ extension homeSearchVC : UITableViewDelegate , UITableViewDataSource   {
                    // self.googleTableView.reloadData()
                 } else { // fav
                     
-                    self.addPlaceToFav(alias: item.fullText ,placeId: item.placeID, isFav: true ) { bool  in
+                    self.addPlaceToFav(alias: item.fullText ,placeId: item.placeID, isFav: true, desc: item.description ) { bool  in
                         if bool {
                             item.selected = true
                             cell.favIcon.image = UIImage(named: "Vector 4")
@@ -194,11 +194,11 @@ extension homeSearchVC : UITableViewDelegate , UITableViewDataSource   {
         
   
     
-    func addPlaceToFav (alias : String , placeId : String  , isFav : Bool , completion: @escaping (Bool) -> Void ) {
+    func addPlaceToFav (alias : String , placeId : String  , isFav : Bool  , desc : String , completion: @escaping (Bool) -> Void ) {
         activityIndicatorr.startAnimating()
         self.getCoordinatesFromPlaceId(placeid: placeId) { bool , lat , lng  in
                     
-            UserRouter.addAddressToFav(alias: alias , lat: lat , lng: lng , isFav: isFav ).send { [weak self ] (response : APIGlobalResponse ) in
+            UserRouter.addAddressToFav(alias: alias , lat: lat , lng: lng , isFav: isFav, desc: desc ).send { [weak self ] (response : APIGlobalResponse ) in
                 guard let self = self else { return }
                 if response.status == true  {
                     completion(true )

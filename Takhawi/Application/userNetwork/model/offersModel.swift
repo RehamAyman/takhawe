@@ -53,17 +53,20 @@ struct offerResult : Codable {
 struct Driver : Codable {
     let name : String?
     let avatar : String?
+    let driver_rate : Double?
 
     enum CodingKeys: String, CodingKey {
 
         case name = "name"
         case avatar = "avatar"
+        case driver_rate = "driver_rate"
     }
 
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         name = try values.decodeIfPresent(String.self, forKey: .name)
         avatar = try values.decodeIfPresent(String.self, forKey: .avatar)
+        driver_rate = try values.decodeIfPresent( Double.self , forKey: .driver_rate)
     }
 
 }

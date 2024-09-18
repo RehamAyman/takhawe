@@ -202,7 +202,7 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="700"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hSY-GT-POD">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1015"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1135"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E5c-eT-4P9">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="190"/>
@@ -847,6 +847,44 @@
                                                     <constraint firstItem="4x5-15-tnz" firstAttribute="top" secondItem="u6t-TI-yRJ" secondAttribute="top" constant="5" id="HKD-OQ-rlY"/>
                                                     <constraint firstAttribute="height" constant="65" id="ocA-27-Ain"/>
                                                     <constraint firstAttribute="trailing" secondItem="4x5-15-tnz" secondAttribute="trailing" constant="12" id="vay-5V-ymN"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vdt-Ck-M6y">
+                                                <rect key="frame" x="0.0" y="1025" width="393" height="50"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lyf-T9-PZv">
+                                                        <rect key="frame" x="20" y="0.0" width="353" height="50"/>
+                                                        <color key="backgroundColor" name="AppRed"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Logout">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Logout"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="25"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="logoutAction:" destination="4Bj-ti-Hew" eventType="touchUpInside" id="ZDL-GB-S5G"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="3VS-Zy-GxS"/>
+                                                    <constraint firstItem="lyf-T9-PZv" firstAttribute="top" secondItem="Vdt-Ck-M6y" secondAttribute="top" id="Ori-kS-yc5"/>
+                                                    <constraint firstAttribute="trailing" secondItem="lyf-T9-PZv" secondAttribute="trailing" constant="20" id="PC0-lp-nQN"/>
+                                                    <constraint firstAttribute="bottom" secondItem="lyf-T9-PZv" secondAttribute="bottom" id="WjR-Z7-cTg"/>
+                                                    <constraint firstItem="lyf-T9-PZv" firstAttribute="leading" secondItem="Vdt-Ck-M6y" secondAttribute="leading" constant="20" id="nf9-CI-CvK"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CQE-vl-mMl">
+                                                <rect key="frame" x="0.0" y="1085" width="393" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Qs0-GH-tuf"/>
                                                 </constraints>
                                             </view>
                                         </subviews>

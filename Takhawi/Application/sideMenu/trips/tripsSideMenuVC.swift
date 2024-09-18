@@ -13,11 +13,13 @@ class tripsSideMenuVC: BaseVC {
     
     //MARK: - IBOutlets -
     
+    @IBOutlet weak var emptyView: UIView!
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segment: ColoredCustomUISegmentedControl!
     
     //MARK: - Properties -
     
-    
+    var upcommingTrips : [MainTripResult] =  []
     //MARK: - Creation -
   
     
@@ -25,6 +27,7 @@ class tripsSideMenuVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureInitialDesign()
+        self.getUpcommingTrips(withLoading: true )
     }
     
     
@@ -32,6 +35,8 @@ class tripsSideMenuVC: BaseVC {
     private func configureInitialDesign() {
         self.title = "".localized
         self.setupsegment()
+        self.setUpMainView()
+        
     }
     
     //MARK: - Logic Methods -
@@ -39,11 +44,71 @@ class tripsSideMenuVC: BaseVC {
     
     //MARK: - Actions -
     
+    
+    @IBAction func segmentAction(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0 :
+            print("upcomming ")
+            self.getUpcommingTrips(withLoading: true )
+        case 1:
+            print("completed ")
+            self.getCompletedTrips()
+        case 2:
+            print("cancelled")
+            self.getCancelledTrips()
+        default:
+            print("def")
+        }
+    }
+    
+    @IBAction func returnHome(_ sender: UIButton) {
+        self.pop(animated: true )
+    }
 }
 
 
 //MARK: - Networking -
 extension tripsSideMenuVC {
+    func getUpcommingTrips (withLoading : Bool ) {
+        if withLoading {
+            activityIndicatorr.startAnimating()
+        }
+        UserRouter.getMyUpcommingTrips.send { [weak self ] (response : APIGenericResponse<[MainTripResult]> )  in
+            guard let self = self else { return  }
+            if let result = response.result {
+                self.upcommingTrips = result
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    
+    func getCancelledTrips () {
+        activityIndicatorr.startAnimating()
+        UserRouter.getCancelledTrips.send { [weak self ] (response : APIGenericResponse<[MainTripResult]> )  in
+            guard let self = self else { return  }
+           if let result = response.result {
+                self.upcommingTrips = result
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    
+    func getCompletedTrips () {
+        activityIndicatorr.startAnimating()
+        UserRouter.getCompletedTrips.send { [weak self ] (response : APIGenericResponse<[MainTripResult]> )  in
+            guard let self = self else { return  }
+           if let result = response.result {
+                self.upcommingTrips = result
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    
+ 
+   
     
 }
 

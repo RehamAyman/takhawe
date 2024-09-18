@@ -328,7 +328,7 @@
 "trips: " = "الرحلات: " ; 
 "Your Complain has been sent successfully" = "تم ارسال شكوتك للاداره بنجاح .." ;
 "Vehicle condition" = "حالة السياره" ; 
-"App Share" = "عموله التطبيق" ; 
+"App Share" = "رسوم الخدمة" ;
 "Total" = "الاجمالي" ;
 "Search for Gathering Point" = "اختر نقطه التجمع"  ; 
 "number of available seats" = "حدد عدد المقاعد المتاحة" ;
@@ -346,4 +346,9 @@
 "Basic Trips" = "الرحلات الجاهزة" ;
 "Vip Trips" = "الرحلات الخاصه" ;
 "you cant upload more than 4 images " = "لا يمكنك تحميل اكثر من ٤ صور " ;
+
+"Show Trip Details" = "تفاصيل الرحله" ; 
+"Select an option below" = "حدد خيارًا أدناه" ;
+"Cancel Trip" = "الغاء الرحله" ; 
+"Choose Option" = "اختر" ;
 

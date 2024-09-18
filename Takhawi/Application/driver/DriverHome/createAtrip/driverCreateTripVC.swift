@@ -30,7 +30,7 @@ class driverCreateTripVC: BaseVC {
     @IBOutlet weak var gathering: MDCOutlinedTextField!
  
     
-    //MARK: - Properties -
+//MARK: - Properties -
     
     var meetingLocationArray : [meetingLocationResult] = []
     var selectedPickUp : Int = 0
@@ -63,6 +63,8 @@ class driverCreateTripVC: BaseVC {
         collectionView.dataSource = self
         collectionView.register(cellType: chooseFeatureCell.self)
     }
+    
+    
     
 //MARK: - Logic Methods -
     func handleTextfields () {
@@ -149,9 +151,7 @@ extension driverCreateTripVC {
                 } else {
                     self.selectedPickUp = Int ( action.identifier.rawValue ) ?? 0
                 }
-              
             }
-    
             var menuChildren: [UIMenuElement] = []
             for i in self.meetingLocationArray {
                 menuChildren.append(UIAction(title: i.name ?? "" , identifier: UIAction.Identifier( String ( i.id ?? 0 ) )  , handler: actionClosure))

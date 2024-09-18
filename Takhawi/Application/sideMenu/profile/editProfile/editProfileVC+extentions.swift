@@ -11,7 +11,7 @@ extension editProfileVC  : UICollectionViewDelegate , UICollectionViewDataSource
  
 //MARK: - VIEWS DSIGN  HELPER  METHODS
    private func handleTextfields () {
-    
+     
     self.name.label.text = "Name".localize
     self.name.handelTextField(placeHolder: "Name".localize)
     self.emailTextField.label.text = "Email address".localize
@@ -30,13 +30,13 @@ extension editProfileVC  : UICollectionViewDelegate , UICollectionViewDataSource
     self.FavouritesTextArea.label.text = "Favourites".localize
     self.name.text = self.profileData?.name ?? ""
     self.emailTextField.text = self.profileData?.email ?? ""
-    self.birthdateText.text = self.profileData?.birth_date ?? ""
-    let lang = LocalizationManager.shared.getLanguage()
-    self.cityText.text = lang == .Arabic ?  self.profileData?.city?.ar_name  :  self.profileData?.city?.en_name
+    self.birthdateText.text = self.profileData?.birth_date?.convertFromIsoToddmmyy() ?? ""
+   
+    self.cityText.text =  self.profileData?.city?.name ?? "" 
     self.phoneNumber.text = self.profileData?.phone ?? ""
     self.genderText.text = self.profileData?.gender ?? ""
     self.FavouritesTextArea.textView.text = self.profileData?.bio ?? ""
-       self.collectionView.semanticContentAttribute = .forceRightToLeft
+    self.collectionView.semanticContentAttribute = .forceRightToLeft
         
     }
     
@@ -45,10 +45,13 @@ extension editProfileVC  : UICollectionViewDelegate , UICollectionViewDataSource
         self.handleTextfields()
         self.selectedCityId = self.profileData?.city?.id ?? 0
         
-      
-        if  self.profileData?.avatar?.isValidHttpsUrl() == true {
-            self.profileIcon.setImage(image: profileData?.avatar ?? ""  )
+        
+        if let imageString = profileData?.avatar {
+            let avatar = Server.imageBase.rawValue + imageString
+            self.profileIcon.setImage(image: avatar )
         }
+        
+      
         self.hobbiesArray =  self.profileData?.hobbies ?? []
         self.collectionView.reloadData()
         if self.profileData?.hobbies?.isEmpty == true  {
@@ -58,9 +61,38 @@ extension editProfileVC  : UICollectionViewDelegate , UICollectionViewDataSource
         self.profileIcon.addTapGesture {
             self.uploadImage(mediaType: [mediaTypes.publicImage.rawValue])
         }
-       
         
+        let datePicker = UIDatePicker()
+                datePicker.datePickerMode = .date
+                datePicker.preferredDatePickerStyle = .wheels
+                datePicker.maximumDate = Date() // No future dates allowed
+                
+                // Set UIDatePicker as the input view for the text field
+        birthdateText.inputView = datePicker
+                
+                // Add a toolbar with a Done button to dismiss the picker
+                let toolbar = UIToolbar()
+                toolbar.sizeToFit()
+                let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(donePressed))
+                toolbar.setItems([doneButton], animated: true)
+                birthdateText.inputAccessoryView = toolbar
+                
+                // When the date is selected, update the text field
+                datePicker.addTarget(self, action: #selector(dateChanged(datePicker:)), for: .valueChanged)
     }
+    @objc func donePressed() {
+           
+           self.view.endEditing(true)
+       }
+       
+       @objc func dateChanged(datePicker: UIDatePicker) {
+           // Format and display the selected date in the text field
+           let dateFormatter = DateFormatter()
+           dateFormatter.dateStyle = .medium
+           birthdateText.text = datePicker.date.dateToString //  dateFormatter.string(from: datePicker.date)
+       }
+    
+    
     
     func birthDayAction () {
         self.birthdateText.addTapGesture {
@@ -232,6 +264,10 @@ extension editProfileVC  : UICollectionViewDelegate , UICollectionViewDataSource
             guard let self = self else { return}
             if response.status == true  {
                 showPopTopAlert(title: "Done Successfully".localize , withMessage: response.message , success: true )
+                
+                // fire home notification center to update the user image in side menu
+                NotificationCenter.default.post(name: .updateHomeProfile, object: nil)
+                
                 self.action?()
             }
                 

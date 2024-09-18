@@ -12,22 +12,33 @@ import Foundation
 import Alamofire
 
 enum UserRouter {
-    case createVipTrip( destinationLong : Double , destinationLat : Double , currentLat : Double , currentLong : Double , features : [String] , date : String)
+    case createVipTrip( destinationLong : Double , destinationLat : Double , currentLat : Double , currentLong : Double , features : [String] , date : String , pickup_description : String , destination_description : String )
     case getAllVipOffers(id : Int)
     case acceptOffer ( id : Int , paymentMethod : String )
     case getAllCities ( page : Int)
-    case getAllBasicTrips ( cityId : Int  , lat : Double , lng : Double , StartdDate : String)
+    case getAllBasicTrips ( cityId : Int  , lat : Double , lng : Double , StartdDate : String , filter : String )
     case recentAddress
     case getOneTrip ( id : Int)
     case complain ( category : String , note : String , isComplain : Bool)
     case getProfile
-    case addAddressToFav ( alias : String , lat : Double , lng : Double , isFav : Bool)
-    case claculateBasicPrice ( id : Int )
+    case addAddressToFav ( alias : String , lat : Double , lng : Double , isFav : Bool , desc : String )
+    case claculateBasicPrice ( id : Int  , code : String)
     case joinABasicTrip ( id : Int , paymentMethod : String , copon : String)
     case calculateVipPrice ( id : Int )
     case walletData ( page : Int)
     case getAllHobbies
     case updateProfile ( name : String , email : String , birthDate : String , bio : String , cityId : Int , gender : String , hobbies : [HobbiesClass])
+    case getAllAddress
+    case updateAddress ( id : Int , isFav : Bool)
+    case getAllFavDrives ( page : Int)
+    case removeDriverFromFav ( id : Int )
+    case getMyUpcommingTrips
+    case cancelBasicTrip ( userId : Int ,  id : Int , reason : String  )
+    case cancelVipTrip ( id : Int , reason : String   )
+    case getCancelledTrips
+    case getCompletedTrips
+    case checkPromoCode( code : String )
+    
 }
 
 extension UserRouter : APIRouter {
@@ -40,16 +51,24 @@ extension UserRouter : APIRouter {
     var method: HTTPMethod {
         switch self {
             
-        case .createVipTrip , .acceptOffer  , .complain , .addAddressToFav , .claculateBasicPrice  , .joinABasicTrip , .calculateVipPrice  :
+        case .createVipTrip , .acceptOffer  , .complain , .addAddressToFav , .claculateBasicPrice  , .joinABasicTrip , .calculateVipPrice , .checkPromoCode   :
             return .post
         
-        case .getAllVipOffers , .getAllCities , .getAllBasicTrips  , .recentAddress  , .getOneTrip , .getProfile , .walletData , .getAllHobbies :
+            
+        case .getAllVipOffers , .getAllCities , .getAllBasicTrips  , .recentAddress  , .getOneTrip , .getProfile , .walletData , .getAllHobbies  , .getAllAddress , .getAllFavDrives , .getMyUpcommingTrips , .getCancelledTrips , .getCompletedTrips   :
           return .get
             
             
         case  .updateProfile :
             return .patch
             
+            
+        case .updateAddress:
+            return .put
+            
+            
+        case .removeDriverFromFav , .cancelVipTrip , .cancelBasicTrip:
+            return .delete
         }
     }
     
@@ -77,7 +96,7 @@ extension UserRouter : APIRouter {
             return userServerPath.getProfile
         case .addAddressToFav :
           return  userServerPath.addAddressToFavs
-        case .claculateBasicPrice(id: let id ):
+        case .claculateBasicPrice(id: let id , code: _ ):
             return userServerPath.calculateBasicPrice(id: id )
         case .joinABasicTrip :
             return userServerPath.joinAbasicTrip
@@ -89,6 +108,27 @@ extension UserRouter : APIRouter {
             return userServerPath.getAllHobiies
         case .updateProfile :
             return userServerPath.updateProfile
+        case .getAllAddress :
+            return userServerPath.getAllAddress
+        case .updateAddress(id: let id , isFav: _) :
+            return userServerPath.updateAddress(id: id)
+        case .getAllFavDrives :
+            return userServerPath.getFavDrivers
+        case .removeDriverFromFav(id: let id):
+            return userServerPath.removeDriverFromFav(id: id )
+        case .getMyUpcommingTrips :
+            return userServerPath.getMyUpcommingTrips
+        case .cancelVipTrip(id: let id , reason: _ ):
+            return userServerPath.cancelVipTrip(id: id)
+        case .cancelBasicTrip(userId: let UserId , id: _, reason: _ ):
+            return userServerPath.cancelBasicTrip(id: UserId )
+        case .getCancelledTrips:
+            return userServerPath.getCanselledTrips
+        case .getCompletedTrips:
+            return userServerPath.getCompletedTrips
+        case .checkPromoCode:
+            return userServerPath.checkPromoCode
+             
         }
     }
     
@@ -96,23 +136,22 @@ extension UserRouter : APIRouter {
     
     var parameters: APIParameters? {
         switch self {
-        case .createVipTrip( let destinationLong , let destLat ,  let currentLat , let currentLong  ,  let features , let date ):
+        case .createVipTrip( let destinationLong , let destLat ,  let currentLat , let currentLong  ,  let features , let date  , let pickup_description , let destination_description  ):
             return [
                "destination_location_lat" : destLat ,
                "destination_location_lng" : destinationLong ,
                "pickup_location_lat" : currentLat ,
                "pickup_location_lng" : currentLong ,
                "features" : features ,
-               "start_date" : date
+               "start_date" : date ,
+               "pickup_description" : pickup_description  ,
+               "destination_description" : destination_description 
             ]
             
         case .updateProfile(name: let name , email: let email , birthDate: let birthDate , bio: let bio , cityId: let cityId , gender: let gender , hobbies: let hobboies ) :
             var dict : [String : Any] = [
                 "name" : name ,
                 "email" : email ,
-           //     "birth_date" : birthDate ,
-             
-                "cityId" :  cityId ,
                 "gender" : gender
             ]
             var index = 0
@@ -122,6 +161,12 @@ extension UserRouter : APIRouter {
             }
             if bio != "" {
                 dict["bio"] = bio
+            }
+            if birthDate != "" {
+                dict["birth_date"] = birthDate
+            }
+            if cityId != 0 {
+                dict["cityId"] = cityId
             }
             return dict
            
@@ -146,23 +191,34 @@ extension UserRouter : APIRouter {
                 "payment_method" : method
             ]
         
-        case .addAddressToFav(alias: let alias, lat: let lat , lng: let lng , isFav: let isFav ):
+        case .addAddressToFav(alias: let alias, lat: let lat , lng: let lng , isFav: let isFav , desc: let desc  ):
             return [
                 "lat": lat ,
                 "lng": lng ,
                 "alias": alias ,
-                "is_favorite": isFav
+                "is_favorite": isFav ,
+                "description" : desc
             ]
-        case .getAllBasicTrips(cityId: let cityId , lat: let lat , lng: let lng  , StartdDate : let startdate):
+        case .getAllBasicTrips(cityId: let cityId , lat: let lat , lng: let lng  , StartdDate : let startdate ,filter: let filter  ):
             
-            return [
+            var dic : [String : Any ] = [
                 "cityPickupId" : cityId ,
                 "destinationLat" : lat ,
                 "destinationLng" : lng ,
                 "startDate" : startdate
             ]
-        
             
+            if filter != "" {
+                dic["sortBy"] = filter
+            }
+            return dic
+                
+          
+        case .checkPromoCode(code: let code ):
+            return [
+                "code": code
+            ]
+        
         case .complain(category: let category , note: let note , isComplain: let isComplain ) :
             var dic : [String : Any] = [ "note" : note , "is_complaint" :  isComplain ]
             
@@ -182,9 +238,34 @@ extension UserRouter : APIRouter {
             }
             return dic1
             
+        case .updateAddress(id: _ , isFav: let isFav) :
+            return [
+                "is_favorite" : isFav
+            ]
           
+        case .getAllFavDrives( page : let page ) :
+            return [
+                "page" : page
+                
+            ]
             
-        case .getAllVipOffers  , .recentAddress , .getOneTrip , .getProfile  , .claculateBasicPrice , .calculateVipPrice   :
+        case .cancelBasicTrip(userId: _ , id: let id , reason: let reason ):
+            return [
+                "trip_id" : id  , 
+                "reason" : reason
+            ]
+        case .cancelVipTrip(id: _ , reason: let reason ):
+            return [
+                "reason" : reason
+            ]
+            
+        case .claculateBasicPrice(id: _ , code: let code ):
+            return [
+                "code" : ""
+            ]
+            
+            
+        case .getAllVipOffers  , .recentAddress , .getOneTrip , .getProfile   , .calculateVipPrice , .getAllAddress   , .removeDriverFromFav , .getMyUpcommingTrips , .getCancelledTrips  , .getCompletedTrips  :
             return nil
             
         }

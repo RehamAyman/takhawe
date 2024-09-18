@@ -8,12 +8,16 @@
 
 
 import UIKit
+import Lottie
+
+
 
 class ReserveTheTripVC: BaseVC {
     
 //MARK: - IBOutlets -
     @IBOutlet weak var topBackView: UIView!
     @IBOutlet weak var promorCodeStack: UIStackView!
+    @IBOutlet weak var checkCodeOutlet: UIButton!
     
     @IBOutlet weak var totalPrice: UILabel!
     @IBOutlet weak var priceIndicator: UIActivityIndicatorView!
@@ -36,7 +40,7 @@ class ReserveTheTripVC: BaseVC {
     var offer : offerResult?
     var paymentMethod : paymentMethod = .cash
     var locationDetails : offerLocation?
-    
+    let logoAnimation = LottieAnimationView(name: "Q2ix9ldDnm")
     var tripDetails : BasicTripResult?
     
     let DummyPaymentMethods : [dummyPaymentMethods] = [
@@ -71,7 +75,7 @@ class ReserveTheTripVC: BaseVC {
         paymentMethodTable.register(UINib(nibName:"reserveTheTripCell", bundle: nil), forCellReuseIdentifier: "reserveTheTripCell")
         self.dicountCodeTextField.setLeftPaddingPoints(12)
         self.dicountCodeTextField.setRightPaddingPoints(12)
-        
+        self.dicountCodeTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
         if self.viptrip {
             self.getVipDetails()
             self.calculateVipPrice()
@@ -79,10 +83,16 @@ class ReserveTheTripVC: BaseVC {
             self.getBasicTripDetails()
             self.calculateTheBasicPrice()
         }
+        
+        self.checkCodeOutlet.addTapGesture {
+            self.checkPromoCode()
+        }
   
     }
     
-    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        self.removeLottieCheckMark()
+    }
     
 //MARK: - Logic Methods -
     
@@ -114,6 +124,9 @@ class ReserveTheTripVC: BaseVC {
         }
     vc.action = {
         let vc = trackYourTripVC()
+        vc.vipTrip = self.viptrip
+        vc.comeFromSideMenu = false 
+        
         self.push(vc)
     }
         self.present( vc , animated: true )
@@ -206,6 +219,34 @@ extension ReserveTheTripVC {
 
             }
         }
+    }
+    
+    func checkPromoCode () {
+        priceIndicator.startAnimating()
+        priceIndicator.isHidden = false
+        if self.dicountCodeTextField.text != "" {
+            
+            
+            UserRouter.checkPromoCode(code: self.dicountCodeTextField.text ?? "" ).send {  ( response : APIGlobalResponse )  in
+        
+                self.priceIndicator.stopAnimating()
+                self.priceIndicator.isHidden = true
+                    if response.status == true { // valid
+                       
+                        if self.viptrip {
+                            self.calculateVipPrice()
+                            self.replaceCheckButton()
+                        } else {
+                            self.calculateTheBasicPrice()
+                            self.replaceCheckButton()
+                        }
+                        
+                    } else { // not valid
+                        print("no action ")
+                    }
+                }
+            }
+        
     }
 }
 

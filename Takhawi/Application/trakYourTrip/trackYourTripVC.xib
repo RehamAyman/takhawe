@@ -13,12 +13,25 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="trackYourTripVC" customModule="Takhawi" customModuleProvider="target">
             <connections>
                 <outlet property="bottomView" destination="xOt-ci-9Vs" id="e5B-7U-Fzx"/>
+                <outlet property="carImage" destination="PgZ-sK-xrD" id="Oum-QA-MZr"/>
+                <outlet property="carModelName" destination="17f-bS-xbU" id="dDX-Ox-8jt"/>
+                <outlet property="deliveryTime" destination="N6Y-S9-kAh" id="Nee-bP-eXS"/>
+                <outlet property="distance" destination="Ona-PD-s94" id="t9t-TY-y8C"/>
                 <outlet property="driverArriveIn" destination="ikj-N0-Xwe" id="ocZ-bI-QUn"/>
+                <outlet property="driverImage" destination="sao-XC-Tju" id="fEQ-Tt-8v5"/>
+                <outlet property="driverName" destination="50l-9b-HPj" id="1mn-FA-9f1"/>
                 <outlet property="googleView" destination="7e9-cI-Bxq" id="2gx-48-hj1"/>
                 <outlet property="hintLabel" destination="snD-YJ-XEN" id="ylB-cZ-1mQ"/>
+                <outlet property="rate" destination="lwV-id-l6B" id="kQk-kB-rbv"/>
+                <outlet property="secDeliverTime" destination="8to-UL-5zg" id="RIR-w2-Yhj"/>
+                <outlet property="secDistance" destination="kwv-ib-0pW" id="dt9-a2-S2G"/>
+                <outlet property="secDriverImage" destination="kEB-OR-qWp" id="gga-Ro-tLb"/>
+                <outlet property="secDriverName" destination="iHs-MO-NKc" id="EzD-pO-EeU"/>
+                <outlet property="secRate" destination="Y1z-OZ-bK1" id="0gp-C3-Jyt"/>
                 <outlet property="step1View" destination="yd6-Bi-mqv" id="5rb-cO-s1d"/>
                 <outlet property="step2View" destination="KUg-Rr-V4M" id="R50-lu-YvN"/>
                 <outlet property="topViewHeight" destination="Pjl-sJ-mve" id="JBC-gS-RW4"/>
+                <outlet property="tripPrice" destination="3V0-qx-mLo" id="J49-eE-Ulm"/>
                 <outlet property="tripStartView" destination="pXB-bp-xjs" id="6Rm-XB-7Iy"/>
                 <outlet property="tripStartViewheight" destination="ejP-Ev-c8t" id="jXG-dE-nQh"/>
                 <outlet property="view" destination="iN0-l3-epB" id="9cZ-CB-bnx"/>
@@ -76,7 +89,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xOt-ci-9Vs">
-                    <rect key="frame" x="20" y="352" width="374" height="490"/>
+                    <rect key="frame" x="20" y="402" width="374" height="440"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5" translatesAutoresizingMaskIntoConstraints="NO" id="sao-XC-Tju">
                             <rect key="frame" x="137" y="-50" width="100" height="100"/>
@@ -245,7 +258,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car" translatesAutoresizingMaskIntoConstraints="NO" id="PgZ-sK-xrD">
-                            <rect key="frame" x="209.5" y="173.5" width="149.5" height="78"/>
+                            <rect key="frame" x="209.5" y="177.5" width="149.5" height="70"/>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jake dones 2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17f-bS-xbU">
                             <rect key="frame" x="51.5" y="255.5" width="94" height="14.5"/>
@@ -268,18 +281,18 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t1C-sX-ciP">
-                            <rect key="frame" x="20" y="316.5" width="334" height="50"/>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t1C-sX-ciP">
+                            <rect key="frame" x="20" y="316.5" width="334" height="0.0"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Payment" translatesAutoresizingMaskIntoConstraints="NO" id="30k-8o-vt6">
-                                    <rect key="frame" x="15" y="5" width="60" height="40"/>
+                                    <rect key="frame" x="15" y="-20" width="60" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="ljA-Zp-lsN"/>
                                         <constraint firstAttribute="width" constant="60" id="vA4-y2-zBL"/>
                                     </constraints>
                                 </imageView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="asg-ks-grB">
-                                    <rect key="frame" x="83" y="5" width="243" height="40"/>
+                                    <rect key="frame" x="83" y="-20" width="243" height="40"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="**** **** **** 8970" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAw-qh-HNV">
                                             <rect key="frame" x="0.0" y="0.0" width="243" height="20"/>
@@ -304,7 +317,7 @@
                                 <constraint firstItem="30k-8o-vt6" firstAttribute="centerY" secondItem="t1C-sX-ciP" secondAttribute="centerY" id="49Y-AJ-rzO"/>
                                 <constraint firstAttribute="trailing" secondItem="asg-ks-grB" secondAttribute="trailing" constant="8" id="6O1-lR-CCW"/>
                                 <constraint firstItem="asg-ks-grB" firstAttribute="leading" secondItem="30k-8o-vt6" secondAttribute="trailing" constant="8" id="BXT-ph-KHV"/>
-                                <constraint firstAttribute="height" constant="50" id="XFa-aJ-as6"/>
+                                <constraint firstAttribute="height" id="XFa-aJ-as6"/>
                                 <constraint firstItem="asg-ks-grB" firstAttribute="centerY" secondItem="t1C-sX-ciP" secondAttribute="centerY" id="ZL3-up-J57"/>
                                 <constraint firstItem="30k-8o-vt6" firstAttribute="leading" secondItem="t1C-sX-ciP" secondAttribute="leading" constant="15" id="dQp-VF-rbg"/>
                             </constraints>
@@ -315,7 +328,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="GMu-n3-dvQ">
-                            <rect key="frame" x="20" y="376.5" width="149.5" height="50"/>
+                            <rect key="frame" x="20" y="326.5" width="149.5" height="50"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="NbS-6E-x98">
                                     <rect key="frame" x="0.0" y="0.0" width="73.5" height="50"/>
@@ -363,17 +376,23 @@
                             </constraints>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wNi-Cq-htU">
-                            <rect key="frame" x="257" y="374" width="97" height="55"/>
+                            <rect key="frame" x="257" y="324" width="97" height="55"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMI-6k-9dR">
                                     <rect key="frame" x="0.0" y="0.0" width="48.5" height="55"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title=" " image="message"/>
+                                    <connections>
+                                        <action selector="messageDriver:" destination="-1" eventType="touchUpInside" id="rGD-jp-EPC"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qz1-b7-MdU">
                                     <rect key="frame" x="48.5" y="0.0" width="48.5" height="55"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" image="call"/>
+                                    <connections>
+                                        <action selector="callDriver:" destination="-1" eventType="touchUpInside" id="ZxR-X2-xno"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <constraints>
@@ -381,7 +400,7 @@
                             </constraints>
                         </stackView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UR5-LA-2XQ">
-                            <rect key="frame" x="10" y="441.5" width="354" height="38.5"/>
+                            <rect key="frame" x="10" y="391.5" width="354" height="38.5"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title="Cancel Trip">
@@ -391,7 +410,7 @@
                                 <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Cancel Trip"/>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="cancelTheTrip:" destination="-1" eventType="touchUpInside" id="dcS-VG-3Zv"/>
+                                <action selector="cancelTrip:" destination="-1" eventType="touchUpInside" id="0ub-jN-a6y"/>
                             </connections>
                         </button>
                         <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lwV-id-l6B" customClass="CosmosView" customModule="Cosmos">
@@ -408,6 +427,19 @@
                                 <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="star"/>
                             </userDefinedRuntimeAttributes>
                         </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kpc-Om-9k6">
+                            <rect key="frame" x="10" y="15.5" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="DZ5-tP-6Lr"/>
+                                <constraint firstAttribute="width" constant="35" id="mH3-kJ-Nbl"/>
+                            </constraints>
+                            <color key="tintColor" name="MainColor"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="arrow.down.right.topleft.rectangle" catalog="system"/>
+                            <connections>
+                                <action selector="dowwnIcon:" destination="-1" eventType="touchUpInside" id="y5c-UD-wpe"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
@@ -416,6 +448,7 @@
                         <constraint firstItem="GMu-n3-dvQ" firstAttribute="width" secondItem="xOt-ci-9Vs" secondAttribute="width" multiplier="0.4" id="5Ws-gR-Yup"/>
                         <constraint firstItem="UR5-LA-2XQ" firstAttribute="leading" secondItem="xOt-ci-9Vs" secondAttribute="leading" constant="10" id="5aI-fT-0Jn"/>
                         <constraint firstItem="wNi-Cq-htU" firstAttribute="centerY" secondItem="GMu-n3-dvQ" secondAttribute="centerY" id="9mr-yy-Wch"/>
+                        <constraint firstItem="Kpc-Om-9k6" firstAttribute="leading" secondItem="xOt-ci-9Vs" secondAttribute="leading" constant="10" id="ASc-sS-E0Y"/>
                         <constraint firstItem="17f-bS-xbU" firstAttribute="centerX" secondItem="vzg-S0-Rfa" secondAttribute="centerX" id="CYM-Qi-wp8"/>
                         <constraint firstItem="PgZ-sK-xrD" firstAttribute="width" secondItem="xOt-ci-9Vs" secondAttribute="width" multiplier="0.4" id="Dmc-EU-2tz"/>
                         <constraint firstItem="vzg-S0-Rfa" firstAttribute="leading" secondItem="xOt-ci-9Vs" secondAttribute="leading" constant="20" id="F5a-kO-TN5"/>
@@ -434,9 +467,10 @@
                         <constraint firstItem="vzg-S0-Rfa" firstAttribute="top" secondItem="yd6-Bi-mqv" secondAttribute="bottom" constant="10" id="ce9-Sb-Bc9"/>
                         <constraint firstAttribute="trailing" secondItem="t1C-sX-ciP" secondAttribute="trailing" constant="20" id="cnX-Ar-M5R"/>
                         <constraint firstItem="GMu-n3-dvQ" firstAttribute="leading" secondItem="xOt-ci-9Vs" secondAttribute="leading" constant="20" id="co0-Km-1Am"/>
+                        <constraint firstItem="Kpc-Om-9k6" firstAttribute="centerY" secondItem="74r-SN-iIy" secondAttribute="centerY" id="csv-oO-uPI"/>
                         <constraint firstItem="lwV-id-l6B" firstAttribute="width" secondItem="xOt-ci-9Vs" secondAttribute="width" multiplier="0.299465" id="cuU-O7-YcL"/>
                         <constraint firstItem="t1C-sX-ciP" firstAttribute="leading" secondItem="xOt-ci-9Vs" secondAttribute="leading" constant="20" id="dvb-AF-frs"/>
-                        <constraint firstAttribute="height" constant="490" id="gwS-s4-eq5"/>
+                        <constraint firstAttribute="height" constant="440" id="gwS-s4-eq5"/>
                         <constraint firstItem="50l-9b-HPj" firstAttribute="centerX" secondItem="sao-XC-Tju" secondAttribute="centerX" id="hK1-Cb-UuD"/>
                         <constraint firstAttribute="trailing" secondItem="PgZ-sK-xrD" secondAttribute="trailing" constant="15" id="hZ9-Jk-X4j"/>
                         <constraint firstAttribute="bottom" secondItem="UR5-LA-2XQ" secondAttribute="bottom" constant="10" id="hcR-uL-3D4"/>
@@ -555,7 +589,7 @@
                                 <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Cancel Trip"/>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="cancelTheTrip:" destination="-1" eventType="touchUpInside" id="u17-bz-ozE"/>
+                                <action selector="cancelTrip:" destination="-1" eventType="touchUpInside" id="lZG-TR-KcR"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPR-uX-bmr">
@@ -570,9 +604,23 @@
                                 <action selector="flagAction:" destination="-1" eventType="touchUpInside" id="g6M-HD-CGp"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trx-YE-URQ">
+                            <rect key="frame" x="10" y="22.5" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="35" id="WYq-tn-MLo"/>
+                                <constraint firstAttribute="height" constant="35" id="X3X-4x-HDC"/>
+                            </constraints>
+                            <color key="tintColor" name="MainColor"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="arrow.up.left.bottomright.rectangle" catalog="system"/>
+                            <connections>
+                                <action selector="upAction:" destination="-1" eventType="touchUpInside" id="URC-Qa-mco"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="trx-YE-URQ" firstAttribute="leading" secondItem="pXB-bp-xjs" secondAttribute="leading" constant="10" id="3BC-wk-fOg"/>
                         <constraint firstAttribute="trailing" secondItem="3Ue-cI-dWi" secondAttribute="trailing" constant="20" id="6dU-wh-fYE"/>
                         <constraint firstItem="3Kf-bX-IoF" firstAttribute="top" secondItem="Y1z-OZ-bK1" secondAttribute="bottom" constant="8" id="7Kn-c5-tzy"/>
                         <constraint firstItem="iHs-MO-NKc" firstAttribute="centerX" secondItem="kEB-OR-qWp" secondAttribute="centerX" id="9Z4-1g-Yxz"/>
@@ -580,6 +628,7 @@
                         <constraint firstItem="Y1z-OZ-bK1" firstAttribute="width" secondItem="pXB-bp-xjs" secondAttribute="width" multiplier="0.3" id="EEw-rE-KZp"/>
                         <constraint firstItem="Y1z-OZ-bK1" firstAttribute="top" secondItem="iHs-MO-NKc" secondAttribute="bottom" constant="8" id="L3o-I8-gIU"/>
                         <constraint firstItem="3Kf-bX-IoF" firstAttribute="width" secondItem="pXB-bp-xjs" secondAttribute="width" multiplier="0.5" id="PPV-RJ-ubu"/>
+                        <constraint firstItem="trx-YE-URQ" firstAttribute="centerY" secondItem="TPR-uX-bmr" secondAttribute="centerY" id="RbI-m6-s0G"/>
                         <constraint firstItem="kEB-OR-qWp" firstAttribute="top" secondItem="pXB-bp-xjs" secondAttribute="top" constant="-60" id="TMs-Ax-nFf"/>
                         <constraint firstItem="3Kf-bX-IoF" firstAttribute="centerX" secondItem="kEB-OR-qWp" secondAttribute="centerX" id="bBg-N0-tWt"/>
                         <constraint firstAttribute="height" constant="200" id="ejP-Ev-c8t"/>
@@ -592,7 +641,7 @@
                     </constraints>
                 </view>
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KUg-Rr-V4M">
-                    <rect key="frame" x="61" y="471.5" width="292" height="48"/>
+                    <rect key="frame" x="61" y="521.5" width="292" height="48"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="QFU-0h-HUY">
                             <rect key="frame" x="0.0" y="0.0" width="292" height="48"/>
@@ -664,6 +713,8 @@
         <image name="Group 25" width="41" height="40"/>
         <image name="Group 27" width="41" height="40"/>
         <image name="Payment" width="45" height="35"/>
+        <image name="arrow.down.right.topleft.rectangle" catalog="system" width="128" height="93"/>
+        <image name="arrow.up.left.bottomright.rectangle" catalog="system" width="128" height="93"/>
         <image name="call" width="51" height="51"/>
         <image name="car" width="71.5" height="37.5"/>
         <image name="message" width="51" height="51"/>

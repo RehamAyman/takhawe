@@ -56,10 +56,32 @@ extension homeVC : UICollectionViewDelegate , UICollectionViewDataSource , UICol
     
     
     
-    //MARK: - DROP DOWN LIST SELECTING CITY
+    //MARK: - profile info
+    func getProfileDetails (withLoading : Bool) {
+        
+        if withLoading {
+            activityIndicatorr.startAnimating()
+        }
+        UserRouter.getProfile.send { [weak self ]  ( response : APIGenericResponse<profileResult> ) in
+            guard let self = self else { return }
+            if let result = response.result {
+                if let imageString = result.avatar {
+                    let avatar = Server.imageBase.rawValue + imageString
+                 //   self.userimageOutlet.setImage(image: avatar)
+                    self.sideMenuAvatar.setImage(image: avatar)
+                }
+              
+                self.sideMenuEmail.text = result.email ??  UserDefaults.user?.user?.email ?? "--"
+                self.sideMenuUserName.text = result.name ?? UserDefaults.user?.user?.name ?? "--"
+            }
+        }
+    }
     
+    //MARK: - recive updates profile info
     
-    
+    @objc func handleCustomNotification(_ notification: Notification) {
+        self.getProfileDetails(withLoading: false )
+    }
     
     
 }

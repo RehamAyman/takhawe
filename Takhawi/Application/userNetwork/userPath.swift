@@ -25,15 +25,25 @@ enum userServerPath {
     case getWalletData
     case getAllHobiies
     case updateProfile
-    
+    case getAllAddress
+    case updateAddress ( id : Int )
+    case getFavDrivers 
+    case removeDriverFromFav ( id : Int)
+    case getMyUpcommingTrips
+    case getCompletedTrips
+    case getCanselledTrips
+    case cancelBasicTrip ( id : Int)
+    case cancelVipTrip ( id : Int)
+    case checkPromoCode
    
 }
+
+
 
 extension userServerPath : ServerPath {
     var value: String {
         switch self {
-     
-        
+ 
         case .careateVipTrip :
             return "vip-trip"
         case .getVipOffers(id: let id) :
@@ -66,6 +76,27 @@ extension userServerPath : ServerPath {
             return "hobby/"
         case .updateProfile:
             return "user/profile" 
+        case .getAllAddress:
+            return "address/"
+        case .updateAddress ( id : let id  ):
+            return "address/\(id)"
+        case .getFavDrivers:
+            return "favorite-driver"
+        case .removeDriverFromFav(id: let id ):
+            return "favorite-driver/\(id)"
+        case .getMyUpcommingTrips:
+            return "trip/upcoming-trips?limit=100"
+        case .getCompletedTrips:
+            return "trip/completed-trips?limit=100"
+        case .getCanselledTrips :
+            return "trip/cancelled-trips?limit=100"
+        case .cancelBasicTrip(id: let id ):
+            return "basic-trip/cancel-by-passenger/\(id)"
+        case .cancelVipTrip(id: let id ):
+            return "vip-trip/\(id)"
+        case .checkPromoCode:
+            return "promo-code/check-code"
+            
     
         }
     }

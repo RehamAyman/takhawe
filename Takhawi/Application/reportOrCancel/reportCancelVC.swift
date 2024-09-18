@@ -20,7 +20,25 @@ class reportCancelVC: BaseVC {
     @IBOutlet weak var noteText: MDCOutlinedTextArea!
     //MARK: - Properties -
     var report : Bool = false
-    var items : [String] = []
+  
+    
+    let items : [cancellationReason] = [
+        
+        cancellationReason(name:  "Waiting for long time".localize   , key:  "Waiting for long time") ,
+        cancellationReason(name:  "Driver denied to go to destination".localize   , key:  "Driver denied to go to destination") ,
+        cancellationReason(name:  "Unable to contact driver".localize , key:  "Unable to contact driver" ) ,
+        cancellationReason(name:  "Driver denied to come to pickup".localize , key:  "Driver denied to come to pick up" ) ,
+        cancellationReason(name:  "Wrong address shown".localize , key:  "Wrong address shown" ) ,
+        cancellationReason(name:  "Unable to contact driver".localize , key:  "Unable to contact driver" ) ,
+        cancellationReason(name:  "The price is not reasonable".localize , key:  "The price is not reasonable" )
+    ]
+
+    var type : String = ""
+    var id : Int = 0
+    var passengerTripId : Int = 0
+    var selectedIndex : String = ""
+   
+    
     
 //MARK: - Creation -
   
@@ -35,16 +53,13 @@ class reportCancelVC: BaseVC {
 //MARK: - Design Methods -
     private func configureInitialDesign() {
         self.title = "".localized
-   
-        
-       
+
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(cellType: reportOrCandelCell.self)
         self.setupMainView()
-      
-      
     }
+    
     
 
     
@@ -52,18 +67,17 @@ class reportCancelVC: BaseVC {
 //MARK: - Actions -
     
     @IBAction func submit(_ sender: UIButton) {
-        let vc = cancelTheTripVC()
-        vc.modalTransitionStyle = .crossDissolve
-        vc.modalPresentationStyle = .overCurrentContext
-        
-        if report  {
-            vc.report = true
-            self.present( vc , animated: true )
-        } else {
-            self.present( vc , animated: true )
+        if self.report == false {
+            if self.selectedIndex == "" {
+                showInfoTopAlert(withMessage: "please select a reason first")
+            } else {
+                self.cancelTrip(tripId: self.id , type: self.type, passengerId: self.passengerTripId)
+            }
         }
     }
 }
+
+
 
 
 //MARK: - Networking -

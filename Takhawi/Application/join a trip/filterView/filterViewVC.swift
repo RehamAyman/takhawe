@@ -18,13 +18,13 @@ class filterViewVC: BaseVC {
     
 //MARK: - Properties -
     let dummyfilterData : [dummyFilterData] = [
-        dummyFilterData(name: "Relevent".localize, selected: false ) ,
-        dummyFilterData(name: "Most Rated".localize, selected: false ) ,
-        dummyFilterData(name: "Highest Priced".localize, selected: false ) ,
-        dummyFilterData(name: "Lowest Priced".localize, selected: false )
+        dummyFilterData(id : 1, name: "Relevent".localize, selected: false ) ,
+        dummyFilterData(id: 2, name: "Most Rated".localize, selected: false  ) ,
+        dummyFilterData(id: 3, name: "Highest Priced".localize, selected: false) ,
+        dummyFilterData(id: 4, name: "Lowest Priced".localize, selected: false)
     ]
-    var dismissAction: (() -> Void)?
-    
+    var dismissAction: ((Int) -> Void)?
+    var selectedIndex : Int = 0
 
     
 // MARK: - Lifecycle -
@@ -52,7 +52,7 @@ class filterViewVC: BaseVC {
 //MARK: - Actions -
     
     @IBAction func reset(_ sender: UIButton) {
-        self.dismissAction?()
+        self.dismissAction?(0)
         self.dismiss(animated: true )
     }
     
@@ -62,7 +62,7 @@ class filterViewVC: BaseVC {
     
 
     @IBAction func filterSelect(_ sender: UIButton) {
-        self.dismissAction?()
+        self.dismissAction?(self.selectedIndex)
         self.dismiss(animated: true )
     }
     
@@ -105,7 +105,10 @@ extension filterViewVC : UITableViewDelegate , UITableViewDataSource  {
         guard let cell = tableView.cellForRow(at: indexPath) as? filterCell else {
             return
         }
+        
+        let item = self.dummyfilterData[indexPath.row]
         cell.checkMark.image =  UIImage(named: "check" )
+        self.selectedIndex = item.id
     }
     
     

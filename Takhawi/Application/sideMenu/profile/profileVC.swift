@@ -80,15 +80,14 @@ extension profileVC {
         }
         UserRouter.getProfile.send { [weak self ]  ( response : APIGenericResponse<profileResult> ) in
             guard let self = self else { return }
-           
             if let result = response.result {
-                
                 self.profileData = result
                 self.hobbies = result.hobbies ?? []
-                if result.avatar?.isValidHttpsUrl() == true  {
-                    self.userImage.setImage(image: result.avatar ?? "" )
+                if let imageString = result.avatar {
+                    let avatar = Server.imageBase.rawValue + imageString
+                    self.userImage.setImage(image: avatar )
                 }
-                
+               
                 self.userName.text = result.name ?? ""
                 self.collectionView.reloadData()
             }

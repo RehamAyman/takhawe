@@ -80,7 +80,7 @@ extension enterPasswordVC {
                     UserDefaults.user = data
                     UserDefaults.accessToken = data.accessToken
                     // go to home
-                    print("go to home    /// ")
+                   
                     let userType = response.result?.user?.role
                     if userType == role.user.rawValue {
                         

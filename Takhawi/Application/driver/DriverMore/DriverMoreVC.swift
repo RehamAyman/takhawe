@@ -24,9 +24,25 @@ class DriverMoreVC: UIViewController {
         if let user = UserDefaults.user?.user {
             self.userEmail.text = user.email
             self.userName.text = user.name
-            if user.avatar?.isValidHttpsUrl() == true {
-                self.userImage.setImage(image: user.avatar ?? "" )
+            if let avatar = user.avatar {
+                let url = Server.imageBase.rawValue + avatar
+                self.userImage.setImage(image: url )
             }
         }
     }
+    
+    
+    
+    
+    @IBAction func logoutAction(_ sender: UIButton) {
+        let vc =    logoutpopVC()
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .overCurrentContext
+        self.present(vc, animated: true )
+        
+    }
+    
+    
+    
+    
 }

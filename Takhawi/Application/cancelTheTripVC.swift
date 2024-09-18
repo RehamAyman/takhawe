@@ -20,6 +20,7 @@ class cancelTheTripVC: BaseVC {
     //MARK: - Properties -
     var report : Bool = false
     
+    
 
     
 // MARK: - Lifecycle -
@@ -44,16 +45,18 @@ class cancelTheTripVC: BaseVC {
 //MARK: - Actions -
     
     @IBAction func dismiss(_ sender: UIButton) {
-     //   sender.animateButtonWhenPressed {
-            self.dismiss(animated: true )
-      //  }
+      
+         // go to home
+        let vc = homeVC()
+        let nav = CustomNavigationController(rootViewController: vc)
+        AppHelper.changeWindowRoot(vc: nav)
     }
 }
 
 
 //MARK: - Networking -
 extension cancelTheTripVC {
-    
+   
 }
 
 //MARK: - Routes -

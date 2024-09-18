@@ -115,7 +115,7 @@ extension ReserveTheTripVC : UITableViewDelegate , UITableViewDataSource {
         self.from.text = self.tripDetails?.startLocation ?? "--"
         self.to.text = self.tripDetails?.destinationlocationname ?? "--"
         if let dist =  self.tripDetails?.distance {
-            let km = dist / 1000
+           // let km = dist
             self.destance.text = "\(dist.rounded())" + "KM"
         }
         if let price = self.tripDetails?.basic_trip_price_per_seat  {
@@ -136,8 +136,44 @@ extension ReserveTheTripVC : UITableViewDelegate , UITableViewDataSource {
         let locationB = CLLocation(latitude: coordinatesB.latitude , longitude: coordinatesB.longitude)
         let distanceInKM =  ( locationA.distance(from: locationB) / 100 ).rounded()
         let string = String (distanceInKM ) + " " + "km"
+     
+        
       return string
     }
+    
+//MARK: - REPLACE CHCEK BUTTON WITH ANIMATION  METHOD
+    
+    func replaceCheckButton () {
+        self.checkCodeOutlet.isHidden = true
+        self.checkCodeOutlet.isEnabled = false
+       
+        logoAnimation.contentMode = .scaleAspectFit
+        logoAnimation.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(logoAnimation)
+
+        logoAnimation.centerXAnchor.constraint(equalTo: checkCodeOutlet.centerXAnchor).isActive = true
+        logoAnimation.centerYAnchor.constraint(equalTo: checkCodeOutlet.centerYAnchor).isActive = true
+        logoAnimation.heightAnchor.constraint(equalToConstant: 45).isActive = true
+        logoAnimation.widthAnchor.constraint(equalToConstant: 45).isActive = true
+        logoAnimation.loopMode = .playOnce
+        logoAnimation.play()
+    }
+    
+    func removeLottieCheckMark () {
+        self.checkCodeOutlet.isHidden = false
+        self.checkCodeOutlet.isEnabled = true
+        if let superview = logoAnimation.superview {
+            UIView.animate(withDuration: 0.3, animations: {
+                self.logoAnimation.alpha = 0
+            }, completion: { _ in
+                self.logoAnimation.removeFromSuperview()
+            })
+        }
+        
+    }
+    
+    
+    
     
     
 }

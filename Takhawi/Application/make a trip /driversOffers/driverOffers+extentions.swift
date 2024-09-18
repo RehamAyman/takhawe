@@ -18,7 +18,7 @@ extension driverOffersVC : UITableViewDelegate , UITableViewDataSource {
             UIView.animate(withDuration: 0.5) {
                 self.animationView.play()
                 self.noOffersViewHeight.constant = 300
-            }
+            } 
         } else {
             self.noOffersView.isHidden = true
             self.noOffersViewHeight.constant = 0
@@ -58,9 +58,8 @@ extension driverOffersVC : UITableViewDelegate , UITableViewDataSource {
         cell.time.text = self.time
         cell.driverRate.rating = 4 // item.driverRate
         if let driverImage = item.driver?.avatar {
-            if driverImage.isValidHttpsUrl() {
-                cell.driverPhoto.setImage(image: driverImage )
-            }
+            let url = Server.imageBase.rawValue + driverImage
+                cell.driverPhoto.setImage(image: url )
         }
        
         cell.carName.text = "red nissan sedan ARC 1233"

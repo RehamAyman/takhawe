@@ -25,25 +25,17 @@ class tripListVC: BaseVC {
     var tripDate : String = Date().ISO8601Format()
     var tripLat : Double = 0.0
     var tripLong : Double = 0.0
-    
     var allTrips : [BasicTripResult] = []
     var selectedTrip : BasicTripResult?
-    
-//    private var items: [Dummydrivers] = [
-//        Dummydrivers(name: "Ali Adam", rate: 4) ,
-//        Dummydrivers(name: "Ahmed Omar ", rate: 2) ,
-//        Dummydrivers(name: "Waleed Ismail", rate: 3)
-//    ]
-//    
-    
    
+
     
-    // MARK: - UIViewController Events -
+// MARK: - UIViewController Events -
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureInitialDesign()
         self.setupTableView()
-        self.getAllTrips()
+        self.getAllTrips(filter: "")
     }
     
     
@@ -63,27 +55,44 @@ class tripListVC: BaseVC {
     
 //MARK: - Actions -
     @objc func refresh() {
-        self.tableView.refreshControl?.endRefreshing()
-     self.tableView.animateToTop()
+    self.tableView.refreshControl?.endRefreshing()
+    self.tableView.animateToTop()
+        
     }
     
     
     @IBAction func filter(_ sender: UIButton) {
-      //  sender.animateButtonWhenPressed {
             let vc = filterViewVC()
-            vc.dismissAction = {
+            vc.dismissAction = { id in
                 self.removePresentEffect()
+                print("hello i select option no. \(id)")
+                
+                switch id {
+                case 0:
+                    self.getAllTrips(filter: "")
+                case 1:
+                    self.getAllTrips(filter: "relevance")
+                case 2:
+                    self.getAllTrips(filter: "driverRate")
+                case 3:
+                    self.getAllTrips(filter: "highestPrice")
+                case 4:
+                    self.getAllTrips(filter: "lowestPrice")
+                    
+                default:
+                    print("def")
+                }
+                
             }
             self.presentWithEffect(vc: vc)
-            
-     //   }
-      
     }
     
     
-    private func getAllTrips () {
+    
+    
+    private func getAllTrips (filter : String) {
         activityIndicatorr.startAnimating()
-        UserRouter.getAllBasicTrips(cityId: self.cityId, lat: self.tripLat, lng: self.tripLong, StartdDate: self.tripDate).send { (response: APIGenericResponse<[BasicTripResult]>) in
+        UserRouter.getAllBasicTrips(cityId: self.cityId, lat: self.tripLat, lng: self.tripLong, StartdDate: self.tripDate, filter: filter ).send { (response: APIGenericResponse<[BasicTripResult]>) in
           
             guard let data =  response.result else { return }
             self.allTrips = data 
@@ -91,6 +100,8 @@ class tripListVC: BaseVC {
             }
        
     }
+    
+    
     
 }
 
@@ -101,7 +112,6 @@ extension tripListVC {
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
-        
         tableView.register(UINib(nibName: "tripListCell", bundle: nil), forCellReuseIdentifier: "tripListCell")
      //   self.tableView.register(cellType: tripListCell.self, bundle: nil)
         self.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
@@ -109,6 +119,9 @@ extension tripListVC {
         //self.tableView.addRefresh(action: #selector(self.refresh))
     }
 }
+
+
+
 extension tripListVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.allTrips.count
@@ -120,6 +133,9 @@ extension tripListVC: UITableViewDataSource {
         return cell
     }
 }
+
+
+
 extension tripListVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
@@ -129,6 +145,10 @@ extension tripListVC: UITableViewDelegate {
         vc.tripDetails = item
         push(vc)
     }
+    
+    
+    
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 270
     }

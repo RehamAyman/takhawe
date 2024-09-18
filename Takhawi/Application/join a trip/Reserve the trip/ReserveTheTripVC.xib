@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReserveTheTripVC" customModule="Takhawi" customModuleProvider="target">
             <connections>
+                <outlet property="checkCodeOutlet" destination="eza-IC-YB3" id="BUx-LJ-5yJ"/>
                 <outlet property="codePrice" destination="IEh-nM-YUF" id="bks-KD-X4c"/>
                 <outlet property="destance" destination="gok-C0-fto" id="lzK-aE-rgs"/>
                 <outlet property="dicountCodeTextField" destination="A04-T0-vJ6" id="XhI-rm-DW5"/>

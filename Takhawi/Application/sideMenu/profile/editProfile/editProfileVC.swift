@@ -15,6 +15,7 @@ class editProfileVC: BaseVC {
 //MARK: - IBOutlets -
     @IBOutlet weak var profileIcon: UIImageView!
     
+    @IBOutlet weak var calendarTAP: UIView!
     @IBOutlet weak var selectCityId: UIButton!
     @IBOutlet weak var selectGenderOutlet: UIButton!
     @IBOutlet weak var chooseFromMain: UIButton!
@@ -41,7 +42,7 @@ class editProfileVC: BaseVC {
     var allCities : [CitiesResult] = []
     var selectedCityId : Int = 0 
     var profileImageDate : Data?
-    
+    var selectedBirthDate : Date?
 //
 // MARK: - Lifecycle -
     override func viewDidLoad() {

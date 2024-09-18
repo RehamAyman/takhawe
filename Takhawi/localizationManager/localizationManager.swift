@@ -94,7 +94,11 @@ class LocalizationManager: NSObject {
         switch dir {
         case .leftToRight:
             semantic = .forceLeftToRight
+            UserDefaults.standard.set(["en"], forKey: "AppleLanguages")
+            UserDefaults.standard.synchronize()
         case .rightToLeft:
+            UserDefaults.standard.set(["ar"], forKey: "AppleLanguages")
+            UserDefaults.standard.synchronize()
             semantic = .forceRightToLeft
         }
         UITabBar.appearance().semanticContentAttribute = semantic
@@ -106,8 +110,6 @@ class LocalizationManager: NSObject {
         UILabel.appearance().semanticContentAttribute = semantic
         CosmosView.appearance().semanticContentAttribute = semantic
       
-        //
-//        
 //        UIPageControl.appearance().semanticContentAttribute = Language.isRTL() ? .forceRightToLeft : .forceLeftToRight
 //        UIStackView.appearance().semanticContentAttribute = Language.isRTL() ? .forceRightToLeft : .forceLeftToRight
 //        UISwitch.appearance().semanticContentAttribute = Language.isRTL() ? .forceRightToLeft : .forceLeftToRight

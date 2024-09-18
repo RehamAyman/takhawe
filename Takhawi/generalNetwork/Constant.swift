@@ -16,6 +16,7 @@ enum Server: String {
     case socetPort = "4705"
     case rechargeURL = "https://writingservices.aait-sa.com/wallet/charge/"
     case joinUsURL = "https://writingservices.aait-sa.com/option-register"
+    case imageBase = "https://dev-dash-takhawe.hayah.tech/"
 }
 
 enum HTTPHeaderField: String {

@@ -220,8 +220,8 @@ extension APIRouter {
                         if value.status == true {
                             completion(valueObject ,nil)
                         } else {
-                            completion(nil ,nil)
-                            showPopTopAlert(title: "Error!", withMessage: value.message ?? "" , success: false )
+                            completion(valueObject ,nil)
+                            showPopTopAlert(title: "Error!", withMessage: value.message  , success: false )
                            // AppAlert.showErrorAlert(error: value.message)
                         }
                     }

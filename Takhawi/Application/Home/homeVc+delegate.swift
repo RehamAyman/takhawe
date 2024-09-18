@@ -408,9 +408,8 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
         // stop google maps interaction
         self.googleMaps.isUserInteractionEnabled = true
         self.containerView.isUserInteractionEnabled = true
-        self.sideMenuEmail.text = UserDefaults.user?.user?.email ?? "--"
-        self.sideMenuUserName.text = UserDefaults.user?.user?.name ?? "--"
-        
+       
+
         
         
     }

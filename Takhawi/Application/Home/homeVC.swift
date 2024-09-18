@@ -23,7 +23,8 @@ class homeVC: BaseVC, sendDataBackDelegate{
     
 //MARK: - IBOutlets -
     
-   
+    
+    @IBOutlet weak var sideMenuAvatar: UIImageView!
     @IBOutlet weak var startingCityText: UITextField!
     @IBOutlet weak var cityContainerView: UIView!
     @IBOutlet weak var sideMenuEmail: UILabel!
@@ -110,11 +111,20 @@ class homeVC: BaseVC, sendDataBackDelegate{
 // MARK: - Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.searchView.addTapGesture {
+            if self.segment.selectedSegmentIndex == 0 {
+                self.getDestinationFromMaps(vip: false )
+            }
+            
+           
+        }
+        NotificationCenter.default.addObserver(self, selector: #selector(handleCustomNotification(_:)), name: .updateHomeProfile, object: nil)
+       
         self.configureInitialDesign()
         self.setUpGoogleMapView()
         self.setTodayDateINformate()
         self.initialSideMenu()
-       
+        self.getProfileDetails(withLoading: true )
         if let firstWord = UserDefaults.user?.user?.name?.split(separator: " ").first {
             print(firstWord)
             self.userName.text = String(firstWord)
@@ -144,6 +154,7 @@ class homeVC: BaseVC, sendDataBackDelegate{
         self.CContainerSegment.layer.applySketchShadow(color: .black)
         destTextfield.placeholder = "Choose your destination".localize
         self.menuOutlet.setImage( UIImage(named: "menu 1")?.imageFlippedForRightToLeftLayoutDirection(), for: .normal)
+      
   
     }
     
@@ -217,7 +228,7 @@ class homeVC: BaseVC, sendDataBackDelegate{
         
     }
     @IBAction func secCalendarAction(_ sender: UIButton) {
-   
+   print("hello there ")
         let vc = selectDateVC()
         vc.comeFromMakeAtrip =  true
         self.presentWithEffect(vc:  vc )
@@ -312,18 +323,10 @@ class homeVC: BaseVC, sendDataBackDelegate{
        // self.push(pushVc)
     }
     
-    @IBAction func searchAction(_ sender: UIButton) {
-        
-        // present search view
-        if segment.selectedSegmentIndex == 0 {
-            
-            self.getDestinationFromMaps(vip: false )
-        }
-    }
     
     
     @IBAction func calendarAction(_ sender: UIButton) {
-        
+      
         let vc = selectDateVC()
         vc.comeFromMakeAtrip = segment.selectedSegmentIndex == 0 ? false : true
         self.presentWithEffect(vc:  vc )
@@ -346,6 +349,7 @@ class homeVC: BaseVC, sendDataBackDelegate{
     
   
     @IBAction func hideSidemenuButton(_ sender: UIButton) {
+        print("clicked ")
         self.hideMenu()
     }
     
@@ -373,7 +377,7 @@ extension homeVC {
         activityIndicatorr.startAnimating()
         let currentLat = self.locationManager.location?.coordinate.latitude ?? 0.0
         let currentLng = self.locationManager.location?.coordinate.longitude ?? 0.0
-        UserRouter.createVipTrip(destinationLong: self.destLong, destinationLat: self.destLat, currentLat: currentLat , currentLong: currentLng , features: self.selectedFeatures , date: self.selectedDate.ISO8601Format()).send { [weak self] (response: APIGenericResponse<vipData>) in
+        UserRouter.createVipTrip(destinationLong: self.destLong, destinationLat: self.destLat, currentLat: currentLat , currentLong: currentLng , features: self.selectedFeatures , date: self.selectedDate.ISO8601Format(), pickup_description: self.secMyLocationOutlet.titleLabel?.text ?? "", destination_description: self.secMydestinationOutlet.titleLabel?.text ?? "").send { [weak self] (response: APIGenericResponse<vipData>) in
             guard let self = self else { return }
             if response.status == true {
                 

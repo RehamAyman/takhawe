@@ -88,6 +88,9 @@
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Back to Home"/>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="dismiss:" destination="-1" eventType="touchUpInside" id="mnD-a9-71M"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>

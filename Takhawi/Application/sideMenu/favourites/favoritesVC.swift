@@ -13,24 +13,16 @@ class favoritesVC: BaseVC {
     
 //MARK: - IBOutlets -
     
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet weak var segment: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
     
 //MARK: - Properties -
-    let dummyLocationData : [dummyLocations] = [
-        dummyLocations(location:  "Home".localize , locationDetails: "2972 Westheimer Rd. Santa Ana, Illinois 85486 ") ,
-        dummyLocations(location: "Office".localize, locationDetails: "2972 Westheimer Rd. Santa Ana, Illinois 85486 ") ,
-        dummyLocations(location: "Hospital".localize, locationDetails: "2972 Westheimer Rd. Santa Ana, Illinois 85486 ")
-        
-    ]
-    let dummyDriversData : [NotificationData] = [
-    NotificationData(icon:  "" , title: "alaa el shekh", subtitle: "4.3 (221 reviews)"   ) ,
-    NotificationData(icon:  "" , title: "ali waleed elsayed ", subtitle: "4.3 (221 reviews)"   ) ,
-    NotificationData(icon:  "" , title: "mohamed ali hussen ", subtitle: "4.3 (221 reviews)"   )  ,
-    NotificationData(icon:  "" , title: "waleed ehab ahmed", subtitle: "4.3 (221 reviews)"   )  ,
-    NotificationData(icon:  "" , title: "abdullah ahmed mohamed ", subtitle: "4.3 (221 reviews)"   )
-    ]
-    
+   
+    var favAddress : [AddressResult] = []
+    var favdrivers : [FavDriverResult] = []
+    var pationation : Pagination?
+    var isLastPage : Bool = false
     
     
     enum DispkayedTasks {
@@ -46,6 +38,7 @@ class favoritesVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureInitialDesign()
+        self.getAllAddress()
     }
     
     
@@ -70,6 +63,7 @@ class favoritesVC: BaseVC {
         
        
         segment.setTitleTextAttributes( attributes,for: .normal)
+        self.indicator.isHidden = true
     }
     
 
@@ -82,10 +76,12 @@ class favoritesVC: BaseVC {
         switch sender.selectedSegmentIndex {
         case 0 : // locations
             self.displayedTask = .locations
+          //  getAllAddress()
             self.tableView.reloadData()
         case 1 : // drivers
             self.displayedTask = .drivers
-            self.tableView.reloadData()
+            getAllFavDrivers()
+           
         default:
             break
         }
@@ -95,7 +91,60 @@ class favoritesVC: BaseVC {
 
 //MARK: - Networking -
 extension favoritesVC {
+    func getAllAddress () {
+        activityIndicatorr.startAnimating()
+        UserRouter.getAllAddress.send { [weak self ] (response : APIGenericResponse<[AddressResult]> )in
+            guard let self = self else { return }
+           
+            if let result = response.result {
+                self.favAddress.removeAll()
+                let filtered = result.filter { $0.is_favorite == true  }
+                self.favAddress.append(contentsOf: filtered)
+                self.tableView.reloadData()
+            }
+            
+        }
+    }
     
+    func getAllFavDrivers () {
+        activityIndicatorr.startAnimating()
+        UserRouter.getAllFavDrives(page: 1).send { [weak self ] (response: APIGenericResponse<[FavDriverResult]>  ) in
+            guard let self = self else { return }
+            if response.status == true {
+                if response.paginate?.page == response.paginate?.totalPages {
+                    self.isLastPage = true
+                }
+                
+                self.pationation = response.paginate
+                
+                self.favdrivers = response.result ?? []
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    
+    
+    func removeAddressFromFavs (id : Int  ) {
+        activityIndicatorr.startAnimating()
+        UserRouter.updateAddress(id: id, isFav: false ).send { [weak self ] ( response : APIGlobalResponse  )  in
+            if  response.status == true {
+                self?.getAllAddress()
+                showInfoTopAlert(withMessage: response.message )
+            }
+        }
+    }
+    
+   func  removeDriverFromList ( id : Int ) {
+       activityIndicatorr.startAnimating()
+       UserRouter.removeDriverFromFav(id: id ).send { [weak self ] ( response : APIGlobalResponse  )  in
+           guard let self = self else { return }
+           if  response.status == true {
+               self.getAllFavDrivers()
+               showInfoTopAlert(withMessage: response.message )
+           }
+       }
+    }
 }
 
 //MARK: - Routes -

@@ -43,15 +43,15 @@ class hotelsVC: BaseVC {
 //MARK: - Actions -
     
     @IBAction func filterAction(_ sender: UIButton) {
-      //  sender.animateButtonWhenPressed {
+    
             let vc = filterViewVC()
-            vc.dismissAction = {
+            vc.dismissAction = { id in
                 self.removePresentEffect()
             }
             self.presentWithEffect(vc: vc)
         }
        
-   // }
+
 }
 
 

@@ -19,6 +19,7 @@
             <connections>
                 <outlet property="FavouritesTextArea" destination="Xdb-e5-l8a" id="V5j-9N-Zcz"/>
                 <outlet property="birthdateText" destination="TIz-gA-RG9" id="8an-Rn-SsV"/>
+                <outlet property="calendarTAP" destination="1gJ-pk-qVL" id="6fI-Vt-dvA"/>
                 <outlet property="chooseFromMain" destination="jWS-bn-yEU" id="JlF-vo-yYZ"/>
                 <outlet property="cityText" destination="H6o-Bf-jH2" id="3N3-jO-pS2"/>
                 <outlet property="collectionView" destination="ESF-Tl-pq1" id="aji-Ua-1OR"/>
@@ -59,7 +60,7 @@
                     <state key="normal" image="Group 25"/>
                 </button>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEG-4u-lDr">
-                    <rect key="frame" x="0.0" y="131.33333333333331" width="393" height="720.66666666666652"/>
+                    <rect key="frame" x="0.0" y="131.33333333333331" width="393" height="720.66666666666674"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="BMA-4n-zgU">
                             <rect key="frame" x="0.0" y="0.0" width="393" height="1058"/>
@@ -335,26 +336,26 @@
                     </constraints>
                 </scrollView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" translatesAutoresizingMaskIntoConstraints="NO" id="0YQ-lV-nuv">
-                    <rect key="frame" x="347" y="117.33333333333333" width="20" height="19.999999999999986"/>
+                    <rect key="frame" x="347" y="454.33333333333331" width="20" height="20"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="20" id="krD-nY-QqR"/>
                         <constraint firstAttribute="height" constant="20" id="nTr-2d-fR6"/>
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jWS-bn-yEU">
-                    <rect key="frame" x="0.0" y="380.33333333333331" width="393" height="54"/>
+                    <rect key="frame" x="0.0" y="717.33333333333337" width="393" height="54"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hr4-Ru-Rgc">
-                    <rect key="frame" x="0.0" y="310.33333333333331" width="393" height="54"/>
+                    <rect key="frame" x="0.0" y="647.33333333333337" width="393" height="54"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bv9-xd-69m">
-                    <rect key="frame" x="0.0" y="170.33333333333334" width="393" height="54"/>
+                    <rect key="frame" x="0.0" y="507.33333333333326" width="393" height="54"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 6" translatesAutoresizingMaskIntoConstraints="NO" id="LN2-YD-6Bz">
-                    <rect key="frame" x="348" y="189.66666666666666" width="15" height="15"/>
+                    <rect key="frame" x="348" y="526.66666666666663" width="15" height="15"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="15" id="6E1-ra-rZF"/>
                         <constraint firstAttribute="height" constant="15" id="Qbh-Lc-4DT"/>
