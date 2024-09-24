@@ -15,6 +15,7 @@ class DriverHomeVC: BaseVC  {
 //MARK: - VARS
     let locationManager = CLLocationManager()
     var switchButton = SwitchButton()
+    let socketManager = MySocketManager()
     
 //MARK: - OUTLETS
     
@@ -22,11 +23,11 @@ class DriverHomeVC: BaseVC  {
     
     @IBOutlet weak var switchContainer: UIView!
     
+    @IBOutlet weak var collectionViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     @IBOutlet weak var driverName: UILabel!
-    @IBOutlet weak var userName: UILabel!
-    
-    @IBOutlet weak var buttomContainerView: UIView!
+
     @IBOutlet weak var notificationView: UIView!
     @IBOutlet weak var googleMaps: GMSMapView!
     @IBOutlet weak var driverImage: UIImageView!
@@ -38,34 +39,9 @@ class DriverHomeVC: BaseVC  {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-
-    
-        self.requestLocationAccess()
-        locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.requestLocation()
-        self.notificationView.layer.addBasicShadow(cornerRadius: 16)
-        self.buttomContainerView.layer.addBasicShadow(cornerRadius: 20)
-        self.setUpGoogleMapView()
-       
-        switchButton = SwitchButton(frame: self.switchContainer.frame)
-        switchButton.status = false
-        self.view.addSubview(switchButton)
+        self.setUpVipListenerSocket()
+        self.setupMainView()
         
-        
-        switchButton.translatesAutoresizingMaskIntoConstraints = false
-
-        switchButton.leadingAnchor.constraint(equalTo: self.switchContainer.leadingAnchor).isActive = true
-        switchButton.trailingAnchor.constraint(equalTo: self.switchContainer.trailingAnchor).isActive = true
-        switchButton.topAnchor.constraint(equalTo: self.switchContainer.topAnchor).isActive = true
-        switchButton.bottomAnchor.constraint(equalTo: self.switchContainer.bottomAnchor).isActive = true
-      
-        self.driverName.text = UserDefaults.user?.user?.name ?? ""
-        
-        self.switchButtonAction()
-        self.createAtripAction()
-        
-  
     }
     
     

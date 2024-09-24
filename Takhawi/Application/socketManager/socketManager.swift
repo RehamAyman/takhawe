@@ -9,7 +9,7 @@ class MySocketManager {
         .reconnects(true),        // Automatically try to reconnect
         .reconnectWait(5) ,
         .extraHeaders(["authorization": UserDefaults.accessToken ?? ""
-                        , "Accept-Language": "ar"
+                        , "Accept-Language": LocalizationManager.shared.getLanguage() == .Arabic ? "ar" : "en"
                       ])
     ])
     
@@ -46,6 +46,21 @@ class MySocketManager {
 
     func sendMessage(message: String) {
         socket.emit("message", message)
+    }
+    
+    func sendMyLocation ( lat : Double , lng : Double ) {
+        
+        socket.connect()
+        let data: [String: Any] = [
+            "lat": lat ,
+            "lng": lng
+           
+        ]
+        
+        
+        print("update my location to the server ")
+
+        socket.emit("update location", data)
     }
     
     func sendPing() {
@@ -86,6 +101,31 @@ class MySocketManager {
                         print("Data format is not as expected")
                 }
         }
+    }
+    
+//MARK: - -- PROVIDER LISTEN TO NEW VIP TRIPS COMMING  METHOD --
+    
+    func providerVipTripsListener (completion: @escaping ([offerResult]) -> Void ) {
+        
+        socket.on( "new vip trip") { data, ack in
+            print("🌏socket back with new offers  data 🌏")
+            print(data)
+            if let dataArray = data as? [[String: Any]] {
+                    do {
+                        // Convert the array of dictionaries into JSON data
+                        let jsonData = try JSONSerialization.data(withJSONObject: dataArray, options: [])
+                        // Decode the JSON data into an array of Offer objects
+                        let offers = try JSONDecoder().decode([offerResult].self, from: jsonData)
+                        completion ( offers )
+                    } catch {
+                        print("Error decoding offers: \(error)")
+                    }
+                } else {
+                        print("Data format is not as expected")
+                }
+        }
+        
+        
     }
 }
 

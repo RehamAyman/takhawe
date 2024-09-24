@@ -16,7 +16,7 @@ extension DriverHomeVC :  CLLocationManagerDelegate  , GMSMapViewDelegate  {
      func setUpGoogleMapView () {
             locationManager.requestLocation()
             locationManager.startUpdatingLocation()
-         googleMaps.delegate = self
+            googleMaps.delegate = self
             googleMaps.isMyLocationEnabled = false 
             
             do {
@@ -43,9 +43,14 @@ extension DriverHomeVC :  CLLocationManagerDelegate  , GMSMapViewDelegate  {
         guard let latitude = locationManager.location?.coordinate.latitude else { return}
         guard let longitude =  locationManager.location?.coordinate.longitude else { return}
         getAddress(lat: latitude , Lng: longitude)
+        // pass to the socket my location
+        
+        socketManager.sendMyLocation(lat: latitude , lng: longitude)
       
     }
     
+    
+   
     
     
     func getAddress(lat: Double , Lng: Double){
