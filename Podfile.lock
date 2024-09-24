@@ -137,6 +137,9 @@ PODS:
   - MDFTextAccessibility (2.0.1)
   - OTPFieldView (1.0.1)
   - PureLayout (3.1.9)
+  - Socket.IO-Client-Swift (16.1.0):
+    - Starscream (~> 4.0.6)
+  - Starscream (4.0.8)
 
 DEPENDENCIES:
   - AEOTPTextField
@@ -161,6 +164,7 @@ DEPENDENCIES:
   - MaterialComponents/TextFields
   - OTPFieldView (from `https://github.com/AbdallaTarek/OTPFieldView.git`)
   - PureLayout
+  - Socket.IO-Client-Swift (~> 16.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -179,6 +183,8 @@ SPEC REPOS:
     - MDFInternationalization
     - MDFTextAccessibility
     - PureLayout
+    - Socket.IO-Client-Swift
+    - Starscream
   trunk:
     - GoogleMaps
     - GooglePlaces
@@ -220,7 +226,9 @@ SPEC CHECKSUMS:
   MDFTextAccessibility: f4bb4cc2194286651b59a215fdeaa0e05dc90ba5
   OTPFieldView: 700a752fe62c41d1c4914c78aa500fb30d97c255
   PureLayout: 5fb5e5429519627d60d079ccb1eaa7265ce7cf88
+  Socket.IO-Client-Swift: ee4b8f80a3db18dd7f32b266ddf273310609443c
+  Starscream: 19b5533ddb925208db698f0ac508a100b884a1b9
 
-PODFILE CHECKSUM: 71d52834ead6b7c22b0d9c32e00aaad5bb7feb84
+PODFILE CHECKSUM: 1c41336c2f59d24f6f3eb21e61ca7a6a7ab01040
 
 COCOAPODS: 1.15.0

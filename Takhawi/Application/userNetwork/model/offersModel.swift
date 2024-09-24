@@ -6,6 +6,17 @@
 //
 
 import Foundation
+
+
+
+
+
+
+
+
+
+
+
 struct offerResult : Codable {
     let id : Int?
     let price : Double?
@@ -16,8 +27,8 @@ struct offerResult : Codable {
     let trip_id : Int?
     let createdAt : String?
     let driver : Driver?
-    let Vehicle_Color : itemObj?
-    let Vehicle_Class : itemObj?
+    //let Vehicle_Color : itemObj?
+  //  let Vehicle_Class : itemObj?
 
     enum CodingKeys: String, CodingKey {
 
@@ -30,47 +41,62 @@ struct offerResult : Codable {
         case trip_id = "trip_id"
         case createdAt = "createdAt"
         case driver = "Driver"
-        case Vehicle_Color = "Vehicle_Color"
-        case Vehicle_Class = "Vehicle_Class"
+        
+        
     }
 
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        id = try values.decodeIfPresent(Int.self, forKey: .id)
-        price = try values.decodeIfPresent(Double.self, forKey: .price)
-        app_share_discount = try values.decodeIfPresent(Int.self, forKey: .app_share_discount)
-        status = try values.decodeIfPresent(String.self, forKey: .status)
-        features = try values.decodeIfPresent([String].self, forKey: .features)
-        driver_id = try values.decodeIfPresent(Int.self, forKey: .driver_id)
-        trip_id = try values.decodeIfPresent(Int.self, forKey: .trip_id)
-        createdAt = try values.decodeIfPresent(String.self, forKey: .createdAt)
-        driver = try values.decodeIfPresent(Driver.self, forKey: .driver)
-        Vehicle_Color = try values.decodeIfPresent(itemObj.self, forKey: .Vehicle_Color)
-        Vehicle_Class = try values.decodeIfPresent(itemObj.self, forKey: .Vehicle_Class)
-    }
 
 }
+
+
+
+
 struct Driver : Codable {
     let name : String?
     let avatar : String?
     let driver_rate : Double?
+    let vehicles : Vehicles?
 
     enum CodingKeys: String, CodingKey {
 
         case name = "name"
         case avatar = "avatar"
         case driver_rate = "driver_rate"
+        case vehicles = "Vehicles"
     }
 
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        name = try values.decodeIfPresent(String.self, forKey: .name)
-        avatar = try values.decodeIfPresent(String.self, forKey: .avatar)
-        driver_rate = try values.decodeIfPresent( Double.self , forKey: .driver_rate)
-    }
 
 }
 
+
+struct Vehicles : Codable {
+    let id : Int?
+    let serial_no : String?
+    let plate_alphabet : String?
+    let plate_number : String?
+    let seats_no : Int?
+    let production_year : Int?
+    let vehicle_Color : itemObj?
+    let vehicle_Class : itemObj?
+    let vehicle_Type : itemObj?
+    let vehicle_Name : itemObj?
+    
+    enum CodingKeys: String, CodingKey {
+        
+        case id = "id"
+        case serial_no = "serial_no"
+        case plate_alphabet = "plate_alphabet"
+        case plate_number = "plate_number"
+        case seats_no = "seats_no"
+        case production_year = "production_year"
+        case vehicle_Color = "Vehicle_Color"
+        case vehicle_Class = "Vehicle_Class"
+        case vehicle_Type = "Vehicle_Type"
+        case vehicle_Name = "Vehicle_Name"
+    }
+    
+}
+    
 //itemObj
 struct itemObj : Codable {
     let name : String?
@@ -82,10 +108,11 @@ struct itemObj : Codable {
        
     }
 
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        name = try values.decodeIfPresent(String.self, forKey: .name)
-       
-    }
+   
+ 
 
 }
+
+
+
+

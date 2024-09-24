@@ -438,6 +438,8 @@
 		CEDAC5722C36E3F70054028E /* features.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDAC5712C36E3F70054028E /* features.swift */; };
 		CEDAC5742C36E6BA0054028E /* colorsNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDAC5732C36E6BA0054028E /* colorsNames.swift */; };
 		CEDAC5772C36F01E0054028E /* vipData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDAC5762C36F01E0054028E /* vipData.swift */; };
+		CEDD108D2CA046E00009A922 /* socketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDD108C2CA046E00009A922 /* socketManager.swift */; };
+		CEDD108F2CA0530E0009A922 /* findingDriver+Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDD108E2CA0530E0009A922 /* findingDriver+Socket.swift */; };
 		CEDDBE182ACBDFA700677C94 /* sideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDDBE162ACBDFA700677C94 /* sideMenuCell.swift */; };
 		CEDDBE192ACBDFA700677C94 /* sideMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDDBE172ACBDFA700677C94 /* sideMenuCell.xib */; };
 		CEDDBE1C2ACC0DAB00677C94 /* sideMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDDBE1B2ACC0DAB00677C94 /* sideMenuModel.swift */; };
@@ -912,6 +914,8 @@
 		CEDAC5712C36E3F70054028E /* features.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = features.swift; sourceTree = "<group>"; };
 		CEDAC5732C36E6BA0054028E /* colorsNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colorsNames.swift; sourceTree = "<group>"; };
 		CEDAC5762C36F01E0054028E /* vipData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vipData.swift; sourceTree = "<group>"; };
+		CEDD108C2CA046E00009A922 /* socketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = socketManager.swift; sourceTree = "<group>"; };
+		CEDD108E2CA0530E0009A922 /* findingDriver+Socket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "findingDriver+Socket.swift"; sourceTree = "<group>"; };
 		CEDDBE162ACBDFA700677C94 /* sideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sideMenuCell.swift; sourceTree = "<group>"; };
 		CEDDBE172ACBDFA700677C94 /* sideMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = sideMenuCell.xib; sourceTree = "<group>"; };
 		CEDDBE1B2ACC0DAB00677C94 /* sideMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sideMenuModel.swift; sourceTree = "<group>"; };
@@ -1366,6 +1370,7 @@
 		9694AB492A5DE9DA00BDF5F8 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				CEDD108B2CA046C10009A922 /* socketManager */,
 				CE8291F52C4174E800E289EF /* driverNetwork */,
 				CEDAC56C2C36E0BC0054028E /* userNetwork */,
 				CED77C092B6375CD00962E83 /* driver */,
@@ -2004,6 +2009,7 @@
 		CE3CEEDF2B1652E000619C79 /* findingAdriver */ = {
 			isa = PBXGroup;
 			children = (
+				CEDD108E2CA0530E0009A922 /* findingDriver+Socket.swift */,
 				CE3CEEDD2B1652DD00619C79 /* findingAdriverVC.swift */,
 				CE3CEEE02B16532F00619C79 /* findingAdriverVC.xib */,
 			);
@@ -2664,6 +2670,14 @@
 			path = model;
 			sourceTree = "<group>";
 		};
+		CEDD108B2CA046C10009A922 /* socketManager */ = {
+			isa = PBXGroup;
+			children = (
+				CEDD108C2CA046E00009A922 /* socketManager.swift */,
+			);
+			path = socketManager;
+			sourceTree = "<group>";
+		};
 		CEDDBE152ACBDF8500677C94 /* cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -3235,6 +3249,7 @@
 				0426FBC22B3753970017F12A /* aboutUsVC.swift in Sources */,
 				CE4E22CD2C0CE4C60092AE16 /* registerTabsExtention.swift in Sources */,
 				9694ABE02A5DFACA00BDF5F8 /* Optional.swift in Sources */,
+				CEDD108F2CA0530E0009A922 /* findingDriver+Socket.swift in Sources */,
 				CE72B0212C0353C2009AC905 /* checkPhoneModel.swift in Sources */,
 				CE1A11D32C6CA3FF00F6FDE2 /* oneBasicTrip.swift in Sources */,
 				CE3CACC72B2D8E3F0025990E /* animatedLoader.swift in Sources */,
@@ -3349,6 +3364,7 @@
 				04B659CA2B341D6A00E78752 /* favDriverCell.swift in Sources */,
 				CE1A94E02B6CD549003C50EF /* fileUploadedView.swift in Sources */,
 				9694ABC72A5DFACA00BDF5F8 /* RoundImage.swift in Sources */,
+				CEDD108D2CA046E00009A922 /* socketManager.swift in Sources */,
 				CE44773A2AE03DBD000D96F6 /* selectDateExtention.swift in Sources */,
 				9694ABF72A5DFACA00BDF5F8 /* AppIndicator.swift in Sources */,
 				CE04D9BD2B15DD0000B41157 /* successBookViewVC.swift in Sources */,

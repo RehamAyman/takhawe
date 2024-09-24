@@ -56,13 +56,19 @@ extension driverOffersVC : UITableViewDelegate , UITableViewDataSource {
         cell.price.text = String ( item.price ?? 0.0 )
         cell.distance.text = self.getDestanceBetween()
         cell.time.text = self.time
-        cell.driverRate.rating = 4 // item.driverRate
+        cell.driverRate.rating = item.driver?.driver_rate ?? 0 // item.driverRate
         if let driverImage = item.driver?.avatar {
             let url = Server.imageBase.rawValue + driverImage
                 cell.driverPhoto.setImage(image: url )
         }
        
-        cell.carName.text = "red nissan sedan ARC 1233"
+        let color =  item.driver?.vehicles?.vehicle_Color?.name ?? ""
+        let Vclass =  item.driver?.vehicles?.vehicle_Class?.name ?? ""
+        let name = item.driver?.vehicles?.vehicle_Name?.name ?? ""
+        let type = item.driver?.vehicles?.vehicle_Type?.name ?? ""
+       
+        
+        cell.carName.text = color + " " + Vclass + " " + name  + " " + type    //"red nissan sedan ARC 1233"
         cell.action = {
             let vc =  ReserveTheTripVC()
             vc.viptrip = true
@@ -113,6 +119,9 @@ extension driverOffersVC : UITableViewDelegate , UITableViewDataSource {
                     guard let response = response else {
                         if let error = error {
                             print("Error: \(error)")
+                            
+                            self.calculateADefualtTime()
+                            
                         }
                         return
                     }
@@ -127,16 +136,20 @@ extension driverOffersVC : UITableViewDelegate , UITableViewDataSource {
                        self.time =  "\( (route.expectedTravelTime / 60 ).rounded() )" + "mins".localize
                        self.tableview.reloadData()
                    } else {
-                       let coordinatesA = (latitude: self.locationDetails?.CurrentLat ?? 0.0 , longitude: self.locationDetails?.currentLng ?? 0.0)
-                       let coordinatesB = (latitude: self.locationDetails?.desLat ?? 0.0  , longitude: self.locationDetails?.destLng ?? 0.0 )
-
-                       let locationA = CLLocation(latitude: coordinatesA.latitude, longitude: coordinatesA.longitude)
-                       let locationB = CLLocation(latitude: coordinatesB.latitude , longitude: coordinatesB.longitude)
-                       let distanceInKM =  ( locationA.distance(from: locationB) / 100 ).rounded()
-                       self.time = "\(distanceInKM.rounded() + 2  )" + "mins".localize
-                       self.tableview.reloadData()
+                       self.calculateADefualtTime()
                    }
                 }
+    }
+    
+    private func calculateADefualtTime () {
+        let coordinatesA = (latitude: self.locationDetails?.CurrentLat ?? 0.0 , longitude: self.locationDetails?.currentLng ?? 0.0)
+        let coordinatesB = (latitude: self.locationDetails?.desLat ?? 0.0  , longitude: self.locationDetails?.destLng ?? 0.0 )
+
+        let locationA = CLLocation(latitude: coordinatesA.latitude, longitude: coordinatesA.longitude)
+        let locationB = CLLocation(latitude: coordinatesB.latitude , longitude: coordinatesB.longitude)
+        let distanceInKM =  ( locationA.distance(from: locationB) / 100 ).rounded()
+        self.time = "\(distanceInKM.rounded() + 2  )" + "mins".localize
+        self.tableview.reloadData()
     }
     
     

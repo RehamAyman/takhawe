@@ -1,8 +1,95 @@
-//
-//  socketManager.swift
-//  Takhawi
-//
-//  Created by Reham Ayman on 19/03/1446 AH.
-//
+import SocketIO
 
-import Foundation
+class MySocketManager {
+    var socket: SocketIOClient!
+    let manager = SocketIO.SocketManager(socketURL: URL(string: "https://dev-dash-takhawe.hayah.tech")!, config: [
+        .log(true),
+        .compress,
+       
+        .reconnects(true),        // Automatically try to reconnect
+        .reconnectWait(5) ,
+        .extraHeaders(["authorization": UserDefaults.accessToken ?? ""
+                        , "Accept-Language": "ar"
+                      ])
+    ])
+    
+
+    func connect() {
+        socket = manager.defaultSocket
+        
+        // Handle connection events
+        
+        socket.on(clientEvent: .connect) { data, ack in
+            print("🌏...Socket connected🌏")
+        }
+        
+        
+        socket.on(clientEvent: .error) { data, ack in
+            print("🌏...Socket error: \(data)")
+        }
+
+
+        // Handle custom events
+        if socket.status != .connected && socket.status != .connecting {
+            print("🌏Connecting socket...")
+            socket.connect()
+        } else {
+            print("🌏Socket is already connected or in the process of connecting")
+        }
+    }
+    
+    
+    func disconnect() {
+        print(" 🌏🌏 disconnect 🌏🌏")
+        socket.disconnect()
+    }
+
+    func sendMessage(message: String) {
+        socket.emit("message", message)
+    }
+    
+    func sendPing() {
+        socket.emit("pingFromClient", "ping")
+    }
+
+    func startPinging() {
+        Timer.scheduledTimer(withTimeInterval: 10.0, repeats: true) { _ in
+            if self.socket.status == .connected {
+                self.sendPing()
+                print("Ping sent")
+            } else {
+                print("Socket is not connected")
+            }
+        }
+    }
+    
+    
+ //MARK: - -- USER LISTEN TO NEW OFFERS METHOD --
+    
+    
+    
+    func listenToUserOffers ( completion: @escaping ([offerResult]) -> Void)   {
+        socket.on( "new offer") { data, ack in
+            print("🌏socket back with new offers  data 🌏")
+            print(data)
+            if let dataArray = data as? [[String: Any]] {
+                    do {
+                        // Convert the array of dictionaries into JSON data
+                        let jsonData = try JSONSerialization.data(withJSONObject: dataArray, options: [])
+                        // Decode the JSON data into an array of Offer objects
+                        let offers = try JSONDecoder().decode([offerResult].self, from: jsonData)
+                        completion ( offers )
+                    } catch {
+                        print("Error decoding offers: \(error)")
+                    }
+                } else {
+                        print("Data format is not as expected")
+                }
+        }
+    }
+}
+
+
+
+
+

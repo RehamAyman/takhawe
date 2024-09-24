@@ -14,6 +14,7 @@ import GoogleMaps
 import AlertKit
 import EMTNeumorphicView
 import Lottie
+import SocketIO
 
 
 
@@ -74,6 +75,7 @@ class homeVC: BaseVC, sendDataBackDelegate{
     var selectedCityId : Int = 0
     var lottieAnimationView: LottieAnimationView!
     var currentUserLocation: CLLocationCoordinate2D?
+   
     
     
 //MARK: - Properties -
@@ -105,12 +107,14 @@ class homeVC: BaseVC, sendDataBackDelegate{
     
     var tripHaveDestination : Bool = false
     
-//MARK: - Creation -
   
+
+    
     
 // MARK: - Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         self.searchView.addTapGesture {
             if self.segment.selectedSegmentIndex == 0 {
                 self.getDestinationFromMaps(vip: false )
@@ -142,7 +146,6 @@ class homeVC: BaseVC, sendDataBackDelegate{
         self.secMyLocationOutlet.imagePadding(spacing: 8)
         self.secMydestinationOutlet.imagePadding(spacing: 8)
         self.secCalendar.setTitle( "\(Date().dateToString ?? "--") , 3:00 PM " , for: .normal)
-        
         self.segmentContainerView.neumorphicLayer?.cornerType = .all
         self.segmentContainerView.neumorphicLayer?.depthType = .concave
         self.segmentContainerView.neumorphicLayer?.lightShadowOpacity = 0.4
@@ -155,7 +158,7 @@ class homeVC: BaseVC, sendDataBackDelegate{
         destTextfield.placeholder = "Choose your destination".localize
         self.menuOutlet.setImage( UIImage(named: "menu 1")?.imageFlippedForRightToLeftLayoutDirection(), for: .normal)
       
-  
+        
     }
     
     
@@ -218,17 +221,18 @@ class homeVC: BaseVC, sendDataBackDelegate{
         
     }
     
-    
-    
-   
+
     
     @IBAction func secMyDestinationAction(_ sender: UIButton) {
-       print("destination location vip ")
+      
         self.getDestinationFromMaps(vip: true )
         
     }
+    
+    
+    
     @IBAction func secCalendarAction(_ sender: UIButton) {
-   print("hello there ")
+  
         let vc = selectDateVC()
         vc.comeFromMakeAtrip =  true
         self.presentWithEffect(vc:  vc )
@@ -267,14 +271,11 @@ class homeVC: BaseVC, sendDataBackDelegate{
                 print("date : \(self.selectedDate.ISO8601Format())")
                 
                 let vc = tripListVC()
-              
                 vc.tripLat = self.destLat
                 vc.tripLong = self.destLong
                 vc.tripDate = self.selectedDate.ISO8601Format()
                 vc.cityId = self.selectedCityId
-                
                 self.push(vc)
-                
                 
             } else {
                 AlertKitAPI.present(
@@ -292,9 +293,7 @@ class homeVC: BaseVC, sendDataBackDelegate{
             } else {
                 print(self.selectedFeatures)
                 self.continueToVipTripCycle()
-               
-                
-              
+   
             }
         }
     }
@@ -325,6 +324,9 @@ class homeVC: BaseVC, sendDataBackDelegate{
     
     
     
+    
+    
+    
     @IBAction func calendarAction(_ sender: UIButton) {
       
         let vc = selectDateVC()
@@ -352,6 +354,8 @@ class homeVC: BaseVC, sendDataBackDelegate{
         print("clicked ")
         self.hideMenu()
     }
+    
+    
     
     @IBAction func segmentAction(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
@@ -411,10 +415,6 @@ extension homeVC {
     
 }
 
-//MARK: - Routes -
-extension homeVC {
-    
-}
 
 
 

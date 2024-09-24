@@ -21,17 +21,30 @@ class driverOffersVC: BaseVC {
     
 //MARK: - Properties -
  
-    
+    let socketManager = MySocketManager()
     var offers : [offerResult] = []
     var tripId : Int = 0
     var locationDetails : offerLocation? 
     var time : String = "" 
+   
     
 // MARK: - Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureInitialDesign()
+        
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.connectSocket()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.socketManager.disconnect()
+    }
+    
+   
+    
     
     @IBAction func refresh(_ sender: UIButton) {
         self.refreshOffer( sender : sender)
@@ -46,17 +59,10 @@ class driverOffersVC: BaseVC {
         self.noOffersView.isHidden = true
         self.noOffersViewHeight.constant = 0 
         animationView.contentMode = .scaleAspectFit
-       
         animationView.loopMode = .loop
         animationView.animationSpeed = 0.4
         self.getTravilTime()
         
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 3 ) {
-//            self.dummyOffers.append(
-//            dummyOffer(driverPhoto: "5", driverRate: 4, driverName: "hassan ahmed ali")
-//            )
-//            self.tableview.reloadData()
-//        }
     }
     
 //MARK: - Logic Methods -
@@ -81,6 +87,21 @@ extension driverOffersVC {
             
         }
     }
+    
+    func connectSocket () {
+        print("🌏1------- connect socket connection ----- ")
+        socketManager.connect()
+        socketManager.listenToUserOffers { offers  in
+            print("heey there ✅ success passed the offers ... ")
+            self.offers = offers
+            self.tableview.reloadData()
+            
+            self.dismiss(animated: true )
+            
+        }
+    }
+    
+ 
     
 }
 

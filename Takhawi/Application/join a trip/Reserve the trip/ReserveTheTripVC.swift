@@ -172,7 +172,7 @@ extension ReserveTheTripVC {
         if let id = self.tripDetails?.id {
             priceIndicator.startAnimating()
             priceIndicator.isHidden = false
-            UserRouter.claculateBasicPrice(id: id).send { [weak self ] (response : APIGenericResponse<BasicPriceResult>) in
+            UserRouter.claculateBasicPrice(id: id , code: "").send { [weak self ] (response : APIGenericResponse<BasicPriceResult>) in
                 guard let self = self else { return }
                 self.priceIndicator.stopAnimating()
                 self.priceIndicator.isHidden = true
@@ -196,9 +196,11 @@ extension ReserveTheTripVC {
     
     func calculateVipPrice () {
         
-        if let id = self.offer?.id {
+        if let id = self.offer?.id  {
             priceIndicator.startAnimating()
             priceIndicator.isHidden = false
+         
+            
             UserRouter.calculateVipPrice(id: id).send { [weak self ] (response : APIGenericResponse<BasicPriceResult>) in
                 guard let self = self else { return }
                 self.priceIndicator.stopAnimating()

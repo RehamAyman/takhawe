@@ -12,8 +12,8 @@ enum Server: String {
 //https://takhawi.onrender.com/api/
    
     case baseURL = "https://dev-dash-takhawe.hayah.tech/api/"
-    case socetURL = "https://writingservices.aait-sa.com:4705"
-    case socetPort = "4705"
+    case socetURL =  "https://dev-dash-takhawe.hayah.tech"   // "https://writingservices.aait-sa.com:4705"
+    case socetPort = "3000"
     case rechargeURL = "https://writingservices.aait-sa.com/wallet/charge/"
     case joinUsURL = "https://writingservices.aait-sa.com/option-register"
     case imageBase = "https://dev-dash-takhawe.hayah.tech/"

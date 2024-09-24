@@ -10,7 +10,10 @@
 import UIKit
 import Lottie
 
+
 class findingAdriverVC: BaseVC {
+   
+    
     
 //MARK: - IBOutlets -
     
@@ -22,12 +25,19 @@ class findingAdriverVC: BaseVC {
     var userCancel : Bool = false
     var tripId : Int = 0 
     var count : Int = 0
+    let socketManager = MySocketManager()
+    
     
 // MARK: - Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureInitialDesign()
-        self.getAllVipTrips()
+      //  self.getAllVipTrips()
+        self.connectSocket()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        self.socketManager.disconnect()
     }
     
     
@@ -58,20 +68,15 @@ class findingAdriverVC: BaseVC {
 
 
 //MARK: - Networking -
-extension findingAdriverVC {
+extension findingAdriverVC    {
+  
     func getAllVipTrips () {
       
         UserRouter.getAllVipOffers(id: self.tripId).send { [weak self ] (response:APIGenericResponse<[offerResult]> ) in
             guard let self = self else { return }
-            if response.result?.isEmpty == true {
-                
-                if self.count < 100 {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 20) {
-                        self.getAllVipTrips()
-                        self.count += 1
-                    }
-                }
-            } else {
+            if response.result?.isEmpty == false {
+            
+            
                 guard let offers = response.result else { return}
                 self.didfindAdrivier?(offers)
                     self.dismiss(animated: true )
@@ -79,10 +84,6 @@ extension findingAdriverVC {
             
         }
     }
-    
-}
-
-//MARK: - Routes -
-extension findingAdriverVC {
-    
+ 
+      
 }
