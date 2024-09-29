@@ -41,22 +41,7 @@ struct vipData : Codable {
         case vIP_Trip = "VIP_Trip"
     }
 
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        id = try values.decodeIfPresent(Int.self, forKey: .id)
-        start_date = try values.decodeIfPresent(String.self, forKey: .start_date)
-        end_date = try values.decodeIfPresent(String.self, forKey: .end_date)
-        status = try values.decodeIfPresent(String.self, forKey: .status)
-        price = try values.decodeIfPresent(Int.self, forKey: .price)
-        gender = try values.decodeIfPresent(String.self, forKey: .gender)
-        type = try values.decodeIfPresent(String.self, forKey: .type)
-        createdAt = try values.decodeIfPresent(String.self, forKey: .createdAt)
-        updatedAt = try values.decodeIfPresent(String.self, forKey: .updatedAt)
-        deletedAt = try values.decodeIfPresent(String.self, forKey: .deletedAt)
-        features = try values.decodeIfPresent([String].self, forKey: .features)
-        driver_id = try values.decodeIfPresent(String.self, forKey: .driver_id)
-        vIP_Trip = try values.decodeIfPresent(VIP_Trip.self, forKey: .vIP_Trip)
-    }
+  
 
 }
 
@@ -74,13 +59,15 @@ struct VIP_Trip : Codable {
     let trip_id : Int?
     let createdAt : String?
     let updatedAt : String?
-
+    let destination_description : String?
+    let pickup_description : String?//pickup_description
+    
     enum CodingKeys: String, CodingKey {
 
         case pickup_location_lat = "pickup_location_lat"
         case pickup_location_lng = "pickup_location_lng"
-        case distination_location_lat = "distination_location_lat"
-        case distination_location_lng = "distination_location_lng"
+        case distination_location_lat = "destination_location_lat"
+        case distination_location_lng = "destination_location_lng"
         case app_share_discount = "app_share_discount"
         case payment_status = "payment_status"
         case payment_method = "payment_method"
@@ -88,21 +75,56 @@ struct VIP_Trip : Codable {
         case trip_id = "trip_id"
         case createdAt = "createdAt"
         case updatedAt = "updatedAt"
+        case destination_description = "destination_description"
+        case pickup_description = "pickup_description"
     }
 
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        pickup_location_lat = try values.decodeIfPresent(Double.self, forKey: .pickup_location_lat)
-        pickup_location_lng = try values.decodeIfPresent(Double.self, forKey: .pickup_location_lng)
-        distination_location_lat = try values.decodeIfPresent(Double.self, forKey: .distination_location_lat)
-        distination_location_lng = try values.decodeIfPresent(Double.self, forKey: .distination_location_lng)
-        app_share_discount = try values.decodeIfPresent(Int.self, forKey: .app_share_discount)
-        payment_status = try values.decodeIfPresent(String.self, forKey: .payment_status)
-        payment_method = try values.decodeIfPresent(String.self, forKey: .payment_method)
-        passnger_id = try values.decodeIfPresent(Int.self, forKey: .passnger_id)
-        trip_id = try values.decodeIfPresent(Int.self, forKey: .trip_id)
-        createdAt = try values.decodeIfPresent(String.self, forKey: .createdAt)
-        updatedAt = try values.decodeIfPresent(String.self, forKey: .updatedAt)
+    
+
+}
+
+
+
+struct SocketVIP_Trip : Codable {
+    let pickup_location_lat : Double?
+    let pickup_location_lng : Double?
+    let distination_location_lat : Double?
+    let distination_location_lng : Double?
+    let app_share_discount : Int?
+    let payment_status : String?
+    let payment_method : String?
+    let passnger_id : Int?
+    let trip_id : Int?
+    let createdAt : String?
+    let updatedAt : String?
+    let destination_description : String?
+    let pickup_description : String?//pickup_description
+    let features : [String]?
+    let passenger_name : String?
+    let passenger_rate : Double?
+    let passenger_avatar : String?
+    
+    enum CodingKeys: String, CodingKey {
+
+        case pickup_location_lat = "pickup_location_lat"
+        case pickup_location_lng = "pickup_location_lng"
+        case distination_location_lat = "destination_location_lat"
+        case distination_location_lng = "destination_location_lng"
+        case app_share_discount = "app_share_discount"
+        case payment_status = "payment_status"
+        case payment_method = "payment_method"
+        case passnger_id = "passnger_id"
+        case trip_id = "trip_id"
+        case createdAt = "createdAt"
+        case updatedAt = "updatedAt"
+        case destination_description = "destination_description"
+        case pickup_description = "pickup_description"
+        case features = "features"
+        case passenger_name = "passenger_name"
+        case passenger_rate = "passenger_rate"
+        case passenger_avatar = "passenger_avatar"
     }
+
+    
 
 }

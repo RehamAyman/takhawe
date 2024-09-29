@@ -43,29 +43,21 @@ class MySocketManager {
         print(" 🌏🌏 disconnect 🌏🌏")
         socket.disconnect()
     }
+    
+    
 
     func sendMessage(message: String) {
         socket.emit("message", message)
     }
     
-    func sendMyLocation ( lat : Double , lng : Double ) {
-        
-        socket.connect()
-        let data: [String: Any] = [
-            "lat": lat ,
-            "lng": lng
-           
-        ]
-        
-        
-        print("update my location to the server ")
-
-        socket.emit("update location", data)
-    }
+ 
     
     func sendPing() {
         socket.emit("pingFromClient", "ping")
     }
+    
+    
+    
 
     func startPinging() {
         Timer.scheduledTimer(withTimeInterval: 10.0, repeats: true) { _ in
@@ -78,6 +70,27 @@ class MySocketManager {
         }
     }
     
+//MARK: - -- PROVIDER UPDATE HIS LOCATION  --
+    func sendMyLocation ( lat : Double , lng : Double ) {
+        let data: [String: Any] = [
+            "lat": lat ,
+            "lng": lng
+        ]
+        
+        if self.socket.status != .connected {
+            socket.on(clientEvent: .connect) { data, ack in
+                print("1- update my location to the server ")
+                self.socket.emit("update location", data)
+            }
+            
+        } else {
+            print("2- update my location to the server ")
+            self.socket.emit("update location", data)
+        }
+       
+    }
+    
+ 
     
  //MARK: - -- USER LISTEN TO NEW OFFERS METHOD --
     
@@ -87,6 +100,7 @@ class MySocketManager {
         socket.on( "new offer") { data, ack in
             print("🌏socket back with new offers  data 🌏")
             print(data)
+            
             if let dataArray = data as? [[String: Any]] {
                     do {
                         // Convert the array of dictionaries into JSON data
@@ -103,19 +117,21 @@ class MySocketManager {
         }
     }
     
+    
+    
 //MARK: - -- PROVIDER LISTEN TO NEW VIP TRIPS COMMING  METHOD --
     
-    func providerVipTripsListener (completion: @escaping ([offerResult]) -> Void ) {
+    func providerVipTripsListener (completion: @escaping ([SocketVIP_Trip]) -> Void ) {
         
         socket.on( "new vip trip") { data, ack in
-            print("🌏socket back with new offers  data 🌏")
+            print("🌏socket back with new trips  data 🌏")
             print(data)
             if let dataArray = data as? [[String: Any]] {
                     do {
                         // Convert the array of dictionaries into JSON data
                         let jsonData = try JSONSerialization.data(withJSONObject: dataArray, options: [])
                         // Decode the JSON data into an array of Offer objects
-                        let offers = try JSONDecoder().decode([offerResult].self, from: jsonData)
+                        let offers = try JSONDecoder().decode([SocketVIP_Trip].self, from: jsonData)
                         completion ( offers )
                     } catch {
                         print("Error decoding offers: \(error)")

@@ -14,23 +14,86 @@ extension DriverHomeVC : UICollectionViewDelegate , UICollectionViewDataSource ,
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        self.collectionViewHeight.constant = 300
-       return 10
+    self.changeConstrainsWithAnimation(const: self.offers.count == 0 ?  30 : 300 )
+      
+        return self.offers.count
     }
+    
+    
+    
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "driverVipTripsCellCollectionViewCell", for: indexPath) as! driverVipTripsCellCollectionViewCell
+        let item = self.offers[indexPath.item]
+        cell.from.text = item.pickup_description ?? ""
+        cell.to.text = item.destination_description ?? ""
+        cell.userName.text = item.passenger_name ?? ""
+        cell.userRate.rating = item.passenger_rate ?? 0.0
+        if let image = item.passenger_avatar {
+            cell.userPhoto.setImage(image: Server.imageBase.rawValue + image  )
+        }
         
+        
+        if let  features = item.features  {
+            cell.ac.tintColor = features.contains("AIR CONDITIONER")  ?  UIColor(named: "MainColor") : UIColor.systemGray5
+            cell.wifi.tintColor = features.contains(Features.wifi.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
+            cell.music.tintColor = features.contains(Features.music.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
+            cell.food.tintColor = features.contains(Features.food.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
+            cell.smocking.tintColor = features.contains(Features.noSmoking.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
+        }
+          
+   
+        cell.showDetails.addTapGesture {
+            let vc = driverProfileVC()
+            vc.isDriverAcc = true
+            vc.driverVip = item
+           // vc.vipData = item
+            self.push(vc )
+        }
+        cell.ignore.addTapGesture {
+            self.deleteItem(at: indexPath)
+        }
         return cell
     }
     
+    
+    func deleteItem(at indexPath: IndexPath) {
+        // 1. Ensure indexPath is valid before deletion
+        print("Attempting to delete item at indexPath: \(indexPath)")
+        print("Current data source: \(self.offers)")
+           
+           // 2. Ensure indexPath is valid before performing the deletion
+        guard indexPath.item < self.offers.count else {
+               print("Invalid indexPath!")
+               return
+           }
+           
+           // 3. Remove the correct item from the data source
+        let deletedItem = self.offers.remove(at: indexPath.item)
+           print("Deleted item: \(deletedItem)")
+
+           // 4. Update the collection view
+           collectionView.performBatchUpdates({
+               collectionView.deleteItems(at: [indexPath])
+        }, completion: { finished in
+            // 4. Optionally, reload or perform other actions
+            self.collectionView.collectionViewLayout.invalidateLayout()
+            print("Deleted item at index \(indexPath.item)")
+        })
+    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width:  self.collectionView.frame.width  - 20  , height: 300 )
     }
     
     
+    private func changeConstrainsWithAnimation (const : Int ) {
+        self.collectionViewHeight.constant = CGFloat(const)
+        UIView.animate(withDuration: 0.5) {
+            self.view.setNeedsLayout()
+        }
+    }
     
     
 //MARK: - SETUP SOCKET  METHODS
@@ -41,7 +104,8 @@ extension DriverHomeVC : UICollectionViewDelegate , UICollectionViewDataSource ,
         socketManager.connect()
         socketManager.providerVipTripsListener { offers  in
             print("heey there ✅ success passed the offers ... ")
-          
+            self.offers = offers
+            self.collectionView.reloadData()
    
         }
     }
@@ -94,24 +158,18 @@ extension DriverHomeVC : UICollectionViewDelegate , UICollectionViewDataSource ,
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
+        locationManager.startUpdatingLocation()
         self.notificationView.layer.addBasicShadow(cornerRadius: 16)
-       
         self.setUpGoogleMapView()
-       
         switchButton = SwitchButton(frame: self.switchContainer.frame)
         switchButton.status = false
         self.view.addSubview(switchButton)
-        
-        
         switchButton.translatesAutoresizingMaskIntoConstraints = false
-
         switchButton.leadingAnchor.constraint(equalTo: self.switchContainer.leadingAnchor).isActive = true
         switchButton.trailingAnchor.constraint(equalTo: self.switchContainer.trailingAnchor).isActive = true
         switchButton.topAnchor.constraint(equalTo: self.switchContainer.topAnchor).isActive = true
         switchButton.bottomAnchor.constraint(equalTo: self.switchContainer.bottomAnchor).isActive = true
-      
         self.driverName.text = UserDefaults.user?.user?.name ?? ""
-        
         self.switchButtonAction()
         self.createAtripAction()
     }

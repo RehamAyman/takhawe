@@ -38,15 +38,14 @@ extension DriverHomeVC :  CLLocationManagerDelegate  , GMSMapViewDelegate  {
        
         centerMapOnLocation(location: locationManager.location!)
         self.locationManager.stopUpdatingLocation()
-        let lat = "\(locationManager.location?.coordinate.latitude ?? 0.0)"
-        let long = "\(locationManager.location?.coordinate.longitude ?? 0.0 )"
+//        let lat = "\(locationManager.location?.coordinate.latitude ?? 0.0)"
+//        let long = "\(locationManager.location?.coordinate.longitude ?? 0.0 )"
         guard let latitude = locationManager.location?.coordinate.latitude else { return}
         guard let longitude =  locationManager.location?.coordinate.longitude else { return}
         getAddress(lat: latitude , Lng: longitude)
         // pass to the socket my location
-        
         socketManager.sendMyLocation(lat: latitude , lng: longitude)
-      
+        
     }
     
     
@@ -57,26 +56,25 @@ extension DriverHomeVC :  CLLocationManagerDelegate  , GMSMapViewDelegate  {
         
         let geocoder = GMSGeocoder()
         geocoder.reverseGeocodeCoordinate(CLLocationCoordinate2D(latitude: lat, longitude: Lng )) { response, error in
-          //
-        if error != nil {
-                        print("reverse geodcode fail: \(error!.localizedDescription)")
-                    } else {
-                        if let places = response?.results() {
-                            if let place = places.first {
-
-
-                                if let lines = place.lines {
-                                    print("GEOCODE: Formatted Address: \(lines)")
-                             //    self.secMyLocationOutlet.setTitle(lines[0], for: .normal)
-                                }
-
-                            } else {
-                                print("GEOCODE: nil first in places")
-                            }
-                        } else {
-                            print("GEOCODE: nil in places")
+            //
+            if error != nil {
+                print("reverse geodcode fail: \(error!.localizedDescription)")
+            } else {
+                if let places = response?.results() {
+                    if let place = places.first {
+                        
+                        
+                        if let lines = place.lines {
+                            print("GEOCODE: Formatted Address: \(lines)")
+                            //    self.secMyLocationOutlet.setTitle(lines[0], for: .normal)
                         }
+                    } else {
+                        print("GEOCODE: nil first in places")
                     }
+                } else {
+                    print("GEOCODE: nil in places")
+                }
+            }
         }
      
     }
@@ -114,6 +112,9 @@ extension DriverHomeVC :  CLLocationManagerDelegate  , GMSMapViewDelegate  {
                                    coordinate: southWest)
         
     }
+    
+    
+    
     func requestLocationAccess() {
         let status = CLLocationManager.authorizationStatus()
         
@@ -129,6 +130,30 @@ extension DriverHomeVC :  CLLocationManagerDelegate  , GMSMapViewDelegate  {
         }
     }
    
+    
+//MARK: - GET ALL PREV. VIP TRIPS
+   func getPrevTrips() {
+       
+      guard let latitude = locationManager.location?.coordinate.latitude else { return}
+      guard let longitude =  locationManager.location?.coordinate.longitude else { return}
+        DriverRouter.getPrevVipTrips(lat: latitude , lng: longitude ).send { [weak self ] ( response : APIGenericResponse<[SocketVIP_Trip]> )  in
+            guard let self = self else { return }
+            if let result = response.result {
+                self.offers += result
+                self.collectionView.reloadData()
+            }
+           
+            
+        }
+    }
+    
+    
+//MARK: - IGNORE OFFER
+    func rejectTrip () {
+        
+    }
+    
+    
     
 }
 

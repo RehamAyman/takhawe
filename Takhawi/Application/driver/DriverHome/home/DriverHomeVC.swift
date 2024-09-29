@@ -16,6 +16,8 @@ class DriverHomeVC: BaseVC  {
     let locationManager = CLLocationManager()
     var switchButton = SwitchButton()
     let socketManager = MySocketManager()
+    var offers : [SocketVIP_Trip] = []
+    
     
 //MARK: - OUTLETS
     
@@ -41,18 +43,15 @@ class DriverHomeVC: BaseVC  {
         super.viewDidLoad()
         self.setUpVipListenerSocket()
         self.setupMainView()
+        self.getPrevTrips()
         
     }
     
+
     
     
 //MARK: - ACTIONS
-    
-    @IBAction func showDetails(_ sender: UIButton) {
-        let vc = driverProfileVC()
-        vc.isDriverAcc = true
-        self.push(vc )
-    }
+
     
 //MARK: - FUNCTIONS
     private func checkDriverStatus () {

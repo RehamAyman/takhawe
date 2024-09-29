@@ -15,7 +15,8 @@ enum driverServerPath {
     case createAVehicle
     case createBasicTrip
     case meetingLocations
-    
+    case getPrevVipTrips
+    case makeOffer ( id : Int)
     
     
     
@@ -37,6 +38,10 @@ extension driverServerPath : ServerPath {
             return "basic-trip/" 
         case .meetingLocations:
          return "meeting-location/"
+        case .getPrevVipTrips:
+            return "trip/nearby-vip-trips"
+        case .makeOffer(id: let id ):
+            return "vip-trip/make-offer/\(id)"
     
         }
     }

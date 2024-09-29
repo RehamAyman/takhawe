@@ -14,6 +14,7 @@ import Cosmos
 class driverProfileVC: BaseVC {
     @IBOutlet weak var driverRate: CosmosView!
     
+    @IBOutlet weak var titleName: UILabel!
     @IBOutlet weak var seatPrice: UILabel!
     @IBOutlet weak var to: UILabel!
     @IBOutlet weak var from: UILabel!
@@ -32,6 +33,7 @@ class driverProfileVC: BaseVC {
     
     @IBOutlet weak var driverImage: UIImageView!
     
+    @IBOutlet weak var offerPrice: UITextField!
     @IBOutlet weak var googleView: GMSMapView!
     @IBOutlet weak var containerView: UIView!
     
@@ -51,12 +53,16 @@ class driverProfileVC: BaseVC {
     var weatherManager = WeatherManager()
     let locationManager = CLLocationManager()
    
+    var driverVip : SocketVIP_Trip?
     var pickupLat : Double = 0.0
     var pickupLong : Double = 0.0
     var destLat : Double = 0.0
     var destLong : Double = 0.0
-    
     var comeFromBasicTrip : Bool = false
+    
+    //var vipData : vipData?
+   
+    
 // MARK: - Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,12 +73,13 @@ class driverProfileVC: BaseVC {
         weatherManager.delegate = self
         
         self.weatherIndicator.startAnimating()
-        if comeFromBasicTrip {
-            self.from.text = self.tripDetails?.startLocation ?? "--"
-            self.to.text = self.tripDetails?.destinationlocationname ?? "--"
-            self.seatPrice.text = "\(self.tripDetails?.basic_trip_price_per_seat ?? 0 )"
-            self.getOneBasicTrip()
-        }
+       
+     
+        
+     
+        
+        
+        
     }
 
     
@@ -93,12 +100,31 @@ class driverProfileVC: BaseVC {
 // force the bottom view  to be in the left according to client requirement
         self.BottomcontainerStack.semanticContentAttribute = .forceLeftToRight
 // arrange views according to the account type
+        if comeFromBasicTrip {
+            self.from.text = self.tripDetails?.startLocation ?? "--"
+            self.to.text = self.tripDetails?.destinationlocationname ?? "--"
+            self.seatPrice.text = "\(self.tripDetails?.basic_trip_price_per_seat ?? 0 )"
+            self.getOneBasicTrip()
+        }
+        
         if isDriverAcc {
             self.mainStack.removeArrangedSubview(self.BottomcontainerStack)
-         
             self.BottomcontainerStack.removeFromSuperview()
-           
-
+            self.from.text = self.driverVip?.pickup_description ?? "--"
+            self.to.text = self.driverVip?.destination_description ?? "--"
+            self.driverRate.rating = self.driverVip?.passenger_rate ?? 0
+            self.driverName.text = self.driverVip?.passenger_name ?? ""
+            self.tripCountLabel.text = "0"
+            self.titleName.text = "User Profile".localize
+            if let image = self.driverVip?.passenger_avatar {
+                self.driverImage.setImage(image: Server.imageBase.rawValue + image)
+               
+            }
+            self.sendOfferContainerView.addTapGesture {
+                self.sendOffer()
+                
+            }
+    
         } else {
             self.mainStack.removeArrangedSubview(self.sendOfferContainerView)
             self.mainStack.removeArrangedSubview(self.driverContainerView)
@@ -123,6 +149,8 @@ class driverProfileVC: BaseVC {
         vc.viptrip = false
         vc.tripDetails = self.tripDetails
         self.push(vc)
+        
+        
     }
     
     
@@ -137,16 +165,13 @@ class driverProfileVC: BaseVC {
     
     
     @IBAction func reviewsAction(_ sender: UIButton) {
-    //    sender.animateButtonWhenPressed {
+  
             self.push(reviewsViewVC())
-    //    }
-        
-        
-        
-        
-        
-        
+
     }
+    
+    
+    
     
 }
 
@@ -164,8 +189,22 @@ extension driverProfileVC {
                 self.driverImage.setImage(image: Server.imageBase.rawValue + (result.driver?.avatar ?? "" ) )
                 
             }
-           
-          
+        }
+    }
+    
+    func sendOffer ( ) {
+        if self.offerPrice.text == "" {
+            showPopTopAlert(title: "Error", withMessage: "please add price first!", success: false)
+        } else {
+            activityIndicatorr.startAnimating()
+            
+            DriverRouter.makeOffer(id: self.driverVip?.trip_id ?? 0 ).send { [weak self ] ( response : APIGlobalResponse)  in
+                guard let self = self else { return }
+                if response.status == true {
+                    showInfoTopAlert(withMessage: response.message )
+                    self.pop(animated: true )
+                }
+            }
         }
     }
     

@@ -23,10 +23,7 @@ extension driverProfileVC : UICollectionViewDelegate , UICollectionViewDataSourc
         cell.name.text = item.name
         cell.icon.image =  UIImage(named: item.icon)
         
-        
-        
         if let mainColor = UIColor(named: "MainColor") {
-            
             cell.icon.tintColor = UIColor.systemGray5
            
         }
@@ -64,12 +61,18 @@ extension driverProfileVC : UICollectionViewDelegate , UICollectionViewDataSourc
                   NSLog("One or more of the map styles failed to load. \(error)")
               }
 
-     let startCoordinate = CLLocationCoordinate2D(latitude: self.tripDetails?.pickuplocation?.lat ?? 0.0 , longitude: self.tripDetails?.pickuplocation?.lng ?? 0.0  )
-      let endCoordinate = CLLocationCoordinate2D(latitude: self.tripDetails?.destinationlocation?.lat ?? 0.0 , longitude: self.tripDetails?.destinationlocation?.lng ?? 0.0)
-              addMarkers(from: startCoordinate, to: endCoordinate)
-              drawAnimatedRoute(from: startCoordinate, to: endCoordinate)
-      
-      
+      if self.isDriverAcc {
+          let startCoordinate = CLLocationCoordinate2D(latitude: self.driverVip?.pickup_location_lat ?? 0.0 , longitude: self.driverVip?.pickup_location_lng ?? 0.0  )
+          let endCoordinate = CLLocationCoordinate2D(latitude: self.driverVip?.distination_location_lat ?? 0.0  , longitude: self.driverVip?.distination_location_lng ?? 0.0)
+          addMarkers(from: startCoordinate, to: endCoordinate)
+          drawAnimatedRoute(from: startCoordinate, to: endCoordinate)
+      } else {
+          let startCoordinate = CLLocationCoordinate2D(latitude: self.tripDetails?.pickuplocation?.lat ?? 0.0 , longitude: self.tripDetails?.pickuplocation?.lng ?? 0.0  )
+          let endCoordinate = CLLocationCoordinate2D(latitude: self.tripDetails?.destinationlocation?.lat ?? 0.0 , longitude: self.tripDetails?.destinationlocation?.lng ?? 0.0)
+          addMarkers(from: startCoordinate, to: endCoordinate)
+          drawAnimatedRoute(from: startCoordinate, to: endCoordinate)
+          
+      }
 
     }
     
@@ -157,11 +160,20 @@ extension driverProfileVC : UICollectionViewDelegate , UICollectionViewDataSourc
 
     
     func setMainDataInfo () {
+        if isDriverAcc {
+            
+            
+            
+        } else {
+            
+      
         self.driverName.text = self.tripDetails?.driver_name ?? "--"
-        //driver rate
-        // trips
         self.tripDate.text = self.tripDetails?.start_date?.convertFromIso()
-        
+            
+            
+            
+            
+        }
     }
     
 

@@ -25,7 +25,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iQl-jl-vXh">
                                 <rect key="frame" x="0.0" y="0.0" width="469" height="277"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 1000002906" translatesAutoresizingMaskIntoConstraints="NO" id="ES3-Gb-Tgp">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 1000002906" translatesAutoresizingMaskIntoConstraints="NO" id="ES3-Gb-Tgp">
                                         <rect key="frame" x="8" y="8" width="65" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="DQ8-O4-bxH"/>
@@ -33,7 +33,7 @@
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="35"/>
+                                                <real key="value" value="30"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
@@ -122,10 +122,10 @@
                                         <rect key="frame" x="15" y="127" width="439" height="50"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Cu3-ZT-5gi">
-                                                <rect key="frame" x="0.0" y="0.0" width="146.33333333333334" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="219.66666666666666" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1d-IE-xbt">
-                                                        <rect key="frame" x="0.0" y="0.0" width="146.33333333333334" height="25"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="219.66666666666666" height="25"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -134,7 +134,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.5 Km" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHa-rC-Aer">
-                                                        <rect key="frame" x="0.0" y="25" width="146.33333333333334" height="25"/>
+                                                        <rect key="frame" x="0.0" y="25" width="219.66666666666666" height="25"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
                                                         <color key="textColor" name="MainColor"/>
                                                         <nil key="highlightedColor"/>
@@ -142,10 +142,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3CH-Sb-ULT">
-                                                <rect key="frame" x="146.33333333333331" y="0.0" width="146.33333333333331" height="50"/>
+                                                <rect key="frame" x="219.66666666666663" y="0.0" width="219.33333333333337" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u01-LK-7ll">
-                                                        <rect key="frame" x="0.0" y="0.0" width="146.33333333333334" height="25"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="219.33333333333334" height="25"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -154,27 +154,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45 mins" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KkC-74-paW">
-                                                        <rect key="frame" x="0.0" y="25" width="146.33333333333334" height="25"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
-                                                        <color key="textColor" name="MainColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="JSV-Tr-rau">
-                                                <rect key="frame" x="292.66666666666669" y="0.0" width="146.33333333333331" height="50"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seats" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJH-HM-9YR">
-                                                        <rect key="frame" x="0.0" y="0.0" width="146.33333333333334" height="25"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
-                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Seats"/>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLa-LY-oQb">
-                                                        <rect key="frame" x="0.0" y="25" width="146.33333333333334" height="25"/>
+                                                        <rect key="frame" x="0.0" y="25" width="219.33333333333334" height="25"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
                                                         <color key="textColor" name="MainColor"/>
                                                         <nil key="highlightedColor"/>
@@ -200,6 +180,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                         <real key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Show Details"/>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyQ-ad-ezB">
@@ -213,6 +194,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                         <real key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Ignore"/>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                         </subviews>
@@ -271,7 +253,21 @@
             </constraints>
             <size key="customSize" width="489" height="297"/>
             <connections>
+                <outlet property="ac" destination="3by-5m-s7W" id="5gK-x5-5WX"/>
+                <outlet property="distance" destination="UHa-rC-Aer" id="YsT-jR-8PX"/>
+                <outlet property="food" destination="VBe-gS-tN7" id="Ivd-Tp-cRH"/>
+                <outlet property="from" destination="lcp-qo-jHK" id="dWe-8U-oyR"/>
+                <outlet property="ignore" destination="zyQ-ad-ezB" id="WdD-Oe-dtI"/>
                 <outlet property="mainView" destination="iQl-jl-vXh" id="ugo-Ra-CgC"/>
+                <outlet property="music" destination="gdm-IT-kbu" id="Idh-qb-meR"/>
+                <outlet property="showDetails" destination="Ol2-qM-PoR" id="eub-ao-VLf"/>
+                <outlet property="smocking" destination="dSQ-sw-fcM" id="ARt-bY-av5"/>
+                <outlet property="time" destination="KkC-74-paW" id="rZx-r3-ads"/>
+                <outlet property="to" destination="tNU-do-8be" id="HKh-iu-3Rw"/>
+                <outlet property="userName" destination="byO-sd-uYx" id="IUO-VY-iUo"/>
+                <outlet property="userPhoto" destination="ES3-Gb-Tgp" id="peW-1D-tgf"/>
+                <outlet property="userRate" destination="tEZ-7B-uVC" id="rCb-EO-doD"/>
+                <outlet property="wifi" destination="6cu-R2-ptr" id="xor-nT-pkj"/>
             </connections>
             <point key="canvasLocation" x="474.04580152671753" y="106.69014084507043"/>
         </collectionViewCell>

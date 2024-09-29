@@ -22,8 +22,10 @@
                 <outlet property="from" destination="229-RJ-tFm" id="fPA-GC-moM"/>
                 <outlet property="googleView" destination="ag7-m0-5iV" id="PYU-s2-rdE"/>
                 <outlet property="mainStack" destination="oft-2f-t8y" id="6so-HM-rfA"/>
+                <outlet property="offerPrice" destination="6Fr-tw-wYi" id="CPJ-wu-7R4"/>
                 <outlet property="seatPrice" destination="dlz-kG-iPO" id="9sc-EE-bRF"/>
                 <outlet property="sendOfferContainerView" destination="dqc-Vu-3BB" id="b9w-si-9aT"/>
+                <outlet property="titleName" destination="WZC-Kd-P8g" id="XsA-DS-mQy"/>
                 <outlet property="to" destination="yga-3n-x7v" id="nBM-uY-h1w"/>
                 <outlet property="tripCountLabel" destination="gTa-8g-a8U" id="8nP-SO-iH6"/>
                 <outlet property="tripDate" destination="evc-si-NQo" id="Gyl-zR-SYf"/>

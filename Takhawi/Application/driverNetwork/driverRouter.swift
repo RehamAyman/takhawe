@@ -17,8 +17,9 @@ enum DriverRouter {
     case vehicleDetials
     case createAvehicle ( serialNum : String , plateAlphabet : String , plateNum : String , year : Int , seats : Int , class : Int , color : Int , type : Int , name : Int)
     case createBasic (endDate : String , startDate : String , seatsNo : Int , PickLocationId  : Int  , destLocationId : Int , features : [String]   , price : Int  )
-    
     case getMeetingLocations
+    case getPrevVipTrips ( lat : Double , lng : Double)
+    case makeOffer( id : Int )
 }
 
 extension DriverRouter : APIRouter {
@@ -31,10 +32,10 @@ extension DriverRouter : APIRouter {
     var method: HTTPMethod {
         switch self {
             
-        case .createAvehicle , .createBasic  :
+        case .createAvehicle , .createBasic , .makeOffer  :
             return .post
         
-        case  .driverStatus , .vehicleDetials , .getMeetingLocations :
+        case  .driverStatus , .vehicleDetials , .getMeetingLocations , .getPrevVipTrips   :
           return .get
             
         }
@@ -55,6 +56,10 @@ extension DriverRouter : APIRouter {
             return driverServerPath.createBasicTrip
         case .getMeetingLocations :
             return driverServerPath.meetingLocations
+        case .getPrevVipTrips :
+            return driverServerPath.getPrevVipTrips
+        case .makeOffer(id: let id ):
+            return driverServerPath.makeOffer(id: id )
   
        
         }
@@ -77,7 +82,13 @@ extension DriverRouter : APIRouter {
                  "vehicle_name_id": name
             ]
             
-        case .createBasic(endDate: let endDate , startDate: let startDate , seatsNo: let seats , PickLocationId: let pickLocation , destLocationId: let destLocation , features: let features  , price : let price ):
+        case .getPrevVipTrips(lat: let lat , lng: let lng ):
+            return [
+                "lat" : lat ,
+                "lng" : lng
+            ]
+            
+        case .createBasic(endDate: _ , startDate: let startDate , seatsNo: let seats , PickLocationId: let pickLocation , destLocationId: let destLocation , features: let features  , price : let price ):
             return [
                 
                     "end_date": "2024-12-06T22:30:01Z" ,
@@ -96,7 +107,7 @@ extension DriverRouter : APIRouter {
             ]
          
         
-        case  .driverStatus , .vehicleDetials   :
+        case  .driverStatus , .vehicleDetials  , .makeOffer  :
             return nil
             
         }
