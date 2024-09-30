@@ -73,6 +73,7 @@ extension driverOffersVC : UITableViewDelegate , UITableViewDataSource {
             let vc =  ReserveTheTripVC()
             vc.viptrip = true
             vc.offer = item
+          
             vc.locationDetails = self.locationDetails
             self.push(vc)
         }

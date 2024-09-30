@@ -36,28 +36,56 @@ class trackYourTripVC: BaseVC {
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var googleView: GMSMapView!
     @IBOutlet weak var secDriverName: UILabel!
-    
     @IBOutlet weak var secDistance: UILabel!
     @IBOutlet weak var secDeliverTime: UILabel!
     @IBOutlet weak var secRate: CosmosView!
+    
+    @IBOutlet weak var plateNumAr: UILabel!
+    
+    @IBOutlet weak var plateAlpha: UILabel!
+    @IBOutlet weak var plateNumEN: UILabel!
+    
+    @IBOutlet weak var plateAlphaEN: UILabel!
+    
+    
+    
     //MARK: - Properties -
+    
     var animatePolyline: AnimatePolyline?
     var count = 10
     var stopCompleteTheTrip : Bool = false
-    var tripData : MainTripResult?
-    var vipTrip : Bool = false 
-    var comeFromSideMenu : Bool = false 
+    var vipTrip : Bool = false
+    var tripId : Int = 0
+    var passengerTripId : Int = 0
+    var basicResult : OneBasicResult?
+    var vipResult : OneVipTripResult?
+    var basicPickLat : Double = 0
+    var basicPickLng : Double = 0
+    var basicDesLat : Double = 0
+    var basicDesLng : Double = 0
+    
+    var TrackMarker: GMSMarker!
+    
+    let socketManager = MySocketManager()
+    
     
 // MARK: - Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureInitialDesign()
         self.getTripDetails()
-        self.setUpGoogleView()
-        self.setUpMainView()
-       
-       
+       // self.setUpGoogleView()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.connectSocket()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.socketManager.disconnect()
+    }
+    
+    
     
     
 //MARK: - Design Methods -
@@ -72,6 +100,9 @@ class trackYourTripVC: BaseVC {
       //  self.driverArriveIn.start()
         self.topViewHeight.constant = 21
       
+        
+        
+        
 // trip
        // DispatchQueue.main.asyncAfter(deadline: .now() + 10 ) {
 //            UIView.animate(withDuration: 0.3 ) {
@@ -98,11 +129,6 @@ class trackYourTripVC: BaseVC {
 //                
 //            }
             
-            
-            
-            
-            
-
       //  }
         
         
@@ -146,12 +172,11 @@ class trackYourTripVC: BaseVC {
         self.stopCompleteTheTrip = true
         let vc = reportCancelVC()
         vc.report = true
-        vc.id = self.tripData?.id ?? 0
-        vc.type = self.tripData?.type ?? ""
-        vc.passengerTripId = self.tripData?.passengerTripId ?? 0
+        vc.id = self.tripId
+        vc.type = self.vipTrip ? "VIP" : "BASIC"
+        vc.passengerTripId = self.passengerTripId
         self.push(vc)
-      
-        
+
         
     }
     
@@ -167,9 +192,9 @@ class trackYourTripVC: BaseVC {
     @IBAction func cancelTrip(_ sender: UIButton) {
         let vc = reportCancelVC()
         vc.report = false
-        vc.id = self.tripData?.id ?? 0
-        vc.type = self.tripData?.type ?? ""
-        vc.passengerTripId = self.tripData?.passengerTripId ?? 0
+        vc.id =  self.tripId
+        vc.type =  self.vipTrip ? "VIP" : "BASIC"
+        vc.passengerTripId = self.passengerTripId
         self.push(vc)
     }
     
@@ -198,32 +223,72 @@ class trackYourTripVC: BaseVC {
 //MARK: - Networking -
 extension trackYourTripVC {
     func getTripDetails () {
-        if self.tripData?.type == "BASIC" {
-            self.getBasicTripDetials(tripId: self.tripData?.id ?? 0 )
-        } else {
-            
-        }
-    }
-     
-    func getBasicTripDetials ( tripId : Int ) {
-        
         activityIndicatorr.startAnimating()
-        UserRouter.getOneTrip(id: tripId ).send { [weak self] (response : APIGenericResponse< OneBasicResult >)  in
+        UserRouter.getOneGeneralTrip(id: tripId).send{ [weak self] (response : APIGenericResponse < GeneralTripResult >)  in
             guard let self = self else { return }
-            
             if let result = response.result {
+                self.passengerTripId = result.passengerTripId ?? 0
+                self.setUpGoogleView(lat1: result.pickup_location?.lat ?? 0  ,
+                                     lat2: result.destinationL?.lat ?? 0  ,
+                                     lng1: result.pickup_location?.lng ?? 0  ,
+                                     lng2:  result.destinationL?.lng ?? 0 )
+                self.driverName.text = result.driver?.name ?? ""
+                
+                self.rate.rating = result.driver?.driver_rate ?? 0
+                self.secRate.rating = result.driver?.driver_rate ?? 0
+                self.secDriverName.text =  result.driver?.name ?? ""
+                self.driverImage.setImage(image: Server.imageBase.rawValue + (result.driver?.avatar ?? "") )
+                self.secDriverImage.setImage(image: Server.imageBase.rawValue + (result.driver?.avatar ?? "") )
+                let color = result.vehicle?.vehicle_Color?.name ?? ""
+                let name = result.vehicle?.vehicle_Name?.name  ?? ""
+                let className = result.vehicle?.vehicle_Class?.name ?? ""
+                let type = result.vehicle?.vehicle_Type?.name ?? ""
                
+                self.carModelName.text = name  + " " +  className + " " + type + " " +  color
+                self.plateAlphaEN.text = result.vehicle?.plate_alphabet ?? ""
+                self.plateNumEN.text = result.vehicle?.plate_number ?? ""
+                self.plateAlpha.text = result.vehicle?.plate_alphabet ?? ""
+                self.plateNumAr.text = result.vehicle?.plate_number ?? ""
+                self.tripPrice.text = "\(result.price ?? 0)" + "SAR".localize
+                
             }
-            
-            
+         }
         }
-    }
+   
     
-    func getVipTripDetails (tripId : Int ) {
-       
-    }
     
- 
+    
+    
+     
+//   private func getBasicTripDetials ( tripId : Int ) {
+//        activityIndicatorr.startAnimating()
+//
+//        UserRouter.getOneTrip(id: tripId ).send { [weak self] (response : APIGenericResponse < OneBasicResult >)  in
+//            guard let self = self else { return }
+//            if let result = response.result {
+//                self.basicResult = result
+//               
+//                self.handleBasicView()
+//            }
+//        }
+//    }
+    
+    
+    
+    
+//   private func getVipTripDetails (tripId : Int ) {
+//        activityIndicatorr.startAnimating()
+//        UserRouter.getVip(id: tripId).send { [weak self ] (response :  APIGenericResponse < OneVipTripResult > )  in
+//            guard let self = self else { return }
+//            if let result = response.result {
+//                self.vipResult = result
+//                self.passengerTripId = result.passnger_id ?? 0
+//                self.handlevipView()
+//            }
+//        }
+//    }
+//    
+
     
     
 }

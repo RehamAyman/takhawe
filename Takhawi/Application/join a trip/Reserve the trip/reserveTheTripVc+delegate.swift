@@ -114,6 +114,10 @@ extension ReserveTheTripVC : UITableViewDelegate , UITableViewDataSource {
         self.tripDate.text = self.tripDetails?.start_date?.convertFromIso()
         self.from.text = self.tripDetails?.startLocation ?? "--"
         self.to.text = self.tripDetails?.destinationlocationname ?? "--"
+        if let image =  self.tripDetails?.driver_avatar {
+            self.driverImage.setImage(image: Server.imageBase.rawValue + image )
+        }
+      
         if let dist =  self.tripDetails?.distance {
            // let km = dist
             self.destance.text = "\(dist.rounded())" + "KM"

@@ -35,6 +35,8 @@ enum userServerPath {
     case cancelBasicTrip ( id : Int)
     case cancelVipTrip ( id : Int)
     case checkPromoCode
+    case getOneVip ( tripId : Int )
+    case getOneGeneralTrip ( tripId : Int)
    
 }
 
@@ -96,7 +98,10 @@ extension userServerPath : ServerPath {
             return "vip-trip/\(id)"
         case .checkPromoCode:
             return "promo-code/check-code"
-            
+        case .getOneVip(tripId: let id ):
+            return "vip-trip/\(id)"
+        case .getOneGeneralTrip(tripId: let id):
+            return "trip/\(id)"
     
         }
     }

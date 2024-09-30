@@ -117,6 +117,27 @@ class MySocketManager {
         }
     }
     
+    //driver location
+    
+    func listenToDRIVERLOCATION ( completion: @escaping (driverUpdateLocation) -> Void)   {
+        socket.on( "driver location") { data, ack in
+            print("🌏socket back with new offers  data 🌏")
+            print(data)
+            if let dataArray = data as? [[String: Any]] {
+                    do {
+                        // Convert the array of dictionaries into JSON data
+                        let jsonData = try JSONSerialization.data(withJSONObject: dataArray, options: [])
+                        // Decode the JSON data into an array of Offer objects
+                        let offers = try JSONDecoder().decode(driverUpdateLocation.self, from: jsonData)
+                        completion ( offers )
+                    } catch {
+                        print("Error decoding offers: \(error)")
+                    }
+                } else {
+                        print("Data format is not as expected")
+                }
+        }
+    }
     
     
 //MARK: - -- PROVIDER LISTEN TO NEW VIP TRIPS COMMING  METHOD --

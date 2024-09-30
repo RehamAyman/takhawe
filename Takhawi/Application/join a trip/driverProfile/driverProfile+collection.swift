@@ -44,30 +44,29 @@ extension driverProfileVC : UICollectionViewDelegate , UICollectionViewDataSourc
     
     // google maps functions
     
-  
+
 
   func   setUpGoogleView () {
-      let camera = GMSCameraPosition.camera(withLatitude: self.tripDetails?.pickuplocation?.lat ?? 0.0    , longitude: self.tripDetails?.pickuplocation?.lng ?? 0.0   , zoom: 13.0)
-      self.googleView.camera = camera
-      do {
-                  // Set the map style by passing the URL of the local file.
-                  if let styleURL = Bundle.main.url(forResource: "googleMapsStyle", withExtension: "json") {
-                      googleView.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
-
-                  } else {
-                      NSLog("Unable to find style.json")
-                  }
-              } catch {
-                  NSLog("One or more of the map styles failed to load. \(error)")
-              }
-
+     
+      self.setGoogleTheme()
       if self.isDriverAcc {
+          
+          let camera = GMSCameraPosition.camera(withLatitude: self.driverVip?.pickup_location_lat ?? 0.0    , longitude: self.driverVip?.pickup_location_lng ?? 0.0   , zoom: 13.0)
+          self.googleView.camera = camera
+
           let startCoordinate = CLLocationCoordinate2D(latitude: self.driverVip?.pickup_location_lat ?? 0.0 , longitude: self.driverVip?.pickup_location_lng ?? 0.0  )
+          let update = GMSCameraUpdate.setTarget(startCoordinate , zoom: 13)
+          googleView.animate(with: update)
           let endCoordinate = CLLocationCoordinate2D(latitude: self.driverVip?.distination_location_lat ?? 0.0  , longitude: self.driverVip?.distination_location_lng ?? 0.0)
           addMarkers(from: startCoordinate, to: endCoordinate)
           drawAnimatedRoute(from: startCoordinate, to: endCoordinate)
       } else {
+          let camera = GMSCameraPosition.camera(withLatitude: self.tripDetails?.pickuplocation?.lat ?? 0.0    , longitude: self.tripDetails?.pickuplocation?.lng ?? 0.0   , zoom: 13.0)
+          self.googleView.camera = camera
           let startCoordinate = CLLocationCoordinate2D(latitude: self.tripDetails?.pickuplocation?.lat ?? 0.0 , longitude: self.tripDetails?.pickuplocation?.lng ?? 0.0  )
+          let update = GMSCameraUpdate.setTarget(startCoordinate , zoom: 13)
+          googleView.animate(with: update)
+          
           let endCoordinate = CLLocationCoordinate2D(latitude: self.tripDetails?.destinationlocation?.lat ?? 0.0 , longitude: self.tripDetails?.destinationlocation?.lng ?? 0.0)
           addMarkers(from: startCoordinate, to: endCoordinate)
           drawAnimatedRoute(from: startCoordinate, to: endCoordinate)
@@ -75,6 +74,22 @@ extension driverProfileVC : UICollectionViewDelegate , UICollectionViewDataSourc
       }
 
     }
+    
+    
+    private func setGoogleTheme () {
+        do {
+                    // Set the map style by passing the URL of the local file.
+                    if let styleURL = Bundle.main.url(forResource: "googleMapsStyle", withExtension: "json") {
+                        googleView.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
+
+                    } else {
+                        NSLog("Unable to find style.json")
+                    }
+                } catch {
+                    NSLog("One or more of the map styles failed to load. \(error)")
+                }
+    }
+    
     
     
     func addMarkers(from start: CLLocationCoordinate2D, to end: CLLocationCoordinate2D) {

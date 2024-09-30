@@ -72,8 +72,9 @@ extension reportCancelVC : UITableViewDelegate , UITableViewDataSource {
             } else {
                 self.cancelVipTrip( id : tripId)
             }
-         
         }
+    
+    
 
     private func cancelBasicTrip (tripId : Int , UserId : Int) {
             activityIndicatorr.startAnimating()

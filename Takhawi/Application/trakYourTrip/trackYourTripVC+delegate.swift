@@ -28,14 +28,14 @@ extension trackYourTripVC {
     
 //MARK: - SETUP MAIN VIEW FUNCTIONS
     
-    func setUpMainView () {
-        self.driverName.text = self.tripData?.driver?.name ?? ""
-        self.secDriverName.text =  self.tripData?.driver?.name ?? ""
-        self.rate.rating = self.tripData?.driver?.driver_rate ?? 0.0
-        self.secRate.rating = self.tripData?.driver?.driver_rate ?? 0.0
-        if let image = self.tripData?.driver?.avatar {
-            self.driverImage.setImage(image: Server.imageBase.rawValue + image )
-            self.secDriverImage.setImage(image: Server.imageBase.rawValue + image )
+    func connectSocket () {
+        print("🌏1------- connect socket connection ----- ")
+        socketManager.connect()
+        socketManager.listenToDRIVERLOCATION { driverLocation  in
+            print("heey there ✅ success passed the offers ... ")
+            self.updateMarkerPosition(lat: driverLocation.lat, lng: driverLocation.lng)
+           // update the view in the maps with animation
+  
         }
     }
     
@@ -44,7 +44,7 @@ extension trackYourTripVC {
     
 //MARK: - GOOGLE MAPS METHODS
     
-    func   setUpGoogleView () {
+    func   setUpGoogleView ( lat1 : Double , lat2 : Double , lng1 : Double , lng2 : Double) {
         do {
             // Set the map style by passing the URL of the local file.
             if let styleURL = Bundle.main.url(forResource: "googleMapsStyle", withExtension: "json") {
@@ -57,21 +57,36 @@ extension trackYourTripVC {
             NSLog("One or more of the map styles failed to load. \(error)")
         }
         
-        let lat = self.tripData?.pickup_location?.lat ?? 0.0
-        let lng = self.tripData?.pickup_location?.lng ?? 0.0
-        let newCameraPosition = GMSCameraPosition.camera(withLatitude: lat , longitude: lng , zoom: 14.0 )
+        
+        let newCameraPosition = GMSCameraPosition.camera(withLatitude: lat1 , longitude: lng1 , zoom: 14.0 )
         self.googleView.animate(to: newCameraPosition)
         
-        print("\(self.tripData?.pickup_location?.lng ?? 0.0 )")
-        print("\(self.tripData?.pickup_location?.lat ?? 0.0 )")
+   
      
 
-       let startCoordinate = CLLocationCoordinate2D(latitude: self.tripData?.pickup_location?.lat ?? 0.0 , longitude: self.tripData?.pickup_location?.lng ?? 0.0  )
-        let endCoordinate = CLLocationCoordinate2D(latitude: self.tripData?.destination?.lat ?? 0.0 , longitude: self.tripData?.destination?.lng ?? 0.0)
+       let startCoordinate = CLLocationCoordinate2D(latitude: lat1 , longitude: lng1  )
+        let endCoordinate = CLLocationCoordinate2D(latitude: lat2 , longitude: lng2 )
                 addMarkers(from: startCoordinate, to: endCoordinate)
                 drawAnimatedRoute(from: startCoordinate, to: endCoordinate)
       }
       
+    
+    func updateMarkerPosition(lat: CLLocationDegrees, lng: CLLocationDegrees) {
+       
+           let newPosition = CLLocationCoordinate2D(latitude: lat, longitude: lng)
+
+           // Animate the marker movement to the new position
+           CATransaction.begin()
+           CATransaction.setAnimationDuration(2.0) // Duration of the animation
+        self.TrackMarker.position = newPosition
+           CATransaction.commit()
+
+           // Optionally, update the camera to focus on the new position
+           let cameraUpdate = GMSCameraUpdate.setTarget(newPosition, zoom: googleView.camera.zoom)
+           googleView.animate(with: cameraUpdate)
+       }
+    
+    
     
       
       func addMarkers(from start: CLLocationCoordinate2D, to end: CLLocationCoordinate2D) {
@@ -84,8 +99,15 @@ extension trackYourTripVC {
           startMarker.icon = GMSMarker.markerImage(with: UIColor(named: "MainColor"))
           endMarker.title = "End"
           endMarker.map = googleView
-          
-          
+          //mapIcon
+          let trackMarker = GMSMarker(position: end)
+          self.TrackMarker = trackMarker
+          if let icon = UIImage(named: "mapIcon") {
+            //  trackMarker.icon = icon
+             // trackMarker.map = googleView
+              self.TrackMarker.icon = icon
+              self.TrackMarker.map = googleView
+          }
   //        if let icon = UIImage(named: "Vector 1") {
   //            startMarker.icon = icon
   //            endMarker.icon = icon

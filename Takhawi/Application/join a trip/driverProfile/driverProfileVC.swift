@@ -60,7 +60,7 @@ class driverProfileVC: BaseVC {
     var destLong : Double = 0.0
     var comeFromBasicTrip : Bool = false
     
-    //var vipData : vipData?
+    
    
     
 // MARK: - Lifecycle -
@@ -71,15 +71,8 @@ class driverProfileVC: BaseVC {
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
         weatherManager.delegate = self
-        
         self.weatherIndicator.startAnimating()
-       
-     
-        
-     
-        
-        
-        
+
     }
 
     
@@ -114,17 +107,11 @@ class driverProfileVC: BaseVC {
             self.to.text = self.driverVip?.destination_description ?? "--"
             self.driverRate.rating = self.driverVip?.passenger_rate ?? 0
             self.driverName.text = self.driverVip?.passenger_name ?? ""
-            self.tripCountLabel.text = "0"
+           // self.tripCountLabel.text = "0"
             self.titleName.text = "User Profile".localize
             if let image = self.driverVip?.passenger_avatar {
                 self.driverImage.setImage(image: Server.imageBase.rawValue + image)
-               
             }
-            self.sendOfferContainerView.addTapGesture {
-                self.sendOffer()
-                
-            }
-    
         } else {
             self.mainStack.removeArrangedSubview(self.sendOfferContainerView)
             self.mainStack.removeArrangedSubview(self.driverContainerView)
@@ -147,17 +134,35 @@ class driverProfileVC: BaseVC {
     @IBAction func reserveYourSeatAction(_ sender: UIButton) {
         let vc = ReserveTheTripVC()
         vc.viptrip = false
+        
+        
         vc.tripDetails = self.tripDetails
         self.push(vc)
         
         
     }
     
+    @IBAction func driverSendOffer(_ sender: UIButton) {
+        if isDriverAcc {
+            self.sendOffer()
+        }
+    }
     
     
     @IBAction func fullGoogleView(_ sender: UIButton) {
         let vc = fullScreenGoogleViewVC()
-        vc.tripDetails = self.tripDetails
+        if isDriverAcc {
+            vc.destLat = driverVip?.distination_location_lat ?? 0
+            vc.destLng = driverVip?.distination_location_lng ?? 0
+            vc.picklng = driverVip?.pickup_location_lng ?? 0
+            vc.Picklat = driverVip?.pickup_location_lat ?? 0
+        } else {
+            vc.destLat = tripDetails?.destinationlocation?.lat ?? 0
+            vc.destLng = tripDetails?.destinationlocation?.lng ?? 0
+            vc.picklng = tripDetails?.pickuplocation?.lng ?? 0
+            vc.Picklat = tripDetails?.pickuplocation?.lat ?? 0
+        }
+       
         vc.modalPresentationStyle = .fullScreen
         self.present(vc , animated: true )
     }
@@ -180,25 +185,26 @@ class driverProfileVC: BaseVC {
 extension driverProfileVC {
     
     func getOneBasicTrip () {
+        
         activityIndicatorr.startAnimating()
-        UserRouter.getOneTrip(id: self.tripDetails?.id ?? 0 ).send { [weak self] (response : APIGenericResponse< OneBasicResult >)  in
+        UserRouter.getOneTrip(id: self.tripDetails?.id ?? 0 ).send { [weak self] (response : APIGenericResponse< AdditionalOneBasicResult >)  in
             guard let self = self else { return }
               
             if let result = response.result {
-                self.tripCountLabel.text =  "trips: ".localize + "\( result.completed_trips_count ?? 0)"
+                self.tripCountLabel.text =  "trips: ".localize + "\(result.completed_trips_count ?? 0)"
                 self.driverImage.setImage(image: Server.imageBase.rawValue + (result.driver?.avatar ?? "" ) )
                 
             }
         }
     }
     
-    func sendOffer ( ) {
+    func sendOffer () {
         if self.offerPrice.text == "" {
             showPopTopAlert(title: "Error", withMessage: "please add price first!", success: false)
         } else {
             activityIndicatorr.startAnimating()
-            
-            DriverRouter.makeOffer(id: self.driverVip?.trip_id ?? 0 ).send { [weak self ] ( response : APIGlobalResponse)  in
+            let price = Int(self.offerPrice.text ?? "0") ?? 0
+            DriverRouter.makeOffer(id: self.driverVip?.trip_id ?? 0 , price: price   , features: []).send { [weak self ] ( response : APIGlobalResponse)  in
                 guard let self = self else { return }
                 if response.status == true {
                     showInfoTopAlert(withMessage: response.message )

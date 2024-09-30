@@ -7,6 +7,7 @@
 
 import UIKit
 import GoogleMaps
+import MapKit
 
 
 
@@ -62,8 +63,6 @@ extension DriverHomeVC :  CLLocationManagerDelegate  , GMSMapViewDelegate  {
             } else {
                 if let places = response?.results() {
                     if let place = places.first {
-                        
-                        
                         if let lines = place.lines {
                             print("GEOCODE: Formatted Address: \(lines)")
                             //    self.secMyLocationOutlet.setTitle(lines[0], for: .normal)
@@ -152,6 +151,80 @@ extension DriverHomeVC :  CLLocationManagerDelegate  , GMSMapViewDelegate  {
     func rejectTrip () {
         
     }
+    
+    
+// MARK: - CALCULATE THE DISTANCE AND THE TIME FROM GOOGLE 
+    
+    func getDestanceBetween ( lat1 : Double , lng1 : Double , lat2 : Double , lng2 : Double ) -> String {
+        let locationA = CLLocation(latitude: lat1 , longitude: lng1 )
+        let locationB = CLLocation(latitude: lat2 , longitude: lng2)
+        let distanceInKM =  ( locationA.distance(from: locationB) / 100 ).rounded()
+        let string = String (distanceInKM ) + " " + "km"
+      return string
+    }
+    
+    
+    
+    
+//  func getTravilTime (  lat1 : Double , lng1 : Double , lat2 : Double , lng2 : Double   ) -> String   {
+//        let request = MKDirections.Request()
+//       
+//        request.source = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: lat1, longitude: lng1 ), addressDictionary: nil))
+//        request.destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: lat2 , longitude: lng2 ), addressDictionary: nil))
+//        request.requestsAlternateRoutes = true
+//        request.transportType = .automobile  // will be good for cars
+//        let directions = MKDirections(request: request)
+//      var returnedString : String =  self.calculateADefualtTime(lat1: lat1,
+//                                                                lng1: lng1,
+//                                                                lat2: lat2,
+//                                                                lng2: lng2)
+//      
+//                directions.calculate {(response, error) -> Void in
+//                    guard let response = response else {
+//                        if let error = error {
+//                            print("Error: \(error)")
+//                            returnedString =   self.calculateADefualtTime(lat1: lat1,
+//                                                                          lng1: lng1,
+//                                                                          lat2: lat2,
+//                                                                          lng2: lng2)
+//                        }
+//                        return
+//                    }
+//
+//                 
+//                    
+//                   if response.routes.count > 0 {
+//                        let route = response.routes[0]
+//                        print("⏰⏰⏰⏰⏰⏰")
+//                        print("\(route.expectedTravelTime / 60 )" + "mins".localize)
+//                        print(route.expectedTravelTime) // it will be in seconds
+//                       returnedString =   "\( (route.expectedTravelTime / 60 ).rounded() )" + "mins".localize
+//                     
+//                    
+//                       
+//                   } else {
+//                    returnedString =   self.calculateADefualtTime(lat1: lat1,
+//                                                                                lng1: lng1,
+//                                                                                lat2: lat2,
+//                                                                                lng2: lng2)
+//                       
+//                       
+//                   }
+//                    
+//                }
+//    }
+//    
+//    private func calculateADefualtTime (lat1 : Double , lng1 : Double , lat2 : Double , lng2 : Double ) -> String {
+//        let coordinatesA = (latitude: lat1 , longitude: lng1 )
+//        let coordinatesB = (latitude: lat2  , longitude: lng2)
+//        let locationA = CLLocation(latitude: coordinatesA.latitude, longitude: coordinatesA.longitude)
+//        let locationB = CLLocation(latitude: coordinatesB.latitude , longitude: coordinatesB.longitude)
+//        let distanceInKM =  ( locationA.distance(from: locationB) / 100 ).rounded()
+//       return "\(distanceInKM.rounded() + 2  )" + "mins".localize
+//       
+//    }
+    
+    
     
     
     

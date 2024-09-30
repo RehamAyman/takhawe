@@ -19,7 +19,7 @@ enum DriverRouter {
     case createBasic (endDate : String , startDate : String , seatsNo : Int , PickLocationId  : Int  , destLocationId : Int , features : [String]   , price : Int  )
     case getMeetingLocations
     case getPrevVipTrips ( lat : Double , lng : Double)
-    case makeOffer( id : Int )
+    case makeOffer( id : Int , price : Int , features : [String] )
 }
 
 extension DriverRouter : APIRouter {
@@ -58,7 +58,7 @@ extension DriverRouter : APIRouter {
             return driverServerPath.meetingLocations
         case .getPrevVipTrips :
             return driverServerPath.getPrevVipTrips
-        case .makeOffer(id: let id ):
+        case .makeOffer(id: let id , price: _ , features: _ ):
             return driverServerPath.makeOffer(id: id )
   
        
@@ -106,8 +106,14 @@ extension DriverRouter : APIRouter {
                 "limit" : 100
             ]
          
-        
-        case  .driverStatus , .vehicleDetials  , .makeOffer  :
+        case .makeOffer(id: _ , price: let price , features: let features ) :
+            return [
+                "price": price ,
+                   "features": features
+            ]
+            
+     
+        case  .driverStatus , .vehicleDetials    :
             return nil
             
         }

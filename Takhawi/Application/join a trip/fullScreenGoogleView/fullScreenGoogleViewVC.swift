@@ -20,7 +20,13 @@ class fullScreenGoogleViewVC: BaseVC {
     //MARK: - Properties -
     
     var animatePolyline: AnimatePolyline?
-    var tripDetails : BasicTripResult?
+   // var tripDetails : BasicTripResult?
+    var Picklat : Double = 0.0
+    var picklng : Double = 0.0
+    var destLat : Double = 0.0
+    var destLng : Double = 0.0
+    
+    
 // MARK: - Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +50,7 @@ class fullScreenGoogleViewVC: BaseVC {
   
 
   func   setUpGoogleView () {
-      let camera = GMSCameraPosition.camera(withLatitude: self.tripDetails?.pickuplocation?.lat ?? 0.0    , longitude: self.tripDetails?.pickuplocation?.lng ?? 0.0   , zoom: 13.0)
+      let camera = GMSCameraPosition.camera(withLatitude: Picklat    , longitude: picklng   , zoom: 13.0)
       self.GoogleView.camera = camera
       do {
                   // Set the map style by passing the URL of the local file.
@@ -58,8 +64,8 @@ class fullScreenGoogleViewVC: BaseVC {
                   NSLog("One or more of the map styles failed to load. \(error)")
               }
 
-     let startCoordinate = CLLocationCoordinate2D(latitude: self.tripDetails?.pickuplocation?.lat ?? 0.0 , longitude: self.tripDetails?.pickuplocation?.lng ?? 0.0  )
-      let endCoordinate = CLLocationCoordinate2D(latitude: self.tripDetails?.destinationlocation?.lat ?? 0.0 , longitude: self.tripDetails?.destinationlocation?.lng ?? 0.0)
+     let startCoordinate = CLLocationCoordinate2D(latitude: Picklat , longitude: picklng  )
+      let endCoordinate = CLLocationCoordinate2D(latitude: destLat , longitude: destLng )
               addMarkers(from: startCoordinate, to: endCoordinate)
               drawAnimatedRoute(from: startCoordinate, to: endCoordinate)
       

@@ -10,17 +10,14 @@ import UIKit
 extension DriverHomeVC : UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
     
     
+    
 //MARK: - COLLECTION VIEW METHODS
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     self.changeConstrainsWithAnimation(const: self.offers.count == 0 ?  30 : 300 )
-      
         return self.offers.count
     }
-    
-    
-    
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -30,6 +27,10 @@ extension DriverHomeVC : UICollectionViewDelegate , UICollectionViewDataSource ,
         cell.to.text = item.destination_description ?? ""
         cell.userName.text = item.passenger_name ?? ""
         cell.userRate.rating = item.passenger_rate ?? 0.0
+        cell.distance.text = self.getDestanceBetween(lat1: item.pickup_location_lat ?? 0,
+                                                     lng1: item.pickup_location_lng ?? 0,
+                                                     lat2: item.distination_location_lat ?? 0,
+                                                     lng2: item.distination_location_lng ?? 0 )
         if let image = item.passenger_avatar {
             cell.userPhoto.setImage(image: Server.imageBase.rawValue + image  )
         }
@@ -48,11 +49,16 @@ extension DriverHomeVC : UICollectionViewDelegate , UICollectionViewDataSource ,
             let vc = driverProfileVC()
             vc.isDriverAcc = true
             vc.driverVip = item
+            print("----- test ------ ")
+            print(item.trip_id)
            // vc.vipData = item
-            self.push(vc )
+            self.push(vc)
         }
         cell.ignore.addTapGesture {
-            self.deleteItem(at: indexPath)
+            self.offers.remove(at: indexPath.row)
+            self.collectionView.reloadData()
+        //    self.collectionView.deleteItems(at: [indexPath])
+            //self.deleteItem(at: indexPath)
         }
         return cell
     }

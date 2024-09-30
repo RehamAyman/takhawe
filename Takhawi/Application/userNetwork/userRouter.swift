@@ -38,6 +38,8 @@ enum UserRouter {
     case getCancelledTrips
     case getCompletedTrips
     case checkPromoCode( code : String )
+    case getVip ( id : Int )
+    case getOneGeneralTrip ( id : Int )
     
 }
 
@@ -55,7 +57,7 @@ extension UserRouter : APIRouter {
             return .post
         
             
-        case .getAllVipOffers , .getAllCities , .getAllBasicTrips  , .recentAddress  , .getOneTrip , .getProfile , .walletData , .getAllHobbies  , .getAllAddress , .getAllFavDrives , .getMyUpcommingTrips , .getCancelledTrips , .getCompletedTrips   :
+        case .getAllVipOffers , .getAllCities , .getAllBasicTrips  , .recentAddress  , .getOneTrip , .getProfile , .walletData , .getAllHobbies  , .getAllAddress , .getAllFavDrives , .getMyUpcommingTrips , .getCancelledTrips , .getCompletedTrips , .getVip , .getOneGeneralTrip  :
           return .get
             
             
@@ -128,6 +130,10 @@ extension UserRouter : APIRouter {
             return userServerPath.getCompletedTrips
         case .checkPromoCode:
             return userServerPath.checkPromoCode
+        case .getVip(id: let id ) :
+            return userServerPath.getOneVip(tripId: id)
+        case .getOneGeneralTrip(id: let id ):
+            return userServerPath.getOneGeneralTrip(tripId: id)
              
         }
     }
@@ -260,12 +266,16 @@ extension UserRouter : APIRouter {
             ]
             
         case .claculateBasicPrice(id: _ , code: let code ):
-            return [
-                "code" : ""
-            ]
+            var dic : [String : Any]  = [:]
+            if code != "" {
+                dic["coupon" ] = code
+            }
+            return dic
             
             
-        case .getAllVipOffers  , .recentAddress , .getOneTrip , .getProfile   , .calculateVipPrice , .getAllAddress   , .removeDriverFromFav , .getMyUpcommingTrips , .getCancelledTrips  , .getCompletedTrips  :
+        
+            
+        case .getAllVipOffers  , .recentAddress , .getOneTrip , .getProfile   , .calculateVipPrice , .getAllAddress   , .removeDriverFromFav , .getMyUpcommingTrips , .getCancelledTrips  , .getCompletedTrips  , .getVip , .getOneGeneralTrip :
             return nil
             
         }

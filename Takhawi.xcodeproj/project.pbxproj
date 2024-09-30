@@ -424,6 +424,8 @@
 		CEBB8BA32ADEB8ED00E70EC4 /* profileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEBB8BA12ADEB8ED00E70EC4 /* profileCell.xib */; };
 		CEBB8BA52ADEEC1900E70EC4 /* profileVc+delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB8BA42ADEEC1900E70EC4 /* profileVc+delegate.swift */; };
 		CECA04572B29D2EF001AA89D /* rateTheDriverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA04562B29D2EF001AA89D /* rateTheDriverVC.swift */; };
+		CECA1D382CAAD8F8007E98BD /* oneVipModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA1D372CAAD8F8007E98BD /* oneVipModel.swift */; };
+		CECA1D3A2CAAF6D4007E98BD /* generaltripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA1D392CAAF6D4007E98BD /* generaltripModel.swift */; };
 		CECC3D4A2C6B250B007AD2D4 /* vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECC3D492C6B250A007AD2D4 /* vehicle.swift */; };
 		CED0C29F2B4936B600BCD6D0 /* alfont_com_هلفيتيكا-عربي-.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED0C29E2B4936B600BCD6D0 /* alfont_com_هلفيتيكا-عربي-.ttf */; };
 		CED288902B49B7EB00E075CE /* editProfileVC+extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED2888F2B49B7EB00E075CE /* editProfileVC+extentions.swift */; };
@@ -903,6 +905,8 @@
 		CEBB8BA12ADEB8ED00E70EC4 /* profileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = profileCell.xib; sourceTree = "<group>"; };
 		CEBB8BA42ADEEC1900E70EC4 /* profileVc+delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "profileVc+delegate.swift"; sourceTree = "<group>"; };
 		CECA04562B29D2EF001AA89D /* rateTheDriverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rateTheDriverVC.swift; sourceTree = "<group>"; };
+		CECA1D372CAAD8F8007E98BD /* oneVipModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oneVipModel.swift; sourceTree = "<group>"; };
+		CECA1D392CAAF6D4007E98BD /* generaltripModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generaltripModel.swift; sourceTree = "<group>"; };
 		CECC3D492C6B250A007AD2D4 /* vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vehicle.swift; sourceTree = "<group>"; };
 		CED0C29E2B4936B600BCD6D0 /* alfont_com_هلفيتيكا-عربي-.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "alfont_com_هلفيتيكا-عربي-.ttf"; sourceTree = "<group>"; };
 		CED2888F2B49B7EB00E075CE /* editProfileVC+extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "editProfileVC+extentions.swift"; sourceTree = "<group>"; };
@@ -2671,6 +2675,8 @@
 				CE855BF92C917D680098F96A /* addressModel.swift */,
 				CE855BFB2C918CCF0098F96A /* favDriverModel.swift */,
 				CE855C032C9345DC0098F96A /* mainTripModel.swift */,
+				CECA1D372CAAD8F8007E98BD /* oneVipModel.swift */,
+				CECA1D392CAAF6D4007E98BD /* generaltripModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -3328,6 +3334,7 @@
 				04658F522B3746B500470F0D /* presentWithBlurEffect.swift in Sources */,
 				CEF9737A2AC1D4B600CDCCFD /* UIResponder+Current.swift in Sources */,
 				CE22928B2B1E638300E8AB42 /* hotelCell.swift in Sources */,
+				CECA1D3A2CAAF6D4007E98BD /* generaltripModel.swift in Sources */,
 				963DAB362A803B64004ED3C7 /* RegisterDriverPersonalInfoCell.swift in Sources */,
 				04B659EC2B3451EB00E78752 /* cardModel.swift in Sources */,
 				CE9DB3962AC18346000759B8 /* customSegnmentWithAnimation.swift in Sources */,
@@ -3412,6 +3419,7 @@
 				CE996B542B25AC5D0089D2F4 /* trackYourTripVC.swift in Sources */,
 				CE3CACF42B2DB1030025990E /* regChieldTapView.swift in Sources */,
 				CE2D4AEC2B184E99008D556E /* filterViewVC.swift in Sources */,
+				CECA1D382CAAD8F8007E98BD /* oneVipModel.swift in Sources */,
 				CE71F4732B168E1000E7B689 /* driverOffers+extentions.swift in Sources */,
 				CE9EC0002B1466E70080A0F2 /* reserveTheTripCell.swift in Sources */,
 				9694AB522A5DFA5000BDF5F8 /* BaseVC.swift in Sources */,

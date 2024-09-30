@@ -114,7 +114,7 @@ struct SocketVIP_Trip : Codable {
         case payment_status = "payment_status"
         case payment_method = "payment_method"
         case passnger_id = "passnger_id"
-        case trip_id = "trip_id"
+        case trip_id = "id"
         case createdAt = "createdAt"
         case updatedAt = "updatedAt"
         case destination_description = "destination_description"

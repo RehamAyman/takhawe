@@ -11,8 +11,14 @@ import Foundation
 
 
 
-
-
+struct  driverUpdateLocation : Codable {
+    let lat : Double
+    let lng : Double
+    enum CodingKeys: String, CodingKey {
+        case lat = "lat"
+        case lng = "lng"
+    }
+}
 
 
 
@@ -51,11 +57,31 @@ struct offerResult : Codable {
 
 
 
+
+struct AdditionalDriver : Codable {
+    let name : String?
+    let avatar : String?
+    let driver_rate : Double?
+   // let vehicles : Vehicles?
+
+    enum CodingKeys: String, CodingKey {
+
+        case name = "name"
+        case avatar = "avatar"
+        case driver_rate = "driver_rate"
+      //  case vehicles = "Vehicles"
+    }
+
+
+}
+
+
 struct Driver : Codable {
     let name : String?
     let avatar : String?
     let driver_rate : Double?
     let vehicles : Vehicles?
+   
 
     enum CodingKeys: String, CodingKey {
 
@@ -63,6 +89,26 @@ struct Driver : Codable {
         case avatar = "avatar"
         case driver_rate = "driver_rate"
         case vehicles = "Vehicles"
+       
+    }
+
+
+}
+
+struct GDriver : Codable {
+    let name : String?
+    let avatar : String?
+    let driver_rate : Double?
+    let vehicles : Vehicles?
+    let phone : String?
+
+    enum CodingKeys: String, CodingKey {
+
+        case name = "name"
+        case avatar = "avatar"
+        case driver_rate = "driver_rate"
+        case vehicles = "Vehicles"
+        case phone = "phone"
     }
 
 

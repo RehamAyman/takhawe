@@ -42,15 +42,11 @@ class ReserveTheTripVC: BaseVC {
     var locationDetails : offerLocation?
     let logoAnimation = LottieAnimationView(name: "Q2ix9ldDnm")
     var tripDetails : BasicTripResult?
-    
+    var tripId : Int = 0 
     let DummyPaymentMethods : [dummyPaymentMethods] = [
-      
-        
+
         dummyPaymentMethods(icon:"" , number: "**** **** **** 8970", expireIn: "Expires: 12/26", type: "wallet", selected: false , id: .wallet ) ,
         dummyPaymentMethods(icon:"" , number: "**** **** **** 8970", expireIn: "Expires: 12/26", type: "cash", selected: false , id: .cash)
-        
-        
-        
     ]
 
  
@@ -59,9 +55,9 @@ class ReserveTheTripVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureInitialDesign()
-      
-        
     }
+    
+    
     
     
 //MARK: - Design Methods -
@@ -81,7 +77,7 @@ class ReserveTheTripVC: BaseVC {
             self.calculateVipPrice()
         } else {
             self.getBasicTripDetails()
-            self.calculateTheBasicPrice()
+            self.calculateTheBasicPrice(code: "")
         }
         
         self.checkCodeOutlet.addTapGesture {
@@ -106,14 +102,15 @@ class ReserveTheTripVC: BaseVC {
             self.confirmOffer()
         } else {
             self.joinAbasicTrip()
-           
         }
+        
+        
     }
     
     
     
     
-    func GotoNextStep () {
+    func GotoNextStep (tripId : Int ) {
         let vc = successBookViewVC()
         vc.modalTransitionStyle = .crossDissolve
         vc.modalPresentationStyle = .overCurrentContext
@@ -125,8 +122,12 @@ class ReserveTheTripVC: BaseVC {
     vc.action = {
         let vc = trackYourTripVC()
         vc.vipTrip = self.viptrip
-        vc.comeFromSideMenu = false 
-        
+        vc.tripId = tripId
+        vc.basicPickLat = self.tripDetails?.pickuplocation?.lat ?? 0
+        vc.basicPickLng =  self.tripDetails?.pickuplocation?.lng ?? 0
+        vc.basicDesLat = self.tripDetails?.destinationlocation?.lat ?? 0
+        vc.basicDesLng = self.tripDetails?.destinationlocation?.lng ?? 0
+    
         self.push(vc)
     }
         self.present( vc , animated: true )
@@ -146,9 +147,7 @@ extension ReserveTheTripVC {
         UserRouter.acceptOffer(id: offer?.id ?? 0 , paymentMethod: self.paymentMethod.rawValue  ).send { [weak self ] (response: APIGlobalResponse) in
             guard let self = self else { return }
             if response.status == true {
-                self.GotoNextStep()
-            } else {
-               
+                self.GotoNextStep(tripId: offer?.trip_id ?? 0 )
             }
         }
     }
@@ -160,19 +159,19 @@ extension ReserveTheTripVC {
         UserRouter.joinABasicTrip(id: tripDetails?.id ?? 0 , paymentMethod: self.paymentMethod.rawValue , copon: "").send {[weak self] ( response : APIGlobalResponse ) in
             guard let self = self else { return }
             if  response.status == true  {
-                self.GotoNextStep()
+                self.GotoNextStep(tripId: tripDetails?.id ?? 0 )
             }
             
         }
         
     }
     
-    func calculateTheBasicPrice () {
+    func calculateTheBasicPrice (code : String) {
      
         if let id = self.tripDetails?.id {
             priceIndicator.startAnimating()
             priceIndicator.isHidden = false
-            UserRouter.claculateBasicPrice(id: id , code: "").send { [weak self ] (response : APIGenericResponse<BasicPriceResult>) in
+            UserRouter.claculateBasicPrice(id: id , code: code ).send { [weak self ] (response : APIGenericResponse<BasicPriceResult>) in
                 guard let self = self else { return }
                 self.priceIndicator.stopAnimating()
                 self.priceIndicator.isHidden = true
@@ -239,7 +238,7 @@ extension ReserveTheTripVC {
                             self.calculateVipPrice()
                             self.replaceCheckButton()
                         } else {
-                            self.calculateTheBasicPrice()
+                            self.calculateTheBasicPrice(code : self.dicountCodeTextField.text ?? "" )
                             self.replaceCheckButton()
                         }
                         

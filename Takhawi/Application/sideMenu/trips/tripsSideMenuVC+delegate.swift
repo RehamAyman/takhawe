@@ -112,8 +112,14 @@ extension tripsSideMenuVC : UITableViewDelegate , UITableViewDataSource {
     private func goToTripTrakingView  (item : MainTripResult  ) {
         
         let vc = trackYourTripVC()
-        vc.tripData = item
-        vc.comeFromSideMenu = true 
+        vc.vipTrip = item.type == "VIP" ? true : false
+        vc.tripId = item.id ?? 0
+        vc.basicPickLat = item.pickup_location?.lat ?? 0
+        vc.basicPickLng = item.pickup_location?.lng ?? 0
+        vc.basicDesLat = item.destination?.lat ?? 0
+        vc.basicDesLng = item.destination?.lng ?? 0
+        vc.passengerTripId = item.passengerTripId ?? 0
+        
         self.push(vc)
     }
 
