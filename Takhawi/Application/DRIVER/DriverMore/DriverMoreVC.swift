@@ -8,10 +8,15 @@
 import UIKit
 
 class DriverMoreVC: UIViewController {
-
+    @IBOutlet weak var vipV: UIView!
+    
+    @IBOutlet weak var basicView: UIView!
     @IBOutlet weak var userEmail: UILabel!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userImage: UIImageView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

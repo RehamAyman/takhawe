@@ -911,9 +911,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="More" image="application 1" id="JbD-rV-MfN"/>
                     <connections>
+                        <outlet property="basicView" destination="TFp-b9-tm7" id="6S3-GZ-rbZ"/>
                         <outlet property="userEmail" destination="1vQ-8W-3X8" id="shp-et-EO7"/>
                         <outlet property="userImage" destination="5Dg-Jf-hzY" id="otX-ig-rtD"/>
                         <outlet property="userName" destination="VzW-ev-bjz" id="qPP-PV-6yO"/>
+                        <outlet property="vipV" destination="tms-N6-gEJ" id="6tr-vc-VaU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w3D-0l-CZz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -18,7 +18,8 @@ extension DriverHomeVC :  CLLocationManagerDelegate  , GMSMapViewDelegate  {
             locationManager.requestLocation()
             locationManager.startUpdatingLocation()
             googleMaps.delegate = self
-            googleMaps.isMyLocationEnabled = false 
+        
+            googleMaps.isMyLocationEnabled = true 
             
             do {
                         // Set the map style by passing the URL of the local file.
@@ -45,6 +46,7 @@ extension DriverHomeVC :  CLLocationManagerDelegate  , GMSMapViewDelegate  {
         guard let longitude =  locationManager.location?.coordinate.longitude else { return}
         getAddress(lat: latitude , Lng: longitude)
         // pass to the socket my location
+        
         socketManager.sendMyLocation(lat: latitude , lng: longitude)
         
     }

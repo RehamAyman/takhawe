@@ -304,6 +304,7 @@
 		CE5B10FB2C64324C00818240 /* weatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B10FA2C64324C00818240 /* weatherManager.swift */; };
 		CE5B10FD2C64327B00818240 /* weatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B10FC2C64327B00818240 /* weatherData.swift */; };
 		CE5B10FF2C64333000818240 /* driverProfile+weatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B10FE2C64333000818240 /* driverProfile+weatherData.swift */; };
+		CE5B603D2CAD36CD0093A469 /* driverMore+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B603C2CAD36CD0093A469 /* driverMore+extention.swift */; };
 		CE6178A02ACCF9E500AA8BB7 /* homeSearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE61789F2ACCF9E500AA8BB7 /* homeSearchVC.xib */; };
 		CE6178A22ACCF9F700AA8BB7 /* homeSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6178A12ACCF9F700AA8BB7 /* homeSearchVC.swift */; };
 		CE6178A42ACD08DE00AA8BB7 /* homeSearch+textfieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6178A32ACD08DE00AA8BB7 /* homeSearch+textfieldDelegate.swift */; };
@@ -355,6 +356,14 @@
 		CE855C042C9345DD0098F96A /* mainTripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE855C032C9345DC0098F96A /* mainTripModel.swift */; };
 		CE8DE1462C7B8945005B139F /* walletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8DE1452C7B8945005B139F /* walletModel.swift */; };
 		CE8DE1482C7BF93D005B139F /* z2vKVVJpIc.json in Resources */ = {isa = PBXBuildFile; fileRef = CE8DE1472C7BF93D005B139F /* z2vKVVJpIc.json */; };
+		CE8E38A32CAC93B100471606 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E389A2CAC93B100471606 /* ChatViewController.swift */; };
+		CE8E38A42CAC93B100471606 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E389D2CAC93B100471606 /* ChatTableViewCell.swift */; };
+		CE8E38A52CAC93B100471606 /* ChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8E389E2CAC93B100471606 /* ChatTableViewCell.xib */; };
+		CE8E38A62CAC93B100471606 /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8E389F2CAC93B100471606 /* ChatViewController.xib */; };
+		CE8E38A72CAC93B100471606 /* MessageTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8E38A12CAC93B100471606 /* MessageTextView.xib */; };
+		CE8E38A82CAC93B100471606 /* MessageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E38A22CAC93B100471606 /* MessageTextView.swift */; };
+		CE8E38AA2CAC964000471606 /* additionalChatClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E38A92CAC964000471606 /* additionalChatClass.swift */; };
+		CE8E38AC2CAC981400471606 /* chatScocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E38AB2CAC981400471606 /* chatScocketManager.swift */; };
 		CE9757C42AE0F0BD0014346E /* tripListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9757C12AE0F0BD0014346E /* tripListCell.swift */; };
 		CE9757C52AE0F0BD0014346E /* tripListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9757C22AE0F0BD0014346E /* tripListVC.swift */; };
 		CE9757C62AE0F0BD0014346E /* tripListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9757C32AE0F0BD0014346E /* tripListCell.xib */; };
@@ -785,6 +794,7 @@
 		CE5B10FA2C64324C00818240 /* weatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherManager.swift; sourceTree = "<group>"; };
 		CE5B10FC2C64327B00818240 /* weatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherData.swift; sourceTree = "<group>"; };
 		CE5B10FE2C64333000818240 /* driverProfile+weatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "driverProfile+weatherData.swift"; sourceTree = "<group>"; };
+		CE5B603C2CAD36CD0093A469 /* driverMore+extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "driverMore+extention.swift"; sourceTree = "<group>"; };
 		CE61789F2ACCF9E500AA8BB7 /* homeSearchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = homeSearchVC.xib; sourceTree = "<group>"; };
 		CE6178A12ACCF9F700AA8BB7 /* homeSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeSearchVC.swift; sourceTree = "<group>"; };
 		CE6178A32ACD08DE00AA8BB7 /* homeSearch+textfieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "homeSearch+textfieldDelegate.swift"; sourceTree = "<group>"; };
@@ -836,6 +846,14 @@
 		CE855C032C9345DC0098F96A /* mainTripModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainTripModel.swift; sourceTree = "<group>"; };
 		CE8DE1452C7B8945005B139F /* walletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = walletModel.swift; sourceTree = "<group>"; };
 		CE8DE1472C7BF93D005B139F /* z2vKVVJpIc.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = z2vKVVJpIc.json; sourceTree = "<group>"; };
+		CE8E389A2CAC93B100471606 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		CE8E389D2CAC93B100471606 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		CE8E389E2CAC93B100471606 /* ChatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatTableViewCell.xib; sourceTree = "<group>"; };
+		CE8E389F2CAC93B100471606 /* ChatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
+		CE8E38A12CAC93B100471606 /* MessageTextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageTextView.xib; sourceTree = "<group>"; };
+		CE8E38A22CAC93B100471606 /* MessageTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTextView.swift; sourceTree = "<group>"; };
+		CE8E38A92CAC964000471606 /* additionalChatClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = additionalChatClass.swift; sourceTree = "<group>"; };
+		CE8E38AB2CAC981400471606 /* chatScocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatScocketManager.swift; sourceTree = "<group>"; };
 		CE9035E72B1483350033D1C1 /* Lottie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Lottie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9757C12AE0F0BD0014346E /* tripListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripListCell.swift; sourceTree = "<group>"; };
 		CE9757C22AE0F0BD0014346E /* tripListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripListVC.swift; sourceTree = "<group>"; };
@@ -1365,9 +1383,6 @@
 				9694AB9F2A5DFACA00BDF5F8 /* Helper */,
 				9694AB4A2A5DE9E700BDF5F8 /* Core */,
 				9694AB492A5DE9DA00BDF5F8 /* Application */,
-				9694AB4B2A5DEB0A00BDF5F8 /* Base */,
-				9694AB372A5DE9D500BDF5F8 /* SceneDelegate.swift */,
-				9694AB392A5DE9D500BDF5F8 /* ViewController.swift */,
 				9694AB402A5DE9D600BDF5F8 /* LaunchScreen.storyboard */,
 				9694AB432A5DE9D600BDF5F8 /* Info.plist */,
 				9641AD2D2A6C1ADD00A29046 /* Main.storyboard */,
@@ -1378,25 +1393,9 @@
 		9694AB492A5DE9DA00BDF5F8 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				CEDD108B2CA046C10009A922 /* socketManager */,
-				CE8291F52C4174E800E289EF /* driverNetwork */,
-				CEDAC56C2C36E0BC0054028E /* userNetwork */,
-				CED77C092B6375CD00962E83 /* driver */,
-				CE0F42F52B4D0F3C005694AC /* obboardingSwiftui */,
-				04658F532B374DDD00470F0D /* baseSuccessAlert */,
-				CE3B53B02B2B4BB6003D3043 /* reportOrCancel */,
-				CE3B53A32B2AFFD9003D3043 /* cancelTheTrip */,
-				CECA04552B29D2CB001AA89D /* rateTheDriver */,
-				CE996B522B25AC400089D2F4 /* trakYourTrip */,
-				CE9F3C4F2B19E644004C3D24 /* hotelsScreens */,
-				CE9EBFE32B1393280080A0F2 /* join a trip */,
-				CE9EBFE22B1393100080A0F2 /* make a trip  */,
-				CEBB8B942ADE95D300E70EC4 /* sideMenu */,
-				CE6178A52ACD101B00AA8BB7 /* mapSearch */,
-				CEDDBE1D2ACC456E00677C94 /* searchDestination */,
-				CE115E592ABED5AB00972CC9 /* Home */,
-				9641AD2F2A6C29D000A29046 /* OnBoardingScreens */,
-				9641AD242A6965B900A29046 /* Auth */,
+				CE8E38AF2CAD31AB00471606 /* COMMON */,
+				CE8E38AE2CAD319500471606 /* USER */,
+				CED77C092B6375CD00962E83 /* DRIVER */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -1955,6 +1954,7 @@
 				CE3B53A62B2B0009003D3043 /* cancelTheTripVC.xib */,
 			);
 			name = cancelTheTrip;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		CE3B53AA2B2B18D8003D3043 /* appMainTextField */ = {
@@ -2294,6 +2294,95 @@
 			path = cells;
 			sourceTree = "<group>";
 		};
+		CE8E38982CAC93B100471606 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E38992CAC93B100471606 /* ChatViewController */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		CE8E38992CAC93B100471606 /* ChatViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E389A2CAC93B100471606 /* ChatViewController.swift */,
+				CE8E389B2CAC93B100471606 /* Cells */,
+				CE8E389F2CAC93B100471606 /* ChatViewController.xib */,
+				CE8E38A02CAC93B100471606 /* MessageTextView */,
+				CE8E38AB2CAC981400471606 /* chatScocketManager.swift */,
+			);
+			path = ChatViewController;
+			sourceTree = "<group>";
+		};
+		CE8E389B2CAC93B100471606 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E389C2CAC93B100471606 /* ChatTableViewCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		CE8E389C2CAC93B100471606 /* ChatTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E389D2CAC93B100471606 /* ChatTableViewCell.swift */,
+				CE8E389E2CAC93B100471606 /* ChatTableViewCell.xib */,
+			);
+			path = ChatTableViewCell;
+			sourceTree = "<group>";
+		};
+		CE8E38A02CAC93B100471606 /* MessageTextView */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E38A12CAC93B100471606 /* MessageTextView.xib */,
+				CE8E38A22CAC93B100471606 /* MessageTextView.swift */,
+				CE8E38A92CAC964000471606 /* additionalChatClass.swift */,
+			);
+			path = MessageTextView;
+			sourceTree = "<group>";
+		};
+		CE8E38AD2CAD30EC00471606 /* driverSideMenu */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = driverSideMenu;
+			sourceTree = "<group>";
+		};
+		CE8E38AE2CAD319500471606 /* USER */ = {
+			isa = PBXGroup;
+			children = (
+				CE115E592ABED5AB00972CC9 /* Home */,
+				CEDDBE1D2ACC456E00677C94 /* searchDestination */,
+				CE6178A52ACD101B00AA8BB7 /* mapSearch */,
+				CE9EBFE22B1393100080A0F2 /* make a trip  */,
+				CEBB8B942ADE95D300E70EC4 /* sideMenu */,
+				CE9F3C4F2B19E644004C3D24 /* hotelsScreens */,
+				CE9EBFE32B1393280080A0F2 /* join a trip */,
+				CE996B522B25AC400089D2F4 /* trakYourTrip */,
+				CECA04552B29D2CB001AA89D /* rateTheDriver */,
+				CEDAC56C2C36E0BC0054028E /* userNetwork */,
+			);
+			path = USER;
+			sourceTree = "<group>";
+		};
+		CE8E38AF2CAD31AB00471606 /* COMMON */ = {
+			isa = PBXGroup;
+			children = (
+				9694AB392A5DE9D500BDF5F8 /* ViewController.swift */,
+				9694AB372A5DE9D500BDF5F8 /* SceneDelegate.swift */,
+				9694AB4B2A5DEB0A00BDF5F8 /* Base */,
+				9641AD242A6965B900A29046 /* Auth */,
+				9641AD2F2A6C29D000A29046 /* OnBoardingScreens */,
+				CE3B53A32B2AFFD9003D3043 /* cancelTheTrip */,
+				CE3B53B02B2B4BB6003D3043 /* reportOrCancel */,
+				04658F532B374DDD00470F0D /* baseSuccessAlert */,
+				CE0F42F52B4D0F3C005694AC /* obboardingSwiftui */,
+				CE8E38982CAC93B100471606 /* Chat */,
+				CEDD108B2CA046C10009A922 /* socketManager */,
+			);
+			path = COMMON;
+			sourceTree = "<group>";
+		};
 		CE9757C02AE0F09A0014346E /* tripListView */ = {
 			isa = PBXGroup;
 			children = (
@@ -2364,6 +2453,7 @@
 			isa = PBXGroup;
 			children = (
 				CE9D3CAF2C853BEF007E872D /* DriverMoreVC.swift */,
+				CE5B603C2CAD36CD0093A469 /* driverMore+extention.swift */,
 			);
 			path = DriverMore;
 			sourceTree = "<group>";
@@ -2627,14 +2717,16 @@
 			path = authTabs;
 			sourceTree = "<group>";
 		};
-		CED77C092B6375CD00962E83 /* driver */ = {
+		CED77C092B6375CD00962E83 /* DRIVER */ = {
 			isa = PBXGroup;
 			children = (
+				CE8291F52C4174E800E289EF /* driverNetwork */,
+				CE8E38AD2CAD30EC00471606 /* driverSideMenu */,
 				CE9D3CAE2C853B99007E872D /* DriverMore */,
 				CE4F0BA42B764A2200337A49 /* DriverHome */,
 				CEB138822B61B2080070DBA8 /* driverAuthentication */,
 			);
-			path = driver;
+			path = DRIVER;
 			sourceTree = "<group>";
 		};
 		CED77C0A2B64FCB100962E83 /* swiftuiHelper */ = {
@@ -2910,6 +3002,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE2D4AEE2B184EA5008D556E /* filterViewVC.xib in Resources */,
+				CE8E38A52CAC93B100471606 /* ChatTableViewCell.xib in Resources */,
 				96EA1E3C2A77006B00F39386 /* Alexandria-Black.ttf in Resources */,
 				96EA1E3D2A77006B00F39386 /* Alexandria-Bold.ttf in Resources */,
 				96EA1E3E2A77006B00F39386 /* Alexandria-ExtraBold.ttf in Resources */,
@@ -2968,6 +3061,7 @@
 				CE3B53AF2B2B2365003D3043 /* tipsCell.xib in Resources */,
 				CE7576F32AF2041100AFF56A /* chooseFeatureCell.xib in Resources */,
 				CEF0E7E02B4F3B3C00DCBD69 /* chimeup.mp3 in Resources */,
+				CE8E38A72CAC93B100471606 /* MessageTextView.xib in Resources */,
 				CE27F53D2ADFAD8500DEA419 /* StarRatingStackView.xib in Resources */,
 				CE9757C62AE0F0BD0014346E /* tripListCell.xib in Resources */,
 				96202C8A2A7FBB1300053C5B /* ReseatPasswordVC.xib in Resources */,
@@ -3042,6 +3136,7 @@
 				0426FBC92B37605C0017F12A /* languageVC.xib in Resources */,
 				CE3021352ABB908E00572DE7 /* enterPasswordVC.xib in Resources */,
 				04C737D62B37142B002AE59C /* selectYourComplainCell.xib in Resources */,
+				CE8E38A62CAC93B100471606 /* ChatViewController.xib in Resources */,
 				CE3021412ABBAB2F00572DE7 /* verificationVC.xib in Resources */,
 				04C737BC2B36D4EE002AE59C /* settingsSideVC.xib in Resources */,
 				04C737AA2B36C792002AE59C /* messagesViewVC.xib in Resources */,
@@ -3225,6 +3320,7 @@
 				CEBB8B902ADE489A00E70EC4 /* RecentPlacesCell.swift in Sources */,
 				9694ABCB2A5DFACA00BDF5F8 /* extensionUIStoryBoard.swift in Sources */,
 				CE2A8ECA2C7793D000112D2F /* basicPrice.swift in Sources */,
+				CE8E38A82CAC93B100471606 /* MessageTextView.swift in Sources */,
 				CEEFF5A62C63E1C300337CC2 /* googleplacesCell.swift in Sources */,
 				CE3D2B3F2B78195B0067E63B /* driverHome+functions.swift in Sources */,
 				9641AD362A6C2C4200A29046 /* OnboardingCollectionViewCell.swift in Sources */,
@@ -3235,6 +3331,7 @@
 				CEBB8BA22ADEB8ED00E70EC4 /* profileCell.swift in Sources */,
 				CEF9737C2AC1D4D800CDCCFD /* KeyboardHeightPublisher.swift in Sources */,
 				963007132A7671020075DBFE /* RegisterVC.swift in Sources */,
+				CE8E38AC2CAC981400471606 /* chatScocketManager.swift in Sources */,
 				CE72B01F2C02E20A009AC905 /* SignInModel.swift in Sources */,
 				CE9D3CB22C85AC46007E872D /* collection+createTripVC.swift in Sources */,
 				CE2292852B1E57B300E8AB42 /* hotelsVC.swift in Sources */,
@@ -3254,6 +3351,7 @@
 				963007182A76714E0075DBFE /* SelectUserTypeVC.swift in Sources */,
 				9694ABD22A5DFACA00BDF5F8 /* UIButtonExtesion.swift in Sources */,
 				CE44773D2AE042D5000D96F6 /* calendarSwiftui.swift in Sources */,
+				CE5B603D2CAD36CD0093A469 /* driverMore+extention.swift in Sources */,
 				CE9EBFF12B1396390080A0F2 /* reviewCell.swift in Sources */,
 				04D81F892B35BC1F00AAA66C /* swiftRegister+extention .swift in Sources */,
 				CE7D82F72AC3BB1100C5B028 /* MainAlert.swift in Sources */,
@@ -3306,6 +3404,7 @@
 				CE385D972AE267A4008F2D50 /* LocationUtilities.swift in Sources */,
 				CEEDC0212B2E10F10017C804 /* notivicationViewVC+delegates.swift in Sources */,
 				CE7A34D12B7373A9009B52CD /* MediaOptions.swift in Sources */,
+				CE8E38A42CAC93B100471606 /* ChatTableViewCell.swift in Sources */,
 				CE3021332ABB87CF00572DE7 /* enterPasswordVC.swift in Sources */,
 				CE7A34CD2B7373A9009B52CD /* MediaPicker-macOS.swift in Sources */,
 				CE855BFA2C917D680098F96A /* addressModel.swift in Sources */,
@@ -3396,6 +3495,7 @@
 				CE9DB3992AC1AD58000759B8 /* customUIsegment.swift in Sources */,
 				CEA164912B8387CB0063ED8A /* forthOnboardingView.swift in Sources */,
 				CE034F4C2B2B9E6C0040516E /* reportOrCandelCell.swift in Sources */,
+				CE8E38A32CAC93B100471606 /* ChatViewController.swift in Sources */,
 				CE71F47A2B17435A00E7B689 /* selectTimeVC.swift in Sources */,
 				CE5B10FF2C64333000818240 /* driverProfile+weatherData.swift in Sources */,
 				CEF0E7E52B511BC800DCBD69 /* firstOnboardingView.swift in Sources */,
@@ -3409,6 +3509,7 @@
 				9694AC002A5DFACA00BDF5F8 /* Print.swift in Sources */,
 				CE8291F42C414CF500E289EF /* genericConst.swift in Sources */,
 				CE9757C52AE0F0BD0014346E /* tripListVC.swift in Sources */,
+				CE8E38AA2CAC964000471606 /* additionalChatClass.swift in Sources */,
 				049F9F122B384E78003A8DAF /* cardsSwiftuiEffect.swift in Sources */,
 				9694AC6B2A5E040D00BDF5F8 /* Language.swift in Sources */,
 				9694ABEA2A5DFACA00BDF5F8 /* extensionUIViewController.swift in Sources */,
@@ -3613,13 +3714,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = CA5NVSJ377;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				FRAMEWORK_SEARCH_PATHS = "${inherited}";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Takhawi/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs to capture image to show in the app.";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Will you allow this app to always know your location,to get near places for you?";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
@@ -3653,7 +3755,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = CA5NVSJ377;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
@@ -3661,6 +3763,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Takhawi/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs to capture image to show in the app.";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Will you allow this app to always know your location,to get near places for you?";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;

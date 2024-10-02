@@ -9,8 +9,7 @@ class MySocketManager {
         .reconnects(true),        // Automatically try to reconnect
         .reconnectWait(5) ,
         .extraHeaders(["authorization": UserDefaults.accessToken ?? ""
-                        , "Accept-Language": LocalizationManager.shared.getLanguage() == .Arabic ? "ar" : "en"
-                      ])
+                        , "Accept-Language": LocalizationManager.shared.getLanguage() == .Arabic ? "ar" : "en" ])
     ])
     
 
@@ -25,10 +24,9 @@ class MySocketManager {
         
         
         socket.on(clientEvent: .error) { data, ack in
-            print("🌏...Socket error: \(data)")
+            print("❌❌❌❌.Socket error: \(data)")
         }
-
-
+ 
         // Handle custom events
         if socket.status != .connected && socket.status != .connecting {
             print("🌏Connecting socket...")
@@ -82,7 +80,6 @@ class MySocketManager {
                 print("1- update my location to the server ")
                 self.socket.emit("update location", data)
             }
-            
         } else {
             print("2- update my location to the server ")
             self.socket.emit("update location", data)

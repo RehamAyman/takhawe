@@ -20,7 +20,6 @@ target 'Takhawi' do
   pod 'GooglePlaces'
   pod 'GooglePlacePicker'
   pod 'OTPFieldView', :git => 'https://github.com/AbdallaTarek/OTPFieldView.git'
- 
   pod 'EasyTipView', '~> 2.1'
   pod 'lottie-ios'
   pod 'ImageSlideshow', '~> 1.9.0'
@@ -41,6 +40,7 @@ target 'Takhawi' do
   pod 'FontBlaster', :git => 'https://github.com/ArtSabintsev/FontBlaster.git', :branch => 'swift5.0'
   
   pod 'Socket.IO-Client-Swift', '~> 16.0'
+  
   
 
   post_install do |installer_representation|

@@ -20,6 +20,7 @@ enum driverServerPath {
     
     
     
+    
    
 }
 
@@ -42,6 +43,7 @@ extension driverServerPath : ServerPath {
             return "trip/nearby-vip-trips"
         case .makeOffer(id: let id ):
             return "vip-trip/make-offer/\(id)"
+      
     
         }
     }

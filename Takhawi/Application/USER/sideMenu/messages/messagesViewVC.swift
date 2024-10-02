@@ -24,6 +24,7 @@ class messagesViewVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureInitialDesign()
+        self.getAllMessages()
     }
     
     
@@ -50,5 +51,8 @@ extension messagesViewVC {
 
 //MARK: - Routes -
 extension messagesViewVC {
+    func getAllMessages () {
+        
+    }
     
 }

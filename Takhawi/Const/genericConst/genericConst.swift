@@ -25,3 +25,9 @@ enum driverStatus {
     case carInfo
 }
 
+
+enum tripType : String {
+    case vip = "VIP"
+    case basic = "BASIC"
+}
+

@@ -9,6 +9,8 @@
 
 import UIKit
 
+
+
 class tripsSideMenuVC: BaseVC {
     
     //MARK: - IBOutlets -
@@ -20,6 +22,10 @@ class tripsSideMenuVC: BaseVC {
     //MARK: - Properties -
     
     var upcommingTrips : [MainTripResult] =  []
+    var driver : Bool = false
+    var driverType : tripType = .basic
+    
+    
     //MARK: - Creation -
   
     
