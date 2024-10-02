@@ -46,23 +46,45 @@ extension tripsSideMenuVC : UITableViewDelegate , UITableViewDataSource {
         let item = self.upcommingTrips[indexPath.row]
         cell.to.text = item.destination?.description ?? ""
         cell.from.text = item.pickup_location?.description ?? ""
-        cell.name.text = item.driver?.name ?? ""
         cell.orderDate.text = item.start_date?.convertFromIso()
-        if let rate = item.driver?.driver_rate {
-            cell.rateView.rating = rate 
+        cell.rateView.isUserInteractionEnabled = false 
+        
+        
+        if self.driver && self.tripType == .basic {
+            cell.rateView.isHidden = true
+            cell.userImage.isHidden = true
+            cell.name.isHidden = true
+            
+        } else if  self.driver && self.tripType == .vip {
+            cell.name.text = item.Passenger?.name ?? ""
+            if let rate = item.Passenger?.rate  {
+                cell.rateView.rating = rate
+            }
+            if let image = item.Passenger?.image {
+                cell.userImage.setImage(image: Server.imageBase.rawValue + image )
+            }
+            
+        } else {
+            
+            cell.name.text = item.driver?.name ?? ""
+            if let rate = item.driver?.driver_rate {
+                cell.rateView.rating = rate
+            }
+            if let image = item.driver?.avatar {
+                cell.userImage.setImage(image: Server.imageBase.rawValue + image )
+            }
+            
         }
-        
-        
-        if let image = item.driver?.avatar {
-            cell.userImage.setImage(image: Server.imageBase.rawValue + image )
-        }
-        
+
         
         switch segment.selectedSegmentIndex {
         case 0 : // upcomming
             cell.addTapGesture {
-             
-                self.goToTripTrakingView(item: item)
+                if self.driver {
+                    self.goToDriverTripDetails(item: item )
+                } else {
+                    self.goToTripTrakingView(item: item)
+                }
             }
         case 1 : // completed
             cell.doneLabel.isHidden = false
@@ -83,7 +105,12 @@ extension tripsSideMenuVC : UITableViewDelegate , UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 180
+        if self.driver && self.tripType == .basic {
+            return 120
+        } else {
+            return 180
+        }
+       
     }
     
     
@@ -124,5 +151,14 @@ extension tripsSideMenuVC : UITableViewDelegate , UITableViewDataSource {
     }
 
 
+    
+    private func goToDriverTripDetails (item : MainTripResult  ) {
+         let vc = ProviderTripDetialsVC()
+         vc.passedTrip =  item
+         vc.tripType = self.tripType
+         push(vc )
+     }
+    
+    
 
 }

@@ -2,6 +2,8 @@ import SocketIO
 
 class MySocketManager {
     var socket: SocketIOClient!
+    var timer: Timer?
+    
     let manager = SocketIO.SocketManager(socketURL: URL(string: "https://dev-dash-takhawe.hayah.tech")!, config: [
         .log(true),
         .compress,
@@ -11,6 +13,32 @@ class MySocketManager {
         .extraHeaders(["authorization": UserDefaults.accessToken ?? ""
                         , "Accept-Language": LocalizationManager.shared.getLanguage() == .Arabic ? "ar" : "en" ])
     ])
+    
+    
+    
+    @objc func performTask(lat : Double , lng : Double ) {
+        let data: [String: Any] = [
+            "lat": lat ,
+            "lng": lng
+        ]
+        
+         print("Task performed!")
+         // Add your task code here
+        self.socket.emit("update location", data)
+     }
+     
+     // Start repeating the function every 30 seconds
+     func startRepeatingTask() {
+         timer = Timer.scheduledTimer(timeInterval: 30.0, target: self, selector: #selector(performTask), userInfo: nil, repeats: true)
+     }
+     
+     // Stop repeating the function
+     func stopRepeatingTask() {
+         timer?.invalidate()
+         timer = nil
+     }
+    
+    
     
 
     func connect() {
@@ -23,10 +51,13 @@ class MySocketManager {
         }
         
         
+        
         socket.on(clientEvent: .error) { data, ack in
             print("❌❌❌❌.Socket error: \(data)")
         }
  
+        
+        
         // Handle custom events
         if socket.status != .connected && socket.status != .connecting {
             print("🌏Connecting socket...")
@@ -68,6 +99,8 @@ class MySocketManager {
         }
     }
     
+    
+    
 //MARK: - -- PROVIDER UPDATE HIS LOCATION  --
     func sendMyLocation ( lat : Double , lng : Double ) {
         let data: [String: Any] = [
@@ -78,12 +111,18 @@ class MySocketManager {
         if self.socket.status != .connected {
             socket.on(clientEvent: .connect) { data, ack in
                 print("1- update my location to the server ")
+                
                 self.socket.emit("update location", data)
             }
         } else {
             print("2- update my location to the server ")
             self.socket.emit("update location", data)
         }
+        
+//        let repeater = RepeatingFunction()
+//        repeater.startRepeatingTask()
+
+        
        
     }
     

@@ -39,7 +39,7 @@ extension DriverHomeVC :  CLLocationManagerDelegate  , GMSMapViewDelegate  {
         print("listen")
        
         centerMapOnLocation(location: locationManager.location!)
-        self.locationManager.stopUpdatingLocation()
+       // self.locationManager.stopUpdatingLocation()
 //        let lat = "\(locationManager.location?.coordinate.latitude ?? 0.0)"
 //        let long = "\(locationManager.location?.coordinate.longitude ?? 0.0 )"
         guard let latitude = locationManager.location?.coordinate.latitude else { return}

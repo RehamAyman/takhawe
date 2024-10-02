@@ -32,11 +32,11 @@ enum UserRouter {
     case updateAddress ( id : Int , isFav : Bool)
     case getAllFavDrives ( page : Int)
     case removeDriverFromFav ( id : Int )
-    case getMyUpcommingTrips
+    case getMyUpcommingTrips ( type : String)
     case cancelBasicTrip ( userId : Int ,  id : Int , reason : String  )
     case cancelVipTrip ( id : Int , reason : String   )
-    case getCancelledTrips
-    case getCompletedTrips
+    case getCancelledTrips( type : String )
+    case getCompletedTrips ( type : String)
     case checkPromoCode( code : String )
     case getVip ( id : Int )
     case getOneGeneralTrip ( id : Int )
@@ -272,10 +272,29 @@ extension UserRouter : APIRouter {
             }
             return dic
             
-            
+        case .getCompletedTrips(type: let type ) :
+            var dic : [String : Any]  = [:]
+            if type != "" {
+                dic["type"] = type
+            }
+            return dic
+       
+        case .getCancelledTrips(type: let type ) :
+            var dic : [String : Any]  = [:]
+            if type != "" {
+                dic["type"] = type
+            }
+            return dic
         
+        case .getMyUpcommingTrips(type: let type ) :
             
-        case .getAllVipOffers  , .recentAddress , .getOneTrip , .getProfile   , .calculateVipPrice , .getAllAddress   , .removeDriverFromFav , .getMyUpcommingTrips , .getCancelledTrips  , .getCompletedTrips  , .getVip , .getOneGeneralTrip :
+            var dic : [String : Any]  = [:]
+            if type != "" {
+                dic["type"] = type
+            }
+            return dic
+            
+        case .getAllVipOffers  , .recentAddress , .getOneTrip , .getProfile   , .calculateVipPrice , .getAllAddress   , .removeDriverFromFav    , .getVip , .getOneGeneralTrip :
             return nil
             
         }

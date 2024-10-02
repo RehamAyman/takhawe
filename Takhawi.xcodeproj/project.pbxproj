@@ -133,7 +133,6 @@
 		9694ABEC2A5DFACA00BDF5F8 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694AB922A5DFACA00BDF5F8 /* CustomNavigationController.swift */; };
 		9694ABED2A5DFACA00BDF5F8 /* Extention+Material.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694AB932A5DFACA00BDF5F8 /* Extention+Material.swift */; };
 		9694ABEE2A5DFACA00BDF5F8 /* PushNotifcationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694AB952A5DFACA00BDF5F8 /* PushNotifcationManager.swift */; };
-		9694ABEF2A5DFACA00BDF5F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9694AB962A5DFACA00BDF5F8 /* GoogleService-Info.plist */; };
 		9694ABF02A5DFACA00BDF5F8 /* PushNotifcations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694AB972A5DFACA00BDF5F8 /* PushNotifcations.swift */; };
 		9694ABF12A5DFACA00BDF5F8 /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694AB992A5DFACA00BDF5F8 /* CustomButtons.swift */; };
 		9694ABF22A5DFACA00BDF5F8 /* CustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694AB9A2A5DFACA00BDF5F8 /* CustomViews.swift */; };
@@ -305,12 +304,16 @@
 		CE5B10FD2C64327B00818240 /* weatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B10FC2C64327B00818240 /* weatherData.swift */; };
 		CE5B10FF2C64333000818240 /* driverProfile+weatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B10FE2C64333000818240 /* driverProfile+weatherData.swift */; };
 		CE5B603D2CAD36CD0093A469 /* driverMore+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B603C2CAD36CD0093A469 /* driverMore+extention.swift */; };
+		CE5B60442CAD40E10093A469 /* DriverBasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B60422CAD40E10093A469 /* DriverBasicCell.swift */; };
+		CE5B60452CAD40E10093A469 /* DriverBasicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5B60432CAD40E10093A469 /* DriverBasicCell.xib */; };
+		CE5B60482CAD4A070093A469 /* repeatingClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B60472CAD4A070093A469 /* repeatingClass.swift */; };
 		CE6178A02ACCF9E500AA8BB7 /* homeSearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE61789F2ACCF9E500AA8BB7 /* homeSearchVC.xib */; };
 		CE6178A22ACCF9F700AA8BB7 /* homeSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6178A12ACCF9F700AA8BB7 /* homeSearchVC.swift */; };
 		CE6178A42ACD08DE00AA8BB7 /* homeSearch+textfieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6178A32ACD08DE00AA8BB7 /* homeSearch+textfieldDelegate.swift */; };
 		CE6178A72ACD102F00AA8BB7 /* mapSearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6178A62ACD102F00AA8BB7 /* mapSearchVC.xib */; };
 		CE6178AA2ACD104900AA8BB7 /* mapSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6178A92ACD104900AA8BB7 /* mapSearchVC.swift */; };
 		CE6178AD2ACD23BD00AA8BB7 /* tipLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6178AC2ACD23BD00AA8BB7 /* tipLabel.swift */; };
+		CE619F8E2CADFF6A00EF6CC4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE619F8D2CADFF6A00EF6CC4 /* GoogleService-Info.plist */; };
 		CE635D4F2B74D71F00FC12A5 /* tab8DriverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE635D4E2B74D71F00FC12A5 /* tab8DriverView.swift */; };
 		CE635D512B74D91500FC12A5 /* floatingPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE635D502B74D91500FC12A5 /* floatingPickerView.swift */; };
 		CE6753AC2C568FBA00CC65F2 /* driverAuth+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6753AB2C568FBA00CC65F2 /* driverAuth+extention.swift */; };
@@ -404,6 +407,11 @@
 		CE9F3C5B2B1B4955004C3D24 /* u4F3iX2jrQ.json in Resources */ = {isa = PBXBuildFile; fileRef = CE9F3C5A2B1B4954004C3D24 /* u4F3iX2jrQ.json */; };
 		CEA164912B8387CB0063ED8A /* forthOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA164902B8387CB0063ED8A /* forthOnboardingView.swift */; };
 		CEA4B1352C05FD7500DCAB48 /* loginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4B1342C05FD7500DCAB48 /* loginModel.swift */; };
+		CEAAAE222CADCBD40076D607 /* messagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAAE202CADCBD40076D607 /* messagesCell.swift */; };
+		CEAAAE232CADCBD40076D607 /* messagesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEAAAE212CADCBD40076D607 /* messagesCell.xib */; };
+		CEAAAE262CADD7A00076D607 /* ProviderTripDetialsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAAE252CADD7A00076D607 /* ProviderTripDetialsVC.swift */; };
+		CEAAAE282CADD7AE0076D607 /* ProviderTripDetialsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEAAAE272CADD7AE0076D607 /* ProviderTripDetialsVC.xib */; };
+		CEAAAE2A2CADE3A50076D607 /* peoviderTripDetails+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAAE292CADE3A50076D607 /* peoviderTripDetails+extention.swift */; };
 		CEB1387F2B615BC00070DBA8 /* driverUploadIdAuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB1387E2B615BC00070DBA8 /* driverUploadIdAuthVC.swift */; };
 		CEB138812B615BE70070DBA8 /* driverUploadIdAuthVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB138802B615BE70070DBA8 /* driverUploadIdAuthVC.xib */; };
 		CEB138852B61B2360070DBA8 /* driverAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB138842B61B2360070DBA8 /* driverAuthView.swift */; };
@@ -795,12 +803,17 @@
 		CE5B10FC2C64327B00818240 /* weatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherData.swift; sourceTree = "<group>"; };
 		CE5B10FE2C64333000818240 /* driverProfile+weatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "driverProfile+weatherData.swift"; sourceTree = "<group>"; };
 		CE5B603C2CAD36CD0093A469 /* driverMore+extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "driverMore+extention.swift"; sourceTree = "<group>"; };
+		CE5B60422CAD40E10093A469 /* DriverBasicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverBasicCell.swift; sourceTree = "<group>"; };
+		CE5B60432CAD40E10093A469 /* DriverBasicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DriverBasicCell.xib; sourceTree = "<group>"; };
+		CE5B60472CAD4A070093A469 /* repeatingClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = repeatingClass.swift; sourceTree = "<group>"; };
 		CE61789F2ACCF9E500AA8BB7 /* homeSearchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = homeSearchVC.xib; sourceTree = "<group>"; };
 		CE6178A12ACCF9F700AA8BB7 /* homeSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeSearchVC.swift; sourceTree = "<group>"; };
 		CE6178A32ACD08DE00AA8BB7 /* homeSearch+textfieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "homeSearch+textfieldDelegate.swift"; sourceTree = "<group>"; };
 		CE6178A62ACD102F00AA8BB7 /* mapSearchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = mapSearchVC.xib; sourceTree = "<group>"; };
 		CE6178A92ACD104900AA8BB7 /* mapSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapSearchVC.swift; sourceTree = "<group>"; };
 		CE6178AC2ACD23BD00AA8BB7 /* tipLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipLabel.swift; sourceTree = "<group>"; };
+		CE619F8D2CADFF6A00EF6CC4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CE619F8F2CAE0AA500EF6CC4 /* Takhawi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Takhawi.entitlements; sourceTree = "<group>"; };
 		CE635D4E2B74D71F00FC12A5 /* tab8DriverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tab8DriverView.swift; sourceTree = "<group>"; };
 		CE635D502B74D91500FC12A5 /* floatingPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = floatingPickerView.swift; sourceTree = "<group>"; };
 		CE6753AB2C568FBA00CC65F2 /* driverAuth+extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "driverAuth+extention.swift"; sourceTree = "<group>"; };
@@ -895,6 +908,11 @@
 		CE9F3C5A2B1B4954004C3D24 /* u4F3iX2jrQ.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = u4F3iX2jrQ.json; sourceTree = "<group>"; };
 		CEA164902B8387CB0063ED8A /* forthOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forthOnboardingView.swift; sourceTree = "<group>"; };
 		CEA4B1342C05FD7500DCAB48 /* loginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginModel.swift; sourceTree = "<group>"; };
+		CEAAAE202CADCBD40076D607 /* messagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = messagesCell.swift; sourceTree = "<group>"; };
+		CEAAAE212CADCBD40076D607 /* messagesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = messagesCell.xib; sourceTree = "<group>"; };
+		CEAAAE252CADD7A00076D607 /* ProviderTripDetialsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderTripDetialsVC.swift; sourceTree = "<group>"; };
+		CEAAAE272CADD7AE0076D607 /* ProviderTripDetialsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProviderTripDetialsVC.xib; sourceTree = "<group>"; };
+		CEAAAE292CADE3A50076D607 /* peoviderTripDetails+extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "peoviderTripDetails+extention.swift"; sourceTree = "<group>"; };
 		CEB1387E2B615BC00070DBA8 /* driverUploadIdAuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = driverUploadIdAuthVC.swift; sourceTree = "<group>"; };
 		CEB138802B615BE70070DBA8 /* driverUploadIdAuthVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = driverUploadIdAuthVC.xib; sourceTree = "<group>"; };
 		CEB138842B61B2360070DBA8 /* driverAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = driverAuthView.swift; sourceTree = "<group>"; };
@@ -1145,6 +1163,7 @@
 		04C737A62B36C75F002AE59C /* messages */ = {
 			isa = PBXGroup;
 			children = (
+				CEAAAE1F2CADCBAA0076D607 /* cells */,
 				04C737A72B36C77E002AE59C /* messagesViewVC.swift */,
 				04C737A92B36C792002AE59C /* messagesViewVC.xib */,
 			);
@@ -1370,6 +1389,7 @@
 		9694AB342A5DE9D500BDF5F8 /* Takhawi */ = {
 			isa = PBXGroup;
 			children = (
+				CE619F8F2CAE0AA500EF6CC4 /* Takhawi.entitlements */,
 				CE4E22EB2C0DE0B60092AE16 /* generalNetwork */,
 				049358962B4459FA004E5259 /* customPopALert */,
 				0493588A2B43D823004E5259 /* localizationManager */,
@@ -1403,6 +1423,7 @@
 		9694AB4A2A5DE9E700BDF5F8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				CE619F8D2CADFF6A00EF6CC4 /* GoogleService-Info.plist */,
 				9694AB352A5DE9D500BDF5F8 /* AppDelegate.swift */,
 			);
 			path = Core;
@@ -1420,6 +1441,7 @@
 		9694AB652A5DFACA00BDF5F8 /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
+				CE5B60462CAD49F10093A469 /* repeating Function */,
 				CE9D3CA62C82B28B007E872D /* datePicker */,
 				04658F502B3746A000470F0D /* present */,
 				CE3CACC52B2D8E2F0025990E /* animatedLoader */,
@@ -2112,6 +2134,46 @@
 			path = weather;
 			sourceTree = "<group>";
 		};
+		CE5B603E2CAD404E0093A469 /* vip */ = {
+			isa = PBXGroup;
+			children = (
+				CE5B603F2CAD40620093A469 /* cell */,
+			);
+			path = vip;
+			sourceTree = "<group>";
+		};
+		CE5B603F2CAD40620093A469 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				CE5B60422CAD40E10093A469 /* DriverBasicCell.swift */,
+				CE5B60432CAD40E10093A469 /* DriverBasicCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		CE5B60402CAD40680093A469 /* basic */ = {
+			isa = PBXGroup;
+			children = (
+				CE5B60412CAD406E0093A469 /* cell */,
+			);
+			path = basic;
+			sourceTree = "<group>";
+		};
+		CE5B60412CAD406E0093A469 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		CE5B60462CAD49F10093A469 /* repeating Function */ = {
+			isa = PBXGroup;
+			children = (
+				CE5B60472CAD4A070093A469 /* repeatingClass.swift */,
+			);
+			path = "repeating Function";
+			sourceTree = "<group>";
+		};
 		CE6178A52ACD101B00AA8BB7 /* mapSearch */ = {
 			isa = PBXGroup;
 			children = (
@@ -2341,13 +2403,6 @@
 			path = MessageTextView;
 			sourceTree = "<group>";
 		};
-		CE8E38AD2CAD30EC00471606 /* driverSideMenu */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = driverSideMenu;
-			sourceTree = "<group>";
-		};
 		CE8E38AE2CAD319500471606 /* USER */ = {
 			isa = PBXGroup;
 			children = (
@@ -2452,6 +2507,9 @@
 		CE9D3CAE2C853B99007E872D /* DriverMore */ = {
 			isa = PBXGroup;
 			children = (
+				CEAAAE242CADD77B0076D607 /* tripDetails */,
+				CE5B60402CAD40680093A469 /* basic */,
+				CE5B603E2CAD404E0093A469 /* vip */,
 				CE9D3CAF2C853BEF007E872D /* DriverMoreVC.swift */,
 				CE5B603C2CAD36CD0093A469 /* driverMore+extention.swift */,
 			);
@@ -2572,6 +2630,25 @@
 				CE22928D2B1E640700E8AB42 /* hotelVC+delegate.swift */,
 			);
 			path = hotelsScreens;
+			sourceTree = "<group>";
+		};
+		CEAAAE1F2CADCBAA0076D607 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				CEAAAE202CADCBD40076D607 /* messagesCell.swift */,
+				CEAAAE212CADCBD40076D607 /* messagesCell.xib */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		CEAAAE242CADD77B0076D607 /* tripDetails */ = {
+			isa = PBXGroup;
+			children = (
+				CEAAAE252CADD7A00076D607 /* ProviderTripDetialsVC.swift */,
+				CEAAAE272CADD7AE0076D607 /* ProviderTripDetialsVC.xib */,
+				CEAAAE292CADE3A50076D607 /* peoviderTripDetails+extention.swift */,
+			);
+			path = tripDetails;
 			sourceTree = "<group>";
 		};
 		CEB138822B61B2080070DBA8 /* driverAuthentication */ = {
@@ -2721,7 +2798,6 @@
 			isa = PBXGroup;
 			children = (
 				CE8291F52C4174E800E289EF /* driverNetwork */,
-				CE8E38AD2CAD30EC00471606 /* driverSideMenu */,
 				CE9D3CAE2C853B99007E872D /* DriverMore */,
 				CE4F0BA42B764A2200337A49 /* DriverHome */,
 				CEB138822B61B2080070DBA8 /* driverAuthentication */,
@@ -3048,10 +3124,12 @@
 				CE9F3C572B1B4550004C3D24 /* wAY9ZXW4id.json in Resources */,
 				04658F572B374E0400470F0D /* baseSuccessAlertVC.xib in Resources */,
 				9694AC5F2A5E040D00BDF5F8 /* ArbFONTS-URW-DIN-Arabic-Medium.ttf in Resources */,
+				CEAAAE232CADCBD40076D607 /* messagesCell.xib in Resources */,
 				CE71F4712B16885B00E7B689 /* driversOffersCell.xib in Resources */,
 				CE9F3C5B2B1B4955004C3D24 /* u4F3iX2jrQ.json in Resources */,
 				CE9757C82AE0F0CC0014346E /* tripListVC.xib in Resources */,
 				CE855C012C92F6640098F96A /* userTripCell.xib in Resources */,
+				CE619F8E2CADFF6A00EF6CC4 /* GoogleService-Info.plist in Resources */,
 				9694AC5B2A5E040D00BDF5F8 /* no-search-result.json in Resources */,
 				CE22928C2B1E638300E8AB42 /* hotelCell.xib in Resources */,
 				CE30212A2ABB275400572DE7 /* phoneAndLocationVC.xib in Resources */,
@@ -3099,6 +3177,7 @@
 				04B4AFAD2B347F9100DAFEC2 /* cardsCell.xib in Resources */,
 				9694AC5A2A5E040D00BDF5F8 /* 629-empty-box.json in Resources */,
 				96202C7B2A7FAE3300053C5B /* OTPVC.xib in Resources */,
+				CE5B60452CAD40E10093A469 /* DriverBasicCell.xib in Resources */,
 				963007152A76710C0075DBFE /* RegisterVC.xib in Resources */,
 				04B659CB2B341D6A00E78752 /* favDriverCell.xib in Resources */,
 				9694AC602A5E040D00BDF5F8 /* ArbFONTS-URW-DIN-Arabic.ttf in Resources */,
@@ -3114,7 +3193,6 @@
 				CEE69AE92B4C344200E2E58D /* Cairo-Bold.ttf in Resources */,
 				9694AC642A5E040D00BDF5F8 /* ArbFONTS-URW-DIN-Arabic-Black.ttf in Resources */,
 				CEE69AE82B4C344200E2E58D /* Cairo-SemiBold.ttf in Resources */,
-				9694ABEF2A5DFACA00BDF5F8 /* GoogleService-Info.plist in Resources */,
 				CE2D4AF22B185483008D556E /* filterCell.xib in Resources */,
 				9694ABFB2A5DFACA00BDF5F8 /* AlertView.xib in Resources */,
 				04D81F8D2B35BC8C00AAA66C /* firstAuthCell.xib in Resources */,
@@ -3136,6 +3214,7 @@
 				0426FBC92B37605C0017F12A /* languageVC.xib in Resources */,
 				CE3021352ABB908E00572DE7 /* enterPasswordVC.xib in Resources */,
 				04C737D62B37142B002AE59C /* selectYourComplainCell.xib in Resources */,
+				CEAAAE282CADD7AE0076D607 /* ProviderTripDetialsVC.xib in Resources */,
 				CE8E38A62CAC93B100471606 /* ChatViewController.xib in Resources */,
 				CE3021412ABBAB2F00572DE7 /* verificationVC.xib in Resources */,
 				04C737BC2B36D4EE002AE59C /* settingsSideVC.xib in Resources */,
@@ -3234,6 +3313,7 @@
 				96202C882A7FBB0A00053C5B /* ReseatPasswordVC.swift in Sources */,
 				96202C832A7FB97B00053C5B /* EnterMobileVC.swift in Sources */,
 				CEB49C4C2C3BEB1B00BB506D /* offersModel.swift in Sources */,
+				CEAAAE222CADCBD40076D607 /* messagesCell.swift in Sources */,
 				CEB138852B61B2360070DBA8 /* driverAuthView.swift in Sources */,
 				CE772FBA2ADD458600BDEDC9 /* sideMenuItems.swift in Sources */,
 				CE6178A42ACD08DE00AA8BB7 /* homeSearch+textfieldDelegate.swift in Sources */,
@@ -3255,6 +3335,7 @@
 				CE6753AC2C568FBA00CC65F2 /* driverAuth+extention.swift in Sources */,
 				CEDAC5742C36E6BA0054028E /* colorsNames.swift in Sources */,
 				CE9D270C2C4E803300A18F18 /* driverStatus.swift in Sources */,
+				CE5B60482CAD4A070093A469 /* repeatingClass.swift in Sources */,
 				9694AC062A5DFACA00BDF5F8 /* RegularExpression.swift in Sources */,
 				CE7434EF2B223BF30023DC17 /* hotelDetailsVC.swift in Sources */,
 				CE27F5472ADFD3B700DEA419 /* selectDateVC.swift in Sources */,
@@ -3381,6 +3462,7 @@
 				CE5B10FD2C64327B00818240 /* weatherData.swift in Sources */,
 				CE5B10FB2C64324C00818240 /* weatherManager.swift in Sources */,
 				963DAB2B2A7FDD27004ED3C7 /* DriverRegisterVC.swift in Sources */,
+				CEAAAE2A2CADE3A50076D607 /* peoviderTripDetails+extention.swift in Sources */,
 				CE9F3C4B2B19D0B5004C3D24 /* fullScreenGoogleViewVC.swift in Sources */,
 				9694AC772A5E0D8B00BDF5F8 /* UserDefaultsExtensions.swift in Sources */,
 				CE7A34CF2B7373A9009B52CD /* MediaPicker-iOS.swift in Sources */,
@@ -3431,6 +3513,7 @@
 				9694ABF62A5DFACA00BDF5F8 /* MarkerView.swift in Sources */,
 				9694ABFC2A5DFACA00BDF5F8 /* AlertView.swift in Sources */,
 				04658F522B3746B500470F0D /* presentWithBlurEffect.swift in Sources */,
+				CE5B60442CAD40E10093A469 /* DriverBasicCell.swift in Sources */,
 				CEF9737A2AC1D4B600CDCCFD /* UIResponder+Current.swift in Sources */,
 				CE22928B2B1E638300E8AB42 /* hotelCell.swift in Sources */,
 				CECA1D3A2CAAF6D4007E98BD /* generaltripModel.swift in Sources */,
@@ -3481,6 +3564,7 @@
 				CE30213F2ABBAB1100572DE7 /* verificationVC.swift in Sources */,
 				04BE0D4B2B395194004E6EB1 /* logoutpopVC.swift in Sources */,
 				9694AC072A5DFACA00BDF5F8 /* NSNotificationNames.swift in Sources */,
+				CEAAAE262CADD7A00076D607 /* ProviderTripDetialsVC.swift in Sources */,
 				CEBB8BA52ADEEC1900E70EC4 /* profileVc+delegate.swift in Sources */,
 				9694ABD52A5DFACA00BDF5F8 /* UIImageExtention.swift in Sources */,
 				04B659CA2B341D6A00E78752 /* favDriverCell.swift in Sources */,
@@ -3712,6 +3796,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Takhawi/Takhawi.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 15;
@@ -3753,6 +3838,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Takhawi/Takhawi.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 15;

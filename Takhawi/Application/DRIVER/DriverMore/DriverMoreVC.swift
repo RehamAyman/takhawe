@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DriverMoreVC: UIViewController {
+class DriverMoreVC: BaseVC {
     @IBOutlet weak var vipV: UIView!
     
     @IBOutlet weak var basicView: UIView!
@@ -17,14 +17,18 @@ class DriverMoreVC: UIViewController {
     
     
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.getProfileData()
-       
+        self.handleVCActions()
     }
     
 
+    
+    
+    
     private func getProfileData () {
         if let user = UserDefaults.user?.user {
             self.userEmail.text = user.email
@@ -37,7 +41,7 @@ class DriverMoreVC: UIViewController {
     }
     
     
-    
+
     
     @IBAction func logoutAction(_ sender: UIButton) {
         let vc =    logoutpopVC()

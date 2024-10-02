@@ -9,6 +9,9 @@ import UIKit
 import GoogleMaps
 import GooglePlaces
 import Intercom
+import FirebaseCore
+import UserNotifications
+import FirebaseMessaging
 
 
 
@@ -21,11 +24,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     static var FCMToken = "xnx'_'xnx"
     static let GoogleAPI = "AIzaSyAfTSBkcXfJa5Zf0YHN3-m-gJFFhvzVu4U" // "AIzaSyBaLRq-LbUQmWZkJkfwjWcJyoxWlhyQ35s"
     var location:CLLocationManager?
+   
     
    
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-  
+       
+       
+            self.handleFCMFor(application)
+            
+     
+        
         
         GMSServices.provideAPIKey("AIzaSyAfTSBkcXfJa5Zf0YHN3-m-gJFFhvzVu4U")
         GMSPlacesClient.provideAPIKey("AIzaSyAfTSBkcXfJa5Zf0YHN3-m-gJFFhvzVu4U")
@@ -35,7 +44,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Intercom.setBottomPadding(90)
       
-        
         Intercom.setApiKey("ios_sdk-e6a2bb07aa9d964c423aca0f19b83e7288022f6e", forAppId: "yqdxwqwt")
         Intercom.setLauncherVisible(false )
        
@@ -54,8 +62,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+ 
     
-    
+    private func handleFCMFor(_ application: UIApplication) {
+        UNUserNotificationCenter.current().delegate = self
+        let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+        UNUserNotificationCenter.current().requestAuthorization(options: authOptions, completionHandler: {_, _ in })
+        application.registerForRemoteNotifications()
+        FirebaseApp.configure()
+        Messaging.messaging().delegate = self
+    }
     
     
 

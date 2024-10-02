@@ -23,7 +23,7 @@ class tripsSideMenuVC: BaseVC {
     
     var upcommingTrips : [MainTripResult] =  []
     var driver : Bool = false
-    var driverType : tripType = .basic
+    var tripType : tripType = .basic
     
     
     //MARK: - Creation -
@@ -75,11 +75,12 @@ class tripsSideMenuVC: BaseVC {
 
 //MARK: - Networking -
 extension tripsSideMenuVC {
-    func getUpcommingTrips (withLoading : Bool ) {
+    func getUpcommingTrips (withLoading : Bool  ) {
         if withLoading {
             activityIndicatorr.startAnimating()
         }
-        UserRouter.getMyUpcommingTrips.send { [weak self ] (response : APIGenericResponse<[MainTripResult]> )  in
+        let type : String = driver ?  tripType.rawValue :  ""
+        UserRouter.getMyUpcommingTrips(type: type ).send { [weak self ] (response : APIGenericResponse<[MainTripResult]> )  in
             guard let self = self else { return  }
             if let result = response.result {
                 self.upcommingTrips = result
@@ -91,7 +92,8 @@ extension tripsSideMenuVC {
     
     func getCancelledTrips () {
         activityIndicatorr.startAnimating()
-        UserRouter.getCancelledTrips.send { [weak self ] (response : APIGenericResponse<[MainTripResult]> )  in
+        let type : String = driver ?  tripType.rawValue :  ""
+        UserRouter.getCancelledTrips(type: type ).send { [weak self ] (response : APIGenericResponse<[MainTripResult]> )  in
             guard let self = self else { return  }
            if let result = response.result {
                 self.upcommingTrips = result
@@ -102,8 +104,9 @@ extension tripsSideMenuVC {
     
     
     func getCompletedTrips () {
+        let type : String = driver ?  tripType.rawValue :  ""
         activityIndicatorr.startAnimating()
-        UserRouter.getCompletedTrips.send { [weak self ] (response : APIGenericResponse<[MainTripResult]> )  in
+        UserRouter.getCompletedTrips(type: type ).send { [weak self ] (response : APIGenericResponse<[MainTripResult]> )  in
             guard let self = self else { return  }
            if let result = response.result {
                 self.upcommingTrips = result
@@ -114,6 +117,8 @@ extension tripsSideMenuVC {
     
     
  
+    
+
    
     
 }
