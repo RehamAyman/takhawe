@@ -24,6 +24,7 @@ class aboutUsVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureInitialDesign()
+        self.getAboutUs()
     }
     
     
@@ -43,7 +44,15 @@ class aboutUsVC: BaseVC {
 
 //MARK: - Networking -
 extension aboutUsVC {
-    
+    func getAboutUs () {
+        activityIndicatorr.startAnimating()
+        UserRouter.aboutUs.send { [weak self ] (response : APIGenericResponse<polices>) in
+            guard let self = self else { return }
+            if let res = response.result {
+                self.textView.text = res.content
+            }
+        }
+    }
 }
 
 //MARK: - Routes -

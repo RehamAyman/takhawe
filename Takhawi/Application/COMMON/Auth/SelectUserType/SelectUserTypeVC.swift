@@ -119,6 +119,7 @@ extension SelectUserTypeVC {
                        if role == "USER" {
                            UserDefaults.isLogin = true
                            UserDefaults.user = data
+                           self.registerFcmTocken()
                        }
                            UserDefaults.accessToken = response.result?.accessToken
                       
@@ -128,6 +129,14 @@ extension SelectUserTypeVC {
                }
            }
     }
+    
+    private func registerFcmTocken () {
+        UserRouter.registerFcm(fcmTocken: AppDelegate.FCMToken ).send {  (response: APIGlobalResponse) in
+            
+            
+        }
+    }
+    
 
 }
 

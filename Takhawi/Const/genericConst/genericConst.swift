@@ -31,3 +31,17 @@ enum tripType : String {
     case basic = "BASIC"
 }
 
+//completed
+
+
+enum tripStatus : String {
+case comming  = "UPCOMING"
+case onWay = "ON_WAY"
+case arrived  = "ARRIVED"
+case inProgress = "INPROGRESS"
+case cancelled = "CANCELLED"
+case completed = "COMPLETED"
+    
+    
+    
+}

@@ -38,6 +38,11 @@ enum userServerPath {
     case getOneVip ( tripId : Int )
     case getOneGeneralTrip ( tripId : Int)
     case getAllMessages
+    case openChat
+    case addFCMTocken
+    case getPolicies
+    case aboutUs
+    case getAllLastMessages ( chatid : String )
    
 }
 
@@ -105,7 +110,16 @@ extension userServerPath : ServerPath {
             return "trip/\(id)"
         case .getAllMessages:
             return "chat"
-    
+        case .openChat:
+            return "chat/open-chat"
+        case .addFCMTocken:
+            return "user/fcm-token"
+        case .getPolicies:
+            return "policy-service/privacy-policy" // syast el este5dam
+        case .aboutUs :
+            return "policy-service/terms-and-conditions"  // about us
+        case .getAllLastMessages(chatid: let chatId ):
+            return "message/\(chatId)?page=1&limit=100"
         }
     }
 }

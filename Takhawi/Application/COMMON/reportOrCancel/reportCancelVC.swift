@@ -37,6 +37,7 @@ class reportCancelVC: BaseVC {
     var id : Int = 0
     var passengerTripId : Int = 0
     var selectedIndex : String = ""
+    var driver : Bool = false 
    
     
     
@@ -73,6 +74,8 @@ class reportCancelVC: BaseVC {
             } else {
                 self.cancelTrip(tripId: self.id , type: self.type, passengerId: self.passengerTripId)
             }
+        } else {
+            
         }
     }
 }

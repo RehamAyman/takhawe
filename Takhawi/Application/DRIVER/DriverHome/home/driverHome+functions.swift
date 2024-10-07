@@ -160,11 +160,11 @@ extension DriverHomeVC : UICollectionViewDelegate , UICollectionViewDataSource ,
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(cellType: driverVipTripsCellCollectionViewCell.self)
-        self.requestLocationAccess()
-        locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.requestLocation()
-        locationManager.startUpdatingLocation()
+//        self.requestLocationAccess()
+//        locationManager.delegate = self
+//        locationManager.requestWhenInUseAuthorization()
+//        locationManager.requestLocation()
+//        locationManager.startUpdatingLocation()
         self.notificationView.layer.addBasicShadow(cornerRadius: 16)
         self.setUpGoogleMapView()
         switchButton = SwitchButton(frame: self.switchContainer.frame)

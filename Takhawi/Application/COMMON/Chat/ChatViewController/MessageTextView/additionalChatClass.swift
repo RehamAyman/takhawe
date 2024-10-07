@@ -124,7 +124,7 @@ class CustomNavigationView: UIView {
                 backButton.translatesAutoresizingMaskIntoConstraints = false
                 backButton.setTitle(nil, for: .normal)
                 backButton.isUserInteractionEnabled = false
-                backButton.setImage(UIImage(named: "arrow-right"), for: .normal)
+                backButton.setImage(UIImage(named: "Group 25"), for: .normal)
                 
                 if LocalizationManager.shared.getLanguage() == .English  {
                     backButton.flipX()
@@ -183,18 +183,28 @@ extension UIViewController{
 
 
 struct MessageData: Codable {
-    let id: Int?
-    let isSender:Int
+    let id: String?
+   // let isSender:Int
     let body: String?
     let type: String?
     let duration, name: String?
     let createdDt: String?
-
+    let senderId : Int?
+    let is_read : Bool?
+    let chatId : String
+    
+    
     enum CodingKeys: String, CodingKey {
         case id
-        case isSender = "is_sender"
-        case body, type, duration, name
-        case createdDt = "created_dt"
+      //  case isSender = "is_sender"
+        case body = "content"
+        case type = "contentType"
+        case duration, name
+        case createdDt = "createdAt"
+        case senderId = "senderId"
+        case is_read = "is_read"
+        case chatId
+        
     }
 }
 

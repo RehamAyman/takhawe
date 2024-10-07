@@ -67,11 +67,15 @@ extension reportCancelVC : UITableViewDelegate , UITableViewDataSource {
     
     //MARK: - CANCEL TRIP METHODS
     func cancelTrip ( tripId : Int  , type : String , passengerId : Int) {
-            if type == "BASIC" {
+            if type == "BASIC"  {
                 self.cancelBasicTrip(tripId: tripId, UserId: passengerId)
             } else {
                 self.cancelVipTrip( id : tripId)
             }
+        
+        
+        
+        
         }
     
     

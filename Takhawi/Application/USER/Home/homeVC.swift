@@ -256,24 +256,9 @@ class homeVC: BaseVC, sendDataBackDelegate{
     
     @IBAction func hotelsAction(_ sender: UIButton) {
         // first : check my role if user or driver
-//        let vc = messagesViewVC ()
-//        
-////        let vc = ChatViewController(conversationId: item.id ?? 0, titleName: "", socketManger:
-////                    ChatSocketConnection(ConnectionType: .chat, conversationId: "\(item.id ?? 0)",
-////                    sender: .init(type: .client, id: "\(UserDefaults.user?.id ?? 0)",
-////                    senderName: UserDefaults.user?.name ?? "", avatar: UserDefaults.user?.image ?? ""),
-////                    receiver: .init(id: "\(item.members?.first?.id ?? 0)", type: .provider)))
-////        
-//        
-//        
-//        self.push(vc)
-        
-        
-        
-      //  sender.animateButtonWhenPressed {
             let vc = hotelsVC()
             self.push(vc)
-      //  }
+     
     }
     
     

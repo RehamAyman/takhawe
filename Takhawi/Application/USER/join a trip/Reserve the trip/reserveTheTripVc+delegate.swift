@@ -26,21 +26,28 @@ extension ReserveTheTripVC : UITableViewDelegate , UITableViewDataSource {
         cell.iconimage.image = UIImage(named: item.icon)
         cell.title.text = item.number
         cell.selectionStyle = .none
-       
-            
-       
+              
         
         if item.type == "wallet" {
             cell.title.text = "My Wallet".localize
             cell.iconimage.image = UIImage(named: "empty-wallet")
-            cell.hint.text = ""
+            
             cell.hint.isHidden = true
             
         }
         if item.type == "cash" {
             cell.title.text = "Cash".localize
             cell.iconimage.image = UIImage(named: "money 1")
-            cell.hint.text = ""
+           
+            cell.hint.isHidden = true
+        }
+        
+        
+        if item.type == "ApplePay" {
+            //Apple_Pay_Mark_RGB_041619 1
+            cell.title.text = "Apple Pay"
+            cell.iconimage.image = UIImage(named: "Apple_Pay_Mark_RGB_041619 1")
+          
             cell.hint.isHidden = true
             
         }

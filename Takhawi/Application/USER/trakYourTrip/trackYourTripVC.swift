@@ -56,9 +56,11 @@ class trackYourTripVC: BaseVC {
     var stopCompleteTheTrip : Bool = false
     var vipTrip : Bool = false
     var tripId : Int = 0
+    var MainTrip : GeneralTripResult?
+ 
     var passengerTripId : Int = 0
-    var basicResult : OneBasicResult?
-    var vipResult : OneVipTripResult?
+ //   var basicResult : OneBasicResult?
+ 
     var basicPickLat : Double = 0
     var basicPickLng : Double = 0
     var basicDesLat : Double = 0
@@ -212,10 +214,51 @@ class trackYourTripVC: BaseVC {
   
     }
     @IBAction func messageDriver(_ sender: UIButton) {
+        
+        
+        // first open the chat on the server side 
+        activityIndicatorr.startAnimating()
+
+//        
+        
+        
+        
+        self.openChat(driverId: self.MainTrip?.driver?.id ?? 0,
+                      driverName: self.MainTrip?.driver?.name ?? "",
+                      phone: self.MainTrip?.driver?.phone ?? ""   )
+
+
+        
+        
     }
     
     
+    func openChat ( driverId : Int  , driverName : String , phone : String) {
+        activityIndicatorr.startAnimating()
+        UserRouter.openChat(tripId:  self.tripId , driverId: driverId, userId: UserDefaults.user?.user?.id ?? 0, ISdriver: false   ).send { [weak self ] ( response : APIGenericResponse<openChatResult>)  in
+            guard let self = self else { return }
+            if response.status == true  {
+                self.goToChat(withId: response.result?.id ?? "", driverId: response.result?.driverId ?? 0, reciverName: driverName, phone: phone   )
+            }
+    } }
     
+    
+    
+    private func goToChat (withId : String , driverId : Int , reciverName : String , phone : String ) {
+        
+        let myAvatarLink = Server.imageBase.rawValue +  (UserDefaults.user?.user?.avatar ?? "" )
+        let vc = ChatViewController(conversationId:  withId 
+                                    , titleName: reciverName ,
+                                    socketManger:
+                    ChatSocketConnection(ConnectionType: .chat, conversationId: withId ,
+                                         sender: .init(type: .client, id: "\(UserDefaults.user?.user?.id ?? 0)",
+                                                       senderName: UserDefaults.user?.user?.name ?? "" , avatar: myAvatarLink ),
+                    receiver: .init(id: "\(driverId)", type: .provider)))
+        vc.partnerImage = Server.imageBase.rawValue + ( self.MainTrip?.driver?.avatar ?? "" )
+        vc.partnerPhoneNumber = phone
+        self.push(vc)
+        
+    }
     
 }
 
@@ -227,6 +270,7 @@ extension trackYourTripVC {
         UserRouter.getOneGeneralTrip(id: tripId).send{ [weak self] (response : APIGenericResponse < GeneralTripResult >)  in
             guard let self = self else { return }
             if let result = response.result {
+                self.MainTrip = result
                 self.passengerTripId = result.passengerTripId ?? 0
                 self.setUpGoogleView(lat1: result.pickup_location?.lat ?? 0  ,
                                      lat2: result.destinationL?.lat ?? 0  ,

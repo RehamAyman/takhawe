@@ -85,6 +85,7 @@ extension enterPasswordVC {
                     if userType == role.user.rawValue {
                         
                         UserDefaults.isLogin = true
+                        self?.registerFcmTocken()
                         let vc =  homeVC()
                         self?.push(vc)
                         let ic = ICMUserAttributes()
@@ -101,6 +102,7 @@ extension enterPasswordVC {
                      
                         if response.result?.user?.driver_status == "APPROVED" {
                             UserDefaults.isLogin = true
+                            self?.registerFcmTocken()
                             let storyboard = UIStoryboard(name: "Main", bundle: nil)
                             let vc = storyboard.instantiateViewController(withIdentifier: "DriverTabbar") as! DriverTabbar
                             self?.navigationController?.pushViewController(vc, animated: true)
@@ -122,6 +124,13 @@ extension enterPasswordVC {
     }
 
    
+    
+    private func registerFcmTocken () {
+        UserRouter.registerFcm(fcmTocken: AppDelegate.FCMToken ).send {  (response: APIGlobalResponse) in
+            
+            
+        }
+    }
     
     private func showDriverStatusLoading (bool : Bool) {
         if bool {

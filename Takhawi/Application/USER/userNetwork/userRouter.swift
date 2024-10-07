@@ -40,24 +40,30 @@ enum UserRouter {
     case checkPromoCode( code : String )
     case getVip ( id : Int )
     case getOneGeneralTrip ( id : Int )
+    case openChat ( tripId : Int , driverId : Int , userId : Int , ISdriver : Bool)
+    case registerFcm(fcmTocken : String)
+    case getPolices
+    case aboutUs
+    case getAllLastMessaged ( chatId : String )
     
 }
+
+
 
 extension UserRouter : APIRouter {
     var insideUrlParam: [String]? {
         return []
     }
     
- 
-    
+
     var method: HTTPMethod {
         switch self {
             
-        case .createVipTrip , .acceptOffer  , .complain , .addAddressToFav , .claculateBasicPrice  , .joinABasicTrip , .calculateVipPrice , .checkPromoCode   :
+        case .createVipTrip , .acceptOffer  , .complain , .addAddressToFav , .claculateBasicPrice  , .joinABasicTrip , .calculateVipPrice , .checkPromoCode   , .openChat  , .registerFcm :
             return .post
         
             
-        case .getAllVipOffers , .getAllCities , .getAllBasicTrips  , .recentAddress  , .getOneTrip , .getProfile , .walletData , .getAllHobbies  , .getAllAddress , .getAllFavDrives , .getMyUpcommingTrips , .getCancelledTrips , .getCompletedTrips , .getVip , .getOneGeneralTrip  :
+        case .getAllVipOffers , .getAllCities , .getAllBasicTrips  , .recentAddress  , .getOneTrip , .getProfile , .walletData , .getAllHobbies  , .getAllAddress , .getAllFavDrives , .getMyUpcommingTrips , .getCancelledTrips , .getCompletedTrips , .getVip , .getOneGeneralTrip  , .getPolices  , .aboutUs , .getAllLastMessaged:
           return .get
             
             
@@ -134,7 +140,18 @@ extension UserRouter : APIRouter {
             return userServerPath.getOneVip(tripId: id)
         case .getOneGeneralTrip(id: let id ):
             return userServerPath.getOneGeneralTrip(tripId: id)
-             
+        case .openChat:
+            return userServerPath.openChat
+        case .registerFcm :
+            return userServerPath.addFCMTocken
+        case .getPolices:
+            return userServerPath.getPolicies
+        case .aboutUs:
+            return userServerPath.aboutUs
+        case .getAllLastMessaged(chatId: let id ) :
+            return userServerPath.getAllLastMessages(chatid: id )
+            
+            
         }
     }
     
@@ -176,6 +193,8 @@ extension UserRouter : APIRouter {
             }
             return dict
            
+            
+            
         case .getAllHobbies :
             return [
                 "limit" : 60
@@ -294,7 +313,29 @@ extension UserRouter : APIRouter {
             }
             return dic
             
-        case .getAllVipOffers  , .recentAddress , .getOneTrip , .getProfile   , .calculateVipPrice , .getAllAddress   , .removeDriverFromFav    , .getVip , .getOneGeneralTrip :
+        case .registerFcm(fcmTocken: let tocken):
+            return [
+                "token" : tocken
+            ]
+            
+            
+            
+        case .openChat(tripId: let  tripId , driverId: let driverid , userId : let userId ,  ISdriver : let isDriver ) :
+            
+            var dic : [String : Any]  = [ "tripId" : tripId]
+            
+            if isDriver {
+                dic["userId"] = userId
+            } else {
+                dic["driverId"] = driverid
+            }
+        
+            return dic 
+               
+               
+   
+            
+        case .getAllVipOffers  , .recentAddress , .getOneTrip , .getProfile   , .calculateVipPrice , .getAllAddress   , .removeDriverFromFav    , .getVip , .getOneGeneralTrip  , .getPolices , .aboutUs , .getAllLastMessaged :
             return nil
             
         }

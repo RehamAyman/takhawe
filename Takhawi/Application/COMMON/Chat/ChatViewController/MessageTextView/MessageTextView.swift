@@ -49,7 +49,7 @@ class MessageTextView: UIView {
     private func setupContainerView() {
         self.containerView.layer.cornerRadius = 20
         self.containerView.clipsToBounds = true
-        self.containerView.backgroundColor = UIColor.secondarySystemBackground
+//        self.containerView.backgroundColor = UIColor.secondarySystemBackground
         self.setInactiveState()
     }
     private func setupTextField() {

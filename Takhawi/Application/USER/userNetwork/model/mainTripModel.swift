@@ -18,8 +18,8 @@ struct MainTripResult : Codable {
     let destination : MDestination?
     let  passengerTripId : Int?
     let  Passenger : PassengerClass?
-    
-    
+    let  Passengers : [Passengers]?
+   
     enum CodingKeys: String, CodingKey {
 
         case id = "id"
@@ -31,21 +31,20 @@ struct MainTripResult : Codable {
         case destination = "destination"
         case passengerTripId = "passengerTripId"
         case Passenger = "Passenger"
-    }
-//
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        id = try values.decodeIfPresent(Int.self, forKey: .id)
-        start_date = try values.decodeIfPresent(String.self, forKey: .start_date)
-        status = try values.decodeIfPresent(String.self, forKey: .status)
-        type = try values.decodeIfPresent(String.self, forKey: .type)
-        driver = try values.decodeIfPresent(Driver.self, forKey: .driver)
-        pickup_location = try values.decodeIfPresent(Pickup_location.self, forKey: .pickup_location)
-        destination = try values.decodeIfPresent(MDestination.self, forKey: .destination)
-        passengerTripId = try values.decodeIfPresent(Int.self, forKey: .passengerTripId)
-        Passenger = try values.decodeIfPresent(PassengerClass.self, forKey: .Passenger)
+        case Passengers = "Passengers"
     }
 
+ 
+
+}
+
+
+
+
+struct passengerList : Codable{
+    let id : Int?
+    let passenger : PassengerClass?
+    let status : String?
 }
 struct Pickup_location : Codable {
     let lat : Double?
@@ -92,15 +91,64 @@ struct MDestination : Codable {
 
 
 struct PassengerClass : Codable   {
+    let id : Int?
     let name : String?
     let rate : Double?
     let image : String?
+    
     
     
     enum CodingKeys: String, CodingKey {
         case name = "name"
         case rate = "passenger_rate"
         case  image = "avatar"
+        case id = "id"
     }
     
+}
+
+
+
+struct Passengers : Codable {
+    let id : Int?
+    var status : String?
+    let passnger : Passnger?
+
+    enum CodingKeys: String, CodingKey {
+
+        case id = "id"
+        case status = "status"
+        case passnger = "Passnger"
+    }
+
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        id = try values.decodeIfPresent(Int.self, forKey: .id)
+        status = try values.decodeIfPresent(String.self, forKey: .status)
+        passnger = try values.decodeIfPresent(Passnger.self, forKey: .passnger)
+    }
+
+}
+struct Passnger : Codable {
+    let id : Int?
+    let name : String?
+    let avatar : String?
+    let passenger_rate : Double?
+
+    enum CodingKeys: String, CodingKey {
+
+        case id = "id"
+        case name = "name"
+        case avatar = "avatar"
+        case passenger_rate = "passenger_rate"
+    }
+
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        id = try values.decodeIfPresent(Int.self, forKey: .id)
+        name = try values.decodeIfPresent(String.self, forKey: .name)
+        avatar = try values.decodeIfPresent(String.self, forKey: .avatar)
+        passenger_rate = try values.decodeIfPresent(Double.self, forKey: .passenger_rate)
+    }
+
 }

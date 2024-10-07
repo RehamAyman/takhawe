@@ -307,6 +307,7 @@
 		CE5B60442CAD40E10093A469 /* DriverBasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B60422CAD40E10093A469 /* DriverBasicCell.swift */; };
 		CE5B60452CAD40E10093A469 /* DriverBasicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5B60432CAD40E10093A469 /* DriverBasicCell.xib */; };
 		CE5B60482CAD4A070093A469 /* repeatingClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B60472CAD4A070093A469 /* repeatingClass.swift */; };
+		CE5B7B482CB201E800C9421A /* policesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B7B472CB201E800C9421A /* policesModel.swift */; };
 		CE6178A02ACCF9E500AA8BB7 /* homeSearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE61789F2ACCF9E500AA8BB7 /* homeSearchVC.xib */; };
 		CE6178A22ACCF9F700AA8BB7 /* homeSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6178A12ACCF9F700AA8BB7 /* homeSearchVC.swift */; };
 		CE6178A42ACD08DE00AA8BB7 /* homeSearch+textfieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6178A32ACD08DE00AA8BB7 /* homeSearch+textfieldDelegate.swift */; };
@@ -357,6 +358,7 @@
 		CE855C002C92F6640098F96A /* userTripCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE855BFE2C92F6640098F96A /* userTripCell.swift */; };
 		CE855C012C92F6640098F96A /* userTripCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE855BFF2C92F6640098F96A /* userTripCell.xib */; };
 		CE855C042C9345DD0098F96A /* mainTripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE855C032C9345DC0098F96A /* mainTripModel.swift */; };
+		CE8D74952CB3386C005E13B0 /* ApplePayHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8D74942CB3386C005E13B0 /* ApplePayHandler.swift */; };
 		CE8DE1462C7B8945005B139F /* walletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8DE1452C7B8945005B139F /* walletModel.swift */; };
 		CE8DE1482C7BF93D005B139F /* z2vKVVJpIc.json in Resources */ = {isa = PBXBuildFile; fileRef = CE8DE1472C7BF93D005B139F /* z2vKVVJpIc.json */; };
 		CE8E38A32CAC93B100471606 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E389A2CAC93B100471606 /* ChatViewController.swift */; };
@@ -374,6 +376,7 @@
 		CE9757D12AE1B1E70014346E /* driverProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9757D02AE1B1E70014346E /* driverProfileVC.xib */; };
 		CE9757D52AE1B2B00014346E /* driverProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9757D42AE1B2B00014346E /* driverProfileVC.swift */; };
 		CE98110A2AC2CD2E00D99EC7 /* homeVc+delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9811092AC2CD2E00D99EC7 /* homeVc+delegate.swift */; };
+		CE9969DA2CB462B100404BD2 /* make a trip  in Resources */ = {isa = PBXBuildFile; fileRef = CE9969D92CB462B100404BD2 /* make a trip  */; };
 		CE996B542B25AC5D0089D2F4 /* trackYourTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE996B532B25AC5D0089D2F4 /* trackYourTripVC.swift */; };
 		CE996B562B25AC6F0089D2F4 /* trackYourTripVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE996B552B25AC6F0089D2F4 /* trackYourTripVC.xib */; };
 		CE996B602B25DA530089D2F4 /* trackYourTripVC+delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE996B5F2B25DA530089D2F4 /* trackYourTripVC+delegate.swift */; };
@@ -432,6 +435,8 @@
 		CEB5A8602ABCCD8C00A7F4AD /* secureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB5A85F2ABCCD8C00A7F4AD /* secureTextField.swift */; };
 		CEB5A8622ABCDAF700A7F4AD /* customSegmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB5A8612ABCDAF700A7F4AD /* customSegmentController.swift */; };
 		CEB5A8642ABD7ECD00A7F4AD /* tab4.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB5A8632ABD7ECD00A7F4AD /* tab4.swift */; };
+		CEBA951D2CAFF2970068EA01 /* passengersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBA951B2CAFF2970068EA01 /* passengersCell.swift */; };
+		CEBA951E2CAFF2970068EA01 /* passengersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEBA951C2CAFF2970068EA01 /* passengersCell.xib */; };
 		CEBB8B902ADE489A00E70EC4 /* RecentPlacesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB8B8E2ADE489A00E70EC4 /* RecentPlacesCell.swift */; };
 		CEBB8B912ADE489A00E70EC4 /* RecentPlacesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEBB8B8F2ADE489A00E70EC4 /* RecentPlacesCell.xib */; };
 		CEBB8B932ADE77FB00E70EC4 /* mapSearchExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB8B922ADE77FB00E70EC4 /* mapSearchExtention.swift */; };
@@ -496,6 +501,7 @@
 		CEEE6E402C619D0200AB7435 /* basicTripListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE6E3F2C619D0200AB7435 /* basicTripListModel.swift */; };
 		CEEFF5A62C63E1C300337CC2 /* googleplacesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFF5A42C63E1C300337CC2 /* googleplacesCell.swift */; };
 		CEEFF5A72C63E1C300337CC2 /* googleplacesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEEFF5A52C63E1C300337CC2 /* googleplacesCell.xib */; };
+		CEF094182CAEDA3100E04246 /* openChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF094172CAEDA3100E04246 /* openChatModel.swift */; };
 		CEF0E7DC2B4F3AE700DCBD69 /* circularGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF0E7DB2B4F3AE700DCBD69 /* circularGroupView.swift */; };
 		CEF0E7E02B4F3B3C00DCBD69 /* chimeup.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CEF0E7DE2B4F3B3C00DCBD69 /* chimeup.mp3 */; };
 		CEF0E7E12B4F3B3C00DCBD69 /* success.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CEF0E7DF2B4F3B3C00DCBD69 /* success.m4a */; };
@@ -806,6 +812,7 @@
 		CE5B60422CAD40E10093A469 /* DriverBasicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverBasicCell.swift; sourceTree = "<group>"; };
 		CE5B60432CAD40E10093A469 /* DriverBasicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DriverBasicCell.xib; sourceTree = "<group>"; };
 		CE5B60472CAD4A070093A469 /* repeatingClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = repeatingClass.swift; sourceTree = "<group>"; };
+		CE5B7B472CB201E800C9421A /* policesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = policesModel.swift; sourceTree = "<group>"; };
 		CE61789F2ACCF9E500AA8BB7 /* homeSearchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = homeSearchVC.xib; sourceTree = "<group>"; };
 		CE6178A12ACCF9F700AA8BB7 /* homeSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeSearchVC.swift; sourceTree = "<group>"; };
 		CE6178A32ACD08DE00AA8BB7 /* homeSearch+textfieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "homeSearch+textfieldDelegate.swift"; sourceTree = "<group>"; };
@@ -857,6 +864,7 @@
 		CE855BFE2C92F6640098F96A /* userTripCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userTripCell.swift; sourceTree = "<group>"; };
 		CE855BFF2C92F6640098F96A /* userTripCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = userTripCell.xib; sourceTree = "<group>"; };
 		CE855C032C9345DC0098F96A /* mainTripModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainTripModel.swift; sourceTree = "<group>"; };
+		CE8D74942CB3386C005E13B0 /* ApplePayHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayHandler.swift; sourceTree = "<group>"; };
 		CE8DE1452C7B8945005B139F /* walletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = walletModel.swift; sourceTree = "<group>"; };
 		CE8DE1472C7BF93D005B139F /* z2vKVVJpIc.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = z2vKVVJpIc.json; sourceTree = "<group>"; };
 		CE8E389A2CAC93B100471606 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -875,6 +883,7 @@
 		CE9757D02AE1B1E70014346E /* driverProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = driverProfileVC.xib; sourceTree = "<group>"; };
 		CE9757D42AE1B2B00014346E /* driverProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = driverProfileVC.swift; sourceTree = "<group>"; };
 		CE9811092AC2CD2E00D99EC7 /* homeVc+delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "homeVc+delegate.swift"; sourceTree = "<group>"; };
+		CE9969D92CB462B100404BD2 /* make a trip  */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "make a trip "; sourceTree = "<group>"; };
 		CE996B532B25AC5D0089D2F4 /* trackYourTripVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trackYourTripVC.swift; sourceTree = "<group>"; };
 		CE996B552B25AC6F0089D2F4 /* trackYourTripVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = trackYourTripVC.xib; sourceTree = "<group>"; };
 		CE996B5F2B25DA530089D2F4 /* trackYourTripVC+delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "trackYourTripVC+delegate.swift"; sourceTree = "<group>"; };
@@ -932,6 +941,8 @@
 		CEB5A85F2ABCCD8C00A7F4AD /* secureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secureTextField.swift; sourceTree = "<group>"; };
 		CEB5A8612ABCDAF700A7F4AD /* customSegmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customSegmentController.swift; sourceTree = "<group>"; };
 		CEB5A8632ABD7ECD00A7F4AD /* tab4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tab4.swift; sourceTree = "<group>"; };
+		CEBA951B2CAFF2970068EA01 /* passengersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = passengersCell.swift; sourceTree = "<group>"; };
+		CEBA951C2CAFF2970068EA01 /* passengersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = passengersCell.xib; sourceTree = "<group>"; };
 		CEBB8B8E2ADE489A00E70EC4 /* RecentPlacesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentPlacesCell.swift; sourceTree = "<group>"; };
 		CEBB8B8F2ADE489A00E70EC4 /* RecentPlacesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentPlacesCell.xib; sourceTree = "<group>"; };
 		CEBB8B922ADE77FB00E70EC4 /* mapSearchExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapSearchExtention.swift; sourceTree = "<group>"; };
@@ -995,6 +1006,7 @@
 		CEEE6E3F2C619D0200AB7435 /* basicTripListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = basicTripListModel.swift; sourceTree = "<group>"; };
 		CEEFF5A42C63E1C300337CC2 /* googleplacesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = googleplacesCell.swift; sourceTree = "<group>"; };
 		CEEFF5A52C63E1C300337CC2 /* googleplacesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = googleplacesCell.xib; sourceTree = "<group>"; };
+		CEF094172CAEDA3100E04246 /* openChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = openChatModel.swift; sourceTree = "<group>"; };
 		CEF0E7DB2B4F3AE700DCBD69 /* circularGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = circularGroupView.swift; sourceTree = "<group>"; };
 		CEF0E7DE2B4F3B3C00DCBD69 /* chimeup.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chimeup.mp3; sourceTree = "<group>"; };
 		CEF0E7DF2B4F3B3C00DCBD69 /* success.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = success.m4a; sourceTree = "<group>"; };
@@ -1413,6 +1425,7 @@
 		9694AB492A5DE9DA00BDF5F8 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				CE8D74932CB3384A005E13B0 /* APPLEPAY */,
 				CE8E38AF2CAD31AB00471606 /* COMMON */,
 				CE8E38AE2CAD319500471606 /* USER */,
 				CED77C092B6375CD00962E83 /* DRIVER */,
@@ -2356,6 +2369,14 @@
 			path = cells;
 			sourceTree = "<group>";
 		};
+		CE8D74932CB3384A005E13B0 /* APPLEPAY */ = {
+			isa = PBXGroup;
+			children = (
+				CE8D74942CB3386C005E13B0 /* ApplePayHandler.swift */,
+			);
+			path = APPLEPAY;
+			sourceTree = "<group>";
+		};
 		CE8E38982CAC93B100471606 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
@@ -2406,6 +2427,7 @@
 		CE8E38AE2CAD319500471606 /* USER */ = {
 			isa = PBXGroup;
 			children = (
+				CE9969D92CB462B100404BD2 /* make a trip  */,
 				CE115E592ABED5AB00972CC9 /* Home */,
 				CEDDBE1D2ACC456E00677C94 /* searchDestination */,
 				CE6178A52ACD101B00AA8BB7 /* mapSearch */,
@@ -2644,6 +2666,7 @@
 		CEAAAE242CADD77B0076D607 /* tripDetails */ = {
 			isa = PBXGroup;
 			children = (
+				CEBA951A2CAFF2820068EA01 /* cells */,
 				CEAAAE252CADD7A00076D607 /* ProviderTripDetialsVC.swift */,
 				CEAAAE272CADD7AE0076D607 /* ProviderTripDetialsVC.xib */,
 				CEAAAE292CADE3A50076D607 /* peoviderTripDetails+extention.swift */,
@@ -2720,6 +2743,15 @@
 				CE9DB3952AC18346000759B8 /* customSegnmentWithAnimation.swift */,
 			);
 			path = swiftuiExtentions;
+			sourceTree = "<group>";
+		};
+		CEBA951A2CAFF2820068EA01 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				CEBA951B2CAFF2970068EA01 /* passengersCell.swift */,
+				CEBA951C2CAFF2970068EA01 /* passengersCell.xib */,
+			);
+			path = cells;
 			sourceTree = "<group>";
 		};
 		CEBB8B942ADE95D300E70EC4 /* sideMenu */ = {
@@ -2845,6 +2877,8 @@
 				CE855C032C9345DC0098F96A /* mainTripModel.swift */,
 				CECA1D372CAAD8F8007E98BD /* oneVipModel.swift */,
 				CECA1D392CAAF6D4007E98BD /* generaltripModel.swift */,
+				CEF094172CAEDA3100E04246 /* openChatModel.swift */,
+				CE5B7B472CB201E800C9421A /* policesModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -3078,6 +3112,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE2D4AEE2B184EA5008D556E /* filterViewVC.xib in Resources */,
+				CEBA951E2CAFF2970068EA01 /* passengersCell.xib in Resources */,
 				CE8E38A52CAC93B100471606 /* ChatTableViewCell.xib in Resources */,
 				96EA1E3C2A77006B00F39386 /* Alexandria-Black.ttf in Resources */,
 				96EA1E3D2A77006B00F39386 /* Alexandria-Bold.ttf in Resources */,
@@ -3086,6 +3121,7 @@
 				CEDDBE192ACBDFA700677C94 /* sideMenuCell.xib in Resources */,
 				CE9D3CA52C82AD96007E872D /* openCalendarVC.xib in Resources */,
 				CEB29E5A2B49894900F64ED8 /* editProfileVC.xib in Resources */,
+				CE9969DA2CB462B100404BD2 /* make a trip  in Resources */,
 				CE04D9C12B15E8BC00B41157 /* successBookViewVC.xib in Resources */,
 				CE71F47C2B17436500E7B689 /* selectTimeVC.xib in Resources */,
 				96EA1E3F2A77006B00F39386 /* Alexandria-ExtraLight.ttf in Resources */,
@@ -3363,6 +3399,7 @@
 				CE996B602B25DA530089D2F4 /* trackYourTripVC+delegate.swift in Sources */,
 				9641AD272A69674300A29046 /* LoginVC.swift in Sources */,
 				CE4E22E02C0DE0020092AE16 /* ServerPath.swift in Sources */,
+				CE5B7B482CB201E800C9421A /* policesModel.swift in Sources */,
 				9694AC032A5DFACA00BDF5F8 /* Enums.swift in Sources */,
 				CE04D9C42B15F65300B41157 /* shimmer.swift in Sources */,
 				9694AC6D2A5E040D00BDF5F8 /* Extensions+Bundle.swift in Sources */,
@@ -3389,6 +3426,7 @@
 				CE4F0BAF2B77976400337A49 /* driverHome+googleExtention.swift in Sources */,
 				9694ABD42A5DFACA00BDF5F8 /* TableView&CollectionView.swift in Sources */,
 				CEEE6E372C5FAEBC00AB7435 /* cityCell.swift in Sources */,
+				CE8D74952CB3386C005E13B0 /* ApplePayHandler.swift in Sources */,
 				CE9757C42AE0F0BD0014346E /* tripListCell.swift in Sources */,
 				0493588C2B43D838004E5259 /* localizationManager.swift in Sources */,
 				963DAB352A803B64004ED3C7 /* RegisterDriverPersonalInfoVC.swift in Sources */,
@@ -3434,6 +3472,7 @@
 				CE44773D2AE042D5000D96F6 /* calendarSwiftui.swift in Sources */,
 				CE5B603D2CAD36CD0093A469 /* driverMore+extention.swift in Sources */,
 				CE9EBFF12B1396390080A0F2 /* reviewCell.swift in Sources */,
+				CEBA951D2CAFF2970068EA01 /* passengersCell.swift in Sources */,
 				04D81F892B35BC1F00AAA66C /* swiftRegister+extention .swift in Sources */,
 				CE7D82F72AC3BB1100C5B028 /* MainAlert.swift in Sources */,
 				CE2D4AF12B185483008D556E /* filterCell.swift in Sources */,
@@ -3516,6 +3555,7 @@
 				CE5B60442CAD40E10093A469 /* DriverBasicCell.swift in Sources */,
 				CEF9737A2AC1D4B600CDCCFD /* UIResponder+Current.swift in Sources */,
 				CE22928B2B1E638300E8AB42 /* hotelCell.swift in Sources */,
+				CEF094182CAEDA3100E04246 /* openChatModel.swift in Sources */,
 				CECA1D3A2CAAF6D4007E98BD /* generaltripModel.swift in Sources */,
 				963DAB362A803B64004ED3C7 /* RegisterDriverPersonalInfoCell.swift in Sources */,
 				04B659EC2B3451EB00E78752 /* cardModel.swift in Sources */,

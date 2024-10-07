@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="69" id="KGk-i7-Jjw" customClass="passengersCell" customModule="Takhawi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="418" height="69"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="418" height="69"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 1000002906" translatesAutoresizingMaskIntoConstraints="NO" id="JHp-yO-iwM">
+                        <rect key="frame" x="20" y="12" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="sNp-NP-ody"/>
+                            <constraint firstAttribute="height" constant="40" id="vC0-D9-qWN"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ye1-Sf-UHK">
+                        <rect key="frame" x="70" y="10" width="36" height="17"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                        <color key="textColor" name="MainColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nLc-7e-gqZ" customClass="CosmosView" customModule="Cosmos">
+                        <rect key="frame" x="70" y="32" width="90" height="20"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="90" id="Y2G-wB-Iak"/>
+                            <constraint firstAttribute="height" constant="20" id="YqB-zq-uMm"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="filledImage" value="star 1"/>
+                            <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="star"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                <real key="value" value="14"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojB-25-3Zi">
+                        <rect key="frame" x="323" y="12" width="75" height="40"/>
+                        <color key="backgroundColor" name="MainColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="75" id="IET-Xt-qz0"/>
+                            <constraint firstAttribute="height" constant="40" id="MAi-pf-NZJ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Arrived">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Arrived"/>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="nLc-7e-gqZ" firstAttribute="leading" secondItem="JHp-yO-iwM" secondAttribute="trailing" constant="10" id="20B-ob-9Uh"/>
+                    <constraint firstItem="JHp-yO-iwM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="BLS-FO-WhG"/>
+                    <constraint firstItem="Ye1-Sf-UHK" firstAttribute="leading" secondItem="JHp-yO-iwM" secondAttribute="trailing" constant="10" id="El9-BB-ERZ"/>
+                    <constraint firstAttribute="trailing" secondItem="ojB-25-3Zi" secondAttribute="trailing" constant="20" id="HIe-HM-rfl"/>
+                    <constraint firstItem="Ye1-Sf-UHK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Qfy-pE-Oyp"/>
+                    <constraint firstItem="JHp-yO-iwM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="bHU-w4-j78"/>
+                    <constraint firstItem="nLc-7e-gqZ" firstAttribute="top" secondItem="Ye1-Sf-UHK" secondAttribute="bottom" constant="5" id="mUb-6g-uAZ"/>
+                    <constraint firstItem="ojB-25-3Zi" firstAttribute="centerY" secondItem="JHp-yO-iwM" secondAttribute="centerY" id="z6H-zb-UGf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="arraivedOutlet" destination="ojB-25-3Zi" id="7k6-E8-sNi"/>
+                <outlet property="passengerImage" destination="JHp-yO-iwM" id="wHG-fl-BaM"/>
+                <outlet property="passengerName" destination="Ye1-Sf-UHK" id="W9C-vB-zL8"/>
+                <outlet property="rate" destination="nLc-7e-gqZ" id="DN7-j6-Uwl"/>
+            </connections>
+            <point key="canvasLocation" x="-4.5801526717557248" y="-25"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Group 1000002906" width="70" height="70"/>
+        <image name="star" width="16" height="16"/>
+        <image name="star 1" width="16" height="16"/>
+        <namedColor name="MainColor">
+            <color red="0.35294117647058826" green="0.25882352941176473" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

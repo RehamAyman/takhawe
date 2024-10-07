@@ -9,6 +9,7 @@
 
 import UIKit
 import Lottie
+import PassKit
 
 
 
@@ -18,6 +19,7 @@ class ReserveTheTripVC: BaseVC {
     @IBOutlet weak var topBackView: UIView!
     @IBOutlet weak var promorCodeStack: UIStackView!
     @IBOutlet weak var checkCodeOutlet: UIButton!
+    
     
     @IBOutlet weak var totalPrice: UILabel!
     @IBOutlet weak var priceIndicator: UIActivityIndicatorView!
@@ -32,7 +34,7 @@ class ReserveTheTripVC: BaseVC {
     @IBOutlet weak var driverImage: UIImageView!
     @IBOutlet weak var tripDate: UILabel!
     @IBOutlet weak var codePrice: UILabel!
-    
+ 
     @IBOutlet weak var vatCost: UILabel!
     //MARK: - Properties -
     var selectedItem : Int = 0 
@@ -43,26 +45,40 @@ class ReserveTheTripVC: BaseVC {
     let logoAnimation = LottieAnimationView(name: "Q2ix9ldDnm")
     var tripDetails : BasicTripResult?
     var tripId : Int = 0 
+    
+    var appleseatPrice : String = ""
+    var applevatPrice : String = ""
+    var appletotalPrice : String = ""
+   
     let DummyPaymentMethods : [dummyPaymentMethods] = [
 
         dummyPaymentMethods(icon:"" , number: "**** **** **** 8970", expireIn: "Expires: 12/26", type: "wallet", selected: false , id: .wallet ) ,
-        dummyPaymentMethods(icon:"" , number: "**** **** **** 8970", expireIn: "Expires: 12/26", type: "cash", selected: false , id: .cash)
+        dummyPaymentMethods(icon:"" , number: "**** **** **** 8970", expireIn: "Expires: 12/26", type: "cash", selected: false , id: .cash) ,
+        dummyPaymentMethods(icon:"" , number: "**** **** **** 8970", expireIn: "Expires: 12/26", type: "ApplePay", selected: false , id: .applePay)
     ]
 
+    
+    
+    
+    let paymentHandler = PaymentHandler()
  
     
 // MARK: - Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureInitialDesign()
+        
+   
+
     }
     
     
     
-    
+
 //MARK: - Design Methods -
     private func configureInitialDesign() {
         self.title = "".localized
+        
         driverImage.layer.addBasicShadow(cornerRadius: 33.5)
         topBackView.layer.addBasicShadow(cornerRadius: 10)
         paymentMethodTable.dataSource = self
@@ -72,6 +88,8 @@ class ReserveTheTripVC: BaseVC {
         self.dicountCodeTextField.setLeftPaddingPoints(12)
         self.dicountCodeTextField.setRightPaddingPoints(12)
         self.dicountCodeTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
+        
+        
         if self.viptrip {
             self.getVipDetails()
             self.calculateVipPrice()
@@ -98,10 +116,43 @@ class ReserveTheTripVC: BaseVC {
     @IBAction func confirmTrip(_ sender: UIButton) {
 
         
-        if viptrip {
-            self.confirmOffer()
+       
+        
+        if self.paymentMethod == .applePay {
+            
+            
+            
+            
+            self.paymentHandler.startPayment(total: appletotalPrice ,
+                                             VAT:  applevatPrice ,
+                                             serviceCost: appleseatPrice  ) { success  in
+                if success {
+                    print("success ")
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                        if self.viptrip {
+                            self.GotoNextStep(tripId: self.offer?.trip_id ?? 0 )
+                           
+                        } else {
+                            self.GotoNextStep(tripId: self.tripDetails?.id ?? 0 )
+                        }
+                    }
+                
+                    
+                    
+                } else {
+                    
+                    
+                    print( "failed ")
+                }
+            }
+            
+            
         } else {
-            self.joinAbasicTrip()
+            if viptrip {
+                self.confirmOffer()
+            } else {
+                self.joinAbasicTrip()
+            }
         }
         
         
@@ -178,6 +229,10 @@ extension ReserveTheTripVC {
                
                 if let res =  response.result {
                     self.totalPrice.text =  "\(res.total_price ?? 0)" + " " + "SAR".localize
+                    self.appletotalPrice = "\(res.total_price ?? 0)"
+                    self.appleseatPrice = "\(res.price ?? 0)"
+                    self.applevatPrice = "\(res.app_share ?? 0)"
+                    
                     self.vatCost.text = "\(res.app_share ?? 0)" + " " + "SAR".localize
                     if res.discount != 0 {
                         self.codePrice.text =  "\(res.discount ?? 0)" + " " + "SAR".localize
@@ -208,6 +263,9 @@ extension ReserveTheTripVC {
                 if let res =  response.result {
                     self.totalPrice.text =  "\(res.total_price ?? 0)" + " " + "SAR".localize
                     self.vatCost.text = "\(res.app_share ?? 0)" + " " + "SAR".localize
+                    self.applevatPrice =  "\(res.app_share ?? 0)"
+                    self.appleseatPrice =  "\(res.price ?? 0)"
+                    self.appletotalPrice = "\(res.total_price ?? 0)"
                     if res.discount != 0 {
                         self.codePrice.text =  "\(res.discount ?? 0)" + " " + "SAR".localize
                         self.promorCodeStack.isHidden = false

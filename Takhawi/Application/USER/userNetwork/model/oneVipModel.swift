@@ -99,7 +99,7 @@ struct oneVipTrip : Codable {
     let updatedAt : String?
     let deletedAt : String?
     let features : [String]?
-    let driver_id : String?
+    let driver_id : Int?
     let vehicle_id : String?
 
     enum CodingKeys: String, CodingKey {
@@ -144,7 +144,7 @@ struct oneVipTrip : Codable {
         updatedAt = try values.decodeIfPresent(String.self, forKey: .updatedAt)
         deletedAt = try values.decodeIfPresent(String.self, forKey: .deletedAt)
         features = try values.decodeIfPresent([String].self, forKey: .features)
-        driver_id = try values.decodeIfPresent(String.self, forKey: .driver_id)
+        driver_id = try values.decodeIfPresent(Int.self, forKey: .driver_id)
         vehicle_id = try values.decodeIfPresent(String.self, forKey: .vehicle_id)
     }
 

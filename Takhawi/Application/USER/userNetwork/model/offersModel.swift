@@ -77,6 +77,7 @@ struct AdditionalDriver : Codable {
 
 
 struct Driver : Codable {
+   
     let name : String?
     let avatar : String?
     let driver_rate : Double?
@@ -84,11 +85,12 @@ struct Driver : Codable {
    
 
     enum CodingKeys: String, CodingKey {
-
+     
         case name = "name"
         case avatar = "avatar"
         case driver_rate = "driver_rate"
         case vehicles = "Vehicles"
+        
        
     }
 
@@ -101,6 +103,7 @@ struct GDriver : Codable {
     let driver_rate : Double?
     let vehicles : Vehicles?
     let phone : String?
+    let id : Int?
 
     enum CodingKeys: String, CodingKey {
 
@@ -109,6 +112,7 @@ struct GDriver : Codable {
         case driver_rate = "driver_rate"
         case vehicles = "Vehicles"
         case phone = "phone"
+        case id = "id"
     }
 
 

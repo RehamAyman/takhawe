@@ -20,6 +20,8 @@ enum DriverRouter {
     case getMeetingLocations
     case getPrevVipTrips ( lat : Double , lng : Double)
     case makeOffer( id : Int , price : Int , features : [String] )
+    case updateTripStatus ( id : Int , type : String )
+    case markPassenger ( id : Int )
 }
 
 extension DriverRouter : APIRouter {
@@ -32,11 +34,15 @@ extension DriverRouter : APIRouter {
     var method: HTTPMethod {
         switch self {
             
-        case .createAvehicle , .createBasic , .makeOffer  :
+        case .createAvehicle , .createBasic , .makeOffer   :
             return .post
         
         case  .driverStatus , .vehicleDetials , .getMeetingLocations , .getPrevVipTrips   :
           return .get
+            
+            
+        case .updateTripStatus , .markPassenger :
+            return .patch
             
         }
     }
@@ -60,6 +66,10 @@ extension DriverRouter : APIRouter {
             return driverServerPath.getPrevVipTrips
         case .makeOffer(id: let id , price: _ , features: _ ):
             return driverServerPath.makeOffer(id: id )
+        case .updateTripStatus(id: let id , type: _):
+            return driverServerPath.updateTripStatus(id: id)
+        case .markPassenger(id: let id ):
+            return driverServerPath.markPassengerAttend(id: id )
   
        
         }
@@ -69,6 +79,13 @@ extension DriverRouter : APIRouter {
     
     var parameters: APIParameters? {
         switch self {
+        case .updateTripStatus(id: _  , type: let type ):
+            return [
+                "status" : type
+            ]
+           
+      
+            
         case .createAvehicle(serialNum: let serialNum , plateAlphabet: let plateAlpha, plateNum: let plateNum , year: let year , seats: let seats , class: let classNum , color: let color, type: let type , name: let name ):
             return [
                 "serial_no": serialNum ,
@@ -113,7 +130,7 @@ extension DriverRouter : APIRouter {
             ]
             
      
-        case  .driverStatus , .vehicleDetials    :
+        case  .driverStatus , .vehicleDetials  , .markPassenger   :
             return nil
             
         }

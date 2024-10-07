@@ -24,7 +24,7 @@ class tripsSideMenuVC: BaseVC {
     var upcommingTrips : [MainTripResult] =  []
     var driver : Bool = false
     var tripType : tripType = .basic
-    
+    var tripStatus : tripStatus = .comming
     
     //MARK: - Creation -
   
@@ -55,12 +55,15 @@ class tripsSideMenuVC: BaseVC {
         switch sender.selectedSegmentIndex {
         case 0 :
             print("upcomming ")
+           
             self.getUpcommingTrips(withLoading: true )
         case 1:
             print("completed ")
+           
             self.getCompletedTrips()
         case 2:
             print("cancelled")
+            
             self.getCancelledTrips()
         default:
             print("def")
@@ -84,8 +87,29 @@ extension tripsSideMenuVC {
             guard let self = self else { return  }
             if let result = response.result {
                 self.upcommingTrips = result
+                
                 self.tableView.reloadData()
             }
+        }
+    }
+    
+    
+    func handleTripStatus ( status  : String) {
+        switch status {
+        case "UPCOMING" :
+            self.tripStatus = .comming
+        case "ON_WAY" :
+            self.tripStatus = .onWay
+        case "CANCELLED" :
+            self.tripStatus = .cancelled
+        case "COMPLETED" :
+            self.tripStatus = .completed
+        case "ARRIVED" :
+            self.tripStatus = .arrived
+        case "INPROGRESS":
+            self.tripStatus = .inProgress
+        default:
+            self.tripStatus = .comming
         }
     }
     
@@ -105,7 +129,8 @@ extension tripsSideMenuVC {
     
     func getCompletedTrips () {
         let type : String = driver ?  tripType.rawValue :  ""
-        activityIndicatorr.startAnimating()
+            activityIndicatorr.startAnimating()
+     
         UserRouter.getCompletedTrips(type: type ).send { [weak self ] (response : APIGenericResponse<[MainTripResult]> )  in
             guard let self = self else { return  }
            if let result = response.result {

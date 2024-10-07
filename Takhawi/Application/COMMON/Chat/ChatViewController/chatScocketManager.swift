@@ -26,7 +26,7 @@ open class ChatSocketConnection {
     
     
     enum MessageTypeValue: String {
-        case text
+        case text = "TEXT"
         case image
         case file
         case video
@@ -113,7 +113,7 @@ open class ChatSocketConnection {
         let id: String
         let roomId: String
         let avatar: String
-        let senderId: String
+        let senderId: Int
         let receiverId: String
         let type: MessageType
         let isSender: Bool
@@ -134,26 +134,32 @@ open class ChatSocketConnection {
         let id: String
         let type: UserType
     }
-    
+//    {
+//        "chatId": "f4f472e7-8f7a-4562-a6d4-cee9ac394668",
+//        "content": "Hello",
+//        "contentType": "TEXT" // OPTIONAL NOTE: Only Text Supported For Now
+//    }
+
+    //
     
     //MARK: - Constants -
     private enum EmitTypes: String {
-        case enterChat = "enterChat"
-        case exitChat = "exitChat"
-        case sendMessage = "sendMessage"
+        case enterChat = "join chat"
+        case exitChat = "leave chat"
+        case sendMessage = "message"
         case updateLocation = "updatelocation"
         case addtracker = "addtracker"
     }
     private enum ReceiveTypes {
-        static let sendMessageRes = "sendMessageRes"
+        static let sendMessageRes = "message"
         static let trackorder = "trackorder"
     }
     private enum DataSocketKeys {
-        static let conversationId = "room_id"
+        static let conversationId = "chatId"
         static let receiverId = "receiver_id"
         static let receiverType = "receiver_type"
-        static let messageType = "type"
-        static let message = "body"
+        static let messageType = "contentType"
+        static let message = "content"
         static let duration = "duration"
         static let fileName = "name"
         static let thumbnail = "thumbnail"
@@ -272,8 +278,12 @@ open class ChatSocketConnection {
         manager = SocketManager(
             socketURL: URL(string: url)!,
             config: [
-                .log(false),
-                .connectParams(connectParams)
+                .log(true),
+                .connectParams(connectParams) ,
+                .reconnects(true),        // Automatically try to reconnect
+                .reconnectWait(5) ,
+                .extraHeaders(["authorization": UserDefaults.accessToken ?? ""
+                                , "Accept-Language": LocalizationManager.shared.getLanguage() == .Arabic ? "ar" : "en" ])
             ]
         )
         socket = manager.defaultSocket
@@ -313,7 +323,7 @@ open class ChatSocketConnection {
         
         /// `Type`
         var type: MessageTypeValue = .text
-        if let stringType = dictionary["type"] as? String {
+        if let stringType = dictionary["contentType"] as? String {
             if let messageTypeValue = MessageTypeValue(rawValue: stringType) {
                 type = messageTypeValue
             } else {
@@ -326,7 +336,7 @@ open class ChatSocketConnection {
         
         /// `Body`
         var body: String = " "
-        if let messageBody = dictionary["body"] as? String {
+        if let messageBody = dictionary["content"] as? String {
             body = messageBody
         } else {
             log("Received message has no value associated with the key `body`, we set the body of the message to ` ` as a default.")
@@ -530,7 +540,7 @@ open class ChatSocketConnection {
             id: messageId,
             roomId: roomId,
             avatar: avatar,
-            senderId: senderId,
+            senderId: Int( senderId ) ?? 0 ,
             receiverId: receiverId,
             type: messageType,
             isSender: sender.id == senderId,//isSender,
@@ -624,9 +634,18 @@ open class ChatSocketConnection {
         messageType: MessageType,
         completion: (() -> ())?
     ) {
+        
+//        {
+//            "chatId": "f4f472e7-8f7a-4562-a6d4-cee9ac394668",
+//            "content": "Hello",
+//            "contentType": "TEXT" // OPTIONAL NOTE: Only Text Supported For Now
+//        }
+
         var data: [String: String] = messageType.socketParameters
-        data[DataSocketKeys.receiverId] = self.receiver.id
-        data[DataSocketKeys.receiverType] = receiver.type.rawValue
+       // data[DataSocketKeys.receiverId] = self.receiver.id
+       //  data[DataSocketKeys.receiverType] = receiver.type.rawValue
+        data[DataSocketKeys.conversationId] = self.conversationId
+      
         emit(for: EmitTypes.sendMessage, data: data, completion: completion)
     }
     

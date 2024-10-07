@@ -8,6 +8,7 @@
 import UIKit
 import GoogleMaps
 import MapKit
+import CoreLocation
 
 
 
@@ -15,8 +16,16 @@ extension DriverHomeVC :  CLLocationManagerDelegate  , GMSMapViewDelegate  {
     
     //MARK: - GOOGLE MAPS METHODS
      func setUpGoogleMapView () {
+         // Setup location manager
+                
+                          
+            locationManager.delegate = self
             locationManager.requestLocation()
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.distanceFilter = 10 // meters
+            locationManager.requestWhenInUseAuthorization()
             locationManager.startUpdatingLocation()
+         
             googleMaps.delegate = self
         
             googleMaps.isMyLocationEnabled = true 
@@ -44,10 +53,21 @@ extension DriverHomeVC :  CLLocationManagerDelegate  , GMSMapViewDelegate  {
 //        let long = "\(locationManager.location?.coordinate.longitude ?? 0.0 )"
         guard let latitude = locationManager.location?.coordinate.latitude else { return}
         guard let longitude =  locationManager.location?.coordinate.longitude else { return}
+        print(latitude)
+        print(longitude)
+        
+        
+        
+        
         getAddress(lat: latitude , Lng: longitude)
         // pass to the socket my location
         
         socketManager.sendMyLocation(lat: latitude , lng: longitude)
+        
+        
+        
+        
+        
         
     }
     

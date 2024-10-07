@@ -10,15 +10,13 @@ import Foundation
 
 
 extension DriverMoreVC {
-    
-
-    
+     
     func handleVCActions () {
         self.goToBasicTripsList()
         self.goToVipTrips()
+        self.openPolices()
+        self.openAboutUs()
     }
-    
-    
     
     
     
@@ -45,8 +43,21 @@ extension DriverMoreVC {
     }
     
     
+    //MARK: - OPEN POLICES
+    private func openPolices () {
+        polices.addTapGesture {
+            let vc = policesVC()
+            self.push(vc)
+        }
+    }
     
     
+    private func openAboutUs () {
+        aboutUs.addTapGesture {
+            self.push(aboutUsVC())
+        }
+       
+    }
     
     
 }

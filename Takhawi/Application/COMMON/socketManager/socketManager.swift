@@ -42,6 +42,7 @@ class MySocketManager {
     
 
     func connect() {
+      
         socket = manager.defaultSocket
         
         // Handle connection events
@@ -70,7 +71,7 @@ class MySocketManager {
     
     func disconnect() {
         print(" 🌏🌏 disconnect 🌏🌏")
-        socket.disconnect()
+       // socket.disconnect()
     }
     
     
@@ -85,6 +86,9 @@ class MySocketManager {
         socket.emit("pingFromClient", "ping")
     }
     
+    
+
+ 
     
     
 
@@ -107,15 +111,24 @@ class MySocketManager {
             "lat": lat ,
             "lng": lng
         ]
+    
+        
         
         if self.socket.status != .connected {
             socket.on(clientEvent: .connect) { data, ack in
                 print("1- update my location to the server ")
                 
+                
+                
                 self.socket.emit("update location", data)
             }
         } else {
+            
+            
+            
+            
             print("2- update my location to the server ")
+            print(data)
             self.socket.emit("update location", data)
         }
         

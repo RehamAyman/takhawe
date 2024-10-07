@@ -47,8 +47,20 @@ extension tripsSideMenuVC : UITableViewDelegate , UITableViewDataSource {
         cell.to.text = item.destination?.description ?? ""
         cell.from.text = item.pickup_location?.description ?? ""
         cell.orderDate.text = item.start_date?.convertFromIso()
-        cell.rateView.isUserInteractionEnabled = false 
+        cell.rateView.isUserInteractionEnabled = false
         
+        
+        
+        cell.addTapGesture {
+            if self.driver == false  && self.segment.selectedSegmentIndex == 0 {
+                self.goToTripTrakingView(item: item)
+            } else if self.driver {
+                self.goToDriverTripDetails(item: item )
+            }
+        }
+        
+        
+
         
         if self.driver && self.tripType == .basic {
             cell.rateView.isHidden = true
@@ -75,17 +87,14 @@ extension tripsSideMenuVC : UITableViewDelegate , UITableViewDataSource {
             }
             
         }
+        
+       
 
         
         switch segment.selectedSegmentIndex {
         case 0 : // upcomming
-            cell.addTapGesture {
-                if self.driver {
-                    self.goToDriverTripDetails(item: item )
-                } else {
-                    self.goToTripTrakingView(item: item)
-                }
-            }
+          
+            print("upcomming def mode ")
         case 1 : // completed
             cell.doneLabel.isHidden = false
             cell.doneView.isHidden = false
@@ -152,10 +161,30 @@ extension tripsSideMenuVC : UITableViewDelegate , UITableViewDataSource {
 
 
     
-    private func goToDriverTripDetails (item : MainTripResult  ) {
+    private func goToDriverTripDetails (item : MainTripResult    ) {
+        
+        
          let vc = ProviderTripDetialsVC()
          vc.passedTrip =  item
+         self.handleTripStatus(status: item.status ?? "" )
+         print("... 👀 status is : \(self.tripStatus) 👀 ....  ")
+       
          vc.tripType = self.tripType
+         vc.tripStatus = self.tripStatus
+        vc.action = {
+            switch self.segment.selectedSegmentIndex {
+            case 0:
+                self.getUpcommingTrips(withLoading: false )
+            case 1:
+                self.getCompletedTrips()
+            case 2:
+                self.getCancelledTrips()
+                
+            default:
+                print("def")
+            }
+          
+        }
          push(vc )
      }
     

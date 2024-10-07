@@ -13,6 +13,7 @@ class policesVC: BaseVC {
     
     //MARK: - IBOutlets -
     
+    @IBOutlet weak var textView: UITextView!
     
     //MARK: - Properties -
     
@@ -23,6 +24,7 @@ class policesVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureInitialDesign()
+        self.getPolices()
     }
     
     
@@ -41,7 +43,16 @@ class policesVC: BaseVC {
 
 //MARK: - Networking -
 extension policesVC {
-    
+    func getPolices () {
+        activityIndicatorr.startAnimating()
+        UserRouter.getPolices.send { [weak self ] (response : APIGenericResponse<polices> ) in
+            guard let self = self else { return }
+            if let res = response.result {
+                self.textView.text = res.content ?? "" 
+                
+            }
+        }
+    }
 }
 
 //MARK: - Routes -

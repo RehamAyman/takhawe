@@ -357,3 +357,9 @@
 "User Profile" = "ملف العميل" ;
 "Enter price" = "ادخل السعر" ;
 "Send Offer" = "ارسل العرض ";
+"On Way" = "في الطريق" ;
+"Arrived" = "حضر" ;
+"I Arrived" = "تم الوصول" ; 
+"Start Trip" = "بدء الرحلة" ;
+"Picking up" =  "يتم توصيل" ; 
+"Takhawe" = "تخاوي" ;
