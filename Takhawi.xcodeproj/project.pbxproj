@@ -450,6 +450,8 @@
 		CECC3D4A2C6B250B007AD2D4 /* vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECC3D492C6B250A007AD2D4 /* vehicle.swift */; };
 		CECF87172CB4C43F001A705B /* messagesExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF87162CB4C43E001A705B /* messagesExtention.swift */; };
 		CECF871A2CB4C73D001A705B /* chatDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF87192CB4C73D001A705B /* chatDataModel.swift */; };
+		CECF871D2CB52C52001A705B /* accedintViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF871C2CB52C52001A705B /* accedintViewVC.swift */; };
+		CECF871F2CB52C5E001A705B /* accedintViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECF871E2CB52C5E001A705B /* accedintViewVC.xib */; };
 		CED0C29F2B4936B600BCD6D0 /* alfont_com_هلفيتيكا-عربي-.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED0C29E2B4936B600BCD6D0 /* alfont_com_هلفيتيكا-عربي-.ttf */; };
 		CED288902B49B7EB00E075CE /* editProfileVC+extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED2888F2B49B7EB00E075CE /* editProfileVC+extentions.swift */; };
 		CED288942B49B87B00E075CE /* hobbiesCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED288922B49B87B00E075CE /* hobbiesCellCollectionViewCell.swift */; };
@@ -957,6 +959,8 @@
 		CECC3D492C6B250A007AD2D4 /* vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vehicle.swift; sourceTree = "<group>"; };
 		CECF87162CB4C43E001A705B /* messagesExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = messagesExtention.swift; sourceTree = "<group>"; };
 		CECF87192CB4C73D001A705B /* chatDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatDataModel.swift; sourceTree = "<group>"; };
+		CECF871C2CB52C52001A705B /* accedintViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accedintViewVC.swift; sourceTree = "<group>"; };
+		CECF871E2CB52C5E001A705B /* accedintViewVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = accedintViewVC.xib; sourceTree = "<group>"; };
 		CED0C29E2B4936B600BCD6D0 /* alfont_com_هلفيتيكا-عربي-.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "alfont_com_هلفيتيكا-عربي-.ttf"; sourceTree = "<group>"; };
 		CED2888F2B49B7EB00E075CE /* editProfileVC+extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "editProfileVC+extentions.swift"; sourceTree = "<group>"; };
 		CED288922B49B87B00E075CE /* hobbiesCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hobbiesCellCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -2803,6 +2807,15 @@
 			path = rateTheDriver;
 			sourceTree = "<group>";
 		};
+		CECF871B2CB52C27001A705B /* AccedientView */ = {
+			isa = PBXGroup;
+			children = (
+				CECF871C2CB52C52001A705B /* accedintViewVC.swift */,
+				CECF871E2CB52C5E001A705B /* accedintViewVC.xib */,
+			);
+			path = AccedientView;
+			sourceTree = "<group>";
+		};
 		CED288912B49B85E00E075CE /* cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -2831,6 +2844,7 @@
 		CED77C092B6375CD00962E83 /* DRIVER */ = {
 			isa = PBXGroup;
 			children = (
+				CECF871B2CB52C27001A705B /* AccedientView */,
 				CE8291F52C4174E800E289EF /* driverNetwork */,
 				CE9D3CAE2C853B99007E872D /* DriverMore */,
 				CE4F0BA42B764A2200337A49 /* DriverHome */,
@@ -3132,6 +3146,7 @@
 				963DAB302A7FDD9B004ED3C7 /* DriverRegisterVC.xib in Resources */,
 				96EA1E412A77006B00F39386 /* Alexandria-Medium.ttf in Resources */,
 				CE3CEEDC2B1648FC00619C79 /* makeAtripAlertPopUpVC.xib in Resources */,
+				CECF871F2CB52C5E001A705B /* accedintViewVC.xib in Resources */,
 				96202C852A7FB98800053C5B /* EnterMobileVC.xib in Resources */,
 				04B659E52B34443D00E78752 /* addAmountVC.xib in Resources */,
 				CEE69AE72B4C344200E2E58D /* Cairo-Regular.ttf in Resources */,
@@ -3358,6 +3373,7 @@
 				9694AC012A5DFACA00BDF5F8 /* SocialMedia.swift in Sources */,
 				CE4E22DA2C0DDFD30092AE16 /* APIParameters.swift in Sources */,
 				9694ABE72A5DFACA00BDF5F8 /* extensionUICollectionView.swift in Sources */,
+				CECF871D2CB52C52001A705B /* accedintViewVC.swift in Sources */,
 				9694AC052A5DFACA00BDF5F8 /* ValidationErrors.swift in Sources */,
 				CE0F42F72B4D0F55005694AC /* onboardingSwiftuiVC.swift in Sources */,
 				9694AC702A5E040D00BDF5F8 /* Extensions+UICollectionView.swift in Sources */,

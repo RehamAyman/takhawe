@@ -48,7 +48,7 @@ extension DriverHomeVC :  CLLocationManagerDelegate  , GMSMapViewDelegate  {
         print("listen")
        
         centerMapOnLocation(location: locationManager.location!)
-       // self.locationManager.stopUpdatingLocation()
+       self.locationManager.stopUpdatingLocation()
 //        let lat = "\(locationManager.location?.coordinate.latitude ?? 0.0)"
 //        let long = "\(locationManager.location?.coordinate.longitude ?? 0.0 )"
         guard let latitude = locationManager.location?.coordinate.latitude else { return}
@@ -101,6 +101,30 @@ extension DriverHomeVC :  CLLocationManagerDelegate  , GMSMapViewDelegate  {
     }
     
     
+    
+    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+          print("Tapped at location: \(coordinate.latitude), \(coordinate.longitude)")
+          
+          // Clear existing markers
+          mapView.clear()
+          
+          // Add a marker at the tapped location
+          let marker = GMSMarker()
+          marker.position = coordinate
+          marker.title = "Pinned Location"
+          marker.snippet = "Lat: \(coordinate.latitude), Lng: \(coordinate.longitude)"
+          marker.map = mapView
+          self.showAccedintView(lat: coordinate.latitude , lng: coordinate.longitude)
+      }
+    
+    
+    
+    private func showAccedintView (lat : Double , lng : Double ) {
+        let vc = accedintViewVC()
+        vc.modalPresentationStyle = .overFullScreen
+        
+        self.present(vc , animated: true )
+    }
     
     
     

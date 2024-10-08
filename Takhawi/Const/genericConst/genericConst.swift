@@ -45,3 +45,16 @@ case completed = "COMPLETED"
     
     
 }
+
+
+
+enum reportaccedint {
+    case radar
+    case animal
+    case accident
+    case changeDirection
+    case alert
+    case speed
+    case work
+    
+}

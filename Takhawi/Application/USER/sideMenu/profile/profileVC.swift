@@ -13,7 +13,15 @@ class profileVC: BaseVC {
     
 //MARK: - IBOutlets -
     @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var vechcleupdateView: UIView!
     
+    @IBOutlet weak var profileCompleteExplain: UILabel!
+    @IBOutlet weak var carName: UILabel!
+    @IBOutlet weak var enNum: UILabel!
+    @IBOutlet weak var arNum: UILabel!
+    @IBOutlet weak var enAlpha: UILabel!
+    @IBOutlet weak var arAlpha: UILabel!
+    @IBOutlet weak var completeProfileProgress: UIProgressView!
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var userImage: UIImageView!
@@ -30,6 +38,11 @@ class profileVC: BaseVC {
     ]
 
     var profileData : profileResult?
+    var isDriver : Bool = false 
+    
+    
+    @IBOutlet weak var deleteCar: UIButton!
+    
 // MARK: - Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +67,11 @@ class profileVC: BaseVC {
         collectionView.dataSource = self
         self.collectionView.register(cellType: profileCell.self)
         self.collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        if self.isDriver {
+            self.vechcleupdateView.isHidden = false
+            self.vechcleupdateView.isUserInteractionEnabled = true
+            self.vechcleupdateView.layer.addBasicShadow(cornerRadius: 15)
+        }
     }
     
 //MARK: - Actions -
@@ -83,12 +101,25 @@ extension profileVC {
             if let result = response.result {
                 self.profileData = result
                 self.hobbies = result.hobbies ?? []
+               
+                if let profileCompleted = result.profile_complted {
+                    let pro1Float  = Float ( profileCompleted )
+                    self.completeProfileProgress.progress = pro1Float / 100
+                    self.profileCompleteExplain.text = "\(profileCompleted)%" + " of your profile completed".localize
+                }
+             
                 if let imageString = result.avatar {
                     let avatar = Server.imageBase.rawValue + imageString
                     self.userImage.setImage(image: avatar )
                 }
                
                 self.userName.text = result.name ?? ""
+                self.carName.text = "--"
+                self.arAlpha.text = result.Vehicles?.plate_alphabet ?? ""
+                self.enAlpha.text = result.Vehicles?.plate_alphabet ?? ""
+                self.enNum.text = result.Vehicles?.plate_number ?? ""
+                self.arNum.text = result.Vehicles?.plate_number ?? "" 
+                
                 self.collectionView.reloadData()
             }
         }

@@ -20,6 +20,8 @@ struct profileResult : Codable {
     let prefered_language : String?
     let city : cityDataModel?
     let hobbies : [HobbiesClass]?
+    let profile_complted : Int?
+    let Vehicles : Vehicles?
 
     enum CodingKeys: String, CodingKey {
 
@@ -34,22 +36,11 @@ struct profileResult : Codable {
         case prefered_language = "prefered_language"
         case city = "City"
         case hobbies = "Hobbies"
+        case profile_complted = "profile_complted"
+        case Vehicles = "Vehicles"
     }
 
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        id = try values.decodeIfPresent(Int.self, forKey: .id)
-        avatar = try values.decodeIfPresent(String.self, forKey: .avatar)
-        name = try values.decodeIfPresent(String.self, forKey: .name)
-        email = try values.decodeIfPresent(String.self, forKey: .email)
-        phone = try values.decodeIfPresent(String.self, forKey: .phone)
-        birth_date = try values.decodeIfPresent(String.self, forKey: .birth_date)
-        gender = try values.decodeIfPresent(String.self, forKey: .gender)
-        bio = try values.decodeIfPresent(String.self, forKey: .bio)
-        prefered_language = try values.decodeIfPresent(String.self, forKey: .prefered_language)
-        city = try values.decodeIfPresent(cityDataModel.self, forKey: .city)
-        hobbies = try values.decodeIfPresent([HobbiesClass].self, forKey: .hobbies)
-    }
+   
 
 }
 

@@ -18,6 +18,7 @@ extension DriverMoreVC {
         self.openAboutUs()
         self.openHelpAndSupport()
         self.openLanguage()
+        self.openProfileInfo()
     }
     
     
@@ -75,6 +76,14 @@ extension DriverMoreVC {
             self.push(vc)
         }
        
+    }
+    
+    private func openProfileInfo () {
+        self.personalInfo.addTapGesture {
+            let vc = profileVC()
+            vc.isDriver = true 
+            self.push(vc)
+        }
     }
     
 }
