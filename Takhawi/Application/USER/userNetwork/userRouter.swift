@@ -45,6 +45,7 @@ enum UserRouter {
     case getPolices
     case aboutUs
     case getAllLastMessaged ( chatId : String )
+    case getAllChats
     
 }
 
@@ -63,7 +64,7 @@ extension UserRouter : APIRouter {
             return .post
         
             
-        case .getAllVipOffers , .getAllCities , .getAllBasicTrips  , .recentAddress  , .getOneTrip , .getProfile , .walletData , .getAllHobbies  , .getAllAddress , .getAllFavDrives , .getMyUpcommingTrips , .getCancelledTrips , .getCompletedTrips , .getVip , .getOneGeneralTrip  , .getPolices  , .aboutUs , .getAllLastMessaged:
+        case .getAllVipOffers , .getAllCities , .getAllBasicTrips  , .recentAddress  , .getOneTrip , .getProfile , .walletData , .getAllHobbies  , .getAllAddress , .getAllFavDrives , .getMyUpcommingTrips , .getCancelledTrips , .getCompletedTrips , .getVip , .getOneGeneralTrip  , .getPolices  , .aboutUs , .getAllLastMessaged , .getAllChats :
           return .get
             
             
@@ -150,6 +151,8 @@ extension UserRouter : APIRouter {
             return userServerPath.aboutUs
         case .getAllLastMessaged(chatId: let id ) :
             return userServerPath.getAllLastMessages(chatid: id )
+        case .getAllChats :
+            return userServerPath.getAllMessages
             
             
         }
@@ -335,7 +338,7 @@ extension UserRouter : APIRouter {
                
    
             
-        case .getAllVipOffers  , .recentAddress , .getOneTrip , .getProfile   , .calculateVipPrice , .getAllAddress   , .removeDriverFromFav    , .getVip , .getOneGeneralTrip  , .getPolices , .aboutUs , .getAllLastMessaged :
+        case .getAllVipOffers  , .recentAddress , .getOneTrip , .getProfile   , .calculateVipPrice , .getAllAddress   , .removeDriverFromFav    , .getVip , .getOneGeneralTrip  , .getPolices , .aboutUs , .getAllLastMessaged , .getAllChats :
             return nil
             
         }

@@ -16,6 +16,8 @@ extension DriverMoreVC {
         self.goToVipTrips()
         self.openPolices()
         self.openAboutUs()
+        self.openHelpAndSupport()
+        self.openLanguage()
     }
     
     
@@ -59,5 +61,20 @@ extension DriverMoreVC {
        
     }
     
+    
+    private func openHelpAndSupport () {
+        self.helpAndSupport.addTapGesture {
+            let vc = helpAndSupportVC()
+             self.push(vc)
+        }
+    }
+    
+    private func openLanguage () {
+        self.languageView.addTapGesture {
+            let vc = languageVC()
+            self.push(vc)
+        }
+       
+    }
     
 }

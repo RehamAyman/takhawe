@@ -181,8 +181,57 @@
                     <view key="view" contentMode="scaleToFill" id="sZC-11-QlS">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPD-ZA-EFh">
+                                <rect key="frame" x="146.66666666666666" y="79" width="99.666666666666657" height="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" name="MainColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Notifications"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3mF-Ob-Ego">
+                                <rect key="frame" x="20" y="326" width="353" height="200"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="remove 1" translatesAutoresizingMaskIntoConstraints="NO" id="bbe-xm-6D5">
+                                        <rect key="frame" x="116.66666666666666" y="10" width="120" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="O0N-8r-aHN"/>
+                                            <constraint firstAttribute="width" constant="120" id="q1Z-Ft-K0r"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There is no notification yet!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5JO-OP-qNT">
+                                        <rect key="frame" x="10" y="155" width="333" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <color key="textColor" systemColor="scrollViewTexturedBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="There is no notification yet!"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="bbe-xm-6D5" firstAttribute="centerX" secondItem="3mF-Ob-Ego" secondAttribute="centerX" id="3yW-L0-M81"/>
+                                    <constraint firstAttribute="height" constant="200" id="5ay-WS-IZJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="5JO-OP-qNT" secondAttribute="trailing" constant="10" id="BNn-vk-bNE"/>
+                                    <constraint firstItem="5JO-OP-qNT" firstAttribute="top" secondItem="bbe-xm-6D5" secondAttribute="bottom" constant="25" id="Fc2-V6-jhk"/>
+                                    <constraint firstItem="bbe-xm-6D5" firstAttribute="top" secondItem="3mF-Ob-Ego" secondAttribute="top" constant="10" id="T9U-zv-E5u"/>
+                                    <constraint firstItem="5JO-OP-qNT" firstAttribute="leading" secondItem="3mF-Ob-Ego" secondAttribute="leading" constant="10" id="wtw-om-tre"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="y05-EW-6cO"/>
                         <color key="backgroundColor" name="BackGroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3mF-Ob-Ego" firstAttribute="centerX" secondItem="sZC-11-QlS" secondAttribute="centerX" id="1bd-kZ-Ihi"/>
+                            <constraint firstItem="3mF-Ob-Ego" firstAttribute="leading" secondItem="y05-EW-6cO" secondAttribute="leading" constant="20" id="9Ij-Qt-p4a"/>
+                            <constraint firstItem="tPD-ZA-EFh" firstAttribute="top" secondItem="y05-EW-6cO" secondAttribute="top" constant="20" id="Qwq-g9-MOL"/>
+                            <constraint firstItem="y05-EW-6cO" firstAttribute="trailing" secondItem="3mF-Ob-Ego" secondAttribute="trailing" constant="20" id="Ylh-BV-24q"/>
+                            <constraint firstItem="tPD-ZA-EFh" firstAttribute="centerX" secondItem="sZC-11-QlS" secondAttribute="centerX" id="lcT-cq-LRW"/>
+                            <constraint firstItem="3mF-Ob-Ego" firstAttribute="centerY" secondItem="sZC-11-QlS" secondAttribute="centerY" id="xLi-vK-dji"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Notification" image="notification 1" id="SeP-QV-OU7"/>
                 </viewController>
@@ -913,6 +962,8 @@
                     <connections>
                         <outlet property="aboutUs" destination="1dl-Xb-Iia" id="2a0-1I-S8p"/>
                         <outlet property="basicView" destination="TFp-b9-tm7" id="6S3-GZ-rbZ"/>
+                        <outlet property="helpAndSupport" destination="PdI-sE-ud5" id="IEK-Lr-Aeu"/>
+                        <outlet property="languageView" destination="4x5-15-tnz" id="yi5-nq-cnL"/>
                         <outlet property="polices" destination="TW8-MR-C83" id="HWO-cM-S1J"/>
                         <outlet property="userEmail" destination="1vQ-8W-3X8" id="shp-et-EO7"/>
                         <outlet property="userImage" destination="5Dg-Jf-hzY" id="otX-ig-rtD"/>
@@ -1134,6 +1185,7 @@
         <image name="person 1" width="24" height="24"/>
         <image name="profile" width="24" height="24"/>
         <image name="profile-2user" width="24" height="24"/>
+        <image name="remove 1" width="120" height="120"/>
         <image name="traveler-with-a-suitcase 1" width="24" height="24"/>
         <namedColor name="AppRed">
             <color red="1" green="0.37254901960784315" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1144,6 +1196,9 @@
         <namedColor name="MainColor">
             <color red="0.35294117647058826" green="0.25882352941176473" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="scrollViewTexturedBackgroundColor">
+            <color red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

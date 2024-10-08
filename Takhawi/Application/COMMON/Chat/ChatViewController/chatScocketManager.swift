@@ -322,6 +322,8 @@ open class ChatSocketConnection {
     private func createMessage(from dictionary: [String: Any]) -> Message {
         
         /// `Type`
+        ///
+       
         var type: MessageTypeValue = .text
         if let stringType = dictionary["contentType"] as? String {
             if let messageTypeValue = MessageTypeValue(rawValue: stringType) {
@@ -490,9 +492,9 @@ open class ChatSocketConnection {
         /// `senderId`
         var senderId: String = ""
         
-        if let id = dictionary["sender_id"] as? String {
+        if let id = dictionary["senderId"] as? String {
             senderId = id
-        } else if let id = dictionary["sender_id"] as? Int {
+        } else if let id = dictionary["senderId"] as? Int {
             senderId = "\(id)"
         } else {
             log("Received message has no value associated with the key `sender_id`, we set the senderId of the message to ` ` as a default.")

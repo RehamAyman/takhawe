@@ -1321,5 +1321,117 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "079CF9EE-8DDB-46B4-9F9C-358AAAD61FE0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Takhawi/Application/COMMON/Chat/ChatViewController/ChatViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "225"
+            endingLineNumber = "225"
+            landmarkName = "socketConnection()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5B33002D-92AA-41D8-A045-98C8397A2774"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Takhawi/Application/USER/sideMenu/messages/messagesViewVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "getAllMessages()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5B33002D-92AA-41D8-A045-98C8397A2774 - 76a4a75f67a30c19"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Takhawi.APIGenericResponse&lt;Swift.Array&lt;Takhawi.ChatDataModelResult&gt;&gt;) -&gt; () in Takhawi.messagesViewVC.getAllMessages() -&gt; ()"
+                  moduleName = "Takhawi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Documents/takhawy/Takhawi/Application/USER/sideMenu/messages/messagesViewVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "504">
+               </Location>
+               <Location
+                  uuid = "5B33002D-92AA-41D8-A045-98C8397A2774 - 76a4a75f67a30c3e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Takhawi.APIGenericResponse&lt;Swift.Array&lt;Takhawi.ChatDataModelResult&gt;&gt;) -&gt; () in Takhawi.messagesViewVC.getAllMessages() -&gt; ()"
+                  moduleName = "Takhawi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Documents/takhawy/Takhawi/Application/USER/sideMenu/messages/messagesViewVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "274">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "46728D2E-8D4D-4F00-9F19-080329927F5A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Takhawi/Application/USER/sideMenu/messages/messagesViewVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "getAllMessages()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "46728D2E-8D4D-4F00-9F19-080329927F5A - 76a4a75f67a30374"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Takhawi.APIGenericResponse&lt;Swift.Array&lt;Takhawi.ChatDataModelResult&gt;&gt;) -&gt; () in Takhawi.messagesViewVC.getAllMessages() -&gt; ()"
+                  moduleName = "Takhawi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Documents/takhawy/Takhawi/Application/USER/sideMenu/messages/messagesViewVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "200">
+               </Location>
+               <Location
+                  uuid = "46728D2E-8D4D-4F00-9F19-080329927F5A - 76a4a75f67a30cba"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Takhawi.APIGenericResponse&lt;Swift.Array&lt;Takhawi.ChatDataModelResult&gt;&gt;) -&gt; () in Takhawi.messagesViewVC.getAllMessages() -&gt; ()"
+                  moduleName = "Takhawi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Documents/takhawy/Takhawi/Application/USER/sideMenu/messages/messagesViewVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "176">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

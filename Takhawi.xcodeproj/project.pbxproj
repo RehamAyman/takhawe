@@ -376,7 +376,6 @@
 		CE9757D12AE1B1E70014346E /* driverProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9757D02AE1B1E70014346E /* driverProfileVC.xib */; };
 		CE9757D52AE1B2B00014346E /* driverProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9757D42AE1B2B00014346E /* driverProfileVC.swift */; };
 		CE98110A2AC2CD2E00D99EC7 /* homeVc+delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9811092AC2CD2E00D99EC7 /* homeVc+delegate.swift */; };
-		CE9969DA2CB462B100404BD2 /* make a trip  in Resources */ = {isa = PBXBuildFile; fileRef = CE9969D92CB462B100404BD2 /* make a trip  */; };
 		CE996B542B25AC5D0089D2F4 /* trackYourTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE996B532B25AC5D0089D2F4 /* trackYourTripVC.swift */; };
 		CE996B562B25AC6F0089D2F4 /* trackYourTripVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE996B552B25AC6F0089D2F4 /* trackYourTripVC.xib */; };
 		CE996B602B25DA530089D2F4 /* trackYourTripVC+delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE996B5F2B25DA530089D2F4 /* trackYourTripVC+delegate.swift */; };
@@ -449,6 +448,8 @@
 		CECA1D382CAAD8F8007E98BD /* oneVipModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA1D372CAAD8F8007E98BD /* oneVipModel.swift */; };
 		CECA1D3A2CAAF6D4007E98BD /* generaltripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA1D392CAAF6D4007E98BD /* generaltripModel.swift */; };
 		CECC3D4A2C6B250B007AD2D4 /* vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECC3D492C6B250A007AD2D4 /* vehicle.swift */; };
+		CECF87172CB4C43F001A705B /* messagesExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF87162CB4C43E001A705B /* messagesExtention.swift */; };
+		CECF871A2CB4C73D001A705B /* chatDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF87192CB4C73D001A705B /* chatDataModel.swift */; };
 		CED0C29F2B4936B600BCD6D0 /* alfont_com_هلفيتيكا-عربي-.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED0C29E2B4936B600BCD6D0 /* alfont_com_هلفيتيكا-عربي-.ttf */; };
 		CED288902B49B7EB00E075CE /* editProfileVC+extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED2888F2B49B7EB00E075CE /* editProfileVC+extentions.swift */; };
 		CED288942B49B87B00E075CE /* hobbiesCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED288922B49B87B00E075CE /* hobbiesCellCollectionViewCell.swift */; };
@@ -883,7 +884,6 @@
 		CE9757D02AE1B1E70014346E /* driverProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = driverProfileVC.xib; sourceTree = "<group>"; };
 		CE9757D42AE1B2B00014346E /* driverProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = driverProfileVC.swift; sourceTree = "<group>"; };
 		CE9811092AC2CD2E00D99EC7 /* homeVc+delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "homeVc+delegate.swift"; sourceTree = "<group>"; };
-		CE9969D92CB462B100404BD2 /* make a trip  */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "make a trip "; sourceTree = "<group>"; };
 		CE996B532B25AC5D0089D2F4 /* trackYourTripVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trackYourTripVC.swift; sourceTree = "<group>"; };
 		CE996B552B25AC6F0089D2F4 /* trackYourTripVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = trackYourTripVC.xib; sourceTree = "<group>"; };
 		CE996B5F2B25DA530089D2F4 /* trackYourTripVC+delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "trackYourTripVC+delegate.swift"; sourceTree = "<group>"; };
@@ -955,6 +955,8 @@
 		CECA1D372CAAD8F8007E98BD /* oneVipModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oneVipModel.swift; sourceTree = "<group>"; };
 		CECA1D392CAAF6D4007E98BD /* generaltripModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generaltripModel.swift; sourceTree = "<group>"; };
 		CECC3D492C6B250A007AD2D4 /* vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vehicle.swift; sourceTree = "<group>"; };
+		CECF87162CB4C43E001A705B /* messagesExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = messagesExtention.swift; sourceTree = "<group>"; };
+		CECF87192CB4C73D001A705B /* chatDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatDataModel.swift; sourceTree = "<group>"; };
 		CED0C29E2B4936B600BCD6D0 /* alfont_com_هلفيتيكا-عربي-.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "alfont_com_هلفيتيكا-عربي-.ttf"; sourceTree = "<group>"; };
 		CED2888F2B49B7EB00E075CE /* editProfileVC+extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "editProfileVC+extentions.swift"; sourceTree = "<group>"; };
 		CED288922B49B87B00E075CE /* hobbiesCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hobbiesCellCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -1178,6 +1180,7 @@
 				CEAAAE1F2CADCBAA0076D607 /* cells */,
 				04C737A72B36C77E002AE59C /* messagesViewVC.swift */,
 				04C737A92B36C792002AE59C /* messagesViewVC.xib */,
+				CECF87162CB4C43E001A705B /* messagesExtention.swift */,
 			);
 			path = messages;
 			sourceTree = "<group>";
@@ -2427,7 +2430,6 @@
 		CE8E38AE2CAD319500471606 /* USER */ = {
 			isa = PBXGroup;
 			children = (
-				CE9969D92CB462B100404BD2 /* make a trip  */,
 				CE115E592ABED5AB00972CC9 /* Home */,
 				CEDDBE1D2ACC456E00677C94 /* searchDestination */,
 				CE6178A52ACD101B00AA8BB7 /* mapSearch */,
@@ -2879,6 +2881,7 @@
 				CECA1D392CAAF6D4007E98BD /* generaltripModel.swift */,
 				CEF094172CAEDA3100E04246 /* openChatModel.swift */,
 				CE5B7B472CB201E800C9421A /* policesModel.swift */,
+				CECF87192CB4C73D001A705B /* chatDataModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -3121,7 +3124,6 @@
 				CEDDBE192ACBDFA700677C94 /* sideMenuCell.xib in Resources */,
 				CE9D3CA52C82AD96007E872D /* openCalendarVC.xib in Resources */,
 				CEB29E5A2B49894900F64ED8 /* editProfileVC.xib in Resources */,
-				CE9969DA2CB462B100404BD2 /* make a trip  in Resources */,
 				CE04D9C12B15E8BC00B41157 /* successBookViewVC.xib in Resources */,
 				CE71F47C2B17436500E7B689 /* selectTimeVC.xib in Resources */,
 				96EA1E3F2A77006B00F39386 /* Alexandria-ExtraLight.ttf in Resources */,
@@ -3409,6 +3411,7 @@
 				CEDAC56E2C36E0F30054028E /* userRouter.swift in Sources */,
 				9694ABDA2A5DFACA00BDF5F8 /* FileDownloader.swift in Sources */,
 				CEDF18A82B6FB02200B03B44 /* tab2DrivingLicenseView.swift in Sources */,
+				CECF871A2CB4C73D001A705B /* chatDataModel.swift in Sources */,
 				CE7A34D02B7373A9009B52CD /* MediaPicker-PhotosUI.swift in Sources */,
 				CE4E22E82C0DE0470092AE16 /* GenralModel.swift in Sources */,
 				CE8291FA2C41753400E289EF /* driverPath.swift in Sources */,
@@ -3533,6 +3536,7 @@
 				CEB49C4E2C3C527200BB506D /* paymentMehods.swift in Sources */,
 				CE30213A2ABBA4B200572DE7 /* forgetPasswordVCVC.swift in Sources */,
 				CE4E22DC2C0DDFDE0092AE16 /* APIRouter.swift in Sources */,
+				CECF87172CB4C43F001A705B /* messagesExtention.swift in Sources */,
 				9694ABFD2A5DFACA00BDF5F8 /* AppAlert.swift in Sources */,
 				CE635D4F2B74D71F00FC12A5 /* tab8DriverView.swift in Sources */,
 				04C737B32B36D1C0002AE59C /* tripsSideMenuVC.swift in Sources */,

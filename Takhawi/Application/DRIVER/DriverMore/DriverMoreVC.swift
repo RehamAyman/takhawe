@@ -10,12 +10,14 @@ import UIKit
 class DriverMoreVC: BaseVC {
     @IBOutlet weak var vipV: UIView!
     
+    @IBOutlet weak var languageView: UIView!
     @IBOutlet weak var aboutUs: UIView!
     @IBOutlet weak var basicView: UIView!
     @IBOutlet weak var userEmail: UILabel!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userImage: UIImageView!
     
+    @IBOutlet weak var helpAndSupport: UIView!
     @IBOutlet weak var polices: UIView!
     
     

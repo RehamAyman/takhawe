@@ -8,16 +8,17 @@
 import UIKit
 
 class messagesCell: UITableViewCell {
-
+    @IBOutlet weak var senderImage: UIImageView!
+    
+    @IBOutlet weak var unreadLabel: UILabel!
+    @IBOutlet weak var unreadContainer: UIView!
+    @IBOutlet weak var lastMessage: UILabel!
+    @IBOutlet weak var senderName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
-    }
     
 }

@@ -109,7 +109,7 @@ extension userServerPath : ServerPath {
         case .getOneGeneralTrip(tripId: let id):
             return "trip/\(id)"
         case .getAllMessages:
-            return "chat"
+            return "chat?limit=100"
         case .openChat:
             return "chat/open-chat"
         case .addFCMTocken:
