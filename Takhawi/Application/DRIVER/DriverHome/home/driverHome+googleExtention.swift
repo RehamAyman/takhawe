@@ -17,7 +17,6 @@ extension DriverHomeVC :  CLLocationManagerDelegate  , GMSMapViewDelegate  {
     //MARK: - GOOGLE MAPS METHODS
      func setUpGoogleMapView () {
          // Setup location manager
-                
                           
             locationManager.delegate = self
             locationManager.requestLocation()
@@ -64,7 +63,7 @@ extension DriverHomeVC :  CLLocationManagerDelegate  , GMSMapViewDelegate  {
         
         socketManager.sendMyLocation(lat: latitude , lng: longitude)
         
-        
+        self.getAllReports(lat: latitude, lng: longitude)
         
         
         
@@ -102,18 +101,20 @@ extension DriverHomeVC :  CLLocationManagerDelegate  , GMSMapViewDelegate  {
     
     
     
+    
+    
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
           print("Tapped at location: \(coordinate.latitude), \(coordinate.longitude)")
           
           // Clear existing markers
-          mapView.clear()
+         
           
           // Add a marker at the tapped location
-          let marker = GMSMarker()
-          marker.position = coordinate
-          marker.title = "Pinned Location"
-          marker.snippet = "Lat: \(coordinate.latitude), Lng: \(coordinate.longitude)"
-          marker.map = mapView
+         
+          reportMarker.position = coordinate
+          reportMarker.title = "Pinned Location"
+          reportMarker.snippet = "Lat: \(coordinate.latitude), Lng: \(coordinate.longitude)"
+          reportMarker.map = mapView
           self.showAccedintView(lat: coordinate.latitude , lng: coordinate.longitude)
       }
     
@@ -122,20 +123,74 @@ extension DriverHomeVC :  CLLocationManagerDelegate  , GMSMapViewDelegate  {
     private func showAccedintView (lat : Double , lng : Double ) {
         let vc = accedintViewVC()
         vc.modalPresentationStyle = .overFullScreen
+        vc.passedLat = lat
+        vc.passedLng = lng
         
+        
+        vc.action = { lat , lng , en , ar in
+            self.drawItemInMaps(lat: lat , lng: lng , en: en , ar : ar )
+           
+        }
         self.present(vc , animated: true )
     }
     
     
     
-    func centerMapOnLocation(location: CLLocation){
-        let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude, longitude: location.coordinate.longitude, zoom: 13.0)
-      
-        self.googleMaps.camera = camera
-        self.googleMaps.animate(toZoom: 16)
-        
+
+    
+    private func drawItemInMaps ( lat : Double , lng : Double , en   : String  , ar : String  ) {
+        let coordinates = CLLocationCoordinate2D(latitude: lat , longitude: lng  )
+        let endMarker = GMSMarker(position: coordinates )
+        endMarker.icon = UIImage(named: self.selectImage(type: en == "" ? ar : en))
+        endMarker.title =  en == "" ? ar : en
+        endMarker.map = googleMaps
         
     }
+    
+    private func selectImage ( type : String ) -> String  {
+        switch type {
+        case "Radar" , "رادار"   :
+            return "radar"
+          
+        case  "Animals" , "حيوانات" :
+            return "camel 1"
+            
+        case "Accident" , "حادثة" :
+            return "car 2"
+            
+        case  "Changing directions" ,  "تغيير مسار"  :
+            return "Group 18"
+            
+            
+        case   "Alert" ,  "تنبيه" :
+            return "alert-triangle-svgrepo-com 1"
+            
+        case  "Hole" , "حفرة" :
+            return "road (1) 1"
+           
+        case   "Speed" ,  "تخفيف سرعه" :
+            return "download-speed 1"
+            
+        case   "Works" , "اشغالات" :
+            return "road-work (1) 1"
+            
+            
+            
+            
+        default:
+            print("def")
+            return "road-work (1) 1"
+        }
+    }
+    
+    
+    func centerMapOnLocation(location: CLLocation){
+        let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude, longitude: location.coordinate.longitude, zoom: 13.0)
+        self.googleMaps.camera = camera
+        self.googleMaps.animate(toZoom: 16)
+    }
+    
+    
     
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
@@ -207,6 +262,35 @@ extension DriverHomeVC :  CLLocationManagerDelegate  , GMSMapViewDelegate  {
         let distanceInKM =  ( locationA.distance(from: locationB) / 100 ).rounded()
         let string = String (distanceInKM ) + " " + "km"
       return string
+    }
+    
+    
+    
+    func getAllReports ( lat : Double , lng : Double   ) {
+//        let endMarker = GMSMarker(position: end)
+//        endMarker.icon = GMSMarker.markerImage(with: UIColor(named: "MainColor"))
+//        startMarker.icon = GMSMarker.markerImage(with: UIColor(named: "MainColor"))
+//        endMarker.title = "End"
+//        endMarker.map = GoogleView
+        
+        
+        DriverRouter.getAllReports(lat: lat , lng: lng  ).send { [weak self ] (response  : APIGenericResponse<[AccedintReportsResult]>) in
+            guard let self = self else { return }
+            googleMaps.clear()
+            if let result = response.result {
+                for i in result {
+                 
+                    self.drawItemInMaps(lat:  i.location?.lat ?? 0 ,
+                                        lng: i.location?.lng ?? 0,
+                                        en: i.type ?? ""  ,
+                                        ar: i.type ?? "" )
+                    
+                }
+            }
+                   
+                    
+        }
+        
     }
     
     

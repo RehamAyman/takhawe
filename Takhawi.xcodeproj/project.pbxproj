@@ -308,6 +308,7 @@
 		CE5B60452CAD40E10093A469 /* DriverBasicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5B60432CAD40E10093A469 /* DriverBasicCell.xib */; };
 		CE5B60482CAD4A070093A469 /* repeatingClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B60472CAD4A070093A469 /* repeatingClass.swift */; };
 		CE5B7B482CB201E800C9421A /* policesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B7B472CB201E800C9421A /* policesModel.swift */; };
+		CE5BF5512CB6FBBE00C59170 /* accedintReportModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5BF5502CB6FBBE00C59170 /* accedintReportModel.swift */; };
 		CE6178A02ACCF9E500AA8BB7 /* homeSearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE61789F2ACCF9E500AA8BB7 /* homeSearchVC.xib */; };
 		CE6178A22ACCF9F700AA8BB7 /* homeSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6178A12ACCF9F700AA8BB7 /* homeSearchVC.swift */; };
 		CE6178A42ACD08DE00AA8BB7 /* homeSearch+textfieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6178A32ACD08DE00AA8BB7 /* homeSearch+textfieldDelegate.swift */; };
@@ -816,6 +817,7 @@
 		CE5B60432CAD40E10093A469 /* DriverBasicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DriverBasicCell.xib; sourceTree = "<group>"; };
 		CE5B60472CAD4A070093A469 /* repeatingClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = repeatingClass.swift; sourceTree = "<group>"; };
 		CE5B7B472CB201E800C9421A /* policesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = policesModel.swift; sourceTree = "<group>"; };
+		CE5BF5502CB6FBBE00C59170 /* accedintReportModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accedintReportModel.swift; sourceTree = "<group>"; };
 		CE61789F2ACCF9E500AA8BB7 /* homeSearchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = homeSearchVC.xib; sourceTree = "<group>"; };
 		CE6178A12ACCF9F700AA8BB7 /* homeSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeSearchVC.swift; sourceTree = "<group>"; };
 		CE6178A32ACD08DE00AA8BB7 /* homeSearch+textfieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "homeSearch+textfieldDelegate.swift"; sourceTree = "<group>"; };
@@ -2363,6 +2365,7 @@
 				CE9D270B2C4E803300A18F18 /* driverStatus.swift */,
 				CECC3D492C6B250A007AD2D4 /* vehicle.swift */,
 				CE9D3CA92C83E3CB007E872D /* meetingLocations.swift */,
+				CE5BF5502CB6FBBE00C59170 /* accedintReportModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -3627,6 +3630,7 @@
 				CEAAAE262CADD7A00076D607 /* ProviderTripDetialsVC.swift in Sources */,
 				CEBB8BA52ADEEC1900E70EC4 /* profileVc+delegate.swift in Sources */,
 				9694ABD52A5DFACA00BDF5F8 /* UIImageExtention.swift in Sources */,
+				CE5BF5512CB6FBBE00C59170 /* accedintReportModel.swift in Sources */,
 				04B659CA2B341D6A00E78752 /* favDriverCell.swift in Sources */,
 				CE1A94E02B6CD549003C50EF /* fileUploadedView.swift in Sources */,
 				9694ABC72A5DFACA00BDF5F8 /* RoundImage.swift in Sources */,

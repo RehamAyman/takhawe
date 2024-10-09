@@ -18,7 +18,7 @@ class DriverHomeVC: BaseVC  {
     var switchButton = SwitchButton()
     let socketManager = MySocketManager()
     var offers : [SocketVIP_Trip] = []
-    
+    let reportMarker = GMSMarker()
     
 //MARK: - OUTLETS
     

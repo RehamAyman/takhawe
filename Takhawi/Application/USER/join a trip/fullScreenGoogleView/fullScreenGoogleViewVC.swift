@@ -27,6 +27,7 @@ class fullScreenGoogleViewVC: BaseVC {
     var destLng : Double = 0.0
     
     
+    
 // MARK: - Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()

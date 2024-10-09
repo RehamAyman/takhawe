@@ -309,6 +309,9 @@
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Report"/>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="report:" destination="-1" eventType="touchUpInside" id="pRd-j3-BBL"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
