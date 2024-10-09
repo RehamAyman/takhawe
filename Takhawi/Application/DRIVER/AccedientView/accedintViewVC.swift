@@ -14,11 +14,13 @@ class accedintViewVC: BaseVC {
 //MARK: - IBOutlets -
     @IBOutlet var allViewsOutlet: [UIView]!
     
+    @IBOutlet weak var backView: UIVisualEffectView!
     @IBOutlet weak var mainView: UIView!
     
     
 //MARK: - Properties -
-    
+    let passedLat : Double = 0.0
+    let passedLng : Double = 0.0
 
     
 // MARK: - Lifecycle -
@@ -33,11 +35,18 @@ class accedintViewVC: BaseVC {
         self.title = "".localized
         self.mainView.addTopLeftCoreners(num: 20 )
         self.handleViewsAction()
+        self.backView.addTapGesture {
+            self.dismiss(animated: true )
+        }
+        
     }
     
 //MARK: - Logic Methods -
     private func handleViewsAction () {
+       
         for i in self.allViewsOutlet {
+            
+            self.handleSelectionAction(uiview: i)
             if i.tag == 0 { // radar
                 
             }else if  i.tag ==  1 { // animals
@@ -60,6 +69,16 @@ class accedintViewVC: BaseVC {
     
    
 //MARK: - Actions -
+    
+   private func handleSelectionAction ( uiview : UIView) {
+        uiview.addTapGesture {
+            self.allViewsOutlet.forEach { view in
+                view.backgroundColor = .clear
+            }
+            uiview.layer.cornerRadius = 10
+            uiview.backgroundColor = UIColor.lightGray.withAlphaComponent(0.6 )
+        }
+    }
     
 }
 

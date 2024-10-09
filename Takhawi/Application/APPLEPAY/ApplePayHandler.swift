@@ -81,6 +81,9 @@ extension PaymentHandler: PKPaymentAuthorizationControllerDelegate {
     // Perform some very basic validation on the provided contact information
     
     print("🍏hello here apple pay id response :  \(payment.token.transactionIdentifier)")
+        print(payment.token.paymentMethod.network?.rawValue)
+        print(payment)
+       
    
         
         
@@ -91,7 +94,12 @@ extension PaymentHandler: PKPaymentAuthorizationControllerDelegate {
         do {
             // we decode your data without using any encoding type
             let val = try JSONDecoder().decode(appleModel.self, from: payment.token.paymentData)
-
+            print("apple response with the following : \(val)")
+            print(val)
+            
+            
+            
+            
             completion( .success)
             self.paymentStatus = .success
            //  11 params
@@ -112,6 +120,10 @@ extension PaymentHandler: PKPaymentAuthorizationControllerDelegate {
 //                                network: payment.token.paymentMethod.network?.rawValue ?? "" ,
 //                                type: String(payment.token.paymentMethod.type.rawValue )   ,
 //                                transtion: val.header.transactionId ,
+            
+            
+            
+            
 //                                patientId: self.paitentId ,
 //                                doctorId:  self.doctorId ,
 //                                date: self.date ,

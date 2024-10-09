@@ -17,6 +17,7 @@ class DriverMoreVC: BaseVC {
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userImage: UIImageView!
     
+    @IBOutlet weak var messages: UIView!
     @IBOutlet weak var personalInfo: UIView!
     @IBOutlet weak var helpAndSupport: UIView!
     @IBOutlet weak var polices: UIView!

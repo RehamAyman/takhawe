@@ -964,6 +964,7 @@
                         <outlet property="basicView" destination="TFp-b9-tm7" id="6S3-GZ-rbZ"/>
                         <outlet property="helpAndSupport" destination="PdI-sE-ud5" id="IEK-Lr-Aeu"/>
                         <outlet property="languageView" destination="4x5-15-tnz" id="yi5-nq-cnL"/>
+                        <outlet property="messages" destination="68j-fG-2xl" id="eFj-xW-aba"/>
                         <outlet property="personalInfo" destination="xtA-5b-6Vr" id="VRJ-nH-k2c"/>
                         <outlet property="polices" destination="TW8-MR-C83" id="HWO-cM-S1J"/>
                         <outlet property="userEmail" destination="1vQ-8W-3X8" id="shp-et-EO7"/>
@@ -1204,7 +1205,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

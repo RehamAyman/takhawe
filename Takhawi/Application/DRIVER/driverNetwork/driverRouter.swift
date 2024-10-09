@@ -22,6 +22,7 @@ enum DriverRouter {
     case makeOffer( id : Int , price : Int , features : [String] )
     case updateTripStatus ( id : Int , type : String )
     case markPassenger ( id : Int )
+    case markReport ( lat : Double , lng : Double , enType : String   , arType : String )
 }
 
 extension DriverRouter : APIRouter {
@@ -34,7 +35,7 @@ extension DriverRouter : APIRouter {
     var method: HTTPMethod {
         switch self {
             
-        case .createAvehicle , .createBasic , .makeOffer   :
+        case .createAvehicle , .createBasic , .makeOffer  , .markReport  :
             return .post
         
         case  .driverStatus , .vehicleDetials , .getMeetingLocations , .getPrevVipTrips   :
@@ -70,6 +71,8 @@ extension DriverRouter : APIRouter {
             return driverServerPath.updateTripStatus(id: id)
         case .markPassenger(id: let id ):
             return driverServerPath.markPassengerAttend(id: id )
+        case .markReport :
+            return driverServerPath.insertReport
   
        
         }
@@ -127,6 +130,22 @@ extension DriverRouter : APIRouter {
             return [
                 "price": price ,
                    "features": features
+            ]
+            
+        case .markReport(lat: let lat , lng: let lng , enType: let enType , arType: let arType ) :
+         //   var additionJson1 = [String:Any]()
+            let additionJson1 = [
+                 "lat" : lat ,
+                 "lng" : lng
+                 ] as [String : Any]
+            let activitesData1 = try? JSONSerialization.data(withJSONObject: additionJson1, options: .prettyPrinted)
+            let string1 = String(data: activitesData1!, encoding: String.Encoding.utf8)!
+            
+            
+            return [
+                "en_type"  : enType ,
+                "ar_type" : arType ,
+                "location" : string1
             ]
             
      

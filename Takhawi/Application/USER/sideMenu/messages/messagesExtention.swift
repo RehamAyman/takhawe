@@ -25,12 +25,12 @@ extension messagesViewVC : UITableViewDelegate , UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "messagesCell", for: indexPath) as! messagesCell
         let item = self.chats[indexPath.row]
         cell.selectionStyle = .none
-        cell.lastMessage.text = "last message "
-        cell.senderName.text = item.driver?.name ?? ""
-        if let image = item.driver?.avatar {
+        cell.lastMessage.text = item.last_message?.content ?? ""
+        cell.senderName.text = item.user?.name ?? ""
+        if let image = item.user?.avatar {
             cell.senderImage.setImage(image: Server.imageBase.rawValue + image )
         }
-         let count = item.countNum?.messages  ?? 0
+         let count = item.unread_messages  ?? 0
         if count != 0 {
             cell.unreadLabel.text = "\(count)"
         } else {
@@ -51,14 +51,14 @@ extension messagesViewVC : UITableViewDelegate , UITableViewDataSource {
         let item = self.chats[indexPath.row]
         let myAvatarLink = Server.imageBase.rawValue +  (UserDefaults.user?.user?.avatar ?? "" )
         let vc = ChatViewController(conversationId:  item.id ?? ""
-                                    , titleName: item.driver?.name ?? ""  ,
+                                    , titleName: item.user?.name ?? ""  ,
                                     socketManger:
                                         ChatSocketConnection(ConnectionType: .chat, conversationId: item.id ?? ""  ,
                                          sender: .init(type: .client, id: "\(UserDefaults.user?.user?.id ?? 0)",
                                                        senderName: UserDefaults.user?.user?.name ?? "" , avatar: myAvatarLink ),
                                                              receiver: .init(id: "\(item.driverId ?? 0)", type: .provider)))
-        vc.partnerImage = Server.imageBase.rawValue + ( item.driver?.avatar ?? "" )
-       // vc.partnerPhoneNumber = item.driver
+        vc.partnerImage = Server.imageBase.rawValue + ( item.user?.avatar ?? "" )
+        vc.partnerPhoneNumber = item.user?.phone ?? ""
         self.push(vc)
     }
 }
