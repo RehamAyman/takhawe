@@ -34,8 +34,11 @@ class ReserveTheTripVC: BaseVC {
     @IBOutlet weak var driverImage: UIImageView!
     @IBOutlet weak var tripDate: UILabel!
     @IBOutlet weak var codePrice: UILabel!
- 
     @IBOutlet weak var vatCost: UILabel!
+    
+    
+    
+    
     //MARK: - Properties -
     var selectedItem : Int = 0 
     var viptrip : Bool = false 
@@ -50,7 +53,7 @@ class ReserveTheTripVC: BaseVC {
     var applevatPrice : String = ""
     var appletotalPrice : String = ""
    
-    let DummyPaymentMethods : [dummyPaymentMethods] = [
+    var  DummyPaymentMethods : [dummyPaymentMethods] = [
 
         dummyPaymentMethods(icon:"" , number: "**** **** **** 8970", expireIn: "Expires: 12/26", type: "wallet", selected: false , id: .wallet ) ,
         dummyPaymentMethods(icon:"" , number: "**** **** **** 8970", expireIn: "Expires: 12/26", type: "cash", selected: false , id: .cash) ,
@@ -69,7 +72,7 @@ class ReserveTheTripVC: BaseVC {
         self.configureInitialDesign()
         
    
-
+        self.getAllSavedCards()
     }
     
     
@@ -307,9 +310,37 @@ extension ReserveTheTripVC {
             }
         
     }
+    
+
 }
 
 //MARK: - Routes -
 extension ReserveTheTripVC {
     
+    
+     func getAllSavedCards () {
+        activityIndicatorr.startAnimating()
+        UserRouter.getAllPaymentCards.send {  [weak self ] (response : APIGenericResponse<[cardResult]> ) in
+            guard let self = self else { return }
+            
+            if let response = response.result {
+                for i in response {
+                    let month = i.card_exp_month ?? ""
+                    let year = i.card_exp_year ?? ""
+                    
+                    self.DummyPaymentMethods.append(dummyPaymentMethods(icon: "visa",
+                                                                        number: "**** **** **** \(i.card_number ?? "" )"   ,
+                                                                        expireIn:  month +  "-" +  year  ,
+                                                                        type:  "card" ,
+                                                                        selected: false ,
+                                                                        id: .cash))
+                    
+                }
+                
+                self.paymentMethodTable.reloadData()
+            }
+           
+            
+        }
+    }
 }

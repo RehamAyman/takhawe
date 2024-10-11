@@ -35,6 +35,7 @@
                 <outlet property="step1View" destination="yd6-Bi-mqv" id="5rb-cO-s1d"/>
                 <outlet property="step2View" destination="KUg-Rr-V4M" id="R50-lu-YvN"/>
                 <outlet property="topViewHeight" destination="Pjl-sJ-mve" id="JBC-gS-RW4"/>
+                <outlet property="tripDateC" destination="snD-YJ-XEN" id="Dbx-hY-iET"/>
                 <outlet property="tripPrice" destination="3V0-qx-mLo" id="J49-eE-Ulm"/>
                 <outlet property="tripStartView" destination="pXB-bp-xjs" id="6Rm-XB-7Iy"/>
                 <outlet property="tripStartViewheight" destination="ejP-Ev-c8t" id="jXG-dE-nQh"/>
@@ -135,16 +136,16 @@
                             <rect key="frame" x="78" y="119.33333333333337" width="234" height="48"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your driver is coming in" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="snD-YJ-XEN">
-                                    <rect key="frame" x="0.0" y="15.666666666666629" width="154.66666666666666" height="17"/>
-                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
-                                    <nil key="textColor"/>
+                                    <rect key="frame" x="0.0" y="17" width="135.66666666666666" height="14.333333333333336"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Your driver is coming in"/>
                                     </userDefinedRuntimeAttributes>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikj-N0-Xwe" customClass="CountdownLabel" customModule="CountdownLabel">
-                                    <rect key="frame" x="156.66666666666666" y="15.666666666666629" width="13" height="17"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikj-N0-Xwe" customClass="CountdownLabel" customModule="CountdownLabel">
+                                    <rect key="frame" x="137.66666666666666" y="24" width="0.0" height="0.0"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -705,9 +706,7 @@
         </view>
     </objects>
     <designables>
-        <designable name="ikj-N0-Xwe">
-            <size key="intrinsicContentSize" width="13" height="17"/>
-        </designable>
+        <designable name="ikj-N0-Xwe"/>
     </designables>
     <resources>
         <image name="5" width="735" height="871"/>

@@ -918,8 +918,8 @@
             filePath = "Takhawi/Application/USER/trakYourTrip/trackYourTripVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "223"
-            endingLineNumber = "223"
+            startingLineNumber = "224"
+            endingLineNumber = "224"
             landmarkName = "messageDriver(_:)"
             landmarkType = "7">
             <Locations>
@@ -1046,8 +1046,8 @@
             filePath = "Takhawi/Application/USER/join a trip/Reserve the trip/ReserveTheTripVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
             landmarkName = "confirmTrip(_:)"
             landmarkType = "7">
             <Locations>
@@ -1124,8 +1124,8 @@
             filePath = "Takhawi/Application/USER/join a trip/Reserve the trip/ReserveTheTripVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
             landmarkName = "confirmTrip(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1302,6 +1302,54 @@
                   startingLineNumber = "97"
                   endingLineNumber = "97"
                   offsetFromSymbolStart = "156">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "28EE1F4D-0CFC-49A4-A978-6226AE404A13"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Takhawi/Application/USER/trakYourTrip/trackYourTripVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "298"
+            endingLineNumber = "298"
+            landmarkName = "getTripDetails()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "28EE1F4D-0CFC-49A4-A978-6226AE404A13 - 9fbb79663efe7131"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Takhawi.APIGenericResponse&lt;Takhawi.GeneralTripResult&gt;) -&gt; () in Takhawi.trackYourTripVC.getTripDetails() -&gt; ()"
+                  moduleName = "Takhawi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Documents/takhawy/Takhawi/Application/USER/trakYourTrip/trackYourTripVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "298"
+                  endingLineNumber = "298"
+                  offsetFromSymbolStart = "25973">
+               </Location>
+               <Location
+                  uuid = "28EE1F4D-0CFC-49A4-A978-6226AE404A13 - 9fbb79663efe717f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Takhawi.APIGenericResponse&lt;Takhawi.GeneralTripResult&gt;) -&gt; () in Takhawi.trackYourTripVC.getTripDetails() -&gt; ()"
+                  moduleName = "Takhawi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Documents/takhawy/Takhawi/Application/USER/trakYourTrip/trackYourTripVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "300"
+                  endingLineNumber = "300"
+                  offsetFromSymbolStart = "25973">
                </Location>
             </Locations>
          </BreakpointContent>

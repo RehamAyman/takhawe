@@ -45,6 +45,7 @@ class trackYourTripVC: BaseVC {
     @IBOutlet weak var plateAlpha: UILabel!
     @IBOutlet weak var plateNumEN: UILabel!
     
+    @IBOutlet weak var tripDateC: UILabel!
     @IBOutlet weak var plateAlphaEN: UILabel!
     
     
@@ -294,6 +295,9 @@ extension trackYourTripVC {
                 self.plateAlpha.text = result.vehicle?.plate_alphabet ?? ""
                 self.plateNumAr.text = result.vehicle?.plate_number ?? ""
                 self.tripPrice.text = "\(result.price ?? 0)" + "SAR".localize
+                
+                
+                self.tripDateC.text = "trip date : ".localize + (result.start_date?.convertFromIso() ?? "" )
                 
             }
          }

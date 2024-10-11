@@ -261,13 +261,11 @@ extension ProviderTripDetialsVC : GMSMapViewDelegate {
         
         googleMapsView.delegate = self
         googleMapsView.isMyLocationEnabled = true
-      
         self.setUpMapsTheme()
         let lat = self.passedTrip?.pickup_location?.lat ?? 0
         let lng = self.passedTrip?.pickup_location?.lng ?? 0
         let endLat = self.passedTrip?.destination?.lat ?? 0
         let endLng = self.passedTrip?.destination?.lng ?? 0
-        
         self.centerMapOnLocation(lat: lat , lng: lng)
         let start = CLLocationCoordinate2D(latitude: lat , longitude: lng)
         let end =  CLLocationCoordinate2D(latitude: endLat , longitude: endLng)

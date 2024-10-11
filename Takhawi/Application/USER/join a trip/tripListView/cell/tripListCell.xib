@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
@@ -12,15 +12,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" restorationIdentifier="tripListCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="tripListCell" rowHeight="262" id="KGk-i7-Jjw" customClass="tripListCell" customModule="Takhawi" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="756" height="262"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="tripListCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="tripListCell" rowHeight="385" id="KGk-i7-Jjw" customClass="tripListCell" customModule="Takhawi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="755" height="385"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="756" height="262"/>
+                <rect key="frame" x="0.0" y="0.0" width="755" height="385"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="laY-F2-awx">
-                        <rect key="frame" x="8" y="8" width="674.5" height="246"/>
+                        <rect key="frame" x="8" y="8" width="674.5" height="369"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 1000002906" translatesAutoresizingMaskIntoConstraints="NO" id="FXD-Or-a4L">
                                 <rect key="frame" x="8" y="8" width="70" height="70"/>
@@ -117,8 +117,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cc1" translatesAutoresizingMaskIntoConstraints="NO" id="9g3-cn-ikE">
-                                <rect key="frame" x="491" y="75" width="175.5" height="88.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cc1" translatesAutoresizingMaskIntoConstraints="NO" id="9g3-cn-ikE">
+                                <rect key="frame" x="471" y="75" width="195.5" height="147.5"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kPQ-e0-HSJ">
                                 <rect key="frame" x="10" y="94" width="45.5" height="40.5"/>
@@ -209,7 +209,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="◉ Only 2 seats Available" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0h-bT-qmU">
-                                <rect key="frame" x="8" y="174.5" width="473" height="12"/>
+                                <rect key="frame" x="8" y="174.5" width="453" height="12"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" name="AppRed"/>
                                 <nil key="highlightedColor"/>
@@ -231,12 +231,12 @@
                             <constraint firstItem="dUd-5l-wR7" firstAttribute="height" secondItem="kPQ-e0-HSJ" secondAttribute="height" id="HLm-Je-UHz"/>
                             <constraint firstAttribute="trailing" secondItem="9g3-cn-ikE" secondAttribute="trailing" constant="8" id="Hl4-vc-Wan"/>
                             <constraint firstItem="y0h-bT-qmU" firstAttribute="top" secondItem="THe-pA-SXU" secondAttribute="bottom" constant="8" id="KyF-5I-vXk"/>
-                            <constraint firstItem="9g3-cn-ikE" firstAttribute="height" secondItem="laY-F2-awx" secondAttribute="height" multiplier="0.36" id="Ld9-u8-C5J"/>
+                            <constraint firstItem="9g3-cn-ikE" firstAttribute="height" secondItem="laY-F2-awx" secondAttribute="height" multiplier="0.4" id="Ld9-u8-C5J"/>
                             <constraint firstItem="kPQ-e0-HSJ" firstAttribute="leading" secondItem="laY-F2-awx" secondAttribute="leading" constant="10" id="O0w-pu-6D4"/>
                             <constraint firstItem="ouA-3r-bKV" firstAttribute="top" secondItem="RoZ-jF-ZeV" secondAttribute="bottom" constant="10" id="TMt-H8-fEt"/>
                             <constraint firstItem="tGp-v7-e4w" firstAttribute="leading" secondItem="pwq-WA-r96" secondAttribute="leading" id="Tji-5M-hwK"/>
                             <constraint firstItem="SKm-8h-ymT" firstAttribute="leading" secondItem="6bZ-sE-zP9" secondAttribute="trailing" constant="8" id="WI2-yu-YOL"/>
-                            <constraint firstItem="9g3-cn-ikE" firstAttribute="width" secondItem="laY-F2-awx" secondAttribute="width" multiplier="0.26" id="WeF-6R-p90"/>
+                            <constraint firstItem="9g3-cn-ikE" firstAttribute="width" secondItem="laY-F2-awx" secondAttribute="width" multiplier="0.29" id="WeF-6R-p90"/>
                             <constraint firstItem="THe-pA-SXU" firstAttribute="centerX" secondItem="dUd-5l-wR7" secondAttribute="centerX" id="Z2T-Ek-BrI"/>
                             <constraint firstItem="kPQ-e0-HSJ" firstAttribute="top" secondItem="FXD-Or-a4L" secondAttribute="bottom" constant="16" id="aoa-VR-sQU"/>
                             <constraint firstItem="vCu-aE-5D2" firstAttribute="height" secondItem="kPQ-e0-HSJ" secondAttribute="height" id="biw-wn-7NY"/>
@@ -287,7 +287,7 @@
                 <outlet property="startTime" destination="9hW-cn-oil" id="23t-0A-Zle"/>
                 <outlet property="wifiIcon" destination="tDB-jJ-3Be" id="BcU-4L-sNb"/>
             </connections>
-            <point key="canvasLocation" x="169.56521739130437" y="-5.3571428571428568"/>
+            <point key="canvasLocation" x="411.5625" y="-10.035211267605634"/>
         </tableViewCell>
     </objects>
     <resources>

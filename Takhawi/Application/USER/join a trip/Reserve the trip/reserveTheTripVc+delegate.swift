@@ -50,6 +50,10 @@ extension ReserveTheTripVC : UITableViewDelegate , UITableViewDataSource {
           
             cell.hint.isHidden = true
             
+        } else  if item.type == "card" {
+            cell.title.text = item.number
+            cell.hint.text = item.expireIn
+            cell.iconimage.image = UIImage(named: "Payment")
         }
         
         if item.selected == true {
