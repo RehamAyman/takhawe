@@ -11,11 +11,11 @@ import UIKit
 import GoogleMaps
 import GooglePlaces
 import AlertKit
-
+import Alamofire
 class homeSearchVC: BaseVC{
-
     
-//MARK: - IBOutlets -
+    
+    //MARK: - IBOutlets -
     
     @IBOutlet weak var googleTableView: UITableView!
     @IBOutlet weak var chooseFromMapsOutlet: UIButton!
@@ -28,7 +28,7 @@ class homeSearchVC: BaseVC{
     
     @IBOutlet weak var recentAddIndicator: UIActivityIndicatorView!
     
-//MARK: - Properties -
+    //MARK: - Properties -
     var placesClient: GMSPlacesClient!
     var onCommit: (() -> Void)? = nil
     var selectedPlace : String = ""
@@ -36,14 +36,21 @@ class homeSearchVC: BaseVC{
     var selectedLong : Double = 0.0
     
     var selectAndDismiss : ((String , Double , Double ) -> Void)?
-        
+    
     var results: [googleResult] = []
     
     var fetcher: GMSAutocompleteFetcher?
     var recentPlaces : [RecentAddressResult] = []
     var selectedIndexPath: IndexPath?
     
-// MARK: - Lifecycle -
+    
+    
+    /// `Add Cuurnt User Lat & Lng`
+    
+    var currentLat = 0.0
+    var currentong = 0.0
+    
+    // MARK: - Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureInitialDesign()
@@ -56,59 +63,81 @@ class homeSearchVC: BaseVC{
     }
     
     
-
-//MARK: - Design Methods -
     
-
+    //MARK: - Design Methods -
+   
+    
+//    func getGooglePlaces(keyword:String,lat:Double,lng:Double){
+//        let urlString = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(lat)%2C\(lng)&radius=2500&keyword=\(keyword)&key=\(AppDelegate.GoogleAPI)"
+//        print("🐮\(urlString)")
+//        AF.request(urlString, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseJSON(completionHandler: { response in
+//                        switch response.result {
+//                        case .success:
+//
+//                            print("🙊\(response)")
+//                        case .failure(let error):
+//                            print(error)
+//                        }
+//                    })
+//    }
+//
+    
+    
+    func getGooglePlaces(keyword:String,lat:Double,lng:Double) {
+        self.results.removeAll()
+        self.googleTableView.reloadData()
+        self.googleTableView.isHidden = false
+        self.googleTableView.isUserInteractionEnabled = true
         
-        func placeAutoComplete() {
+        
+        let urlString = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(lat)%2C\(lng)&rankby=distance&keyword=\(keyword)&key=\(AppDelegate.GoogleAPI)"
+        
+        guard let url = URL(string: urlString) else { return }
+        
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+                        guard let data = data, error == nil else {
+                print("Error fetching route: \(error?.localizedDescription ?? "Unknown error")")
+                return
+            }
+            
+            do {
+                if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]{
+                    if let results =  json["results"] as? [[String:Any]] {
+                      
+                        for i in results{
+                            self.results.append(googleResult(fullText: i["name"] as? String ?? "",
+                                                             secText: i["vicinity"] as? String ?? "",
+                                                             selected: false,
+                                                             placeID: i["place_id"] as? String ?? "",
+                                                             PlaceSelected: false,
+                                                             description: i["vicinity"] as? String ?? ""))}
+                        
+                       
+                        
+                    }else{
+                        print("no results ")
+                         self.googleTableView.isHidden = true
+                         self.googleTableView.isUserInteractionEnabled = false
+                    }
+                    DispatchQueue.main.async {
+                        self.googleTableView.reloadData()
+                        self.googleTableView.isHidden = false
+                        self.googleTableView.isUserInteractionEnabled = true
+                    }
+                }
+               } catch {
+                
+                
+                print("Error parsing route: \(error.localizedDescription)")
+            }
+            
+            
            
-            
-            
-            
-             let filter = GMSAutocompleteFilter()
-            filter.type = .address
-            
-             placesClient.autocompleteQuery(searchTextField.text!, bounds: nil, filter: filter, callback: {(results, error) -> Void in
-                 if let error = error {
-                     print("Autocomplete error \(error)")
-                     return
-                 }
-                 if let results = results {
-                     
-                  
-                     let output : [googleResult] = results.map { p in
-                         googleResult(fullText: p.attributedFullText.string , secText: p.attributedSecondaryText?.string ?? "" , selected: false , placeID: p.placeID, PlaceSelected: false , description: p.description)
-                     }
-                     
-                     self.results = output
-                     
-                 
-                     
-                   
-//                     for i in results {
-//                         
-//                         
-//                         let res = googleResult(fullText: i.attributedFullText.string , secText: i.attributedSecondaryText?.string ?? "" , selected: false, placeID: i.placeID, PlaceSelected: false, description: i.description  )
-//                         self.results.append(res)
-//                     }
-//                     
-                     self.googleTableView.reloadData()
-                     self.googleTableView.isHidden = false
-                     self.googleTableView.isUserInteractionEnabled = true
-                     
-                    
-                 } else {
-                    print("no results ")
-                     self.googleTableView.isHidden = true
-                     self.googleTableView.isUserInteractionEnabled = false
-                 }
-             })
-
-         }
+        }
+        task.resume()
+    }
     
-    
-    private func configureInitialDesign() {
+ private func configureInitialDesign() {
         self.title = "".localized
 
         self.popviewContainer.layer.addBasicShadow(cornerRadius: 35)
@@ -129,7 +158,8 @@ class homeSearchVC: BaseVC{
             self.googleTableView.isUserInteractionEnabled = false
            
         } else {
-            placeAutoComplete()
+            self.getGooglePlaces(keyword: textField.text?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)  ?? "", lat: self.currentLat, lng: self.currentong)
+//            self.getNearbyPlacesSearch(keyword: textField.text  ?? "", lat: self.currentLat, lng: self.currentong)
         }
     }
     private func setUpTableView () {
@@ -212,12 +242,12 @@ extension homeSearchVC {
 
 
 
-struct googleResult {
+struct googleResult :Decodable{
     let fullText : String
     let secText : String
     var selected : Bool
     let placeID : String
-    var PlaceSelected : Bool 
+    var PlaceSelected : Bool
     let description : String
     
 }

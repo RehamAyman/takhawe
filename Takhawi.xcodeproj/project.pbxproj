@@ -18,8 +18,6 @@
 		049358902B43DA81004E5259 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 049358922B43DA81004E5259 /* Localizable.strings */; };
 		049358982B445A16004E5259 /* alertTopPop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049358972B445A16004E5259 /* alertTopPop.swift */; };
 		049F9F122B384E78003A8DAF /* cardsSwiftuiEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F9F112B384E78003A8DAF /* cardsSwiftuiEffect.swift */; };
-		04B4AFAC2B347F9100DAFEC2 /* cardsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B4AFAA2B347F9100DAFEC2 /* cardsCell.swift */; };
-		04B4AFAD2B347F9100DAFEC2 /* cardsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B4AFAB2B347F9100DAFEC2 /* cardsCell.xib */; };
 		04B4AFAF2B34830000DAFEC2 /* addamountVC+extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B4AFAE2B34830000DAFEC2 /* addamountVC+extentions.swift */; };
 		04B659CA2B341D6A00E78752 /* favDriverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B659C82B341D6A00E78752 /* favDriverCell.swift */; };
 		04B659CB2B341D6A00E78752 /* favDriverCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B659C92B341D6A00E78752 /* favDriverCell.xib */; };
@@ -277,6 +275,8 @@
 		CE3D2B3F2B78195B0067E63B /* driverHome+functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D2B3E2B78195B0067E63B /* driverHome+functions.swift */; };
 		CE3FDC5D2C795424000C2BDC /* driverCreateTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3FDC5C2C795424000C2BDC /* driverCreateTripVC.swift */; };
 		CE3FDC5F2C795441000C2BDC /* driverCreateTripVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE3FDC5E2C795441000C2BDC /* driverCreateTripVC.xib */; };
+		CE405BAF2CB7CC66005DA1BE /* cardsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE405BAD2CB7CC66005DA1BE /* cardsCell.swift */; };
+		CE405BB02CB7CC66005DA1BE /* cardsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE405BAE2CB7CC66005DA1BE /* cardsCell.xib */; };
 		CE41C63B2BA4FE3800DBE739 /* 9t8knRBCgn.json in Resources */ = {isa = PBXBuildFile; fileRef = CE41C63A2BA4FE3800DBE739 /* 9t8knRBCgn.json */; };
 		CE44773A2AE03DBD000D96F6 /* selectDateExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4477392AE03DBD000D96F6 /* selectDateExtention.swift */; };
 		CE44773D2AE042D5000D96F6 /* calendarSwiftui.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE44773C2AE042D5000D96F6 /* calendarSwiftui.swift */; };
@@ -300,6 +300,11 @@
 		CE4F0BAA2B777B8D00337A49 /* DriverTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F0BA92B777B8D00337A49 /* DriverTabbar.swift */; };
 		CE4F0BAC2B77962700337A49 /* DriverHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F0BAB2B77962700337A49 /* DriverHomeVC.swift */; };
 		CE4F0BAF2B77976400337A49 /* driverHome+googleExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F0BAE2B77976300337A49 /* driverHome+googleExtention.swift */; };
+		CE565E2F2CB836A100354F0C /* paymentWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE565E2E2CB836A100354F0C /* paymentWebView.swift */; };
+		CE565E322CB8E39400354F0C /* driverEarningsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE565E312CB8E39400354F0C /* driverEarningsVC.swift */; };
+		CE565E342CB8E3AC00354F0C /* driverEarningsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE565E332CB8E3AC00354F0C /* driverEarningsVC.xib */; };
+		CE565E3F2CB8EF7800354F0C /* driverRequestMonyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE565E3E2CB8EF7800354F0C /* driverRequestMonyVC.swift */; };
+		CE565E412CB8EF8400354F0C /* driverRequestMonyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE565E402CB8EF8400354F0C /* driverRequestMonyVC.xib */; };
 		CE5B10FB2C64324C00818240 /* weatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B10FA2C64324C00818240 /* weatherManager.swift */; };
 		CE5B10FD2C64327B00818240 /* weatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B10FC2C64327B00818240 /* weatherData.swift */; };
 		CE5B10FF2C64333000818240 /* driverProfile+weatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B10FE2C64333000818240 /* driverProfile+weatherData.swift */; };
@@ -458,6 +463,10 @@
 		CED288942B49B87B00E075CE /* hobbiesCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED288922B49B87B00E075CE /* hobbiesCellCollectionViewCell.swift */; };
 		CED288952B49B87B00E075CE /* hobbiesCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CED288932B49B87B00E075CE /* hobbiesCellCollectionViewCell.xib */; };
 		CED51ED32AE1B86D00603151 /* driverProfile+collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED51ED22AE1B86D00603151 /* driverProfile+collection.swift */; };
+		CED749202CB90B8C00378C16 /* DriverPointsGoogleMapVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CED7491E2CB90B8C00378C16 /* DriverPointsGoogleMapVC.xib */; };
+		CED749212CB90B8C00378C16 /* DriverPointsGoogleMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7491F2CB90B8C00378C16 /* DriverPointsGoogleMapVC.swift */; };
+		CED749232CB9142100378C16 /* savedCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED749222CB9142100378C16 /* savedCard.swift */; };
+		CED749252CB923FE00378C16 /* chartBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED749242CB923FE00378C16 /* chartBarView.swift */; };
 		CED77C052B635F5300962E83 /* tab1UploadId .swift in Sources */ = {isa = PBXBuildFile; fileRef = CED77C042B635F5300962E83 /* tab1UploadId .swift */; };
 		CED77C082B6365FF00962E83 /* Neumorphic in Frameworks */ = {isa = PBXBuildFile; productRef = CED77C072B6365FF00962E83 /* Neumorphic */; };
 		CED77C0C2B64FD0900962E83 /* floatinglabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED77C0B2B64FD0900962E83 /* floatinglabelTextField.swift */; };
@@ -532,8 +541,6 @@
 		049358952B43DF19004E5259 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		049358972B445A16004E5259 /* alertTopPop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alertTopPop.swift; sourceTree = "<group>"; };
 		049F9F112B384E78003A8DAF /* cardsSwiftuiEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardsSwiftuiEffect.swift; sourceTree = "<group>"; };
-		04B4AFAA2B347F9100DAFEC2 /* cardsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardsCell.swift; sourceTree = "<group>"; };
-		04B4AFAB2B347F9100DAFEC2 /* cardsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cardsCell.xib; sourceTree = "<group>"; };
 		04B4AFAE2B34830000DAFEC2 /* addamountVC+extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "addamountVC+extentions.swift"; sourceTree = "<group>"; };
 		04B659C82B341D6A00E78752 /* favDriverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favDriverCell.swift; sourceTree = "<group>"; };
 		04B659C92B341D6A00E78752 /* favDriverCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = favDriverCell.xib; sourceTree = "<group>"; };
@@ -785,6 +792,8 @@
 		CE3D2B3E2B78195B0067E63B /* driverHome+functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "driverHome+functions.swift"; sourceTree = "<group>"; };
 		CE3FDC5C2C795424000C2BDC /* driverCreateTripVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = driverCreateTripVC.swift; sourceTree = "<group>"; };
 		CE3FDC5E2C795441000C2BDC /* driverCreateTripVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = driverCreateTripVC.xib; sourceTree = "<group>"; };
+		CE405BAD2CB7CC66005DA1BE /* cardsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardsCell.swift; sourceTree = "<group>"; };
+		CE405BAE2CB7CC66005DA1BE /* cardsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cardsCell.xib; sourceTree = "<group>"; };
 		CE41C63A2BA4FE3800DBE739 /* 9t8knRBCgn.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 9t8knRBCgn.json; sourceTree = "<group>"; };
 		CE44772F2AE01599000D96F6 /* HorizontalCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HorizontalCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4477392AE03DBD000D96F6 /* selectDateExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectDateExtention.swift; sourceTree = "<group>"; };
@@ -809,6 +818,11 @@
 		CE4F0BA92B777B8D00337A49 /* DriverTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverTabbar.swift; sourceTree = "<group>"; };
 		CE4F0BAB2B77962700337A49 /* DriverHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverHomeVC.swift; sourceTree = "<group>"; };
 		CE4F0BAE2B77976300337A49 /* driverHome+googleExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "driverHome+googleExtention.swift"; sourceTree = "<group>"; };
+		CE565E2E2CB836A100354F0C /* paymentWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = paymentWebView.swift; sourceTree = "<group>"; };
+		CE565E312CB8E39400354F0C /* driverEarningsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = driverEarningsVC.swift; sourceTree = "<group>"; };
+		CE565E332CB8E3AC00354F0C /* driverEarningsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = driverEarningsVC.xib; sourceTree = "<group>"; };
+		CE565E3E2CB8EF7800354F0C /* driverRequestMonyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = driverRequestMonyVC.swift; sourceTree = "<group>"; };
+		CE565E402CB8EF8400354F0C /* driverRequestMonyVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = driverRequestMonyVC.xib; sourceTree = "<group>"; };
 		CE5B10FA2C64324C00818240 /* weatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherManager.swift; sourceTree = "<group>"; };
 		CE5B10FC2C64327B00818240 /* weatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherData.swift; sourceTree = "<group>"; };
 		CE5B10FE2C64333000818240 /* driverProfile+weatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "driverProfile+weatherData.swift"; sourceTree = "<group>"; };
@@ -968,6 +982,10 @@
 		CED288922B49B87B00E075CE /* hobbiesCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hobbiesCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		CED288932B49B87B00E075CE /* hobbiesCellCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = hobbiesCellCollectionViewCell.xib; sourceTree = "<group>"; };
 		CED51ED22AE1B86D00603151 /* driverProfile+collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "driverProfile+collection.swift"; sourceTree = "<group>"; };
+		CED7491E2CB90B8C00378C16 /* DriverPointsGoogleMapVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DriverPointsGoogleMapVC.xib; sourceTree = "<group>"; };
+		CED7491F2CB90B8C00378C16 /* DriverPointsGoogleMapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverPointsGoogleMapVC.swift; sourceTree = "<group>"; };
+		CED749222CB9142100378C16 /* savedCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = savedCard.swift; sourceTree = "<group>"; };
+		CED749242CB923FE00378C16 /* chartBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chartBarView.swift; sourceTree = "<group>"; };
 		CED77C042B635F5300962E83 /* tab1UploadId .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "tab1UploadId .swift"; sourceTree = "<group>"; };
 		CED77C0B2B64FD0900962E83 /* floatinglabelTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = floatinglabelTextField.swift; sourceTree = "<group>"; };
 		CEDAC56D2C36E0F30054028E /* userRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userRouter.swift; sourceTree = "<group>"; };
@@ -1110,8 +1128,8 @@
 		04B4AFA72B347F6400DAFEC2 /* cells */ = {
 			isa = PBXGroup;
 			children = (
-				04B4AFAA2B347F9100DAFEC2 /* cardsCell.swift */,
-				04B4AFAB2B347F9100DAFEC2 /* cardsCell.xib */,
+				CE405BAD2CB7CC66005DA1BE /* cardsCell.swift */,
+				CE405BAE2CB7CC66005DA1BE /* cardsCell.xib */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -1156,6 +1174,7 @@
 				04B659E22B3443AF00E78752 /* addAmmountVC.swift */,
 				04B659E42B34443D00E78752 /* addAmountVC.xib */,
 				04B4AFAE2B34830000DAFEC2 /* addamountVC+extentions.swift */,
+				CE565E2E2CB836A100354F0C /* paymentWebView.swift */,
 			);
 			path = addAmmount;
 			sourceTree = "<group>";
@@ -2126,6 +2145,8 @@
 		CE4F0BA42B764A2200337A49 /* DriverHome */ = {
 			isa = PBXGroup;
 			children = (
+				CED7491F2CB90B8C00378C16 /* DriverPointsGoogleMapVC.swift */,
+				CED7491E2CB90B8C00378C16 /* DriverPointsGoogleMapVC.xib */,
 				CEEAB1012CA3699500B2B9F3 /* cells */,
 				CE9D3CAB2C83E52E007E872D /* selectMeetingLocation */,
 				CE9D3CA12C82AD5C007E872D /* selectDate */,
@@ -2145,6 +2166,25 @@
 				CE3D2B3E2B78195B0067E63B /* driverHome+functions.swift */,
 			);
 			path = home;
+			sourceTree = "<group>";
+		};
+		CE565E302CB8E36100354F0C /* driverEarnings */ = {
+			isa = PBXGroup;
+			children = (
+				CE565E312CB8E39400354F0C /* driverEarningsVC.swift */,
+				CE565E332CB8E3AC00354F0C /* driverEarningsVC.xib */,
+				CED749242CB923FE00378C16 /* chartBarView.swift */,
+			);
+			path = driverEarnings;
+			sourceTree = "<group>";
+		};
+		CE565E3D2CB8EF5200354F0C /* requestMoney */ = {
+			isa = PBXGroup;
+			children = (
+				CE565E3E2CB8EF7800354F0C /* driverRequestMonyVC.swift */,
+				CE565E402CB8EF8400354F0C /* driverRequestMonyVC.xib */,
+			);
+			path = requestMoney;
 			sourceTree = "<group>";
 		};
 		CE5B10F92C64323D00818240 /* weather */ = {
@@ -2538,6 +2578,8 @@
 		CE9D3CAE2C853B99007E872D /* DriverMore */ = {
 			isa = PBXGroup;
 			children = (
+				CE565E3D2CB8EF5200354F0C /* requestMoney */,
+				CE565E302CB8E36100354F0C /* driverEarnings */,
 				CEAAAE242CADD77B0076D607 /* tripDetails */,
 				CE5B60402CAD40680093A469 /* basic */,
 				CE5B603E2CAD404E0093A469 /* vip */,
@@ -2899,6 +2941,7 @@
 				CEF094172CAEDA3100E04246 /* openChatModel.swift */,
 				CE5B7B472CB201E800C9421A /* policesModel.swift */,
 				CECF87192CB4C73D001A705B /* chatDataModel.swift */,
+				CED749222CB9142100378C16 /* savedCard.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -3142,6 +3185,8 @@
 				CE9D3CA52C82AD96007E872D /* openCalendarVC.xib in Resources */,
 				CEB29E5A2B49894900F64ED8 /* editProfileVC.xib in Resources */,
 				CE04D9C12B15E8BC00B41157 /* successBookViewVC.xib in Resources */,
+				CE405BB02CB7CC66005DA1BE /* cardsCell.xib in Resources */,
+				CE565E342CB8E3AC00354F0C /* driverEarningsVC.xib in Resources */,
 				CE71F47C2B17436500E7B689 /* selectTimeVC.xib in Resources */,
 				96EA1E3F2A77006B00F39386 /* Alexandria-ExtraLight.ttf in Resources */,
 				96EA1E402A77006B00F39386 /* Alexandria-Light.ttf in Resources */,
@@ -3164,6 +3209,7 @@
 				CE9EBFE82B1393710080A0F2 /* reviewsViewVC.xib in Resources */,
 				CEB138812B615BE70070DBA8 /* driverUploadIdAuthVC.xib in Resources */,
 				CE7D82FC2AC3CA8300C5B028 /* googleMapsStyle.json in Resources */,
+				CE565E412CB8EF8400354F0C /* driverRequestMonyVC.xib in Resources */,
 				04D81F922B35C03200AAA66C /* secauthCell.xib in Resources */,
 				CE71F4772B17351800E7B689 /* i29sRturwt.json in Resources */,
 				96EA1E442A77006B00F39386 /* Alexandria-Thin.ttf in Resources */,
@@ -3180,6 +3226,7 @@
 				CE9F3C572B1B4550004C3D24 /* wAY9ZXW4id.json in Resources */,
 				04658F572B374E0400470F0D /* baseSuccessAlertVC.xib in Resources */,
 				9694AC5F2A5E040D00BDF5F8 /* ArbFONTS-URW-DIN-Arabic-Medium.ttf in Resources */,
+				CED749202CB90B8C00378C16 /* DriverPointsGoogleMapVC.xib in Resources */,
 				CEAAAE232CADCBD40076D607 /* messagesCell.xib in Resources */,
 				CE71F4712B16885B00E7B689 /* driversOffersCell.xib in Resources */,
 				CE9F3C5B2B1B4955004C3D24 /* u4F3iX2jrQ.json in Resources */,
@@ -3230,7 +3277,6 @@
 				04C737CA2B36E04F002AE59C /* helpAndSupportVC.xib in Resources */,
 				CE9F3C592B1B482E004C3D24 /* BDidekRogj.json in Resources */,
 				CE27F5432ADFB02F00DEA419 /* GoogleMapViewController.xib in Resources */,
-				04B4AFAD2B347F9100DAFEC2 /* cardsCell.xib in Resources */,
 				9694AC5A2A5E040D00BDF5F8 /* 629-empty-box.json in Resources */,
 				96202C7B2A7FAE3300053C5B /* OTPVC.xib in Resources */,
 				CE5B60452CAD40E10093A469 /* DriverBasicCell.xib in Resources */,
@@ -3428,6 +3474,7 @@
 				CEF0E7DC2B4F3AE700DCBD69 /* circularGroupView.swift in Sources */,
 				CE4477412AE04392000D96F6 /* oneWeekView.swift in Sources */,
 				CEDAC56E2C36E0F30054028E /* userRouter.swift in Sources */,
+				CED749232CB9142100378C16 /* savedCard.swift in Sources */,
 				9694ABDA2A5DFACA00BDF5F8 /* FileDownloader.swift in Sources */,
 				CEDF18A82B6FB02200B03B44 /* tab2DrivingLicenseView.swift in Sources */,
 				CECF871A2CB4C73D001A705B /* chatDataModel.swift in Sources */,
@@ -3441,7 +3488,6 @@
 				CEDDBE292ACC5C3700677C94 /* blurEffect.swift in Sources */,
 				9694ABD02A5DFACA00BDF5F8 /* UIWindow+Extensions.swift in Sources */,
 				CEDF18B72B70D31D00B03B44 /* swiftuiOTPview.swift in Sources */,
-				04B4AFAC2B347F9100DAFEC2 /* cardsCell.swift in Sources */,
 				CEEE6E402C619D0200AB7435 /* basicTripListModel.swift in Sources */,
 				CEB5A84E2ABC4F7500A7F4AD /* backButton.swift in Sources */,
 				CEDF18AE2B70AD6500B03B44 /* tab5DriverAuth.swift in Sources */,
@@ -3490,11 +3536,13 @@
 				CE3D2B3C2B780A860067E63B /* customSwitch.swift in Sources */,
 				9694ABCD2A5DFACA00BDF5F8 /* UITableViewExtension.swift in Sources */,
 				963007182A76714E0075DBFE /* SelectUserTypeVC.swift in Sources */,
+				CE565E3F2CB8EF7800354F0C /* driverRequestMonyVC.swift in Sources */,
 				9694ABD22A5DFACA00BDF5F8 /* UIButtonExtesion.swift in Sources */,
 				CE44773D2AE042D5000D96F6 /* calendarSwiftui.swift in Sources */,
 				CE5B603D2CAD36CD0093A469 /* driverMore+extention.swift in Sources */,
 				CE9EBFF12B1396390080A0F2 /* reviewCell.swift in Sources */,
 				CEBA951D2CAFF2970068EA01 /* passengersCell.swift in Sources */,
+				CE565E2F2CB836A100354F0C /* paymentWebView.swift in Sources */,
 				04D81F892B35BC1F00AAA66C /* swiftRegister+extention .swift in Sources */,
 				CE7D82F72AC3BB1100C5B028 /* MainAlert.swift in Sources */,
 				CE2D4AF12B185483008D556E /* filterCell.swift in Sources */,
@@ -3549,6 +3597,7 @@
 				CE7A34D12B7373A9009B52CD /* MediaOptions.swift in Sources */,
 				CE8E38A42CAC93B100471606 /* ChatTableViewCell.swift in Sources */,
 				CE3021332ABB87CF00572DE7 /* enterPasswordVC.swift in Sources */,
+				CE565E322CB8E39400354F0C /* driverEarningsVC.swift in Sources */,
 				CE7A34CD2B7373A9009B52CD /* MediaPicker-macOS.swift in Sources */,
 				CE855BFA2C917D680098F96A /* addressModel.swift in Sources */,
 				CE9757D52AE1B2B00014346E /* driverProfileVC.swift in Sources */,
@@ -3556,6 +3605,7 @@
 				CE30213A2ABBA4B200572DE7 /* forgetPasswordVCVC.swift in Sources */,
 				CE4E22DC2C0DDFDE0092AE16 /* APIRouter.swift in Sources */,
 				CECF87172CB4C43F001A705B /* messagesExtention.swift in Sources */,
+				CED749252CB923FE00378C16 /* chartBarView.swift in Sources */,
 				9694ABFD2A5DFACA00BDF5F8 /* AppAlert.swift in Sources */,
 				CE635D4F2B74D71F00FC12A5 /* tab8DriverView.swift in Sources */,
 				04C737B32B36D1C0002AE59C /* tripsSideMenuVC.swift in Sources */,
@@ -3590,6 +3640,7 @@
 				CEB5A8602ABCCD8C00A7F4AD /* secureTextField.swift in Sources */,
 				04C737BA2B36D4CF002AE59C /* settingsSideVC.swift in Sources */,
 				CE9EBFEE2B13941C0080A0F2 /* dummyData.swift in Sources */,
+				CED749212CB90B8C00378C16 /* DriverPointsGoogleMapVC.swift in Sources */,
 				CE3CEEDA2B1648D400619C79 /* makeAtripAlertPopUpVC.swift in Sources */,
 				04B659D52B3437A200E78752 /* walletVC.swift in Sources */,
 				CE7A34CE2B7373A9009B52CD /* MediaPickerErrors.swift in Sources */,
@@ -3622,6 +3673,7 @@
 				9694AC712A5E040D00BDF5F8 /* Extensions+UITextView.swift in Sources */,
 				9694ABE92A5DFACA00BDF5F8 /* extensionUIImageView.swift in Sources */,
 				CEE8739D2B53BE40003914AB /* secOnboardingView.swift in Sources */,
+				CE405BAF2CB7CC66005DA1BE /* cardsCell.swift in Sources */,
 				CEEC5B3D2C636410004CC98C /* recentAddressModel.swift in Sources */,
 				CE4E22D82C0DDFC40092AE16 /* APIGloabelResponse.swift in Sources */,
 				CE30213F2ABBAB1100572DE7 /* verificationVC.swift in Sources */,

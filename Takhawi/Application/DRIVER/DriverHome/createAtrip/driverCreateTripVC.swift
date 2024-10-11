@@ -98,9 +98,17 @@ class driverCreateTripVC: BaseVC {
         }
       vc.modalPresentationStyle = .overFullScreen
         self.present(vc, animated: true )
-        
-        
     }
+    
+    @IBAction func distnationAction(_ sender: Any) {
+        self.openDriverMeetingPointsMap(isDistnation: true)
+
+    }
+    
+    @IBAction func gathringAction(_ sender: Any) {
+        self.openDriverMeetingPointsMap(isDistnation: false)
+    }
+    
 }
 
 
@@ -132,8 +140,9 @@ extension driverCreateTripVC {
             guard let self = self else { return }
             if let result = response.result {
                 self.meetingLocationArray = result
-                self.selectFromMeetingLocation(button: self.destinationLocationBtn, textField: self.destination, destination: true )
-                self.selectFromMeetingLocation(button: self.meetingLocationBtn, textField: self.gathering, destination: false )
+                
+//                self.selectFromMeetingLocation(button: self.destinationLocationBtn, textField: self.destination, destination: true )
+//                self.selectFromMeetingLocation(button: self.meetingLocationBtn, textField: self.gathering, destination: false )
             }
         }
     }
@@ -169,4 +178,20 @@ extension driverCreateTripVC {
 //MARK: - Routes -
 extension driverCreateTripVC {
     
+    func openDriverMeetingPointsMap(isDistnation:Bool){
+        let vc  =  DriverPointsGoogleMapVC()
+        vc.meetingLocationArray  = self.meetingLocationArray
+        vc.isDistnation = isDistnation
+        vc.didSelectLocation = { location , isDistnation in
+            if isDistnation{
+                self.destination.text = location.name
+                self.SelectdDestination = location.id ?? 0
+            }else{
+                self.gathering.text = location.name
+                self.selectedPickUp = location.id ?? 0
+            }
+            
+        }
+        self.push(vc)
+    }
 }

@@ -962,6 +962,7 @@
                     <connections>
                         <outlet property="aboutUs" destination="1dl-Xb-Iia" id="2a0-1I-S8p"/>
                         <outlet property="basicView" destination="TFp-b9-tm7" id="6S3-GZ-rbZ"/>
+                        <outlet property="earningsView" destination="FMU-KD-7k4" id="J3O-A7-mOw"/>
                         <outlet property="helpAndSupport" destination="PdI-sE-ud5" id="IEK-Lr-Aeu"/>
                         <outlet property="languageView" destination="4x5-15-tnz" id="yi5-nq-cnL"/>
                         <outlet property="messages" destination="68j-fG-2xl" id="eFj-xW-aba"/>

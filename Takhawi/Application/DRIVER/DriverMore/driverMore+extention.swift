@@ -20,6 +20,7 @@ extension DriverMoreVC {
         self.openLanguage()
         self.openProfileInfo()
         self.openMessages()
+        self.OpenEarningsView()
     }
     
     
@@ -90,6 +91,13 @@ extension DriverMoreVC {
     private func openMessages () {
         self.messages.addTapGesture {
             let vc = messagesViewVC()
+            self.push(vc)
+        }
+    }
+    
+    private func OpenEarningsView () {
+        self.earningsView.addTapGesture {
+            let vc = driverEarningsVC()
             self.push(vc)
         }
     }

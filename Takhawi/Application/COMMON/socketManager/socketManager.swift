@@ -51,14 +51,9 @@ class MySocketManager {
             print("🌏...Socket connected🌏")
         }
         
-        
-        
         socket.on(clientEvent: .error) { data, ack in
             print("❌❌❌❌.Socket error: \(data)")
         }
- 
-        
-        
         // Handle custom events
         if socket.status != .connected && socket.status != .connecting {
             print("🌏Connecting socket...")
@@ -86,11 +81,6 @@ class MySocketManager {
         socket.emit("pingFromClient", "ping")
     }
     
-    
-
- 
-    
-    
 
     func startPinging() {
         Timer.scheduledTimer(withTimeInterval: 10.0, repeats: true) { _ in
@@ -107,29 +97,24 @@ class MySocketManager {
     
 //MARK: - -- PROVIDER UPDATE HIS LOCATION  --
     func sendMyLocation ( lat : Double , lng : Double ) {
-        let data: [String: Any] = [
+        let LocationData: [String: Any] = [
             "lat": lat ,
             "lng": lng
         ]
-    
+        
+        print("🥹 \(socket.status)")
         
         
         if self.socket.status != .connected {
+            
             socket.on(clientEvent: .connect) { data, ack in
                 print("1- update my location to the server ")
+                self.socket.emit("update location", LocationData )
                 
-                
-                
-                self.socket.emit("update location", data)
             }
         } else {
-            
-            
-            
-            
             print("2- update my location to the server ")
-            print(data)
-            self.socket.emit("update location", data)
+            self.socket.emit("update location", LocationData )
         }
         
 //        let repeater = RepeatingFunction()

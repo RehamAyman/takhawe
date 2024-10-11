@@ -380,3 +380,23 @@
 "Hole" = "Hole" ; 
 "Speed" = "Speed"; 
 "Works" = "Works" ; 
+"My Cards" = "My Cards" ; 
+
+"Please enter Bank account number" = "Please enter Bank account number" ;
+ "Please enter IBAN number" =  "Please enter IBAN number" ;
+    "Minimum withdrawal 50 SAR" =   "Minimum withdrawal 50 SAR" ;
+      "Please enter Name of the bank" =  "Please enter Name of the bank" ;
+         "Please enter the account holder's name" = "Please enter the account holder's name" ; 
+
+"Please enter your bank account details to transfer the balance" = "Please enter your bank account details to transfer the balance" ; 
+"Bank account details" = "Bank account details" ; 
+"Confirmation bank account data" = "Confirmation bank account data" ; 
+"Bank account details" = "Bank account details" ; 
+"Earnings" = "Earnings" ;
+"Income" = "Income" ;
+"54 Ride" = "54 Ride" ;
+"20 SAR" = "20 SAR" ;
+"Total Rides" = "Total Rides" ;
+"Request a settlement" = "Request a settlement" ; 
+"Your card Successfully Added" = "Your card Successfully Added" ; 
+"Add New Card" = "Add New Card" ;  

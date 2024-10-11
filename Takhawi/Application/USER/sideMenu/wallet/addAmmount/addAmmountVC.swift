@@ -18,12 +18,12 @@ class addAmountVC : BaseVC  {
     
     @IBOutlet weak var backOutlet: UIButton!
     @IBOutlet weak var addAmountTextField: MDCOutlinedTextField!
-    @IBOutlet weak var cardeView: UIView!
    
-    //MARK: - Properties -
-    lazy var swiftUIView = UIHostingController(rootView: animatedCartSwiftuiView())
-
+    @IBOutlet weak var tableView: UITableView!
     
+    //MARK: - Properties -
+ 
+    var myCards : [cardResult] = []
     
     // MARK: - Lifecycle -
         override func viewDidLoad() {
@@ -36,32 +36,13 @@ class addAmountVC : BaseVC  {
     //MARK: - Design Methods -
     private func configureInitialDesign() {
         self.title = "".localized
-        self.addAmountTextField.handelTextField(placeHolder: "Enter Amount".localize)
-        
-            self.addAmountTextField.label.text = "Enter Amount".localize
+        self.addAmountTextField.handelMAINTextField(placeHolder: "Enter Amount".localize)
+        self.addAmountTextField.label.text = "Enter Amount".localize
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(cellType: cardsCell.self )
        
-        
-  
-        
-        self.addChild(swiftUIView)
-        let screenSize: CGRect = UIScreen.main.bounds
-        
-        swiftUIView.view.backgroundColor = UIColor.clear
-        
-        swiftUIView.view.centerInSuperview(size: CGSize(width: screenSize.width , height: 250 ))
-       
-        swiftUIView.view.tag = 909
-        cardeView.addSubview(swiftUIView.view)
-        
-        swiftUIView.didMove(toParent: self)
-        self.backOutlet.setImage( UIImage(named: "Group 25")?.imageFlippedForRightToLeftLayoutDirection(), for: .normal)
-      
-        
-       
-        
-       
-
-        
+        self.getAllSavedCards()
     }
     
     
@@ -69,35 +50,41 @@ class addAmountVC : BaseVC  {
     //MARK: - actions
     
     
+    
+    @IBAction func addNewCard(_ sender: UIButton) {
+        let vc = paymentWebView()
+        vc.action = {
+            self.getAllSavedCards()
+        }
+        self.present( vc , animated: true )
+        
+    }
+    
+    
+    
+    
     @IBAction func backButton(_ sender: UIButton) {
         
-        if let viewWithTag = self.view.viewWithTag(909) {
-            viewWithTag.removeFromSuperview()
-        }
+      
         self.pop(animated: true )
         
     }
+    
+    
+    
+    private func getAllSavedCards () {
+        activityIndicatorr.startAnimating()
+        UserRouter.getAllPaymentCards.send {  [weak self ] (response : APIGenericResponse<[cardResult]> ) in
+            guard let self = self else { return }
+            self.myCards = response.result ?? []
+            self.tableView.reloadData()
+            
+        }
+    }
+    
     
 }
 
 
 
 //
-////MARK: - IBOutlets -
-//
-//
-////MARK: - Properties -
-//
-//
-//
-//
-//
-//// MARK: - Lifecycle -
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        self.configureInitialDesign()
-//    }
-//    
-////MARK: - Design Methods -
-//private func configureInitialDesign() {
-//}

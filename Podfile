@@ -39,6 +39,7 @@ target 'Takhawi' do
   pod 'Intercom'
   pod 'FontBlaster', :git => 'https://github.com/ArtSabintsev/FontBlaster.git', :branch => 'swift5.0'
   
+  
   pod 'Socket.IO-Client-Swift', '~> 16.0'
   
   

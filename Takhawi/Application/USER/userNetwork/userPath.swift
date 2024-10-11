@@ -43,7 +43,8 @@ enum userServerPath {
     case getPolicies
     case aboutUs
     case getAllLastMessages ( chatid : String )
-   
+    case getAllSavedCards
+    
 }
 
 
@@ -120,6 +121,8 @@ extension userServerPath : ServerPath {
             return "policy-service/terms-and-conditions"  // about us
         case .getAllLastMessages(chatid: let chatId ):
             return "message/\(chatId)?page=1&limit=100"
+        case .getAllSavedCards:
+            return "saved-card"
         }
     }
 }
