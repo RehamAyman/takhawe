@@ -45,7 +45,8 @@ struct carInsuranceView: View {
                     .padding(5)
                 Button(action: { // self.showingConfirmation.toggle()
                     if self.urls.count < 1 {
-                    isShowingMediaPicker.toggle()
+                   // isShowingMediaPicker.toggle()
+                        self.showingConfirmation.toggle()
                 } else {
                     showInfoTopAlert(withMessage: "You cant upload more than 1 fiels".localize)
                 }

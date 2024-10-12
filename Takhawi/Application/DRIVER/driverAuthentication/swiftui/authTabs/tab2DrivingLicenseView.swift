@@ -44,7 +44,7 @@ struct tab2DrivingLicenseView: View {
                     .padding(5)
                 Button(action: {  // self.showingConfirmation.toggle()
                     if self.urls.count < 2 {
-                    isShowingMediaPicker.toggle()
+                        showingConfirmation.toggle()
                 } else {
                     showInfoTopAlert(withMessage: "You cant upload more than 2 fiels".localize)
                 }

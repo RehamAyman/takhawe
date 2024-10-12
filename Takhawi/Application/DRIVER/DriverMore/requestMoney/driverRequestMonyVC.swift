@@ -14,6 +14,8 @@ class driverRequestMonyVC: BaseVC {
     
     //MARK: - IBOutlets -
     
+    @IBOutlet weak var agreeIcon: UIImageView!
+    @IBOutlet weak var matchPersonalId: UIImageView!
     @IBOutlet weak var bankAccHolderName: MDCOutlinedTextField!
     @IBOutlet weak var ibanNumber: MDCOutlinedTextField!
     
@@ -25,13 +27,34 @@ class driverRequestMonyVC: BaseVC {
     
     
     //MARK: - Properties -
-    
+    var agree : Bool = false
+    var matchId : Bool = false
     
     
     // MARK: - Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureInitialDesign()
+        
+        
+        self.agreeIcon.addTapGesture {
+            self.agree.toggle()
+            self.agreeIcon.image = self.agree ? UIImage(named: "checkbox") : UIImage(named: "UNcheckbox")
+                UIView.animate(withDuration: 0.5) {
+                    self.view.layoutIfNeeded()
+                }
+         
+        }
+        self.matchPersonalId.addTapGesture {
+            self.matchId.toggle()
+            self.matchPersonalId.image = self.matchId ? UIImage(named: "checkbox") : UIImage(named: "UNcheckbox")
+                UIView.animate(withDuration: 0.5) {
+                    self.view.layoutIfNeeded()
+                }
+        }
+        
+        
+        
     }
     
     
@@ -51,11 +74,15 @@ class driverRequestMonyVC: BaseVC {
     //MARK: - Logic Methods -
     
     
+    @IBAction func maxLimit(_ sender: UIButton) {
+    }
     //MARK: - Actions -
     // note this function just for test the design and still missed the api connection ---
     @IBAction func confirm(_ sender: UIButton) {
         if self.bankAccountNumber.text == "" || self.ibanNumber.text == "" || self.minWithdrawal.text == "" || self.bankName.text == "" || self.bankAccHolderName.text == "" {
            showInfoTopAlert(withMessage: "Please Fill All Fields First")
+        } else if self.matchId == false || self.agree == false    {
+            showInfoTopAlert(withMessage: "Please agree to the conditions first")
         } else {
             activityIndicatorr.startAnimating()
             DispatchQueue.main.asyncAfter(deadline: .now() + 1 ) {

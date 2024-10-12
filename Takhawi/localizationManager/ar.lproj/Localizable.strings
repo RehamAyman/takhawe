@@ -394,3 +394,6 @@
 "Add New Card" = "اضافة كارت جديد" ;
 "trip date : " = "موعد الرحله: "  ; 
 "End Trip" = "انهاء الرحله" ;
+"Confirm that the name contained is identical to the name in the personal ID" = "التأكد من أن الاسم الوارد مطابق للاسم الموجود في البطاقة الشخصية" ;
+"Withdrawal limit amount" = "مبلغ حد السحب";
+"Maximum limit" = "الحد الأقصى" ; 
