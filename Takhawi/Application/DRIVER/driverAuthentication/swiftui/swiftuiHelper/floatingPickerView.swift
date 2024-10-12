@@ -107,7 +107,7 @@ struct floatingPickerViews: View {
                     
                 } label: {
                     ZStack ( alignment: IsArabicLang ? .leading : .trailing ) {
-                        FloatingTextField(title: "Choose Vehicle Type".localize , text: $colorText)
+                        FloatingTextField(title: "Choose Vehicle Color".localize , text: $colorText)
                         
                         Image ( "Vector 9")
                             .resizable()
@@ -129,7 +129,7 @@ struct floatingPickerViews: View {
                     
                 } label: {
                     ZStack ( alignment: IsArabicLang ? .leading : .trailing ) {
-                        FloatingTextField(title: "Enter Vehicle Color".localize , text: $carType)
+                        FloatingTextField(title: "Enter Vehicle Type".localize , text: $carType)
                         
                         Image ( "Vector 9")
                             .resizable()
