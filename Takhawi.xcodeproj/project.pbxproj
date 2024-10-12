@@ -1896,6 +1896,13 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		CE2176C32CB9AA08004722AA /* basicPassengersRate */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = basicPassengersRate;
+			sourceTree = "<group>";
+		};
 		CE2292882B1E636400E8AB42 /* cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -2717,6 +2724,7 @@
 		CEAAAE242CADD77B0076D607 /* tripDetails */ = {
 			isa = PBXGroup;
 			children = (
+				CE2176C32CB9AA08004722AA /* basicPassengersRate */,
 				CEBA951A2CAFF2820068EA01 /* cells */,
 				CEAAAE252CADD7A00076D607 /* ProviderTripDetialsVC.swift */,
 				CEAAAE272CADD7AE0076D607 /* ProviderTripDetialsVC.xib */,

@@ -14,6 +14,11 @@ class tripListCell: UITableViewCell {
     
     //MARK: - IBOutlets -
     
+    @IBOutlet weak var bag: UIImageView!
+    @IBOutlet weak var blutooth: UIImageView!
+    @IBOutlet weak var backSeat: UIImageView!
+    @IBOutlet weak var heat: UIImageView!
+    @IBOutlet weak var charge: UIImageView!
     @IBOutlet weak var driverPhoto: UIImageView!
     @IBOutlet weak var endTime: UILabel!
     @IBOutlet weak var startTime: UILabel!
@@ -84,7 +89,11 @@ class tripListCell: UITableViewCell {
             self.musicicon.tintColor = features.contains(Features.music.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
             self.foodIcon.tintColor = features.contains(Features.food.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
             self.smokeIcon.tintColor = features.contains(Features.noSmoking.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
-           
+            self.heat.tintColor = features.contains(Features.haeting.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
+            self.charge.tintColor = features.contains(Features.charging.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
+            self.backSeat.tintColor = features.contains(Features.backScreens.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
+            self.bag.tintColor = features.contains(Features.bags.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
+            self.blutooth.tintColor = UIColor.systemGray5
            // cell.babyIcon.tintColor = features.contains(Features.pet.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
            
         }

@@ -48,7 +48,6 @@ class ReserveTheTripVC: BaseVC {
     let logoAnimation = LottieAnimationView(name: "Q2ix9ldDnm")
     var tripDetails : BasicTripResult?
     var tripId : Int = 0 
-    
     var appleseatPrice : String = ""
     var applevatPrice : String = ""
     var appletotalPrice : String = ""
@@ -60,9 +59,6 @@ class ReserveTheTripVC: BaseVC {
         dummyPaymentMethods(icon:"" , number: "**** **** **** 8970", expireIn: "Expires: 12/26", type: "ApplePay", selected: false , id: .applePay)
     ]
 
-    
-    
-    
     let paymentHandler = PaymentHandler()
  
     
@@ -92,7 +88,6 @@ class ReserveTheTripVC: BaseVC {
         self.dicountCodeTextField.setRightPaddingPoints(12)
         self.dicountCodeTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
         
-        
         if self.viptrip {
             self.getVipDetails()
             self.calculateVipPrice()
@@ -118,13 +113,7 @@ class ReserveTheTripVC: BaseVC {
     
     @IBAction func confirmTrip(_ sender: UIButton) {
 
-        
-       
-        
         if self.paymentMethod == .applePay {
-            
-            
-            
             
             self.paymentHandler.startPayment(total: appletotalPrice ,
                                              VAT:  applevatPrice ,
@@ -134,17 +123,12 @@ class ReserveTheTripVC: BaseVC {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                         if self.viptrip {
                             self.GotoNextStep(tripId: self.offer?.trip_id ?? 0 )
-                           
+                            
                         } else {
                             self.GotoNextStep(tripId: self.tripDetails?.id ?? 0 )
                         }
                     }
-                
-                    
-                    
                 } else {
-                    
-                    
                     print( "failed ")
                 }
             }
@@ -157,8 +141,6 @@ class ReserveTheTripVC: BaseVC {
                 self.joinAbasicTrip()
             }
         }
-        
-        
     }
     
     

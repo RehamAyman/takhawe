@@ -154,8 +154,7 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print("listen")
-       
-     
+   
         centerMapOnLocation(location: locationManager.location!)
         self.locationManager.stopUpdatingLocation()
           
@@ -215,8 +214,6 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
         self.googleMaps.animate(toZoom: 16)
     }
     
-    
-   
     func getCoordinateBounds(latitude:CLLocationDegrees ,
                              longitude:CLLocationDegrees,
                              distance:Double = 0.23)->GMSCoordinateBounds{
@@ -224,8 +221,6 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
                                             longitude: longitude)
         let northEast = CLLocationCoordinate2D(latitude: latitude + distance, longitude: longitude + distance)
         let southWest = CLLocationCoordinate2D(latitude: latitude - distance, longitude: longitude - distance)
-        
-        
         return GMSCoordinateBounds(coordinate: northEast,
                                    coordinate: southWest)
         

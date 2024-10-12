@@ -15,6 +15,7 @@ class ProviderTripDetialsVC : BaseVC {
 //MARK: - IBOutlets -
     @IBOutlet weak var vipSubmitOutlet: UIButton!
     
+    @IBOutlet weak var cancelTrip: UIButton!
     @IBOutlet weak var vipHeight: NSLayoutConstraint!
     @IBOutlet weak var vipActionsStack: UIStackView!
     @IBOutlet weak var vipClientName: UILabel!
@@ -126,6 +127,7 @@ class ProviderTripDetialsVC : BaseVC {
             
         case .inProgress:
             print(" inprogress step action ")
+          
         case .cancelled :
             print("cancelled")
         case .completed :

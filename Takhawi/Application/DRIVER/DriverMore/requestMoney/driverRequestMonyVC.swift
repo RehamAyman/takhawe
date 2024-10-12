@@ -12,7 +12,7 @@ import MaterialComponents
 
 class driverRequestMonyVC: BaseVC {
     
-//MARK: - IBOutlets -
+    //MARK: - IBOutlets -
     
     @IBOutlet weak var bankAccHolderName: MDCOutlinedTextField!
     @IBOutlet weak var ibanNumber: MDCOutlinedTextField!
@@ -24,18 +24,18 @@ class driverRequestMonyVC: BaseVC {
     
     
     
-//MARK: - Properties -
+    //MARK: - Properties -
     
-
     
-// MARK: - Lifecycle -
+    
+    // MARK: - Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureInitialDesign()
     }
     
     
-//MARK: - Design Methods -
+    //MARK: - Design Methods -
     private func configureInitialDesign() {
         self.title = "".localized
         self.bankAccountNumber.handelTextField(placeHolder: "Please enter Bank account number".localize)
@@ -48,17 +48,24 @@ class driverRequestMonyVC: BaseVC {
         
     }
     
-//MARK: - Logic Methods -
+    //MARK: - Logic Methods -
     
     
-//MARK: - Actions -
-    
+    //MARK: - Actions -
+    // note this function just for test the design and still missed the api connection ---
     @IBAction func confirm(_ sender: UIButton) {
-        activityIndicatorr.startAnimating()
-        
+        if self.bankAccountNumber.text == "" || self.ibanNumber.text == "" || self.minWithdrawal.text == "" || self.bankName.text == "" || self.bankAccHolderName.text == "" {
+           showInfoTopAlert(withMessage: "Please Fill All Fields First")
+        } else {
+            activityIndicatorr.startAnimating()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1 ) {
+                activityIndicatorr.stopAnimating()
+                showPopTopAlert(title: "Done", withMessage: "Your Request Successfully Sent", success: true )
+            }
+        }
     }
 }
-
+// -----
 
 //MARK: - Networking -
 extension driverRequestMonyVC {

@@ -111,12 +111,11 @@ extension tripListVC {
     func setupTableView() {
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        
         tableView.register(UINib(nibName: "tripListCell", bundle: nil), forCellReuseIdentifier: "tripListCell")
      //   self.tableView.register(cellType: tripListCell.self, bundle: nil)
         self.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         self.tableView.tableFooterView = UIView(frame: .zero)
-        //self.tableView.addRefresh(action: #selector(self.refresh))
+       
     }
 }
 

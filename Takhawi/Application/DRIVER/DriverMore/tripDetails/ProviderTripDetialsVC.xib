@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="bottomStack" destination="XvM-06-1fN" id="ET5-Z6-sXS"/>
                 <outlet property="bottomStackHeight" destination="UQX-NC-fNW" id="sg8-5W-EXG"/>
+                <outlet property="cancelTrip" destination="LoB-zF-0Pb" id="H8X-C0-gZc"/>
                 <outlet property="clientImage" destination="SS4-Iw-lsm" id="kRS-Yi-Ggz"/>
                 <outlet property="from" destination="8Ai-8y-GEJ" id="fFT-IP-tIe"/>
                 <outlet property="googleMapsView" destination="YXb-58-bHa" id="JRn-dE-GB0"/>

@@ -119,6 +119,9 @@ extension profileVC {
                 self.enAlpha.text = result.Vehicles?.plate_alphabet ?? ""
                 self.enNum.text = result.Vehicles?.plate_number ?? ""
                 self.arNum.text = result.Vehicles?.plate_number ?? "" 
+        
+                
+              
                 
                 self.collectionView.reloadData()
             }

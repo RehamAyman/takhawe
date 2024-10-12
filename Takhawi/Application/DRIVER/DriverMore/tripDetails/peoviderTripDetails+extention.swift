@@ -21,7 +21,7 @@ extension ProviderTripDetialsVC : UITableViewDelegate , UITableViewDataSource   
         switch self.tripStatus {
         case .cancelled :
             print("cancelled")
-            self.handleInProgressView()
+            self.handleDefualtView()
         case .comming : // comming step no. 1
             self.handleCommingView()
             
@@ -32,10 +32,11 @@ extension ProviderTripDetialsVC : UITableViewDelegate , UITableViewDataSource   
             self.handleArrivedView()
             
         case .inProgress :
-            self.handleInProgressView()
+            self.handleDefualtView()
+           // self.handleInProgressView()
             
         case .completed :
-            self.handleInProgressView()
+            self.handleDefualtView()
             print("00")
         }
     }
@@ -78,19 +79,37 @@ extension ProviderTripDetialsVC : UITableViewDelegate , UITableViewDataSource   
     //MARK: - HANDLE I Inprogress  ACTION
     
     private func handleInProgressView () {
-        self.bottomStack.isHidden = true
-        self.bottomStackHeight.constant = 0
-        self.bottomStack.isUserInteractionEnabled = false
+        //self.bottomStack.isHidden = true
+       self.bottomStackHeight.constant = 50
+      //  self.bottomStack.isUserInteractionEnabled = false
+        self.cancelTrip.isHidden =  true
+        self.submitOutlet.setTitle( "End Trip".localize, for: .normal)
+        
         self.passengersTableView.isUserInteractionEnabled = false
         self.passengersTableView.isHidden = false
-        
+        // show button to end the trip
         UIView.animate(withDuration: 0.5 ) {
             self.mainViewHeight.constant = 270
             self.view.layoutIfNeeded()
         }
         
     }
+//    
     
+    
+    private func handleDefualtView () {
+        self.bottomStack.isHidden = true
+        self.bottomStackHeight.constant = 0
+        self.bottomStack.isUserInteractionEnabled = false
+        self.passengersTableView.isUserInteractionEnabled = false
+        self.passengersTableView.isHidden = false
+        // show button to end the trip
+        UIView.animate(withDuration: 0.5 ) {
+            self.mainViewHeight.constant = 270
+            self.view.layoutIfNeeded()
+        }
+        
+    }
     
     
     //MARK: - HANDLE  UPDATE TRIP STATUS ACTION
@@ -115,6 +134,7 @@ extension ProviderTripDetialsVC : UITableViewDelegate , UITableViewDataSource   
         DriverRouter.markPassenger(id: id).send { [weak self ] ( response : APIGlobalResponse)  in
             guard let self = self else { return }
             if response.status == true {
+                
                 self.passengersTableView.reloadData()
             }
             
@@ -172,6 +192,7 @@ extension ProviderTripDetialsVC : UITableViewDelegate , UITableViewDataSource   
     func handleOnProgressVip () {
         self.vipActionsStack.isHidden = true
         self.vipActionsStack.isUserInteractionEnabled = false
+        
         UIView.animate(withDuration: 0.5 ) {
             self.vipHeight.constant = 250
             self.view.layoutIfNeeded()
@@ -198,12 +219,11 @@ extension ProviderTripDetialsVC : UITableViewDelegate , UITableViewDataSource   
             
             cell.passengerName.text = items.passnger?.name ?? ""
             cell.rate.rating = items.passnger?.passenger_rate ?? 0
-            cell.arraivedOutlet.addTapGesture {
-                
-            }
+            
             cell.arraivedOutlet.backgroundColor = items.status == "ARRIVED" ? UIColor.systemGray4 : UIColor(named: "MainColor")
             cell.arraivedOutlet.addTapGesture {
-                items.status = "ARRIVED"
+             //   items.status = "ARRIVED"
+                cell.backgroundColor = UIColor.systemGray4
                 self.markPassengerAttend(id: items.id ?? 0)
                 
             }

@@ -92,14 +92,18 @@ class homeVC: BaseVC, sendDataBackDelegate{
 //      MASSAGE SEAT
 //      AVAILABILE TRAVEL BAG
 //      HEATING
-// 
+    
+    
+   
+  
+//
     var dummyActivty : [dummyActivity] = [
         dummyActivity(icon: "Food", name: "FOOD", id: 1 ) ,
         dummyActivity(icon: "smoke", name: "NO SMOKING", id: 2 ) ,
         dummyActivity(icon: "Vector 3", name: "WIFI", id: 3  ) ,
         dummyActivity(icon: "music 1", name: "MUSIC", id: 4  ) ,
         dummyActivity(icon: "AC", name: "AIR CONDITIONER", id: 5 ) ,
-        dummyActivity(icon: "Group 1000003070", name: "Blutooth"  , id: 6 ) ,
+        dummyActivity(icon: "Group 1000003070", name: "WIFI"  , id: 6 ) ,
         dummyActivity(icon: "cable", name: "CHARGING"  , id: 7 ) ,
         dummyActivity(icon: "BackScreen", name: "REAR SCREEN"  , id: 8 ) ,
         dummyActivity(icon: "carSeat", name: "MASSAGE SEAT"  , id: 9 )  ,
@@ -312,6 +316,7 @@ class homeVC: BaseVC, sendDataBackDelegate{
                 showInfoTopAlert(withMessage:  "you should select a destination first!.".localize )
             } else {
                 print(self.selectedFeatures)
+                
                 self.continueToVipTripCycle()
    
             }

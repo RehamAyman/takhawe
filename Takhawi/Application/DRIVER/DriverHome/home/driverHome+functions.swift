@@ -42,6 +42,14 @@ extension DriverHomeVC : UICollectionViewDelegate , UICollectionViewDataSource ,
             cell.music.tintColor = features.contains(Features.music.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
             cell.food.tintColor = features.contains(Features.food.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
             cell.smocking.tintColor = features.contains(Features.noSmoking.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
+            cell.chargingIcon.tintColor = features.contains(Features.charging.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
+            cell.heating.tintColor = features.contains(Features.haeting.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
+            cell.backScreen.tintColor = features.contains(Features.backScreens.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
+            cell.massage.tintColor = features.contains(Features.massage.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
+            cell.bags.tintColor = features.contains(Features.bags.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
+            cell.blutooth.tintColor = features.contains(Features.blutooth.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
+            
+            
         }
           
    
@@ -49,8 +57,6 @@ extension DriverHomeVC : UICollectionViewDelegate , UICollectionViewDataSource ,
             let vc = driverProfileVC()
             vc.isDriverAcc = true
             vc.driverVip = item
-            print("----- test ------ ")
-            print(item.trip_id)
            // vc.vipData = item
             self.push(vc)
         }
@@ -90,7 +96,7 @@ extension DriverHomeVC : UICollectionViewDelegate , UICollectionViewDataSource ,
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width:  self.collectionView.frame.width  - 20  , height: 300 )
+        return CGSize(width:  self.collectionView.frame.width  - 20  , height: 310 )
     }
     
     
@@ -142,13 +148,16 @@ extension DriverHomeVC : UICollectionViewDelegate , UICollectionViewDataSource ,
     
     
    private func handelOffView () {
-        
+        print("onnnnnn")
+       self.changeConstrainsWithAnimation(const: 300 )
     }
     
     
   private  func handleOnView  () {
         
-        
+      print("offffff")
+      self.changeConstrainsWithAnimation(const:  30 )
+      
         
     }
     

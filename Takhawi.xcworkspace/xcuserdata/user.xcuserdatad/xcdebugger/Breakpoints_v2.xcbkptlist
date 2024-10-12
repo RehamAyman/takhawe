@@ -1014,8 +1014,8 @@
             filePath = "Takhawi/Application/DRIVER/DriverMore/tripDetails/peoviderTripDetails+extention.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "192"
-            endingLineNumber = "192"
+            startingLineNumber = "213"
+            endingLineNumber = "213"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1033,100 +1033,6 @@
             startingLineNumber = "46"
             endingLineNumber = "46"
             landmarkName = "connect()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9F40AE84-0191-4FBD-BA80-C9CFA0ED8864"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Takhawi/Application/USER/join a trip/Reserve the trip/ReserveTheTripVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
-            landmarkName = "confirmTrip(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "9F40AE84-0191-4FBD-BA80-C9CFA0ED8864 - fd724bbb3286dd83"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Takhawi.ReserveTheTripVC.confirmTrip(__C.UIButton) -&gt; ()"
-                  moduleName = "Takhawi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Documents/takhawy/Takhawi/Application/USER/join%20a%20trip/Reserve%20the%20trip/ReserveTheTripVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "118"
-                  endingLineNumber = "118"
-                  offsetFromSymbolStart = "188">
-               </Location>
-               <Location
-                  uuid = "9F40AE84-0191-4FBD-BA80-C9CFA0ED8864 - fd724bbb3286dc62"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Takhawi.ReserveTheTripVC.confirmTrip(__C.UIButton) -&gt; ()"
-                  moduleName = "Takhawi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Documents/takhawy/Takhawi/Application/USER/join%20a%20trip/Reserve%20the%20trip/ReserveTheTripVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "119"
-                  endingLineNumber = "119"
-                  offsetFromSymbolStart = "188">
-               </Location>
-               <Location
-                  uuid = "9F40AE84-0191-4FBD-BA80-C9CFA0ED8864 - fd724bbb3286dc4d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Takhawi.ReserveTheTripVC.confirmTrip(__C.UIButton) -&gt; ()"
-                  moduleName = "Takhawi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Documents/takhawy/Takhawi/Application/USER/join%20a%20trip/Reserve%20the%20trip/ReserveTheTripVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "120"
-                  endingLineNumber = "120"
-                  offsetFromSymbolStart = "200">
-               </Location>
-               <Location
-                  uuid = "9F40AE84-0191-4FBD-BA80-C9CFA0ED8864 - fd724bbb3286dc8b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Takhawi.ReserveTheTripVC.confirmTrip(__C.UIButton) -&gt; ()"
-                  moduleName = "Takhawi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Documents/takhawy/Takhawi/Application/USER/join%20a%20trip/Reserve%20the%20trip/ReserveTheTripVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "126"
-                  endingLineNumber = "126"
-                  offsetFromSymbolStart = "152">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "606CD337-8472-4291-BB5D-E8681AD98529"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Takhawi/Application/USER/join a trip/Reserve the trip/ReserveTheTripVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
-            landmarkName = "confirmTrip(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1350,6 +1256,69 @@
                   startingLineNumber = "300"
                   endingLineNumber = "300"
                   offsetFromSymbolStart = "25973">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F61D10D4-4BD7-439B-A066-58A420513601"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Takhawi/Application/DRIVER/DriverMore/tripDetails/peoviderTripDetails+extention.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "markPassengerAttend(id:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F61D10D4-4BD7-439B-A066-58A420513601 - 590268722e1f9692"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Takhawi.APIGlobalResponse) -&gt; () in Takhawi.ProviderTripDetialsVC.markPassengerAttend(id: Swift.Int) -&gt; ()"
+                  moduleName = "Takhawi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Documents/takhawy/Takhawi/Application/DRIVER/DriverMore/tripDetails/peoviderTripDetails+extention.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "137"
+                  endingLineNumber = "137"
+                  offsetFromSymbolStart = "349">
+               </Location>
+               <Location
+                  uuid = "F61D10D4-4BD7-439B-A066-58A420513601 - 590268722e1f976d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Takhawi.APIGlobalResponse) -&gt; () in Takhawi.ProviderTripDetialsVC.markPassengerAttend(id: Swift.Int) -&gt; ()"
+                  moduleName = "Takhawi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Documents/takhawy/Takhawi/Application/DRIVER/DriverMore/tripDetails/peoviderTripDetails+extention.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "138"
+                  endingLineNumber = "138"
+                  offsetFromSymbolStart = "349">
+               </Location>
+               <Location
+                  uuid = "F61D10D4-4BD7-439B-A066-58A420513601 - 590268722e1f976d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Takhawi.APIGlobalResponse) -&gt; () in Takhawi.ProviderTripDetialsVC.markPassengerAttend(id: Swift.Int) -&gt; ()"
+                  moduleName = "Takhawi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Documents/takhawy/Takhawi/Application/DRIVER/DriverMore/tripDetails/peoviderTripDetails+extention.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "138"
+                  endingLineNumber = "138"
+                  offsetFromSymbolStart = "368">
                </Location>
             </Locations>
          </BreakpointContent>

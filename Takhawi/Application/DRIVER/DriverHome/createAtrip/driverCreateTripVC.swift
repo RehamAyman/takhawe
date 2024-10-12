@@ -37,11 +37,19 @@ class driverCreateTripVC: BaseVC {
     var SelectdDestination : Int = 0
     var selectedDate : Date = Date()
     var dummyActivty : [dummyActivity] = [
-        dummyActivity(icon: "Food", name: "FOOD", id: 0 ) ,
-        dummyActivity(icon: "smoke", name: "NO SMOKING", id: 1 ) ,
-        dummyActivity(icon: "Vector 3", name: "WIFI", id: 2  ) ,
-        dummyActivity(icon: "music 1", name: "MUSIC" , id: 3  ) ,
-        dummyActivity(icon: "AC", name: "AIR CONDITIONER" , id: 4)
+      
+        dummyActivity(icon: "Food", name: "FOOD", id: 1 ) ,
+        dummyActivity(icon: "smoke", name: "NO SMOKING", id: 2 ) ,
+        dummyActivity(icon: "Vector 3", name: "WIFI", id: 3  ) ,
+        dummyActivity(icon: "music 1", name: "MUSIC", id: 4  ) ,
+        dummyActivity(icon: "AC", name: "AIR CONDITIONER", id: 5 ) ,
+        dummyActivity(icon: "Group 1000003070", name: "WIFI"  , id: 6 ) ,
+        dummyActivity(icon: "cable", name: "CHARGING"  , id: 7 ) ,
+        dummyActivity(icon: "BackScreen", name: "REAR SCREEN"  , id: 8 ) ,
+        dummyActivity(icon: "carSeat", name: "MASSAGE SEAT"  , id: 9 )  ,
+        dummyActivity(icon: "heat", name: "HEATING"  , id: 10 ) ,
+        dummyActivity(icon: "Group 1000003071", name: "AVAILABILE TRAVEL BAG"  , id: 11 )
+        
     ]
     var selectedFeatures : [String] = []
     
