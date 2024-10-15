@@ -227,6 +227,11 @@
 		CE22928B2B1E638300E8AB42 /* hotelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2292892B1E638300E8AB42 /* hotelCell.swift */; };
 		CE22928C2B1E638300E8AB42 /* hotelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE22928A2B1E638300E8AB42 /* hotelCell.xib */; };
 		CE22928E2B1E640700E8AB42 /* hotelVC+delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE22928D2B1E640700E8AB42 /* hotelVC+delegate.swift */; };
+		CE276D0C2CBE44270061855D /* profitDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE276D0B2CBE44270061855D /* profitDetailsVC.xib */; };
+		CE276D102CBE475E0061855D /* profitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE276D0E2CBE475E0061855D /* profitCell.swift */; };
+		CE276D112CBE475E0061855D /* profitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE276D0F2CBE475E0061855D /* profitCell.xib */; };
+		CE276D142CBE54860061855D /* tripReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE276D132CBE54860061855D /* tripReportVC.swift */; };
+		CE276D162CBE55E00061855D /* tripReportVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE276D152CBE55E00061855D /* tripReportVC.xib */; };
 		CE27F53D2ADFAD8500DEA419 /* StarRatingStackView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE27F53A2ADFAD8500DEA419 /* StarRatingStackView.xib */; };
 		CE27F53E2ADFAD8500DEA419 /* JStarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27F53B2ADFAD8500DEA419 /* JStarRatingView.swift */; };
 		CE27F53F2ADFAD8500DEA419 /* StarRatingStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27F53C2ADFAD8500DEA419 /* StarRatingStackView.swift */; };
@@ -469,7 +474,6 @@
 		CED4E1562CBDBBC8004745A3 /* driverReportVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CED4E1512CBDBBC7004745A3 /* driverReportVC.xib */; };
 		CED4E1592CBE2288004745A3 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = CED4E1582CBE2288004745A3 /* SwiftUICharts */; };
 		CED4E15C2CBE40ED004745A3 /* profitDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4E15B2CBE40ED004745A3 /* profitDetailsVC.swift */; };
-		CED4E15E2CBE4102004745A3 /* profitDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CED4E15D2CBE4102004745A3 /* profitDetailsVC.xib */; };
 		CED51ED32AE1B86D00603151 /* driverProfile+collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED51ED22AE1B86D00603151 /* driverProfile+collection.swift */; };
 		CED749202CB90B8C00378C16 /* DriverPointsGoogleMapVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CED7491E2CB90B8C00378C16 /* DriverPointsGoogleMapVC.xib */; };
 		CED749212CB90B8C00378C16 /* DriverPointsGoogleMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7491F2CB90B8C00378C16 /* DriverPointsGoogleMapVC.swift */; };
@@ -750,6 +754,11 @@
 		CE2292892B1E638300E8AB42 /* hotelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hotelCell.swift; sourceTree = "<group>"; };
 		CE22928A2B1E638300E8AB42 /* hotelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = hotelCell.xib; sourceTree = "<group>"; };
 		CE22928D2B1E640700E8AB42 /* hotelVC+delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "hotelVC+delegate.swift"; sourceTree = "<group>"; };
+		CE276D0B2CBE44270061855D /* profitDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = profitDetailsVC.xib; sourceTree = "<group>"; };
+		CE276D0E2CBE475E0061855D /* profitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profitCell.swift; sourceTree = "<group>"; };
+		CE276D0F2CBE475E0061855D /* profitCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = profitCell.xib; sourceTree = "<group>"; };
+		CE276D132CBE54860061855D /* tripReportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripReportVC.swift; sourceTree = "<group>"; };
+		CE276D152CBE55E00061855D /* tripReportVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = tripReportVC.xib; sourceTree = "<group>"; };
 		CE27F5352ADF947C00DEA419 /* EasyTipView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EasyTipView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE27F5372ADF96C400DEA419 /* EasyTipView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EasyTipView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE27F53A2ADFAD8500DEA419 /* StarRatingStackView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StarRatingStackView.xib; sourceTree = "<group>"; };
@@ -995,7 +1004,6 @@
 		CED4E1502CBDBBC7004745A3 /* driverReportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = driverReportVC.swift; sourceTree = "<group>"; };
 		CED4E1512CBDBBC7004745A3 /* driverReportVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = driverReportVC.xib; sourceTree = "<group>"; };
 		CED4E15B2CBE40ED004745A3 /* profitDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profitDetailsVC.swift; sourceTree = "<group>"; };
-		CED4E15D2CBE4102004745A3 /* profitDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = profitDetailsVC.xib; sourceTree = "<group>"; };
 		CED51ED22AE1B86D00603151 /* driverProfile+collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "driverProfile+collection.swift"; sourceTree = "<group>"; };
 		CED7491E2CB90B8C00378C16 /* DriverPointsGoogleMapVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DriverPointsGoogleMapVC.xib; sourceTree = "<group>"; };
 		CED7491F2CB90B8C00378C16 /* DriverPointsGoogleMapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverPointsGoogleMapVC.swift; sourceTree = "<group>"; };
@@ -1926,6 +1934,24 @@
 				CE22928A2B1E638300E8AB42 /* hotelCell.xib */,
 			);
 			path = cell;
+			sourceTree = "<group>";
+		};
+		CE276D0D2CBE471B0061855D /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				CE276D0E2CBE475E0061855D /* profitCell.swift */,
+				CE276D0F2CBE475E0061855D /* profitCell.xib */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		CE276D122CBE546E0061855D /* tripReport */ = {
+			isa = PBXGroup;
+			children = (
+				CE276D132CBE54860061855D /* tripReportVC.swift */,
+				CE276D152CBE55E00061855D /* tripReportVC.xib */,
+			);
+			path = tripReport;
 			sourceTree = "<group>";
 		};
 		CE27F5392ADFAD8500DEA419 /* JStarView */ = {
@@ -2882,6 +2908,7 @@
 		CED4E14C2CBDBBC7004745A3 /* driverReport */ = {
 			isa = PBXGroup;
 			children = (
+				CE276D122CBE546E0061855D /* tripReport */,
 				CED4E15A2CBE40A3004745A3 /* profitView */,
 				CED4E14D2CBDBBC7004745A3 /* reportGraphView.swift */,
 				CED4E14E2CBDBBC7004745A3 /* driverReportSwiftui.swift */,
@@ -2895,8 +2922,9 @@
 		CED4E15A2CBE40A3004745A3 /* profitView */ = {
 			isa = PBXGroup;
 			children = (
+				CE276D0D2CBE471B0061855D /* cells */,
 				CED4E15B2CBE40ED004745A3 /* profitDetailsVC.swift */,
-				CED4E15D2CBE4102004745A3 /* profitDetailsVC.xib */,
+				CE276D0B2CBE44270061855D /* profitDetailsVC.xib */,
 			);
 			path = profitView;
 			sourceTree = "<group>";
@@ -3254,6 +3282,7 @@
 				CE7D82F92AC3BC1D00C5B028 /* SelectYourLocationVc.xib in Resources */,
 				CE034F4D2B2B9E6C0040516E /* reportOrCandelCell.xib in Resources */,
 				0426FBC42B3753A60017F12A /* aboutUsVC.xib in Resources */,
+				CE276D162CBE55E00061855D /* tripReportVC.xib in Resources */,
 				CEF7B6EB2B2E2F7400E3FE5C /* favoritesVC.xib in Resources */,
 				CE034F462B2B5DC70040516E /* reportCancelVC.xib in Resources */,
 				CE9F3C572B1B4550004C3D24 /* wAY9ZXW4id.json in Resources */,
@@ -3283,7 +3312,7 @@
 				CE9CFE742C9A612B008B6AA0 /* Q2ix9ldDnm.json in Resources */,
 				9694AC6C2A5E040D00BDF5F8 /* InfoPlist.strings in Resources */,
 				CE9F3C4E2B19D0E0004C3D24 /* fullScreenGoogleViewVC.xib in Resources */,
-				CED4E15E2CBE4102004745A3 /* profitDetailsVC.xib in Resources */,
+				CE276D0C2CBE44270061855D /* profitDetailsVC.xib in Resources */,
 				9630071A2A7671560075DBFE /* SelectUserTypeVC.xib in Resources */,
 				9694AB422A5DE9D600BDF5F8 /* LaunchScreen.storyboard in Resources */,
 				96B27F8B2A82F7BE006C8DB3 /* TermsOfUseVC.xib in Resources */,
@@ -3328,6 +3357,7 @@
 				CED0C29F2B4936B600BCD6D0 /* alfont_com_هلفيتيكا-عربي-.ttf in Resources */,
 				9694AC612A5E040D00BDF5F8 /* ArbFONTS-URW-DIN-Arabic-Light.ttf in Resources */,
 				CEE69AE92B4C344200E2E58D /* Cairo-Bold.ttf in Resources */,
+				CE276D112CBE475E0061855D /* profitCell.xib in Resources */,
 				9694AC642A5E040D00BDF5F8 /* ArbFONTS-URW-DIN-Arabic-Black.ttf in Resources */,
 				CEE69AE82B4C344200E2E58D /* Cairo-SemiBold.ttf in Resources */,
 				CE2D4AF22B185483008D556E /* filterCell.xib in Resources */,
@@ -3442,6 +3472,7 @@
 				CE115E5D2ABED5E800972CC9 /* homeVC.swift in Sources */,
 				CE3B53A92B2B18D2003D3043 /* appMainTextField.swift in Sources */,
 				9694ABE82A5DFACA00BDF5F8 /* LocationExtetioin.swift in Sources */,
+				CE276D102CBE475E0061855D /* profitCell.swift in Sources */,
 				9694ABED2A5DFACA00BDF5F8 /* Extention+Material.swift in Sources */,
 				CE00B7ED2B4D270900995823 /* onboardhelper.swift in Sources */,
 				9694ABCA2A5DFACA00BDF5F8 /* extensionUIVIewControllerSwiftMessage.swift in Sources */,
@@ -3776,6 +3807,7 @@
 				96B27F872A82F791006C8DB3 /* TermsOfUseVC.swift in Sources */,
 				04C737C82B36E044002AE59C /* helpAndSupportVC.swift in Sources */,
 				9694AC552A5E040D00BDF5F8 /* Themes.swift in Sources */,
+				CE276D142CBE54860061855D /* tripReportVC.swift in Sources */,
 				CEDF18B22B70B83200B03B44 /* otpModifier.swift in Sources */,
 				9641AD342A6C2C1700A29046 /* OnboardingSlide.swift in Sources */,
 				9694AC042A5DFACA00BDF5F8 /* ValidationService.swift in Sources */,

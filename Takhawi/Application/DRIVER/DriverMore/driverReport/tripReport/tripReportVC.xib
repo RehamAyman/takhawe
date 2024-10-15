@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="tripReportVC" customModule="Takhawi" customModuleProvider="target">
+            <connections>
+                <outlet property="mainView" destination="Jje-6v-1Pg" id="QRB-dt-PtY"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3e-E1-Ufm" customClass="BackButton" customModule="Takhawi" customModuleProvider="target">
+                    <rect key="frame" x="20" y="79" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="VXg-Rn-ObE"/>
+                        <constraint firstAttribute="width" constant="40" id="d9K-5a-1Ar"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="Group 25"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip Report" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="54A-ah-XL3">
+                    <rect key="frame" x="153" y="88.666666666666671" width="87" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                    <color key="textColor" name="MainColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Trip Report"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jje-6v-1Pg">
+                    <rect key="frame" x="20" y="139" width="353" height="160"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="160" id="FBg-fb-JVJ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" name="BackGroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Jje-6v-1Pg" secondAttribute="trailing" constant="20" id="RpM-xg-wgO"/>
+                <constraint firstItem="54A-ah-XL3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="n70-C6-maa"/>
+                <constraint firstItem="O3e-E1-Ufm" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="oc8-fg-fW0"/>
+                <constraint firstItem="54A-ah-XL3" firstAttribute="centerY" secondItem="O3e-E1-Ufm" secondAttribute="centerY" id="s38-Gd-RCT"/>
+                <constraint firstItem="Jje-6v-1Pg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="wpd-LI-KO4"/>
+                <constraint firstItem="Jje-6v-1Pg" firstAttribute="top" secondItem="O3e-E1-Ufm" secondAttribute="bottom" constant="20" id="wqs-hB-AC4"/>
+                <constraint firstItem="O3e-E1-Ufm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="yJ1-F8-WUZ"/>
+            </constraints>
+            <point key="canvasLocation" x="98" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Group 25" width="41" height="40"/>
+        <namedColor name="BackGroundColor">
+            <color red="0.95294117647058818" green="0.95294117647058818" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="MainColor">
+            <color red="0.35294117647058826" green="0.25882352941176473" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

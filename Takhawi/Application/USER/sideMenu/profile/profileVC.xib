@@ -13,6 +13,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="profileVC" customModule="Takhawi" customModuleProvider="target">
             <connections>
+                <outlet property="addnNewCar" destination="qK4-GG-xIS" id="Eeo-Ja-A9X"/>
                 <outlet property="arAlpha" destination="AKM-ZG-DHS" id="ewA-dt-bRh"/>
                 <outlet property="arNum" destination="wFT-5A-6k8" id="yHP-Rs-5Ml"/>
                 <outlet property="bottomView" destination="Czf-sK-msJ" id="cIc-MN-8jQ"/>
@@ -335,6 +336,25 @@
                         <constraint firstAttribute="trailing" secondItem="F5u-pj-y7N" secondAttribute="trailing" constant="10" id="r3J-RQ-FP8"/>
                     </constraints>
                 </view>
+                <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qK4-GG-xIS">
+                    <rect key="frame" x="20" y="496.5" width="335" height="50"/>
+                    <color key="backgroundColor" name="MainColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="dbz-fw-sTe"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Add new Vehicle" image="plus" catalog="system">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Add new Vehicle"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" name="BackGroundColor"/>
@@ -348,7 +368,10 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Czf-sK-msJ" secondAttribute="trailing" constant="20" id="f1w-us-KYf"/>
                 <constraint firstItem="Czf-sK-msJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="fhq-3x-raZ"/>
                 <constraint firstItem="PN6-LB-Aqt" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="gQV-MJ-xh6"/>
+                <constraint firstItem="qK4-GG-xIS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="gXb-RO-H44"/>
                 <constraint firstItem="Czf-sK-msJ" firstAttribute="top" secondItem="PN6-LB-Aqt" secondAttribute="bottom" constant="20" id="iqz-ne-o7D"/>
+                <constraint firstItem="qK4-GG-xIS" firstAttribute="top" secondItem="QyS-bu-mVJ" secondAttribute="top" id="j80-ZW-81D"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="qK4-GG-xIS" secondAttribute="trailing" constant="20" id="o7i-CB-k6d"/>
                 <constraint firstItem="QyS-bu-mVJ" firstAttribute="top" secondItem="Czf-sK-msJ" secondAttribute="bottom" constant="20" id="t8F-jA-saE"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="QyS-bu-mVJ" secondAttribute="trailing" constant="10" id="vTk-zW-dP1"/>
                 <constraint firstItem="sF4-KU-0gl" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ygg-HP-7PR"/>
@@ -365,6 +388,7 @@
         <image name="Vector 2" width="17" height="17"/>
         <image name="c2ebc6a07c364e3d9a43a0b1e2097d6e__2_-removebg-preview 1" width="154" height="88.5"/>
         <image name="delete 1" width="20" height="20"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="BackGroundColor">
             <color red="0.95294117647058818" green="0.95294117647058818" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

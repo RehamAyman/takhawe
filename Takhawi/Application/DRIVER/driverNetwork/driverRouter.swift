@@ -25,6 +25,7 @@ enum DriverRouter {
     case markReport ( lat : Double , lng : Double , enType : String   , arType : String )
     case getAllReports ( lat : Double , lng : Double )
     case basicEndTrip ( id : Int )
+    case deleteCar ( id : Int )
 }
 
 extension DriverRouter : APIRouter {
@@ -46,6 +47,9 @@ extension DriverRouter : APIRouter {
             
         case .updateTripStatus , .markPassenger , .basicEndTrip :
             return .patch
+            
+        case .deleteCar :
+            return .delete
             
         }
     }
@@ -79,6 +83,8 @@ extension DriverRouter : APIRouter {
             return driverServerPath.getAllReports
         case .basicEndTrip(id: let id ):
             return driverServerPath.basicEndTrip(id: id)
+        case .deleteCar(id: let id ):
+            return driverServerPath.deleteCar(id: id)
   
        
         }
@@ -162,7 +168,7 @@ extension DriverRouter : APIRouter {
             ]
             
      
-        case  .driverStatus , .vehicleDetials  , .markPassenger  , .basicEndTrip  :
+        case  .driverStatus , .vehicleDetials  , .markPassenger  , .basicEndTrip   , .deleteCar :
             return nil
             
         }

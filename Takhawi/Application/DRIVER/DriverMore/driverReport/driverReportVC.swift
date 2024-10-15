@@ -40,6 +40,7 @@ class driverReportVC: BaseVC {
         var swiftUIView = driverReportSwiftui()
         swiftUIView.action = {
             print("swift got the action")
+            self.push(profitDetailsVC())
         }
            let hostingController = UIHostingController(rootView: swiftUIView)
 
