@@ -9,7 +9,7 @@ import Foundation
 
 
 struct LoginModelData : Codable {
-    let user : User?
+    var user : User?
     let accessToken : String?
     let refreshToken : String?
 

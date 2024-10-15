@@ -10,7 +10,7 @@ import Foundation
 
 
 extension DriverMoreVC {
-     
+    
     func handleVCActions () {
         self.goToBasicTripsList()
         self.goToVipTrips()
@@ -22,23 +22,24 @@ extension DriverMoreVC {
         self.openMessages()
         self.OpenEarningsView()
         self.openReports()
+        self.switchRoleAction()
     }
     
     
     
-//MARK: - BASIC TRIP ACTION
+    //MARK: - BASIC TRIP ACTION
     
-   private func goToBasicTripsList () {
-       basicView.addTapGesture {
-        let vc = tripsSideMenuVC()
-        vc.tripType = .basic
-        vc.driver = true
-           self.push(vc)
-       }
+    private func goToBasicTripsList () {
+        basicView.addTapGesture {
+            let vc = tripsSideMenuVC()
+            vc.tripType = .basic
+            vc.driver = true
+            self.push(vc)
+        }
     }
     
     
-//MARK: - VIP  TRIP ACTION
+    //MARK: - VIP  TRIP ACTION
     private func goToVipTrips () {
         vipV.addTapGesture {
             let vc = tripsSideMenuVC()
@@ -62,14 +63,14 @@ extension DriverMoreVC {
         aboutUs.addTapGesture {
             self.push(aboutUsVC())
         }
-       
+        
     }
     
     
     private func openHelpAndSupport () {
         self.helpAndSupport.addTapGesture {
             let vc = helpAndSupportVC()
-             self.push(vc)
+            self.push(vc)
         }
     }
     
@@ -78,13 +79,13 @@ extension DriverMoreVC {
             let vc = languageVC()
             self.push(vc)
         }
-       
+        
     }
     
     private func openProfileInfo () {
         self.personalInfo.addTapGesture {
             let vc = profileVC()
-            vc.isDriver = true 
+            vc.isDriver = true
             self.push(vc)
         }
     }
@@ -110,4 +111,29 @@ extension DriverMoreVC {
         }
     }
     
+    private func switchRoleAction () {
+        self.switchRole.addTapGesture {
+            activityIndicatorr.startAnimating()
+            DriverRouter.switchToUser.send { [weak self ] (response : APIGenericResponse<LoginModelData>  )  in
+                guard let self = self else { return }
+            
+                if response.status == true {
+                    if let data = response.result {
+                        
+                        
+                        UserDefaults.user?.user?.role = role.driver.rawValue
+                        UserDefaults.accessToken = data.accessToken
+                        // go to user home
+                        UserDefaults.isLogin = true
+                        let vc = homeVC()
+                        let nav = CustomNavigationController(rootViewController: vc)
+                        AppHelper.changeWindowRoot(vc: nav)
+                    }
+               
+                    
+                }
+            }
+        }
+        
+    }
 }

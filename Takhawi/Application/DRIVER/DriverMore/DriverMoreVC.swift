@@ -24,6 +24,7 @@ class DriverMoreVC: BaseVC {
     @IBOutlet weak var helpAndSupport: UIView!
     @IBOutlet weak var polices: UIView!
     
+    @IBOutlet weak var switchRole: UIView!
     
     
     

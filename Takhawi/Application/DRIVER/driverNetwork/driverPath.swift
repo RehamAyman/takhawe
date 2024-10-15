@@ -23,6 +23,7 @@ enum driverServerPath {
     case getAllReports
     case basicEndTrip ( id : Int )
     case deleteCar ( id : Int )
+    case switchToUser
     
     
    
@@ -59,7 +60,8 @@ extension driverServerPath : ServerPath {
             return "basic-trip/end-trip/\(id)"
         case .deleteCar(id: let id ):
             return "vehicle/\(id)"
-    
+        case .switchToUser :
+            return "user/switch-to-user"
     
         }
     }

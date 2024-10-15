@@ -17,7 +17,7 @@ struct User : Codable {
     let name : String?
     let phone : String?
     let email : String?
-    let role : String?
+    var role : String?
     let avatar : String?
     let birth_date : String?
     let bio : String?
