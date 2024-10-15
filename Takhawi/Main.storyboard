@@ -968,6 +968,7 @@
                         <outlet property="messages" destination="68j-fG-2xl" id="eFj-xW-aba"/>
                         <outlet property="personalInfo" destination="xtA-5b-6Vr" id="VRJ-nH-k2c"/>
                         <outlet property="polices" destination="TW8-MR-C83" id="HWO-cM-S1J"/>
+                        <outlet property="reportView" destination="Ya8-h3-GVm" id="dn6-eL-mRc"/>
                         <outlet property="userEmail" destination="1vQ-8W-3X8" id="shp-et-EO7"/>
                         <outlet property="userImage" destination="5Dg-Jf-hzY" id="otX-ig-rtD"/>
                         <outlet property="userName" destination="VzW-ev-bjz" id="qPP-PV-6yO"/>

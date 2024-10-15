@@ -1320,6 +1320,21 @@
                   endingLineNumber = "138"
                   offsetFromSymbolStart = "368">
                </Location>
+               <Location
+                  uuid = "F61D10D4-4BD7-439B-A066-58A420513601 - 5dd1a431997a3f33"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Takhawi.APIGlobalResponse) -&gt; () in Takhawi.ProviderTripDetialsVC.markPassengerAttend(id: Swift.Int) -&gt; ()"
+                  moduleName = "Takhawi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Documents/takhawy1/Takhawi/Application/DRIVER/DriverMore/tripDetails/peoviderTripDetails+extention.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "138"
+                  endingLineNumber = "138"
+                  offsetFromSymbolStart = "349">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>

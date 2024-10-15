@@ -462,6 +462,14 @@
 		CED288902B49B7EB00E075CE /* editProfileVC+extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED2888F2B49B7EB00E075CE /* editProfileVC+extentions.swift */; };
 		CED288942B49B87B00E075CE /* hobbiesCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED288922B49B87B00E075CE /* hobbiesCellCollectionViewCell.swift */; };
 		CED288952B49B87B00E075CE /* hobbiesCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CED288932B49B87B00E075CE /* hobbiesCellCollectionViewCell.xib */; };
+		CED4E1522CBDBBC8004745A3 /* reportGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4E14D2CBDBBC7004745A3 /* reportGraphView.swift */; };
+		CED4E1532CBDBBC8004745A3 /* driverReportSwiftui.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4E14E2CBDBBC7004745A3 /* driverReportSwiftui.swift */; };
+		CED4E1542CBDBBC8004745A3 /* reportMiddleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4E14F2CBDBBC7004745A3 /* reportMiddleView.swift */; };
+		CED4E1552CBDBBC8004745A3 /* driverReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4E1502CBDBBC7004745A3 /* driverReportVC.swift */; };
+		CED4E1562CBDBBC8004745A3 /* driverReportVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CED4E1512CBDBBC7004745A3 /* driverReportVC.xib */; };
+		CED4E1592CBE2288004745A3 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = CED4E1582CBE2288004745A3 /* SwiftUICharts */; };
+		CED4E15C2CBE40ED004745A3 /* profitDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4E15B2CBE40ED004745A3 /* profitDetailsVC.swift */; };
+		CED4E15E2CBE4102004745A3 /* profitDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CED4E15D2CBE4102004745A3 /* profitDetailsVC.xib */; };
 		CED51ED32AE1B86D00603151 /* driverProfile+collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED51ED22AE1B86D00603151 /* driverProfile+collection.swift */; };
 		CED749202CB90B8C00378C16 /* DriverPointsGoogleMapVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CED7491E2CB90B8C00378C16 /* DriverPointsGoogleMapVC.xib */; };
 		CED749212CB90B8C00378C16 /* DriverPointsGoogleMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7491F2CB90B8C00378C16 /* DriverPointsGoogleMapVC.swift */; };
@@ -981,6 +989,13 @@
 		CED2888F2B49B7EB00E075CE /* editProfileVC+extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "editProfileVC+extentions.swift"; sourceTree = "<group>"; };
 		CED288922B49B87B00E075CE /* hobbiesCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hobbiesCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		CED288932B49B87B00E075CE /* hobbiesCellCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = hobbiesCellCollectionViewCell.xib; sourceTree = "<group>"; };
+		CED4E14D2CBDBBC7004745A3 /* reportGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = reportGraphView.swift; sourceTree = "<group>"; };
+		CED4E14E2CBDBBC7004745A3 /* driverReportSwiftui.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = driverReportSwiftui.swift; sourceTree = "<group>"; };
+		CED4E14F2CBDBBC7004745A3 /* reportMiddleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = reportMiddleView.swift; sourceTree = "<group>"; };
+		CED4E1502CBDBBC7004745A3 /* driverReportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = driverReportVC.swift; sourceTree = "<group>"; };
+		CED4E1512CBDBBC7004745A3 /* driverReportVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = driverReportVC.xib; sourceTree = "<group>"; };
+		CED4E15B2CBE40ED004745A3 /* profitDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profitDetailsVC.swift; sourceTree = "<group>"; };
+		CED4E15D2CBE4102004745A3 /* profitDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = profitDetailsVC.xib; sourceTree = "<group>"; };
 		CED51ED22AE1B86D00603151 /* driverProfile+collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "driverProfile+collection.swift"; sourceTree = "<group>"; };
 		CED7491E2CB90B8C00378C16 /* DriverPointsGoogleMapVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DriverPointsGoogleMapVC.xib; sourceTree = "<group>"; };
 		CED7491F2CB90B8C00378C16 /* DriverPointsGoogleMapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverPointsGoogleMapVC.swift; sourceTree = "<group>"; };
@@ -1064,6 +1079,7 @@
 				9694AC0D2A5DFC1400BDF5F8 /* SwiftMessages in Frameworks */,
 				96EA1E3B2A76EDF900F39386 /* M13Checkbox in Frameworks */,
 				9694AC0A2A5DFB6300BDF5F8 /* Alamofire in Frameworks */,
+				CED4E1592CBE2288004745A3 /* SwiftUICharts in Frameworks */,
 				9694AC152A5E013100BDF5F8 /* Kingfisher in Frameworks */,
 				C8F589A9825138701BF0AC8B /* Pods_Takhawi.framework in Frameworks */,
 			);
@@ -2220,21 +2236,6 @@
 			path = cell;
 			sourceTree = "<group>";
 		};
-		CE5B60402CAD40680093A469 /* basic */ = {
-			isa = PBXGroup;
-			children = (
-				CE5B60412CAD406E0093A469 /* cell */,
-			);
-			path = basic;
-			sourceTree = "<group>";
-		};
-		CE5B60412CAD406E0093A469 /* cell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = cell;
-			sourceTree = "<group>";
-		};
 		CE5B60462CAD49F10093A469 /* repeating Function */ = {
 			isa = PBXGroup;
 			children = (
@@ -2585,10 +2586,10 @@
 		CE9D3CAE2C853B99007E872D /* DriverMore */ = {
 			isa = PBXGroup;
 			children = (
+				CED4E14C2CBDBBC7004745A3 /* driverReport */,
 				CE565E3D2CB8EF5200354F0C /* requestMoney */,
 				CE565E302CB8E36100354F0C /* driverEarnings */,
 				CEAAAE242CADD77B0076D607 /* tripDetails */,
-				CE5B60402CAD40680093A469 /* basic */,
 				CE5B603E2CAD404E0093A469 /* vip */,
 				CE9D3CAF2C853BEF007E872D /* DriverMoreVC.swift */,
 				CE5B603C2CAD36CD0093A469 /* driverMore+extention.swift */,
@@ -2878,6 +2879,28 @@
 			path = cells;
 			sourceTree = "<group>";
 		};
+		CED4E14C2CBDBBC7004745A3 /* driverReport */ = {
+			isa = PBXGroup;
+			children = (
+				CED4E15A2CBE40A3004745A3 /* profitView */,
+				CED4E14D2CBDBBC7004745A3 /* reportGraphView.swift */,
+				CED4E14E2CBDBBC7004745A3 /* driverReportSwiftui.swift */,
+				CED4E14F2CBDBBC7004745A3 /* reportMiddleView.swift */,
+				CED4E1502CBDBBC7004745A3 /* driverReportVC.swift */,
+				CED4E1512CBDBBC7004745A3 /* driverReportVC.xib */,
+			);
+			path = driverReport;
+			sourceTree = "<group>";
+		};
+		CED4E15A2CBE40A3004745A3 /* profitView */ = {
+			isa = PBXGroup;
+			children = (
+				CED4E15B2CBE40ED004745A3 /* profitDetailsVC.swift */,
+				CED4E15D2CBE4102004745A3 /* profitDetailsVC.xib */,
+			);
+			path = profitView;
+			sourceTree = "<group>";
+		};
 		CED77C032B635F3700962E83 /* authTabs */ = {
 			isa = PBXGroup;
 			children = (
@@ -3123,6 +3146,7 @@
 				963DAB252A7FDAE8004ED3C7 /* AlertKit */,
 				CEB5A8482ABC489200A7F4AD /* MIOTPVerificationSPM */,
 				CED77C072B6365FF00962E83 /* Neumorphic */,
+				CED4E1582CBE2288004745A3 /* SwiftUICharts */,
 			);
 			productName = Takhawi;
 			productReference = 9694AB322A5DE9D500BDF5F8 /* Takhawi.app */;
@@ -3167,6 +3191,7 @@
 				963DAB242A7FDAE7004ED3C7 /* XCRemoteSwiftPackageReference "AlertKit" */,
 				CEB5A8472ABC489200A7F4AD /* XCRemoteSwiftPackageReference "MIOTPVerificationSPM" */,
 				CED77C062B6365FF00962E83 /* XCRemoteSwiftPackageReference "neumorphic" */,
+				CED4E1572CBE2288004745A3 /* XCRemoteSwiftPackageReference "chartview" */,
 			);
 			productRefGroup = 9694AB332A5DE9D500BDF5F8 /* Products */;
 			projectDirPath = "";
@@ -3238,6 +3263,7 @@
 				CEAAAE232CADCBD40076D607 /* messagesCell.xib in Resources */,
 				CE71F4712B16885B00E7B689 /* driversOffersCell.xib in Resources */,
 				CE9F3C5B2B1B4955004C3D24 /* u4F3iX2jrQ.json in Resources */,
+				CED4E1562CBDBBC8004745A3 /* driverReportVC.xib in Resources */,
 				CE9757C82AE0F0CC0014346E /* tripListVC.xib in Resources */,
 				CE855C012C92F6640098F96A /* userTripCell.xib in Resources */,
 				CE619F8E2CADFF6A00EF6CC4 /* GoogleService-Info.plist in Resources */,
@@ -3257,6 +3283,7 @@
 				CE9CFE742C9A612B008B6AA0 /* Q2ix9ldDnm.json in Resources */,
 				9694AC6C2A5E040D00BDF5F8 /* InfoPlist.strings in Resources */,
 				CE9F3C4E2B19D0E0004C3D24 /* fullScreenGoogleViewVC.xib in Resources */,
+				CED4E15E2CBE4102004745A3 /* profitDetailsVC.xib in Resources */,
 				9630071A2A7671560075DBFE /* SelectUserTypeVC.xib in Resources */,
 				9694AB422A5DE9D600BDF5F8 /* LaunchScreen.storyboard in Resources */,
 				96B27F8B2A82F7BE006C8DB3 /* TermsOfUseVC.xib in Resources */,
@@ -3406,6 +3433,7 @@
 				CED288942B49B87B00E075CE /* hobbiesCellCollectionViewCell.swift in Sources */,
 				CE6D51A32C3C91A10024BC73 /* isoFormate.swift in Sources */,
 				CE3CACF02B2DA7A50025990E /* swiftRegisterVC.swift in Sources */,
+				CED4E1552CBDBBC8004745A3 /* driverReportVC.swift in Sources */,
 				CEBB8B932ADE77FB00E70EC4 /* mapSearchExtention.swift in Sources */,
 				CED77C052B635F5300962E83 /* tab1UploadId .swift in Sources */,
 				CEB5A8642ABD7ECD00A7F4AD /* tab4.swift in Sources */,
@@ -3425,6 +3453,7 @@
 				CEB49C4C2C3BEB1B00BB506D /* offersModel.swift in Sources */,
 				CEAAAE222CADCBD40076D607 /* messagesCell.swift in Sources */,
 				CEB138852B61B2360070DBA8 /* driverAuthView.swift in Sources */,
+				CED4E1532CBDBBC8004745A3 /* driverReportSwiftui.swift in Sources */,
 				CE772FBA2ADD458600BDEDC9 /* sideMenuItems.swift in Sources */,
 				CE6178A42ACD08DE00AA8BB7 /* homeSearch+textfieldDelegate.swift in Sources */,
 				9694AC012A5DFACA00BDF5F8 /* SocialMedia.swift in Sources */,
@@ -3565,6 +3594,7 @@
 				04B659DF2B343B5500E78752 /* walletCell.swift in Sources */,
 				0426FBC22B3753970017F12A /* aboutUsVC.swift in Sources */,
 				CE4E22CD2C0CE4C60092AE16 /* registerTabsExtention.swift in Sources */,
+				CED4E15C2CBE40ED004745A3 /* profitDetailsVC.swift in Sources */,
 				9694ABE02A5DFACA00BDF5F8 /* Optional.swift in Sources */,
 				CEDD108F2CA0530E0009A922 /* findingDriver+Socket.swift in Sources */,
 				CEEAB1042CA369C100B2B9F3 /* driverVipTripsCellCollectionViewCell.swift in Sources */,
@@ -3576,6 +3606,7 @@
 				9694AB382A5DE9D500BDF5F8 /* SceneDelegate.swift in Sources */,
 				04C737B72B36D388002AE59C /* tripsSideMenuVC+delegate.swift in Sources */,
 				CEDF18AA2B6FB42B00B03B44 /* tab3authDriver.swift in Sources */,
+				CED4E1542CBDBBC8004745A3 /* reportMiddleView.swift in Sources */,
 				CE5B10FD2C64327B00818240 /* weatherData.swift in Sources */,
 				CE5B10FB2C64324C00818240 /* weatherManager.swift in Sources */,
 				963DAB2B2A7FDD27004ED3C7 /* DriverRegisterVC.swift in Sources */,
@@ -3699,6 +3730,7 @@
 				9694ABF72A5DFACA00BDF5F8 /* AppIndicator.swift in Sources */,
 				CE04D9BD2B15DD0000B41157 /* successBookViewVC.swift in Sources */,
 				04B4AFAF2B34830000DAFEC2 /* addamountVC+extentions.swift in Sources */,
+				CED4E1522CBDBBC8004745A3 /* reportGraphView.swift in Sources */,
 				CE7576ED2AF1FE2500AFF56A /* innerShadow.swift in Sources */,
 				CE9DB3992AC1AD58000759B8 /* customUIsegment.swift in Sources */,
 				CEA164912B8387CB0063ED8A /* forthOnboardingView.swift in Sources */,
@@ -4109,6 +4141,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		CED4E1572CBE2288004745A3 /* XCRemoteSwiftPackageReference "chartview" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apppear/chartview.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.5.5;
+			};
+		};
 		CED77C062B6365FF00962E83 /* XCRemoteSwiftPackageReference "neumorphic" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/costachung/neumorphic/";
@@ -4184,6 +4224,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CEB5A8472ABC489200A7F4AD /* XCRemoteSwiftPackageReference "MIOTPVerificationSPM" */;
 			productName = MIOTPVerificationSPM;
+		};
+		CED4E1582CBE2288004745A3 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CED4E1572CBE2288004745A3 /* XCRemoteSwiftPackageReference "chartview" */;
+			productName = SwiftUICharts;
 		};
 		CED77C072B6365FF00962E83 /* Neumorphic */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -327,6 +327,8 @@ class homeVC: BaseVC, sendDataBackDelegate{
     
     @IBAction func joinatripsegmentbutton(_ sender: UIButton) {
         let vc = homeSearchVC ()
+        vc.currentLat = locationManager.location?.coordinate.latitude ?? 0.0
+        vc.currentong = locationManager.location?.coordinate.longitude ?? 0.0
         vc.modalTransitionStyle = .coverVertical
         vc.modalPresentationStyle = .overCurrentContext
         vc.selectAndDismiss = { string , lat , long  in

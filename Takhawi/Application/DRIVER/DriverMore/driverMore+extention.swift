@@ -21,6 +21,7 @@ extension DriverMoreVC {
         self.openProfileInfo()
         self.openMessages()
         self.OpenEarningsView()
+        self.openReports()
     }
     
     
@@ -98,6 +99,13 @@ extension DriverMoreVC {
     private func OpenEarningsView () {
         self.earningsView.addTapGesture {
             let vc = driverEarningsVC()
+            self.push(vc)
+        }
+    }
+    
+    private func openReports ( ) {
+        self.reportView.addTapGesture {
+            let vc = driverReportVC()
             self.push(vc)
         }
     }
