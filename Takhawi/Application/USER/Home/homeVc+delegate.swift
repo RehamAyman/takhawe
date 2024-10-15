@@ -71,11 +71,27 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
         print(indexPath.row)
         //
         self.hideMenu()
-        publicSideMenu.sideMenuView(index: indexPath, main: self)
+        if indexPath.row == 0 {
+          //  self.switchRole()
+        } else {
+            publicSideMenu.sideMenuView(index: indexPath, main: self)
+        }
+            
+       
+         
+      
         
     }
     
     
+    private func switchRole () {
+        activityIndicatorr.startAnimating()
+        UserRouter.switchRole.send { [weak self]  (response : APIGenericResponse<LoginModelData>  )  in
+            guard let self = self else { return }
+            
+            
+        }
+    }
     
 //MARK: - GOOGLE MAPS METHODS
  func setUpGoogleMapView () {

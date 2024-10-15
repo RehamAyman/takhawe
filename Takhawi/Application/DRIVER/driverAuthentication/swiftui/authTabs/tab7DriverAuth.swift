@@ -11,6 +11,7 @@ struct tab7DriverAuth: View {
     @State var isShowingMediaPicker : Bool = false
     @Binding var urls : [URL] 
     @State private var showAlert = false
+    var isComeFromProfile : Bool = false
     
     var IsArabicLang : Bool {
         if LocalizationManager.shared.getLanguage() == .Arabic {
@@ -22,18 +23,19 @@ struct tab7DriverAuth: View {
     
     var body: some View {
         VStack {
-            VStack ( alignment: .leading , spacing: 3) {
-                Text ( "1. Access the designated section and click on the upload button.".localize)
-                Text ( "2. Take clear pictures of the car's front, back, left side, and right side.".localize)
-                Text ( "3.  Select the image files and upload them using the provided prompt.".localize)
-                Text ( "4. Review the uploaded images and save or submit to complete the process.".localize)
-                
+            if isComeFromProfile == false {
+                VStack ( alignment: .leading , spacing: 3) {
+                    Text ( "1. Access the designated section and click on the upload button.".localize)
+                    Text ( "2. Take clear pictures of the car's front, back, left side, and right side.".localize)
+                    Text ( "3.  Select the image files and upload them using the provided prompt.".localize)
+                    Text ( "4. Review the uploaded images and save or submit to complete the process.".localize)
+                    
+                }
+                .font(.custom((IsArabicLang ? AppFont.arRegular : AppFont.Regular).rawValue , size: 12))
+                .padding(10)
+                .foregroundColor(Color.black.opacity(0.6))
+                .environment(\.layoutDirection,  IsArabicLang ? .rightToLeft :  .leftToRight  )
             }
-            .font(.custom((IsArabicLang ? AppFont.arRegular : AppFont.Regular).rawValue , size: 12))
-            .padding(10)
-            .foregroundColor(Color.black.opacity(0.6))
-            .environment(\.layoutDirection,  IsArabicLang ? .rightToLeft :  .leftToRight  )
-            
             VStack {
                 Image( "car 1")
                     .resizable()

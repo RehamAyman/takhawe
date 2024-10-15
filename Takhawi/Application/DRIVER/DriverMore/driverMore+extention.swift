@@ -119,9 +119,7 @@ extension DriverMoreVC {
             
                 if response.status == true {
                     if let data = response.result {
-                        
-                        
-                        UserDefaults.user?.user?.role = role.driver.rawValue
+                        UserDefaults.user?.user?.role = role.user.rawValue
                         UserDefaults.accessToken = data.accessToken
                         // go to user home
                         UserDefaults.isLogin = true

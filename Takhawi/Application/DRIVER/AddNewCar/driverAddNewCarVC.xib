@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="driverAddNewCarVC" customModule="Takhawi" customModuleProvider="target">
+            <connections>
+                <outlet property="swiftuiContainer" destination="EPf-qI-VS0" id="SVR-PC-iGD"/>
+                <outlet property="view" destination="iN0-l3-epB" id="T39-t1-49k"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQF-YT-fpX" customClass="BackButton" customModule="Takhawi" customModuleProvider="target">
+                    <rect key="frame" x="20" y="79" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Igb-9B-Do9"/>
+                        <constraint firstAttribute="width" constant="40" id="yw7-Ld-XKR"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="Group 25"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add new Vehicle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5r-Mn-atO">
+                    <rect key="frame" x="128.66666666666666" y="88.666666666666671" width="135.99999999999997" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                    <color key="textColor" name="MainColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Add new Vehicle"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EPf-qI-VS0">
+                    <rect key="frame" x="0.0" y="129" width="393" height="723"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" name="BackGroundColor"/>
+            <constraints>
+                <constraint firstItem="d5r-Mn-atO" firstAttribute="centerY" secondItem="WQF-YT-fpX" secondAttribute="centerY" id="CsR-MV-PJL"/>
+                <constraint firstItem="d5r-Mn-atO" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="EVL-R0-z6R"/>
+                <constraint firstItem="EPf-qI-VS0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="OIz-Qr-2ZP"/>
+                <constraint firstItem="EPf-qI-VS0" firstAttribute="top" secondItem="WQF-YT-fpX" secondAttribute="bottom" constant="10" id="Y02-jv-qpb"/>
+                <constraint firstAttribute="trailing" secondItem="EPf-qI-VS0" secondAttribute="trailing" id="ZXt-gm-DEb"/>
+                <constraint firstAttribute="bottom" secondItem="EPf-qI-VS0" secondAttribute="bottom" id="bU3-lE-nw9"/>
+                <constraint firstItem="WQF-YT-fpX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="hpw-nN-I2M"/>
+                <constraint firstItem="WQF-YT-fpX" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="mQQ-NL-Njc"/>
+            </constraints>
+            <point key="canvasLocation" x="136.64122137404578" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Group 25" width="41" height="40"/>
+        <namedColor name="BackGroundColor">
+            <color red="0.95294117647058818" green="0.95294117647058818" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="MainColor">
+            <color red="0.35294117647058826" green="0.25882352941176473" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

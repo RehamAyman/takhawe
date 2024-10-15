@@ -57,8 +57,13 @@ class profileVC: BaseVC {
     private func configureInitialDesign() {
         self.title = "".localized
         self.setUpMain()
-        
+        self.addnNewCar.addTapGesture {
+            let vc = driverAddNewCarVC()
+            self.push(vc)
+        }
     }
+    
+   
     
 //MARK: - Logic Methods -
     func setUpMain () {
@@ -72,9 +77,9 @@ class profileVC: BaseVC {
             self.vechcleupdateView.isHidden = false
             self.vechcleupdateView.isUserInteractionEnabled = true
             self.vechcleupdateView.layer.addBasicShadow(cornerRadius: 15)
-          
         }
     }
+    
     
     private func deleteCarAction () {
         self.deleteCar.addTapGesture {

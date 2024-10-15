@@ -553,8 +553,8 @@
             filePath = "Takhawi/Application/driver/driverAuthentication/swiftui/authTabs/tab7DriverAuth.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "189"
-            endingLineNumber = "189"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -1335,6 +1335,21 @@
                   endingLineNumber = "138"
                   offsetFromSymbolStart = "349">
                </Location>
+               <Location
+                  uuid = "F61D10D4-4BD7-439B-A066-58A420513601 - 5dd1a431997a3f33"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Takhawi.APIGlobalResponse) -&gt; () in Takhawi.ProviderTripDetialsVC.markPassengerAttend(id: Swift.Int) -&gt; ()"
+                  moduleName = "Takhawi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Documents/takhawy1/Takhawi/Application/DRIVER/DriverMore/tripDetails/peoviderTripDetails+extention.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "138"
+                  endingLineNumber = "138"
+                  offsetFromSymbolStart = "368">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1348,8 +1363,8 @@
             filePath = "Takhawi/Application/DRIVER/DriverMore/driverMore+extention.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
             landmarkName = "switchRoleAction()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1373,7 +1388,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5BF75F78-AE3C-497F-9706-D914AB90A5C6"
+            uuid = "7C2C9B31-C0E8-448C-A8CC-6E7042F3935A"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -1382,22 +1397,6 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "124"
             endingLineNumber = "124"
-            landmarkName = "switchRoleAction()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7C2C9B31-C0E8-448C-A8CC-6E7042F3935A"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Takhawi/Application/DRIVER/DriverMore/driverMore+extention.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
             landmarkName = "switchRoleAction()"
             landmarkType = "7">
          </BreakpointContent>

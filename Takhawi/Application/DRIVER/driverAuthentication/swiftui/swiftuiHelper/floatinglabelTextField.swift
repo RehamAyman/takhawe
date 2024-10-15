@@ -105,7 +105,7 @@ struct FloatingTextField: View {
 struct FloatingTextField_Previews: PreviewProvider {
     static var previews: some View {
         FloatingTextField(title: "Your Email Address", text: .constant(""))
-            .frame(width: 350, height: 60, alignment: .center)
+//            .frame(width: 350, height: 60, alignment: .center)
     }
 }
 #endif

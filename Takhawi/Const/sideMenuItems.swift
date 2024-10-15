@@ -26,6 +26,7 @@ struct publicSideMenu {
        
         case 0 :  // switch to driver acc
             print("go to switch to driver ")
+           
         case 1 : // go to profile
             let vc = profileVC()
             main.push(vc)

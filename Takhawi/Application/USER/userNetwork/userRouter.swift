@@ -47,6 +47,7 @@ enum UserRouter {
     case getAllLastMessaged ( chatId : String )
     case getAllChats
     case getAllPaymentCards
+    case switchRole
     
 }
 
@@ -65,7 +66,7 @@ extension UserRouter : APIRouter {
             return .post
         
             
-        case .getAllVipOffers , .getAllCities , .getAllBasicTrips  , .recentAddress  , .getOneTrip , .getProfile , .walletData , .getAllHobbies  , .getAllAddress , .getAllFavDrives , .getMyUpcommingTrips , .getCancelledTrips , .getCompletedTrips , .getVip , .getOneGeneralTrip  , .getPolices  , .aboutUs , .getAllLastMessaged , .getAllChats  , .getAllPaymentCards :
+        case .getAllVipOffers , .getAllCities , .getAllBasicTrips  , .recentAddress  , .getOneTrip , .getProfile , .walletData , .getAllHobbies  , .getAllAddress , .getAllFavDrives , .getMyUpcommingTrips , .getCancelledTrips , .getCompletedTrips , .getVip , .getOneGeneralTrip  , .getPolices  , .aboutUs , .getAllLastMessaged , .getAllChats  , .getAllPaymentCards , .switchRole  :
           return .get
             
             
@@ -156,6 +157,8 @@ extension UserRouter : APIRouter {
             return userServerPath.getAllMessages
         case .getAllPaymentCards :
             return userServerPath.getAllSavedCards
+        case .switchRole:
+            return userServerPath.switchRole
             
             
         }
@@ -341,7 +344,7 @@ extension UserRouter : APIRouter {
                
    
             
-        case .getAllVipOffers  , .recentAddress , .getOneTrip , .getProfile   , .calculateVipPrice , .getAllAddress   , .removeDriverFromFav    , .getVip , .getOneGeneralTrip  , .getPolices , .aboutUs , .getAllLastMessaged , .getAllChats  , .getAllPaymentCards :
+        case .getAllVipOffers  , .recentAddress , .getOneTrip , .getProfile   , .calculateVipPrice , .getAllAddress   , .removeDriverFromFav    , .getVip , .getOneGeneralTrip  , .getPolices , .aboutUs , .getAllLastMessaged , .getAllChats  , .getAllPaymentCards  , .switchRole :
             return nil
             
         }

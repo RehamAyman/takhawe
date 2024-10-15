@@ -351,6 +351,10 @@
 		CE7576F22AF2041100AFF56A /* chooseFeatureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7576F02AF2041100AFF56A /* chooseFeatureCell.swift */; };
 		CE7576F32AF2041100AFF56A /* chooseFeatureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE7576F12AF2041100AFF56A /* chooseFeatureCell.xib */; };
 		CE772FBA2ADD458600BDEDC9 /* sideMenuItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE772FB92ADD458600BDEDC9 /* sideMenuItems.swift */; };
+		CE797EC32CBEDD7D0089F78D /* driverAddNewCarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE797EC22CBEDD7D0089F78D /* driverAddNewCarVC.swift */; };
+		CE797EC52CBEDD890089F78D /* driverAddNewCarVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE797EC42CBEDD890089F78D /* driverAddNewCarVC.xib */; };
+		CE797EC72CBEE0A40089F78D /* addNewCarSwiftui.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE797EC62CBEE0A40089F78D /* addNewCarSwiftui.swift */; };
+		CE797ECA2CBEE3B40089F78D /* uploadingSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE797EC92CBEE3B40089F78D /* uploadingSection.swift */; };
 		CE7A34CD2B7373A9009B52CD /* MediaPicker-macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7A34C82B7373A8009B52CD /* MediaPicker-macOS.swift */; };
 		CE7A34CE2B7373A9009B52CD /* MediaPickerErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7A34C92B7373A9009B52CD /* MediaPickerErrors.swift */; };
 		CE7A34CF2B7373A9009B52CD /* MediaPicker-iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7A34CA2B7373A9009B52CD /* MediaPicker-iOS.swift */; };
@@ -882,6 +886,10 @@
 		CE7576F02AF2041100AFF56A /* chooseFeatureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chooseFeatureCell.swift; sourceTree = "<group>"; };
 		CE7576F12AF2041100AFF56A /* chooseFeatureCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = chooseFeatureCell.xib; sourceTree = "<group>"; };
 		CE772FB92ADD458600BDEDC9 /* sideMenuItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sideMenuItems.swift; sourceTree = "<group>"; };
+		CE797EC22CBEDD7D0089F78D /* driverAddNewCarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = driverAddNewCarVC.swift; sourceTree = "<group>"; };
+		CE797EC42CBEDD890089F78D /* driverAddNewCarVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = driverAddNewCarVC.xib; sourceTree = "<group>"; };
+		CE797EC62CBEE0A40089F78D /* addNewCarSwiftui.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addNewCarSwiftui.swift; sourceTree = "<group>"; };
+		CE797EC92CBEE3B40089F78D /* uploadingSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uploadingSection.swift; sourceTree = "<group>"; };
 		CE7A34C82B7373A8009B52CD /* MediaPicker-macOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MediaPicker-macOS.swift"; sourceTree = "<group>"; };
 		CE7A34C92B7373A9009B52CD /* MediaPickerErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPickerErrors.swift; sourceTree = "<group>"; };
 		CE7A34CA2B7373A9009B52CD /* MediaPicker-iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MediaPicker-iOS.swift"; sourceTree = "<group>"; };
@@ -2368,6 +2376,25 @@
 			path = Const;
 			sourceTree = "<group>";
 		};
+		CE797EC12CBEDD5E0089F78D /* AddNewCar */ = {
+			isa = PBXGroup;
+			children = (
+				CE797EC82CBEE3800089F78D /* swiftuiViews */,
+				CE797EC22CBEDD7D0089F78D /* driverAddNewCarVC.swift */,
+				CE797EC42CBEDD890089F78D /* driverAddNewCarVC.xib */,
+				CE797EC62CBEE0A40089F78D /* addNewCarSwiftui.swift */,
+			);
+			path = AddNewCar;
+			sourceTree = "<group>";
+		};
+		CE797EC82CBEE3800089F78D /* swiftuiViews */ = {
+			isa = PBXGroup;
+			children = (
+				CE797EC92CBEE3B40089F78D /* uploadingSection.swift */,
+			);
+			path = swiftuiViews;
+			sourceTree = "<group>";
+		};
 		CE7A34C72B737356009B52CD /* mediaPicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -2948,6 +2975,7 @@
 		CED77C092B6375CD00962E83 /* DRIVER */ = {
 			isa = PBXGroup;
 			children = (
+				CE797EC12CBEDD5E0089F78D /* AddNewCar */,
 				CECF871B2CB52C27001A705B /* AccedientView */,
 				CE8291F52C4174E800E289EF /* driverNetwork */,
 				CE9D3CAE2C853B99007E872D /* DriverMore */,
@@ -3335,6 +3363,7 @@
 				9694AC5D2A5E040D00BDF5F8 /* 62623-warning.json in Resources */,
 				04C737D12B371046002AE59C /* selectComplainVC.xib in Resources */,
 				CE2292872B1E57C100E8AB42 /* hotelsVC.xib in Resources */,
+				CE797EC52CBEDD890089F78D /* driverAddNewCarVC.xib in Resources */,
 				049358902B43DA81004E5259 /* Localizable.strings in Resources */,
 				CEEE6E322C5FAA5100AB7435 /* chooseCityVC.xib in Resources */,
 				CE8DE1482C7BF93D005B139F /* z2vKVVJpIc.json in Resources */,
@@ -3474,6 +3503,7 @@
 				9694ABE82A5DFACA00BDF5F8 /* LocationExtetioin.swift in Sources */,
 				CE276D102CBE475E0061855D /* profitCell.swift in Sources */,
 				9694ABED2A5DFACA00BDF5F8 /* Extention+Material.swift in Sources */,
+				CE797EC72CBEE0A40089F78D /* addNewCarSwiftui.swift in Sources */,
 				CE00B7ED2B4D270900995823 /* onboardhelper.swift in Sources */,
 				9694ABCA2A5DFACA00BDF5F8 /* extensionUIVIewControllerSwiftMessage.swift in Sources */,
 				CEB5A85B2ABC6E1400A7F4AD /* tab3.swift in Sources */,
@@ -3751,6 +3781,7 @@
 				9694AC072A5DFACA00BDF5F8 /* NSNotificationNames.swift in Sources */,
 				CEAAAE262CADD7A00076D607 /* ProviderTripDetialsVC.swift in Sources */,
 				CEBB8BA52ADEEC1900E70EC4 /* profileVc+delegate.swift in Sources */,
+				CE797EC32CBEDD7D0089F78D /* driverAddNewCarVC.swift in Sources */,
 				9694ABD52A5DFACA00BDF5F8 /* UIImageExtention.swift in Sources */,
 				CE5BF5512CB6FBBE00C59170 /* accedintReportModel.swift in Sources */,
 				04B659CA2B341D6A00E78752 /* favDriverCell.swift in Sources */,
@@ -3762,6 +3793,7 @@
 				CE04D9BD2B15DD0000B41157 /* successBookViewVC.swift in Sources */,
 				04B4AFAF2B34830000DAFEC2 /* addamountVC+extentions.swift in Sources */,
 				CED4E1522CBDBBC8004745A3 /* reportGraphView.swift in Sources */,
+				CE797ECA2CBEE3B40089F78D /* uploadingSection.swift in Sources */,
 				CE7576ED2AF1FE2500AFF56A /* innerShadow.swift in Sources */,
 				CE9DB3992AC1AD58000759B8 /* customUIsegment.swift in Sources */,
 				CEA164912B8387CB0063ED8A /* forthOnboardingView.swift in Sources */,
@@ -3987,7 +4019,7 @@
 				CODE_SIGN_ENTITLEMENTS = Takhawi/Takhawi.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_TEAM = CA5NVSJ377;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				FRAMEWORK_SEARCH_PATHS = "${inherited}";
@@ -4029,7 +4061,7 @@
 				CODE_SIGN_ENTITLEMENTS = Takhawi/Takhawi.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_TEAM = CA5NVSJ377;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;

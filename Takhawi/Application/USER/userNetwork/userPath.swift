@@ -44,6 +44,7 @@ enum userServerPath {
     case aboutUs
     case getAllLastMessages ( chatid : String )
     case getAllSavedCards
+    case switchRole
     
 }
 
@@ -123,6 +124,8 @@ extension userServerPath : ServerPath {
             return "message/\(chatId)?page=1&limit=100"
         case .getAllSavedCards:
             return "saved-card"
+        case .switchRole:
+            return "user/switch-to-driver"
         }
     }
 }
