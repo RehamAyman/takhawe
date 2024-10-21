@@ -26,6 +26,14 @@ struct addNewCarSwiftui: View {
     @State var pinTwo: String = ""
     @State var pinThree: String = ""
     @State var pinFour: String = ""
+    @State var VehicleClass : Int = 0
+    @State var seatsNumber : Int = 0
+    @State var VehicleColor: Int = 0
+    @State var VehicleType:  Int = 0
+    @State var VehicleName:  Int = 0
+    @State var year : Int = 0
+    @State var carDetails : CarDetailsResult?
+    
     
     
     var body: some View {
@@ -33,12 +41,12 @@ struct addNewCarSwiftui: View {
             VStack(alignment: .leading ) {
                 
 //MARK: -  driver id section
-                Text("Driver ID")
+                Text("Driver ID".localize)
                     .foregroundStyle(Color( "MainColor"))
                     .font(.custom(  (LocalizationManager.shared.getLanguage() == .Arabic ? AppFont.arMedium : AppFont.Medium).rawValue , size: 13))
                     .padding(.bottom , 5)
-                uploadingSection( urls: $DriverIdUrls, titleText: .constant("Please Upload Your ID"))
-                FloatingTextField(numKeyboard: true, title: "Enter Your ID Number" , text:  $IDNumber   )
+                uploadingSection( urls: $DriverIdUrls, titleText: .constant("Please Upload Your ID ".localize))
+                FloatingTextField(numKeyboard: true, title: "Enter Your ID Number".localize , text:  $IDNumber   )
             Divider()
                 
 //MARK: -  driver license section
@@ -47,7 +55,7 @@ struct addNewCarSwiftui: View {
                     .foregroundStyle(Color( "MainColor"))
                     .font(.custom(  (LocalizationManager.shared.getLanguage() == .Arabic ? AppFont.arMedium : AppFont.Medium).rawValue , size: 13))
                     .padding(.bottom , 5)
-                uploadingSection( urls: $DrivingLicensUrls, titleText: .constant("Please Upload Your Driving License"))
+                uploadingSection( urls: $DrivingLicensUrls, titleText: .constant("Please Upload Your Driving License".localize))
               
                 Divider()
                 
@@ -107,13 +115,48 @@ struct addNewCarSwiftui: View {
                     .font(.custom(( LocalizationManager.shared.getLanguage() == .Arabic ? AppFont.arBold : AppFont.Bold).rawValue , size: 14))
                 tab7DriverAuth(urls: $carUrls , isComeFromProfile: true  )
                 Divider()
+//MARK: -  more info. section
+                Text ( "More Info".localize)
+                    .foregroundStyle(Color( "MainColor"))
+                    .font(.custom(( LocalizationManager.shared.getLanguage() == .Arabic ? AppFont.arBold : AppFont.Bold).rawValue , size: 14))
+                
                
+                    
+                    floatingPickerViews( selectedClass: $VehicleClass, selectedSeatNum: $seatsNumber, selectedColor: $VehicleColor , selectedType: $VehicleType , selectedName: $VehicleName, selectedYear: $year   , carDetails: $carDetails)
+                      
+                Button {
+                   
+                      
+                       
+                   
+                } label: {
+                    Text( "Add Vehicle".localize)
+                        .font(.custom( LocalizationManager.shared.getLanguage() == .Arabic ? AppFont.arBold.rawValue : AppFont.Bold.rawValue , size: 20))
+                        .foregroundColor(.white)
+                        .frame(height: 60)
+                        .frame(maxWidth: .infinity)
+                        .background(Color("MainColor"))
+                        .cornerRadius(27.5)
+                        .padding(25)
+                        .padding(.bottom , 30 )
+                        .shadow(color: Color("MainColor").opacity(0.6), radius: 3 , x: 0 , y: 3)
+                }
+                    
                 
             }
         }
         .padding()
         .frame(maxWidth: .infinity)
         .background(Color("BackGroundColor" ))
+        .onAppear(perform: {
+               activityIndicatorr.startAnimating()
+               AuthRouter.allCarDetails.send {  (response : APIGenericResponse<CarDetailsResult>) in
+                   if let result = response.result {
+                       
+                       self.carDetails = result
+                   }
+               }
+        })
         
     }
 }

@@ -67,31 +67,109 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
         return 91
     }
     
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
         //
         self.hideMenu()
         if indexPath.row == 0 {
-          //  self.switchRole()
+            self.switchRole()
         } else {
             publicSideMenu.sideMenuView(index: indexPath, main: self)
         }
-            
-       
-         
-      
-        
     }
+    
+    
+    
     
     
     private func switchRole () {
         activityIndicatorr.startAnimating()
-        UserRouter.switchRole.send { [weak self]  (response : APIGenericResponse<LoginModelData>  )  in
+        UserRouter.switchRole.send { [weak self]  (response : APIGenericResponse<SwitchRoleResult>  )  in
             guard let self = self else { return }
-            
+            if response.status == true {
+                // switch to driver handler methods
+                if let driverStatus = response.result?.driver_status {
+                    switch driverStatus {
+                    case "APPROVED"  :
+                        UserDefaults.isLogin = true
+                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                        let vc = storyboard.instantiateViewController(withIdentifier: "DriverTabbar") as! DriverTabbar
+                        let nav = CustomNavigationController(rootViewController: vc)
+                        AppHelper.changeWindowRoot(vc: nav)
+                        
+                    case  "REGISTERED"  : // it mean that he did not complete the whole process to regester
+                        self.checkDriverStatus()
+                      
+                    case "PENDING" :
+                        showPopTopAlert(title: "your application is under review".localize, withMessage: "please contact us if you have any questions".localize, success: false )
+                        
+                    default:
+                        print("def")
+                    }
+                }
+            }
             
         }
     }
+    
+    private func checkDriverStatus () {
+        
+       
+        DriverRouter.driverStatus.send {  [weak self] (response: APIGenericResponse<DriverStatusResult>) in
+            guard let self = self else { return }
+            guard let result = response.result else { return }
+            
+            let vc = driverAuthVC()
+
+            if result.national_Id_Images == false {
+                vc.selection = 1
+                self.push(vc)
+            }else if result.driving_Licence_Images == false {
+                vc.selection = 2
+                self.push(vc)
+            } else if result.vehicle_Licence == false {
+                vc.selection = 3
+                self.push(vc)
+            } else if result.avatar_Image == false {
+                vc.selection = 4
+                self.push(vc)
+            }else if result.vehicle_Images == false {
+                vc.selection = 5
+                self.push(vc)
+            } else if result.insurance_Image == false {
+                vc.selection = 6
+                self.push(vc)
+            }else if result.vehicle_Exist == false {
+                vc.selection = 7
+                self.push(vc)
+            }
+
+        }
+            
+        }
+        
+        
+    
+//       if response.result?.user?.driver_status == "APPROVED" {
+//           UserDefaults.isLogin = true
+//           self?.registerFcmTocken()
+//           let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//           let vc = storyboard.instantiateViewController(withIdentifier: "DriverTabbar") as! DriverTabbar
+//           self?.navigationController?.pushViewController(vc, animated: true)
+//        
+//       } else if response.result?.user?.driver_status == "REGISTERED" {
+//           
+//           self?.showDriverStatusLoading(bool: true )
+//          // self?.getCarDetails()
+//           self?.checkDriverStatus()
+//       } else if response.result?.user?.driver_status == "PENDING" {
+//           showPopTopAlert(title: "your application is under review".localize, withMessage: "please contact us if you have any questions".localize, success: false )
+//       }
+//    
+    
+    
     
 //MARK: - GOOGLE MAPS METHODS
  func setUpGoogleMapView () {

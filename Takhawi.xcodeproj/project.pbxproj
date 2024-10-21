@@ -360,6 +360,8 @@
 		CE7A34CF2B7373A9009B52CD /* MediaPicker-iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7A34CA2B7373A9009B52CD /* MediaPicker-iOS.swift */; };
 		CE7A34D02B7373A9009B52CD /* MediaPicker-PhotosUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7A34CB2B7373A9009B52CD /* MediaPicker-PhotosUI.swift */; };
 		CE7A34D12B7373A9009B52CD /* MediaOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7A34CC2B7373A9009B52CD /* MediaOptions.swift */; };
+		CE7BA8952CC5089000E5FCA7 /* passengersRatingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7BA8942CC5089000E5FCA7 /* passengersRatingVC.swift */; };
+		CE7BA8972CC508A100E5FCA7 /* passengersRatingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE7BA8962CC508A100E5FCA7 /* passengersRatingVC.xib */; };
 		CE7D82F42AC3B86300C5B028 /* selectYorLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7D82F32AC3B86300C5B028 /* selectYorLocation.swift */; };
 		CE7D82F72AC3BB1100C5B028 /* MainAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7D82F62AC3BB1100C5B028 /* MainAlert.swift */; };
 		CE7D82F92AC3BC1D00C5B028 /* SelectYourLocationVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE7D82F82AC3BC1D00C5B028 /* SelectYourLocationVc.xib */; };
@@ -528,6 +530,8 @@
 		CEEE6E3A2C6052B300AB7435 /* carInsuranceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE6E392C6052B300AB7435 /* carInsuranceView.swift */; };
 		CEEE6E3E2C61337200AB7435 /* carCommonDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE6E3D2C61337200AB7435 /* carCommonDetails.swift */; };
 		CEEE6E402C619D0200AB7435 /* basicTripListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE6E3F2C619D0200AB7435 /* basicTripListModel.swift */; };
+		CEEEF2132CC5169A0039367F /* retePassengersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEEF2112CC5169A0039367F /* retePassengersCell.swift */; };
+		CEEEF2142CC5169A0039367F /* retePassengersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEEEF2122CC5169A0039367F /* retePassengersCell.xib */; };
 		CEEFF5A62C63E1C300337CC2 /* googleplacesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFF5A42C63E1C300337CC2 /* googleplacesCell.swift */; };
 		CEEFF5A72C63E1C300337CC2 /* googleplacesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEEFF5A52C63E1C300337CC2 /* googleplacesCell.xib */; };
 		CEF094182CAEDA3100E04246 /* openChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF094172CAEDA3100E04246 /* openChatModel.swift */; };
@@ -895,6 +899,8 @@
 		CE7A34CA2B7373A9009B52CD /* MediaPicker-iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MediaPicker-iOS.swift"; sourceTree = "<group>"; };
 		CE7A34CB2B7373A9009B52CD /* MediaPicker-PhotosUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MediaPicker-PhotosUI.swift"; sourceTree = "<group>"; };
 		CE7A34CC2B7373A9009B52CD /* MediaOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaOptions.swift; sourceTree = "<group>"; };
+		CE7BA8942CC5089000E5FCA7 /* passengersRatingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = passengersRatingVC.swift; sourceTree = "<group>"; };
+		CE7BA8962CC508A100E5FCA7 /* passengersRatingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = passengersRatingVC.xib; sourceTree = "<group>"; };
 		CE7D82F32AC3B86300C5B028 /* selectYorLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectYorLocation.swift; sourceTree = "<group>"; };
 		CE7D82F62AC3BB1100C5B028 /* MainAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAlert.swift; sourceTree = "<group>"; };
 		CE7D82F82AC3BC1D00C5B028 /* SelectYourLocationVc.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectYourLocationVc.xib; sourceTree = "<group>"; };
@@ -1061,6 +1067,8 @@
 		CEEE6E392C6052B300AB7435 /* carInsuranceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carInsuranceView.swift; sourceTree = "<group>"; };
 		CEEE6E3D2C61337200AB7435 /* carCommonDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carCommonDetails.swift; sourceTree = "<group>"; };
 		CEEE6E3F2C619D0200AB7435 /* basicTripListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = basicTripListModel.swift; sourceTree = "<group>"; };
+		CEEEF2112CC5169A0039367F /* retePassengersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = retePassengersCell.swift; sourceTree = "<group>"; };
+		CEEEF2122CC5169A0039367F /* retePassengersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = retePassengersCell.xib; sourceTree = "<group>"; };
 		CEEFF5A42C63E1C300337CC2 /* googleplacesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = googleplacesCell.swift; sourceTree = "<group>"; };
 		CEEFF5A52C63E1C300337CC2 /* googleplacesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = googleplacesCell.xib; sourceTree = "<group>"; };
 		CEF094172CAEDA3100E04246 /* openChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = openChatModel.swift; sourceTree = "<group>"; };
@@ -1928,13 +1936,6 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		CE2176C32CB9AA08004722AA /* basicPassengersRate */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = basicPassengersRate;
-			sourceTree = "<group>";
-		};
 		CE2292882B1E636400E8AB42 /* cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -2407,6 +2408,16 @@
 			path = mediaPicker;
 			sourceTree = "<group>";
 		};
+		CE7BA8932CC5086F00E5FCA7 /* passengersRating */ = {
+			isa = PBXGroup;
+			children = (
+				CEEEF2102CC516820039367F /* cell */,
+				CE7BA8942CC5089000E5FCA7 /* passengersRatingVC.swift */,
+				CE7BA8962CC508A100E5FCA7 /* passengersRatingVC.xib */,
+			);
+			path = passengersRating;
+			sourceTree = "<group>";
+		};
 		CE7D82F22AC3B84E00C5B028 /* Location */ = {
 			isa = PBXGroup;
 			children = (
@@ -2778,7 +2789,7 @@
 		CEAAAE242CADD77B0076D607 /* tripDetails */ = {
 			isa = PBXGroup;
 			children = (
-				CE2176C32CB9AA08004722AA /* basicPassengersRate */,
+				CE7BA8932CC5086F00E5FCA7 /* passengersRating */,
 				CEBA951A2CAFF2820068EA01 /* cells */,
 				CEAAAE252CADD7A00076D607 /* ProviderTripDetialsVC.swift */,
 				CEAAAE272CADD7AE0076D607 /* ProviderTripDetialsVC.xib */,
@@ -3148,6 +3159,15 @@
 			path = model;
 			sourceTree = "<group>";
 		};
+		CEEEF2102CC516820039367F /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				CEEEF2112CC5169A0039367F /* retePassengersCell.swift */,
+				CEEEF2122CC5169A0039367F /* retePassengersCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 		CEF0E7DD2B4F3B3C00DCBD69 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
@@ -3320,6 +3340,7 @@
 				CEAAAE232CADCBD40076D607 /* messagesCell.xib in Resources */,
 				CE71F4712B16885B00E7B689 /* driversOffersCell.xib in Resources */,
 				CE9F3C5B2B1B4955004C3D24 /* u4F3iX2jrQ.json in Resources */,
+				CE7BA8972CC508A100E5FCA7 /* passengersRatingVC.xib in Resources */,
 				CED4E1562CBDBBC8004745A3 /* driverReportVC.xib in Resources */,
 				CE9757C82AE0F0CC0014346E /* tripListVC.xib in Resources */,
 				CE855C012C92F6640098F96A /* userTripCell.xib in Resources */,
@@ -3366,6 +3387,7 @@
 				CE797EC52CBEDD890089F78D /* driverAddNewCarVC.xib in Resources */,
 				049358902B43DA81004E5259 /* Localizable.strings in Resources */,
 				CEEE6E322C5FAA5100AB7435 /* chooseCityVC.xib in Resources */,
+				CEEEF2142CC5169A0039367F /* retePassengersCell.xib in Resources */,
 				CE8DE1482C7BF93D005B139F /* z2vKVVJpIc.json in Resources */,
 				04C737CA2B36E04F002AE59C /* helpAndSupportVC.xib in Resources */,
 				CE9F3C592B1B482E004C3D24 /* BDidekRogj.json in Resources */,
@@ -3721,6 +3743,7 @@
 				CE4E22E62C0DE0190092AE16 /* Utilities.swift in Sources */,
 				CEDAC5722C36E3F70054028E /* features.swift in Sources */,
 				CE0F42F92B4D0F6E005694AC /* onboardingSwiftuiView.swift in Sources */,
+				CE7BA8952CC5089000E5FCA7 /* passengersRatingVC.swift in Sources */,
 				CE4B81022C7427EC0009714C /* profileData.swift in Sources */,
 				9694ABF62A5DFACA00BDF5F8 /* MarkerView.swift in Sources */,
 				9694ABFC2A5DFACA00BDF5F8 /* AlertView.swift in Sources */,
@@ -3753,6 +3776,7 @@
 				9694ABEE2A5DFACA00BDF5F8 /* PushNotifcationManager.swift in Sources */,
 				04C737D52B37142B002AE59C /* selectYourComplainCell.swift in Sources */,
 				CE855C042C9345DD0098F96A /* mainTripModel.swift in Sources */,
+				CEEEF2132CC5169A0039367F /* retePassengersCell.swift in Sources */,
 				CE034F442B2B5D990040516E /* reportCancelVC.swift in Sources */,
 				9694ABDF2A5DFACA00BDF5F8 /* Double.swift in Sources */,
 				9694ABF52A5DFACA00BDF5F8 /* showandHidePassword.swift in Sources */,
@@ -4019,7 +4043,7 @@
 				CODE_SIGN_ENTITLEMENTS = Takhawi/Takhawi.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 16;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = CA5NVSJ377;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				FRAMEWORK_SEARCH_PATHS = "${inherited}";
@@ -4033,7 +4057,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -4061,7 +4085,7 @@
 				CODE_SIGN_ENTITLEMENTS = Takhawi/Takhawi.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 16;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = CA5NVSJ377;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
@@ -4076,7 +4100,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

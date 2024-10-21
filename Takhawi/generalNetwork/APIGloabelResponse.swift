@@ -9,7 +9,7 @@ import Foundation
 class APIGlobalResponse: Codable {
     //   var key: APIServerResponseKey?
     var status : Bool?
-    var message : String = ""
+    var message : String = "successfully Done"
     var paginate: Pagination?
   //  var resultt : Bool?
     

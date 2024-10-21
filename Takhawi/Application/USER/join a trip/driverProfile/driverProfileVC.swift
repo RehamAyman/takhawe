@@ -11,6 +11,7 @@ import UIKit
 import GoogleMaps
 import Cosmos
 
+
 class driverProfileVC: BaseVC {
     @IBOutlet weak var driverRate: CosmosView!
     
@@ -59,7 +60,7 @@ class driverProfileVC: BaseVC {
     var destLat : Double = 0.0
     var destLong : Double = 0.0
     var comeFromBasicTrip : Bool = false
-    
+    var comeFromSharedUrl : Bool = false
     
    
     
@@ -98,6 +99,8 @@ class driverProfileVC: BaseVC {
             self.to.text = self.tripDetails?.destinationlocationname ?? "--"
             self.seatPrice.text = "\(self.tripDetails?.basic_trip_price_per_seat ?? 0 )"
             self.getOneBasicTrip()
+        } else if comeFromSharedUrl {
+            print(" == = == = = = =come from shared url === == == = = ===")
         }
         
         if isDriverAcc {
@@ -128,6 +131,17 @@ class driverProfileVC: BaseVC {
     
   
 //MARK: - Actions -
+    
+    
+    
+    @IBAction func shareTrip(_ sender: UIButton) {
+
+        let urlString = "takhawe://"
+        
+       shareLink(from: self, urlString: urlString)
+        
+        
+    }
     
     
     

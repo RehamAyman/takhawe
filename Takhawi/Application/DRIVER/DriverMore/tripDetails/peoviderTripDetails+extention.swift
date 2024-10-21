@@ -32,8 +32,8 @@ extension ProviderTripDetialsVC : UITableViewDelegate , UITableViewDataSource   
             self.handleArrivedView()
             
         case .inProgress :
-            self.handleDefualtView()
-           // self.handleInProgressView()
+          //  self.handleDefualtView()
+            self.handleInProgressView()
             
         case .completed :
             self.handleDefualtView()

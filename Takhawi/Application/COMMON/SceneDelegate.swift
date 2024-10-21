@@ -11,7 +11,7 @@ import IQKeyboardManagerSwift
 
 
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+class SceneDelegate: UIResponder, UIWindowSceneDelegate   {
    
     override init() {
         super.init()
@@ -25,6 +25,36 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         LocalizationManager.shared.delegate = self
         LocalizationManager.shared.setAppInnitLanguage()
     }
+    
+//    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+//        if let url = URLContexts.first?.url {
+//            print("⌛️⌛️⌛️⌛️ comming url : \(url)")
+//            let urlString = url.absoluteString
+//            let component = urlString.components(separatedBy: "=")
+//            if component.count > 1 , let tripId = component.last {
+//                print("⌛️⌛️⌛️⌛️ comming tripId is  : \(tripId)")
+//                self.navigateToTripDetails()
+//            }
+//        }
+//    }
+//  
+    
+    
+    
+//    private func navigateToTripDetails () {
+//       // let item = self.allTrips[indexPath.row]
+//        let vc = driverProfileVC()
+//        vc.comeFromSharedUrl = true
+//        let nav = CustomNavigationController(rootViewController: vc)
+//        AppHelper.changeWindowRoot(vc: nav)
+//      
+//             
+//        
+//    }
+//    
+   
+    
+    
 }
 
 

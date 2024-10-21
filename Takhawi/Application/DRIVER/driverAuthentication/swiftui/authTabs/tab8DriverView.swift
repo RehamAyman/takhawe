@@ -39,15 +39,9 @@ struct tab8DriverView: View {
             
             VStack (spacing: 16 ) {
                 
-                floatingPickerViews( selectedClass: $VehicleClass, selectedSeatNum: $seatsNumber, selectedColor: $VehicleColor , selectedType: $VehicleType , selectedName: $VehicleName, selectedYear: $year   , carDetails: self.carDetails )
+                floatingPickerViews( selectedClass: $VehicleClass, selectedSeatNum: $seatsNumber, selectedColor: $VehicleColor , selectedType: $VehicleType , selectedName: $VehicleName, selectedYear: $year   , carDetails: $carDetails )
         
-//                floatingPickerView(placeHolder: "Enter Vehicle Class".localize , text: $VehicleClass , carDetails: self.carDetails)
-//                floatingPickerView(placeHolder: "Enter number of seats allocated for the ride".localize , text: $seatsNumber)
-//                floatingPickerView(placeHolder: "Enter Vehicle Color".localize , text: $VehicleColor)
-//                floatingPickerView(placeHolder: "Choose Vehicle Type".localize , text: $VehicleType )
-//                floatingPickerView(placeHolder: "Choose Vehicle Name".localize , text: $VehicleName )
-//                floatingPickerView(placeHolder: "Choose Production year".localize , text: $Productionyear )
-//                
+
                 
             }
         }

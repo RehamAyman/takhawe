@@ -18,25 +18,21 @@ class driverRequestMonyVC: BaseVC {
     @IBOutlet weak var matchPersonalId: UIImageView!
     @IBOutlet weak var bankAccHolderName: MDCOutlinedTextField!
     @IBOutlet weak var ibanNumber: MDCOutlinedTextField!
-    
     @IBOutlet weak var minWithdrawal: MDCOutlinedTextField!
     @IBOutlet weak var bankName: MDCOutlinedTextField!
-    
     @IBOutlet weak var bankAccountNumber: MDCOutlinedTextField!
     
     
     
-    //MARK: - Properties -
+//MARK: - Properties -
     var agree : Bool = false
     var matchId : Bool = false
+    var theWholeProfit : Int = 0
     
-    
-    // MARK: - Lifecycle -
+// MARK: - Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureInitialDesign()
-        
-        
         self.agreeIcon.addTapGesture {
             self.agree.toggle()
             self.agreeIcon.image = self.agree ? UIImage(named: "checkbox") : UIImage(named: "UNcheckbox")
@@ -75,7 +71,13 @@ class driverRequestMonyVC: BaseVC {
     
     
     @IBAction func maxLimit(_ sender: UIButton) {
+        if  theWholeProfit > 0 {
+            self.minWithdrawal.text = String ( self.theWholeProfit )
+        }
     }
+    
+    
+    
     //MARK: - Actions -
     // note this function just for test the design and still missed the api connection ---
     @IBAction func confirm(_ sender: UIButton) {
@@ -84,18 +86,30 @@ class driverRequestMonyVC: BaseVC {
         } else if self.matchId == false || self.agree == false    {
             showInfoTopAlert(withMessage: "Please agree to the conditions first")
         } else {
-            activityIndicatorr.startAnimating()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1 ) {
-                activityIndicatorr.stopAnimating()
-                showPopTopAlert(title: "Done", withMessage: "Your Request Successfully Sent", success: true )
-            }
+            self.requestStellment()
+        
         }
     }
+    
+    
 }
+
+
 // -----
 
 //MARK: - Networking -
 extension driverRequestMonyVC {
+    
+    func requestStellment () {
+        activityIndicatorr.startAnimating()
+        DriverRouter.stellementRequest(holderName:  self.bankAccHolderName.text ?? "" , bankName: self.bankName.text ?? "" , bankAccNo: self.bankAccountNumber.text ?? ""  , iban: self.ibanNumber.text ?? "" , amount: Int ( self.minWithdrawal.text ?? "" ) ?? 0).send { [weak self] ( response : APIGlobalResponse ) in
+            guard let self = self else { return }
+            if response.status == true {
+                showInfoTopAlert(withMessage: response.message )
+            }
+        }
+    }
+    
     
 }
 

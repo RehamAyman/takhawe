@@ -48,7 +48,8 @@ enum UserRouter {
     case getAllChats
     case getAllPaymentCards
     case switchRole
-    
+   
+  
 }
 
 
@@ -62,7 +63,7 @@ extension UserRouter : APIRouter {
     var method: HTTPMethod {
         switch self {
             
-        case .createVipTrip , .acceptOffer  , .complain , .addAddressToFav , .claculateBasicPrice  , .joinABasicTrip , .calculateVipPrice , .checkPromoCode   , .openChat  , .registerFcm :
+        case .createVipTrip , .acceptOffer  , .complain , .addAddressToFav , .claculateBasicPrice  , .joinABasicTrip , .calculateVipPrice , .checkPromoCode   , .openChat  , .registerFcm   :
             return .post
         
             
@@ -159,6 +160,10 @@ extension UserRouter : APIRouter {
             return userServerPath.getAllSavedCards
         case .switchRole:
             return userServerPath.switchRole
+     
+          
+    
+        
             
             
         }
@@ -340,9 +345,16 @@ extension UserRouter : APIRouter {
             }
         
             return dic 
+         
+            
+            
+            
+                    
                
-               
-   
+     
+            
+            
+            
             
         case .getAllVipOffers  , .recentAddress , .getOneTrip , .getProfile   , .calculateVipPrice , .getAllAddress   , .removeDriverFromFav    , .getVip , .getOneGeneralTrip  , .getPolices , .aboutUs , .getAllLastMessaged , .getAllChats  , .getAllPaymentCards  , .switchRole :
             return nil

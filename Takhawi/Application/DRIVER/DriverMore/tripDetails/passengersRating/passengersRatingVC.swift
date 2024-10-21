@@ -9,38 +9,56 @@
 
 import UIKit
 
-class passengersRatingVC: BaseVC {
+class passengersRatingVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
+    
     
 //MARK: - IBOutlets -
     
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var mainView: UIView!
     
 //MARK: - Properties -
     
-    
-//MARK: - Creation -
-    static func create() -> passengersRatingVC {
-        let vc = AppStoryboards.<#StoryboardCase#>.instantiate(passengersRatingVC.self)
-        vc.hidesBottomBarWhenPushed = true
-        return vc
-    }
-    
+
 // MARK: - Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureInitialDesign()
+        self.mainView.layer.addBasicShadow(cornerRadius: 20)
     }
     
     
 //MARK: - Design Methods -
     private func configureInitialDesign() {
         self.title = "".localized
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(cellType: retePassengersCell.self)
     }
     
 //MARK: - Logic Methods -
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "retePassengersCell", for: indexPath) as! retePassengersCell
+        return cell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 160
+    }
     
     
 //MARK: - Actions -
     
+    @IBAction func close(_ sender: UIButton) {
+        self.dismiss(animated: true , completion: nil )
+    }
+    @IBAction func submitAction(_ sender: UIButton) {
+        self.dismiss(animated: true , completion: nil )
+    }
 }
 
 

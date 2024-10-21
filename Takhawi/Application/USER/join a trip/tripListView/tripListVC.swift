@@ -141,9 +141,9 @@ extension tripListVC: UITableViewDelegate {
         let item = self.allTrips[indexPath.row]
         let vc = driverProfileVC()
         vc.comeFromBasicTrip = true 
-        
         vc.tripDetails = item
         push(vc)
+        
     }
     
     

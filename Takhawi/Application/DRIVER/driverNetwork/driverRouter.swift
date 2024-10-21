@@ -24,10 +24,11 @@ enum DriverRouter {
     case markPassenger ( id : Int )
     case markReport ( lat : Double , lng : Double , enType : String   , arType : String )
     case getAllReports ( lat : Double , lng : Double )
-    case basicEndTrip ( id : Int )
+  
     case deleteCar ( id : Int )
     case switchToUser
-    
+    case stellementRequest ( holderName : String , bankName : String , bankAccNo : String , iban : String , amount : Int)
+    case endBasicTrip ( id : Int )
 }
 
 extension DriverRouter : APIRouter {
@@ -40,14 +41,14 @@ extension DriverRouter : APIRouter {
     var method: HTTPMethod {
         switch self {
             
-        case .createAvehicle , .createBasic , .makeOffer  , .markReport  :
+        case .createAvehicle , .createBasic , .makeOffer  , .markReport , .stellementRequest  :
             return .post
         
         case  .driverStatus , .vehicleDetials , .getMeetingLocations , .getPrevVipTrips  , .getAllReports , .switchToUser  :
           return .get
             
             
-        case .updateTripStatus , .markPassenger , .basicEndTrip :
+        case .updateTripStatus , .markPassenger  , .endBasicTrip :
             return .patch
             
         case .deleteCar :
@@ -83,13 +84,15 @@ extension DriverRouter : APIRouter {
             return driverServerPath.insertReport
         case .getAllReports :
             return driverServerPath.getAllReports
-        case .basicEndTrip(id: let id ):
-            return driverServerPath.basicEndTrip(id: id)
+       
         case .deleteCar(id: let id ):
             return driverServerPath.deleteCar(id: id)
         case .switchToUser:
             return driverServerPath.switchToUser
-  
+        case .stellementRequest:
+            return driverServerPath.requestStellemnt
+        case .endBasicTrip(id: let id ):
+            return driverServerPath.driverEndBasicTrip(id: id)
        
         }
     }
@@ -171,8 +174,17 @@ extension DriverRouter : APIRouter {
                 "lng" : lng
             ]
             
+        case .stellementRequest(holderName: let holderName , bankName: let bankName, bankAccNo: let bankAccNo , iban: let iban , amount: let ammount ):
+            return [
+                "holder_name": holderName ,
+                "bank_name": bankName ,
+                "bank_account_number": bankAccNo ,
+                "iban": iban ,
+                "amount": ammount
+            ]
      
-        case  .driverStatus , .vehicleDetials  , .markPassenger  , .basicEndTrip   , .deleteCar , .switchToUser :
+            
+        case  .driverStatus , .vehicleDetials  , .markPassenger    , .deleteCar , .switchToUser , .endBasicTrip :
             return nil
             
         }

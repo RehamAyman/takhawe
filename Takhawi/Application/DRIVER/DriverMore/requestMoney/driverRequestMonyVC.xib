@@ -69,10 +69,6 @@
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zmb-lc-6Bg">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="54"/>
-                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
@@ -80,11 +76,7 @@
                                         <constraint firstItem="E7M-pg-XbX" firstAttribute="top" secondItem="L7D-Cc-aWK" secondAttribute="top" constant="2" id="PTF-03-UYt"/>
                                         <constraint firstAttribute="bottom" secondItem="E7M-pg-XbX" secondAttribute="bottom" constant="2" id="dEs-RP-VJe"/>
                                         <constraint firstAttribute="height" constant="54" id="gSQ-NS-9ry"/>
-                                        <constraint firstItem="Zmb-lc-6Bg" firstAttribute="height" secondItem="L7D-Cc-aWK" secondAttribute="height" id="giE-vc-9r1"/>
-                                        <constraint firstItem="Zmb-lc-6Bg" firstAttribute="centerY" secondItem="L7D-Cc-aWK" secondAttribute="centerY" id="ky5-2U-x2m"/>
-                                        <constraint firstItem="Zmb-lc-6Bg" firstAttribute="width" secondItem="L7D-Cc-aWK" secondAttribute="width" id="sho-Jc-52J"/>
                                         <constraint firstItem="E7M-pg-XbX" firstAttribute="leading" secondItem="L7D-Cc-aWK" secondAttribute="leading" constant="20" id="uBs-0x-jyp"/>
-                                        <constraint firstItem="Zmb-lc-6Bg" firstAttribute="centerX" secondItem="L7D-Cc-aWK" secondAttribute="centerX" id="zd9-78-i9x"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pNv-sm-Sg6">
@@ -95,21 +87,13 @@
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECi-y9-xfn">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="54"/>
-                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="4E6-1d-GhL" secondAttribute="bottom" constant="2" id="07j-rZ-2FI"/>
                                         <constraint firstItem="4E6-1d-GhL" firstAttribute="leading" secondItem="pNv-sm-Sg6" secondAttribute="leading" constant="20" id="8AR-pm-nRm"/>
-                                        <constraint firstItem="ECi-y9-xfn" firstAttribute="centerX" secondItem="pNv-sm-Sg6" secondAttribute="centerX" id="DHZ-VW-EgY"/>
                                         <constraint firstItem="4E6-1d-GhL" firstAttribute="top" secondItem="pNv-sm-Sg6" secondAttribute="top" constant="2" id="Guz-pC-PjN"/>
                                         <constraint firstAttribute="trailing" secondItem="4E6-1d-GhL" secondAttribute="trailing" constant="20" id="Kmh-nT-Ro7"/>
-                                        <constraint firstItem="ECi-y9-xfn" firstAttribute="height" secondItem="pNv-sm-Sg6" secondAttribute="height" id="SIf-Nv-Egs"/>
-                                        <constraint firstItem="ECi-y9-xfn" firstAttribute="width" secondItem="pNv-sm-Sg6" secondAttribute="width" id="Vgs-Eo-uSw"/>
-                                        <constraint firstItem="ECi-y9-xfn" firstAttribute="centerY" secondItem="pNv-sm-Sg6" secondAttribute="centerY" id="jBo-RG-H5L"/>
                                         <constraint firstAttribute="height" constant="54" id="yMA-9q-res"/>
                                     </constraints>
                                 </view>
@@ -119,7 +103,7 @@
                                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7VQ-j9-Elc" customClass="MDCOutlinedTextField">
                                             <rect key="frame" x="20" y="2" width="353" height="50"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="ASCIICapableNumberPad"/>
                                         </textField>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -137,7 +121,7 @@
                                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a7M-KQ-Ne2" customClass="MDCOutlinedTextField">
                                             <rect key="frame" x="20" y="2" width="353" height="50"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
-                                            <textInputTraits key="textInputTraits" keyboardType="ASCIICapableNumberPad"/>
+                                            <textInputTraits key="textInputTraits"/>
                                         </textField>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -71,7 +71,9 @@ class registerTapsVC: BaseVC {
     private func importSwiftuiView () {
         addChild(swiftUIView)
         swiftUIView.view.frame = view.frame
+       
         view.addSubview(swiftUIView.view)
+        
         swiftUIView.didMove(toParent: self)
 
     }

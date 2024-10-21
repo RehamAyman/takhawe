@@ -13,6 +13,8 @@ import SwiftUI
 
 
 struct registerTabs: View {
+  
+    
     @State var tabSelection = 1
     @State var test : String = ""
     @State var imageData : Data?
@@ -35,6 +37,7 @@ struct registerTabs: View {
         }
     }
     
+  
     var body: some View {
        
         ScrollView( showsIndicators: false )  {
@@ -114,9 +117,7 @@ struct registerTabs: View {
                 
             }
             .padding()
-           
-
-            
+   
             Button {
                
                 if tabSelection == 4 {
@@ -180,17 +181,19 @@ struct registerTabs: View {
             }
            
         }
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
+       
+        .navigationBarBackButtonHidden(true)
+        
         
         .frame( maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
         .background(Color("BackGroundColor"))
-        //.ignoresSafeArea(.keyboard, edges: .bottom)
-     
-          //  force app to be left just for now
+       
         .environment(\.layoutDirection,   .leftToRight  )
-      //  .ignoresSafeArea(.keyboard, edges: .bottom)
-           
-        
+  
     }
 }
+
 
 

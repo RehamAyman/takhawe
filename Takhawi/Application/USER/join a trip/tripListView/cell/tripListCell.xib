@@ -180,55 +180,51 @@
                                     <constraint firstAttribute="height" constant="1" id="Vae-Ul-jaR"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ouA-3r-bKV">
-                                <rect key="frame" x="10" y="205.5" width="444" height="35"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ouA-3r-bKV">
+                                <rect key="frame" x="10" y="205.5" width="305" height="30"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 3" translatesAutoresizingMaskIntoConstraints="NO" id="tDB-jJ-3Be">
-                                        <rect key="frame" x="0.0" y="0.0" width="30" height="35"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="25" height="30"/>
                                         <color key="tintColor" name="MainColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="30" id="wkh-o6-7fi"/>
+                                            <constraint firstAttribute="width" constant="25" id="wkh-o6-7fi"/>
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music 1" translatesAutoresizingMaskIntoConstraints="NO" id="82k-nP-3IT">
-                                        <rect key="frame" x="46" y="0.0" width="30" height="35"/>
+                                        <rect key="frame" x="35" y="0.0" width="25" height="30"/>
                                         <color key="tintColor" name="MainColor"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Food" translatesAutoresizingMaskIntoConstraints="NO" id="UTI-gq-18F">
-                                        <rect key="frame" x="92" y="0.0" width="30" height="35"/>
+                                        <rect key="frame" x="70" y="0.0" width="25" height="30"/>
                                         <color key="tintColor" name="MainColor"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 4" translatesAutoresizingMaskIntoConstraints="NO" id="Hkg-8k-wUq">
-                                        <rect key="frame" x="138" y="0.0" width="30" height="35"/>
+                                        <rect key="frame" x="105" y="0.0" width="25" height="30"/>
                                         <color key="tintColor" name="MainColor"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AC" translatesAutoresizingMaskIntoConstraints="NO" id="ISC-k1-m27">
-                                        <rect key="frame" x="184" y="0.0" width="30" height="35"/>
+                                        <rect key="frame" x="140" y="0.0" width="25" height="30"/>
                                         <color key="tintColor" name="MainColor"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cable" translatesAutoresizingMaskIntoConstraints="NO" id="w8c-hY-xYQ">
-                                        <rect key="frame" x="230" y="0.0" width="30" height="35"/>
-                                        <color key="tintColor" name="MainColor"/>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heat" translatesAutoresizingMaskIntoConstraints="NO" id="pdX-CB-k4U">
-                                        <rect key="frame" x="276" y="0.0" width="30" height="35"/>
+                                        <rect key="frame" x="175" y="0.0" width="25" height="30"/>
                                         <color key="tintColor" name="MainColor"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackScreen" translatesAutoresizingMaskIntoConstraints="NO" id="hoX-jo-Oh0">
-                                        <rect key="frame" x="322" y="0.0" width="30" height="35"/>
+                                        <rect key="frame" x="210" y="0.0" width="25" height="30"/>
                                         <color key="tintColor" name="MainColor"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 1000003071" translatesAutoresizingMaskIntoConstraints="NO" id="x2S-p9-GFc">
-                                        <rect key="frame" x="368" y="0.0" width="30" height="35"/>
+                                        <rect key="frame" x="245" y="0.0" width="25" height="30"/>
                                         <color key="tintColor" name="MainColor"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 1000003070" translatesAutoresizingMaskIntoConstraints="NO" id="Q6l-Uy-FTc">
-                                        <rect key="frame" x="414" y="0.0" width="30" height="35"/>
+                                        <rect key="frame" x="280" y="0.0" width="25" height="30"/>
                                         <color key="tintColor" name="MainColor"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="nVJ-xe-9IW"/>
+                                    <constraint firstAttribute="height" constant="30" id="nVJ-xe-9IW"/>
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="◉ Only 2 seats Available" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0h-bT-qmU">
@@ -306,7 +302,6 @@
                 <outlet property="driverRate" destination="StO-Si-Glf" id="c2h-Lm-BOl"/>
                 <outlet property="endTime" destination="bbM-v8-qle" id="AGX-k8-4cn"/>
                 <outlet property="foodIcon" destination="UTI-gq-18F" id="U8f-BD-Y2W"/>
-                <outlet property="heat" destination="pdX-CB-k4U" id="O48-Ih-Ak3"/>
                 <outlet property="musicicon" destination="82k-nP-3IT" id="Mrj-Ck-l2k"/>
                 <outlet property="seatPrice" destination="j82-eo-xht" id="PoZ-4D-lyH"/>
                 <outlet property="smokeIcon" destination="Hkg-8k-wUq" id="vv4-il-Qzk"/>
@@ -331,7 +326,6 @@
         <image name="cable" width="20" height="19"/>
         <image name="calendar" width="20" height="20"/>
         <image name="cc1" width="154" height="88.5"/>
-        <image name="heat" width="20" height="20"/>
         <image name="music 1" width="24" height="24"/>
         <image name="star" width="16" height="16"/>
         <image name="star 1" width="16" height="16"/>
@@ -345,7 +339,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray5Color">
-            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

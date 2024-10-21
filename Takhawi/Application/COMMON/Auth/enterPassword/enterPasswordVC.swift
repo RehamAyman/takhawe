@@ -108,7 +108,6 @@ extension enterPasswordVC {
                             self?.navigationController?.pushViewController(vc, animated: true)
                          
                         } else if response.result?.user?.driver_status == "REGISTERED" {
-                            
                             self?.showDriverStatusLoading(bool: true )
                            // self?.getCarDetails()
                             self?.checkDriverStatus()

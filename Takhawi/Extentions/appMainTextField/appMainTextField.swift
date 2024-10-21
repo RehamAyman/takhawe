@@ -24,6 +24,18 @@ extension MDCOutlinedTextArea {
         self.leadingEdgePaddingOverride = 25
         self.containerRadius = 20
     }
+    
+    func handelCellTextArea (placeHolder : String) {
+        
+        self.setOutlineColor(UIColor( named: "MainColor") ?? UIColor.black, for: .normal)
+        self.setOutlineColor(UIColor( named: "MainColor") ?? UIColor.black, for: .editing)
+        self.setFloatingLabel(  UIColor( named: "MainColor") ?? UIColor.black , for: .editing)
+        self.setNormalLabel( UIColor( named: "MainColor") ?? UIColor.black , for: .normal)
+        self.placeholder = placeHolder
+        self.preferredContainerHeight = 80
+        self.leadingEdgePaddingOverride = 25
+        self.containerRadius = 20
+    }
 }
 
 

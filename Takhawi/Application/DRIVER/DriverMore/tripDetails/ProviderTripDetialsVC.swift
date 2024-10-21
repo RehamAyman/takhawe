@@ -127,6 +127,7 @@ class ProviderTripDetialsVC : BaseVC {
             
         case .inProgress:
             print(" inprogress step action ")
+            self.endBasicTrip()
           
         case .cancelled :
             print("cancelled")
@@ -187,7 +188,23 @@ class ProviderTripDetialsVC : BaseVC {
 extension ProviderTripDetialsVC {
  
     
-    
+    private func endBasicTrip () {
+//        let vc = passengersRatingVC()
+//        vc.modalPresentationStyle = .overFullScreen
+//        self.present( vc  , animated: true )
+//        
+        
+        activityIndicatorr.startAnimating()
+        DriverRouter.endBasicTrip(id: self.passedTrip?.id ?? 0).send { [weak self ] ( response : APIGlobalResponse )  in
+            guard let self = self else { return }
+            if response.status == true {
+                self.tripStatus = .completed
+                // show passengers rating view list
+                self.setUpMainBasicView()
+            }
+            
+        }
+    }
  
     
 }

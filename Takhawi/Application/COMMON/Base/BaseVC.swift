@@ -105,7 +105,32 @@ extension BaseVC: BaseView {
         UIDevice.vibrate()
         present(alert, animated: true, completion: nil)
     }
+    
+    func shareLink(from viewController: UIViewController, urlString: String) {
+        guard let url = URL(string: urlString) else {
+            print("Invalid URL")
+            return
+        }
 
+        // Create a UIActivityViewController with the link
+        let activityViewController = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+        
+        // Optionally exclude some activity types (optional)
+        activityViewController.excludedActivityTypes = [
+            .assignToContact,
+            .addToReadingList,
+            .saveToCameraRoll
+        ]
+        
+        // Present the Activity View Controller
+        viewController.present(activityViewController, animated: true, completion: nil)
+    }
+    
+    
+   
+    
+    
+    
     func loginAsVisitor(dismiss: Bool? = false, action: @escaping (() -> Void)) {
         if defult.shared.getData(forKey: .token) == "" || defult.shared.getData(forKey: .token) == nil {
             let alert = UIAlertController(title: "Worning".localized, message: "You must login to continue".localized, preferredStyle: .actionSheet)

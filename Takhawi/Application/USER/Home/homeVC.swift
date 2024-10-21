@@ -108,7 +108,7 @@ class homeVC: BaseVC, sendDataBackDelegate{
         dummyActivity(icon: "BackScreen", name: "REAR SCREEN"  , id: 8 ) ,
         dummyActivity(icon: "carSeat", name: "MASSAGE SEAT"  , id: 9 )  ,
         dummyActivity(icon: "heat", name: "HEATING"  , id: 10 ) ,
-        dummyActivity(icon: "Group 1000003071", name: "AVAILABILE TRAVEL BAG"  , id: 11 )
+        dummyActivity(icon: "Group 1000003071", name: "AVAILABILE TRAVEL BAG"  , id: 10 )
         
     ]
     var selectedFeatures : [String] = []
@@ -143,15 +143,17 @@ class homeVC: BaseVC, sendDataBackDelegate{
             if self.segment.selectedSegmentIndex == 0 {
                 self.getDestinationFromMaps(vip: false )
             }
-            
-           
+  
         }
+ 
         NotificationCenter.default.addObserver(self, selector: #selector(handleCustomNotification(_:)), name: .updateHomeProfile, object: nil)
        
         self.configureInitialDesign()
         self.setUpGoogleMapView()
         self.setTodayDateINformate()
         self.initialSideMenu()
+        
+        
         self.getProfileDetails(withLoading: true )
         if let firstWord = UserDefaults.user?.user?.name?.split(separator: " ").first {
             print(firstWord)
@@ -344,7 +346,7 @@ class homeVC: BaseVC, sendDataBackDelegate{
             self?.push(pushVc)
         }
             
-      //  pushVc.delegate = self
+       // pushVc.delegate = self
         
        // self.push(pushVc)
     }
@@ -418,7 +420,6 @@ extension homeVC {
                 vc1.tripId = response.result?.vIP_Trip?.trip_id ?? 0
                 self.bottomView.isHidden = true
                 self.CContainerSegment.isHidden = true
-                
                 self.hotelIconOutlet.isHidden = true
                 self.present(vc1 , animated: true)
                 vc1.cancel = {

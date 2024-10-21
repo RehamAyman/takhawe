@@ -17,7 +17,7 @@ class tripListCell: UITableViewCell {
     @IBOutlet weak var bag: UIImageView!
     @IBOutlet weak var blutooth: UIImageView!
     @IBOutlet weak var backSeat: UIImageView!
-    @IBOutlet weak var heat: UIImageView!
+   
     @IBOutlet weak var charge: UIImageView!
     @IBOutlet weak var driverPhoto: UIImageView!
     @IBOutlet weak var endTime: UILabel!
@@ -49,18 +49,12 @@ class tripListCell: UITableViewCell {
         super.awakeFromNib()
         self.setupDesign()
     }
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        self.resetCellData()
-    }
     
     //MARK: - Design Methods -
     private func setupDesign() {
         self.selectionStyle = .none
     }
-    private func resetCellData() {
-        
-    }
+ 
     
     //MARK: - Configure Data -
     func configureWith(data: BasicTripResult ) {
@@ -89,7 +83,7 @@ class tripListCell: UITableViewCell {
             self.musicicon.tintColor = features.contains(Features.music.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
             self.foodIcon.tintColor = features.contains(Features.food.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
             self.smokeIcon.tintColor = features.contains(Features.noSmoking.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
-            self.heat.tintColor = features.contains(Features.haeting.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
+           
             self.charge.tintColor = features.contains(Features.charging.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
             self.backSeat.tintColor = features.contains(Features.backScreens.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
             self.bag.tintColor = features.contains(Features.bags.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5

@@ -6,18 +6,21 @@
 //
 
 import UIKit
+import MaterialComponents
 
 class retePassengersCell: UITableViewCell {
-
+    @IBOutlet weak var noteTextView: MDCOutlinedTextArea!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+       // self.noteTextView.label.text = "Note".localize 
+        self.noteTextView.label.text  = "Note".localize
+        self.noteTextView.handelCellTextArea(placeHolder: "Note".localize)
+        self.selectionStyle = .none
+       
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+ 
     
 }
