@@ -49,8 +49,7 @@ extension tripsSideMenuVC : UITableViewDelegate , UITableViewDataSource {
         cell.orderDate.text = item.start_date?.convertFromIso()
         cell.rateView.isUserInteractionEnabled = false
         
-        
-        
+       
         cell.addTapGesture {
             if self.driver == false  && self.segment.selectedSegmentIndex == 0 {
                 self.goToTripTrakingView(item: item)
@@ -66,7 +65,7 @@ extension tripsSideMenuVC : UITableViewDelegate , UITableViewDataSource {
             cell.rateView.isHidden = true
             cell.userImage.isHidden = true
             cell.name.isHidden = true
-            
+            cell.dividerView.isHidden = true 
         } else if  self.driver && self.tripType == .vip {
             cell.name.text = item.Passenger?.name ?? ""
             if let rate = item.Passenger?.rate  {
@@ -76,7 +75,7 @@ extension tripsSideMenuVC : UITableViewDelegate , UITableViewDataSource {
                 cell.userImage.setImage(image: Server.imageBase.rawValue + image )
             }
             
-        } else {
+        }  else {
             
             cell.name.text = item.driver?.name ?? ""
             if let rate = item.driver?.driver_rate {
@@ -115,7 +114,7 @@ extension tripsSideMenuVC : UITableViewDelegate , UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if self.driver && self.tripType == .basic {
-            return 120
+            return 140
         } else {
             return 180
         }

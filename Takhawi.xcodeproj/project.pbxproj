@@ -473,6 +473,7 @@
 		CED288902B49B7EB00E075CE /* editProfileVC+extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED2888F2B49B7EB00E075CE /* editProfileVC+extentions.swift */; };
 		CED288942B49B87B00E075CE /* hobbiesCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED288922B49B87B00E075CE /* hobbiesCellCollectionViewCell.swift */; };
 		CED288952B49B87B00E075CE /* hobbiesCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CED288932B49B87B00E075CE /* hobbiesCellCollectionViewCell.xib */; };
+		CED34EA22CC685A600482CA6 /* apple-app-site-association.json in Resources */ = {isa = PBXBuildFile; fileRef = CED34EA12CC685A600482CA6 /* apple-app-site-association.json */; };
 		CED4E1522CBDBBC8004745A3 /* reportGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4E14D2CBDBBC7004745A3 /* reportGraphView.swift */; };
 		CED4E1532CBDBBC8004745A3 /* driverReportSwiftui.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4E14E2CBDBBC7004745A3 /* driverReportSwiftui.swift */; };
 		CED4E1542CBDBBC8004745A3 /* reportMiddleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4E14F2CBDBBC7004745A3 /* reportMiddleView.swift */; };
@@ -1012,6 +1013,7 @@
 		CED2888F2B49B7EB00E075CE /* editProfileVC+extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "editProfileVC+extentions.swift"; sourceTree = "<group>"; };
 		CED288922B49B87B00E075CE /* hobbiesCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hobbiesCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		CED288932B49B87B00E075CE /* hobbiesCellCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = hobbiesCellCollectionViewCell.xib; sourceTree = "<group>"; };
+		CED34EA12CC685A600482CA6 /* apple-app-site-association.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "apple-app-site-association.json"; sourceTree = "<group>"; };
 		CED4E14D2CBDBBC7004745A3 /* reportGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = reportGraphView.swift; sourceTree = "<group>"; };
 		CED4E14E2CBDBBC7004745A3 /* driverReportSwiftui.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = driverReportSwiftui.swift; sourceTree = "<group>"; };
 		CED4E14F2CBDBBC7004745A3 /* reportMiddleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = reportMiddleView.swift; sourceTree = "<group>"; };
@@ -1469,6 +1471,7 @@
 		9694AB342A5DE9D500BDF5F8 /* Takhawi */ = {
 			isa = PBXGroup;
 			children = (
+				CED34EA12CC685A600482CA6 /* apple-app-site-association.json */,
 				CE619F8F2CAE0AA500EF6CC4 /* Takhawi.entitlements */,
 				CE4E22EB2C0DE0B60092AE16 /* generalNetwork */,
 				049358962B4459FA004E5259 /* customPopALert */,
@@ -3340,6 +3343,7 @@
 				CEAAAE232CADCBD40076D607 /* messagesCell.xib in Resources */,
 				CE71F4712B16885B00E7B689 /* driversOffersCell.xib in Resources */,
 				CE9F3C5B2B1B4955004C3D24 /* u4F3iX2jrQ.json in Resources */,
+				CED34EA22CC685A600482CA6 /* apple-app-site-association.json in Resources */,
 				CE7BA8972CC508A100E5FCA7 /* passengersRatingVC.xib in Resources */,
 				CED4E1562CBDBBC8004745A3 /* driverReportVC.xib in Resources */,
 				CE9757C82AE0F0CC0014346E /* tripListVC.xib in Resources */,

@@ -21,11 +21,11 @@ enum driverServerPath {
     case markPassengerAttend ( id : Int )
     case insertReport
     case getAllReports
-    
     case deleteCar ( id : Int )
     case switchToUser
     case requestStellemnt
     case driverEndBasicTrip  ( id : Int )
+    case endVip ( id : Int )
     
     
     
@@ -59,7 +59,6 @@ extension driverServerPath : ServerPath {
             return "warning/"
         case .getAllReports:
             return "warning/"
-      
         case .deleteCar(id: let id ):
             return "vehicle/\(id)"
         case .switchToUser :
@@ -68,7 +67,8 @@ extension driverServerPath : ServerPath {
             return "settlement-request" 
         case .driverEndBasicTrip(id: let id ) :
             return "basic-trip/end-trip/\(id)"
-       
+        case .endVip(id: let id ):
+            return "vip-trip/end-trip/\(id)"
     
         }
     }

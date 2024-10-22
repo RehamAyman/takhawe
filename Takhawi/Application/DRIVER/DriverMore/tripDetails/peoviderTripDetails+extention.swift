@@ -114,14 +114,19 @@ extension ProviderTripDetialsVC : UITableViewDelegate , UITableViewDataSource   
     
     //MARK: - HANDLE  UPDATE TRIP STATUS ACTION
     
-    func updateTripStatus (status  : tripStatus ) {
+    func updateTripStatus (status  : tripStatus  ) {
         activityIndicatorr.startAnimating()
         DriverRouter.updateTripStatus(id: self.passedTrip?.id ?? 0  , type: status.rawValue).send { [weak self] ( response : APIGlobalResponse )  in
             guard let self = self else { return }
             if response.status == true {
                 // update the status type method
                 self.tripStatus = status
-                self.setUpMainBasicView()
+                if self.passedTrip?.type == "BASIC" {
+                    self.setUpMainBasicView()
+                } else {
+                    self.setUpVipView()
+                }
+               
                 self.action?()
             }
             
@@ -153,8 +158,8 @@ extension ProviderTripDetialsVC : UITableViewDelegate , UITableViewDataSource   
         self.vipContainerView.isUserInteractionEnabled = true
         switch self.tripStatus {
         case .cancelled :
-            
-            self.handleOnProgressVip()
+            self.handleDefualtVipMode()
+          
         case .comming : // comming step no. 1
             
             self.handleCommingVip()
@@ -170,7 +175,7 @@ extension ProviderTripDetialsVC : UITableViewDelegate , UITableViewDataSource   
             self.handleOnProgressVip()
             
         case .completed :
-            self.handleOnProgressVip()
+            self.handleDefualtVipMode()
             print("00")
         }
         
@@ -189,7 +194,8 @@ extension ProviderTripDetialsVC : UITableViewDelegate , UITableViewDataSource   
     func handleArriavVip () {
         self.vipSubmitOutlet.setTitle( "Start Trip".localize, for: .normal)
     }
-    func handleOnProgressVip () {
+    
+    func handleDefualtVipMode () {
         self.vipActionsStack.isHidden = true
         self.vipActionsStack.isUserInteractionEnabled = false
         
@@ -197,7 +203,18 @@ extension ProviderTripDetialsVC : UITableViewDelegate , UITableViewDataSource   
             self.vipHeight.constant = 250
             self.view.layoutIfNeeded()
         }
-       
+    }
+    
+    func handleOnProgressVip () {
+        self.vipSubmitOutlet.setTitle( "End Trip".localize , for: .normal)
+        
+//        self.vipActionsStack.isHidden = true
+//        self.vipActionsStack.isUserInteractionEnabled = false
+//        
+//        UIView.animate(withDuration: 0.5 ) {
+//            self.vipHeight.constant = 250
+//            self.view.layoutIfNeeded()
+//        }
     }
     
     
@@ -222,9 +239,10 @@ extension ProviderTripDetialsVC : UITableViewDelegate , UITableViewDataSource   
             
             cell.arraivedOutlet.backgroundColor = items.status == "ARRIVED" ? UIColor.systemGray4 : UIColor(named: "MainColor")
             cell.arraivedOutlet.addTapGesture {
-             //   items.status = "ARRIVED"
+                items.status = "ARRIVED"
                 cell.backgroundColor = UIColor.systemGray4
                 self.markPassengerAttend(id: items.id ?? 0)
+                self.passengersTableView.reloadData()
                 
             }
         }

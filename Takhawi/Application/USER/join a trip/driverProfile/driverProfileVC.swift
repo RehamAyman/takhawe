@@ -136,7 +136,7 @@ class driverProfileVC: BaseVC {
     
     @IBAction func shareTrip(_ sender: UIButton) {
 
-        let urlString = "takhawe://"
+        let urlString = "takhawe"
         
        shareLink(from: self, urlString: urlString)
         

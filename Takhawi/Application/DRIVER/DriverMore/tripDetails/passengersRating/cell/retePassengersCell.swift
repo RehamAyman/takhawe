@@ -7,10 +7,14 @@
 
 import UIKit
 import MaterialComponents
+import Cosmos
 
 class retePassengersCell: UITableViewCell {
     @IBOutlet weak var noteTextView: MDCOutlinedTextArea!
     
+    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var userRate: CosmosView!
+    @IBOutlet weak var userImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

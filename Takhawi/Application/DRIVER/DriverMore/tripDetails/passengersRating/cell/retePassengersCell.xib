@@ -79,6 +79,9 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="noteTextView" destination="Znb-fi-rzb" id="u0L-HY-Xwp"/>
+                <outlet property="userImage" destination="x5W-Yv-Aee" id="ncl-lb-07P"/>
+                <outlet property="userName" destination="bzR-8t-5tt" id="Nxl-Dc-LZ7"/>
+                <outlet property="userRate" destination="0Aa-R6-eAn" id="21f-X8-KM7"/>
             </connections>
             <point key="canvasLocation" x="-17.557251908396946" y="66.549295774647888"/>
         </tableViewCell>

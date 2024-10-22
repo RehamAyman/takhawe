@@ -19,7 +19,10 @@ class passengersRatingVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
     
 //MARK: - Properties -
     
-
+    var allPassengers : [Passengers] = []
+    var vip : Bool = false
+    var passenger : PassengerClass?
+    
 // MARK: - Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,12 +41,31 @@ class passengersRatingVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
     
 //MARK: - Logic Methods -
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return 10
+        if self.vip {
+            return 1
+        } else {
+            return self.allPassengers.count
+        }
+       
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "retePassengersCell", for: indexPath) as! retePassengersCell
+        
+        if self.vip {
+            let item  = self.passenger
+            cell.userName.text = item?.name ?? ""
+            if let image = item?.image {
+                cell.userImage.setImage(image: Server.imageBase.rawValue + image )
+            }
+        } else {
+            let item = self.allPassengers[indexPath.row]
+            cell.userName.text = item.passnger?.name ?? ""
+            if let image = item.passnger?.avatar {
+                cell.userImage.setImage(image: Server.imageBase.rawValue + image )
+            }
+        }
+       
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

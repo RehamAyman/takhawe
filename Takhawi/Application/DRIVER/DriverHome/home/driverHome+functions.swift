@@ -15,7 +15,7 @@ extension DriverHomeVC : UICollectionViewDelegate , UICollectionViewDataSource ,
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    self.changeConstrainsWithAnimation(const: self.offers.count == 0 ?  30 : 300 )
+    self.changeConstrainsWithAnimation(const: self.offers.count == 0 ?  30 : 340 )
         return self.offers.count
     }
     
@@ -23,7 +23,7 @@ extension DriverHomeVC : UICollectionViewDelegate , UICollectionViewDataSource ,
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "driverVipTripsCellCollectionViewCell", for: indexPath) as! driverVipTripsCellCollectionViewCell
         let item = self.offers[indexPath.item]
-        cell.from.text = item.pickup_description ?? ""
+        cell.from.text = item.pickup_description ?? "====="
         cell.to.text = item.destination_description ?? ""
         cell.userName.text = item.passenger_name ?? ""
         cell.userRate.rating = item.passenger_rate ?? 0.0
@@ -96,7 +96,7 @@ extension DriverHomeVC : UICollectionViewDelegate , UICollectionViewDataSource ,
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width:  self.collectionView.frame.width  - 20  , height: 310 )
+        return CGSize(width:  self.collectionView.frame.width  - 20  , height: 340 )
     }
     
     
@@ -149,7 +149,7 @@ extension DriverHomeVC : UICollectionViewDelegate , UICollectionViewDataSource ,
     
    private func handelOffView () {
         print("onnnnnn")
-       self.changeConstrainsWithAnimation(const: 300 )
+       self.changeConstrainsWithAnimation(const: 340 )
     }
     
     
@@ -188,12 +188,6 @@ extension DriverHomeVC : UICollectionViewDelegate , UICollectionViewDataSource ,
         self.switchButtonAction()
         self.createAtripAction()
     }
-    
-    
-  
-    
-    
-    
     
     
     

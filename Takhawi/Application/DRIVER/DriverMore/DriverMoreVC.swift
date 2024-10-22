@@ -16,14 +16,12 @@ class DriverMoreVC: BaseVC {
     @IBOutlet weak var userEmail: UILabel!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userImage: UIImageView!
-    
     @IBOutlet weak var reportView: UIView!
     @IBOutlet weak var earningsView: UIView!
     @IBOutlet weak var messages: UIView!
     @IBOutlet weak var personalInfo: UIView!
     @IBOutlet weak var helpAndSupport: UIView!
     @IBOutlet weak var polices: UIView!
-    
     @IBOutlet weak var switchRole: UIView!
     
     
@@ -35,11 +33,7 @@ class DriverMoreVC: BaseVC {
     }
     
 
-    
-    
-   
-    
-    
+ 
     private func getProfileData () {
         if let user = UserDefaults.user?.user {
             self.userEmail.text = user.email
@@ -59,8 +53,9 @@ class DriverMoreVC: BaseVC {
         vc.modalTransitionStyle = .crossDissolve
         vc.modalPresentationStyle = .overCurrentContext
         self.present(vc, animated: true )
-        
     }
+    
+    
     
     
     

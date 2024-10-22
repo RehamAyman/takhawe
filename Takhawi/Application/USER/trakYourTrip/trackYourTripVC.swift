@@ -203,7 +203,7 @@ class trackYourTripVC: BaseVC {
     
     
     @IBAction func callDriver(_ sender: UIButton) {
-        if let phoneURL = URL(string: "tel://\(+966444444444)") {
+        if let phoneURL = URL(string: "tel://\(self.MainTrip?.driver?.phone ?? "")") {
                if UIApplication.shared.canOpenURL(phoneURL) {
                    UIApplication.shared.open(phoneURL, options: [:], completionHandler: nil)
                } else {
@@ -219,10 +219,7 @@ class trackYourTripVC: BaseVC {
         
         // first open the chat on the server side 
         activityIndicatorr.startAnimating()
-
-//        
-        
-        
+     
         
         self.openChat(driverId: self.MainTrip?.driver?.id ?? 0,
                       driverName: self.MainTrip?.driver?.name ?? "",

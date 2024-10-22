@@ -122,9 +122,7 @@ class ProviderTripDetialsVC : BaseVC {
             self.updateTripStatus(status: .arrived)
           
         case .arrived :// HANDLE START ACTION
-            
             self.updateTripStatus(status: .inProgress)
-            
         case .inProgress:
             print(" inprogress step action ")
             self.endBasicTrip()
@@ -161,11 +159,11 @@ class ProviderTripDetialsVC : BaseVC {
             self.updateTripStatus(status: .arrived)
           
         case .arrived :// HANDLE START ACTION
-            
             self.updateTripStatus(status: .inProgress)
-            
         case .inProgress:
+            
             print(" inprogress step action ")
+            self.endVipTrip()
         case .cancelled :
             print("cancelled")
         case .completed :
@@ -189,10 +187,7 @@ extension ProviderTripDetialsVC {
  
     
     private func endBasicTrip () {
-//        let vc = passengersRatingVC()
-//        vc.modalPresentationStyle = .overFullScreen
-//        self.present( vc  , animated: true )
-//        
+       
         
         activityIndicatorr.startAnimating()
         DriverRouter.endBasicTrip(id: self.passedTrip?.id ?? 0).send { [weak self ] ( response : APIGlobalResponse )  in
@@ -201,9 +196,38 @@ extension ProviderTripDetialsVC {
                 self.tripStatus = .completed
                 // show passengers rating view list
                 self.setUpMainBasicView()
+                let vc = passengersRatingVC()
+                vc.allPassengers = self.passedTrip?.Passengers ?? []
+                vc.modalPresentationStyle = .overFullScreen
+                self.present( vc  , animated: true )
+                
+                
             }
             
         }
+    }
+    
+    
+    private func endVipTrip () {
+        activityIndicatorr.startAnimating()
+        DriverRouter.endVipTrip(id: self.passedTrip?.id ?? 0).send { [weak self ] ( response : APIGlobalResponse )  in
+            guard let self = self else { return }
+            if response.status == true {
+                self.tripStatus = .completed
+                // show passengers rating view list
+                self.setUpVipView()
+                let vc = passengersRatingVC()
+                vc.vip = true
+                guard let passenger = self.passedTrip?.Passenger else { return }
+                vc.passenger = passenger
+                vc.modalPresentationStyle = .overFullScreen
+                self.present( vc  , animated: true )
+                
+                
+            }
+            
+        }
+        
     }
  
     

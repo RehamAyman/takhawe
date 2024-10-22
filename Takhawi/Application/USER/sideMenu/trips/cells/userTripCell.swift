@@ -10,7 +10,8 @@ import Cosmos
 
 
 class userTripCell: UITableViewCell {
-
+    @IBOutlet weak var dividerView: UIView!
+    
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var to: UILabel!
