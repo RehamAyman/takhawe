@@ -26,16 +26,16 @@ struct SecureInputView: View {
                 if isSecured {
                     SecureField(title, text: $text)
                         .font(.custom( LocalizationManager.shared.getLanguage() == .Arabic ?  AppFont.arRegular.rawValue :  AppFont.Regular.rawValue , size: 13))
-                        .onReceive(text.publisher.collect()) {
-                                text = String($0.prefix(5))
-                        }
+//                        .onReceive(text.publisher.collect()) {
+//                                text = String($0.prefix(5))
+//                        }
                         
                 } else {
                     TextField(title, text: $text)
                         .font(.custom( LocalizationManager.shared.getLanguage() == .Arabic ?  AppFont.arRegular.rawValue :  AppFont.Regular.rawValue , size: 13))
-                        .onReceive(text.publisher.collect()) {
-                                text = String($0.prefix(5))
-                        }
+//                        .onReceive(text.publisher.collect()) {
+//                                text = String($0.prefix(5))
+//                        }
                     
                        
                 }

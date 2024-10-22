@@ -59,8 +59,8 @@ class forgetPasswordVC: BaseVC ,  UITextFieldDelegate  {
         guard let text = textField.text else { return false }
         
         let newString = (text as NSString).replacingCharacters(in: range, with: string)
-        textField.text = format(with: "XX XXX XXXXX", phone: newString)
-        if textField.text?.count == 12 {
+        textField.text = format(with: "XX XXX XXXX", phone: newString)
+        if textField.text?.count == 11 {
             self.enableNextButton()
         } else {
             self.disableNextButton()
@@ -73,10 +73,8 @@ class forgetPasswordVC: BaseVC ,  UITextFieldDelegate  {
     
 //MARK: - Actions -
     @IBAction func next(_ sender: UIButton) {
-  
-        
-        
-        if phoneNumber.text == "" || self.phoneNumber.text?.count ?? 0 < 12 {
+
+        if phoneNumber.text == "" || self.phoneNumber.text?.count ?? 0 < 11 {
             showPopTopAlert(title: "Empty Field".localized, withMessage: "please add a phone number first!".localized, success: false )
         }else if  phoneNumber.text?.isValidPhoneNumber() == false   {
                showPopTopAlert(title: "Error!".localized, withMessage: "please add a valid phone number".localized, success: false )
@@ -85,15 +83,8 @@ class forgetPasswordVC: BaseVC ,  UITextFieldDelegate  {
             self.forgetPassword()
         }
         
-        
-        
-       
     }
-    
-    
-    
-    
-    
+       
     
 }
 
@@ -107,7 +98,7 @@ extension forgetPasswordVC {
             guard let self = self else { return }
             if response.status == true {
                 
-                showPopTopAlert(title: "Sent Successfully".localize, withMessage: response.message ?? "code sent successfully".localize, success: true )
+                showPopTopAlert(title: "Sent Successfully".localize, withMessage: response.message , success: true )
                 let vc = verificationVC()
                 vc.phoneNumber = phoneText
                 self.push(vc)
@@ -116,7 +107,7 @@ extension forgetPasswordVC {
                 
                 
                 activityIndicatorr.stopAnimating()
-                showPopTopAlert(title: "ِError!".localize , withMessage: response.message ?? "error , try again".localize, success: false  )
+                showPopTopAlert(title: "ِError!".localize , withMessage: response.message , success: false  )
             }
         }
     }

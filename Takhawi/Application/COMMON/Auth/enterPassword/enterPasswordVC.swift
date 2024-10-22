@@ -8,7 +8,7 @@
 
 
 import UIKit
-import AEOTPTextField
+
 import Intercom
 
 
@@ -20,7 +20,7 @@ class enterPasswordVC: BaseVC {
     @IBOutlet weak var progressInd: UIActivityIndicatorView!
     @IBOutlet weak var stackContainerView: UIStackView!
     
-    @IBOutlet weak var otpTextField: AEOTPTextField!
+    @IBOutlet weak var otpTextField: UITextField!
     
     
     
@@ -39,7 +39,8 @@ class enterPasswordVC: BaseVC {
     private func configureInitialDesign() {
         self.title = "".localized
         self.progressInd.isHidden = true
-        self.setUpOtp()
+        self.otpTextField.setLeftPaddingPoints(8)
+        self.otpTextField.setRightPaddingPoints(8)
        
     }
     
