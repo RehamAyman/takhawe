@@ -48,6 +48,7 @@ enum UserRouter {
     case getAllChats
     case getAllPaymentCards
     case switchRole
+    case chargeWallet( amount : Int  , cardId : Int )
    
   
 }
@@ -63,7 +64,7 @@ extension UserRouter : APIRouter {
     var method: HTTPMethod {
         switch self {
             
-        case .createVipTrip , .acceptOffer  , .complain , .addAddressToFav , .claculateBasicPrice  , .joinABasicTrip , .calculateVipPrice , .checkPromoCode   , .openChat  , .registerFcm   :
+        case .createVipTrip , .acceptOffer  , .complain , .addAddressToFav , .claculateBasicPrice  , .joinABasicTrip , .calculateVipPrice , .checkPromoCode   , .openChat  , .registerFcm , .chargeWallet   :
             return .post
         
             
@@ -160,6 +161,8 @@ extension UserRouter : APIRouter {
             return userServerPath.getAllSavedCards
         case .switchRole:
             return userServerPath.switchRole
+        case .chargeWallet:
+            return userServerPath.chargeWallet
      
           
     
@@ -351,7 +354,12 @@ extension UserRouter : APIRouter {
             
                     
                
-     
+        case .chargeWallet(amount: let amount , cardId: let cardId ):
+            return [
+                "amount" : amount ,
+                "cardId" : cardId
+                
+            ]
             
             
             

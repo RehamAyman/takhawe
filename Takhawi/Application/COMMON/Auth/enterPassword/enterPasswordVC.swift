@@ -39,8 +39,8 @@ class enterPasswordVC: BaseVC {
     private func configureInitialDesign() {
         self.title = "".localized
         self.progressInd.isHidden = true
-        self.otpTextField.setLeftPaddingPoints(8)
-        self.otpTextField.setRightPaddingPoints(8)
+//        self.otpTextField.setLeftPaddingPoints(8)
+//        self.otpTextField.setRightPaddingPoints(8)
        
     }
     
@@ -48,6 +48,11 @@ class enterPasswordVC: BaseVC {
     
     
     //MARK: - Actions -
+    
+    @IBAction func submit(_ sender: UIButton) {
+        self.login(phone: self.phone , password: self.otpTextField.text ?? "" )
+    }
+    
     
     @IBAction func forgetPassword(_ sender: UIButton) {
        let vc = forgetPasswordVC()

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct uploadingSection: View {
    
-    @State private var showingConfirmation = false
+    @State  var showingConfirmation = false
     @State var isShowingMediaPicker = false
     @Binding var urls: [URL]
     @State var showDocsPicker : Bool = false
@@ -30,9 +30,15 @@ struct uploadingSection: View {
                     .padding(5)
                 Button(action: { // self.showingConfirmation.toggle()
                     if self.urls.count < 2 {
-                   // isShowingMediaPicker.toggle()
-                        showingConfirmation.toggle()
+                        
+                      //  isShowingMediaPicker.toggle()
+                
+                        
+                        
+                     showingConfirmation = true
                 } else {
+                    
+                    
                     showInfoTopAlert(withMessage: "You cant upload more than 2 fiels")
                 }
                     
@@ -53,7 +59,10 @@ struct uploadingSection: View {
                 )
                 .padding(.horizontal , 25 )
                 .padding(.bottom , 5 )
-                        
+            
+            
+           
+            
 //MARK: - docs LIST
            
          
@@ -69,11 +78,21 @@ struct uploadingSection: View {
                
         }
        
+      
+        
+//MARK: - MEDIA PICKER
+        
+//        .sheet(isPresented: $showingConfirmation) {
+//                  // The content of the sheet
+//                  SheetView()
+//              }
+//        
         
         .confirmationDialog("Choose a method", isPresented: $showingConfirmation ) {
             Button("Using your Photos") {
                 if self.urls.count < 2 {
-                isShowingMediaPicker.toggle()
+    
+                isShowingMediaPicker = true
             } else {
                 showInfoTopAlert(withMessage: "You cant upload more than 2 fiels")
             }
@@ -88,9 +107,6 @@ struct uploadingSection: View {
         } message: {
             Text("Choose a method")
         }
-        
-        
-//MARK: - MEDIA PICKER
         
         .mediaImporter(isPresented: $isShowingMediaPicker,
                         allowedMediaTypes: .images,
@@ -135,4 +151,21 @@ struct uploadingSection: View {
         
     }
 }
+
+
+
+struct SheetView: View {
+    @Environment(\.dismiss) var dismiss
+
+    var body: some View {
+        VStack {
+            Text("This is a modal sheet!")
+            Button("Dismiss") {
+                dismiss()
+            }
+        }
+        .padding()
+    }
+}
+
 

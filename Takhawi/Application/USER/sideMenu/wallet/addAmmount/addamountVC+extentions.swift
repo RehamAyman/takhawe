@@ -23,7 +23,9 @@ extension addAmountVC : UITableViewDelegate , UITableViewDataSource  {
         cell.actionIcon.addTapGesture {
             self.showDropdown(image: cell.actionIcon)
         }
-       
+        cell.addTapGesture {
+            self.chargeWallet(cardId: item.id ?? 0 )
+        }
         return cell
     }
     
@@ -61,6 +63,21 @@ extension addAmountVC : UITableViewDelegate , UITableViewDataSource  {
           self.present(alert, animated: true, completion: nil)
       }
     
+    func chargeWallet (cardId : Int  ) {
+        if self.addAmountTextField.text == "" {
+            showInfoTopAlert(withMessage: "please add amount first!")
+        } else {
+            
+            guard let amount = Int ( self.addAmountTextField.text ?? "0" )  else { return }
+            activityIndicatorr.startAnimating()
+            UserRouter.chargeWallet(amount: amount , cardId: cardId).send { [weak self ] ( response: APIGlobalResponse )  in
+                guard let self = self else { return }
+                if response.status == true {
+                    self.action?()
+                }
+            }
+        }
+    }
 }
 
 

@@ -149,7 +149,7 @@ extension driverCreateTripVC {
             if let result = response.result {
                 self.meetingLocationArray = result
                 
-//                self.selectFromMeetingLocation(button: self.destinationLocationBtn, textField: self.destination, destination: true )
+                //self.selectFromMeetingLocation(button: self.destinationLocationBtn, textField: self.destination, destination: true )
 //                self.selectFromMeetingLocation(button: self.meetingLocationBtn, textField: self.gathering, destination: false )
             }
         }

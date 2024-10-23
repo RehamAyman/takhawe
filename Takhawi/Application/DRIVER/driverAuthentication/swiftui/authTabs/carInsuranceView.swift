@@ -14,7 +14,7 @@ struct carInsuranceView: View {
     @State var showDocsPicker = false
     @Binding var urls: [URL]
     
-    
+    @State var isComeFromSettings : Bool = false
     var IsArabicLang : Bool {
         if LocalizationManager.shared.getLanguage() == .Arabic {
             return true
@@ -25,15 +25,17 @@ struct carInsuranceView: View {
     
     var body: some View {
         VStack {
-            VStack ( alignment: .leading ) {
-                Text("An insurance policy that covers civil liability towards third parties".localize)
-                Text ( "Policy validation: check the validity and validity of the insurance policy to ensure that it matches the vehicle data".localize)}
-           
-            .font(.custom((IsArabicLang ? AppFont.arRegular : AppFont.Regular).rawValue , size: 13))
-            .padding(10)
-            .foregroundColor(Color.black.opacity(0.6))
-            .environment(\.layoutDirection,  IsArabicLang ? .rightToLeft :  .leftToRight  )
-            
+            if isComeFromSettings == false {
+                VStack ( alignment: .leading ) {
+                    
+                    Text("An insurance policy that covers civil liability towards third parties".localize)
+                    Text ( "Policy validation: check the validity and validity of the insurance policy to ensure that it matches the vehicle data".localize)}
+                
+                .font(.custom((IsArabicLang ? AppFont.arRegular : AppFont.Regular).rawValue , size: 13))
+                .padding(10)
+                .foregroundColor(Color.black.opacity(0.6))
+                .environment(\.layoutDirection,  IsArabicLang ? .rightToLeft :  .leftToRight  )
+            }
             
             VStack {
                 Image( "driverLicense")

@@ -24,6 +24,7 @@ class addAmountVC : BaseVC  {
     //MARK: - Properties -
  
     var myCards : [cardResult] = []
+    var action: (() -> Void)?
     
     // MARK: - Lifecycle -
         override func viewDidLoad() {

@@ -213,8 +213,7 @@ extension driverAuthView {
         if self.n1 == "" && self.n2 == "" &&  self.n3 == "" && self.n4 == ""  || (self.A1 == "" &&  self.A2 == "" && self.A3 == "" )   {
             showInfoTopAlert(withMessage: "please enter your plate num first! ".localize)
         } else {
-            print(n1 + n2 + n3)
-            print(A1)
+            
             withAnimation {
                 self.tabSelection = 9
             }
@@ -225,14 +224,10 @@ extension driverAuthView {
     
     
     private func  FinalStep () {
-        print(self.serialNumber)
-        print(self.VehicleClass)
-        print(self.VehicleName)
-        print(self.VehicleColor)
-        print(self.year)
-        print(self.VehicleType)
+       
         let plateNum = self.n1 + self.n2 + self.n3 + self.n4
         let plateAlpha = self.A1 + self.A2 + self.A3
+        
         activityIndicatorr.startAnimating()
         DriverRouter.createAvehicle(serialNum: self.serialNumber , plateAlphabet: plateAlpha, plateNum: plateNum, year: self.year, seats: self.seatsNumber, class: self.VehicleClass, color: self.VehicleColor, type: self.VehicleType, name: self.VehicleName).send {( response : APIGenericResponse<VehicleResult> )in
             

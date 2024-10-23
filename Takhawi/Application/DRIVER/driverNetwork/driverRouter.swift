@@ -29,6 +29,7 @@ enum DriverRouter {
     case stellementRequest ( holderName : String , bankName : String , bankAccNo : String , iban : String , amount : Int)
     case endBasicTrip ( id : Int )
     case endVipTrip ( id : Int )
+    case addNewCar ( serialNo : String , plateAlpha : String , plateNo : String , plateAlphaAr : String , year : Int , seatNo : Int , classId :Int , colorId :  Int , typeId : Int , nameId : Int )
 }
 
 extension DriverRouter : APIRouter {
@@ -41,7 +42,7 @@ extension DriverRouter : APIRouter {
     var method: HTTPMethod {
         switch self {
             
-        case .createAvehicle , .createBasic , .makeOffer  , .markReport , .stellementRequest  :
+        case .createAvehicle , .createBasic , .makeOffer  , .markReport , .stellementRequest , .addNewCar  :
             return .post
         
         case  .driverStatus , .vehicleDetials , .getMeetingLocations , .getPrevVipTrips  , .getAllReports , .switchToUser  :
@@ -95,6 +96,8 @@ extension DriverRouter : APIRouter {
             return driverServerPath.driverEndBasicTrip(id: id)
         case .endVipTrip(id: let id ):
             return driverServerPath.endVip(id: id )
+        case .addNewCar :
+            return driverServerPath.addNewCar
        
         }
     }
@@ -184,7 +187,26 @@ extension DriverRouter : APIRouter {
                 "iban": iban ,
                 "amount": ammount
             ]
+            
+            
+            
+        case .addNewCar(serialNo:  let serialNo , plateAlpha: let plateAlpha , plateNo: let plateNo , plateAlphaAr: let plateAr , year: let year , seatNo: let seatNo , classId: let classId , colorId: let colorId , typeId: let typeId , nameId: let nameId ) :
+            return [
+                
+                "serial_no" : serialNo ,
+                "plate_alphabet" :  plateAlpha ,
+                "plate_alphabet_ar" :  plateAr ,
+                "plate_number" :  plateNo ,
+                "production_year" :  year ,
+                "seats_no" :  seatNo ,
+                "vehicle_class_id" : classId ,
+                "vehicle_color_id" : colorId ,
+                "vehicle_type_id" :  typeId ,
+                "vehicle_name_id" : nameId
+            ]
      
+          
+            
             
         case  .driverStatus , .vehicleDetials  , .markPassenger    , .deleteCar , .switchToUser , .endBasicTrip , .endVipTrip :
             return nil

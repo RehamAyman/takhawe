@@ -4053,6 +4053,7 @@
 				FRAMEWORK_SEARCH_PATHS = "${inherited}";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Takhawi/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "تخاوي";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs to capture image to show in the app.";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Will you allow this app to always know your location,to get near places for you?";
@@ -4096,6 +4097,7 @@
 				FRAMEWORK_SEARCH_PATHS = "${inherited}";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Takhawi/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "تخاوي";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs to capture image to show in the app.";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Will you allow this app to always know your location,to get near places for you?";

@@ -38,6 +38,9 @@ class walletVC : BaseVC {
     
     @IBAction func addMonyAction(_ sender: UIButton) {
         let vc = addAmountVC()
+        vc.action = {
+            self.getUserAmmount()
+        }
         push(vc)
     }
     

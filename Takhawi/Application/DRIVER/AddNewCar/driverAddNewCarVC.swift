@@ -18,9 +18,9 @@ class driverAddNewCarVC: BaseVC {
     
 //MARK: - Properties -
     
-    
+  // lazy var swiftUIView = addNewCarSwiftui()
 
-    
+    lazy var swiftUIView = UIHostingController(rootView: addNewCarSwiftui())
 // MARK: - Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,24 +33,29 @@ class driverAddNewCarVC: BaseVC {
         self.title = "".localized
         self.addSwiftUIView()
     }
-    
-    
+
     
 //MARK: - Logic Methods -
     private func addSwiftUIView() {
-        var swiftUIView = addNewCarSwiftui()
-        let hostingController = UIHostingController(rootView: swiftUIView)
-        guard let swiftUIView = hostingController.view else { return }
-           // Add the SwiftUI view to your containerView
-        self.swiftuiContainer.addSubview(swiftUIView)
-           swiftUIView.translatesAutoresizingMaskIntoConstraints = false
-
-           // Constrain the SwiftUI view to fill the container
-           NSLayoutConstraint.activate([
-            swiftUIView.leadingAnchor.constraint(equalTo: self.swiftuiContainer.leadingAnchor),
-            swiftUIView.trailingAnchor.constraint(equalTo: self.swiftuiContainer.trailingAnchor),
-            swiftUIView.topAnchor.constraint(equalTo: self.swiftuiContainer.topAnchor),
-            swiftUIView.bottomAnchor.constraint(equalTo: self.swiftuiContainer.bottomAnchor)
+            addChild(swiftUIView)
+           // swiftUIView.view.frame = swiftuiContainer.frame
+            swiftuiContainer.addSubview(swiftUIView.view)
+            swiftUIView.disableSafeArea()
+            swiftUIView.didMove(toParent: self)
+        
+        
+//        let hostingController = UIHostingController(rootView: swiftUIView)
+//        guard let swiftUIView = hostingController.view else { return }
+//           // Add the SwiftUI view to your containerView
+//        self.swiftuiContainer.addSubview(swiftUIView)
+        swiftUIView.view.translatesAutoresizingMaskIntoConstraints = false
+//
+//           // Constrain the SwiftUI view to fill the container
+          NSLayoutConstraint.activate([
+        swiftUIView.view.leadingAnchor.constraint(equalTo: self.swiftuiContainer.leadingAnchor),
+        swiftUIView.view.trailingAnchor.constraint(equalTo: self.swiftuiContainer.trailingAnchor),
+        swiftUIView.view.topAnchor.constraint(equalTo: self.swiftuiContainer.topAnchor),
+        swiftUIView.view.bottomAnchor.constraint(equalTo: self.swiftuiContainer.bottomAnchor)
            ])
        }
     

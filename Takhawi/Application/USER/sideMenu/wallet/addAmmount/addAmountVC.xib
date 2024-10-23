@@ -48,10 +48,10 @@
                         <action selector="backButton:" destination="-1" eventType="touchUpInside" id="3dv-Jf-IFa"/>
                     </connections>
                 </button>
-                <textField hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jQf-uK-9N5" customClass="MDCOutlinedTextField">
-                    <rect key="frame" x="20" y="144" width="353" height="0.0"/>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jQf-uK-9N5" customClass="MDCOutlinedTextField">
+                    <rect key="frame" x="20" y="144" width="353" height="50"/>
                     <constraints>
-                        <constraint firstAttribute="height" id="83L-Gb-m5g"/>
+                        <constraint firstAttribute="height" constant="50" id="83L-Gb-m5g"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="URWDINArabic-Regular" family="URW DIN Arabic" pointSize="13"/>
                     <textInputTraits key="textInputTraits" keyboardType="ASCIICapableNumberPad"/>
@@ -84,7 +84,7 @@
                     </connections>
                 </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ss4-g0-M72">
-                    <rect key="frame" x="0.0" y="154" width="393" height="554"/>
+                    <rect key="frame" x="0.0" y="204" width="393" height="504"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
             </subviews>

@@ -31,8 +31,7 @@ struct FloatingTextField: View {
     }
     
     @State var textColor : Color = .gray
-    
-    
+   
    
     
     let title: String
@@ -49,6 +48,7 @@ struct FloatingTextField: View {
     
     var body: some View {
         ZStack(alignment: .leading) {
+          
                 TextField("", text: $text)
                     .focused($isKeyBoardActive)
                     .frame(height: 50, alignment: .leading)
