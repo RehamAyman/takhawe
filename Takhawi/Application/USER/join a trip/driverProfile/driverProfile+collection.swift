@@ -22,7 +22,6 @@ extension driverProfileVC : UICollectionViewDelegate , UICollectionViewDataSourc
         let item = self.dummyActivty[indexPath.row]
         cell.name.text = item.name
         cell.icon.image =  UIImage(named: item.icon)
-        
         if let mainColor = UIColor(named: "MainColor") {
             cell.icon.tintColor = UIColor.systemGray5
            
@@ -50,7 +49,6 @@ extension driverProfileVC : UICollectionViewDelegate , UICollectionViewDataSourc
      
       self.setGoogleTheme()
       if self.isDriverAcc {
-          
           let camera = GMSCameraPosition.camera(withLatitude: self.driverVip?.pickup_location_lat ?? 0.0    , longitude: self.driverVip?.pickup_location_lng ?? 0.0   , zoom: 13.0)
           self.googleView.camera = camera
 
@@ -60,6 +58,17 @@ extension driverProfileVC : UICollectionViewDelegate , UICollectionViewDataSourc
           let endCoordinate = CLLocationCoordinate2D(latitude: self.driverVip?.distination_location_lat ?? 0.0  , longitude: self.driverVip?.distination_location_lng ?? 0.0)
           addMarkers(from: startCoordinate, to: endCoordinate)
           drawAnimatedRoute(from: startCoordinate, to: endCoordinate)
+      } else if self.driverBasic {
+          let camera = GMSCameraPosition.camera(withLatitude: self.driverBasicDetails?.pickup_location?.lat ?? 0.0    , longitude: self.driverBasicDetails?.pickup_location?.lng ?? 0.0   , zoom: 13.0)
+          self.googleView.camera = camera
+
+          let startCoordinate = CLLocationCoordinate2D(latitude: self.driverBasicDetails?.pickup_location?.lat ?? 0.0 , longitude: self.driverBasicDetails?.pickup_location?.lng ?? 0.0  )
+          let update = GMSCameraUpdate.setTarget(startCoordinate , zoom: 13)
+          googleView.animate(with: update)
+          let endCoordinate = CLLocationCoordinate2D(latitude: self.driverBasicDetails?.destination?.lat ?? 0  , longitude: self.driverBasicDetails?.destination?.lng ?? 0 )
+          addMarkers(from: startCoordinate, to: endCoordinate)
+          drawAnimatedRoute(from: startCoordinate, to: endCoordinate)
+          
       } else {
           let camera = GMSCameraPosition.camera(withLatitude: self.tripDetails?.pickuplocation?.lat ?? 0.0    , longitude: self.tripDetails?.pickuplocation?.lng ?? 0.0   , zoom: 13.0)
           self.googleView.camera = camera
@@ -176,17 +185,17 @@ extension driverProfileVC : UICollectionViewDelegate , UICollectionViewDataSourc
     
     func setMainDataInfo () {
         if isDriverAcc {
+            self.shareStack.isHidden = true
+            self.shareStack.isUserInteractionEnabled = false
             
-            
+        } else if driverBasic {
+            self.shareStack.isHidden = true
+            self.shareStack.isUserInteractionEnabled = false
             
         } else {
-            
       
         self.driverName.text = self.tripDetails?.driver_name ?? "--"
         self.tripDate.text = self.tripDetails?.start_date?.convertFromIso()
-            
-            
-            
             
         }
     }

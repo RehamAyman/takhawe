@@ -23,8 +23,11 @@
                 <outlet property="googleView" destination="ag7-m0-5iV" id="PYU-s2-rdE"/>
                 <outlet property="mainStack" destination="oft-2f-t8y" id="6so-HM-rfA"/>
                 <outlet property="offerPrice" destination="6Fr-tw-wYi" id="CPJ-wu-7R4"/>
+                <outlet property="paymentMethod" destination="IHP-yH-RiX" id="jTZ-bU-RM5"/>
+                <outlet property="paymentMethodContainer" destination="s6H-Qg-4G2" id="loR-fQ-ZlT"/>
                 <outlet property="seatPrice" destination="dlz-kG-iPO" id="9sc-EE-bRF"/>
                 <outlet property="sendOfferContainerView" destination="dqc-Vu-3BB" id="b9w-si-9aT"/>
+                <outlet property="shareStack" destination="cTB-DN-gO4" id="b7o-Kd-H0b"/>
                 <outlet property="titleName" destination="WZC-Kd-P8g" id="XsA-DS-mQy"/>
                 <outlet property="to" destination="yga-3n-x7v" id="nBM-uY-h1w"/>
                 <outlet property="tripCountLabel" destination="gTa-8g-a8U" id="8nP-SO-iH6"/>
@@ -96,7 +99,7 @@
                     </constraints>
                 </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2KU-Bh-dIX">
-                    <rect key="frame" x="0.0" y="126.66666666666669" width="393" height="725.33333333333326"/>
+                    <rect key="frame" x="0.0" y="126.66666666666669" width="393" height="725.33333333333348"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="oft-2f-t8y">
                             <rect key="frame" x="19.666666666666657" y="0.0" width="353.66666666666674" height="1085"/>
@@ -457,6 +460,33 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
+                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s6H-Qg-4G2">
+                                    <rect key="frame" x="0.0" y="1020" width="353.66666666666669" height="40"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 10" translatesAutoresizingMaskIntoConstraints="NO" id="SSk-Xj-1SB">
+                                            <rect key="frame" x="20" y="5" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="dav-f0-awt"/>
+                                                <constraint firstAttribute="height" constant="30" id="g1T-Th-5XC"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IHP-yH-RiX">
+                                            <rect key="frame" x="58" y="11.333333333333258" width="287.66666666666669" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" name="popcolor"/>
+                                    <constraints>
+                                        <constraint firstItem="SSk-Xj-1SB" firstAttribute="leading" secondItem="s6H-Qg-4G2" secondAttribute="leading" constant="20" id="IaB-yK-zPo"/>
+                                        <constraint firstAttribute="trailing" secondItem="IHP-yH-RiX" secondAttribute="trailing" constant="8" id="Jne-yk-1sE"/>
+                                        <constraint firstItem="IHP-yH-RiX" firstAttribute="leading" secondItem="SSk-Xj-1SB" secondAttribute="trailing" constant="8" id="OXI-yI-7Di"/>
+                                        <constraint firstItem="SSk-Xj-1SB" firstAttribute="centerY" secondItem="s6H-Qg-4G2" secondAttribute="centerY" id="bc3-G7-XMb"/>
+                                        <constraint firstItem="IHP-yH-RiX" firstAttribute="centerY" secondItem="SSk-Xj-1SB" secondAttribute="centerY" id="fg4-NH-bwT"/>
+                                        <constraint firstAttribute="height" constant="40" id="sk3-ye-oh4"/>
+                                    </constraints>
+                                </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dqc-Vu-3BB">
                                     <rect key="frame" x="0.0" y="1030" width="353.66666666666669" height="55"/>
                                     <subviews>
@@ -573,6 +603,9 @@
         </namedColor>
         <namedColor name="MainColor">
             <color red="0.35294117647058826" green="0.25882352941176473" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="popcolor">
+            <color red="0.67843137254901964" green="0.62745098039215685" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

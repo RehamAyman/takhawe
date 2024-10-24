@@ -19,6 +19,7 @@ struct MainTripResult : Codable {
     let  passengerTripId : Int?
     let  Passenger : PassengerClass?
     let  Passengers : [Passengers]?
+    
    
     enum CodingKeys: String, CodingKey {
 
@@ -112,6 +113,7 @@ struct PassengerClass : Codable   {
 struct Passengers : Codable {
     let id : Int?
     var status : String?
+    let payment_method : String?
     let passnger : Passnger?
 
     enum CodingKeys: String, CodingKey {
@@ -119,6 +121,7 @@ struct Passengers : Codable {
         case id = "id"
         case status = "status"
         case passnger = "Passnger"
+        case payment_method = "payment_method"
     }
 
     init(from decoder: Decoder) throws {
@@ -126,6 +129,7 @@ struct Passengers : Codable {
         id = try values.decodeIfPresent(Int.self, forKey: .id)
         status = try values.decodeIfPresent(String.self, forKey: .status)
         passnger = try values.decodeIfPresent(Passnger.self, forKey: .passnger)
+        payment_method = try values.decodeIfPresent(String.self, forKey: .payment_method)
     }
 
 }

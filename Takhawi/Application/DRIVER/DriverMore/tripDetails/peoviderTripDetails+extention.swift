@@ -85,7 +85,7 @@ extension ProviderTripDetialsVC : UITableViewDelegate , UITableViewDataSource   
         self.cancelTrip.isHidden =  true
         self.submitOutlet.setTitle( "End Trip".localize, for: .normal)
         
-        self.passengersTableView.isUserInteractionEnabled = false
+       // self.passengersTableView.isUserInteractionEnabled = false
         self.passengersTableView.isHidden = false
         // show button to end the trip
         UIView.animate(withDuration: 0.5 ) {
@@ -101,7 +101,7 @@ extension ProviderTripDetialsVC : UITableViewDelegate , UITableViewDataSource   
         self.bottomStack.isHidden = true
         self.bottomStackHeight.constant = 0
         self.bottomStack.isUserInteractionEnabled = false
-        self.passengersTableView.isUserInteractionEnabled = false
+       // self.passengersTableView.isUserInteractionEnabled = false
         self.passengersTableView.isHidden = false
         // show button to end the trip
         UIView.animate(withDuration: 0.5 ) {
@@ -233,17 +233,22 @@ extension ProviderTripDetialsVC : UITableViewDelegate , UITableViewDataSource   
                 let image = Server.imageBase.rawValue +  imageUrl
                 cell.passengerImage.setImage(image: image)
             }
-            
             cell.passengerName.text = items.passnger?.name ?? ""
             cell.rate.rating = items.passnger?.passenger_rate ?? 0
-            
             cell.arraivedOutlet.backgroundColor = items.status == "ARRIVED" ? UIColor.systemGray4 : UIColor(named: "MainColor")
             cell.arraivedOutlet.addTapGesture {
                 items.status = "ARRIVED"
-                cell.backgroundColor = UIColor.systemGray4
+                cell.arraivedOutlet.backgroundColor = UIColor.systemGray4
                 self.markPassengerAttend(id: items.id ?? 0)
                 self.passengersTableView.reloadData()
-                
+            }
+            
+            cell.addTapGesture {
+            let vc = driverProfileVC()
+                vc.driverBasic = true
+                vc.driverBasicDetails = self.passedTrip
+                vc.basicPassenger = items
+            self.push(vc)
             }
         }
         

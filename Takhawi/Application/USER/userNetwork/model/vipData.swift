@@ -25,7 +25,6 @@ struct vipData : Codable {
     let vIP_Trip : VIP_Trip?
 
     enum CodingKeys: String, CodingKey {
-
         case id = "id"
         case start_date = "start_date"
         case end_date = "end_date"
@@ -41,9 +40,9 @@ struct vipData : Codable {
         case vIP_Trip = "VIP_Trip"
     }
 
-  
-
 }
+
+
 
 
 
@@ -63,7 +62,6 @@ struct VIP_Trip : Codable {
     let pickup_description : String?//pickup_description
     
     enum CodingKeys: String, CodingKey {
-
         case pickup_location_lat = "pickup_location_lat"
         case pickup_location_lng = "pickup_location_lng"
         case distination_location_lat = "destination_location_lat"
@@ -79,7 +77,6 @@ struct VIP_Trip : Codable {
         case pickup_description = "pickup_description"
     }
 
-    
 
 }
 
@@ -103,6 +100,7 @@ struct SocketVIP_Trip : Codable {
     let passenger_name : String?
     let passenger_rate : Double?
     let passenger_avatar : String?
+    let start_date : String?
     
     enum CodingKeys: String, CodingKey {
 
@@ -123,6 +121,7 @@ struct SocketVIP_Trip : Codable {
         case passenger_name = "passenger_name"
         case passenger_rate = "passenger_rate"
         case passenger_avatar = "passenger_avatar"
+        case start_date = "start_date"
     }
 
     

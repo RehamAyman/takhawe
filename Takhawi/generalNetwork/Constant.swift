@@ -10,23 +10,27 @@ import Foundation
 
 enum Server: String {
 //https://takhawi.onrender.com/api/
-   
+ //"https://dev-dash-takhawe.hayah.tech/api/"
+ //"https://api.takhawe.com/api/"
+    
+    
     case baseURL = "https://dev-dash-takhawe.hayah.tech/api/"
-    case socetURL =  "https://dev-dash-takhawe.hayah.tech"   // "https://writingservices.aait-sa.com:4705"
+    case socetURL =  "https://dev-dash-takhawe.hayah.tech"
     case socetPort = "3000"
     case rechargeURL = "https://writingservices.aait-sa.com/wallet/charge/"
     case joinUsURL = "https://writingservices.aait-sa.com/option-register"
-    case imageBase = "https://dev-dash-takhawe.hayah.tech/"
+    case imageBase =  "https://dev-dash-takhawe.hayah.tech/"
 }
 
 enum HTTPHeaderField: String {
     case authentication = "Authorization"
-
     case contentType = "Content-Type"
     case acceptType = "Accept"
     case acceptEncoding = "Accept-Encoding"
     case lang = "Accept-Language" //"lang"
 }
+
+
 enum ContentType: String {
     case json = "application/json"
     case deviceType = "ios"
