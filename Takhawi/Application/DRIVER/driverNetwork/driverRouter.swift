@@ -30,6 +30,7 @@ enum DriverRouter {
     case endBasicTrip ( id : Int )
     case endVipTrip ( id : Int )
     case addNewCar ( serialNo : String , plateAlpha : String , plateNo : String , plateAlphaAr : String , year : Int , seatNo : Int , classId :Int , colorId :  Int , typeId : Int , nameId : Int )
+    case report ( noOfMonths : Int )
 }
 
 extension DriverRouter : APIRouter {
@@ -45,7 +46,7 @@ extension DriverRouter : APIRouter {
         case .createAvehicle , .createBasic , .makeOffer  , .markReport , .stellementRequest , .addNewCar  :
             return .post
         
-        case  .driverStatus , .vehicleDetials , .getMeetingLocations , .getPrevVipTrips  , .getAllReports , .switchToUser  :
+        case  .driverStatus , .vehicleDetials , .getMeetingLocations , .getPrevVipTrips  , .getAllReports , .switchToUser , .report  :
           return .get
             
             
@@ -98,6 +99,8 @@ extension DriverRouter : APIRouter {
             return driverServerPath.endVip(id: id )
         case .addNewCar :
             return driverServerPath.addNewCar
+        case .report(noOfMonths: let months ):
+            return driverServerPath.reports(month: months)
        
         }
     }
@@ -208,7 +211,7 @@ extension DriverRouter : APIRouter {
           
             
             
-        case  .driverStatus , .vehicleDetials  , .markPassenger    , .deleteCar , .switchToUser , .endBasicTrip , .endVipTrip :
+        case  .driverStatus , .vehicleDetials  , .markPassenger    , .deleteCar , .switchToUser , .endBasicTrip , .endVipTrip  , .report:
             return nil
             
         }

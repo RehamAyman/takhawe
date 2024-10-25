@@ -10,10 +10,11 @@ import SwiftUICharts
 
 
 struct driverReportSwiftui: View {
-    @State var selection : String  = "Select Duration"
+    @State var selection : String  = "6 months"
     @State var totalTrips : String = "--"
     @State var totalProfit : String = "--"
     @State var distance : String = "--"
+    @State var chartData : [Double] = [8,23,54,32,12,37,7,23,43]
     var action: (() -> Void)?
 
     
@@ -28,6 +29,7 @@ struct driverReportSwiftui: View {
                     Button(action: {
                         print("Option 1 selected")
                         self.selection = "3 months"
+                        self.getReports(noOfMonth: 3)
                                }) {
                                    Text("3 months")
                                }
@@ -35,6 +37,7 @@ struct driverReportSwiftui: View {
                                Button(action: {
                                    print("Option 2 selected")
                                    self.selection = "6 months"
+                                   self.getReports(noOfMonth: 6)
                                }) {
                                    Text("6 months")
                                }
@@ -42,7 +45,7 @@ struct driverReportSwiftui: View {
                                Button(action: {
                                    print("Option 3 selected")
                                    self.selection = "Year"
-                                
+                                   self.getReports(noOfMonth: 12)
                                }) {
                                    Text("Year")
                                }
@@ -72,7 +75,7 @@ struct driverReportSwiftui: View {
             
             VStack {
                 
-                LineView(data: [8,23,54,32,12,37,7,23,43], title: "Line chart", legend: "Full screen")
+                LineView(data: chartData , title: "", legend: "")
             }
             .frame(height: 400 )
             .padding(8)
@@ -84,7 +87,31 @@ struct driverReportSwiftui: View {
            
             
         }.background(Color(uiColor: UIColor(named: "BackGroundColor") ?? UIColor.white))
+            .onAppear {
+                self.getReports(noOfMonth: 6)
+            }
       
+    }
+    
+    func getReports ( noOfMonth : Int ) {
+        activityIndicatorr.startAnimating()
+        DriverRouter.report(noOfMonths: noOfMonth).send {  (response : APIGenericResponse<driverReportsResult> )  in
+                if let response = response.result {
+                    self.totalTrips = "\(response.totalRevenue?.total_trips ?? 0)"
+                    self.totalProfit = "\(response.totalRevenue?.driver_profit ?? 0)"
+                    let distance = response.totalRevenue?.total_distance ?? 0
+                    let disString = distance == 0 ? "--" : "\(distance)"
+                    self.distance =  disString
+                    let people = response.monthlyRevenue ?? []
+                    // Using map to get an array of names
+                    self.chartData = people.map { $0.driver_profit ?? 0 }
+
+                    
+                    
+                }
+            
+            
+        }
     }
 }
 

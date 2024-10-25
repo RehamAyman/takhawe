@@ -17,7 +17,7 @@ struct reportMiddleView: View {
         VStack ( spacing: 10 ) {
         
             HStack {
-                Text ( "Total Trips")
+                Text ( "Total Trips".localize)
                     .foregroundStyle(.gray)
                 Spacer()
                 Text ( totalTrips)
@@ -31,7 +31,7 @@ struct reportMiddleView: View {
                     .foregroundStyle(Color("MainColor"))
             }
             HStack {
-                Text ( "Total distance ")
+                Text ( "Total distance".localize)
                     .foregroundStyle(.gray)
                 Spacer()
                 Text ( totalDistance )

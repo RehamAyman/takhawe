@@ -219,6 +219,7 @@
 		CE0F42F92B4D0F6E005694AC /* onboardingSwiftuiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F42F82B4D0F6E005694AC /* onboardingSwiftuiView.swift */; };
 		CE115E5B2ABED5CC00972CC9 /* homeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE115E5A2ABED5CC00972CC9 /* homeVC.xib */; };
 		CE115E5D2ABED5E800972CC9 /* homeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE115E5C2ABED5E800972CC9 /* homeVC.swift */; };
+		CE1656662CCBDABE00A58919 /* driverReports.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1656652CCBDABE00A58919 /* driverReports.swift */; };
 		CE1A11D12C6C9D7A00F6FDE2 /* validationUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1A11D02C6C9D7A00F6FDE2 /* validationUrl.swift */; };
 		CE1A11D32C6CA3FF00F6FDE2 /* oneBasicTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1A11D22C6CA3FF00F6FDE2 /* oneBasicTrip.swift */; };
 		CE1A94E02B6CD549003C50EF /* fileUploadedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1A94DF2B6CD549003C50EF /* fileUploadedView.swift */; };
@@ -755,6 +756,7 @@
 		CE0F42F82B4D0F6E005694AC /* onboardingSwiftuiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onboardingSwiftuiView.swift; sourceTree = "<group>"; };
 		CE115E5A2ABED5CC00972CC9 /* homeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = homeVC.xib; sourceTree = "<group>"; };
 		CE115E5C2ABED5E800972CC9 /* homeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeVC.swift; sourceTree = "<group>"; };
+		CE1656652CCBDABE00A58919 /* driverReports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = driverReports.swift; sourceTree = "<group>"; };
 		CE1A11D02C6C9D7A00F6FDE2 /* validationUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = validationUrl.swift; sourceTree = "<group>"; };
 		CE1A11D22C6CA3FF00F6FDE2 /* oneBasicTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oneBasicTrip.swift; sourceTree = "<group>"; };
 		CE1A94DF2B6CD549003C50EF /* fileUploadedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fileUploadedView.swift; sourceTree = "<group>"; };
@@ -2481,6 +2483,7 @@
 				CECC3D492C6B250A007AD2D4 /* vehicle.swift */,
 				CE9D3CA92C83E3CB007E872D /* meetingLocations.swift */,
 				CE5BF5502CB6FBBE00C59170 /* accedintReportModel.swift */,
+				CE1656652CCBDABE00A58919 /* driverReports.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -3761,6 +3764,7 @@
 				04B659EC2B3451EB00E78752 /* cardModel.swift in Sources */,
 				CE9DB3962AC18346000759B8 /* customSegnmentWithAnimation.swift in Sources */,
 				CE9EBFF92B14661A0080A0F2 /* reserveTheTripVc+delegate.swift in Sources */,
+				CE1656662CCBDABE00A58919 /* driverReports.swift in Sources */,
 				CE72B01B2C02DDB1009AC905 /* authRouter.swift in Sources */,
 				9694ABC42A5DFACA00BDF5F8 /* ExtensionNotification.swift in Sources */,
 				9694ABE32A5DFACA00BDF5F8 /* AppStoryBoard+UIViewController.swift in Sources */,
