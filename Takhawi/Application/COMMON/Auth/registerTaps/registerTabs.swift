@@ -25,10 +25,11 @@ struct registerTabs: View {
     @State var fullName : String = ""
     
     var phone : String = ""
-    
+
     
     var action: (_ name : String , _ email : String , _ password : String , _ phone : String , _ genderIndex : Int ) -> Void
     var BackAction: () -> Void
+    var showTermsaction: (() -> Void)?
     var IsArabicLang : Bool {
         if LocalizationManager.shared.getLanguage() == .Arabic {
             return true
@@ -83,7 +84,12 @@ struct registerTabs: View {
                     tap1(email: $email)
                        
                         .tag(1)
-                    tap2( confirmPassword:  $confirmPassword , password: $password )
+                    tap2( confirmPassword:  $confirmPassword , password: $password ) {
+                        self.showTermsaction?()
+                      
+                    }
+                        
+                       
                        
                         .tag(2)
                     tab3(index: $genderIndex)

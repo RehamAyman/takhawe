@@ -14,7 +14,7 @@ struct tap2: View {
     @Binding var confirmPassword : String 
     @Binding var password : String
     @State var checkTerms : Bool = true
-    
+    var action: (() -> Void)?
     
     
     var body: some View {
@@ -42,11 +42,38 @@ struct tap2: View {
                     }
                     .shadow(color: Color("MainColor"), radius: 1)
 
-                
-                Text( "I agree to the terms and conditions".localize)
-                    .font(.custom( LocalizationManager.shared.getLanguage() == .Arabic ?  AppFont.arRegular.rawValue :  AppFont.Regular.rawValue , size: 13))
-                    .fixedSize()
+                HStack  {
+                    if LocalizationManager.shared.getLanguage() == .Arabic {
+                        
+                        Text( "terms and conditions".localize)
+                            .font(.custom(  AppFont.arRegular.rawValue  , size: 12))
+                            .foregroundColor(Color( "MainColor") )
+                        
+                        Text( "I agree to the".localize)
+                            .font(.custom(  AppFont.arRegular.rawValue  , size: 12))
+                        
+                        
+                        
+                    } else {
+                        Text( "I agree to the".localize)
+                            .font(.custom(  AppFont.Regular.rawValue , size: 12))
+                        Text( "terms and conditions".localize)
+                            .font(.custom(  AppFont.Regular.rawValue , size: 12))
+                            .foregroundColor(Color( "MainColor") )
+                    }
+                    
+               
+                        
+                    
+                }
+                .onTapGesture(perform: {
+                    self.action?()
+                })
+               
+                   // .fixedSize()
                     .frame(maxWidth: .infinity , alignment : .leading)
+                //terms and conditions
+                
                 
             }.padding(.horizontal)
             

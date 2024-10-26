@@ -38,7 +38,11 @@ class registerTapsVC: BaseVC {
    } BackAction: {
        print("hello i catch back action well 🥳 ")
        self.pop(animated: true)
-   } )
+   } showTermsaction: {
+       let vc = policesVC()
+       self.push(vc)
+   }
+    )
     
     
     

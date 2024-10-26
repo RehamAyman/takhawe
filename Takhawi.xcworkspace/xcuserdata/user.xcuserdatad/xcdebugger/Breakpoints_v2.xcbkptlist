@@ -1431,6 +1431,38 @@
             endingLineNumber = "182"
             landmarkName = "confirmOffer()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BC5C1CD5-4412-4A74-9009-9423682E0CBE - b2e67905e6690cd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Takhawi.ReserveTheTripVC.confirmOffer() -&gt; ()"
+                  moduleName = "Takhawi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Documents/takhawy1/Takhawi/Application/USER/join%20a%20trip/Reserve%20the%20trip/ReserveTheTripVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "184"
+                  endingLineNumber = "184"
+                  offsetFromSymbolStart = "197">
+               </Location>
+               <Location
+                  uuid = "BC5C1CD5-4412-4A74-9009-9423682E0CBE - b2e67905e6690cd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Takhawi.ReserveTheTripVC.confirmOffer() -&gt; ()"
+                  moduleName = "Takhawi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Documents/takhawy1/Takhawi/Application/USER/join%20a%20trip/Reserve%20the%20trip/ReserveTheTripVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "184"
+                  endingLineNumber = "184"
+                  offsetFromSymbolStart = "180">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

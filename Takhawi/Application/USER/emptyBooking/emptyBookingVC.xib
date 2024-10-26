@@ -21,14 +21,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3GP-uz-ifL" customClass="LottieAnimationView" customModule="Lottie">
-                    <rect key="frame" x="76.666666666666686" y="300.66666666666669" width="240" height="170.66666666666669"/>
+                    <rect key="frame" x="39.333333333333343" y="258.33333333333331" width="314.33333333333326" height="255.33333333333331"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="hotel"/>
                     </userDefinedRuntimeAttributes>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This feature will be available soon" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWU-VT-ao7">
-                    <rect key="frame" x="10" y="481.33333333333331" width="373" height="20.333333333333314"/>
+                    <rect key="frame" x="10" y="523.66666666666663" width="373" height="20.333333333333371"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" name="MainColor"/>
                     <nil key="highlightedColor"/>
@@ -63,8 +63,8 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="zWU-VT-ao7" secondAttribute="trailing" constant="10" id="KpG-81-FUj"/>
                 <constraint firstItem="suV-J1-qlg" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="WTw-CM-zeA"/>
                 <constraint firstItem="DqF-fQ-Jk6" firstAttribute="centerY" secondItem="suV-J1-qlg" secondAttribute="centerY" id="iZu-BA-JJs"/>
-                <constraint firstItem="3GP-uz-ifL" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.610687" id="phB-aL-mtd"/>
-                <constraint firstItem="3GP-uz-ifL" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.2" id="q6q-Vv-tBD"/>
+                <constraint firstItem="3GP-uz-ifL" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.8" id="phB-aL-mtd"/>
+                <constraint firstItem="3GP-uz-ifL" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.3" id="q6q-Vv-tBD"/>
             </constraints>
             <point key="canvasLocation" x="127" y="20"/>
         </view>
