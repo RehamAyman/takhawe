@@ -130,7 +130,6 @@ extension trackYourTripVC {
 
               do {
                   if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
-                   
                      let routes = json["routes"] as? [[String: Any]],
                      let route = routes.first,
                      let overviewPolyline = route["overview_polyline"] as? [String: Any],

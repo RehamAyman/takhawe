@@ -15,9 +15,6 @@ class settingsSideVC: BaseVC {
     
     @IBOutlet var backButtonsImg: [UIImageView]!
     
-    
-    
-    
     @IBOutlet weak var logoutOutlet: UIButton!
     
     @IBOutlet var stackViews: [UIView]!

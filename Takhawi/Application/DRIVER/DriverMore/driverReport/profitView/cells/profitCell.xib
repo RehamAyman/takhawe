@@ -34,40 +34,44 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ufv-Ag-1qh">
-                                <rect key="frame" x="88" y="51.666666666666664" width="28.666666666666671" height="13.333333333333336"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ufv-Ag-1qh">
+                                <rect key="frame" x="88.000000000000014" y="51.666666666666664" width="162.33333333333337" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right-arrow (1) 1" translatesAutoresizingMaskIntoConstraints="NO" id="8wO-wV-xG2">
-                                <rect key="frame" x="121.66666666666666" y="53.333333333333336" width="16" height="10"/>
+                                <rect key="frame" x="255.33333333333331" y="52.666666666666664" width="16" height="10"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="16" id="Hkx-6f-ZAb"/>
                                     <constraint firstAttribute="height" constant="10" id="bZr-zw-PaD"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2z-x9-Gj2">
-                                <rect key="frame" x="145.66666666666666" y="51.333333333333336" width="29" height="14.000000000000007"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2z-x9-Gj2">
+                                <rect key="frame" x="279.33333333333331" y="51.666666666666664" width="163.66666666666669" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dxw-df-ciI" customClass="CosmosView" customModule="Cosmos">
-                                <rect key="frame" x="132" y="15.333333333333332" width="110" height="24.999999999999996"/>
+                                <rect key="frame" x="132" y="15.333333333333332" width="120" height="24.999999999999996"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="N0I-mL-QwW"/>
-                                    <constraint firstAttribute="width" constant="110" id="rUR-yv-SSt"/>
+                                    <constraint firstAttribute="width" constant="120" id="rUR-yv-SSt"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="filledImage" value="star 1"/>
                                     <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="star"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="X2z-x9-Gj2" secondAttribute="trailing" constant="8" id="1ee-hh-lRm"/>
                             <constraint firstItem="oga-wa-XZd" firstAttribute="centerY" secondItem="jEB-dV-vd6" secondAttribute="centerY" id="B6H-Cn-uku"/>
                             <constraint firstItem="Dxw-df-ciI" firstAttribute="centerY" secondItem="leM-2G-Z3o" secondAttribute="centerY" id="DCZ-bW-yDt"/>
                             <constraint firstItem="8wO-wV-xG2" firstAttribute="leading" secondItem="Ufv-Ag-1qh" secondAttribute="trailing" constant="5" id="Gto-lF-W99"/>
@@ -76,6 +80,7 @@
                             <constraint firstItem="Ufv-Ag-1qh" firstAttribute="leading" secondItem="oga-wa-XZd" secondAttribute="trailing" constant="10" id="Xor-0h-XIO"/>
                             <constraint firstItem="X2z-x9-Gj2" firstAttribute="centerY" secondItem="Ufv-Ag-1qh" secondAttribute="centerY" id="Z9d-NF-dcK"/>
                             <constraint firstItem="leM-2G-Z3o" firstAttribute="top" secondItem="jEB-dV-vd6" secondAttribute="top" constant="20" id="b6M-P2-paR"/>
+                            <constraint firstItem="Ufv-Ag-1qh" firstAttribute="width" secondItem="jEB-dV-vd6" secondAttribute="width" multiplier="0.36" id="iKZ-sl-QxJ"/>
                             <constraint firstItem="8wO-wV-xG2" firstAttribute="centerY" secondItem="Ufv-Ag-1qh" secondAttribute="centerY" id="ibj-IR-p3d"/>
                             <constraint firstItem="X2z-x9-Gj2" firstAttribute="leading" secondItem="8wO-wV-xG2" secondAttribute="trailing" constant="8" id="kT9-w5-2ja"/>
                             <constraint firstItem="Ufv-Ag-1qh" firstAttribute="top" secondItem="leM-2G-Z3o" secondAttribute="bottom" constant="16" id="mq9-7I-9eC"/>
@@ -93,7 +98,11 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="from" destination="Ufv-Ag-1qh" id="yHS-V0-otW"/>
+                <outlet property="mainTitle" destination="leM-2G-Z3o" id="Pgc-Mu-u60"/>
                 <outlet property="mainView" destination="jEB-dV-vd6" id="a6b-44-xIY"/>
+                <outlet property="rate" destination="Dxw-df-ciI" id="HPq-FC-6PB"/>
+                <outlet property="to" destination="X2z-x9-Gj2" id="1eW-Vg-8y7"/>
             </connections>
             <point key="canvasLocation" x="52.671755725190835" y="51.760563380281695"/>
         </tableViewCell>

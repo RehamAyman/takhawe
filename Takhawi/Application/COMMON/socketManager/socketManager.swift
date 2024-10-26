@@ -4,7 +4,7 @@ class MySocketManager {
     var socket: SocketIOClient!
     var timer: Timer?
     
-    let manager = SocketIO.SocketManager(socketURL: URL(string: "https://dev-dash-takhawe.hayah.tech")!, config: [
+    let manager = SocketIO.SocketManager(socketURL: URL(string: Server.imageBase.rawValue)!, config: [
         .log(true),
         .compress,
        

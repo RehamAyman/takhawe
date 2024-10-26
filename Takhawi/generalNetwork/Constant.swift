@@ -14,12 +14,17 @@ enum Server: String {
  //"https://api.takhawe.com/api/"
     
     
-    case baseURL = "https://dev-dash-takhawe.hayah.tech/api/"
-    case socetURL =  "https://dev-dash-takhawe.hayah.tech"
+    
+//    VITE_BASE_URL = 'https://api.takhawe.com/api/'
+//    VITE_MEDIA_URL = 'https://api.takhawe.com'
+//
+//    
+    case baseURL =  "https://api.takhawe.com/api/"   //"https://dev-dash-takhawe.hayah.tech/api/"
+   // case socetURL = "https://api.takhawe.com/"  //"https://dev-dash-takhawe.hayah.tech"
     case socetPort = "3000"
     case rechargeURL = "https://writingservices.aait-sa.com/wallet/charge/"
     case joinUsURL = "https://writingservices.aait-sa.com/option-register"
-    case imageBase =  "https://dev-dash-takhawe.hayah.tech/"
+    case imageBase =   "https://api.takhawe.com/" //"https://dev-dash-takhawe.hayah.tech/"
 }
 
 enum HTTPHeaderField: String {

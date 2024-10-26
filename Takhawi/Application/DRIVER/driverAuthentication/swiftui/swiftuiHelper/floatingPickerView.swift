@@ -60,7 +60,7 @@ struct floatingPickerViews: View {
                     }
                     
                 } label: {
-                    ZStack ( alignment: IsArabicLang ?  .trailing : .leading  ) {
+                    ZStack ( alignment: IsArabicLang ?  .leading : .trailing   ) {
                         FloatingTextField(title: "Enter Vehicle Class".localize , text: $vehicleClassText)
                         
                         Image ( "Vector 9")
@@ -83,7 +83,7 @@ struct floatingPickerViews: View {
                     }
                     
                 } label: {
-                    ZStack ( alignment: IsArabicLang ? .trailing : .leading  ) {
+                    ZStack ( alignment: IsArabicLang ? .leading : .trailing    ) {
                         FloatingTextField(title: "Enter number of seats allocated for the ride".localize , text: $seatNumText)
                         
                         Image ( "Vector 9")
@@ -106,7 +106,7 @@ struct floatingPickerViews: View {
                     }
                     
                 } label: {
-                    ZStack ( alignment: IsArabicLang ? .trailing : .leading  ) {
+                    ZStack ( alignment: IsArabicLang ? .leading : .trailing   ) {
                         FloatingTextField(title: "Enter Vehicle Color".localize , text: $colorText)
                         
                         Image ( "Vector 9")
@@ -128,7 +128,7 @@ struct floatingPickerViews: View {
                     }
                     
                 } label: {
-                    ZStack ( alignment: IsArabicLang ? .trailing : .leading  ) {
+                    ZStack ( alignment: IsArabicLang ? .leading : .trailing   ) {
                         FloatingTextField(title: "Choose Vehicle Type".localize , text: $carType)
                         
                         Image ( "Vector 9")
@@ -150,7 +150,7 @@ struct floatingPickerViews: View {
                     }
                     
                 } label: {
-                    ZStack ( alignment: IsArabicLang ? .trailing : .leading  ) {
+                    ZStack ( alignment: IsArabicLang ? .leading : .trailing  ) {
                         FloatingTextField(title: "Choose Vehicle Name".localize , text: $carName)
                         
                         Image ( "Vector 9")
@@ -173,7 +173,7 @@ struct floatingPickerViews: View {
                     }
                     
                 } label: {
-                    ZStack ( alignment: IsArabicLang ? .trailing : .leading  ) {
+                    ZStack ( alignment: IsArabicLang ? .leading : .trailing  ) {
                         FloatingTextField(title: "Choose Production year".localize , text: $yearText)
                         
                         Image ( "Vector 9")

@@ -94,12 +94,20 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
                     switch driverStatus {
                     case "APPROVED"  :
                         UserDefaults.isLogin = true
+                        if let token =  response.result?.accessToken {
+                            UserDefaults.accessToken = token
+                        }
                         let storyboard = UIStoryboard(name: "Main", bundle: nil)
                         let vc = storyboard.instantiateViewController(withIdentifier: "DriverTabbar") as! DriverTabbar
                         let nav = CustomNavigationController(rootViewController: vc)
                         AppHelper.changeWindowRoot(vc: nav)
                         
                     case  "REGISTERED"  : // it mean that he did not complete the whole process to regester
+                        if let token =  response.result?.accessToken {
+                            UserDefaults.isLogin = false
+                            UserDefaults.accessToken = token
+                        }
+                       
                         self.checkDriverStatus()
                       
                     case "PENDING" :
@@ -447,6 +455,8 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
         let vc = homeSearchVC ()
         vc.currentLat = locationManager.location?.coordinate.latitude ?? 0.0
         vc.currentong = locationManager.location?.coordinate.longitude ?? 0.0
+        
+        
         vc.modalTransitionStyle = .coverVertical
         vc.modalPresentationStyle = .overCurrentContext
         let pushVc = mapSearchVC()

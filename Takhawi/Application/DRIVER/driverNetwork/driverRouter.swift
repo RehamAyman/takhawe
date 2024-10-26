@@ -31,6 +31,8 @@ enum DriverRouter {
     case endVipTrip ( id : Int )
     case addNewCar ( serialNo : String , plateAlpha : String , plateNo : String , plateAlphaAr : String , year : Int , seatNo : Int , classId :Int , colorId :  Int , typeId : Int , nameId : Int )
     case report ( noOfMonths : Int )
+    case getTotalProfit
+    case reportDetails ( id : Int )
 }
 
 extension DriverRouter : APIRouter {
@@ -46,7 +48,7 @@ extension DriverRouter : APIRouter {
         case .createAvehicle , .createBasic , .makeOffer  , .markReport , .stellementRequest , .addNewCar  :
             return .post
         
-        case  .driverStatus , .vehicleDetials , .getMeetingLocations , .getPrevVipTrips  , .getAllReports , .switchToUser , .report  :
+        case  .driverStatus , .vehicleDetials , .getMeetingLocations , .getPrevVipTrips  , .getAllReports , .switchToUser , .report  , .getTotalProfit , .reportDetails:
           return .get
             
             
@@ -101,6 +103,11 @@ extension DriverRouter : APIRouter {
             return driverServerPath.addNewCar
         case .report(noOfMonths: let months ):
             return driverServerPath.reports(month: months)
+        case .getTotalProfit :
+            return driverServerPath.getTotalProfit
+        case .reportDetails(id: let id ):
+            return driverServerPath.reportDetails(id: id)
+            
        
         }
     }
@@ -126,7 +133,8 @@ extension DriverRouter : APIRouter {
                  "vehicle_class_id": classNum ,
                  "vehicle_color_id": color ,
                  "vehicle_type_id": type ,
-                 "vehicle_name_id": name
+                "vehicle_name_id": name ,
+                "plate_alphabet_ar" : "aaa"
             ]
             
         case .getPrevVipTrips(lat: let lat , lng: let lng ):
@@ -211,7 +219,7 @@ extension DriverRouter : APIRouter {
           
             
             
-        case  .driverStatus , .vehicleDetials  , .markPassenger    , .deleteCar , .switchToUser , .endBasicTrip , .endVipTrip  , .report:
+        case  .driverStatus , .vehicleDetials  , .markPassenger    , .deleteCar , .switchToUser , .endBasicTrip , .endVipTrip  , .report , .getTotalProfit , .reportDetails :
             return nil
             
         }

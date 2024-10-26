@@ -178,6 +178,9 @@ extension ReserveTheTripVC {
     func confirmOffer ( ) {
         print(self.paymentMethod)
         print(self.paymentMethod.rawValue)
+        
+        
+        
         activityIndicatorr.startAnimating()
      
         UserRouter.acceptOffer(id: offer?.id ?? 0 , paymentMethod: self.paymentMethod.rawValue  ).send { [weak self ] (response: APIGlobalResponse) in

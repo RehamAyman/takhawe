@@ -11,7 +11,7 @@ import UIKit
 import GoogleMaps
 
 
-class DriverPointsGoogleMapVC: BaseVC ,GMSMapViewDelegate{
+class DriverPointsGoogleMapVC : BaseVC ,GMSMapViewDelegate{
     
     //MARK: - IBOutlets -
     

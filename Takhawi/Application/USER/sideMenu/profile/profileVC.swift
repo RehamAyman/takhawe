@@ -153,34 +153,36 @@ extension profileVC {
                 }
                
                 self.userName.text = result.name ?? ""
-                if let vehicle = result.Vehicles {
-                    // hide add car botton
-                    self.addnNewCar.isHidden = true
-                    self.addnNewCar.isUserInteractionEnabled = false
-                    // show car details view
-                    self.vechcleupdateView.isHidden = false
-                    self.vechcleupdateView.isUserInteractionEnabled = true
-                    
-                    let color = vehicle.vehicle_Color?.name ?? ""
-                    let type = vehicle.vehicle_Type?.name ?? ""
-                    let name = vehicle.vehicle_Name?.name ?? ""
-                    let className = vehicle.vehicle_Class?.name ?? ""
-                    self.carName.text = color + " " + type + " " +  className + " " +  name
-                    self.arAlpha.text = vehicle.plate_alphabet ?? ""
-                    self.enAlpha.text = vehicle.plate_alphabet ?? ""
-                    self.enNum.text =  vehicle.plate_number ?? ""
-                    self.arNum.text = vehicle.plate_number ?? ""
-                    
-                } else {
-                    // show add car button
-                    self.addnNewCar.isHidden = false
-                    self.addnNewCar.isUserInteractionEnabled = true
-                    // hide car details view
-                    self.vechcleupdateView.isHidden = true
-                    self.vechcleupdateView.isUserInteractionEnabled = false
-                    
+               
+                    if let vehicle = result.Vehicles {
+                        // hide add car botton
+                        self.addnNewCar.isHidden = true
+                        self.addnNewCar.isUserInteractionEnabled = false
+                        // show car details view
+                        self.vechcleupdateView.isHidden = false
+                        self.vechcleupdateView.isUserInteractionEnabled = true
+                        
+                        let color = vehicle.vehicle_Color?.name ?? ""
+                        let type = vehicle.vehicle_Type?.name ?? ""
+                        let name = vehicle.vehicle_Name?.name ?? ""
+                        let className = vehicle.vehicle_Class?.name ?? ""
+                        self.carName.text = color + " " + type + " " +  className + " " +  name
+                        self.arAlpha.text = vehicle.plate_alphabet ?? ""
+                        self.enAlpha.text = vehicle.plate_alphabet ?? ""
+                        self.enNum.text =  vehicle.plate_number ?? ""
+                        self.arNum.text = vehicle.plate_number ?? ""
+                        
+                    } else {
+                        if isDriver {
+                        // show add car button
+                        self.addnNewCar.isHidden = false
+                        self.addnNewCar.isUserInteractionEnabled = true
+                        // hide car details view
+                        self.vechcleupdateView.isHidden = true
+                        self.vechcleupdateView.isUserInteractionEnabled = false
+                        
+                    }
                 }
-              
                 
                 self.collectionView.reloadData()
             }

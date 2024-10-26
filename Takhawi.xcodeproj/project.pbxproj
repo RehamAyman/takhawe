@@ -320,6 +320,11 @@
 		CE5B60482CAD4A070093A469 /* repeatingClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B60472CAD4A070093A469 /* repeatingClass.swift */; };
 		CE5B7B482CB201E800C9421A /* policesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B7B472CB201E800C9421A /* policesModel.swift */; };
 		CE5BF5512CB6FBBE00C59170 /* accedintReportModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5BF5502CB6FBBE00C59170 /* accedintReportModel.swift */; };
+		CE6146DC2CCCB5A700097203 /* totalProfitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6146DB2CCCB5A700097203 /* totalProfitModel.swift */; };
+		CE6146E42CCCF9F000097203 /* tripReportDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6146E32CCCF9F000097203 /* tripReportDetails.swift */; };
+		CE6146E92CCD9A1C00097203 /* emptyBookingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6146E82CCD9A1C00097203 /* emptyBookingVC.swift */; };
+		CE6146EB2CCD9A2500097203 /* emptyBookingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6146EA2CCD9A2500097203 /* emptyBookingVC.xib */; };
+		CE6146EF2CCDA1B200097203 /* hotel.json in Resources */ = {isa = PBXBuildFile; fileRef = CE6146EE2CCDA1B200097203 /* hotel.json */; };
 		CE6178A02ACCF9E500AA8BB7 /* homeSearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE61789F2ACCF9E500AA8BB7 /* homeSearchVC.xib */; };
 		CE6178A22ACCF9F700AA8BB7 /* homeSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6178A12ACCF9F700AA8BB7 /* homeSearchVC.swift */; };
 		CE6178A42ACD08DE00AA8BB7 /* homeSearch+textfieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6178A32ACD08DE00AA8BB7 /* homeSearch+textfieldDelegate.swift */; };
@@ -860,6 +865,11 @@
 		CE5B60472CAD4A070093A469 /* repeatingClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = repeatingClass.swift; sourceTree = "<group>"; };
 		CE5B7B472CB201E800C9421A /* policesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = policesModel.swift; sourceTree = "<group>"; };
 		CE5BF5502CB6FBBE00C59170 /* accedintReportModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accedintReportModel.swift; sourceTree = "<group>"; };
+		CE6146DB2CCCB5A700097203 /* totalProfitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = totalProfitModel.swift; sourceTree = "<group>"; };
+		CE6146E32CCCF9F000097203 /* tripReportDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripReportDetails.swift; sourceTree = "<group>"; };
+		CE6146E82CCD9A1C00097203 /* emptyBookingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emptyBookingVC.swift; sourceTree = "<group>"; };
+		CE6146EA2CCD9A2500097203 /* emptyBookingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = emptyBookingVC.xib; sourceTree = "<group>"; };
+		CE6146EE2CCDA1B200097203 /* hotel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hotel.json; sourceTree = "<group>"; };
 		CE61789F2ACCF9E500AA8BB7 /* homeSearchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = homeSearchVC.xib; sourceTree = "<group>"; };
 		CE6178A12ACCF9F700AA8BB7 /* homeSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeSearchVC.swift; sourceTree = "<group>"; };
 		CE6178A32ACD08DE00AA8BB7 /* homeSearch+textfieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "homeSearch+textfieldDelegate.swift"; sourceTree = "<group>"; };
@@ -1778,6 +1788,7 @@
 		9694AC282A5E040D00BDF5F8 /* AnimationJson */ = {
 			isa = PBXGroup;
 			children = (
+				CE6146EE2CCDA1B200097203 /* hotel.json */,
 				CE9CFE732C9A612B008B6AA0 /* Q2ix9ldDnm.json */,
 				CE72B0222C0366AB009AC905 /* OIuR07TvQK.json */,
 				CE41C63A2BA4FE3800DBE739 /* 9t8knRBCgn.json */,
@@ -2284,6 +2295,15 @@
 			path = "repeating Function";
 			sourceTree = "<group>";
 		};
+		CE6146E52CCD99F100097203 /* emptyBooking */ = {
+			isa = PBXGroup;
+			children = (
+				CE6146E82CCD9A1C00097203 /* emptyBookingVC.swift */,
+				CE6146EA2CCD9A2500097203 /* emptyBookingVC.xib */,
+			);
+			path = emptyBooking;
+			sourceTree = "<group>";
+		};
 		CE6178A52ACD101B00AA8BB7 /* mapSearch */ = {
 			isa = PBXGroup;
 			children = (
@@ -2484,6 +2504,8 @@
 				CE9D3CA92C83E3CB007E872D /* meetingLocations.swift */,
 				CE5BF5502CB6FBBE00C59170 /* accedintReportModel.swift */,
 				CE1656652CCBDABE00A58919 /* driverReports.swift */,
+				CE6146DB2CCCB5A700097203 /* totalProfitModel.swift */,
+				CE6146E32CCCF9F000097203 /* tripReportDetails.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -2555,6 +2577,7 @@
 		CE8E38AE2CAD319500471606 /* USER */ = {
 			isa = PBXGroup;
 			children = (
+				CE6146E52CCD99F100097203 /* emptyBooking */,
 				CE115E592ABED5AB00972CC9 /* Home */,
 				CEDDBE1D2ACC456E00677C94 /* searchDestination */,
 				CE6178A52ACD101B00AA8BB7 /* mapSearch */,
@@ -3372,6 +3395,7 @@
 				9630071A2A7671560075DBFE /* SelectUserTypeVC.xib in Resources */,
 				9694AB422A5DE9D600BDF5F8 /* LaunchScreen.storyboard in Resources */,
 				96B27F8B2A82F7BE006C8DB3 /* TermsOfUseVC.xib in Resources */,
+				CE6146EF2CCDA1B200097203 /* hotel.json in Resources */,
 				CE7434F12B223C5D0023DC17 /* hotelDetailsVC.xib in Resources */,
 				CEBB8BA32ADEB8ED00E70EC4 /* profileCell.xib in Resources */,
 				9694AC592A5E040D00BDF5F8 /* empty-box-animation.json in Resources */,
@@ -3385,6 +3409,7 @@
 				9694AC5E2A5E040D00BDF5F8 /* 116102-check-in-blue.json in Resources */,
 				CEE69AE62B4C344200E2E58D /* Cairo-Light.ttf in Resources */,
 				CE996B562B25AC6F0089D2F4 /* trackYourTripVC.xib in Resources */,
+				CE6146EB2CCD9A2500097203 /* emptyBookingVC.xib in Resources */,
 				CE9EC0012B1466E70080A0F2 /* reserveTheTripCell.xib in Resources */,
 				CED288952B49B87B00E075CE /* hobbiesCellCollectionViewCell.xib in Resources */,
 				CE41C63B2BA4FE3800DBE739 /* 9t8knRBCgn.json in Resources */,
@@ -3573,6 +3598,7 @@
 				9641AD382A6C2EFC00A29046 /* Blurview.swift in Sources */,
 				9694ABD12A5DFACA00BDF5F8 /* UIstackViewExtension.swift in Sources */,
 				CE27F53F2ADFAD8500DEA419 /* StarRatingStackView.swift in Sources */,
+				CE6146DC2CCCB5A700097203 /* totalProfitModel.swift in Sources */,
 				CE3B53A52B2AFFFF003D3043 /* cancelTheTripVC.swift in Sources */,
 				CEB5A8572ABC6D3700A7F4AD /* tap1.swift in Sources */,
 				CEB1387F2B615BC00070DBA8 /* driverUploadIdAuthVC.swift in Sources */,
@@ -3600,6 +3626,7 @@
 				9694ABD32A5DFACA00BDF5F8 /* NSAttributedStringExtension.swift in Sources */,
 				CEF0E7DC2B4F3AE700DCBD69 /* circularGroupView.swift in Sources */,
 				CE4477412AE04392000D96F6 /* oneWeekView.swift in Sources */,
+				CE6146E92CCD9A1C00097203 /* emptyBookingVC.swift in Sources */,
 				CEDAC56E2C36E0F30054028E /* userRouter.swift in Sources */,
 				CED749232CB9142100378C16 /* savedCard.swift in Sources */,
 				9694ABDA2A5DFACA00BDF5F8 /* FileDownloader.swift in Sources */,
@@ -3751,6 +3778,7 @@
 				CEDAC5722C36E3F70054028E /* features.swift in Sources */,
 				CE0F42F92B4D0F6E005694AC /* onboardingSwiftuiView.swift in Sources */,
 				CE7BA8952CC5089000E5FCA7 /* passengersRatingVC.swift in Sources */,
+				CE6146E42CCCF9F000097203 /* tripReportDetails.swift in Sources */,
 				CE4B81022C7427EC0009714C /* profileData.swift in Sources */,
 				9694ABF62A5DFACA00BDF5F8 /* MarkerView.swift in Sources */,
 				9694ABFC2A5DFACA00BDF5F8 /* AlertView.swift in Sources */,
@@ -4051,7 +4079,7 @@
 				CODE_SIGN_ENTITLEMENTS = Takhawi/Takhawi.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = CA5NVSJ377;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				FRAMEWORK_SEARCH_PATHS = "${inherited}";
@@ -4066,7 +4094,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -4094,7 +4122,7 @@
 				CODE_SIGN_ENTITLEMENTS = Takhawi/Takhawi.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = CA5NVSJ377;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
@@ -4110,7 +4138,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

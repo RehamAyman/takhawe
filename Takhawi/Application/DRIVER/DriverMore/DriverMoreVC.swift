@@ -31,8 +31,8 @@ class DriverMoreVC: BaseVC {
         self.getProfileData()
         self.handleVCActions()
     }
-    
 
+    
  
     private func getProfileData () {
         if let user = UserDefaults.user?.user {
@@ -47,6 +47,8 @@ class DriverMoreVC: BaseVC {
     
     
 
+    
+    
     
     @IBAction func logoutAction(_ sender: UIButton) {
         let vc =    logoutpopVC()

@@ -1356,102 +1356,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C6E6F6BC-DDA0-4AB0-9EF9-28967C70A4C2"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Takhawi/Application/DRIVER/driverAuthentication/swiftui/swiftuiHelper/floatingPickerView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "C6E6F6BC-DDA0-4AB0-9EF9-28967C70A4C2 - aea7dabc92a83c1f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Takhawi.floatingPickerViews.body.getter : some"
-                  moduleName = "Takhawi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Documents/takhawy1/Takhawi/Application/DRIVER/driverAuthentication/swiftui/swiftuiHelper/floatingPickerView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "53"
-                  endingLineNumber = "53"
-                  offsetFromSymbolStart = "1212">
-               </Location>
-               <Location
-                  uuid = "C6E6F6BC-DDA0-4AB0-9EF9-28967C70A4C2 - aea7dabc92a83c1f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Takhawi.floatingPickerViews.body.getter : some"
-                  moduleName = "Takhawi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Documents/takhawy1/Takhawi/Application/DRIVER/driverAuthentication/swiftui/swiftuiHelper/floatingPickerView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "53"
-                  endingLineNumber = "53"
-                  offsetFromSymbolStart = "1228">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "358128DB-9A08-4023-B3BB-E6E2F234276A"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Takhawi/Application/DRIVER/driverAuthentication/swiftui/swiftuiHelper/floatingPickerView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "358128DB-9A08-4023-B3BB-E6E2F234276A - aea7dabc92a83c7c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Takhawi.floatingPickerViews.body.getter : some"
-                  moduleName = "Takhawi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Documents/takhawy1/Takhawi/Application/DRIVER/driverAuthentication/swiftui/swiftuiHelper/floatingPickerView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "1148">
-               </Location>
-               <Location
-                  uuid = "358128DB-9A08-4023-B3BB-E6E2F234276A - aea7dabc92a83c7c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Takhawi.floatingPickerViews.body.getter : some"
-                  moduleName = "Takhawi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Documents/takhawy1/Takhawi/Application/DRIVER/driverAuthentication/swiftui/swiftuiHelper/floatingPickerView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "1204">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "5CE54321-A6F5-45C1-998D-58CE835FA0F7"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -1510,6 +1414,22 @@
             startingLineNumber = "162"
             endingLineNumber = "162"
             landmarkName = "sendCheckPhone(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BC5C1CD5-4412-4A74-9009-9423682E0CBE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Takhawi/Application/USER/join a trip/Reserve the trip/ReserveTheTripVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
+            landmarkName = "confirmOffer()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

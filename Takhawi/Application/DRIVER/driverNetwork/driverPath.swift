@@ -28,6 +28,8 @@ enum driverServerPath {
     case endVip ( id : Int )
     case addNewCar
     case reports ( month : Int )
+    case getTotalProfit
+    case reportDetails( id : Int )
     
     
    
@@ -74,6 +76,10 @@ extension driverServerPath : ServerPath {
             return "vehicle/add-new-vehicle"
         case .reports(month: let month):
             return "driver-report/monthly-profit?noOfMonth=\(month)"
+        case .getTotalProfit:
+            return "driver-report?limit=200"
+        case .reportDetails(id: let id ):
+            return "driver-report/\(id)"
     
         }
     }

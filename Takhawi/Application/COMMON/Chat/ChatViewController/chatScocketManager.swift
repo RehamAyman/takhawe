@@ -181,7 +181,7 @@ open class ChatSocketConnection {
     
     //MARK: - Properties -
     private let socket: SocketIOClient
-    private let url = Server.socetURL.rawValue
+    private let url = Server.imageBase.rawValue
     private var conversationId: String
     private let sender: SenderData
     private let ConnectionType: SocketConnectionType

@@ -46,7 +46,7 @@ struct  SwitchRoleResult : Codable {
     let role : String?
     let driver_status : String?
     let passenger_status : String?
-    let hobbies : [String]?
+   // let hobbies : [String]?
     let rate : Int?
     let vehicles : String?
     let activeTrip : String?
@@ -68,7 +68,7 @@ struct  SwitchRoleResult : Codable {
         case role = "role"
         case driver_status = "driver_status"
         case passenger_status = "passenger_status"
-        case hobbies = "Hobbies"
+      //  case hobbies = "Hobbies"
         case rate = "rate"
         case vehicles = "Vehicles"
         case activeTrip = "activeTrip"
@@ -91,7 +91,7 @@ struct  SwitchRoleResult : Codable {
         role = try values.decodeIfPresent(String.self, forKey: .role)
         driver_status = try values.decodeIfPresent(String.self, forKey: .driver_status)
         passenger_status = try values.decodeIfPresent(String.self, forKey: .passenger_status)
-        hobbies = try values.decodeIfPresent([String].self, forKey: .hobbies)
+      //  hobbies = try values.decodeIfPresent([String].self, forKey: .hobbies)
         rate = try values.decodeIfPresent(Int.self, forKey: .rate)
         vehicles = try values.decodeIfPresent(String.self, forKey: .vehicles)
         activeTrip = try values.decodeIfPresent(String.self, forKey: .activeTrip)

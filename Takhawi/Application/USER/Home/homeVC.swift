@@ -282,7 +282,8 @@ class homeVC: BaseVC, sendDataBackDelegate{
     
     @IBAction func hotelsAction(_ sender: UIButton) {
         // first : check my role if user or driver
-            let vc = hotelsVC()
+            //let vc = hotelsVC()
+        let vc = emptyBookingVC() 
             self.push(vc)
      
     }
