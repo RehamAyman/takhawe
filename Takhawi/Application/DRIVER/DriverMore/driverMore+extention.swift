@@ -100,7 +100,7 @@ extension DriverMoreVC {
     private func OpenEarningsView () {
         self.earningsView.addTapGesture {
             let vc = driverEarningsVC()
-            self.push(vc)
+            //self.push(vc)
         }
     }
     

@@ -28,23 +28,16 @@ class DriverMoreVC: BaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.getProfileData()
+        
         self.handleVCActions()
+        self.getProfile()
+        NotificationCenter.default.addObserver(self, selector: #selector(handleCustomNotification(_:)), name: .updateHomeProfile, object: nil)
+       
+        
     }
 
     
- 
-    private func getProfileData () {
-        if let user = UserDefaults.user?.user {
-            self.userEmail.text = user.email
-            self.userName.text = user.name
-            if let avatar = user.avatar {
-                let url = Server.imageBase.rawValue + avatar
-                self.userImage.setImage(image: url )
-            }
-        }
-    }
-    
+
     
 
     
@@ -58,8 +51,42 @@ class DriverMoreVC: BaseVC {
     }
     
     
+    @objc func handleCustomNotification(_ notification: Notification) {
+        
+        
+        UserRouter.getProfile.send { [weak self ]  ( response : APIGenericResponse<profileResult> ) in
+            guard let self = self else { return }
+            if let result = response.result {
+                if let imageString = result.avatar {
+                    let avatar = Server.imageBase.rawValue + imageString
+                    self.userImage.setImage(image: avatar)
+                }
+              
+               
+            }
+        }
+        
+        
+        
+        
+    }
     
-    
+    private func getProfile () {
+        UserRouter.getProfile.send { [weak self ]  ( response : APIGenericResponse<profileResult> ) in
+            guard let self = self else { return }
+            if let result = response.result {
+                self.userEmail.text = result.email ?? ""
+                self.userName.text =  result.name ?? ""
+                
+                if let imageString = result.avatar {
+                    let avatar = Server.imageBase.rawValue + imageString
+                    self.userImage.setImage(image: avatar)
+                }
+              
+               
+            }
+        }
+    }
     
     
 }

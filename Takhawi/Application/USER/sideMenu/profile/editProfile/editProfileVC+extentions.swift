@@ -267,7 +267,7 @@ extension editProfileVC  : UICollectionViewDelegate , UICollectionViewDataSource
                 
                 // fire home notification center to update the user image in side menu
                 NotificationCenter.default.post(name: .updateHomeProfile, object: nil)
-                
+              
                 self.action?()
             }
                 

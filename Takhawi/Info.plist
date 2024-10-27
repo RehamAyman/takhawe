@@ -8,10 +8,9 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>takhawe</string>
-			</array>
+			<array/>
 		</dict>
+		<dict/>
 	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>

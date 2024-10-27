@@ -4079,7 +4079,7 @@
 				CODE_SIGN_ENTITLEMENTS = Takhawi/Takhawi.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 19;
 				DEVELOPMENT_TEAM = CA5NVSJ377;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				FRAMEWORK_SEARCH_PATHS = "${inherited}";
@@ -4089,6 +4089,7 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs to capture image to show in the app.";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Will you allow this app to always know your location,to get near places for you?";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Will you allow this app to always know your location,to get near places for you?";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -4122,7 +4123,7 @@
 				CODE_SIGN_ENTITLEMENTS = Takhawi/Takhawi.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 19;
 				DEVELOPMENT_TEAM = CA5NVSJ377;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
@@ -4133,6 +4134,7 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs to capture image to show in the app.";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Will you allow this app to always know your location,to get near places for you?";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Will you allow this app to always know your location,to get near places for you?";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

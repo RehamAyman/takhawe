@@ -47,7 +47,7 @@ class driverCreateTripVC: BaseVC {
         dummyActivity(icon: "cable", name: "CHARGING"  , id: 7 ) ,
         dummyActivity(icon: "BackScreen", name: "REAR SCREEN"  , id: 8 ) ,
         dummyActivity(icon: "carSeat", name: "MASSAGE SEAT"  , id: 9 )  ,
-        dummyActivity(icon: "heat", name: "HEATING"  , id: 10 ) ,
+      //  dummyActivity(icon: "heat", name: "HEATING"  , id: 10 ) ,
         dummyActivity(icon: "Group 1000003071", name: "AVAILABILE TRAVEL BAG"  , id: 11 )
         
     ]
