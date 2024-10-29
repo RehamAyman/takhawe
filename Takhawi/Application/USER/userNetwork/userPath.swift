@@ -46,6 +46,7 @@ enum userServerPath {
     case getAllSavedCards
     case switchRole
     case chargeWallet 
+    case deleteMyAcc
    
     
 }
@@ -130,6 +131,8 @@ extension userServerPath : ServerPath {
             return "user/switch-to-driver"
         case .chargeWallet :
             return "wallet/recharge"
+        case .deleteMyAcc :
+            return "user/profile"
         }
     }
 }

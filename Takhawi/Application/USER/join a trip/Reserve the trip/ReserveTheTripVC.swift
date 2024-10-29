@@ -9,7 +9,7 @@
 
 import UIKit
 import Lottie
-import PassKit
+
 
 
 
@@ -59,7 +59,7 @@ class ReserveTheTripVC: BaseVC {
 //        dummyPaymentMethods(icon:"" , number: "**** **** **** 8970", expireIn: "Expires: 12/26", type: "ApplePay", selected: false , id: .applePay)
     ]
 
-    let paymentHandler = PaymentHandler()
+ //   let paymentHandler = PaymentHandler()
  
     
 // MARK: - Lifecycle -
@@ -115,23 +115,23 @@ class ReserveTheTripVC: BaseVC {
 
         if self.paymentMethod == .applePay {
             
-            self.paymentHandler.startPayment(total: appletotalPrice ,
-                                             VAT:  applevatPrice ,
-                                             serviceCost: appleseatPrice  ) { success  in
-                if success {
-                    print("success ")
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                        if self.viptrip {
-                            self.GotoNextStep(tripId: self.offer?.trip_id ?? 0 )
-                            
-                        } else {
-                            self.GotoNextStep(tripId: self.tripDetails?.id ?? 0 )
-                        }
-                    }
-                } else {
-                    print( "failed ")
-                }
-            }
+//            self.paymentHandler.startPayment(total: appletotalPrice ,
+//                                             VAT:  applevatPrice ,
+//                                             serviceCost: appleseatPrice  ) { success  in
+//                if success {
+//                    print("success ")
+//                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+//                        if self.viptrip {
+//                            self.GotoNextStep(tripId: self.offer?.trip_id ?? 0 )
+//                            
+//                        } else {
+//                            self.GotoNextStep(tripId: self.tripDetails?.id ?? 0 )
+//                        }
+//                    }
+//                } else {
+//                    print( "failed ")
+//                }
+//            }
             
             
         } else {

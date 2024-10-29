@@ -49,6 +49,7 @@ enum UserRouter {
     case getAllPaymentCards
     case switchRole
     case chargeWallet( amount : Int  , cardId : Int )
+    case deleteAcc
    
   
 }
@@ -80,7 +81,7 @@ extension UserRouter : APIRouter {
             return .put
             
             
-        case .removeDriverFromFav , .cancelVipTrip , .cancelBasicTrip:
+        case .removeDriverFromFav , .cancelVipTrip , .cancelBasicTrip , .deleteAcc:
             return .delete
         }
     }
@@ -163,6 +164,8 @@ extension UserRouter : APIRouter {
             return userServerPath.switchRole
         case .chargeWallet:
             return userServerPath.chargeWallet
+        case .deleteAcc :
+            return userServerPath.deleteMyAcc
      
           
     
@@ -364,7 +367,7 @@ extension UserRouter : APIRouter {
             
             
             
-        case .getAllVipOffers  , .recentAddress , .getOneTrip , .getProfile   , .calculateVipPrice , .getAllAddress   , .removeDriverFromFav    , .getVip , .getOneGeneralTrip  , .getPolices , .aboutUs , .getAllLastMessaged , .getAllChats  , .getAllPaymentCards  , .switchRole :
+        case .getAllVipOffers  , .recentAddress , .getOneTrip , .getProfile   , .calculateVipPrice , .getAllAddress   , .removeDriverFromFav    , .getVip , .getOneGeneralTrip  , .getPolices , .aboutUs , .getAllLastMessaged , .getAllChats  , .getAllPaymentCards  , .switchRole , .deleteAcc :
             return nil
             
         }

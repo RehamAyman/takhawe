@@ -39,6 +39,9 @@ protocol BaseView: AnyObject {
 }
 
 class BaseVC: UIViewController {
+    
+    
+    
     private var backgroundImage: UIImageView = UIImageView()
 
     deinit {
@@ -56,6 +59,25 @@ class BaseVC: UIViewController {
 //        setupBackground()
     }
 
+    
+    func showAlertWithTwoOptions(on viewController: UIViewController, title: String, message: String, option1: String, option2: String, option1Handler: (() -> Void)?, option2Handler: (() -> Void)?) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let action1 = UIAlertAction(title: option1, style: .default) { _ in
+            option1Handler?()
+        }
+        
+        let action2 = UIAlertAction(title: option2, style: .cancel) { _ in
+            option2Handler?()
+        }
+        
+        alertController.addAction(action1)
+        alertController.addAction(action2)
+        
+        viewController.present(alertController, animated: true, completion: nil)
+    }
+    
+    
     func setupBackground() {
         switch storyboardId {
         case VCs.LoginViewController.rawValue, VCs.ConfirmCodeViewController.rawValue, VCs.CompleteProfileViewController.rawValue:

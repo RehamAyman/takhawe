@@ -75,11 +75,46 @@ class editProfileVC: BaseVC {
         self.updateMyProfile()
     }
     
+    @IBAction func deleteProfile(_ sender: UIButton) {
+        showAlertWithTwoOptions(on: self, title: "Are You Sure".localize, message: "Are You Sure You Want Delete Your Account".localize , option1: "Yes".localize, option2: "NO".localize, option1Handler: {
+            print("Option 1 selected")
+            self.deleteMyAcc()
+            
+        }, option2Handler: {
+            print("Option 2 selected")
+        })
+    }
 }
+
+
 
 
 //MARK: - Networking -
 extension editProfileVC {
+    func deleteMyAcc () {
+        activityIndicatorr.startAnimating()
+        UserRouter.deleteAcc.send { [weak self]  (response : deleteAccModel )  in
+            guard let self = self else { return}
+//         if response.status == true {
+//                UserDefaults.isLogin = false
+//                UserDefaults.user = nil
+//                UserDefaults.accessToken = nil
+//                let vc = phoneAndLocationVC()
+//                let nav = CustomNavigationController(rootViewController: vc)
+//                AppHelper.changeWindowRoot(vc: nav)
+//         } else {
+//             showInfoTopAlert(withMessage: response.message ?? "" )
+//         }
+        }
+        
+        UserDefaults.isLogin = false
+        UserDefaults.user = nil
+        UserDefaults.accessToken = nil
+        let vc = phoneAndLocationVC()
+        let nav = CustomNavigationController(rootViewController: vc)
+        AppHelper.changeWindowRoot(vc: nav)
+        
+    }
     
 }
 

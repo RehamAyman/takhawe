@@ -308,6 +308,9 @@
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Delete Profile"/>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="deleteProfile:" destination="-1" eventType="touchUpInside" id="XCO-KI-yh7"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
