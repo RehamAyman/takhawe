@@ -88,31 +88,81 @@ class homeSearchVC: BaseVC{
         self.googleTableView.reloadData()
         self.googleTableView.isHidden = false
         self.googleTableView.isUserInteractionEnabled = true
+
         
+        //https://developers.google.com/maps/documentation/places/web-service/search-find-place
+//        let urlString = "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=\(query)&location=\(location)&radius=\(radius)&key=\(apiKey)"
+
+//
+//        let urlString = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(lat)%2C\(lng)&rankby=distance&keyword=\(keyword)&key=\(AppDelegate.GoogleAPI)"
         
-        let urlString = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(lat)%2C\(lng)&rankby=distance&keyword=\(keyword)&key=\(AppDelegate.GoogleAPI)"
-        
+        let urlString = "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=\(keyword)&location=\(lat),\(lng)&radius=100000&key=\(AppDelegate.GoogleAPI)"
+
+
         guard let url = URL(string: urlString) else { return }
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
+//            
+//            if let error = error {
+//                       print("Error fetching predictions: \(error.localizedDescription)")
+//                       return
+//                   }
+//
+//                   guard let data = data else { return }
+//
+//            do {
+//                let result = try JSONDecoder().decode(PlaceAutocompleteResponse.self, from: data)
+//               
+//                for i in result.predictions {
+//                    print("❤️")
+//                    print(i)
+//                }
+//
+//                  } catch {
+//                      print("Error decoding JSON: \(error.localizedDescription)")
+//                  }
+//              }
+//
+            
+            
                         guard let data = data, error == nil else {
                 print("Error fetching route: \(error?.localizedDescription ?? "Unknown error")")
                 return
             }
             
+            
+            
+            
+            
+            
             do {
+                
+                
+                
+                
                 if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]{
-                    if let results =  json["results"] as? [[String:Any]] {
-                      
+                    
+                    print(json)
+                    
+                    
+                    
+                    if let results =  json["predictions"] as? [[String:Any]] {
+                      //mainTitle?["secondary_text"]
+                        //i["description"]
                         for i in results{
-                            self.results.append(googleResult(fullText: i["name"] as? String ?? "",
-                                                             secText: i["vicinity"] as? String ?? "",
+                            let mainTitle = i["structured_formatting"] as? [String:Any]
+                            
+                            self.results.append(googleResult(fullText: i["description"]  as? String ?? "",
+                                                             secText: mainTitle?["secondary_text"] as? String ?? "",
                                                              selected: false,
                                                              placeID: i["place_id"] as? String ?? "",
                                                              PlaceSelected: false,
-                                                             description: i["vicinity"] as? String ?? ""))}
+                                                             description: mainTitle?["secondary_text"]  as? String ?? ""))
+                        
+                        }
                         
                        
+                      
                         
                     }else{
                         print("no results ")
@@ -250,4 +300,12 @@ struct googleResult :Decodable{
     var PlaceSelected : Bool
     let description : String
     
+}
+struct PlaceAutocompleteResponse: Codable {
+    let predictions: [PlacePrediction]
+}
+
+struct PlacePrediction: Codable {
+    let description: String
+    let place_id: String  // Optional: to access place ID if needed
 }

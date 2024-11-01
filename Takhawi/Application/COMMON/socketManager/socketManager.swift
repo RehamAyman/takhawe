@@ -7,7 +7,6 @@ class MySocketManager {
     let manager = SocketIO.SocketManager(socketURL: URL(string: Server.imageBase.rawValue)!, config: [
         .log(true),
         .compress,
-       
         .reconnects(true),        // Automatically try to reconnect
         .reconnectWait(5) ,
         .extraHeaders(["authorization": UserDefaults.accessToken ?? ""
