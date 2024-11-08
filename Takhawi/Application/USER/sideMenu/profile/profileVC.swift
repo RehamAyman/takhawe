@@ -50,6 +50,11 @@ class profileVC: BaseVC {
         self.configureInitialDesign()
         self.getProfileDetails(withLoader: true )
         self.deleteCarAction ()
+        bottomView.addTapGesture {
+          let vc =  verifiyIdVC()
+            self.push(vc)
+        }
+        
     }
     
     

@@ -335,6 +335,8 @@
 		CE635D4F2B74D71F00FC12A5 /* tab8DriverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE635D4E2B74D71F00FC12A5 /* tab8DriverView.swift */; };
 		CE635D512B74D91500FC12A5 /* floatingPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE635D502B74D91500FC12A5 /* floatingPickerView.swift */; };
 		CE6753AC2C568FBA00CC65F2 /* driverAuth+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6753AB2C568FBA00CC65F2 /* driverAuth+extention.swift */; };
+		CE6A8AA92CD971490077F059 /* verifiyIdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6A8AA82CD971490077F059 /* verifiyIdVC.swift */; };
+		CE6A8AAB2CD971620077F059 /* verifiyIdVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6A8AAA2CD971620077F059 /* verifiyIdVC.xib */; };
 		CE6D51A32C3C91A10024BC73 /* isoFormate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6D51A22C3C91A10024BC73 /* isoFormate.swift */; };
 		CE71F4672B16855D00E7B689 /* driverOffersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE71F4662B16855D00E7B689 /* driverOffersVC.swift */; };
 		CE71F4692B16856800E7B689 /* driverOffersVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE71F4682B16856800E7B689 /* driverOffersVC.xib */; };
@@ -881,6 +883,8 @@
 		CE635D4E2B74D71F00FC12A5 /* tab8DriverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tab8DriverView.swift; sourceTree = "<group>"; };
 		CE635D502B74D91500FC12A5 /* floatingPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = floatingPickerView.swift; sourceTree = "<group>"; };
 		CE6753AB2C568FBA00CC65F2 /* driverAuth+extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "driverAuth+extention.swift"; sourceTree = "<group>"; };
+		CE6A8AA82CD971490077F059 /* verifiyIdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = verifiyIdVC.swift; sourceTree = "<group>"; };
+		CE6A8AAA2CD971620077F059 /* verifiyIdVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = verifiyIdVC.xib; sourceTree = "<group>"; };
 		CE6D51A22C3C91A10024BC73 /* isoFormate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = isoFormate.swift; sourceTree = "<group>"; };
 		CE71F4662B16855D00E7B689 /* driverOffersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = driverOffersVC.swift; sourceTree = "<group>"; };
 		CE71F4682B16856800E7B689 /* driverOffersVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = driverOffersVC.xib; sourceTree = "<group>"; };
@@ -2322,6 +2326,15 @@
 			path = UILabel;
 			sourceTree = "<group>";
 		};
+		CE6A8AA72CD9712D0077F059 /* verifyId */ = {
+			isa = PBXGroup;
+			children = (
+				CE6A8AA82CD971490077F059 /* verifiyIdVC.swift */,
+				CE6A8AAA2CD971620077F059 /* verifiyIdVC.xib */,
+			);
+			path = verifyId;
+			sourceTree = "<group>";
+		};
 		CE6D51A12C3C91930024BC73 /* calendar */ = {
 			isa = PBXGroup;
 			children = (
@@ -2925,6 +2938,7 @@
 		CEBB8B952ADE95D900E70EC4 /* profile */ = {
 			isa = PBXGroup;
 			children = (
+				CE6A8AA72CD9712D0077F059 /* verifyId */,
 				CEB29E562B49890400F64ED8 /* editProfile */,
 				CEBB8B9F2ADEB8CE00E70EC4 /* cell */,
 				CEBB8B962ADE95F200E70EC4 /* profileVC.xib */,
@@ -3444,6 +3458,7 @@
 				9694AC642A5E040D00BDF5F8 /* ArbFONTS-URW-DIN-Arabic-Black.ttf in Resources */,
 				CEE69AE82B4C344200E2E58D /* Cairo-SemiBold.ttf in Resources */,
 				CE2D4AF22B185483008D556E /* filterCell.xib in Resources */,
+				CE6A8AAB2CD971620077F059 /* verifiyIdVC.xib in Resources */,
 				9694ABFB2A5DFACA00BDF5F8 /* AlertView.xib in Resources */,
 				04D81F8D2B35BC8C00AAA66C /* firstAuthCell.xib in Resources */,
 				CE3B53A72B2B0009003D3043 /* cancelTheTripVC.xib in Resources */,
@@ -3580,6 +3595,7 @@
 				9694AC702A5E040D00BDF5F8 /* Extensions+UICollectionView.swift in Sources */,
 				CE9EBFEB2B1393AE0080A0F2 /* reviewsViewVC+tableViewdelegate.swift in Sources */,
 				9694AB532A5DFA5000BDF5F8 /* BaseNav.swift in Sources */,
+				CE6A8AA92CD971490077F059 /* verifiyIdVC.swift in Sources */,
 				CE7576EF2AF2019D00AFF56A /* homeVC+collectionDelegate.swift in Sources */,
 				04658F552B374DF900470F0D /* baseSuccessAlertVC.swift in Sources */,
 				9694AB3A2A5DE9D500BDF5F8 /* ViewController.swift in Sources */,
