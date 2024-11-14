@@ -51,7 +51,7 @@ class helpAndSupportVC: BaseVC {
             self.complaintextField.label.text = "Your Complain".localize
       
         self.complainTextView.delegate = self
-        self.complainTextView.text = "Write your complain here (minimum 10 characters)".localize
+        self.complainTextView.text = "Write your complain here".localize
         self.complainTextView.textColor = UIColor.systemGray
         //self.complainTextView.contentInset = UIEdgeInsets(top: 8, left: -20 , bottom: 8, right: -20)
        

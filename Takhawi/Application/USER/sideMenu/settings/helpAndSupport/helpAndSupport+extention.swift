@@ -19,7 +19,7 @@ extension helpAndSupportVC : UITextViewDelegate   {
     
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text.isEmpty {
-            textView.text = "Write your complain here (minimum 10 characters)".localize
+            textView.text = "Write your complain here".localize
             textView.textColor = UIColor.systemGray
         }
     }
@@ -30,7 +30,7 @@ extension helpAndSupportVC : UITextViewDelegate   {
             if self.complaintextField.text == "" {
                 showPopTopAlert(title: "Add complaint reason".localize, withMessage: "please select a complaint reason from the list first!".localize, success: false )
                 
-            } else if self.complainTextView.text == "Write your complain here (minimum 10 characters)".localize {
+            } else if self.complainTextView.text == "Write your complain here".localize {
                 showPopTopAlert(title: "Missing field!".localize, withMessage: "please write any note before send".localize, success: false )
                 
             } else {
@@ -41,7 +41,7 @@ extension helpAndSupportVC : UITextViewDelegate   {
               
             }
         } else {
-            if self.complainTextView.text == "Write your complain here (minimum 10 characters)".localize {
+            if self.complainTextView.text == "Write your complain here".localize {
                 showPopTopAlert(title: "Missing field!".localize, withMessage: "please write any note before send".localize, success: false )
                
             } else {

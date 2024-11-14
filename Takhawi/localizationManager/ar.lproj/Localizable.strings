@@ -128,15 +128,15 @@
 "About Us" = "من نحن" ;
 "Language" = "اللغة" ;
 "Log Out" = "تسجيل الخروج" ;
-"Its a complain" = "انها شكوي" ;
+"Its a complain" = " شكوي" ;
 "Send" = "ارسال" ;
 "Add complaint reason" = "اضف سبب الشكوي" ;
 "please select a complaint reason from the list first!" = "الرجاء تحديد سبب الشكوى من القائمة أولاً!" ;
 "please write any note before send" = "يرجى كتابة أي ملاحظة قبل الارسال" ;
 "Missing field!" = "حقل مفقود!" ;
 "Choose Your Complain" = "اختر شكواك" ;
-"Your Complain" = "شكوتك " ;
-"Write your complain here (minimum 10 characters)" = "اكتب شكواك هنا (10 أحرف على الأقل)" ;
+"Your Complain" = "ما هي المشكلة " ;
+"Write your complain here" = "اكتب تفاصيل المشكلة هنا";
 "Select your Complain" = "اختر شكواك من القائمه" ;
 "Vehicle not clean" = "السيارة غير نظيفة" ;
 "Driver behavior" = "سلوك السائق" ;
@@ -426,3 +426,4 @@
 "Are You Sure" = "هل انت متاكد" ;
 "Are You Sure You Want Delete Your Account"  = "هل انت متاكد من انك تريد حذف حسابك ؟" ;
 "NO" = "لا" ;
+
