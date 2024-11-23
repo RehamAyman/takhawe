@@ -22,6 +22,7 @@ struct profileResult : Codable {
     let hobbies : [HobbiesClass]?
     let profile_complted : Int?
     let Vehicles : Vehicles?
+    let passenger_status : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -38,6 +39,7 @@ struct profileResult : Codable {
         case hobbies = "Hobbies"
         case profile_complted = "profile_complted"
         case Vehicles = "Vehicles"
+        case passenger_status
     }
 
    

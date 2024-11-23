@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="verifiyIdVC" customModule="Takhawi" customModuleProvider="target">
             <connections>
+                <outlet property="swiftUiContainer" destination="s7n-ok-chg" id="rH6-NS-8ZF"/>
                 <outlet property="view" destination="iN0-l3-epB" id="mPU-2p-d4z"/>
             </connections>
         </placeholder>
@@ -18,14 +19,50 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pLb-rK-gFV">
+                    <rect key="frame" x="0.0" y="59" width="393" height="46.666666666666657"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uW1-1m-tt0" customClass="BackButton" customModule="Takhawi" customModuleProvider="target">
+                            <rect key="frame" x="20" y="8.3333333333333286" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="amk-V1-iqn"/>
+                                <constraint firstAttribute="width" constant="30" id="cU2-49-BpZ"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="Group 25"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="uW1-1m-tt0" firstAttribute="leading" secondItem="pLb-rK-gFV" secondAttribute="leading" constant="20" id="2ax-1X-Tk6"/>
+                        <constraint firstItem="uW1-1m-tt0" firstAttribute="centerY" secondItem="pLb-rK-gFV" secondAttribute="centerY" id="bf5-gC-aKp"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s7n-ok-chg">
+                    <rect key="frame" x="0.0" y="105.66666666666669" width="393" height="712.33333333333326"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBrownColor"/>
+            <color key="backgroundColor" name="BackGroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="pLb-rK-gFV" secondAttribute="trailing" id="E9U-yQ-P5P"/>
+                <constraint firstItem="pLb-rK-gFV" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="SBw-SS-eaa"/>
+                <constraint firstItem="s7n-ok-chg" firstAttribute="top" secondItem="pLb-rK-gFV" secondAttribute="bottom" id="YKg-TU-cxb"/>
+                <constraint firstItem="pLb-rK-gFV" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.0545775" id="co8-ot-Fvf"/>
+                <constraint firstItem="s7n-ok-chg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="dh5-6Z-KfN"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="s7n-ok-chg" secondAttribute="trailing" id="eE3-gp-CfW"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="s7n-ok-chg" secondAttribute="bottom" id="fO2-iD-65f"/>
+                <constraint firstItem="pLb-rK-gFV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="vIe-rn-9wO"/>
+            </constraints>
             <point key="canvasLocation" x="127" y="20"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="Group 25" width="41" height="40"/>
+        <namedColor name="BackGroundColor">
+            <color red="0.95294117647058818" green="0.95294117647058818" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
     </resources>
 </document>

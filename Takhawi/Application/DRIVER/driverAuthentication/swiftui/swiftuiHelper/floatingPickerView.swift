@@ -61,7 +61,8 @@ struct floatingPickerViews: View {
                     
                 } label: {
                     ZStack ( alignment: IsArabicLang ?  .leading : .trailing   ) {
-                        FloatingTextField(title: "Enter Vehicle Class".localize , text: $vehicleClassText)
+                        FloatingSecTextField(title:  "Enter Vehicle Class".localize , text: $vehicleClassText)
+                     //   FloatingTextField(title: "Enter Vehicle Class".localize , text: $vehicleClassText)
                         
                         Image ( "Vector 9")
                             .resizable()
@@ -84,8 +85,8 @@ struct floatingPickerViews: View {
                     
                 } label: {
                     ZStack ( alignment: IsArabicLang ? .leading : .trailing    ) {
-                        FloatingTextField(title: "Enter number of seats allocated for the ride".localize , text: $seatNumText)
-                        
+                        FloatingSecTextField(title:  "Enter number of seats allocated for the ride".localize , text: $seatNumText)
+                  
                         Image ( "Vector 9")
                             .resizable()
                             .frame(width: 14 , height: 11)
@@ -107,7 +108,8 @@ struct floatingPickerViews: View {
                     
                 } label: {
                     ZStack ( alignment: IsArabicLang ? .leading : .trailing   ) {
-                        FloatingTextField(title: "Enter Vehicle Color".localize , text: $colorText)
+                       
+                        FloatingSecTextField(title: "Enter Vehicle Color".localize , text: $colorText)
                         
                         Image ( "Vector 9")
                             .resizable()
@@ -129,7 +131,7 @@ struct floatingPickerViews: View {
                     
                 } label: {
                     ZStack ( alignment: IsArabicLang ? .leading : .trailing   ) {
-                        FloatingTextField(title: "Choose Vehicle Type".localize , text: $carType)
+                        FloatingSecTextField(title: "Choose Vehicle Type".localize , text: $carType)
                         
                         Image ( "Vector 9")
                             .resizable()
@@ -151,7 +153,7 @@ struct floatingPickerViews: View {
                     
                 } label: {
                     ZStack ( alignment: IsArabicLang ? .leading : .trailing  ) {
-                        FloatingTextField(title: "Choose Vehicle Name".localize , text: $carName)
+                        FloatingSecTextField(title: "Choose Vehicle Name".localize , text: $carName)
                         
                         Image ( "Vector 9")
                             .resizable()
@@ -174,7 +176,7 @@ struct floatingPickerViews: View {
                     
                 } label: {
                     ZStack ( alignment: IsArabicLang ? .leading : .trailing  ) {
-                        FloatingTextField(title: "Choose Production year".localize , text: $yearText)
+                        FloatingSecTextField(title: "Choose Production year".localize , text: $yearText)
                         
                         Image ( "Vector 9")
                             .resizable()

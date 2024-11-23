@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
@@ -24,6 +24,7 @@
                 <outlet property="enAlpha" destination="RDB-Ft-a6v" id="Fki-bR-dWj"/>
                 <outlet property="enNum" destination="zc4-5G-Uq4" id="QRj-5k-Dil"/>
                 <outlet property="profileCompleteExplain" destination="sB0-Vz-2iq" id="YC7-bF-qj7"/>
+                <outlet property="statusCheckIcon" destination="mvt-g5-6X2" id="GfF-ok-Ilv"/>
                 <outlet property="topView" destination="PN6-LB-Aqt" id="g2M-3a-QIT"/>
                 <outlet property="userImage" destination="WJ9-CR-6Hw" id="WsX-XZ-KDO"/>
                 <outlet property="userName" destination="sDw-Mt-hKD" id="u4w-az-7i1"/>

@@ -215,6 +215,7 @@
 		CE04D9C12B15E8BC00B41157 /* successBookViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE04D9C02B15E8BC00B41157 /* successBookViewVC.xib */; };
 		CE04D9C42B15F65300B41157 /* shimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE04D9C32B15F65300B41157 /* shimmer.swift */; };
 		CE06550E2B56B3D6003535EE /* thirdOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE06550D2B56B3D6003535EE /* thirdOnboardingView.swift */; };
+		CE0C8C972CF08AF300CF2CE0 /* verifiyIdSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C8C962CF08AF300CF2CE0 /* verifiyIdSwiftUIView.swift */; };
 		CE0F42F72B4D0F55005694AC /* onboardingSwiftuiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F42F62B4D0F55005694AC /* onboardingSwiftuiVC.swift */; };
 		CE0F42F92B4D0F6E005694AC /* onboardingSwiftuiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F42F82B4D0F6E005694AC /* onboardingSwiftuiView.swift */; };
 		CE115E5B2ABED5CC00972CC9 /* homeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE115E5A2ABED5CC00972CC9 /* homeVC.xib */; };
@@ -394,6 +395,7 @@
 		CE8E38A82CAC93B100471606 /* MessageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E38A22CAC93B100471606 /* MessageTextView.swift */; };
 		CE8E38AA2CAC964000471606 /* additionalChatClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E38A92CAC964000471606 /* additionalChatClass.swift */; };
 		CE8E38AC2CAC981400471606 /* chatScocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E38AB2CAC981400471606 /* chatScocketManager.swift */; };
+		CE970B0D2CF280DA0098EFCA /* notificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE970B0C2CF280D20098EFCA /* notificationModel.swift */; };
 		CE9757C42AE0F0BD0014346E /* tripListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9757C12AE0F0BD0014346E /* tripListCell.swift */; };
 		CE9757C52AE0F0BD0014346E /* tripListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9757C22AE0F0BD0014346E /* tripListVC.swift */; };
 		CE9757C62AE0F0BD0014346E /* tripListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9757C32AE0F0BD0014346E /* tripListCell.xib */; };
@@ -759,6 +761,7 @@
 		CE04D9C02B15E8BC00B41157 /* successBookViewVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = successBookViewVC.xib; sourceTree = "<group>"; };
 		CE04D9C32B15F65300B41157 /* shimmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shimmer.swift; sourceTree = "<group>"; };
 		CE06550D2B56B3D6003535EE /* thirdOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thirdOnboardingView.swift; sourceTree = "<group>"; };
+		CE0C8C962CF08AF300CF2CE0 /* verifiyIdSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = verifiyIdSwiftUIView.swift; sourceTree = "<group>"; };
 		CE0F42F62B4D0F55005694AC /* onboardingSwiftuiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onboardingSwiftuiVC.swift; sourceTree = "<group>"; };
 		CE0F42F82B4D0F6E005694AC /* onboardingSwiftuiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onboardingSwiftuiView.swift; sourceTree = "<group>"; };
 		CE115E5A2ABED5CC00972CC9 /* homeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = homeVC.xib; sourceTree = "<group>"; };
@@ -943,6 +946,7 @@
 		CE8E38A92CAC964000471606 /* additionalChatClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = additionalChatClass.swift; sourceTree = "<group>"; };
 		CE8E38AB2CAC981400471606 /* chatScocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatScocketManager.swift; sourceTree = "<group>"; };
 		CE9035E72B1483350033D1C1 /* Lottie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Lottie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE970B0C2CF280D20098EFCA /* notificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notificationModel.swift; sourceTree = "<group>"; };
 		CE9757C12AE0F0BD0014346E /* tripListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripListCell.swift; sourceTree = "<group>"; };
 		CE9757C22AE0F0BD0014346E /* tripListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripListVC.swift; sourceTree = "<group>"; };
 		CE9757C32AE0F0BD0014346E /* tripListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = tripListCell.xib; sourceTree = "<group>"; };
@@ -2331,6 +2335,7 @@
 			children = (
 				CE6A8AA82CD971490077F059 /* verifiyIdVC.swift */,
 				CE6A8AAA2CD971620077F059 /* verifiyIdVC.xib */,
+				CE0C8C962CF08AF300CF2CE0 /* verifiyIdSwiftUIView.swift */,
 			);
 			path = verifyId;
 			sourceTree = "<group>";
@@ -3065,6 +3070,7 @@
 		CEDAC5752C36EFEC0054028E /* model */ = {
 			isa = PBXGroup;
 			children = (
+				CE970B0C2CF280D20098EFCA /* notificationModel.swift */,
 				CEDAC5762C36F01E0054028E /* vipData.swift */,
 				CEB49C4B2C3BEB1B00BB506D /* offersModel.swift */,
 				CEEE6E332C5FADE500AB7435 /* cities.swift */,
@@ -3591,6 +3597,7 @@
 				9694ABE72A5DFACA00BDF5F8 /* extensionUICollectionView.swift in Sources */,
 				CECF871D2CB52C52001A705B /* accedintViewVC.swift in Sources */,
 				9694AC052A5DFACA00BDF5F8 /* ValidationErrors.swift in Sources */,
+				CE0C8C972CF08AF300CF2CE0 /* verifiyIdSwiftUIView.swift in Sources */,
 				CE0F42F72B4D0F55005694AC /* onboardingSwiftuiVC.swift in Sources */,
 				9694AC702A5E040D00BDF5F8 /* Extensions+UICollectionView.swift in Sources */,
 				CE9EBFEB2B1393AE0080A0F2 /* reviewsViewVC+tableViewdelegate.swift in Sources */,
@@ -3863,6 +3870,7 @@
 				04B659CA2B341D6A00E78752 /* favDriverCell.swift in Sources */,
 				CE1A94E02B6CD549003C50EF /* fileUploadedView.swift in Sources */,
 				9694ABC72A5DFACA00BDF5F8 /* RoundImage.swift in Sources */,
+				CE970B0D2CF280DA0098EFCA /* notificationModel.swift in Sources */,
 				CEDD108D2CA046E00009A922 /* socketManager.swift in Sources */,
 				CE44773A2AE03DBD000D96F6 /* selectDateExtention.swift in Sources */,
 				9694ABF72A5DFACA00BDF5F8 /* AppIndicator.swift in Sources */,
@@ -4095,7 +4103,7 @@
 				CODE_SIGN_ENTITLEMENTS = Takhawi/Takhawi.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CA5NVSJ377;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				FRAMEWORK_SEARCH_PATHS = "${inherited}";
@@ -4116,7 +4124,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.takhawi.Takhawiapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -4140,7 +4148,7 @@
 				CODE_SIGN_ENTITLEMENTS = Takhawi/Takhawi.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CA5NVSJ377;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
@@ -4162,7 +4170,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.takhawi.Takhawiapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

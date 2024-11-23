@@ -49,7 +49,7 @@ class paymentWebView : UIViewController, WKNavigationDelegate {
        
        // Called when the navigation is complete (page loaded successfully)
        func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-           print("🥲🥲🥲🥲🥲")
+         
            print(self.webView.url)
            //registration-status
            guard let url = webView.url?.absoluteString else { return }

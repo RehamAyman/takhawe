@@ -33,6 +33,8 @@ struct addNewCarSwiftui: View {
     @State var VehicleName:  Int = 0
     @State var year : Int = 0
     @State var carDetails : CarDetailsResult?
+    var action: (() -> Void)?
+    
     
     
     
@@ -79,7 +81,8 @@ struct addNewCarSwiftui: View {
                         .foregroundStyle(Color( "MainColor"))
                         .font(.custom(  (LocalizationManager.shared.getLanguage() == .Arabic ? AppFont.arMedium : AppFont.Medium).rawValue , size: 13))
                     
-                    FloatingTextField(numKeyboard: false , title: "vehicle serial Number".localize , text:  $serialNum    )
+                    FloatingSecTextField( numKeyboard: false , title: "vehicle serial Number".localize , text:  $serialNum  )
+                  //  FloatingTextField(numKeyboard: false , title: "vehicle serial Number".localize , text:  $serialNum    )
                     //MARK: -  Vehicle Number Plate section
                     Text("Vehicle Number Plate".localize)
                     
@@ -96,7 +99,7 @@ struct addNewCarSwiftui: View {
                         OtpFormFieldView(pinOne: $AOne, pinTwo: $ATwo, pinThree: $AThree, pinFour: $AFour , numKeyboard: false  , threeItems: true)
                             .keyboardType(.asciiCapable)
                         
-                        
+                            .environment(\.layoutDirection, .leftToRight  )
                         
                         
                         Text ( "Vehicle Number".localize)
@@ -104,7 +107,7 @@ struct addNewCarSwiftui: View {
                             .padding(.top , 10 )
                         
                         OtpFormFieldView(pinOne: $pinOne, pinTwo: $pinTwo, pinThree: $pinThree, pinFour: $pinFour , numKeyboard: true   )
-                        
+                            .environment(\.layoutDirection, .leftToRight  )
                         
                     }
                     .frame( maxWidth: .infinity ,  alignment: .center)
@@ -126,6 +129,7 @@ struct addNewCarSwiftui: View {
                     
                     
                     floatingPickerViews( selectedClass: $VehicleClass, selectedSeatNum: $seatsNumber, selectedColor: $VehicleColor , selectedType: $VehicleType , selectedName: $VehicleName, selectedYear: $year   , carDetails: $carDetails)
+                        .environment(\.layoutDirection, .leftToRight  )
                     
                     Button {
                         
@@ -217,6 +221,7 @@ struct addNewCarSwiftui: View {
        DriverRouter.addNewCar(serialNo: self.serialNum , plateAlpha: plateAlpha  , plateNo: plateNum , plateAlphaAr: plateAr , year: self.year , seatNo: self.seatsNumber , classId: self.VehicleClass , colorId: self.VehicleColor , typeId: self.VehicleType , nameId: self.VehicleName ).send(data: uploadImage ) {  ( response : APIGlobalResponse )  in
            if response.status == true {
                showPopTopAlert(title: "success", withMessage: response.message , success: true )
+               self.action?()
            }
          
        }

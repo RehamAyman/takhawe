@@ -17,10 +17,20 @@ class driverAddNewCarVC: BaseVC {
     @IBOutlet weak var swiftuiContainer: UIView!
     
 //MARK: - Properties -
+    var action: (() -> Void)?
+    
+    
     
   // lazy var swiftUIView = addNewCarSwiftui()
 
-    lazy var swiftUIView = UIHostingController(rootView: addNewCarSwiftui())
+    lazy var swiftUIView = UIHostingController(rootView: addNewCarSwiftui(){
+        print("hey iam done with added a new car ")
+        self.action?()
+        self.pop(animated: true )
+        
+    }
+ 
+    )
 // MARK: - Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()

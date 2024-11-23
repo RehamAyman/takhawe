@@ -32,8 +32,6 @@ struct uploadingSection: View {
                     if self.urls.count < 2 {
                         
                       //  isShowingMediaPicker.toggle()
-                
-                        
                         
                      showingConfirmation = true
                 } else {

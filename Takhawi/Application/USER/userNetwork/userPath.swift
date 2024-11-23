@@ -47,7 +47,7 @@ enum userServerPath {
     case switchRole
     case chargeWallet 
     case deleteMyAcc
-   
+    case getNotifications
     
 }
 
@@ -133,6 +133,8 @@ extension userServerPath : ServerPath {
             return "wallet/recharge"
         case .deleteMyAcc :
             return "user/profile"
+        case .getNotifications:
+            return "notification/?page=1&limit=300"
         }
     }
 }

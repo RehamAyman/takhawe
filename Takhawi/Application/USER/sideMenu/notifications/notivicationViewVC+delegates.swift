@@ -12,6 +12,11 @@ extension  notificationViewVC : UITableViewDelegate , UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if self.dummyNotifications.count == 0  {
+            self.tableView.isHidden = true
+        } else {
+            self.tableView.isHidden = false
+        }
         return self.dummyNotifications[section].data.count
     }
     

@@ -50,7 +50,7 @@ enum UserRouter {
     case switchRole
     case chargeWallet( amount : Int  , cardId : Int )
     case deleteAcc
-   
+   case getNotifications
   
 }
 
@@ -69,7 +69,7 @@ extension UserRouter : APIRouter {
             return .post
         
             
-        case .getAllVipOffers , .getAllCities , .getAllBasicTrips  , .recentAddress  , .getOneTrip , .getProfile , .walletData , .getAllHobbies  , .getAllAddress , .getAllFavDrives , .getMyUpcommingTrips , .getCancelledTrips , .getCompletedTrips , .getVip , .getOneGeneralTrip  , .getPolices  , .aboutUs , .getAllLastMessaged , .getAllChats  , .getAllPaymentCards , .switchRole  :
+        case .getAllVipOffers , .getAllCities , .getAllBasicTrips  , .recentAddress  , .getOneTrip , .getProfile , .walletData , .getAllHobbies  , .getAllAddress , .getAllFavDrives , .getMyUpcommingTrips , .getCancelledTrips , .getCompletedTrips , .getVip , .getOneGeneralTrip  , .getPolices  , .aboutUs , .getAllLastMessaged , .getAllChats  , .getAllPaymentCards , .switchRole , .getNotifications  :
           return .get
             
             
@@ -166,7 +166,8 @@ extension UserRouter : APIRouter {
             return userServerPath.chargeWallet
         case .deleteAcc :
             return userServerPath.deleteMyAcc
-     
+        case .getNotifications:
+            return userServerPath.getNotifications
           
     
         
@@ -367,7 +368,7 @@ extension UserRouter : APIRouter {
             
             
             
-        case .getAllVipOffers  , .recentAddress , .getOneTrip , .getProfile   , .calculateVipPrice , .getAllAddress   , .removeDriverFromFav    , .getVip , .getOneGeneralTrip  , .getPolices , .aboutUs , .getAllLastMessaged , .getAllChats  , .getAllPaymentCards  , .switchRole , .deleteAcc :
+        case .getAllVipOffers  , .recentAddress , .getOneTrip , .getProfile   , .calculateVipPrice , .getAllAddress   , .removeDriverFromFav    , .getVip , .getOneGeneralTrip  , .getPolices , .aboutUs , .getAllLastMessaged , .getAllChats  , .getAllPaymentCards  , .switchRole , .deleteAcc  , .getNotifications :
             return nil
             
         }

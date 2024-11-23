@@ -14,7 +14,6 @@ class profileVC: BaseVC {
 //MARK: - IBOutlets -
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var vechcleupdateView: UIView!
-    
     @IBOutlet weak var profileCompleteExplain: UILabel!
     @IBOutlet weak var carName: UILabel!
     @IBOutlet weak var enNum: UILabel!
@@ -27,6 +26,7 @@ class profileVC: BaseVC {
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var bottomView: UIView!
     
+    @IBOutlet weak var statusCheckIcon: UIImageView!
     @IBOutlet weak var addnNewCar: UIButton!
     //MARK: - Properties -
     var hobbies : [HobbiesClass] = []
@@ -39,7 +39,7 @@ class profileVC: BaseVC {
     ]
 
     var profileData : profileResult?
-    var isDriver : Bool = false 
+    var isDriver : Bool = false
     
     
     @IBOutlet weak var deleteCar: UIButton!
@@ -50,10 +50,7 @@ class profileVC: BaseVC {
         self.configureInitialDesign()
         self.getProfileDetails(withLoader: true )
         self.deleteCarAction ()
-        bottomView.addTapGesture {
-          let vc =  verifiyIdVC()
-            self.push(vc)
-        }
+      
         
     }
     
@@ -64,6 +61,12 @@ class profileVC: BaseVC {
         self.setUpMain()
         self.addnNewCar.addTapGesture {
             let vc = driverAddNewCarVC()
+            vc.action = {
+                self.addnNewCar.isHidden = true
+                self.addnNewCar.isUserInteractionEnabled = false
+                self.vechcleupdateView.isHidden = false
+                self.vechcleupdateView.isUserInteractionEnabled = true
+            }
             self.push(vc)
         }
     }
@@ -97,17 +100,18 @@ class profileVC: BaseVC {
             }))
             
             // Add the "OK" action (button)
-            alert.addAction(UIAlertAction(title: "OK".localize, style: .default, handler: { _ in
+            alert.addAction(UIAlertAction(title: "Ok".localize, style: .default, handler: { _ in
                 print("OK tapped")
                 activityIndicatorr.startAnimating()
                 DriverRouter.deleteCar(id: self.profileData?.Vehicles?.id ?? 0 ).send { [weak self] (response : APIGlobalResponse ) in
                     guard let self = self else { return }
+                    
                     if response.status == true {
                         self.addnNewCar.isHidden = false
                         self.addnNewCar.isUserInteractionEnabled = true
                         self.vechcleupdateView.isHidden = true
                         self.vechcleupdateView.isUserInteractionEnabled = false
-                    }
+                }
                         
                 }
                 
@@ -158,7 +162,9 @@ extension profileVC {
                 }
                
                 self.userName.text = result.name ?? ""
-               
+                if isDriver {
+                    bottomView.isHidden = true
+       
                     if let vehicle = result.Vehicles {
                         // hide add car botton
                         self.addnNewCar.isHidden = true
@@ -166,7 +172,6 @@ extension profileVC {
                         // show car details view
                         self.vechcleupdateView.isHidden = false
                         self.vechcleupdateView.isUserInteractionEnabled = true
-                        
                         let color = vehicle.vehicle_Color?.name ?? ""
                         let type = vehicle.vehicle_Type?.name ?? ""
                         let name = vehicle.vehicle_Name?.name ?? ""
@@ -178,17 +183,23 @@ extension profileVC {
                         self.arNum.text = vehicle.plate_number ?? ""
                         
                     } else {
-                        if isDriver {
                         // show add car button
                         self.addnNewCar.isHidden = false
                         self.addnNewCar.isUserInteractionEnabled = true
                         // hide car details view
                         self.vechcleupdateView.isHidden = true
                         self.vechcleupdateView.isUserInteractionEnabled = false
-                        
+                    }
+                } else {
+                    if result.passenger_status == "APPROVED" {
+                        self.statusCheckIcon.image = UIImage(named: "6-Check" )
+                    } else {
+                        bottomView.addTapGesture {
+                            let vc =  verifiyIdVC()
+                            self.push(vc)
+                        }
                     }
                 }
-                
                 self.collectionView.reloadData()
             }
         }
