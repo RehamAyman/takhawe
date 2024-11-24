@@ -45,7 +45,6 @@ class homeVC: BaseVC, sendDataBackDelegate{
     @IBOutlet weak var joinTripDestButton: UIButton!
     @IBOutlet weak var containetStackView: UIStackView!
     @IBOutlet weak var containerView: UIView!
-    
     @IBOutlet weak var chooseFeatureCollection: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var viewHeight: NSLayoutConstraint!
@@ -138,12 +137,10 @@ class homeVC: BaseVC, sendDataBackDelegate{
 // MARK: - Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
-       
         self.searchView.addTapGesture {
             if self.segment.selectedSegmentIndex == 0 {
                 self.getDestinationFromMaps(vip: false )
             }
-  
         }
  
         NotificationCenter.default.addObserver(self, selector: #selector(handleCustomNotification(_:)), name: .updateHomeProfile, object: nil)
@@ -152,7 +149,6 @@ class homeVC: BaseVC, sendDataBackDelegate{
         self.setUpGoogleMapView()
         self.setTodayDateINformate()
         self.initialSideMenu()
-        
         
         self.getProfileDetails(withLoading: true )
         if let firstWord = UserDefaults.user?.user?.name?.split(separator: " ").first {
@@ -264,7 +260,9 @@ class homeVC: BaseVC, sendDataBackDelegate{
         self.presentWithEffect(vc:  vc )
         vc.makeAtripCalendar = {  [weak self] (value , date ) in
             self?.secCalendar.setTitle( value , for: .normal)
-            self?.selectedDate = date
+           
+            
+            self?.selectedDate = date.tomorrow
             self?.removePresentEffect()
         }
         vc.dismissAction = {
@@ -365,6 +363,9 @@ class homeVC: BaseVC, sendDataBackDelegate{
         vc.change = {  [weak self] (value , date ) in
             self?.calendarOutlet.setTitle( value , for: .normal)
             self?.selectedDate = date.tomorrow
+            print("❤️")
+            print(date)
+            print(date.tomorrow)
             print(value)
             self?.removePresentEffect()
             print("hello i select join a trip date btw ")
@@ -411,6 +412,11 @@ extension homeVC {
         activityIndicatorr.startAnimating()
         let currentLat = self.locationManager.location?.coordinate.latitude ?? 0.0
         let currentLng = self.locationManager.location?.coordinate.longitude ?? 0.0
+//        let isoFormatter = ISO8601DateFormatter()
+//        isoFormatter.timeZone = TimeZone(abbreviation: "UTC")
+//        let isoDateString = isoFormatter.string(from: self.selectedDate )
+//        
+        
         UserRouter.createVipTrip(destinationLong: self.destLong, destinationLat: self.destLat, currentLat: currentLat , currentLong: currentLng , features: self.selectedFeatures , date: self.selectedDate.ISO8601Format(), pickup_description: self.secMyLocationOutlet.titleLabel?.text ?? "", destination_description: self.secMydestinationOutlet.titleLabel?.text ?? "").send { [weak self] (response: APIGenericResponse<vipData>) in
             guard let self = self else { return }
             if response.status == true {

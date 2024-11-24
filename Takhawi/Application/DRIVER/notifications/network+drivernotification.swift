@@ -1,57 +1,81 @@
 //
-//  notificationViewVC.swift
+//  network+drivernotification.swift
 //  Takhawi
 //
-//  Created by Reham Ayman on 16/12/2023.
+//  Created by Reham Ayman on 22/05/1446 AH.
 //
-//  Template by MGAbouarab®
-
 
 import UIKit
 
-class notificationViewVC: BaseVC {
-    
-//MARK: - IBOutlets -
-    
-    @IBOutlet weak var tableView: UITableView!
-    
-//MARK: - Properties -
-    
-    
-    var dummyNotifications : [dummyNotification] = []
 
+extension driverNotificationsViewController :  UITableViewDelegate, UITableViewDataSource {
+ 
     
-// MARK: - Lifecycle -
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.configureInitialDesign()
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if self.dummyNotifications.count == 0  {
             self.tableView.isHidden = true
         } else {
             self.tableView.isHidden = false
         }
-       self.getAllNotifications()
+        return self.dummyNotifications[section].data.count
     }
     
     
-//MARK: - Design Methods -
-    private func configureInitialDesign() {
-        self.title = "".localized
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(cellType: notificationCell.self)
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return self.dummyNotifications.count
     }
     
-//MARK: - Logic Methods -
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier:  "notificationCell" , for: indexPath) as! notificationCell
+        let item =  self.dummyNotifications[indexPath.section].data[indexPath.row]
+        cell.icon.image = UIImage(named: item.icon)
+        cell.cellTitle.text = item.title
+        cell.subTitle.text = item.subtitle
+        
+        
+        return cell
+        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return  85
+    }
+  
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let item =  self.dummyNotifications[section].day
+        return item
+        
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+      if let headerView = view as? UITableViewHeaderFooterView {
+          headerView.contentView.backgroundColor =  UIColor(named: "BackGroundColor")
+          headerView.textLabel?.textColor = UIColor(named: "MainColor")
+      }
+  }
     
     
-//MARK: - Actions -
-    
-}
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
 
+        let contextItem = UIContextualAction(style: .destructive, title: "Delete".localize) {  (contextualAction, view, boolValue) in
 
-//MARK: - Networking -
-extension notificationViewVC {
+                let section = indexPath.section
+                let row = indexPath.row
+                self.dummyNotifications[indexPath.section].data.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+               // self.tableView.deleteRows(at: [indexPath], with: .automatic)
+                boolValue(true)
+            }
+
+            let swipeActions = UISwipeActionsConfiguration(actions: [contextItem])
+            return swipeActions
+        }
+    
+    
+    
+    
+    
     func getAllNotifications () {
         print("------------")
         print(Date().ISO8601Format())
@@ -59,12 +83,8 @@ extension notificationViewVC {
         UserRouter.getNotifications.send { [weak self]  (response : APIGenericResponse<[notificationResult]>) in
             guard let self else { return }
             if let result = response.result {
-        
-                print("🫢--")
-              
                 for i in result {
                     let newNotification = NotificationData(icon: i.type ?? "" , title: i.title ?? "" , subtitle: i.body ?? "" )
-                    
                     if self.checkIfToday(dateToCheck: i.createdAt ?? "") {
                         if let todayIndex = self.dummyNotifications.firstIndex(where: { $0.day == "Today".localize }) {
                             // Append the new notification to the data array of the "Today" section
@@ -92,10 +112,9 @@ extension notificationViewVC {
                             self.dummyNotifications.append(dummyNotification(day: "Other".localize, data: [newNotification]))
                             self.tableView.reloadData()
                         }
-                        
                     }
                 }
-      }
+            }
                                                                     
         }
         
@@ -174,9 +193,11 @@ extension notificationViewVC {
     
     
     
-}
-
-//MARK: - Routes -
-extension notificationViewVC {
+    
+    
+    
+    
+    
+    
     
 }

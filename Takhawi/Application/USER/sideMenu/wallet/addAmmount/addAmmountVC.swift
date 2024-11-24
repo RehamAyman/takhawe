@@ -53,11 +53,11 @@ class addAmountVC : BaseVC  {
     
     
     @IBAction func addNewCard(_ sender: UIButton) {
-        let vc = paymentWebView()
-        vc.action = {
-            self.getAllSavedCards()
-        }
-        self.present( vc , animated: true )
+        
+        self.getBillingInfo()
+        
+        
+       
         
     }
     
@@ -82,6 +82,28 @@ class addAmountVC : BaseVC  {
             
         }
     }
+    
+    
+    private func getBillingInfo () {
+        activityIndicatorr.startAnimating()
+        UserRouter.getBillingInfo.send { [weak self]  ( response : APIGlobalResponse )  in
+            guard let self = self else { return }
+            if response.status == true {
+                let vc = paymentWebView()
+                vc.action = {
+                    self.getAllSavedCards()
+                }
+                self.present( vc , animated: true )
+                
+            } else {
+                print("this user did not have the additional payment data yet .. ")
+                let vc = billingInfoVC()
+                self.push(vc)
+            }
+            
+        }
+    }
+    
     
     
 }

@@ -53,8 +53,7 @@ class ReserveTheTripVC: BaseVC {
     var appletotalPrice : String = ""
    
     var  DummyPaymentMethods : [dummyPaymentMethods] = [
-
-//        dummyPaymentMethods(icon:"" , number: "**** **** **** 8970", expireIn: "Expires: 12/26", type: "wallet", selected: false , id: .wallet ) ,
+        dummyPaymentMethods(icon:"" , number: "**** **** **** 8970", expireIn: "Expires: 12/26", type: "wallet", selected: false , id: .wallet ) ,
         dummyPaymentMethods(icon:"" , number: "**** **** **** 8970", expireIn: "Expires: 12/26", type: "cash", selected: false , id: .cash),
         dummyPaymentMethods(icon:"" , number: "**** **** **** 8970", expireIn: "Expires: 12/26", type: "ApplePay", selected: false , id: .applePay)
     ]
@@ -113,34 +112,13 @@ class ReserveTheTripVC: BaseVC {
     
     @IBAction func confirmTrip(_ sender: UIButton) {
 
-        if self.paymentMethod == .applePay {
-            
-//            self.paymentHandler.startPayment(total: appletotalPrice ,
-//                                             VAT:  applevatPrice ,
-//                                             serviceCost: appleseatPrice  ) { success  in
-//                if success {
-//                    print("success ")
-//                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-//                        if self.viptrip {
-//                            self.GotoNextStep(tripId: self.offer?.trip_id ?? 0 )
-//                            
-//                        } else {
-//                            self.GotoNextStep(tripId: self.tripDetails?.id ?? 0 )
-//                        }
-//                    }
-//                } else {
-//                    print( "failed ")
-//                }
-//            }
-            
-            
-        } else {
+       
             if viptrip {
                 self.confirmOffer()
             } else {
                 self.joinAbasicTrip()
             }
-        }
+      
     }
     
     
@@ -190,18 +168,21 @@ extension ReserveTheTripVC {
     
     
     func joinAbasicTrip () {
-        print(self.paymentMethod)
+      
         print(self.paymentMethod.rawValue)
+        
         activityIndicatorr.startAnimating()
         UserRouter.joinABasicTrip(id: tripDetails?.id ?? 0 , paymentMethod: self.paymentMethod.rawValue , copon: "").send {[weak self] ( response : APIGlobalResponse ) in
             guard let self = self else { return }
+            
             if  response.status == true  {
                 self.GotoNextStep(tripId: tripDetails?.id ?? 0 )
             }
-            
         }
-        
     }
+    
+    
+    
     
     func calculateTheBasicPrice (code : String) {
      

@@ -379,6 +379,8 @@
 		CE8291F42C414CF500E289EF /* genericConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8291F32C414CF500E289EF /* genericConst.swift */; };
 		CE8291F82C41752500E289EF /* driverRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8291F72C41752500E289EF /* driverRouter.swift */; };
 		CE8291FA2C41753400E289EF /* driverPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8291F92C41753400E289EF /* driverPath.swift */; };
+		CE84E6272CF3CA1D00409F05 /* billingInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE84E6262CF3CA1D00409F05 /* billingInfoVC.swift */; };
+		CE84E62B2CF3CA4400409F05 /* billingInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE84E62A2CF3CA4400409F05 /* billingInfoVC.xib */; };
 		CE855BFA2C917D680098F96A /* addressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE855BF92C917D680098F96A /* addressModel.swift */; };
 		CE855BFC2C918CCF0098F96A /* favDriverModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE855BFB2C918CCF0098F96A /* favDriverModel.swift */; };
 		CE855C002C92F6640098F96A /* userTripCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE855BFE2C92F6640098F96A /* userTripCell.swift */; };
@@ -551,6 +553,8 @@
 		CEF0E7E12B4F3B3C00DCBD69 /* success.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CEF0E7DF2B4F3B3C00DCBD69 /* success.m4a */; };
 		CEF0E7E32B4F3B5900DCBD69 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF0E7E22B4F3B5900DCBD69 /* AudioPlayer.swift */; };
 		CEF0E7E52B511BC800DCBD69 /* firstOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF0E7E42B511BC800DCBD69 /* firstOnboardingView.swift */; };
+		CEF715542CF3108200941BAF /* driverNotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF715532CF3108200941BAF /* driverNotificationsViewController.swift */; };
+		CEF715562CF310C400941BAF /* network+drivernotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF715552CF310B500941BAF /* network+drivernotification.swift */; };
 		CEF7B6E92B2E2B1B00E3FE5C /* favoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7B6E82B2E2B1B00E3FE5C /* favoritesVC.swift */; };
 		CEF7B6EB2B2E2F7400E3FE5C /* favoritesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF7B6EA2B2E2F7400E3FE5C /* favoritesVC.xib */; };
 		CEF9737A2AC1D4B600CDCCFD /* UIResponder+Current.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF973792AC1D4B600CDCCFD /* UIResponder+Current.swift */; };
@@ -929,6 +933,8 @@
 		CE8291F32C414CF500E289EF /* genericConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = genericConst.swift; sourceTree = "<group>"; };
 		CE8291F72C41752500E289EF /* driverRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = driverRouter.swift; sourceTree = "<group>"; };
 		CE8291F92C41753400E289EF /* driverPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = driverPath.swift; sourceTree = "<group>"; };
+		CE84E6262CF3CA1D00409F05 /* billingInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = billingInfoVC.swift; sourceTree = "<group>"; };
+		CE84E62A2CF3CA4400409F05 /* billingInfoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = billingInfoVC.xib; sourceTree = "<group>"; };
 		CE855BF92C917D680098F96A /* addressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addressModel.swift; sourceTree = "<group>"; };
 		CE855BFB2C918CCF0098F96A /* favDriverModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favDriverModel.swift; sourceTree = "<group>"; };
 		CE855BFE2C92F6640098F96A /* userTripCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userTripCell.swift; sourceTree = "<group>"; };
@@ -1099,6 +1105,8 @@
 		CEF0E7DF2B4F3B3C00DCBD69 /* success.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = success.m4a; sourceTree = "<group>"; };
 		CEF0E7E22B4F3B5900DCBD69 /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		CEF0E7E42B511BC800DCBD69 /* firstOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstOnboardingView.swift; sourceTree = "<group>"; };
+		CEF715532CF3108200941BAF /* driverNotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = driverNotificationsViewController.swift; sourceTree = "<group>"; };
+		CEF715552CF310B500941BAF /* network+drivernotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "network+drivernotification.swift"; sourceTree = "<group>"; };
 		CEF7B6E82B2E2B1B00E3FE5C /* favoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favoritesVC.swift; sourceTree = "<group>"; };
 		CEF7B6EA2B2E2F7400E3FE5C /* favoritesVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = favoritesVC.xib; sourceTree = "<group>"; };
 		CEF973792AC1D4B600CDCCFD /* UIResponder+Current.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIResponder+Current.swift"; sourceTree = "<group>"; };
@@ -1210,6 +1218,7 @@
 		04B659D32B3436E600E78752 /* wallet */ = {
 			isa = PBXGroup;
 			children = (
+				CE84E6252CF3C9E600409F05 /* billingInfo */,
 				04B659E82B34516E00E78752 /* animatedCart */,
 				04B659E12B34439100E78752 /* addAmmount */,
 				04B659DA2B343B3000E78752 /* cell */,
@@ -2528,6 +2537,15 @@
 			path = model;
 			sourceTree = "<group>";
 		};
+		CE84E6252CF3C9E600409F05 /* billingInfo */ = {
+			isa = PBXGroup;
+			children = (
+				CE84E6262CF3CA1D00409F05 /* billingInfoVC.swift */,
+				CE84E62A2CF3CA4400409F05 /* billingInfoVC.xib */,
+			);
+			path = billingInfo;
+			sourceTree = "<group>";
+		};
 		CE855BFD2C92F60E0098F96A /* cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -3034,6 +3052,7 @@
 		CED77C092B6375CD00962E83 /* DRIVER */ = {
 			isa = PBXGroup;
 			children = (
+				CEF715522CF3104E00941BAF /* notifications */,
 				CE797EC12CBEDD5E0089F78D /* AddNewCar */,
 				CECF871B2CB52C27001A705B /* AccedientView */,
 				CE8291F52C4174E800E289EF /* driverNetwork */,
@@ -3226,6 +3245,15 @@
 			path = Sounds;
 			sourceTree = "<group>";
 		};
+		CEF715522CF3104E00941BAF /* notifications */ = {
+			isa = PBXGroup;
+			children = (
+				CEF715552CF310B500941BAF /* network+drivernotification.swift */,
+				CEF715532CF3108200941BAF /* driverNotificationsViewController.swift */,
+			);
+			path = notifications;
+			sourceTree = "<group>";
+		};
 		CEF7B6E72B2E2AE800E3FE5C /* favourites */ = {
 			isa = PBXGroup;
 			children = (
@@ -3342,6 +3370,7 @@
 				CEDDBE192ACBDFA700677C94 /* sideMenuCell.xib in Resources */,
 				CE9D3CA52C82AD96007E872D /* openCalendarVC.xib in Resources */,
 				CEB29E5A2B49894900F64ED8 /* editProfileVC.xib in Resources */,
+				CE84E62B2CF3CA4400409F05 /* billingInfoVC.xib in Resources */,
 				CE04D9C12B15E8BC00B41157 /* successBookViewVC.xib in Resources */,
 				CE405BB02CB7CC66005DA1BE /* cardsCell.xib in Resources */,
 				CE565E342CB8E3AC00354F0C /* driverEarningsVC.xib in Resources */,
@@ -3606,6 +3635,7 @@
 				CE7576EF2AF2019D00AFF56A /* homeVC+collectionDelegate.swift in Sources */,
 				04658F552B374DF900470F0D /* baseSuccessAlertVC.swift in Sources */,
 				9694AB3A2A5DE9D500BDF5F8 /* ViewController.swift in Sources */,
+				CEF715542CF3108200941BAF /* driverNotificationsViewController.swift in Sources */,
 				04C737A82B36C77E002AE59C /* messagesViewVC.swift in Sources */,
 				CEF9737E2AC1D4FA00CDCCFD /* KeyboardAdaptive.swift in Sources */,
 				CEB5A8622ABCDAF700A7F4AD /* customSegmentController.swift in Sources */,
@@ -3730,6 +3760,7 @@
 				CED77C0C2B64FD0900962E83 /* floatinglabelTextField.swift in Sources */,
 				CE6178A22ACCF9F700AA8BB7 /* homeSearchVC.swift in Sources */,
 				CE6178AD2ACD23BD00AA8BB7 /* tipLabel.swift in Sources */,
+				CE84E6272CF3CA1D00409F05 /* billingInfoVC.swift in Sources */,
 				CE3CEEDE2B1652DD00619C79 /* findingAdriverVC.swift in Sources */,
 				04B659DF2B343B5500E78752 /* walletCell.swift in Sources */,
 				0426FBC22B3753970017F12A /* aboutUsVC.swift in Sources */,
@@ -3798,6 +3829,7 @@
 				CE7D82F42AC3B86300C5B028 /* selectYorLocation.swift in Sources */,
 				CE4F0BAA2B777B8D00337A49 /* DriverTabbar.swift in Sources */,
 				CE4E22E62C0DE0190092AE16 /* Utilities.swift in Sources */,
+				CEF715562CF310C400941BAF /* network+drivernotification.swift in Sources */,
 				CEDAC5722C36E3F70054028E /* features.swift in Sources */,
 				CE0F42F92B4D0F6E005694AC /* onboardingSwiftuiView.swift in Sources */,
 				CE7BA8952CC5089000E5FCA7 /* passengersRatingVC.swift in Sources */,

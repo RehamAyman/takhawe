@@ -42,7 +42,7 @@ struct publicSideMenu {
             main.push(vc)
         case 5: // go to wallet
             let vc = walletVC()
-         //   main.push(vc)
+             main.push(vc)
         case 6 : // go to trips
             let vc = tripsSideMenuVC()
             

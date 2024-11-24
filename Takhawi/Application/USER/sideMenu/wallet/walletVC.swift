@@ -42,8 +42,13 @@ class walletVC : BaseVC {
             self.getUserAmmount()
         }
         push(vc)
+        
+        
     }
     
+    
+    
+   
     
     
     

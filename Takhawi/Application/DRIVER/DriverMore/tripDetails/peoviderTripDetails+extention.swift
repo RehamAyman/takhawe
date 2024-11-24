@@ -32,7 +32,7 @@ extension ProviderTripDetialsVC : UITableViewDelegate , UITableViewDataSource   
             self.handleArrivedView()
             
         case .inProgress :
-          //  self.handleDefualtView()
+            //  self.handleDefualtView()
             self.handleInProgressView()
             
         case .completed :
@@ -80,12 +80,12 @@ extension ProviderTripDetialsVC : UITableViewDelegate , UITableViewDataSource   
     
     private func handleInProgressView () {
         //self.bottomStack.isHidden = true
-       self.bottomStackHeight.constant = 50
-      //  self.bottomStack.isUserInteractionEnabled = false
+        self.bottomStackHeight.constant = 50
+        //  self.bottomStack.isUserInteractionEnabled = false
         self.cancelTrip.isHidden =  true
         self.submitOutlet.setTitle( "End Trip".localize, for: .normal)
         
-       // self.passengersTableView.isUserInteractionEnabled = false
+        // self.passengersTableView.isUserInteractionEnabled = false
         self.passengersTableView.isHidden = false
         // show button to end the trip
         UIView.animate(withDuration: 0.5 ) {
@@ -94,14 +94,14 @@ extension ProviderTripDetialsVC : UITableViewDelegate , UITableViewDataSource   
         }
         
     }
-//    
+    //
     
     
     private func handleDefualtView () {
         self.bottomStack.isHidden = true
         self.bottomStackHeight.constant = 0
         self.bottomStack.isUserInteractionEnabled = false
-       // self.passengersTableView.isUserInteractionEnabled = false
+        // self.passengersTableView.isUserInteractionEnabled = false
         self.passengersTableView.isHidden = false
         // show button to end the trip
         UIView.animate(withDuration: 0.5 ) {
@@ -115,7 +115,12 @@ extension ProviderTripDetialsVC : UITableViewDelegate , UITableViewDataSource   
     //MARK: - HANDLE  UPDATE TRIP STATUS ACTION
     
     func updateTripStatus (status  : tripStatus  ) {
+        
+        
+        
         activityIndicatorr.startAnimating()
+        
+        
         DriverRouter.updateTripStatus(id: self.passedTrip?.id ?? 0  , type: status.rawValue).send { [weak self] ( response : APIGlobalResponse )  in
             guard let self = self else { return }
             if response.status == true {
@@ -126,7 +131,7 @@ extension ProviderTripDetialsVC : UITableViewDelegate , UITableViewDataSource   
                 } else {
                     self.setUpVipView()
                 }
-               
+                
                 self.action?()
             }
             
@@ -159,7 +164,7 @@ extension ProviderTripDetialsVC : UITableViewDelegate , UITableViewDataSource   
         switch self.tripStatus {
         case .cancelled :
             self.handleDefualtVipMode()
-          
+            
         case .comming : // comming step no. 1
             
             self.handleCommingVip()
@@ -208,13 +213,13 @@ extension ProviderTripDetialsVC : UITableViewDelegate , UITableViewDataSource   
     func handleOnProgressVip () {
         self.vipSubmitOutlet.setTitle( "End Trip".localize , for: .normal)
         
-//        self.vipActionsStack.isHidden = true
-//        self.vipActionsStack.isUserInteractionEnabled = false
-//        
-//        UIView.animate(withDuration: 0.5 ) {
-//            self.vipHeight.constant = 250
-//            self.view.layoutIfNeeded()
-//        }
+        //        self.vipActionsStack.isHidden = true
+        //        self.vipActionsStack.isUserInteractionEnabled = false
+        //
+        //        UIView.animate(withDuration: 0.5 ) {
+        //            self.vipHeight.constant = 250
+        //            self.view.layoutIfNeeded()
+        //        }
     }
     
     
@@ -244,11 +249,11 @@ extension ProviderTripDetialsVC : UITableViewDelegate , UITableViewDataSource   
             }
             
             cell.addTapGesture {
-            let vc = driverProfileVC()
+                let vc = driverProfileVC()
                 vc.driverBasic = true
                 vc.driverBasicDetails = self.passedTrip
                 vc.basicPassenger = items
-            self.push(vc)
+                self.push(vc)
             }
         }
         
@@ -286,10 +291,45 @@ extension ProviderTripDetialsVC : UITableViewDelegate , UITableViewDataSource   
         }
         
     }
+    
+    
+    
+    
+    func checkOnwayRaduies () {
+        let currentLat = self.locationManager.location?.coordinate.latitude ?? 0.0
+        let currentLong = self.locationManager.location?.coordinate.longitude ?? 0.0
+        let targetLat = self.passedTrip?.pickup_location?.lat ?? 0
+        let targetLong = self.passedTrip?.pickup_location?.lng ?? 0
+        
+        let currentLocation = CLLocationCoordinate2D(latitude: currentLat , longitude: currentLong) // Your current location
+        let targetLocation = CLLocationCoordinate2D(latitude: targetLat , longitude: targetLong ) // Target location
+        
+        let isInside = isWithinRadius(currentLocation: currentLocation, targetLocation: targetLocation)
+        print("Is within radius: \(isInside)")
+        if isInside {
+            self.updateTripStatus(status: .arrived)
+        } else {
+            showInfoTopAlert(withMessage: "sorry! , but you are not in the meeting location yet!".localize)
+        }
+    }
+    
+    private func isWithinRadius(currentLocation: CLLocationCoordinate2D,
+                        targetLocation: CLLocationCoordinate2D,
+                        radius: Double = 1000) -> Bool {
+        
+        let currentCLLocation = CLLocation(latitude: currentLocation.latitude, longitude: currentLocation.longitude)
+        let targetCLLocation = CLLocation(latitude: targetLocation.latitude, longitude: targetLocation.longitude)
+        
+        // Calculate the distance in meters
+        let distance = currentCLLocation.distance(from: targetCLLocation)
+        
+        // Check if the distance is within the radius
+        return distance <= radius
+    }
+    
+    
+    
 }
-    
-    
-    
     
 //MARK: - opening chat with the client
     
@@ -304,6 +344,7 @@ extension ProviderTripDetialsVC : GMSMapViewDelegate {
         
         googleMapsView.delegate = self
         googleMapsView.isMyLocationEnabled = true
+        
         self.setUpMapsTheme()
         let lat = self.passedTrip?.pickup_location?.lat ?? 0
         let lng = self.passedTrip?.pickup_location?.lng ?? 0
@@ -328,7 +369,7 @@ extension ProviderTripDetialsVC : GMSMapViewDelegate {
 //        let long = "\(locationManager.location?.coordinate.longitude ?? 0.0 )"
         guard let latitude = locationManager.location?.coordinate.latitude else { return}
         guard let longitude =  locationManager.location?.coordinate.longitude else { return}
-       
+        
         self.km.text = self.getDestanceBetween(lat1: latitude, lng1: longitude, lat2: self.passedTrip?.pickup_location?.lat ?? 0 , lng2: self.passedTrip?.pickup_location?.lng ?? 0 )
         
     }

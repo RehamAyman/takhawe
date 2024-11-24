@@ -50,7 +50,8 @@ enum UserRouter {
     case switchRole
     case chargeWallet( amount : Int  , cardId : Int )
     case deleteAcc
-   case getNotifications
+    case getNotifications
+    case getBillingInfo
   
 }
 
@@ -69,7 +70,7 @@ extension UserRouter : APIRouter {
             return .post
         
             
-        case .getAllVipOffers , .getAllCities , .getAllBasicTrips  , .recentAddress  , .getOneTrip , .getProfile , .walletData , .getAllHobbies  , .getAllAddress , .getAllFavDrives , .getMyUpcommingTrips , .getCancelledTrips , .getCompletedTrips , .getVip , .getOneGeneralTrip  , .getPolices  , .aboutUs , .getAllLastMessaged , .getAllChats  , .getAllPaymentCards , .switchRole , .getNotifications  :
+        case .getAllVipOffers , .getAllCities , .getAllBasicTrips  , .recentAddress  , .getOneTrip , .getProfile , .walletData , .getAllHobbies  , .getAllAddress , .getAllFavDrives , .getMyUpcommingTrips , .getCancelledTrips , .getCompletedTrips , .getVip , .getOneGeneralTrip  , .getPolices  , .aboutUs , .getAllLastMessaged , .getAllChats  , .getAllPaymentCards , .switchRole , .getNotifications , .getBillingInfo   :
           return .get
             
             
@@ -168,6 +169,8 @@ extension UserRouter : APIRouter {
             return userServerPath.deleteMyAcc
         case .getNotifications:
             return userServerPath.getNotifications
+        case .getBillingInfo:
+            return userServerPath.getBillingInfo
           
     
         
@@ -368,7 +371,7 @@ extension UserRouter : APIRouter {
             
             
             
-        case .getAllVipOffers  , .recentAddress , .getOneTrip , .getProfile   , .calculateVipPrice , .getAllAddress   , .removeDriverFromFav    , .getVip , .getOneGeneralTrip  , .getPolices , .aboutUs , .getAllLastMessaged , .getAllChats  , .getAllPaymentCards  , .switchRole , .deleteAcc  , .getNotifications :
+        case .getAllVipOffers  , .recentAddress , .getOneTrip , .getProfile   , .calculateVipPrice , .getAllAddress   , .removeDriverFromFav    , .getVip , .getOneGeneralTrip  , .getPolices , .aboutUs , .getAllLastMessaged , .getAllChats  , .getAllPaymentCards  , .switchRole , .deleteAcc  , .getNotifications , .getBillingInfo :
             return nil
             
         }

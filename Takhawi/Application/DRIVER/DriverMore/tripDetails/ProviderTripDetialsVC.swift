@@ -44,6 +44,8 @@ class ProviderTripDetialsVC : BaseVC {
     var passedTrip : MainTripResult?
     var tripStatus : tripStatus = .comming
     var action: (() -> Void)?
+    var selfLat : Double = 0.0
+    var selfLng : Double = 0.0
   
     
     // trip status
@@ -72,7 +74,7 @@ class ProviderTripDetialsVC : BaseVC {
         self.vipFrom.text = self.passedTrip?.pickup_location?.description ?? ""
         self.vipTo.text = self.passedTrip?.destination?.description ?? ""
         print("my current location send ......")
-        print( locationManager.location?.coordinate.latitude ?? 0  )
+        print(locationManager.location?.coordinate.latitude ?? 0 )
         print(locationManager.location?.coordinate.longitude ?? 0 )
         print(self.passedTrip?.destination?.lat)
         self.km.text = getDestanceBetween(lat1: locationManager.location?.coordinate.latitude ?? 0 ,
@@ -119,9 +121,18 @@ class ProviderTripDetialsVC : BaseVC {
         case.comming :
             self.updateTripStatus(status: .onWay)
         case .onWay :
-            self.updateTripStatus(status: .arrived)
+            
+            self.checkOnwayRaduies()
+         
+          
+            
+            
+            
+       // self.updateTripStatus(status: .arrived)
           
         case .arrived :// HANDLE START ACTION
+           
+            
             self.updateTripStatus(status: .inProgress)
         case .inProgress:
             print(" inprogress step action ")
@@ -156,9 +167,11 @@ class ProviderTripDetialsVC : BaseVC {
         case.comming :
             self.updateTripStatus(status: .onWay)
         case .onWay :
-            self.updateTripStatus(status: .arrived)
-          
+            // check first if the driver is inside the start location
+            self.checkOnwayRaduies()
+
         case .arrived :// HANDLE START ACTION
+           
             self.updateTripStatus(status: .inProgress)
         case .inProgress:
             
@@ -179,12 +192,17 @@ class ProviderTripDetialsVC : BaseVC {
         vc.type = self.tripType.rawValue
         self.push(vc)
     }
+    
+    
+  
 }
 
 
 //MARK: - Networking -
 extension ProviderTripDetialsVC {
  
+    
+    
     
     private func endBasicTrip () {
        

@@ -10,6 +10,7 @@ enum paymentMethod : String {
     case cash =  "CASH"
     case card =  "CARD"
     case wallet =  "WALLET"
-    case applePay = "ApplePay"
+    case applePay = "APPLEPAY"
         
 }
+

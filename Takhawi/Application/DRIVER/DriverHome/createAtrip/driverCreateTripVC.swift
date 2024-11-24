@@ -130,6 +130,12 @@ extension driverCreateTripVC {
             activityIndicatorr.startAnimating()
             let steatsNo : Int =  Int( self.availableSeats.text ?? "") ?? 0
             let seatPrice : Int =  Int( self.seatPrice.text ?? "") ?? 0
+            let isoFormatter = ISO8601DateFormatter()
+            isoFormatter.timeZone = TimeZone(abbreviation: "UTC")
+            let isoDateString = isoFormatter.string(from: self.selectedDate )
+            // calculate the time the trip will take and pass the end trip time 
+            
+            
             DriverRouter.createBasic(endDate: self.selectedDate.ISO8601Format() , startDate: self.selectedDate.ISO8601Format() , seatsNo: steatsNo , PickLocationId: self.selectedPickUp, destLocationId: self.SelectdDestination, features: self.selectedFeatures , price: seatPrice).send { [weak self ] (response: APIGlobalResponse ) in
                 guard let self = self else { return }
                 if  response.status == true {
