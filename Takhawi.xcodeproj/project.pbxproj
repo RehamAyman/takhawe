@@ -307,6 +307,7 @@
 		CE4F0BAA2B777B8D00337A49 /* DriverTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F0BA92B777B8D00337A49 /* DriverTabbar.swift */; };
 		CE4F0BAC2B77962700337A49 /* DriverHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F0BAB2B77962700337A49 /* DriverHomeVC.swift */; };
 		CE4F0BAF2B77976400337A49 /* driverHome+googleExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F0BAE2B77976300337A49 /* driverHome+googleExtention.swift */; };
+		CE526D222CF4B70D00C2975F /* billingPdf.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE526D212CF4B70600C2975F /* billingPdf.swift */; };
 		CE565E2F2CB836A100354F0C /* paymentWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE565E2E2CB836A100354F0C /* paymentWebView.swift */; };
 		CE565E322CB8E39400354F0C /* driverEarningsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE565E312CB8E39400354F0C /* driverEarningsVC.swift */; };
 		CE565E342CB8E3AC00354F0C /* driverEarningsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE565E332CB8E3AC00354F0C /* driverEarningsVC.xib */; };
@@ -860,6 +861,7 @@
 		CE4F0BA92B777B8D00337A49 /* DriverTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverTabbar.swift; sourceTree = "<group>"; };
 		CE4F0BAB2B77962700337A49 /* DriverHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverHomeVC.swift; sourceTree = "<group>"; };
 		CE4F0BAE2B77976300337A49 /* driverHome+googleExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "driverHome+googleExtention.swift"; sourceTree = "<group>"; };
+		CE526D212CF4B70600C2975F /* billingPdf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = billingPdf.swift; sourceTree = "<group>"; };
 		CE565E2E2CB836A100354F0C /* paymentWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = paymentWebView.swift; sourceTree = "<group>"; };
 		CE565E312CB8E39400354F0C /* driverEarningsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = driverEarningsVC.swift; sourceTree = "<group>"; };
 		CE565E332CB8E3AC00354F0C /* driverEarningsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = driverEarningsVC.xib; sourceTree = "<group>"; };
@@ -1284,6 +1286,7 @@
 		04C737AB2B36CB2B002AE59C /* trips */ = {
 			isa = PBXGroup;
 			children = (
+				CE526D212CF4B70600C2975F /* billingPdf.swift */,
 				CE855BFD2C92F60E0098F96A /* cells */,
 				04C737B22B36D1C0002AE59C /* tripsSideMenuVC.swift */,
 				04C737B42B36D1D7002AE59C /* tripsSideMenuVC.xib */,
@@ -3812,6 +3815,7 @@
 				CE855BFA2C917D680098F96A /* addressModel.swift in Sources */,
 				CE9757D52AE1B2B00014346E /* driverProfileVC.swift in Sources */,
 				CEB49C4E2C3C527200BB506D /* paymentMehods.swift in Sources */,
+				CE526D222CF4B70D00C2975F /* billingPdf.swift in Sources */,
 				CE30213A2ABBA4B200572DE7 /* forgetPasswordVCVC.swift in Sources */,
 				CE4E22DC2C0DDFDE0092AE16 /* APIRouter.swift in Sources */,
 				CECF87172CB4C43F001A705B /* messagesExtention.swift in Sources */,

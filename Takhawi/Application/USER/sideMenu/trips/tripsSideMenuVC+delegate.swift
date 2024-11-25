@@ -99,7 +99,12 @@ extension tripsSideMenuVC : UITableViewDelegate , UITableViewDataSource {
             cell.doneView.isHidden = false
             cell.doneLabel.textColor = UIColor.systemGreen
             cell.doneLabel.text = "Completed".localize
-            
+            cell.doneView.addTapGesture {
+                print("hello i select view pdf")
+                let vc = billingWebView()
+                vc.tripId = item.id ?? 0
+                self.present(vc, animated: true )
+            }
         case 2 : // cancelled
             cell.doneLabel.isHidden = false
             cell.doneLabel.textColor = UIColor.red

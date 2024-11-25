@@ -49,6 +49,7 @@ enum userServerPath {
     case deleteMyAcc
     case getNotifications
     case getBillingInfo
+    case createbillingInfo
     
 }
 
@@ -138,6 +139,9 @@ extension userServerPath : ServerPath {
             return "notification/?page=1&limit=300"
         case .getBillingInfo:
             return "saved-card/billing"
+        case .createbillingInfo:
+            return "saved-card/billing"
+            
         }
     }
 }

@@ -30,8 +30,6 @@ class addAmountVC : BaseVC  {
         override func viewDidLoad() {
             super.viewDidLoad()
             self.configureInitialDesign()
-            
-            
         }
         
     //MARK: - Design Methods -
@@ -98,6 +96,13 @@ class addAmountVC : BaseVC  {
             } else {
                 print("this user did not have the additional payment data yet .. ")
                 let vc = billingInfoVC()
+                vc.action = {
+                    let vc = paymentWebView()
+                    vc.action = {
+                        self.getAllSavedCards()
+                    }
+                    self.present( vc , animated: true )
+                }
                 self.push(vc)
             }
             

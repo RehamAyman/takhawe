@@ -193,7 +193,7 @@ extension APIRouter {
             self.handleResponse(data, completion: completion)
         }
     }
-    private func handleResponse<T: Codable>(_ response: AFDataResponse<Data>, completion: @escaping (_ respons: T?, _ errorType: APIErrors?) -> Void) {
+    private func handleResponse<T: Codable>(_ response: AFDataResponse<Data> , completion: @escaping (_ respons: T?, _ errorType: APIErrors? ) -> Void) {
         switch response.result {
         case .failure(_):
             completion(nil, .connectionError)
@@ -221,7 +221,12 @@ extension APIRouter {
                             completion(valueObject ,nil)
                         } else {
                             completion(valueObject ,nil)
-                            showPopTopAlert(title: "Error!", withMessage: value.message  , success: false )
+                            if value.message == "User billing info not found" {
+                                
+                            } else {
+                                showPopTopAlert(title: "Error!", withMessage: value.message  , success: false )
+                            }
+                          
                            // AppAlert.showErrorAlert(error: value.message)
                         }
                     }

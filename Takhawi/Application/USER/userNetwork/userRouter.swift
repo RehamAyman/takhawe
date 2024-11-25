@@ -52,6 +52,7 @@ enum UserRouter {
     case deleteAcc
     case getNotifications
     case getBillingInfo
+    case createBillingInfo ( surname : String , street : String , cityId : Int , state : String)
   
 }
 
@@ -66,7 +67,7 @@ extension UserRouter : APIRouter {
     var method: HTTPMethod {
         switch self {
             
-        case .createVipTrip , .acceptOffer  , .complain , .addAddressToFav , .claculateBasicPrice  , .joinABasicTrip , .calculateVipPrice , .checkPromoCode   , .openChat  , .registerFcm , .chargeWallet   :
+        case .createVipTrip , .acceptOffer  , .complain , .addAddressToFav , .claculateBasicPrice  , .joinABasicTrip , .calculateVipPrice , .checkPromoCode   , .openChat  , .registerFcm , .chargeWallet  , .createBillingInfo  :
             return .post
         
             
@@ -171,7 +172,8 @@ extension UserRouter : APIRouter {
             return userServerPath.getNotifications
         case .getBillingInfo:
             return userServerPath.getBillingInfo
-          
+        case .createBillingInfo:
+            return userServerPath.createbillingInfo
     
         
             
@@ -263,6 +265,18 @@ extension UserRouter : APIRouter {
             return dic
                 
           
+        case .createBillingInfo(surname: let surname , street: let street , cityId: let cityId , state: let state ):
+            
+            return [
+                "cityId": cityId ,
+                "state": state ,
+                "street": street ,
+                "surname": surname
+            ]
+            
+            
+            
+            
         case .checkPromoCode(code: let code ):
             return [
                 "code": code
