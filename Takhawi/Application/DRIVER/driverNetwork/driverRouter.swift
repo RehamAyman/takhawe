@@ -143,10 +143,10 @@ extension DriverRouter : APIRouter {
                 "lng" : lng
             ]
             
-        case .createBasic(endDate: _ , startDate: let startDate , seatsNo: let seats , PickLocationId: let pickLocation , destLocationId: let destLocation , features: let features  , price : let price ):
+        case .createBasic(endDate: let endDate, startDate: let startDate , seatsNo: let seats , PickLocationId: let pickLocation , destLocationId: let destLocation , features: let features  , price : let price ):
             return [
                 
-                    "end_date": "2024-12-06T22:30:01Z" ,
+                "end_date": endDate ,
                     "start_date": startDate ,
                     "seats_no": seats ,
                     "price_per_seat":  price ,

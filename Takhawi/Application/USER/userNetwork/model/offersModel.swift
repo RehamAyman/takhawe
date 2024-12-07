@@ -123,6 +123,7 @@ struct Vehicles : Codable {
     let id : Int?
     let serial_no : String?
     let plate_alphabet : String?
+    let plate_alphabet_ar : String?
     let plate_number : String?
     let seats_no : Int?
     let production_year : Int?
@@ -136,6 +137,7 @@ struct Vehicles : Codable {
         case id = "id"
         case serial_no = "serial_no"
         case plate_alphabet = "plate_alphabet"
+        case plate_alphabet_ar = "plate_alphabet_ar"
         case plate_number = "plate_number"
         case seats_no = "seats_no"
         case production_year = "production_year"

@@ -109,7 +109,6 @@ class driverProfileVC: BaseVC {
         }
         
         if isDriverAcc {
-            
             self.mainStack.removeArrangedSubview(self.BottomcontainerStack)
             self.BottomcontainerStack.removeFromSuperview()
             self.from.text = self.driverVip?.pickup_description ?? "--"
@@ -117,7 +116,8 @@ class driverProfileVC: BaseVC {
             self.tripDate.text = self.driverVip?.start_date?.convertFromIso() ?? ""
             self.driverRate.rating = self.driverVip?.passenger_rate ?? 0
             self.driverName.text = self.driverVip?.passenger_name ?? ""
-           // self.tripCountLabel.text = "0"
+    // missed the count of driver trips from back end
+            self.tripCountLabel.text = "trips: ".localize +  "0"
             self.titleName.text = "User Profile".localize
             if let image = self.driverVip?.passenger_avatar {
                 self.driverImage.setImage(image: Server.imageBase.rawValue + image)

@@ -191,3 +191,50 @@ extension String {
     return CGFloat(doubleValue)
   }
 }
+
+
+
+
+extension String {
+    func addingSpacesBetweenArabicCharacters() -> String {
+        var result = ""
+        let arabicCharacterRange = "\u{0600}"..."\u{06FF}" // Unicode range for Arabic characters
+
+        for (index, character) in self.enumerated() {
+            result.append(character)
+            
+            // Ensure the next character exists and check both characters
+            if index < self.count - 1 {
+                let nextCharacter = self[self.index(self.startIndex, offsetBy: index + 1)]
+                
+                if isArabic(character) && isArabic(nextCharacter) {
+                    result.append(" ") // Add a space
+                }
+            }
+        }
+
+        return result
+    }
+
+    private func isArabic(_ character: Character) -> Bool {
+           // Check if any scalar in the character is in the Arabic range
+           return character.unicodeScalars.allSatisfy { scalar in
+               ("\u{0600}"..."\u{06FF}").contains(scalar)
+           }
+       }
+   }
+
+
+
+extension String {
+    func convertEnglishNumbersToArabic() -> String {
+        let englishToArabicDigits: [Character: Character] = [
+            "0": "٠", "1": "١", "2": "٢", "3": "٣", "4": "٤",
+            "5": "٥", "6": "٦", "7": "٧", "8": "٨", "9": "٩"
+        ]
+
+        let convertedString = self.map { englishToArabicDigits[$0] ?? $0 }
+        return String(convertedString)
+    }
+}
+

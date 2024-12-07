@@ -177,10 +177,10 @@ extension profileVC {
                         let name = vehicle.vehicle_Name?.name ?? ""
                         let className = vehicle.vehicle_Class?.name ?? ""
                         self.carName.text = color + " " + type + " " +  className + " " +  name
-                        self.arAlpha.text = vehicle.plate_alphabet ?? ""
+                        self.arAlpha.text = vehicle.plate_alphabet_ar?.addingSpacesBetweenArabicCharacters() ?? ""
                         self.enAlpha.text = vehicle.plate_alphabet ?? ""
                         self.enNum.text =  vehicle.plate_number ?? ""
-                        self.arNum.text = vehicle.plate_number ?? ""
+                        self.arNum.text = vehicle.plate_number?.convertEnglishNumbersToArabic() ?? ""
                         
                     } else {
                         // show add car button
@@ -210,3 +210,4 @@ extension profileVC {
 extension profileVC {
     
 }
+

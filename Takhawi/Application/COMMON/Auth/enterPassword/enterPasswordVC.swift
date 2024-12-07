@@ -119,6 +119,9 @@ extension enterPasswordVC {
                             self?.checkDriverStatus()
                         } else if response.result?.user?.driver_status == "PENDING" {
                             showPopTopAlert(title: "your application is under review".localize, withMessage: "please contact us if you have any questions".localize, success: false )
+                            
+                        } else if response.result?.user?.driver_status == "REJECTED" {
+                            showPopTopAlert(title: "Your Account has been rejected".localize, withMessage: "please contact us if you have any questions".localize, success: false )
                         }
                         
                     }

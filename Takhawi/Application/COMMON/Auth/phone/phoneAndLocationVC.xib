@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -30,8 +30,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="iOp-aF-T4I">
-                    <rect key="frame" x="30" y="138" width="354" height="310"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="iOp-aF-T4I">
+                    <rect key="frame" x="30" y="118" width="354" height="300"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i9y-sc-01N">
                             <rect key="frame" x="0.0" y="0.0" width="354" height="60"/>
@@ -55,7 +55,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GAs-Xz-hr8">
-                            <rect key="frame" x="0.0" y="90" width="354" height="140"/>
+                            <rect key="frame" x="0.0" y="85" width="354" height="140"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="rNf-4D-MZC">
                                     <rect key="frame" x="77" y="5" width="200" height="130"/>
@@ -73,7 +73,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1VW-Bv-6JV">
-                            <rect key="frame" x="0.0" y="260" width="354" height="50"/>
+                            <rect key="frame" x="0.0" y="250" width="354" height="50"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="pzp-pb-mMT">
                                     <rect key="frame" x="10" y="0.0" width="334" height="50"/>
@@ -134,7 +134,7 @@
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="iOp-aF-T4I" secondAttribute="trailing" constant="30" id="7e5-gQ-9Nv"/>
                 <constraint firstItem="iOp-aF-T4I" firstAttribute="leading" secondItem="haF-AY-gvC" secondAttribute="leading" constant="30" id="McS-4z-nnd"/>
-                <constraint firstItem="iOp-aF-T4I" firstAttribute="top" secondItem="lc3-2q-MvZ" secondAttribute="top" constant="90" id="RlH-GT-Zdz"/>
+                <constraint firstItem="iOp-aF-T4I" firstAttribute="top" secondItem="lc3-2q-MvZ" secondAttribute="top" constant="70" id="RlH-GT-Zdz"/>
                 <constraint firstItem="iOp-aF-T4I" firstAttribute="centerX" secondItem="haF-AY-gvC" secondAttribute="centerX" id="UAk-bk-U6Q"/>
             </constraints>
             <point key="canvasLocation" x="771" y="-44"/>
@@ -142,7 +142,7 @@
     </objects>
     <resources>
         <image name="flag" width="26" height="26"/>
-        <image name="logo" width="699" height="693"/>
+        <image name="logo" width="131" height="115"/>
         <namedColor name="BackGroundColor">
             <color red="0.95294117647058818" green="0.95294117647058818" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

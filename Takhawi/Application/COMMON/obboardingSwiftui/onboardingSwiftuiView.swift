@@ -99,11 +99,9 @@ struct onboardingSwiftuiView : View {
         .background( Color ( "BackGroundColor"))
        
 
-           // Spacer()
+          Spacer()
               
           VStack {
-              
-        
                   VStack(spacing: 0) {
                       Text( tabSelection == 0 ? textTitle : tabSelection == 1 ? "We connect you with someone who understands you".localize : tabSelection == 2 ? "Increase your income on your way".localize : "Start creating your Trip now".localize )
                           .foregroundColor(.black)
@@ -112,7 +110,7 @@ struct onboardingSwiftuiView : View {
                           .id(textTitle)
                           .frame( height: 70 )
                           .padding()
-                          .font(.custom( LocalizationManager.shared.getLanguage() == .Arabic ?  AppFont.arMedium.rawValue :  AppFont.Bold.rawValue , size: 26))
+                          .font(.custom( LocalizationManager.shared.getLanguage() == .Arabic ?  AppFont.arMedium.rawValue :  AppFont.Bold.rawValue , size: 25))
                          
                       HStack ( spacing: 10) {
                           ForEach((0...3), id: \.self) { item in

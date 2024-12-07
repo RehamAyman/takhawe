@@ -53,9 +53,9 @@ class paymentWebView : UIViewController, WKNavigationDelegate {
            print(self.webView.url)
            //registration-status
            guard let url = webView.url?.absoluteString else { return }
-           print("🌏🌏🌏web url lisiner 🌏🌏")
+           print("🌏🌏🌏web url lisiner 🌏🌏")//success
            print(url)
-           if url.contains("registration-status") {
+           if url.contains("success") {
                self.action?()
                self.dismiss(animated: true )
                showInfoTopAlert(withMessage: "Your card Successfully Added".localize)

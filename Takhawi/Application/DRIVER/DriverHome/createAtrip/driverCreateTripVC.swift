@@ -9,6 +9,7 @@
 
 import UIKit
 import MaterialComponents
+import CoreLocation
 
 class driverCreateTripVC: BaseVC {
     
@@ -35,6 +36,9 @@ class driverCreateTripVC: BaseVC {
     var meetingLocationArray : [meetingLocationResult] = []
     var selectedPickUp : Int = 0
     var SelectdDestination : Int = 0
+    var pickuplocation :  meetingLocation?
+    var endLocation : meetingLocation?
+    
     var selectedDate : Date = Date()
     var dummyActivty : [dummyActivity] = [
       
@@ -134,9 +138,10 @@ extension driverCreateTripVC {
             isoFormatter.timeZone = TimeZone(abbreviation: "UTC")
             let isoDateString = isoFormatter.string(from: self.selectedDate )
             // calculate the time the trip will take and pass the end trip time 
+            print("selected date 🥲")
+            print(self.selectedDate)
             
-            
-            DriverRouter.createBasic(endDate: self.selectedDate.ISO8601Format() , startDate: self.selectedDate.ISO8601Format() , seatsNo: steatsNo , PickLocationId: self.selectedPickUp, destLocationId: self.SelectdDestination, features: self.selectedFeatures , price: seatPrice).send { [weak self ] (response: APIGlobalResponse ) in
+            DriverRouter.createBasic(endDate: self.getTheEndDate(selectedDate: self.selectedDate) , startDate: self.selectedDate.ISO8601Format() , seatsNo: steatsNo , PickLocationId: self.selectedPickUp, destLocationId: self.SelectdDestination, features: self.selectedFeatures , price: seatPrice).send { [weak self ] (response: APIGlobalResponse ) in
                 guard let self = self else { return }
                 if  response.status == true {
                     showPopTopAlert(title: "Sent Successfully".localize, withMessage: response.message , success: true )
@@ -146,6 +151,41 @@ extension driverCreateTripVC {
         }
     }
     
+    
+    
+    func getTheEndDate (selectedDate : Date ) -> String {
+        
+        let coordinatesA = (latitude: self.pickuplocation?.lat ?? 0.0 , longitude: self.pickuplocation?.lng ?? 0.0)
+        let coordinatesB = (latitude: self.endLocation?.lat ?? 0.0  , longitude: self.endLocation?.lng ?? 0.0 )
+
+        let locationA = CLLocation(latitude: coordinatesA.latitude, longitude: coordinatesA.longitude)
+        let locationB = CLLocation(latitude: coordinatesB.latitude , longitude: coordinatesB.longitude)
+        let distanceInKM =  ( locationA.distance(from: locationB) / 100 ).rounded()
+        
+        
+        
+       
+        print( "\(distanceInKM.rounded() + 2  )" + "mins" )
+        let timeInMins =  Int( distanceInKM.rounded() + 2 )
+        print("-----------------")
+        print(selectedDate)
+        print(timeInMins)
+        
+        guard let thirtyMinutesLater = Calendar.current.date(byAdding: .minute, value: timeInMins , to: selectedDate) else { return "" }
+            // Convert to ISO 8601 format
+        print("⏰")
+        
+            let isoDateFormatter = ISO8601DateFormatter()
+            isoDateFormatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds] // Include fractional seconds if needed
+            let isoString = isoDateFormatter.string(from: thirtyMinutesLater)
+        print(thirtyMinutesLater)
+        print(isoString)
+        
+        return isoString
+        
+        
+        
+    }
     
     
     func getAllMeetingLocations () {
@@ -171,8 +211,15 @@ extension driverCreateTripVC {
                    textField.text = action.title
                 if destination {
                     self.SelectdDestination = Int ( action.identifier.rawValue ) ?? 0
+                    
+                    self.endLocation = self.meetingLocationArray.first(where: { $0.id ==  self.SelectdDestination  })?.location
+                    print(self.endLocation)
+                    
                 } else {
                     self.selectedPickUp = Int ( action.identifier.rawValue ) ?? 0
+                    self.pickuplocation = self.meetingLocationArray.first(where: { $0.id ==  self.selectedPickUp  })?.location
+                    
+                    print(self.pickuplocation)
                 }
             }
             var menuChildren: [UIMenuElement] = []
@@ -200,9 +247,12 @@ extension driverCreateTripVC {
             if isDistnation{
                 self.destination.text = location.name
                 self.SelectdDestination = location.id ?? 0
+                self.endLocation = location.location
             }else{
                 self.gathering.text = location.name
                 self.selectedPickUp = location.id ?? 0
+                self.pickuplocation = location.location
+                
             }
             
         }
