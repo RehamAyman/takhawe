@@ -83,6 +83,8 @@ extension ReserveTheTripVC : UITableViewDelegate , UITableViewDataSource {
         cell.checkMarkView.isHidden = false
         cell.checkMarkView.play()
         self.paymentMethod = item.id
+        self.selectedCard = item.cardID ?? 0
+        print(self.paymentMethod)
     }
     
     

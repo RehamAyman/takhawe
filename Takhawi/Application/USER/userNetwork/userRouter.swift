@@ -23,7 +23,7 @@ enum UserRouter {
     case getProfile
     case addAddressToFav ( alias : String , lat : Double , lng : Double , isFav : Bool , desc : String )
     case claculateBasicPrice ( id : Int  , code : String)
-    case joinABasicTrip ( id : Int , paymentMethod : String , copon : String)
+    case joinABasicTrip ( id : Int , paymentMethod : String , copon : String , cardid : Int)
     case calculateVipPrice ( id : Int )
     case walletData ( page : Int)
     case getAllHobbies
@@ -290,7 +290,7 @@ extension UserRouter : APIRouter {
             }
             return dic
             
-        case .joinABasicTrip(id: let id , paymentMethod: let payment , copon : let copon  ) :
+        case .joinABasicTrip(id: let id , paymentMethod: let payment , copon : let copon , cardid : let cardId  ) :
             var dic1 : [String : Any]  = [
                 "trip_id": id ,
                 "payment_method": payment
@@ -298,6 +298,9 @@ extension UserRouter : APIRouter {
             
             if copon != "" {
                 dic1["coupon"] = copon
+            }
+            if cardId != 0 {
+                dic1["card_id"] = cardId
             }
             return dic1
             

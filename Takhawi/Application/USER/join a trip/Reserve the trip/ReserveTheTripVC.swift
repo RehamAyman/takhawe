@@ -51,11 +51,12 @@ class ReserveTheTripVC: BaseVC {
     var appleseatPrice : String = ""
     var applevatPrice : String = ""
     var appletotalPrice : String = ""
+    var selectedCard : Int = 0 
    
     var  DummyPaymentMethods : [dummyPaymentMethods] = [
-        dummyPaymentMethods(icon:"" , number: "**** **** **** 8970", expireIn: "Expires: 12/26", type: "wallet", selected: false , id: .wallet ) ,
-        dummyPaymentMethods(icon:"" , number: "**** **** **** 8970", expireIn: "Expires: 12/26", type: "cash", selected: false , id: .cash),
-        dummyPaymentMethods(icon:"" , number: "**** **** **** 8970", expireIn: "Expires: 12/26", type: "ApplePay", selected: false , id: .applePay)
+        dummyPaymentMethods(icon:"" , number: "**** **** **** 8970", expireIn: "Expires: 12/26", type: "wallet", selected: false , id: .wallet, cardID: 0 ) ,
+        dummyPaymentMethods(icon:"" , number: "**** **** **** 8970", expireIn: "Expires: 12/26", type: "cash", selected: false , id: .cash, cardID: 0),
+        dummyPaymentMethods(icon:"" , number: "**** **** **** 8970", expireIn: "Expires: 12/26", type: "ApplePay", selected: false , id: .applePay, cardID: 0)
     ]
 
  //   let paymentHandler = PaymentHandler()
@@ -154,6 +155,7 @@ extension ReserveTheTripVC {
     
     
     func confirmOffer () {
+        print("confirm vip action")
         print(self.paymentMethod)
         print(self.paymentMethod.rawValue)
         activityIndicatorr.startAnimating()
@@ -168,13 +170,12 @@ extension ReserveTheTripVC {
     
     
     func joinAbasicTrip () {
-      
+        print("confirm basic action ")
         print(self.paymentMethod.rawValue)
         
         activityIndicatorr.startAnimating()
-        UserRouter.joinABasicTrip(id: tripDetails?.id ?? 0 , paymentMethod: self.paymentMethod.rawValue , copon: "").send {[weak self] ( response : APIGlobalResponse ) in
+        UserRouter.joinABasicTrip(id: tripDetails?.id ?? 0 , paymentMethod: self.paymentMethod.rawValue , copon: "", cardid: self.paymentMethod == .card ? self.selectedCard : 0 ).send {[weak self] ( response : APIGlobalResponse ) in
             guard let self = self else { return }
-            
             if  response.status == true  {
                 self.GotoNextStep(tripId: tripDetails?.id ?? 0 )
             }
@@ -297,7 +298,10 @@ extension ReserveTheTripVC {
                                                                         expireIn:  month +  "-" +  year  ,
                                                                         type:  "card" ,
                                                                         selected: false ,
-                                                                        id: .cash))
+                                                                        id: .card ,
+                                                                        cardID : i.id ?? 0
+                                                                        
+                                                                       ))
                     
                 }
                 

@@ -25,6 +25,7 @@ struct dummyPaymentMethods {
     let type : String
     var selected : Bool 
     let id : paymentMethod
+    let cardID : Int?
 }
 
 

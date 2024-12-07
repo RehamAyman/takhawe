@@ -138,8 +138,6 @@ extension driverCreateTripVC {
             isoFormatter.timeZone = TimeZone(abbreviation: "UTC")
             let isoDateString = isoFormatter.string(from: self.selectedDate )
             // calculate the time the trip will take and pass the end trip time 
-            print("selected date 🥲")
-            print(self.selectedDate)
             
             DriverRouter.createBasic(endDate: self.getTheEndDate(selectedDate: self.selectedDate) , startDate: self.selectedDate.ISO8601Format() , seatsNo: steatsNo , PickLocationId: self.selectedPickUp, destLocationId: self.SelectdDestination, features: self.selectedFeatures , price: seatPrice).send { [weak self ] (response: APIGlobalResponse ) in
                 guard let self = self else { return }
