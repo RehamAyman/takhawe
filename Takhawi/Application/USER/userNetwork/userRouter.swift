@@ -14,7 +14,7 @@ import Alamofire
 enum UserRouter {
     case createVipTrip( destinationLong : Double , destinationLat : Double , currentLat : Double , currentLong : Double , features : [String] , date : String , pickup_description : String , destination_description : String )
     case getAllVipOffers(id : Int)
-    case acceptOffer ( id : Int , paymentMethod : String )
+    case acceptOffer ( id : Int , paymentMethod : String  , cardId : Int)
     case getAllCities ( page : Int)
     case getAllBasicTrips ( cityId : Int  , lat : Double , lng : Double , StartdDate : String , filter : String )
     case recentAddress
@@ -96,7 +96,7 @@ extension UserRouter : APIRouter {
             return userServerPath.careateVipTrip
         case .getAllVipOffers  ( id: let id ):
             return userServerPath.getVipOffers(id: id)
-        case .acceptOffer(id: let id  , paymentMethod : let payment):
+        case .acceptOffer(id: let id  , paymentMethod : let payment , cardId : let cardId):
             return userServerPath.acceptOffer(id: id, paymentMethod: payment )
         case .getAllCities:
             return userServerPath.allCityies
@@ -237,10 +237,14 @@ extension UserRouter : APIRouter {
                 "page" : page ,
                 "limit" : 100
             ]
-        case .acceptOffer( _ ,  let method):
-            return [
-                "payment_method" : method
-            ]
+        case .acceptOffer( _ ,  let method , let cardId ):
+            var dic1 : [String : Any] = [ "payment_method" : method]
+            if cardId != 0 {
+                dic1["card_id"] = cardId
+            }
+            
+            return dic1
+          
         
         case .addAddressToFav(alias: let alias, lat: let lat , lng: let lng , isFav: let isFav , desc: let desc  ):
             return [

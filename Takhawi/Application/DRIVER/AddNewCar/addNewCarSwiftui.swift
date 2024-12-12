@@ -35,6 +35,15 @@ struct addNewCarSwiftui: View {
     @State var carDetails : CarDetailsResult?
     var action: (() -> Void)?
     
+    var IsArabicLang : Bool {
+        if LocalizationManager.shared.getLanguage() == .Arabic {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    
     
     
     
@@ -154,6 +163,7 @@ struct addNewCarSwiftui: View {
             }
             .padding()
             .frame(maxWidth: .infinity)
+            .environment(\.layoutDirection,  IsArabicLang ? .rightToLeft :  .leftToRight  )
             .background(Color("BackGroundColor" ))
             .onAppear(perform: {
                 activityIndicatorr.startAnimating()
