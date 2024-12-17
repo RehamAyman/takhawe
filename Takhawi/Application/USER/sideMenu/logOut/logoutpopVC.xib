@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -21,10 +21,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ykt-kX-iG3">
-                    <rect key="frame" x="29.333333333333343" y="225.66666666666666" width="334.33333333333326" height="400.66666666666674"/>
+                    <rect key="frame" x="29.333333333333343" y="191.66666666666666" width="334.33333333333326" height="468.66666666666674"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="log-out 1" translatesAutoresizingMaskIntoConstraints="NO" id="Mgj-hb-nyN">
-                            <rect key="frame" x="47.333333333333357" y="65.000000000000028" width="239.66666666666663" height="128"/>
+                            <rect key="frame" x="47.333333333333357" y="65.000000000000043" width="239.66666666666663" height="149.66666666666663"/>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ezm-PR-JnF">
                             <rect key="frame" x="284.33333333333337" y="20" width="30" height="30"/>
@@ -39,8 +39,8 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you sure you want to log out?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URF-de-eOU">
-                            <rect key="frame" x="20" y="218.00000000000003" width="294.33333333333331" height="50.333333333333343"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                            <rect key="frame" x="20" y="236.66666666666666" width="294.33333333333331" height="23.999999999999972"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                             <userDefinedRuntimeAttributes>
@@ -48,10 +48,10 @@
                             </userDefinedRuntimeAttributes>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8yn-mU-i2t">
-                            <rect key="frame" x="16" y="328.33333333333337" width="302.33333333333331" height="52.333333333333314"/>
+                            <rect key="frame" x="16" y="387.66666666666674" width="302.33333333333331" height="61"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8YI-B4-LiR">
-                                    <rect key="frame" x="0.0" y="0.0" width="141.33333333333334" height="52.333333333333336"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="141.33333333333334" height="61"/>
                                     <color key="backgroundColor" name="MainColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -70,7 +70,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tju-tD-2DI">
-                                    <rect key="frame" x="161.33333333333331" y="0.0" width="141" height="52.333333333333336"/>
+                                    <rect key="frame" x="161.33333333333331" y="0.0" width="141" height="61"/>
                                     <color key="backgroundColor" name="AppRed"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -103,7 +103,7 @@
                         <constraint firstItem="URF-de-eOU" firstAttribute="leading" secondItem="ykt-kX-iG3" secondAttribute="leading" constant="20" id="Yy4-iT-Ny1"/>
                         <constraint firstItem="Ezm-PR-JnF" firstAttribute="top" secondItem="ykt-kX-iG3" secondAttribute="top" constant="20" id="awD-Bm-CYx"/>
                         <constraint firstItem="8yn-mU-i2t" firstAttribute="leading" secondItem="ykt-kX-iG3" secondAttribute="leading" constant="16" id="gL1-NW-1ZI"/>
-                        <constraint firstItem="URF-de-eOU" firstAttribute="top" secondItem="Mgj-hb-nyN" secondAttribute="bottom" constant="25" id="l0G-qj-6Sr"/>
+                        <constraint firstItem="URF-de-eOU" firstAttribute="top" secondItem="Mgj-hb-nyN" secondAttribute="bottom" constant="22" id="l0G-qj-6Sr"/>
                         <constraint firstAttribute="trailing" secondItem="URF-de-eOU" secondAttribute="trailing" constant="20" id="osV-ga-LW5"/>
                         <constraint firstItem="Mgj-hb-nyN" firstAttribute="width" secondItem="ykt-kX-iG3" secondAttribute="width" multiplier="0.717846" id="uGh-9M-eGg"/>
                     </constraints>
@@ -119,7 +119,7 @@
             <constraints>
                 <constraint firstItem="ykt-kX-iG3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="5Dq-Y4-f27"/>
                 <constraint firstItem="ykt-kX-iG3" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.85" id="HRq-v8-alA"/>
-                <constraint firstItem="ykt-kX-iG3" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.47" id="ODZ-Vp-RHd"/>
+                <constraint firstItem="ykt-kX-iG3" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.55" id="ODZ-Vp-RHd"/>
                 <constraint firstItem="ykt-kX-iG3" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ZIT-0i-2aQ"/>
             </constraints>
             <point key="canvasLocation" x="14.503816793893129" y="19.718309859154932"/>

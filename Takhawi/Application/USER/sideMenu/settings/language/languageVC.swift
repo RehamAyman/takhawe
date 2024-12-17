@@ -49,7 +49,7 @@ class languageVC: BaseVC {
     //MARK: - Logic Methods -
     
     func changeToAr () {
-        self.arabicContainerView.borderColor = UIColor(named: "MainColor")
+        self.arabicContainerView.borderColor = UIColor(named: colors.mainColor.rawValue)
         self.englishContainerView.backgroundColor = UIColor.systemGray4.withAlphaComponent(0.5 )
         self.arabicContainerView.backgroundColor = UIColor.white
         self.englishContainerView.borderWidth = 0

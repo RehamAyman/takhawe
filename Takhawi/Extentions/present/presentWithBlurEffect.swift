@@ -15,8 +15,8 @@ extension BaseVC  {
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = self.view.bounds
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        blurEffectView.alpha = 0.8
-        blurEffectView.backgroundColor = UIColor(named: "MainColor")?.withAlphaComponent(0.12)
+        blurEffectView.alpha = 0.8//colors.mainColor.rawValue
+        blurEffectView.backgroundColor = UIColor(named: colors.mainColor.rawValue)?.withAlphaComponent(0.12)
         blurEffectView.tag = 101
         self.view.addSubview(blurEffectView)
         vc.modalTransitionStyle = .coverVertical

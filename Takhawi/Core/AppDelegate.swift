@@ -43,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSPlacesClient.provideAPIKey("AIzaSyAfTSBkcXfJa5Zf0YHN3-m-gJFFhvzVu4U")
         self.location?.requestAlwaysAuthorization()
         self.location?.requestWhenInUseAuthorization()
-        AppDelegate.window?.tintColor = UIColor(named: "MainColor")
+        AppDelegate.window?.tintColor = UIColor(named: colors.mainColor.rawValue)
         
         Intercom.setBottomPadding(90)
       

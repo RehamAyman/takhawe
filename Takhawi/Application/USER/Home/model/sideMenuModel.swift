@@ -13,3 +13,8 @@ struct sideMenuDataModel {
     let name : String
     let icon : String
 }
+
+struct checkOutModel : Codable {
+    let  checkOutId : String?
+}
+

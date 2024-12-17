@@ -50,8 +50,8 @@ extension  notificationViewVC : UITableViewDelegate , UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
       if let headerView = view as? UITableViewHeaderFooterView {
-          headerView.contentView.backgroundColor =  UIColor(named: "BackGroundColor")
-          headerView.textLabel?.textColor = UIColor(named: "MainColor")
+          headerView.contentView.backgroundColor =  UIColor(named: colors.background.rawValue)
+          headerView.textLabel?.textColor = UIColor(named: colors.mainColor.rawValue)
       }
   }
     

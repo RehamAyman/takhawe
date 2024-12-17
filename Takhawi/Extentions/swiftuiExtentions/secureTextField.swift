@@ -45,13 +45,13 @@ struct SecureInputView: View {
                 isSecured.toggle()
             }) {
                 Image(systemName: self.isSecured ? "eye.slash" : "eye")
-                    .accentColor(Color( "MainColor"))
+                    .accentColor(Color(colors.mainColor.rawValue))
             }
         }  .font(.custom(AppFont.Regular.rawValue, size: 14))
             .padding()
             .overlay(
                 RoundedRectangle(cornerRadius: 25)
-                       .stroke(Color("MainColor"), lineWidth: 2)
+                       .stroke(Color(colors.mainColor.rawValue), lineWidth: 2)
                        .frame(height: 50 )
             )
            

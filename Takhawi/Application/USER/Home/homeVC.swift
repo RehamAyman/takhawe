@@ -191,6 +191,7 @@ class homeVC: BaseVC, sendDataBackDelegate{
     
     private func configureInitialDesign() {
         self.title = "".localized
+       
         self.bottomView.layer.applySketchShadow()
         self.searchView.layer.applySketchShadow()
         self.cityContainerView.layer.applySketchShadow()
@@ -223,7 +224,7 @@ class homeVC: BaseVC, sendDataBackDelegate{
         } else {
             hotelIconOutlet.centerXAnchor.constraint(equalTo: view.trailingAnchor, constant: -40).isActive = true
         }
-    
+
 
   
     }
@@ -313,19 +314,18 @@ class homeVC: BaseVC, sendDataBackDelegate{
             
         } else {
            // check if the user select an destination or not then move to make a trip popup :)
-            if self.secMydestinationOutlet.titleLabel?.text == "Destination!".localized {
+           
+            if self.secMydestinationOutlet.titleLabel?.text == "Destination!" ||  self.secMydestinationOutlet.titleLabel?.text == "وين الوجهة" {
                 showInfoTopAlert(withMessage:  "you should select a destination first!.".localize )
             } else {
                 print(self.selectedFeatures)
-                
                 self.continueToVipTripCycle()
-   
             }
         }
     }
     
     
-    
+     
     @IBAction func joinatripsegmentbutton(_ sender: UIButton) {
         let vc = homeSearchVC ()
         vc.currentLat = locationManager.location?.coordinate.latitude ?? 0.0

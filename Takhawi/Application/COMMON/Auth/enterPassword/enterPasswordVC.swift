@@ -89,40 +89,49 @@ extension enterPasswordVC {
                    
                     let userType = response.result?.user?.role
                     if userType == role.user.rawValue {
-                        
-                        UserDefaults.isLogin = true
-                        self?.registerFcmTocken()
-                        let vc =  homeVC()
-                        self?.push(vc)
-                        let ic = ICMUserAttributes()
-                        ic.email = UserDefaults.user?.user?.email ?? ""
-                        ic.name = UserDefaults.user?.user?.name ?? ""
-                        ic.phone = UserDefaults.user?.user?.phone ?? ""
-                        Intercom.loginUser(with: ic ) { result  in
-                            print("🤠🤠🤠🤠")
-                            print(result)
+                        if response.result?.user?.passenger_status == STATUS.REJECTED.rawValue {
+                            showPopTopAlert(title: "Your Account has been rejected".localize, withMessage: "please contact us if you have any questions".localize, success: false )
+                        } else {
+                            UserDefaults.isLogin = true
+                            self?.registerFcmTocken()
+                            let vc =  homeVC()
+                            self?.push(vc)
+                            let ic = ICMUserAttributes()
+                            ic.email = UserDefaults.user?.user?.email ?? ""
+                            ic.name = UserDefaults.user?.user?.name ?? ""
+                            ic.phone = UserDefaults.user?.user?.phone ?? ""
+                            Intercom.loginUser(with: ic ) { result  in
+                                print("🤠🤠🤠🤠")
+                                print(result)
+                            }
                         }
                         
                     } else if userType == role.driver.rawValue  {
-                        // check driver status
-                     
-                        if response.result?.user?.driver_status == "APPROVED" {
+                    // check driver status
+                        if let status = STATUS(rawValue: response.result?.user?.driver_status ?? "" ) {
+                        switch status {
+                        case .APPROVED :
                             UserDefaults.isLogin = true
                             self?.registerFcmTocken()
                             let storyboard = UIStoryboard(name: "Main", bundle: nil)
                             let vc = storyboard.instantiateViewController(withIdentifier: "DriverTabbar") as! DriverTabbar
                             self?.navigationController?.pushViewController(vc, animated: true)
-                         
-                        } else if response.result?.user?.driver_status == "REGISTERED" {
+                            
+                        case .REGISTERED :
                             self?.showDriverStatusLoading(bool: true )
                            // self?.getCarDetails()
                             self?.checkDriverStatus()
-                        } else if response.result?.user?.driver_status == "PENDING" {
+                        case .PENDING :
                             showPopTopAlert(title: "your application is under review".localize, withMessage: "please contact us if you have any questions".localize, success: false )
                             
-                        } else if response.result?.user?.driver_status == "REJECTED" {
+                        case .REJECTED :
+                          
                             showPopTopAlert(title: "Your Account has been rejected".localize, withMessage: "please contact us if you have any questions".localize, success: false )
                         }
+                        
+                    }
+                        
+
                         
                     }
  

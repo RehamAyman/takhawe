@@ -59,7 +59,7 @@ struct registerTabs: View {
             Text ("Signup".localize)
                 
                 .font(.custom( IsArabicLang ? AppFont.arBold.rawValue : AppFont.Bold.rawValue, size: 33))
-                .foregroundColor(Color("MainColor"))
+                .foregroundColor(Color(colors.mainColor.rawValue))
                 .padding(8)
 
             Group {

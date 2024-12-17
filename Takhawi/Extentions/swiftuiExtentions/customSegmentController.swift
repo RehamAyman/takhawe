@@ -35,7 +35,7 @@ struct CustomSegmentedControl: View {
                     .background (
                         ZStack{
                             if selectedIndex == 0 {
-                                Color( "MainColor")
+                                Color( colors.mainColor.rawValue)
                                 
                                   //  .matchedGeometryEffect(id: "TAB", in: animation)
                             }}
@@ -60,7 +60,7 @@ struct CustomSegmentedControl: View {
                     .background (
                         ZStack{
                             if selectedIndex == 1 {
-                                Color( "MainColor")
+                                Color( colors.mainColor.rawValue)
                                    
                                   //  .matchedGeometryEffect(id: "TAB", in: animation)
                             }}

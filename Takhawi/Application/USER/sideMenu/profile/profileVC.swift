@@ -62,10 +62,12 @@ class profileVC: BaseVC {
         self.addnNewCar.addTapGesture {
             let vc = driverAddNewCarVC()
             vc.action = {
-                self.addnNewCar.isHidden = true
-                self.addnNewCar.isUserInteractionEnabled = false
-                self.vechcleupdateView.isHidden = false
-                self.vechcleupdateView.isUserInteractionEnabled = true
+                self.getProfileDetails(withLoader: false )
+//                self.addnNewCar.isHidden = true
+//                self.addnNewCar.isUserInteractionEnabled = false
+//                self.vechcleupdateView.isHidden = false
+//                self.vechcleupdateView.isUserInteractionEnabled = true
+                
             }
             self.push(vc)
         }

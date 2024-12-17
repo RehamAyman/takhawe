@@ -31,6 +31,7 @@ struct User : Codable {
     let deletedAt : String?
     let cityId : Int?
     let driver_status : String?
+    let passenger_status : String?
   
     enum CodingKeys: String, CodingKey {
 
@@ -53,6 +54,7 @@ struct User : Codable {
         case deletedAt = "deletedAt"
         case cityId = "cityId"
         case driver_status = "driver_status"
+        case passenger_status = "passenger_status"
         
     }
 

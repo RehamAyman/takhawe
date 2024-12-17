@@ -44,12 +44,12 @@ extension driverOffersVC : UITableViewDelegate , UITableViewDataSource {
         
         if let features = item.features {
            
-            cell.airCondIcon.tintColor = features.contains("AIR CONDITIONER") ?  UIColor(named: "MainColor") : UIColor.systemGray5
-            cell.wifiIcon.tintColor = features.contains(Features.wifi.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
-            cell.musicIcon.tintColor = features.contains(Features.music.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
-            cell.foodicon.tintColor = features.contains(Features.food.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
-            cell.smokingIcon.tintColor = features.contains(Features.noSmoking.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
-            cell.babyIcon.tintColor = features.contains(Features.pet.rawValue) ?  UIColor(named: "MainColor") : UIColor.systemGray5
+            cell.airCondIcon.tintColor = features.contains("AIR CONDITIONER") ?  UIColor(named: colors.mainColor.rawValue) : UIColor.systemGray5
+            cell.wifiIcon.tintColor = features.contains(Features.wifi.rawValue) ?  UIColor(named: colors.mainColor.rawValue) : UIColor.systemGray5
+            cell.musicIcon.tintColor = features.contains(Features.music.rawValue) ?  UIColor(named: colors.mainColor.rawValue) : UIColor.systemGray5
+            cell.foodicon.tintColor = features.contains(Features.food.rawValue) ?  UIColor(named: colors.mainColor.rawValue) : UIColor.systemGray5
+            cell.smokingIcon.tintColor = features.contains(Features.noSmoking.rawValue) ?  UIColor(named: colors.mainColor.rawValue) : UIColor.systemGray5
+            cell.babyIcon.tintColor = features.contains(Features.pet.rawValue) ?  UIColor(named: colors.mainColor.rawValue) : UIColor.systemGray5
            
         }
         cell.driverName.text = item.driver?.name

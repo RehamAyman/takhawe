@@ -15,10 +15,10 @@ extension MDCOutlinedTextArea {
     
     func handelTextArea (placeHolder : String) {
         
-        self.setOutlineColor(UIColor( named: "MainColor") ?? UIColor.black, for: .normal)
-        self.setOutlineColor(UIColor( named: "MainColor") ?? UIColor.black, for: .editing)
-        self.setFloatingLabel(  UIColor( named: "MainColor") ?? UIColor.black , for: .editing)
-        self.setNormalLabel( UIColor( named: "MainColor") ?? UIColor.black , for: .normal)
+        self.setOutlineColor(UIColor( named: colors.mainColor.rawValue) ?? UIColor.black, for: .normal)
+        self.setOutlineColor(UIColor( named: colors.mainColor.rawValue) ?? UIColor.black, for: .editing)
+        self.setFloatingLabel(  UIColor( named: colors.mainColor.rawValue) ?? UIColor.black , for: .editing)
+        self.setNormalLabel( UIColor( named: colors.mainColor.rawValue) ?? UIColor.black , for: .normal)
         self.placeholder = placeHolder
         self.preferredContainerHeight = 112
         self.leadingEdgePaddingOverride = 25
@@ -27,10 +27,10 @@ extension MDCOutlinedTextArea {
     
     func handelCellTextArea (placeHolder : String) {
         
-        self.setOutlineColor(UIColor( named: "MainColor") ?? UIColor.black, for: .normal)
-        self.setOutlineColor(UIColor( named: "MainColor") ?? UIColor.black, for: .editing)
-        self.setFloatingLabel(  UIColor( named: "MainColor") ?? UIColor.black , for: .editing)
-        self.setNormalLabel( UIColor( named: "MainColor") ?? UIColor.black , for: .normal)
+        self.setOutlineColor(UIColor( named: colors.mainColor.rawValue) ?? UIColor.black, for: .normal)
+        self.setOutlineColor(UIColor( named: colors.mainColor.rawValue) ?? UIColor.black, for: .editing)
+        self.setFloatingLabel(  UIColor( named: colors.mainColor.rawValue) ?? UIColor.black , for: .editing)
+        self.setNormalLabel( UIColor( named: colors.mainColor.rawValue) ?? UIColor.black , for: .normal)
         self.placeholder = placeHolder
         self.preferredContainerHeight = 80
         self.leadingEdgePaddingOverride = 25

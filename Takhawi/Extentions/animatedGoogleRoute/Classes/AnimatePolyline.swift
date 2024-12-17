@@ -23,7 +23,7 @@ open class AnimatePolyline {
         }
     }
     open var duration: TimeInterval = 3.0
-    open var strokeColor: UIColor =  UIColor(named: "MainColor") ?? UIColor.blue {
+    open var strokeColor: UIColor =  UIColor(named: colors.mainColor.rawValue) ?? UIColor.blue {
         didSet {
             currentSegment.strokeColor = strokeColor
             backgroundSegment.strokeColor = strokeColor

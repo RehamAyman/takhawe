@@ -9,4 +9,5 @@ import Foundation
 enum colors : String {
     case mainColor = "MainColor"
     case disable = "disable"
+    case background = "BackGroundColor"
 }

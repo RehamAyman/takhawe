@@ -125,29 +125,14 @@ class ReserveTheTripVC: BaseVC {
     
     
     
-    func GotoNextStep (tripId : Int ) {
-        let vc = successBookViewVC()
-        vc.modalTransitionStyle = .crossDissolve
-        vc.modalPresentationStyle = .overCurrentContext
-        if viptrip {
-            vc.drivername = self.offer?.driver?.name ?? ""
-        } else {
-            vc.drivername = self.tripDetails?.driver_name ?? ""
-        }
-    vc.action = {
-        let vc = trackYourTripVC()
-        vc.vipTrip = self.viptrip
-        vc.tripId = tripId
-        vc.basicPickLat = self.tripDetails?.pickuplocation?.lat ?? 0
-        vc.basicPickLng =  self.tripDetails?.pickuplocation?.lng ?? 0
-        vc.basicDesLat = self.tripDetails?.destinationlocation?.lat ?? 0
-        vc.basicDesLng = self.tripDetails?.destinationlocation?.lng ?? 0
+   
     
-        self.push(vc)
-    }
-        self.present( vc , animated: true )
-    }
+    
 }
+
+
+
+
 
 
 //MARK: - Networking -
@@ -162,7 +147,7 @@ extension ReserveTheTripVC {
         UserRouter.acceptOffer(id: offer?.id ?? 0 , paymentMethod: self.paymentMethod.rawValue, cardId: self.paymentMethod == .card ? self.selectedCard : 0  ).send { [weak self ] (response: APIGlobalResponse) in
             guard let self = self else { return }
             if response.status == true {
-                self.GotoNextStep(tripId: offer?.trip_id ?? 0 )
+                self.GotoNextStep(tripId: offer?.trip_id ?? 0, appleCheckOutId: "" )
             }
         }
     }
@@ -172,13 +157,13 @@ extension ReserveTheTripVC {
     func joinAbasicTrip () {
         print("confirm basic action ")
         print(self.paymentMethod.rawValue)
-        
+       
         
         activityIndicatorr.startAnimating()
-        UserRouter.joinABasicTrip(id: tripDetails?.id ?? 0 , paymentMethod: self.paymentMethod.rawValue , copon: self.dicountCodeTextField.text ?? "" , cardid: self.paymentMethod == .card ? self.selectedCard : 0 ).send {[weak self] ( response : APIGlobalResponse ) in
+        UserRouter.joinABasicTrip(id: tripDetails?.id ?? 0 , paymentMethod: self.paymentMethod.rawValue , copon: self.dicountCodeTextField.text ?? "" , cardid: self.paymentMethod == .card ? self.selectedCard : 0 ).send {[weak self] ( response : APIGenericResponse<checkOutModel>) in
             guard let self = self else { return }
             if  response.status == true  {
-                self.GotoNextStep(tripId: tripDetails?.id ?? 0 )
+                self.GotoNextStep(tripId: tripDetails?.id ?? 0, appleCheckOutId: response.result?.checkOutId ?? ""  )
             }
         }
     }

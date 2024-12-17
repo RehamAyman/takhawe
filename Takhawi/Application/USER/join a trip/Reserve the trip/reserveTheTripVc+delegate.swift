@@ -192,5 +192,61 @@ extension ReserveTheTripVC : UITableViewDelegate , UITableViewDataSource {
     
     
     
+    // confirmation +  success process 
+    
+    func GotoNextStep (tripId : Int  , appleCheckOutId : String) {
+        if self.paymentMethod == .applePay {
+            
+         
+            self.presentApplePayView(appleCheckOutId: appleCheckOutId)
+            
+            
+            //paymentWebView
+        } else {
+            self.goToSuccessScreen()
+        }
+        
+        
+      
+    }
+    
+    private func presentApplePayView ( appleCheckOutId : String ) {
+        print("apple checkout id is 🍎🍎🍎🍎")
+        print(appleCheckOutId)
+        let type : String =   viptrip ? "vip-trip" : "basic-trip"
+        let vc = paymentWebView()
+        vc.requestMethod = .get
+        vc.webUrl = Server.baseURL.rawValue +  "payment-getway/apple-pay-session?checkoutId=\(appleCheckOutId)&type=\(type)"
+        vc.action = {
+            self.goToSuccessScreen()
+            print("🍎🍎🍎🍎 apple pay pass : done successfully ")
+        }
+        self.present(vc, animated: true )
+    }
+    
+    private func goToSuccessScreen () {
+        let vc = successBookViewVC()
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .overCurrentContext
+        if viptrip {
+            vc.drivername = self.offer?.driver?.name ?? ""
+        } else {
+            vc.drivername = self.tripDetails?.driver_name ?? ""
+        }
+    vc.action = {
+        let vc = trackYourTripVC()
+        vc.vipTrip = self.viptrip
+        vc.tripId = self.tripId
+        vc.basicPickLat = self.tripDetails?.pickuplocation?.lat ?? 0
+        vc.basicPickLng =  self.tripDetails?.pickuplocation?.lng ?? 0
+        vc.basicDesLat = self.tripDetails?.destinationlocation?.lat ?? 0
+        vc.basicDesLng = self.tripDetails?.destinationlocation?.lng ?? 0
+
+        self.push(vc)
+    }
+        self.present( vc , animated: true )
+    }
+    
+    
     
 }

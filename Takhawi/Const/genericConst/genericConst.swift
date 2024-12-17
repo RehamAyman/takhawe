@@ -41,11 +41,15 @@ case arrived  = "ARRIVED"
 case inProgress = "INPROGRESS"
 case cancelled = "CANCELLED"
 case completed = "COMPLETED"
-    
-    
-    
+
 }
 
+enum STATUS : String {
+    case REJECTED
+    case PENDING
+    case REGISTERED
+    case APPROVED
+}
 
 
 enum reportaccedint {

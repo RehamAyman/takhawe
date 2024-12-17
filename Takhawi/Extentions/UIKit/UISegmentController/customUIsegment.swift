@@ -59,7 +59,7 @@ extension UIImage{
 
 class ColoredCustomUISegmentedControl: UISegmentedControl{
     private let segmentInset: CGFloat = 5       //your inset amount
-    private let segmentImage: UIImage? = UIImage(color: UIColor(named: "MainColor") ?? UIColor.white)    //your color
+    private let segmentImage: UIImage? = UIImage(color: UIColor(named: colors.mainColor.rawValue) ?? UIColor.white)    //your color
 
     override func layoutSubviews(){
         super.layoutSubviews()

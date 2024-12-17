@@ -134,7 +134,7 @@ extension tripsSideMenuVC : UITableViewDelegate , UITableViewDataSource {
         let titleTextAttributes1 = [NSAttributedString.Key.foregroundColor: UIColor.white]
         segment.setTitleTextAttributes(titleTextAttributes1 as [NSAttributedString.Key : Any], for:.selected)
    
-        segment.selectedSegmentTintColor = UIColor(named: "MainColor")
+        segment.selectedSegmentTintColor = UIColor(named: colors.mainColor.rawValue)
         segment.backgroundColor = UIColor(named: "secFavSeg")
         self.segment.setTitle(  "Upcoming".localize , forSegmentAt: 0)
         self.segment.setTitle(  "Completed".localize , forSegmentAt: 1)

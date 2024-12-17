@@ -32,7 +32,7 @@ struct CustomSegmentedPickerView: View {
 
                 // The background that moves between the items
                 Circle()
-                    .foregroundColor(Color( "MainColor"))
+                    .foregroundColor(Color( colors.mainColor.rawValue))
                     .frame(
                         width: 100,
                         height: 100

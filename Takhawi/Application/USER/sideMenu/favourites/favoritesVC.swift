@@ -47,7 +47,7 @@ class favoritesVC: BaseVC {
         self.title = "".localized
         let titleTextAttributes1 = [NSAttributedString.Key.foregroundColor: UIColor.white]
         segment.setTitleTextAttributes(titleTextAttributes1 as [NSAttributedString.Key : Any], for:.selected)
-        segment.selectedSegmentTintColor = UIColor(named: "MainColor")
+        segment.selectedSegmentTintColor = UIColor(named: colors.mainColor.rawValue)
         segment.backgroundColor = UIColor(named: "secFavSeg")
         tableView.delegate = self
         tableView.dataSource = self

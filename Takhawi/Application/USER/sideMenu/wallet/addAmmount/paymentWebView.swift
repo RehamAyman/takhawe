@@ -9,13 +9,15 @@
 
 import UIKit
 import WebKit
+import Alamofire
 
 class paymentWebView : UIViewController, WKNavigationDelegate {
     
     var action: (() -> Void)?
-    
-    
     var webView: WKWebView!
+    var webUrl : String =  Server.baseURL.rawValue + "saved-card"
+    var requestMethod : HTTPMethod = .post
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,16 +28,14 @@ class paymentWebView : UIViewController, WKNavigationDelegate {
         self.view.addSubview(webView)
         
         // Set up URLRequest with custom header
-        if let url = URL(string: Server.baseURL.rawValue + "saved-card") {
+        if let url = URL(string: self.webUrl) {
             var request = URLRequest(url: url)
             request.setValue( UserDefaults.accessToken ?? "" , forHTTPHeaderField: HTTPHeaderField.authentication.rawValue)
-            request.method = .post
+            request.method = self.requestMethod
             webView.load(request)
         }
     }
-    
-    
-    // WKNavigationDelegate methods to get callbacks
+
        
        // Called when the web view begins loading content
        func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
