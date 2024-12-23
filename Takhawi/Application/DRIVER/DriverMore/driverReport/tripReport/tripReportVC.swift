@@ -56,12 +56,16 @@ extension tripReportVC {
         activityIndicatorr.startAnimating()
         DriverRouter.reportDetails(id: self.tripId).send { [weak self ] ( response : APIGenericResponse<tripReportDetailsResult> )  in
             guard let self = self else { return }
+            
+            
             if let res = response.result {
+                
+                
                 self.tripNo.text = "Trip no." + "#" + "\(self.tripId)"
                 self.netProfit.text = "Net profit :"  + "\(res.net_profit ?? 0 )" + "SAR"
                 self.tripPrice.text = "\(res.price ?? 0 )" + "SAR"
                 self.from.text = res.pickup_location?.description ?? "--"
-                self.to.text = res.destination?.description ?? "--"
+                self.to.text = res.Destination?.description ?? "--"
                 
                 
             }

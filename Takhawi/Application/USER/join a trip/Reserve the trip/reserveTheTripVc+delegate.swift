@@ -216,7 +216,7 @@ extension ReserveTheTripVC : UITableViewDelegate , UITableViewDataSource {
         let type : String =   viptrip ? "vip-trip" : "basic-trip"
         let vc = paymentWebView()
         vc.requestMethod = .get
-        vc.webUrl = Server.baseURL.rawValue +  "payment-getway/apple-pay-session?checkoutId=\(appleCheckOutId)&type=\(type)"
+        vc.webUrl =  Server.applePayBase.rawValue + "\(appleCheckOutId)&type=\(type)"
         vc.action = {
             self.goToSuccessScreen()
             print("🍎🍎🍎🍎 apple pay pass : done successfully ")

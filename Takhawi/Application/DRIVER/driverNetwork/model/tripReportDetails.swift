@@ -11,8 +11,8 @@ struct tripReportDetailsResult : Codable {
     let start_date : String?
     let end_date : String?
     let price : Int?
-    let pickup_location : Pickup_location?
-    let destination : reportDestination?
+    let pickup_location : Pickuplocation1?
+    let Destination : Pickuplocation1?
     let passengers : [reportPassengers]?
     let net_profit : Int?
 
@@ -23,7 +23,7 @@ struct tripReportDetailsResult : Codable {
         case end_date = "end_date"
         case price = "price"
         case pickup_location = "pickup_location"
-        case destination = "destination"
+        case Destination = "destination"
         case passengers = "passengers"
         case net_profit = "net_profit"
     }
@@ -34,8 +34,8 @@ struct tripReportDetailsResult : Codable {
         start_date = try values.decodeIfPresent(String.self, forKey: .start_date)
         end_date = try values.decodeIfPresent(String.self, forKey: .end_date)
         price = try values.decodeIfPresent(Int.self, forKey: .price)
-        pickup_location = try values.decodeIfPresent(Pickup_location.self, forKey: .pickup_location)
-        destination = try values.decodeIfPresent(reportDestination.self, forKey: .destination)
+        pickup_location = try values.decodeIfPresent(Pickuplocation1.self, forKey: .pickup_location)
+        Destination = try values.decodeIfPresent(Pickuplocation1.self, forKey: .Destination)
         passengers = try values.decodeIfPresent([reportPassengers].self, forKey: .passengers)
         net_profit = try values.decodeIfPresent(Int.self, forKey: .net_profit)
     }

@@ -25,7 +25,8 @@ enum Server: String {
     case rechargeURL = "https://writingservices.aait-sa.com/wallet/charge/"
     case joinUsURL = "https://writingservices.aait-sa.com/option-register"
     case imageBase =   "https://api.takhawe.com/" //"https://dev-dash-takhawe.hayah.tech/"
-    
+    case applePayBase = "https://api.takhawe.com/api/payment-getway/apple-pay-session?checkoutId="
+
 }
 
 enum HTTPHeaderField: String {

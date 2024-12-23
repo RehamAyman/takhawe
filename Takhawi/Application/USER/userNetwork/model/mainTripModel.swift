@@ -68,6 +68,20 @@ struct Pickup_location : Codable {
 
 }
 
+
+struct Pickuplocation1 : Codable {
+    
+    let description : String?
+
+    enum CodingKeys: String, CodingKey {
+
+        case description = "description"
+    }
+
+ 
+
+}
+
 struct MDestination : Codable {
     let lat : Double?
     let lng : Double?

@@ -71,6 +71,7 @@ class homeVC: BaseVC, sendDataBackDelegate{
     var destLat : Double = 0.0
     var destLong : Double = 0.0 
     var selectedDate : Date = Date()
+   
     var selectedCityId : Int = 0
     var lottieAnimationView: LottieAnimationView!
     var currentUserLocation: CLLocationCoordinate2D?
@@ -261,8 +262,6 @@ class homeVC: BaseVC, sendDataBackDelegate{
         self.presentWithEffect(vc:  vc )
         vc.makeAtripCalendar = {  [weak self] (value , date ) in
             self?.secCalendar.setTitle( value , for: .normal)
-           
-            
             self?.selectedDate = date.tomorrow
             self?.removePresentEffect()
         }
@@ -294,14 +293,15 @@ class homeVC: BaseVC, sendDataBackDelegate{
             if tripHaveDestination && self.selectedCityId != 0  {
                 print("selectedCityId : \(self.selectedCityId)")
                 print("destination : \(self.destLat ) , \(self.destLong)")
-                print("date : \(self.selectedDate.ISO8601Format())")
-                
                 let vc = tripListVC()
                 vc.tripLat = self.destLat
                 vc.tripLong = self.destLong
-                vc.tripDate = self.selectedDate.ISO8601Format()
+                vc.tripDate = self.selectedDate.apiDate()
                 vc.cityId = self.selectedCityId
                 self.push(vc)
+                
+                
+                
                 
             } else {
                 AlertKitAPI.present(
@@ -356,13 +356,14 @@ class homeVC: BaseVC, sendDataBackDelegate{
     
     
     @IBAction func calendarAction(_ sender: UIButton) {
+        print("first calendar action ")
       
         let vc = selectDateVC()
         vc.comeFromMakeAtrip = segment.selectedSegmentIndex == 0 ? false : true
         self.presentWithEffect(vc:  vc )
         vc.change = {  [weak self] (value , date ) in
             self?.calendarOutlet.setTitle( value , for: .normal)
-            self?.selectedDate = date.tomorrow
+            self?.selectedDate = date
             print("❤️")
             print(date)
             print(date.tomorrow)

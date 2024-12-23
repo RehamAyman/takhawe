@@ -22,7 +22,7 @@ class tripListVC: BaseVC {
     
     
     var cityId : Int = 0
-    var tripDate : String = Date().ISO8601Format()
+    var tripDate : String = Date().apiDate()
     var tripLat : Double = 0.0
     var tripLong : Double = 0.0
     var allTrips : [BasicTripResult] = []
@@ -91,18 +91,19 @@ class tripListVC: BaseVC {
     
     
     private func getAllTrips (filter : String) {
+        
+        print("😄😄😄😄😄😄😄😄😄")
+        print( self.tripDate)
+        
+        
+        
         activityIndicatorr.startAnimating()
         UserRouter.getAllBasicTrips(cityId: self.cityId, lat: self.tripLat, lng: self.tripLong, StartdDate: self.tripDate, filter: filter ).send { (response: APIGenericResponse<[BasicTripResult]>) in
-          
             guard let data =  response.result else { return }
             self.allTrips = data 
             self.tableView.reloadData()
             }
-       
     }
-    
-    
-    
 }
 
 
