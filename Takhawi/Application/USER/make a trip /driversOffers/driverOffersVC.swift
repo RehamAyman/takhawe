@@ -95,7 +95,6 @@ extension driverOffersVC {
             print("heey there ✅ success passed the offers ... ")
             self.offers = offers
             self.tableview.reloadData()
-            
             self.dismiss(animated: true )
             
         }

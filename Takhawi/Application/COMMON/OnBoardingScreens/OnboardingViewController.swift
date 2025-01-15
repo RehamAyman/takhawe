@@ -34,7 +34,7 @@ class OnboardingViewController: UIViewController {
             let userType = UserDefaults.user?.user?.role
             if userType == role.user.rawValue {
                 
-                let vc =  homeVC()
+                let vc =   homeVC()
                 let nav = CustomNavigationController(rootViewController: vc)
                 AppHelper.changeWindowRoot(vc: nav)
             } else {

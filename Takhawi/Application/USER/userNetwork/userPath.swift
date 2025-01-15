@@ -62,7 +62,7 @@ extension userServerPath : ServerPath {
         case .careateVipTrip :
             return "vip-trip"
         case .getVipOffers(id: let id) :
-            return "/vip-trip/offers/\(id)"
+            return "vip-trip/offers/\(id)"
         case .acceptOffer( let id ,   _ ) :
             return "vip-trip/accept-offer/\(id)"
         case .allCityies:

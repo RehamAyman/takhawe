@@ -28,20 +28,12 @@ class DriverMoreVC: BaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.handleVCActions()
         self.getProfile()
         NotificationCenter.default.addObserver(self, selector: #selector(handleCustomNotification(_:)), name: .updateHomeProfile, object: nil)
-       
-        
     }
 
-    
-
-    
-
-    
-    
+  
     
     @IBAction func logoutAction(_ sender: UIButton) {
         let vc =    logoutpopVC()

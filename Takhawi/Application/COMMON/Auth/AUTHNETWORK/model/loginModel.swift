@@ -49,7 +49,7 @@ struct  SwitchRoleResult : Codable {
    // let hobbies : [String]?
     let rate : Int?
 //    let vehicles : String?
-    let activeTrip : String?
+  //  let activeTrip : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -71,7 +71,7 @@ struct  SwitchRoleResult : Codable {
       //  case hobbies = "Hobbies"
         case rate = "rate"
 //        case vehicles = "Vehicles"
-        case activeTrip = "activeTrip"
+     //   case activeTrip = "activeTrip"
     }
 
     init(from decoder: Decoder) throws {
@@ -94,7 +94,7 @@ struct  SwitchRoleResult : Codable {
       //  hobbies = try values.decodeIfPresent([String].self, forKey: .hobbies)
         rate = try values.decodeIfPresent(Int.self, forKey: .rate)
 //        vehicles = try values.decodeIfPresent(String.self, forKey: .vehicles)
-        activeTrip = try values.decodeIfPresent(String.self, forKey: .activeTrip)
+        //  activeTrip = try values.decodeIfPresent(String.self, forKey: .activeTrip)
     }
 
 }

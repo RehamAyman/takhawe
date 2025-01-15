@@ -356,7 +356,6 @@ class homeVC: BaseVC, sendDataBackDelegate{
     
     
     @IBAction func calendarAction(_ sender: UIButton) {
-        print("first calendar action ")
       
         let vc = selectDateVC()
         vc.comeFromMakeAtrip = segment.selectedSegmentIndex == 0 ? false : true
@@ -364,20 +363,12 @@ class homeVC: BaseVC, sendDataBackDelegate{
         vc.change = {  [weak self] (value , date ) in
             self?.calendarOutlet.setTitle( value , for: .normal)
             self?.selectedDate = date
-            print("❤️")
-            print(date)
-            print(date.tomorrow)
-            print(value)
             self?.removePresentEffect()
             print("hello i select join a trip date btw ")
         }
         vc.dismissAction = {
             self.removePresentEffect()
         }
-        
-
-        
-        
     }
     
     

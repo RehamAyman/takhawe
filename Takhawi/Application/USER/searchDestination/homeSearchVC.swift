@@ -102,27 +102,7 @@ class homeSearchVC: BaseVC{
         guard let url = URL(string: urlString) else { return }
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
-//            
-//            if let error = error {
-//                       print("Error fetching predictions: \(error.localizedDescription)")
-//                       return
-//                   }
-//
-//                   guard let data = data else { return }
-//
-//            do {
-//                let result = try JSONDecoder().decode(PlaceAutocompleteResponse.self, from: data)
-//               
-//                for i in result.predictions {
-//                    print("❤️")
-//                    print(i)
-//                }
-//
-//                  } catch {
-//                      print("Error decoding JSON: \(error.localizedDescription)")
-//                  }
-//              }
-//
+
             
             
                         guard let data = data, error == nil else {
