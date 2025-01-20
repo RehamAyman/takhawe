@@ -65,7 +65,7 @@ class MySocketManager {
     
     func disconnect() {
         print(" 🌏🌏 disconnect 🌏🌏")
-       // socket.disconnect()
+        //socket.disconnect()
     }
     
     
@@ -115,15 +115,43 @@ class MySocketManager {
             print("2- update my location to the server ")
             self.socket.emit("update location", LocationData )
         }
-        
-//        let repeater = RepeatingFunction()
-//        repeater.startRepeatingTask()
-
-        
+    
        
     }
     
- 
+// /Trip status change/
+    
+    
+    
+    
+    
+    
+    func listenToTripStatus ( completion: @escaping (updateStatusResult) -> Void)   {
+        
+        
+        //trip status change
+        socket.on( "trip status change") { data, ack in
+            
+            print("🌏socket back with trip status changes data 🌏")
+            print(data)
+            
+            if let dataArray = data as? [[String: Any]] {
+                    do {
+                        // Convert the array of dictionaries into JSON data
+                        let jsonData = try JSONSerialization.data(withJSONObject: dataArray, options: [])
+                        // Decode the JSON data into an array of Offer objects
+                        let status = try JSONDecoder().decode([updateStatusResult].self, from: jsonData)
+                        completion ( status.first ?? updateStatusResult(status: "") )
+                    } catch {
+                        print("Error decoding trip status changes data: \(error)")
+                    }
+                } else {
+                        print("Data format is not as expected")
+                }
+        }
+    }
+    
+    
     
  //MARK: - -- USER LISTEN TO NEW OFFERS METHOD --
     

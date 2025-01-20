@@ -322,6 +322,8 @@
 		CE5B60482CAD4A070093A469 /* repeatingClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B60472CAD4A070093A469 /* repeatingClass.swift */; };
 		CE5B7B482CB201E800C9421A /* policesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B7B472CB201E800C9421A /* policesModel.swift */; };
 		CE5BF5512CB6FBBE00C59170 /* accedintReportModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5BF5502CB6FBBE00C59170 /* accedintReportModel.swift */; };
+		CE5E4E732D3CFE63006366C0 /* sosCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5E4E722D3CFE63006366C0 /* sosCell.xib */; };
+		CE5E4E742D3CFE63006366C0 /* sosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E4E712D3CFE63006366C0 /* sosCell.swift */; };
 		CE6146DC2CCCB5A700097203 /* totalProfitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6146DB2CCCB5A700097203 /* totalProfitModel.swift */; };
 		CE6146E42CCCF9F000097203 /* tripReportDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6146E32CCCF9F000097203 /* tripReportDetails.swift */; };
 		CE6146E92CCD9A1C00097203 /* emptyBookingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6146E82CCD9A1C00097203 /* emptyBookingVC.swift */; };
@@ -398,6 +400,8 @@
 		CE8E38A82CAC93B100471606 /* MessageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E38A22CAC93B100471606 /* MessageTextView.swift */; };
 		CE8E38AA2CAC964000471606 /* additionalChatClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E38A92CAC964000471606 /* additionalChatClass.swift */; };
 		CE8E38AC2CAC981400471606 /* chatScocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E38AB2CAC981400471606 /* chatScocketManager.swift */; };
+		CE930CD62D3C3B6700463B53 /* sosCallsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE930CD52D3C3B6700463B53 /* sosCallsVC.swift */; };
+		CE930CD82D3C3B7500463B53 /* sosCallsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE930CD72D3C3B7500463B53 /* sosCallsVC.xib */; };
 		CE970B0D2CF280DA0098EFCA /* notificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE970B0C2CF280D20098EFCA /* notificationModel.swift */; };
 		CE9757C42AE0F0BD0014346E /* tripListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9757C12AE0F0BD0014346E /* tripListCell.swift */; };
 		CE9757C52AE0F0BD0014346E /* tripListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9757C22AE0F0BD0014346E /* tripListVC.swift */; };
@@ -876,6 +880,8 @@
 		CE5B60472CAD4A070093A469 /* repeatingClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = repeatingClass.swift; sourceTree = "<group>"; };
 		CE5B7B472CB201E800C9421A /* policesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = policesModel.swift; sourceTree = "<group>"; };
 		CE5BF5502CB6FBBE00C59170 /* accedintReportModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accedintReportModel.swift; sourceTree = "<group>"; };
+		CE5E4E712D3CFE63006366C0 /* sosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sosCell.swift; sourceTree = "<group>"; };
+		CE5E4E722D3CFE63006366C0 /* sosCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = sosCell.xib; sourceTree = "<group>"; };
 		CE6146DB2CCCB5A700097203 /* totalProfitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = totalProfitModel.swift; sourceTree = "<group>"; };
 		CE6146E32CCCF9F000097203 /* tripReportDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripReportDetails.swift; sourceTree = "<group>"; };
 		CE6146E82CCD9A1C00097203 /* emptyBookingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emptyBookingVC.swift; sourceTree = "<group>"; };
@@ -954,6 +960,8 @@
 		CE8E38A92CAC964000471606 /* additionalChatClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = additionalChatClass.swift; sourceTree = "<group>"; };
 		CE8E38AB2CAC981400471606 /* chatScocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatScocketManager.swift; sourceTree = "<group>"; };
 		CE9035E72B1483350033D1C1 /* Lottie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Lottie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE930CD52D3C3B6700463B53 /* sosCallsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sosCallsVC.swift; sourceTree = "<group>"; };
+		CE930CD72D3C3B7500463B53 /* sosCallsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = sosCallsVC.xib; sourceTree = "<group>"; };
 		CE970B0C2CF280D20098EFCA /* notificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notificationModel.swift; sourceTree = "<group>"; };
 		CE9757C12AE0F0BD0014346E /* tripListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripListCell.swift; sourceTree = "<group>"; };
 		CE9757C22AE0F0BD0014346E /* tripListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripListVC.swift; sourceTree = "<group>"; };
@@ -2315,6 +2323,15 @@
 			path = "repeating Function";
 			sourceTree = "<group>";
 		};
+		CE5E4E702D3CF643006366C0 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				CE5E4E712D3CFE63006366C0 /* sosCell.swift */,
+				CE5E4E722D3CFE63006366C0 /* sosCell.xib */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
 		CE6146E52CCD99F100097203 /* emptyBooking */ = {
 			isa = PBXGroup;
 			children = (
@@ -2649,6 +2666,16 @@
 			path = COMMON;
 			sourceTree = "<group>";
 		};
+		CE930CD42D3C3B3F00463B53 /* sosViews */ = {
+			isa = PBXGroup;
+			children = (
+				CE5E4E702D3CF643006366C0 /* cells */,
+				CE930CD52D3C3B6700463B53 /* sosCallsVC.swift */,
+				CE930CD72D3C3B7500463B53 /* sosCallsVC.xib */,
+			);
+			path = sosViews;
+			sourceTree = "<group>";
+		};
 		CE9757C02AE0F09A0014346E /* tripListView */ = {
 			isa = PBXGroup;
 			children = (
@@ -2683,6 +2710,7 @@
 		CE996B522B25AC400089D2F4 /* trakYourTrip */ = {
 			isa = PBXGroup;
 			children = (
+				CE930CD42D3C3B3F00463B53 /* sosViews */,
 				CE996B552B25AC6F0089D2F4 /* trackYourTripVC.xib */,
 				CE996B532B25AC5D0089D2F4 /* trackYourTripVC.swift */,
 				CE996B5F2B25DA530089D2F4 /* trackYourTripVC+delegate.swift */,
@@ -3391,6 +3419,7 @@
 				96EA1E422A77006B00F39386 /* Alexandria-Regular.ttf in Resources */,
 				04B659CF2B3421D600E78752 /* favlocationCell.xib in Resources */,
 				CE3CACF22B2DA7B80025990E /* swiftRegisterVC.xib in Resources */,
+				CE930CD82D3C3B7500463B53 /* sosCallsVC.xib in Resources */,
 				CE9EBFF22B1396390080A0F2 /* reviewCell.xib in Resources */,
 				CEEE6E382C5FAEBC00AB7435 /* cityCell.xib in Resources */,
 				CE3CEEE32B1654B400619C79 /* rAjz5wfQVS.json in Resources */,
@@ -3437,6 +3466,7 @@
 				CE7576F32AF2041100AFF56A /* chooseFeatureCell.xib in Resources */,
 				CEF0E7E02B4F3B3C00DCBD69 /* chimeup.mp3 in Resources */,
 				CE8E38A72CAC93B100471606 /* MessageTextView.xib in Resources */,
+				CE5E4E732D3CFE63006366C0 /* sosCell.xib in Resources */,
 				CE27F53D2ADFAD8500DEA419 /* StarRatingStackView.xib in Resources */,
 				CE9757C62AE0F0BD0014346E /* tripListCell.xib in Resources */,
 				96202C8A2A7FBB1300053C5B /* ReseatPasswordVC.xib in Resources */,
@@ -3653,6 +3683,7 @@
 				CEEE6E302C5FAA4100AB7435 /* chooseCityVC.swift in Sources */,
 				9641AD382A6C2EFC00A29046 /* Blurview.swift in Sources */,
 				9694ABD12A5DFACA00BDF5F8 /* UIstackViewExtension.swift in Sources */,
+				CE5E4E742D3CFE63006366C0 /* sosCell.swift in Sources */,
 				CE27F53F2ADFAD8500DEA419 /* StarRatingStackView.swift in Sources */,
 				CE6146DC2CCCB5A700097203 /* totalProfitModel.swift in Sources */,
 				CE3B53A52B2AFFFF003D3043 /* cancelTheTripVC.swift in Sources */,
@@ -3879,6 +3910,7 @@
 				CEDDBE182ACBDFA700677C94 /* sideMenuCell.swift in Sources */,
 				9694ABF02A5DFACA00BDF5F8 /* PushNotifcations.swift in Sources */,
 				CE71F4672B16855D00E7B689 /* driverOffersVC.swift in Sources */,
+				CE930CD62D3C3B6700463B53 /* sosCallsVC.swift in Sources */,
 				CEF7B6E92B2E2B1B00E3FE5C /* favoritesVC.swift in Sources */,
 				CE385D962AE267A4008F2D50 /* Easing.swift in Sources */,
 				9694ABF12A5DFACA00BDF5F8 /* CustomButtons.swift in Sources */,
@@ -4139,7 +4171,7 @@
 				CODE_SIGN_ENTITLEMENTS = Takhawi/Takhawi.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = CA5NVSJ377;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				FRAMEWORK_SEARCH_PATHS = "${inherited}";
@@ -4184,7 +4216,7 @@
 				CODE_SIGN_ENTITLEMENTS = Takhawi/Takhawi.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = CA5NVSJ377;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;

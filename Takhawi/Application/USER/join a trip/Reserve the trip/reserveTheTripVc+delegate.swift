@@ -198,19 +198,19 @@ extension ReserveTheTripVC : UITableViewDelegate , UITableViewDataSource {
         if self.paymentMethod == .applePay {
             
          
-            self.presentApplePayView(appleCheckOutId: appleCheckOutId)
+            self.presentApplePayView(appleCheckOutId: appleCheckOutId, tripId: tripId)
             
             
             //paymentWebView
         } else {
-            self.goToSuccessScreen()
+            self.goToSuccessScreen(id: tripId)
         }
         
         
       
     }
     
-    private func presentApplePayView ( appleCheckOutId : String ) {
+    private func presentApplePayView ( appleCheckOutId : String , tripId : Int ) {
         print("apple checkout id is 🍎🍎🍎🍎")
         print(appleCheckOutId)
         let type : String =   viptrip ? "vip-trip" : "basic-trip"
@@ -218,13 +218,13 @@ extension ReserveTheTripVC : UITableViewDelegate , UITableViewDataSource {
         vc.requestMethod = .get
         vc.webUrl =  Server.applePayBase.rawValue + "\(appleCheckOutId)&type=\(type)"
         vc.action = {
-            self.goToSuccessScreen()
+            self.goToSuccessScreen(id: tripId)
             print("🍎🍎🍎🍎 apple pay pass : done successfully ")
         }
         self.present(vc, animated: true )
     }
     
-    private func goToSuccessScreen () {
+    private func goToSuccessScreen (id : Int) {
         let vc = successBookViewVC()
         vc.modalTransitionStyle = .crossDissolve
         vc.modalPresentationStyle = .overCurrentContext
@@ -236,7 +236,7 @@ extension ReserveTheTripVC : UITableViewDelegate , UITableViewDataSource {
     vc.action = {
         let vc = trackYourTripVC()
         vc.vipTrip = self.viptrip
-        vc.tripId = self.tripId
+        vc.tripId =  id  //self.tripId
         vc.basicPickLat = self.tripDetails?.pickuplocation?.lat ?? 0
         vc.basicPickLng =  self.tripDetails?.pickuplocation?.lng ?? 0
         vc.basicDesLat = self.tripDetails?.destinationlocation?.lat ?? 0

@@ -12,7 +12,8 @@ import IQKeyboardManagerSwift
 
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate   {
-   
+  
+    
     override init() {
         super.init()
         UIFont.overrideInitialize()
@@ -24,20 +25,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate   {
         IQKeyboardManager.shared.toolbarTintColor = UIColor(named: colors.mainColor.rawValue)
         LocalizationManager.shared.delegate = self
         LocalizationManager.shared.setAppInnitLanguage()
+        
+        
     }
     
-    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-        if let url = URLContexts.first?.url {
-            print("⌛️⌛️⌛️⌛️ comming url : \(url)")
-            let urlString = url.absoluteString
-            let component = urlString.components(separatedBy: "=")
-            if component.count > 1 , let tripId = component.last {
-                print("⌛️⌛️⌛️⌛️ comming tripId is  : \(tripId)")
-               // self.navigateToTripDetails()
-            }
-        }
-    }
+//    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+//        if let url = URLContexts.first?.url {
+//            print("⌛️⌛️⌛️⌛️ comming url : \(url)")
+//            let urlString = url.absoluteString
+//            let component = urlString.components(separatedBy: "=")
+//            if component.count > 1 , let tripId = component.last {
+//                print("⌛️⌛️⌛️⌛️ comming tripId is  : \(tripId)")
+//               // self.navigateToTripDetails()
+//            }
+//        }
+//    }
   
+    
+    
+
+    
+    
     
     
     

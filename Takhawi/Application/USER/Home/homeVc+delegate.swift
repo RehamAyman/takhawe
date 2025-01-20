@@ -248,6 +248,7 @@ extension homeVC  :  CLLocationManagerDelegate  , GMSMapViewDelegate  , UITableV
                lottieAnimationView.center = point
            } else if let currentLocation = self.currentUserLocation {
                print("here my second chance ")
+               print(currentLocation)
                let point =  mapView.projection.point(for: currentLocation)
                lottieAnimationView.center = point
            }

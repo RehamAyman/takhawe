@@ -89,7 +89,7 @@
                                 <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="You rated ( driver name) 5 stars"/>
                             </userDefinedRuntimeAttributes>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Give some tips to ( driver name )" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HM6-3e-8Qe">
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Give some tips to ( driver name )" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HM6-3e-8Qe">
                             <rect key="frame" x="20" y="314.33333333333331" width="313" height="15.666666666666686"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <color key="textColor" name="MainColor"/>
@@ -98,7 +98,7 @@
                                 <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Give some tips to ( driver name )"/>
                             </userDefinedRuntimeAttributes>
                         </label>
-                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="frC-lL-yFa">
+                        <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="frC-lL-yFa">
                             <rect key="frame" x="20" y="340" width="313" height="70"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>

@@ -93,7 +93,8 @@ extension driverOffersVC {
         socketManager.connect()
         socketManager.listenToUserOffers { offers  in
             print("heey there ✅ success passed the offers ... ")
-            self.offers = offers
+            // make an alert 
+            self.offers += offers
             self.tableview.reloadData()
             self.dismiss(animated: true )
             

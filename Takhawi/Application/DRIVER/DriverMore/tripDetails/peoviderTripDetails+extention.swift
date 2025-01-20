@@ -285,12 +285,11 @@ extension ProviderTripDetialsVC : UITableViewDelegate , UITableViewDataSource   
                                                                                      type: .client)))
                 vc.partnerImage = Server.imageBase.rawValue + (  self.passedTrip?.Passenger?.image ?? ""  )
                 //   vc.partnerPhoneNumber = phone
-                
                 self.push(vc )
             }
         }
-        
     }
+    
     
     
     
@@ -312,6 +311,8 @@ extension ProviderTripDetialsVC : UITableViewDelegate , UITableViewDataSource   
             showInfoTopAlert(withMessage: "sorry! , but you are not in the meeting location yet!".localize)
         }
     }
+    
+
     
     private func isWithinRadius(currentLocation: CLLocationCoordinate2D,
                         targetLocation: CLLocationCoordinate2D,

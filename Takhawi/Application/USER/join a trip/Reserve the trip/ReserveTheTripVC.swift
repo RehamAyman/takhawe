@@ -144,6 +144,8 @@ extension ReserveTheTripVC {
         print(self.paymentMethod)
         print(self.paymentMethod.rawValue)
         activityIndicatorr.startAnimating()
+        
+        
         UserRouter.acceptOffer(id: offer?.id ?? 0 , paymentMethod: self.paymentMethod.rawValue, cardId: self.paymentMethod == .card ? self.selectedCard : 0  ).send { [weak self ] (response: APIGlobalResponse) in
             guard let self = self else { return }
             if response.status == true {

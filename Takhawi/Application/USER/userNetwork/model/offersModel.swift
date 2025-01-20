@@ -22,6 +22,17 @@ struct  driverUpdateLocation : Codable {
 
 
 
+struct updateStatusResult : Codable {
+  
+    let status : String
+    
+    enum CodingKeys: String, CodingKey {
+        case status = "status"
+    }
+    
+}
+
+
 
 struct offerResult : Codable {
     let id : Int?

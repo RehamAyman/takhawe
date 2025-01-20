@@ -78,6 +78,11 @@ class trackYourTripVC: BaseVC {
         self.configureInitialDesign()
         self.getTripDetails()
        // self.setUpGoogleView()
+        let vc = sosCallsVC()
+        vc.modalPresentationStyle = .fullScreen
+     //   vc.modalTransitionStyle = .crossDissolve
+        self.present(vc , animated: true )
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -181,6 +186,12 @@ class trackYourTripVC: BaseVC {
         self.push(vc)
 
         
+    }
+    @IBAction func sosCalls(_ sender: UIButton) {
+        let vc = sosCallsVC()
+        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        self.present(vc , animated: true )
     }
     
     

@@ -27,17 +27,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     static var FCMToken = "xnx'_'xnx"
     static let GoogleAPI = "AIzaSyAfTSBkcXfJa5Zf0YHN3-m-gJFFhvzVu4U" // "AIzaSyBaLRq-LbUQmWZkJkfwjWcJyoxWlhyQ35s"
     var location:CLLocationManager?
-   
+    let socketManager = MySocketManager()
     
    
  
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
        
-       
-            self.handleFCMFor(application)
-            
-    
-        
+        self.handleFCMFor(application)
         
         GMSServices.provideAPIKey("AIzaSyAfTSBkcXfJa5Zf0YHN3-m-gJFFhvzVu4U")
         GMSPlacesClient.provideAPIKey("AIzaSyAfTSBkcXfJa5Zf0YHN3-m-gJFFhvzVu4U")
@@ -61,10 +57,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
        
         print("🤠 userToken: \(UserDefaults.user?.accessToken ?? "-- no saved token --" )")
-  // check here  if authenticated User go to home else go to auth cycle
+        self.showRateFormAfterTripEnds()
+  
         return true
     }
     
+    
+    
+    
+    
+    private func showRateFormAfterTripEnds () {
+        
+        
+        
+        if UserDefaults.user?.user?.role == role.user.rawValue {
+            socketManager.connect()
+            
+            socketManager.listenToTripStatus { status   in
+                print("😍😍😍😍22222😍😍😍")
+                print(status)
+                if status.status == "COMPLETED" { // show rate view
+                    let vc = rateTheDriverVC()
+                    if let rootViewController = AppDelegate.window?.rootViewController {
+                        rootViewController.present( vc , animated: true, completion: nil )
+                    }
+                }
+            }
+        }
+    }
+ 
  
     
     private func handleFCMFor(_ application: UIApplication) {

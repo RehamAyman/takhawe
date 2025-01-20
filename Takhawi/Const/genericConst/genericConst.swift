@@ -35,6 +35,8 @@ enum tripType : String {
 
 
 enum tripStatus : String {
+    
+    
 case comming  = "UPCOMING"
 case onWay = "ON_WAY"
 case arrived  = "ARRIVED"
