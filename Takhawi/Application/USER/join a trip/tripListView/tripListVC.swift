@@ -91,11 +91,8 @@ class tripListVC: BaseVC {
     
     
     private func getAllTrips (filter : String) {
-        
         print("😄😄😄😄😄😄😄😄😄")
         print( self.tripDate)
-        
-        
         
         activityIndicatorr.startAnimating()
         UserRouter.getAllBasicTrips(cityId: self.cityId, lat: self.tripLat, lng: self.tripLong, StartdDate: self.tripDate, filter: filter ).send { (response: APIGenericResponse<[BasicTripResult]>) in

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -19,6 +19,7 @@
                 <outlet property="driverImage" destination="WHC-ht-xYX" id="mYp-Gd-R0X"/>
                 <outlet property="driverName" destination="pmt-cx-mWT" id="nWX-ao-Rfs"/>
                 <outlet property="driverRate" destination="jSO-Km-BMr" id="Ohz-cG-Dar"/>
+                <outlet property="favDriverButton" destination="q11-9q-cAp" id="IsK-2J-uWq"/>
                 <outlet property="from" destination="229-RJ-tFm" id="fPA-GC-moM"/>
                 <outlet property="googleView" destination="ag7-m0-5iV" id="PYU-s2-rdE"/>
                 <outlet property="mainStack" destination="oft-2f-t8y" id="6so-HM-rfA"/>

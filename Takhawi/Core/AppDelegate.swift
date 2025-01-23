@@ -68,17 +68,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func showRateFormAfterTripEnds () {
         
-        
-        
         if UserDefaults.user?.user?.role == role.user.rawValue {
             socketManager.connect()
-            
             socketManager.listenToTripStatus { status   in
-                print("😍😍😍😍22222😍😍😍")
+                print("🥳🥳🥳🥳🥳🥳🥳🥳🥳")
                 print(status)
-                if status.status == "COMPLETED" { // show rate view
+                if status.status == "COMPLETED" { // show rate view COMPLETED
+                    
                     let vc = rateTheDriverVC()
                     if let rootViewController = AppDelegate.window?.rootViewController {
+                        
+                        
                         rootViewController.present( vc , animated: true, completion: nil )
                     }
                 }
@@ -86,6 +86,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
  
+    
+    
  
     
     private func handleFCMFor(_ application: UIApplication) {

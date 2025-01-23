@@ -53,6 +53,7 @@ enum UserRouter {
     case getNotifications
     case getBillingInfo
     case createBillingInfo ( surname : String , street : String , cityId : Int , state : String)
+    case getAllReviews ( id : Int)
   
 }
 
@@ -71,7 +72,7 @@ extension UserRouter : APIRouter {
             return .post
         
             
-        case .getAllVipOffers , .getAllCities , .getAllBasicTrips  , .recentAddress  , .getOneTrip , .getProfile , .walletData , .getAllHobbies  , .getAllAddress , .getAllFavDrives , .getMyUpcommingTrips , .getCancelledTrips , .getCompletedTrips , .getVip , .getOneGeneralTrip  , .getPolices  , .aboutUs , .getAllLastMessaged , .getAllChats  , .getAllPaymentCards , .switchRole , .getNotifications , .getBillingInfo   :
+        case .getAllVipOffers , .getAllCities , .getAllBasicTrips  , .recentAddress  , .getOneTrip , .getProfile , .walletData , .getAllHobbies  , .getAllAddress , .getAllFavDrives , .getMyUpcommingTrips , .getCancelledTrips , .getCompletedTrips , .getVip , .getOneGeneralTrip  , .getPolices  , .aboutUs , .getAllLastMessaged , .getAllChats  , .getAllPaymentCards , .switchRole , .getNotifications , .getBillingInfo  , .getAllReviews  :
           return .get
             
             
@@ -174,6 +175,8 @@ extension UserRouter : APIRouter {
             return userServerPath.getBillingInfo
         case .createBillingInfo:
             return userServerPath.createbillingInfo
+        case .getAllReviews(id: let id ) :
+            return userServerPath.reviewsList(id: id )
     
         
             
@@ -392,7 +395,7 @@ extension UserRouter : APIRouter {
             
             
             
-        case .getAllVipOffers  , .recentAddress , .getOneTrip , .getProfile   , .calculateVipPrice , .getAllAddress   , .removeDriverFromFav    , .getVip , .getOneGeneralTrip  , .getPolices , .aboutUs , .getAllLastMessaged , .getAllChats  , .getAllPaymentCards  , .switchRole , .deleteAcc  , .getNotifications , .getBillingInfo :
+        case .getAllVipOffers  , .recentAddress , .getOneTrip , .getProfile   , .calculateVipPrice , .getAllAddress   , .removeDriverFromFav    , .getVip , .getOneGeneralTrip  , .getPolices , .aboutUs , .getAllLastMessaged , .getAllChats  , .getAllPaymentCards  , .switchRole , .deleteAcc  , .getNotifications , .getBillingInfo  , .getAllReviews :
             return nil
             
         }

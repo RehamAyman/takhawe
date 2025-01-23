@@ -28,6 +28,7 @@ struct BasicTripResult : Codable {
     let startLocation : String?
     let pickuplocation : Pickuplocation?
     let destinationlocation : Destinationlocation?
+    let driver_rate : Double?
 
     enum CodingKeys: String, CodingKey {
 
@@ -51,6 +52,7 @@ struct BasicTripResult : Codable {
         case startLocation = "pickuplocationname"
         case pickuplocation = "pickuplocation"
         case destinationlocation = "destinationlocation"
+        case driver_rate = "driver_rate"
     }
 
     init(from decoder: Decoder) throws {
@@ -75,6 +77,9 @@ struct BasicTripResult : Codable {
         startLocation = try values.decodeIfPresent(String.self, forKey: .startLocation)
         pickuplocation = try values.decodeIfPresent(Pickuplocation.self, forKey: .pickuplocation)
         destinationlocation = try values.decodeIfPresent(Destinationlocation.self, forKey: .destinationlocation)
+        driver_rate = try values.decodeIfPresent(Double.self, forKey: .driver_rate)
+        
+        
     }
 
 }

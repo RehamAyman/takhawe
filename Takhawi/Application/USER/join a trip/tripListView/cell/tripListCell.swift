@@ -8,6 +8,7 @@
 
 //MARK:- Cell
 import UIKit
+import Cosmos
 
 //MARK: - UITableViewCell -
 class tripListCell: UITableViewCell {
@@ -22,7 +23,7 @@ class tripListCell: UITableViewCell {
     @IBOutlet weak var driverPhoto: UIImageView!
     @IBOutlet weak var endTime: UILabel!
     @IBOutlet weak var startTime: UILabel!
-    @IBOutlet weak var driverRate: JStarRatingView!
+    @IBOutlet weak var driverRate: CosmosView!
     @IBOutlet weak var driverName: UILabel!
    
     @IBOutlet weak var TripDate: UILabel!
@@ -65,6 +66,8 @@ class tripListCell: UITableViewCell {
         self.startTime.text = data.start_date?.convertFromIsoToTimee()
         self.endTime.text = data.end_date?.convertFromIsoToTimee()
         self.TripDate.text = data.start_date?.convertFromIso()
+        self.driverRate.rating = data.driver_rate ?? 0 
+        
         self.availableSeatsLabel.text =  "\(data.basic_trip_available_seats_no ?? 0 ) " +  "seats are Available".localize
         if let avatar = data.driver_avatar {
             let url = Server.imageBase.rawValue + avatar

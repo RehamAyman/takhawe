@@ -64,9 +64,7 @@ extension DriverHomeVC :  CLLocationManagerDelegate  , GMSMapViewDelegate  {
         socketManager.sendMyLocation(lat: latitude , lng: longitude)
         
         self.getAllReports(lat: latitude, lng: longitude)
-        
-        
-        
+ 
         
     }
     

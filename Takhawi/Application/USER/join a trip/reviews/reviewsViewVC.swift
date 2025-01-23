@@ -11,19 +11,15 @@ import UIKit
 
 class reviewsViewVC: BaseVC {
     
+    var targetId : Int = 0
+    
 //MARK: - IBOutlets -
     
     @IBOutlet weak var headerTitle: UILabel!
     @IBOutlet weak var tableview: UITableView!
     
 //MARK: - Properties -
-    let dummyreviews : [reviewsModel] = [
-        reviewsModel(username: "asmaa mohamed", userPhoto: "1", review: 2 , comment: " he did not reach at time so i give him 2 , also he drive so fast 🤕 . ") ,
-        reviewsModel(username: "alia waleed ahmed ", userPhoto: "2", review: 4, comment: " a  good driver i rate him 4 🩷 ") ,
-    reviewsModel(username: "alaa el shekh", userPhoto: "3", review: 4, comment: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ") ,
-    reviewsModel(username: "mona ahmed", userPhoto: "4", review: 3, comment: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ")
-        
-    ]
+    var allReviews : [ReviewsListResult] = []
          
     
 //MARK: - Creation -
@@ -33,6 +29,7 @@ class reviewsViewVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureInitialDesign()
+        self.getAllReviews()
     }
     
     
@@ -54,6 +51,23 @@ class reviewsViewVC: BaseVC {
 
 //MARK: - Networking -
 extension reviewsViewVC {
+    
+    //(response : APIGenericResponse < GeneralTripResult >)
+    
+    func getAllReviews() {
+        activityIndicatorr.startAnimating()
+        UserRouter.getAllReviews(id: self.targetId).send { [weak self ] ( response  : APIGenericResponse<[ReviewsListResult]>) in
+            guard let self = self else { return }
+            if let res = response.result {
+                self.allReviews = res
+                self.tableview.reloadData()
+            }
+            
+        }
+    }
+  
+   
+   
     
 }
 

@@ -13,17 +13,17 @@ extension reviewsViewVC  : UITableViewDelegate , UITableViewDataSource {
     //MARK: - TABLE VIEW METHODS
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        headerTitle.text = "Reviews".localize + " (\(dummyreviews.count))"
-        return dummyreviews.count
+        headerTitle.text = "Reviews".localize + " (\(self.allReviews.count))"
+        return self.allReviews.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reviewCell", for: indexPath) as! reviewCell
-        let item = self.dummyreviews[indexPath.row]
-        cell.comment.text = item.comment
-        cell.userImage.image = UIImage(named: item.userPhoto)
-        cell.userName.text = item.username
-        cell.userrate.rating = item.review
+        let item = self.allReviews[indexPath.row]
+        cell.comment.text = item.note
+        cell.userImage.image = UIImage(named: "Group 1000002907")
+        cell.userName.text = "userId : \(item.reviewer_id ?? 0 )"
+        cell.userrate.rating =  item.rate ?? 0
         cell.userrate.isUserInteractionEnabled = false
         cell.selectionStyle = .none
         return cell

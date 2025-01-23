@@ -9,7 +9,7 @@ import Foundation
 
 
 
-struct reviewsModel {
+struct reviewsModel  {
     let username : String
     let userPhoto : String
     let review : Double

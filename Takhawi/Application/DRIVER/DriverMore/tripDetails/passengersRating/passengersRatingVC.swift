@@ -79,6 +79,16 @@ class passengersRatingVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
         self.dismiss(animated: true , completion: nil )
     }
     @IBAction func submitAction(_ sender: UIButton) {
+        if self.vip {
+            print("it come from vip trip ")
+        } else {
+            print("it come from basic trip ")
+            
+//            for i in self.allPassengers {
+//
+//            }
+        }
+        
         self.dismiss(animated: true , completion: nil )
     }
 }

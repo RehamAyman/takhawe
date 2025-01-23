@@ -102,8 +102,7 @@ class MySocketManager {
         ]
         
         print("🥹 \(socket.status)")
-        
-        
+
         if self.socket.status != .connected {
             
             socket.on(clientEvent: .connect) { data, ack in
@@ -115,8 +114,6 @@ class MySocketManager {
             print("2- update my location to the server ")
             self.socket.emit("update location", LocationData )
         }
-    
-       
     }
     
 // /Trip status change/
@@ -131,7 +128,6 @@ class MySocketManager {
         
         //trip status change
         socket.on( "trip status change") { data, ack in
-            
             print("🌏socket back with trip status changes data 🌏")
             print(data)
             
@@ -140,8 +136,8 @@ class MySocketManager {
                         // Convert the array of dictionaries into JSON data
                         let jsonData = try JSONSerialization.data(withJSONObject: dataArray, options: [])
                         // Decode the JSON data into an array of Offer objects
-                        let status = try JSONDecoder().decode([updateStatusResult].self, from: jsonData)
-                        completion ( status.first ?? updateStatusResult(status: "") )
+                        let status = try JSONDecoder().decode(updateStatusResult.self, from: jsonData)
+                        completion (  updateStatusResult(status: status.status, tripId: status.tripId) )
                     } catch {
                         print("Error decoding trip status changes data: \(error)")
                     }
@@ -154,8 +150,6 @@ class MySocketManager {
     
     
  //MARK: - -- USER LISTEN TO NEW OFFERS METHOD --
-    
-    
     
     func listenToUserOffers ( completion: @escaping ([offerResult]) -> Void)   {
         socket.on( "new offer") { data, ack in

@@ -15,6 +15,7 @@ import Cosmos
 class driverProfileVC: BaseVC {
     @IBOutlet weak var driverRate: CosmosView!
     
+    @IBOutlet weak var favDriverButton: UIButton!
     @IBOutlet weak var paymentMethodContainer: UIView!
     @IBOutlet weak var paymentMethod: UILabel!
     @IBOutlet weak var shareStack: UIStackView!
@@ -66,7 +67,7 @@ class driverProfileVC: BaseVC {
     var destLong : Double = 0.0
     var comeFromBasicTrip : Bool = false
     var comeFromSharedUrl : Bool = false
-  
+   
    
     
 // MARK: - Lifecycle -
@@ -135,12 +136,14 @@ class driverProfileVC: BaseVC {
             self.titleName.text = "User Profile".localize
             self.driverContainerView.removeFromSuperview()
             self.sendOfferContainerView.removeFromSuperview()
-            
+        
             self.driverName.text = self.basicPassenger?.passnger?.name ?? ""
             if let image = self.basicPassenger?.passnger?.avatar  {
                 self.driverImage.setImage(image: Server.imageBase.rawValue + image)
             }
         } else {
+            
+            
             self.mainStack.removeArrangedSubview(self.sendOfferContainerView)
             self.mainStack.removeArrangedSubview(self.driverContainerView)
             self.driverContainerView.removeFromSuperview()
@@ -211,7 +214,11 @@ class driverProfileVC: BaseVC {
     
     @IBAction func reviewsAction(_ sender: UIButton) {
   
-            self.push(reviewsViewVC())
+        
+        let vc = reviewsViewVC()
+        vc.targetId = self.tripDetails?.driver_id ?? 0
+        self.push(vc)
+          
 
     }
     
@@ -225,7 +232,7 @@ class driverProfileVC: BaseVC {
 extension driverProfileVC {
     
     func getOneBasicTrip () {
-        
+    
         activityIndicatorr.startAnimating()
         UserRouter.getOneTrip(id: self.tripDetails?.id ?? 0 ).send { [weak self] (response : APIGenericResponse< AdditionalOneBasicResult >)  in
             guard let self = self else { return }
@@ -233,7 +240,7 @@ extension driverProfileVC {
             if let result = response.result {
                 self.tripCountLabel.text =  "trips: ".localize + "\(result.completed_trips_count ?? 0)"
                 self.driverImage.setImage(image: Server.imageBase.rawValue + (result.driver?.avatar ?? "" ) )
-                
+                self.driverRate.rating = result.driver?.driver_rate ?? 0
             }
         }
     }
