@@ -245,13 +245,22 @@ extension driverCreateTripVC {
         vc.isDistnation = isDistnation
         vc.didSelectLocation = { location , isDistnation in
             if isDistnation{
-                self.destination.text = location.name
-                self.SelectdDestination = location.id ?? 0
-                self.endLocation = location.location
+                if self.gathering.text != location.name {
+                    self.destination.text = location.name
+                    self.SelectdDestination = location.id ?? 0
+                    self.endLocation = location.location
+                } else {
+                    showInfoTopAlert(withMessage: "the pickup location & destination can not be the same.. ")
+                }
             }else{
-                self.gathering.text = location.name
-                self.selectedPickUp = location.id ?? 0
-                self.pickuplocation = location.location
+                
+                if self.destination.text != location.name {
+                    self.gathering.text = location.name
+                    self.selectedPickUp = location.id ?? 0
+                    self.pickuplocation = location.location
+                } else {
+                    showInfoTopAlert(withMessage: "the pickup location & destination can not be the same.. ")
+                }
                 
             }
             
