@@ -23,6 +23,7 @@ struct registerTabs: View {
     @State var confirmPassword : String = ""
     @State var genderIndex : Int = 0
     @State var fullName : String = ""
+    @State var checkTerms : Bool = false 
     
     var phone : String = ""
 
@@ -84,7 +85,7 @@ struct registerTabs: View {
                     tap1(email: $email)
                        
                         .tag(1)
-                    tap2( confirmPassword:  $confirmPassword , password: $password ) {
+                    tap2( confirmPassword:  $confirmPassword , password: $password  , checkTerms: $checkTerms) {
                         self.showTermsaction?()
                       
                     }

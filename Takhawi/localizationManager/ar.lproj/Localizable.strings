@@ -420,7 +420,7 @@
 "Select Duration" = "حدد المدة" ;
 "Application Commission:  18 SAR" = "عموله التطبيق : ١٨ ريال" ; 
 "This feature will be available soon" = "هذة الميزه سوف تتوفر قريبا";
-"I agree to the" = "اوافق علي" ;
+"I agree to the" = "اوافق على" ;
 "terms and conditions" = "الشروط و الاحكام";
 
 "Are You Sure" = "هل انت متاكد" ;
@@ -439,3 +439,4 @@
 "Your Account has been rejected" = "تم حظر حسابك " ;
 "More" = "المزيد" ;
 "Dear Customer, In case of any emergency, please contact the relevant authorities ,Here are the emergency numbers you may need:" = "عزيزنا العميل، في حال حدوث أي طارئ، نرجو منك التواصل مع الجهات المختصة. إليك أرقام الطوارئ التي قد تحتاجها:" ;
+"Agree" = "موافق" ;

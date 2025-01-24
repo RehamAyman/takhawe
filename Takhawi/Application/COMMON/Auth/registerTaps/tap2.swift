@@ -13,7 +13,7 @@ struct tap2: View {
     
     @Binding var confirmPassword : String 
     @Binding var password : String
-    @State var checkTerms : Bool = true
+    @Binding var checkTerms : Bool
     var action: (() -> Void)?
     
     
@@ -82,12 +82,6 @@ struct tap2: View {
         }.padding(8)
     }
 }
-
-struct tap2_Previews: PreviewProvider {
-    static var previews: some View {
-        tap2(confirmPassword: Binding.constant("") , password: Binding.constant(""))
-    }
-}
-
+ 
 
 

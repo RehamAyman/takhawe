@@ -6,7 +6,27 @@
 //
 
 import UIKit
-extension driverCreateTripVC : UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout {
+extension driverCreateTripVC : UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout ,  UITextFieldDelegate  {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        // Get the current text in the text field
+        
+        if textField == self.seatPrice {
+            let currentText = textField.text ?? ""
+            
+            // Calculate the new length after editing
+            let newLength = currentText.count + string.count - range.length
+            
+            // Restrict to 3 characters max
+            return newLength <= 3
+            
+        }
+        return true
+    }
+    
+    
+    
+    
     
     
     

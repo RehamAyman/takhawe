@@ -21,6 +21,7 @@ class SwitchButton: UIButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+      
         self.setStatus(false)
     }
     

@@ -64,6 +64,8 @@ class driverCreateTripVC: BaseVC {
         self.configureInitialDesign()
         self.handleTextfields()
         self.getAllMeetingLocations()
+        availableSeats.delegate = self
+        
        
     }
     

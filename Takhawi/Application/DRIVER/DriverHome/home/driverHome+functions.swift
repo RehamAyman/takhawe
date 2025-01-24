@@ -16,6 +16,7 @@ extension DriverHomeVC : UICollectionViewDelegate , UICollectionViewDataSource ,
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     self.changeConstrainsWithAnimation(const: self.offers.count == 0 ?  30 : 340 )
+    self.collectionView.isUserInteractionEnabled =  self.offers.count == 0 ? false : true 
         return self.offers.count
     }
     
@@ -149,16 +150,22 @@ extension DriverHomeVC : UICollectionViewDelegate , UICollectionViewDataSource ,
     
    private func handelOffView () {
         print("onnnnnn")
-       self.changeConstrainsWithAnimation(const: 340 )
+       
+       self.changeConstrainsWithAnimation(const: self.offers.count == 0 ? 30 : 340 )
+       self.collectionView.isUserInteractionEnabled = self.offers.count == 0 ? false : true
+       self.createAtrip.isHidden = false
+       self.createAtrip.isUserInteractionEnabled = true
+       
+       
     }
     
     
   private  func handleOnView  () {
-        
       print("offffff")
       self.changeConstrainsWithAnimation(const:  30 )
-      
-        
+      self.collectionView.isUserInteractionEnabled = false
+      self.createAtrip.isHidden = true
+      self.createAtrip.isUserInteractionEnabled = false
     }
     
     
@@ -176,14 +183,33 @@ extension DriverHomeVC : UICollectionViewDelegate , UICollectionViewDataSource ,
 //        locationManager.startUpdatingLocation()
         self.notificationView.layer.addBasicShadow(cornerRadius: 16)
         self.setUpGoogleMapView()
-        switchButton = SwitchButton(frame: self.switchContainer.frame)
+        
+        
+        switchButton = SwitchButton()
         switchButton.status = false
         self.view.addSubview(switchButton)
+
         switchButton.translatesAutoresizingMaskIntoConstraints = false
-        switchButton.leadingAnchor.constraint(equalTo: self.switchContainer.leadingAnchor).isActive = true
-        switchButton.trailingAnchor.constraint(equalTo: self.switchContainer.trailingAnchor).isActive = true
-        switchButton.topAnchor.constraint(equalTo: self.switchContainer.topAnchor).isActive = true
-        switchButton.bottomAnchor.constraint(equalTo: self.switchContainer.bottomAnchor).isActive = true
+        NSLayoutConstraint.activate([
+                  switchButton.centerXAnchor.constraint(equalTo: switchContainer.centerXAnchor),
+                  switchButton.centerYAnchor.constraint(equalTo: switchContainer.centerYAnchor),
+                  switchButton.widthAnchor.constraint(equalToConstant: 300),
+                  switchButton.heightAnchor.constraint(equalToConstant: 390)
+              ])
+        
+        
+//        switchButton = SwitchButton(frame: self.switchContainer.frame)
+//        switchButton.status = false
+//        self.view.addSubview(switchButton)
+//        switchButton.translatesAutoresizingMaskIntoConstraints = false
+//        switchButton.leadingAnchor.constraint(equalTo: self.switchContainer.leadingAnchor).isActive = true
+//        switchButton.trailingAnchor.constraint(equalTo: self.switchContainer.trailingAnchor).isActive = true
+//        switchButton.topAnchor.constraint(equalTo: self.switchContainer.topAnchor).isActive = true
+//        switchButton.bottomAnchor.constraint(equalTo: self.switchContainer.bottomAnchor).isActive = true
+//        
+//        
+        
+        
         self.driverName.text = UserDefaults.user?.user?.name ?? ""
         self.switchButtonAction()
         self.createAtripAction()

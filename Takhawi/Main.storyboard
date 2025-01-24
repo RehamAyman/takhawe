@@ -1020,11 +1020,11 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zKt-aY-J41">
-                                <rect key="frame" x="293" y="81.666666666666671" width="90" height="55.000000000000014"/>
+                                <rect key="frame" x="283" y="69" width="100" height="80"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="90" id="WG6-fS-sS1"/>
-                                    <constraint firstAttribute="height" constant="55" id="cIY-TD-QdK"/>
+                                    <constraint firstAttribute="width" constant="100" id="WG6-fS-sS1"/>
+                                    <constraint firstAttribute="height" constant="80" id="cIY-TD-QdK"/>
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="6us-jC-0bn">
@@ -1236,7 +1236,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray5Color">
-            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
