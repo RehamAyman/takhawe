@@ -11,7 +11,7 @@ extension driverCreateTripVC : UICollectionViewDelegate , UICollectionViewDataSo
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         // Get the current text in the text field
         
-        if textField == self.seatPrice {
+        if textField == self.availableSeats {
             let currentText = textField.text ?? ""
             
             // Calculate the new length after editing
