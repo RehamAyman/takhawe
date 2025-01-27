@@ -241,7 +241,7 @@
 "Verification" = "كود التحقق";
 "Enter verification code" = "ادخل كود التحقق الخاص بك";
 "Resend" = "اعاده الارسال" ;
-"enter the full 6 digits." = "الرجاء ادخال الارقام بشكل صحيح";
+"enter the full 4 digits." = "الرجاء ادخال الارقام بشكل صحيح";
 "code sent successfully" = "تم ارسال رمز التحقق بنجاح" ;
 "error , try again" =  "حدث خطأ ما اعد المحاوله" ;
 "Sent Successfully" = "تم الارسال" ;
@@ -440,3 +440,4 @@
 "More" = "المزيد" ;
 "Dear Customer, In case of any emergency, please contact the relevant authorities ,Here are the emergency numbers you may need:" = "عزيزنا العميل، في حال حدوث أي طارئ، نرجو منك التواصل مع الجهات المختصة. إليك أرقام الطوارئ التي قد تحتاجها:" ;
 "Agree" = "موافق" ;
+"Ride" = "رحلة" ;

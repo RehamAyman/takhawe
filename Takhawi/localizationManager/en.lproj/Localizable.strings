@@ -245,8 +245,8 @@
 "Verification" = "Verification";
 "Enter verification code" = "Enter verification code";
 "Resend" = "Resend" ; 
-"enter the full 6 digits." = "enter the full 6 digits." ; 
-"code sent successfully" = "code sent successfully" ; 
+"enter the full 4 digits." = "enter the full 4 digits." ; 
+"code sent successfully" = "code sent successfully" ;
 "error , try again" =  "error , try again" ; 
 "Sent Successfully" = "Sent Successfully" ; 
 "Done" = "Done" ; 
@@ -449,3 +449,4 @@
 "Dear Customer, In case of any emergency, please contact the relevant authorities ,Here are the emergency numbers you may need:" = "Dear Customer, In case of any emergency, please contact the relevant authorities ,Here are the emergency numbers you may need:" ;
 
 "Agree" = "Agree" ; 
+"Ride" = "Ride" ;

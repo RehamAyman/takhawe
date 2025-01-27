@@ -25,6 +25,8 @@ class rateTheDriverVC: BaseVC {
     @IBOutlet weak var rateLabel: UILabel!
     //MARK: - Properties -
     let tips = [ "1" , "2" , "5" , "10" , "20" , "30" ]
+    var driverId : Int = 0
+    var tripId : Int = 0
     
 
     
@@ -52,6 +54,7 @@ class rateTheDriverVC: BaseVC {
 //MARK: - Actions -
     
     @IBAction func submitAction(_ sender: UIButton) {
+        self.rateTheDriver()
     }
     
     
@@ -60,8 +63,16 @@ class rateTheDriverVC: BaseVC {
 
 //MARK: - Networking -
 extension rateTheDriverVC {
-    
+    func rateTheDriver () {
+        activityIndicatorr.startAnimating()
+        UserRouter.rateTheDriver(tripId: self.tripId , driverId: self.driverId , note: self.notes.textView.text , rate: Int ( self.rateView.rating)).send { [weak self] (response: APIGlobalResponse )  in
+            guard let self = self else { return }
+            self.dismiss(animated: true )
+        }
+    }
 }
+
+
 
 //MARK: - Routes -
 extension rateTheDriverVC {

@@ -52,7 +52,6 @@ class reviewsViewVC: BaseVC {
 //MARK: - Networking -
 extension reviewsViewVC {
     
-    //(response : APIGenericResponse < GeneralTripResult >)
     
     func getAllReviews() {
         activityIndicatorr.startAnimating()
@@ -62,7 +61,6 @@ extension reviewsViewVC {
                 self.allReviews = res
                 self.tableview.reloadData()
             }
-            
         }
     }
   

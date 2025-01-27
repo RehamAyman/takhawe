@@ -15,6 +15,8 @@ import AlertKit
 import EMTNeumorphicView
 import Lottie
 import SocketIO
+//import AudioToolbox
+
 
 
 
@@ -273,6 +275,10 @@ class homeVC: BaseVC, sendDataBackDelegate{
     }
     
     @IBAction func sideMenuAction(_ sender: UIButton) {
+    
+        
+        
+        
         menu  == false ? self.showMenu() : self.hideMenu()
        
     }
@@ -281,7 +287,20 @@ class homeVC: BaseVC, sendDataBackDelegate{
     @IBAction func hotelsAction(_ sender: UIButton) {
         // first : check my role if user or driver
             //let vc = hotelsVC()
-        let vc = emptyBookingVC() 
+//        let generator = UIImpactFeedbackGenerator(style: .medium)
+//           generator.prepare()
+//           generator.impactOccurred()
+//
+        
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+          generator.prepare()
+          generator.impactOccurred()
+        
+        
+        
+       // AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+        
+        let vc = emptyBookingVC()
             self.push(vc)
      
     }

@@ -36,7 +36,7 @@ extension AuthServerPath : ServerPath {
      
         
         case .login :
-            return "auth/login"
+            return "auth/login/mobile"
         case .signUp :
             return "auth/signup"
         case .checkPhone :

@@ -14,18 +14,12 @@ class DriverTabbar: UITabBarController {
         tabBar.items?[0].title = "Home".localized
         tabBar.items?[1].title = "Notifications".localized
         tabBar.items?[2].title = "More".localized
-        
         self.tabBar.unselectedItemTintColor = UIColor.white
         self.tabBar.tintColor = UIColor(named:  "tabbarSelection")
         self.changeTabbarRadius()
-        
-        
-        
-        
-        
-        
-        
     }
+    
+    
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,10 +28,13 @@ class DriverTabbar: UITabBarController {
             // Setting the title text color of all tab bar items:
             for item in items {
                 item.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
-               
             }
         }
     }
+    
+    
+    
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         self.changeHeight()

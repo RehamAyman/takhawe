@@ -59,7 +59,7 @@ class verificationVC: BaseVC, AEOTPTextFieldDelegate {
         codeText.otpDefaultBorderWidth = 1.5
         codeText.otpCornerRaduis = 10
         codeText.keyboardType = .asciiCapableNumberPad
-        codeText.configure(with: 6)
+        codeText.configure(with: 4)
         AEOTPTextField.appearance().semanticContentAttribute = .forceLeftToRight
         self.countLabel.addTime(time: 60 )
         self.countLabel.start()
@@ -95,38 +95,19 @@ class verificationVC: BaseVC, AEOTPTextFieldDelegate {
    
     @IBAction func resendCode(_ sender: UIButton) {
         print("resend code action pressed")
+        self.resetCode()
+        
         
     }
     
     
     
     @IBAction func next(_ sender: Any) {
-        if self.codeText.text?.count ?? 0 < 6 {
-            showPopTopAlert(title: "Error!".localized, withMessage: "enter the full 6 digits.".localized, success: false )
+        if self.codeText.text?.count ?? 0 < 4 {
+            showPopTopAlert(title: "Error!".localized, withMessage: "enter the full 4 digits.".localized, success: false )
         } else {
-            activityIndicatorr.startAnimating()
-            AuthRouter.verifyResetCode(phone: self.phoneNumber, code: self.codeText.text ?? "" ).send {[weak self]  (response: APIGlobalResponse ) in
-                guard let self = self else { return }
-                if response.status == true {
-                    showPopTopAlert(title: "Done".localize, withMessage: response.message ?? "successfully verified", success: true )
-                    let vc = ReseatPasswordVC()
-                    vc.phone = self.phoneNumber
-                    push(vc)
-                } else {
-                    self.codeText.text = ""
-                    self.disableNextButton()
-                }
-            }
-            
-            
-           
-            
-         
-            
-            
-            
-            
-          
+            self.resetCode()
+    
         }
     }
 }
@@ -134,6 +115,23 @@ class verificationVC: BaseVC, AEOTPTextFieldDelegate {
 
 //MARK: - Networking -
 extension verificationVC {
+    
+    
+    func resetCode () {
+        activityIndicatorr.startAnimating()
+        AuthRouter.verifyResetCode(phone: self.phoneNumber, code: self.codeText.text ?? "" ).send {[weak self]  (response: APIGlobalResponse ) in
+            guard let self = self else { return }
+            if response.status == true {
+                showPopTopAlert(title: "Done".localize, withMessage: response.message, success: true )
+                let vc = ReseatPasswordVC()
+                vc.phone = self.phoneNumber
+                push(vc)
+            } else {
+                self.codeText.clearOTP()
+                self.disableNextButton()
+            }
+        }
+    }
     
 }
 

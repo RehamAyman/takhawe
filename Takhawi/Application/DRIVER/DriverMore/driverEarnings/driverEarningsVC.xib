@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -14,6 +14,10 @@
             <connections>
                 <outlet property="backView" destination="Ob9-v2-UGU" id="7FW-oM-wUO"/>
                 <outlet property="chartContainer" destination="okL-eo-nBC" id="omz-Oi-AgU"/>
+                <outlet property="fromToLabel" destination="aeT-Ja-vtW" id="cLE-zj-3ta"/>
+                <outlet property="ridesNo" destination="oh7-yK-fJs" id="OeO-Fw-qGa"/>
+                <outlet property="titleIncome" destination="4Xj-5E-huf" id="oJa-ti-2uj"/>
+                <outlet property="totalIncome" destination="dvZ-kw-DSX" id="nfH-7i-GmD"/>
                 <outlet property="view" destination="iN0-l3-epB" id="8PJ-XF-jz4"/>
             </connections>
         </placeholder>

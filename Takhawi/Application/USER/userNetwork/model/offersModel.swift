@@ -26,8 +26,8 @@ struct updateStatusResult : Codable {
   
     let status : String?
     let tripId : Int?
+    let driverId :  Int?
     
-  
     
 }
 

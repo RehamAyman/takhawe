@@ -40,7 +40,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.location?.requestAlwaysAuthorization()
         self.location?.requestWhenInUseAuthorization()
         AppDelegate.window?.tintColor = UIColor(named: colors.mainColor.rawValue)
-        
         Intercom.setBottomPadding(90)
       
         Intercom.setApiKey("ios_sdk-e6a2bb07aa9d964c423aca0f19b83e7288022f6e", forAppId: "yqdxwqwt")
@@ -74,11 +73,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("🥳🥳🥳🥳🥳🥳🥳🥳🥳")
                 print(status)
                 if status.status == "COMPLETED" { // show rate view COMPLETED
-                    
                     let vc = rateTheDriverVC()
+                    vc.driverId = status.driverId ?? 0
+                    vc.tripId = status.tripId ?? 0
                     if let rootViewController = AppDelegate.window?.rootViewController {
-                        
-                        
                         rootViewController.present( vc , animated: true, completion: nil )
                     }
                 }

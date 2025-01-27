@@ -1551,6 +1551,7 @@
 			children = (
 				CE619F8D2CADFF6A00EF6CC4 /* GoogleService-Info.plist */,
 				9694AB352A5DE9D500BDF5F8 /* AppDelegate.swift */,
+				9694AB372A5DE9D500BDF5F8 /* SceneDelegate.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -2654,7 +2655,6 @@
 			isa = PBXGroup;
 			children = (
 				9694AB392A5DE9D500BDF5F8 /* ViewController.swift */,
-				9694AB372A5DE9D500BDF5F8 /* SceneDelegate.swift */,
 				9694AB4B2A5DEB0A00BDF5F8 /* Base */,
 				9641AD242A6965B900A29046 /* Auth */,
 				9641AD2F2A6C29D000A29046 /* OnBoardingScreens */,

@@ -11,10 +11,18 @@ import UIKit
 
 
 class driverEarningsVC: BaseVC {
+    
+//MARK: - IBOutlets -
+    
     @IBOutlet weak var chartContainer: UIView!
     
+    @IBOutlet weak var fromToLabel: UILabel!
     @IBOutlet weak var backView: UIView!
-    //MARK: - IBOutlets -
+    @IBOutlet weak var ridesNo: UILabel!
+    @IBOutlet weak var totalIncome: UILabel!
+    @IBOutlet weak var titleIncome: UILabel!
+
+    
     
     
 //MARK: - Properties -
@@ -26,30 +34,20 @@ class driverEarningsVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureInitialDesign()
-        self.addChart()
+       
         self.backView.layer.addBasicShadow(cornerRadius: 20)
+        self.getTotalProfit()
     }
     
     
     
-  private func addChart () {
+    private func addChart (trips : [TripsReport] ) {
 //       let barChartView = BarChartView()
+      
        barChartView.translatesAutoresizingMaskIntoConstraints = false
        self.chartContainer.addSubview(barChartView)
       barChartView.backgroundColor = UIColor.white
       
-       // Configure bar chart data
-//       let entries = [
-//           BarChartDataEntry(x: 1.0, y: 2000),
-//           BarChartDataEntry(x: 2.0, y: 4000),
-//           BarChartDataEntry(x: 3.0, y: 6000),
-//           BarChartDataEntry(x: 4.0, y: 10000),
-//           BarChartDataEntry(x: 5.0, y: 3000)
-//       ]
-      // let dataSet = BarChartDataSet(entries: entries, label: "Income")
-      // dataSet.colors = [UIColor.systemBlue]
-     //  let data = BarChartData(dataSet: dataSet)
-   //    barChartView.data = data
       
        NSLayoutConstraint.activate([
            barChartView.topAnchor.constraint(equalTo: chartContainer.topAnchor),
@@ -81,6 +79,25 @@ class driverEarningsVC: BaseVC {
 
 //MARK: - Networking -
 extension driverEarningsVC {
+    
+    func getTotalProfit  () {
+        activityIndicatorr.startAnimating()
+        DriverRouter.getTotalProfit.send { [weak self ] (response : APIGenericResponse<totalProfitResult>)  in
+            guard let self = self else { return }
+            if let result = response.result {
+                self.totalIncome.text = "\(result.totalProfit ?? 0 )" + " " +  "SAR".localize
+                self.ridesNo.text = "\(result.tripsReport?.count ?? 0 )" + " " +  "Ride".localize
+                self.titleIncome.text = "\(result.totalProfit ?? 0 )" + " " +  "SAR".localize
+                let firstDate = result.tripsReport?.first?.start_date ?? ""
+                let secDate = result.tripsReport?.last?.start_date ?? ""
+                self.fromToLabel.text = "From " + firstDate + " To " + secDate
+                self.addChart(trips: result.tripsReport ?? [] )
+                
+            }
+        }
+    }
+    
+    
     
 }
 

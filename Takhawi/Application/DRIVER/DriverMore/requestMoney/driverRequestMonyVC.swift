@@ -102,8 +102,8 @@ extension driverRequestMonyVC {
     
     func requestStellment () {
         activityIndicatorr.startAnimating()
-        DriverRouter.stellementRequest(holderName:  self.bankAccHolderName.text ?? "" , bankName: self.bankName.text ?? "" , bankAccNo: self.bankAccountNumber.text ?? ""  , iban: self.ibanNumber.text ?? "" , amount: Int ( self.minWithdrawal.text ?? "" ) ?? 0).send { [weak self] ( response : APIGlobalResponse ) in
-            guard let self = self else { return }
+        DriverRouter.stellementRequest(holderName:  self.bankAccHolderName.text ?? "" , bankName: self.bankName.text ?? "" , bankAccNo: self.bankAccountNumber.text ?? ""  , iban: self.ibanNumber.text ?? "" , amount: Int ( self.minWithdrawal.text ?? "" ) ?? 0).send {  ( response : APIGlobalResponse ) in
+           
             if response.status == true {
                 showInfoTopAlert(withMessage: response.message )
             }

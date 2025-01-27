@@ -21,8 +21,13 @@ extension reviewsViewVC  : UITableViewDelegate , UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reviewCell", for: indexPath) as! reviewCell
         let item = self.allReviews[indexPath.row]
         cell.comment.text = item.note
+      
         cell.userImage.image = UIImage(named: "Group 1000002907")
-        cell.userName.text = "userId : \(item.reviewer_id ?? 0 )"
+        if let image = item.Reviewers?.avatar {
+            cell.userImage.setImage(image: image)
+        }
+            
+        cell.userName.text = item.Reviewers?.name ?? ""
         cell.userrate.rating =  item.rate ?? 0
         cell.userrate.isUserInteractionEnabled = false
         cell.selectionStyle = .none

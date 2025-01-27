@@ -54,6 +54,7 @@ enum UserRouter {
     case getBillingInfo
     case createBillingInfo ( surname : String , street : String , cityId : Int , state : String)
     case getAllReviews ( id : Int)
+    case rateTheDriver ( tripId : Int , driverId : Int , note : String , rate : Int)
   
 }
 
@@ -68,7 +69,7 @@ extension UserRouter : APIRouter {
     var method: HTTPMethod {
         switch self {
             
-        case .createVipTrip , .acceptOffer  , .complain , .addAddressToFav , .claculateBasicPrice  , .joinABasicTrip , .calculateVipPrice , .checkPromoCode   , .openChat  , .registerFcm , .chargeWallet  , .createBillingInfo  :
+        case .createVipTrip , .acceptOffer  , .complain , .addAddressToFav , .claculateBasicPrice  , .joinABasicTrip , .calculateVipPrice , .checkPromoCode   , .openChat  , .registerFcm , .chargeWallet  , .createBillingInfo , .rateTheDriver  :
             return .post
         
             
@@ -177,6 +178,8 @@ extension UserRouter : APIRouter {
             return userServerPath.createbillingInfo
         case .getAllReviews(id: let id ) :
             return userServerPath.reviewsList(id: id )
+        case .rateTheDriver :
+            return userServerPath.rateTheDriver
     
         
             
@@ -381,6 +384,15 @@ extension UserRouter : APIRouter {
             return dic 
          
             
+        case .rateTheDriver(tripId: let tripId , driverId: let driverId , note: let note , rate: let rate ) :
+            
+
+            return [
+                "trip_id": tripId,
+                "rate": rate ,
+                "target_id": driverId ,
+                "note": note
+            ]
             
             
                     

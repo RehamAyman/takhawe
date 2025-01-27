@@ -9,6 +9,7 @@
 import Foundation
 
 
+
 struct ReviewsListResult : Codable {
     let id : Int?
     let rate : Double?
@@ -20,6 +21,7 @@ struct ReviewsListResult : Codable {
     let reviewer_id : Int?
     let target_id : Int?
     let trip_id : Int?
+    let Reviewers : Reviewers?
 
     enum CodingKeys: String, CodingKey {
 
@@ -33,6 +35,7 @@ struct ReviewsListResult : Codable {
         case reviewer_id = "reviewer_id"
         case target_id = "target_id"
         case trip_id = "trip_id"
+        case Reviewers = "Reviewers"
     }
 
 
@@ -42,3 +45,8 @@ struct ReviewsListResult : Codable {
 
 
 
+
+struct Reviewers : Codable  {
+    let  avatar : String?
+    let name : String?
+}

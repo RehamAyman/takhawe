@@ -136,8 +136,8 @@ class MySocketManager {
                         // Convert the array of dictionaries into JSON data
                         let jsonData = try JSONSerialization.data(withJSONObject: dataArray, options: [])
                         // Decode the JSON data into an array of Offer objects
-                        let status = try JSONDecoder().decode(updateStatusResult.self, from: jsonData)
-                        completion (  updateStatusResult(status: status.status, tripId: status.tripId) )
+                        let status = try JSONDecoder().decode([updateStatusResult].self, from: jsonData)
+                        completion (  updateStatusResult(status: status.first?.status, tripId: status.first?.tripId, driverId: status.first?.driverId) )
                     } catch {
                         print("Error decoding trip status changes data: \(error)")
                     }
