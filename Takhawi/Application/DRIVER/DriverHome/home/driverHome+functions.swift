@@ -193,8 +193,8 @@ extension DriverHomeVC : UICollectionViewDelegate , UICollectionViewDataSource ,
         NSLayoutConstraint.activate([
                   switchButton.centerXAnchor.constraint(equalTo: switchContainer.centerXAnchor),
                   switchButton.centerYAnchor.constraint(equalTo: switchContainer.centerYAnchor),
-                  switchButton.widthAnchor.constraint(equalToConstant: 300),
-                  switchButton.heightAnchor.constraint(equalToConstant: 390)
+                  switchButton.widthAnchor.constraint(equalToConstant: 100),
+                  switchButton.heightAnchor.constraint(equalToConstant: 60)
               ])
         
         

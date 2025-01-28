@@ -92,8 +92,9 @@ extension profitDetailsVC {
             }
         }
     }
-    
 }
+
+
 
 //MARK: - Routes -
 extension profitDetailsVC {

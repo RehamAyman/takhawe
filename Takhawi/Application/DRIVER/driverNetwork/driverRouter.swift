@@ -33,6 +33,7 @@ enum DriverRouter {
     case report ( noOfMonths : Int )
     case getTotalProfit
     case reportDetails ( id : Int )
+    case getVipByDistance ( distance : Int )
 }
 
 extension DriverRouter : APIRouter {
@@ -48,9 +49,9 @@ extension DriverRouter : APIRouter {
         case .createAvehicle , .createBasic , .makeOffer  , .markReport , .stellementRequest , .addNewCar  :
             return .post
         
-        case  .driverStatus , .vehicleDetials , .getMeetingLocations , .getPrevVipTrips  , .getAllReports , .switchToUser , .report  , .getTotalProfit , .reportDetails:
-          return .get
+        case  .driverStatus , .vehicleDetials , .getMeetingLocations , .getPrevVipTrips  , .getAllReports , .switchToUser , .report  , .getTotalProfit , .reportDetails , .getVipByDistance :
             
+          return .get
             
         case .updateTripStatus , .markPassenger  , .endBasicTrip  , .endVipTrip:
             return .patch
@@ -107,6 +108,9 @@ extension DriverRouter : APIRouter {
             return driverServerPath.getTotalProfit
         case .reportDetails(id: let id ):
             return driverServerPath.reportDetails(id: id)
+        case .getVipByDistance(distance: let distance ) :
+            return driverServerPath.getVipByDistance
+            
             
        
         }
@@ -214,6 +218,12 @@ extension DriverRouter : APIRouter {
                 "vehicle_color_id" : colorId ,
                 "vehicle_type_id" :  typeId ,
                 "vehicle_name_id" : nameId
+            ]
+            
+            
+        case .getVipByDistance(distance: let distance):
+            return [
+                "distance" : distance
             ]
      
           

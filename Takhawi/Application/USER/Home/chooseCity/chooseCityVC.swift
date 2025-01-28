@@ -9,6 +9,7 @@
 
 import UIKit
 
+
 class chooseCityVC: BaseVC , UITableViewDelegate , UITableViewDataSource {
    
     
@@ -30,6 +31,8 @@ class chooseCityVC: BaseVC , UITableViewDelegate , UITableViewDataSource {
     var isLastPage : Bool = false
     var action: ((CitiesResult) -> Void)?
    
+  
+   
     
     
     // MARK: - Lifecycle -
@@ -37,6 +40,8 @@ class chooseCityVC: BaseVC , UITableViewDelegate , UITableViewDataSource {
         super.viewDidLoad()
         self.configureInitialDesign()
         self.getAllCities()
+        
+     
     }
     
     
@@ -67,8 +72,9 @@ class chooseCityVC: BaseVC , UITableViewDelegate , UITableViewDataSource {
         let item = self.allCities[indexPath.row]
         cell.title.text = item.name
         cell.addTapGesture {
-            self.action?(item)
-            self.dismiss(animated: true )
+                self.action?(item)
+                self.dismiss(animated: true )
+            
         }
         
     return cell
@@ -120,6 +126,9 @@ extension chooseCityVC {
         }
     }
     
+    
+    
+    
     func getMoreCities ( page : Int) {
         self.showLoading(play: true )
         UserRouter.getAllCities(page: page).send { [weak self ] (response: APIGenericResponse<[CitiesResult]> ) in
@@ -127,11 +136,8 @@ extension chooseCityVC {
             
             if response.status == true {
                 if response.paginate?.page == response.paginate?.totalPages {
-                   
-                  
                     self.isLastPage = true
                 }
-                
                 self.pationation = response.paginate
                 self.allCities += response.result ?? []
                 self.tableView.reloadData()
@@ -139,9 +145,18 @@ extension chooseCityVC {
             }
         }
     }
+    
+    
+
+    
+    
+
+   
 }
 
 //MARK: - Routes -
 extension chooseCityVC {
     
 }
+
+

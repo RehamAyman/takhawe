@@ -9,6 +9,7 @@ import UIKit
 import GoogleMaps
 import MapKit
 import CoreLocation
+import Alamofire
 
 
 
@@ -43,6 +44,33 @@ extension DriverHomeVC :  CLLocationManagerDelegate  , GMSMapViewDelegate  {
         }
     
     
+    
+    
+    @objc func handleLongPress(_ gestureRecognizer: UILongPressGestureRecognizer) {
+        
+        
+           if gestureRecognizer.state == .began {
+               // Get the location of the long press on the map view
+               let touchPoint = gestureRecognizer.location(in: googleMaps)
+               let coordinate = googleMaps.projection.coordinate(for: touchPoint)
+               print("Long Press at coordinate: \(coordinate.latitude), \(coordinate.longitude)")
+               reportMarker.position = coordinate
+               reportMarker.title = "Pinned Location"
+              // reportMarker.snippet = "Lat: \(coordinate.latitude), Lng: \(coordinate.longitude)"
+               reportMarker.map = googleMaps
+               self.showAccedintView(lat: coordinate.latitude , lng: coordinate.longitude)
+           }
+       }
+    
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+           return true
+       }
+    
+    
+    
+    
+    
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print("listen")
        
@@ -62,10 +90,8 @@ extension DriverHomeVC :  CLLocationManagerDelegate  , GMSMapViewDelegate  {
         // pass to the socket my location
         
         socketManager.sendMyLocation(lat: latitude , lng: longitude)
-        
         self.getAllReports(lat: latitude, lng: longitude)
  
-        
     }
     
     
@@ -101,20 +127,20 @@ extension DriverHomeVC :  CLLocationManagerDelegate  , GMSMapViewDelegate  {
     
     
     
-    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
-          print("Tapped at location: \(coordinate.latitude), \(coordinate.longitude)")
-          
-          // Clear existing markers
-         
-          
-          // Add a marker at the tapped location
-         
-          reportMarker.position = coordinate
-          reportMarker.title = "Pinned Location"
-          reportMarker.snippet = "Lat: \(coordinate.latitude), Lng: \(coordinate.longitude)"
-          reportMarker.map = mapView
-          self.showAccedintView(lat: coordinate.latitude , lng: coordinate.longitude)
-      }
+//    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+//          print("Tapped at location: \(coordinate.latitude), \(coordinate.longitude)")
+//          
+//          // Clear existing markers
+//         
+//          
+//          // Add a marker at the tapped location
+//         
+//          reportMarker.position = coordinate
+//          reportMarker.title = "Pinned Location"
+//          reportMarker.snippet = "Lat: \(coordinate.latitude), Lng: \(coordinate.longitude)"
+//          reportMarker.map = mapView
+//          
+//      }
     
     
     
@@ -123,13 +149,13 @@ extension DriverHomeVC :  CLLocationManagerDelegate  , GMSMapViewDelegate  {
         vc.modalPresentationStyle = .overFullScreen
         vc.passedLat = lat
         vc.passedLng = lng
-        
-        
         vc.action = { lat , lng , en , ar in
             self.drawItemInMaps(lat: lat , lng: lng , en: en , ar : ar )
            
         }
         self.present(vc , animated: true )
+        
+        
     }
     
     
@@ -149,7 +175,7 @@ extension DriverHomeVC :  CLLocationManagerDelegate  , GMSMapViewDelegate  {
         switch type {
         case "Radar" , "رادار"   :
             return "radar"
-          
+            
         case  "Animals" , "حيوانات" :
             return "camel 1"
             
@@ -158,7 +184,6 @@ extension DriverHomeVC :  CLLocationManagerDelegate  , GMSMapViewDelegate  {
             
         case  "Changing directions" ,  "تغيير مسار"  :
             return "Group 18"
-            
             
         case   "Alert" ,  "تنبيه" :
             return "alert-triangle-svgrepo-com 1"
@@ -171,9 +196,6 @@ extension DriverHomeVC :  CLLocationManagerDelegate  , GMSMapViewDelegate  {
             
         case   "Works" , "اشغالات" :
             return "road-work (1) 1"
-            
-            
-            
             
         default:
             print("def")
@@ -246,6 +268,76 @@ extension DriverHomeVC :  CLLocationManagerDelegate  , GMSMapViewDelegate  {
     }
     
     
+    func filterButtonAction () {
+        self.filterButton.addTapGesture {
+            let vc = chooseCityVC()
+            vc.action = { item in
+                self.getDistanceBetweenLocations( destinationCity: item.name ?? "" ) { distanceInKm, durationText in
+                    if let distance = distanceInKm, let duration = durationText {
+                        print("Distance to \(item.name ):   \(distance) km, Estimated Time: \(duration)")
+                                            
+                        DriverRouter.getVipByDistance(distance: Int ( distance ) ).send { [weak self] (response : APIGenericResponse<[SocketVIP_Trip]> )   in
+                            guard let self = self else { return }
+                            if let result = response.result {
+                                self.offers += result
+                                self.collectionView.reloadData()
+                            }
+                        }
+                    } else {
+                        print("Failed to fetch distance")
+                    }
+                }
+            }
+            self.present( vc , animated: true )
+        }
+    }
+    
+    
+    
+
+      private func getDistanceBetweenLocations(  destinationCity: String,  completion: @escaping (Double?, String?) -> Void) {
+          let url = "https://maps.googleapis.com/maps/api/distancematrix/json"
+          let currentLat = self.locationManager.location?.coordinate.latitude ?? 0
+          let currentLng = self.locationManager.location?.coordinate.longitude ?? 0
+          
+          
+          let parameters: [String: String] = [
+              "origins": "\( currentLat ),\(currentLng)",
+              "destinations": destinationCity,
+              "units": "metric", // Use "metric" for kilometers
+              "key": Server.googleKey.rawValue
+          ]
+          
+          
+          print(parameters)
+          
+          
+          AF.request(url, method: .get, parameters: parameters)
+              .validate()
+              .responseDecodable(of: DistanceMatrixResponse.self) { response in
+                  switch response.result {
+                  case .success(let result):
+                      if let element = result.rows.first?.elements.first, element.status == "OK" {
+                          let distanceInMeters = element.distance.value
+                          let durationText = element.duration.text
+                          let distanceInKm = Double(distanceInMeters) / 1000.0
+                          completion(distanceInKm, durationText)
+                      } else {
+                          print("Error: No valid results for destination city: \(destinationCity)")
+                          completion(nil, nil)
+                      }
+                  case .failure(let error):
+                      print("Error fetching distance: \(error.localizedDescription)")
+                      completion(nil, nil)
+                  }
+              }
+      }
+    
+    
+    
+    
+    
+    
 //MARK: - IGNORE OFFER
     func rejectTrip () {
         
@@ -277,7 +369,6 @@ extension DriverHomeVC :  CLLocationManagerDelegate  , GMSMapViewDelegate  {
             googleMaps.clear()
             if let result = response.result {
                 for i in result {
-                 
                     self.drawItemInMaps(lat:  i.location?.lat ?? 0 ,
                                         lng: i.location?.lng ?? 0,
                                         en: i.type ?? ""  ,

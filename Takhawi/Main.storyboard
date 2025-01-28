@@ -1020,16 +1020,23 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zKt-aY-J41">
-                                <rect key="frame" x="283" y="69" width="100" height="80"/>
+                                <rect key="frame" x="235" y="74" width="100" height="70"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="WG6-fS-sS1"/>
-                                    <constraint firstAttribute="height" constant="80" id="cIY-TD-QdK"/>
+                                    <constraint firstAttribute="height" constant="70" id="cIY-TD-QdK"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filter 1" translatesAutoresizingMaskIntoConstraints="NO" id="XT0-2Y-5We">
+                                <rect key="frame" x="343" y="89" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="7Ar-Tl-08t"/>
+                                    <constraint firstAttribute="height" constant="40" id="bwl-YU-pgh"/>
+                                </constraints>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="6us-jC-0bn">
                                 <rect key="frame" x="20" y="89" width="40" height="40"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="yVa-Y5-HCM"/>
                                     <constraint firstAttribute="height" constant="40" id="yxR-oS-ycc"/>
@@ -1130,19 +1137,21 @@
                             <constraint firstItem="bOJ-Ak-RkF" firstAttribute="trailing" secondItem="lfK-w9-qb8" secondAttribute="trailing" constant="10" id="AVl-uo-vRx"/>
                             <constraint firstItem="zKt-aY-J41" firstAttribute="centerY" secondItem="6us-jC-0bn" secondAttribute="centerY" id="AyB-1M-jkf"/>
                             <constraint firstItem="miw-7v-TS7" firstAttribute="top" secondItem="jkY-RG-lsn" secondAttribute="bottom" constant="40" id="F4b-kf-M4N"/>
-                            <constraint firstItem="bOJ-Ak-RkF" firstAttribute="trailing" secondItem="zKt-aY-J41" secondAttribute="trailing" constant="10" id="J5O-GQ-Jmz"/>
                             <constraint firstItem="ifw-mC-L86" firstAttribute="leading" secondItem="bOJ-Ak-RkF" secondAttribute="leading" id="O5K-AT-bkU"/>
                             <constraint firstItem="miw-7v-TS7" firstAttribute="leading" secondItem="bOJ-Ak-RkF" secondAttribute="leading" constant="20" id="OZH-HB-fWk"/>
                             <constraint firstItem="bOJ-Ak-RkF" firstAttribute="trailing" secondItem="ifw-mC-L86" secondAttribute="trailing" id="Ol9-xY-GnU"/>
                             <constraint firstItem="6us-jC-0bn" firstAttribute="leading" secondItem="bOJ-Ak-RkF" secondAttribute="leading" constant="20" id="RmI-t0-zFx"/>
                             <constraint firstItem="aof-94-eMD" firstAttribute="leading" secondItem="bOJ-Ak-RkF" secondAttribute="leading" id="WyB-ot-Dbe"/>
+                            <constraint firstItem="bOJ-Ak-RkF" firstAttribute="trailing" secondItem="XT0-2Y-5We" secondAttribute="trailing" constant="10" id="Z3C-Oh-kHt"/>
                             <constraint firstItem="ifw-mC-L86" firstAttribute="top" secondItem="lfK-w9-qb8" secondAttribute="bottom" constant="10" id="ZgW-yj-8NE"/>
                             <constraint firstItem="6us-jC-0bn" firstAttribute="top" secondItem="bOJ-Ak-RkF" secondAttribute="top" constant="30" id="bKf-wP-BLn"/>
                             <constraint firstItem="bOJ-Ak-RkF" firstAttribute="trailing" secondItem="miw-7v-TS7" secondAttribute="trailing" constant="20" id="bLV-tH-BG7"/>
                             <constraint firstAttribute="trailing" secondItem="aof-94-eMD" secondAttribute="trailing" id="ejh-8k-nxN"/>
                             <constraint firstAttribute="bottom" secondItem="aof-94-eMD" secondAttribute="bottom" id="kpx-fB-4eJ"/>
                             <constraint firstItem="jkY-RG-lsn" firstAttribute="leading" secondItem="6us-jC-0bn" secondAttribute="trailing" constant="10" id="rs7-h7-ETo"/>
+                            <constraint firstItem="XT0-2Y-5We" firstAttribute="centerY" secondItem="6us-jC-0bn" secondAttribute="centerY" id="u94-Ff-FK6"/>
                             <constraint firstItem="bOJ-Ak-RkF" firstAttribute="bottom" secondItem="ifw-mC-L86" secondAttribute="bottom" constant="50" id="vFJ-W3-3Zy"/>
+                            <constraint firstItem="XT0-2Y-5We" firstAttribute="leading" secondItem="zKt-aY-J41" secondAttribute="trailing" constant="8" id="xyc-dH-Cxm"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="home-2" selectedImage="home-2" id="866-sd-WHM">
@@ -1154,6 +1163,7 @@
                         <outlet property="createAtrip" destination="lfK-w9-qb8" id="8A7-PM-GuT"/>
                         <outlet property="driverImage" destination="6us-jC-0bn" id="wJk-Wd-PbK"/>
                         <outlet property="driverName" destination="o4w-ss-Wou" id="poA-Hc-fdh"/>
+                        <outlet property="filterButton" destination="XT0-2Y-5We" id="f7R-Tg-ifl"/>
                         <outlet property="googleMaps" destination="aof-94-eMD" id="B70-Um-rde"/>
                         <outlet property="notificationView" destination="miw-7v-TS7" id="iZe-He-egO"/>
                         <outlet property="switchContainer" destination="zKt-aY-J41" id="QTy-sl-JcI"/>
@@ -1211,6 +1221,7 @@
         <image name="bar-graph 1" width="24" height="24"/>
         <image name="chat-bubbles-with-ellipsis 1" width="24" height="24"/>
         <image name="file 3" width="24" height="24"/>
+        <image name="filter 1" width="24" height="24"/>
         <image name="global 2" width="24" height="24"/>
         <image name="home-2" width="24" height="24.333333969116211"/>
         <image name="logo" width="131" height="115"/>

@@ -36,14 +36,20 @@ class driverEarningsVC: BaseVC {
         self.configureInitialDesign()
        
         self.backView.layer.addBasicShadow(cornerRadius: 20)
-        self.getTotalProfit()
+        self.getReports()
     }
     
     
     
-    private func addChart (trips : [TripsReport] ) {
+    private func addChart (tripsValues  :  [CGFloat]  , days : [String]  ) {
 //       let barChartView = BarChartView()
-      
+        
+        
+        print("----- test -----")
+        print(tripsValues)
+        print(days)
+        barChartView.barValues = tripsValues // Array(tripsValues.prefix(7))
+        barChartView.barLabels =  days // Array(days.prefix(7))
        barChartView.translatesAutoresizingMaskIntoConstraints = false
        self.chartContainer.addSubview(barChartView)
       barChartView.backgroundColor = UIColor.white
@@ -80,22 +86,54 @@ class driverEarningsVC: BaseVC {
 //MARK: - Networking -
 extension driverEarningsVC {
     
-    func getTotalProfit  () {
+    func getReports () {
         activityIndicatorr.startAnimating()
-        DriverRouter.getTotalProfit.send { [weak self ] (response : APIGenericResponse<totalProfitResult>)  in
-            guard let self = self else { return }
-            if let result = response.result {
-                self.totalIncome.text = "\(result.totalProfit ?? 0 )" + " " +  "SAR".localize
-                self.ridesNo.text = "\(result.tripsReport?.count ?? 0 )" + " " +  "Ride".localize
-                self.titleIncome.text = "\(result.totalProfit ?? 0 )" + " " +  "SAR".localize
-                let firstDate = result.tripsReport?.first?.start_date ?? ""
-                let secDate = result.tripsReport?.last?.start_date ?? ""
-                self.fromToLabel.text = "From " + firstDate + " To " + secDate
-                self.addChart(trips: result.tripsReport ?? [] )
-                
-            }
+        DriverRouter.report(noOfMonths: 10 ).send {  (response : APIGenericResponse<driverReportsResult> )  in
+                if let response = response.result {
+                    self.ridesNo.text  = "\(response.totalRevenue?.total_trips ?? 0)" +  "Ride".localize
+                    self.totalIncome.text = "\(response.totalRevenue?.driver_profit ?? 0)" +  "SAR".localize
+                    self.titleIncome.text = "\(response.totalRevenue?.driver_profit ?? 0)" +  "SAR".localize
+                    let firstDate = response.monthlyRevenue?.first?.date ?? ""
+                    let secDate = response.monthlyRevenue?.last?.date ?? ""
+                    self.fromToLabel.text = "From " + firstDate + " To " + secDate
+                    let people = response.monthlyRevenue ?? []
+                    let values  =  people.map { $0.driver_profit ?? 0 }
+                    let days =  people.map { $0.date ?? "" }
+                    self.addChart(tripsValues: values, days: days)
+                 
+                    
+                    // Using map to get an array of names
+                  //  self.chartData = people.map { $0.driver_profit ?? 0 }
+
+                    
+                    
+                }
+            
         }
     }
+    
+    
+    
+    
+//    func getTotalProfit  () {
+//        activityIndicatorr.startAnimating()
+//        
+//        
+//        
+//        DriverRouter.getTotalProfit.send { [weak self ] (response : APIGenericResponse<totalProfitResult>)  in
+//            guard let self = self else { return }
+//            if let result = response.result {
+//                self.totalIncome.text = "\(result.totalProfit ?? 0 )" + " " +  "SAR".localize
+//                self.ridesNo.text = "\(result.tripsReport?.count ?? 0 )" + " " +  "Ride".localize
+//                self.titleIncome.text = "\(result.totalProfit ?? 0 )" + " " +  "SAR".localize
+//                let firstDate = result.tripsReport?.first?.start_date ?? ""
+//                let secDate = result.tripsReport?.last?.start_date ?? ""
+//                self.fromToLabel.text = "From " + firstDate + " To " + secDate
+//                self.addChart(trips: result.tripsReport ?? [] )
+//                
+//            }
+//        }
+//    }
     
     
     

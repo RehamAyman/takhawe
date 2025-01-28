@@ -26,6 +26,7 @@ enum Server: String {
     case joinUsURL = "https://writingservices.aait-sa.com/option-register"
     case imageBase =   "https://api.takhawe.com/" //"https://dev-dash-takhawe.hayah.tech/"
     case applePayBase = "https://api.takhawe.com/api/payment-getway/apple-pay-session?checkoutId="
+    case googleKey = "AIzaSyAfTSBkcXfJa5Zf0YHN3-m-gJFFhvzVu4U"
 
 }
 

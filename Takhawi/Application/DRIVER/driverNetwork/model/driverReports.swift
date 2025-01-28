@@ -53,7 +53,7 @@ struct TotalRevenue : Codable {
 struct MonthlyRevenue : Codable {
     let date : String?
     let total_trips_price : Int?
-    let driver_profit : Double?
+    let driver_profit : CGFloat?
     let total_distance : Int?
 
     enum CodingKeys: String, CodingKey {
@@ -68,7 +68,7 @@ struct MonthlyRevenue : Codable {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         date = try values.decodeIfPresent(String.self, forKey: .date)
         total_trips_price = try values.decodeIfPresent(Int.self, forKey: .total_trips_price)
-        driver_profit = try values.decodeIfPresent(Double.self, forKey: .driver_profit)
+        driver_profit = try values.decodeIfPresent(CGFloat.self, forKey: .driver_profit)
         total_distance = try values.decodeIfPresent(Int.self, forKey: .total_distance)
     }
 

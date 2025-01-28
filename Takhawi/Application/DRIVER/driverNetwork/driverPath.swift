@@ -30,6 +30,7 @@ enum driverServerPath {
     case reports ( month : Int )
     case getTotalProfit
     case reportDetails( id : Int )
+    case getVipByDistance
     
     
    
@@ -80,6 +81,8 @@ extension driverServerPath : ServerPath {
             return "driver-report?limit=200"
         case .reportDetails(id: let id ):
             return "driver-report/\(id)"
+        case .getVipByDistance:
+            return "trip/nearby-by-distance"
     
         }
     }

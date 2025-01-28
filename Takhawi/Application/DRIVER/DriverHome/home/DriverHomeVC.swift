@@ -10,7 +10,8 @@ import CoreLocation
 import GoogleMaps
 
 
-class DriverHomeVC: BaseVC  {
+
+class DriverHomeVC: BaseVC, UIGestureRecognizerDelegate  {
     
     
 //MARK: - VARS
@@ -19,9 +20,9 @@ class DriverHomeVC: BaseVC  {
     let socketManager = MySocketManager()
     var offers : [SocketVIP_Trip] = []
     let reportMarker = GMSMarker()
-    
-//MARK: - OUTLETS
-    
+    //MARK: - OUTLETS
+    @IBOutlet weak var filterButton: UIImageView!
+  
     @IBOutlet weak var createAtrip: UIImageView!
     
     @IBOutlet weak var switchContainer: UIView!
@@ -46,7 +47,15 @@ class DriverHomeVC: BaseVC  {
         self.setUpVipListenerSocket()
         self.setupMainView()
         self.getPrevTrips()
+        self.filterButtonAction()
         
+        
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(_:)))
+               longPressGesture.minimumPressDuration = 0.5 // Adjust the duration as needed
+               longPressGesture.delegate = self
+        googleMaps.addGestureRecognizer(longPressGesture)
+        
+
     }
     
 
@@ -59,6 +68,32 @@ class DriverHomeVC: BaseVC  {
     private func checkDriverStatus () {
         
     }
+       
+    
+    
+}
 
 
+struct DistanceMatrixResponse: Decodable {
+    let rows: [Row]
+    
+    struct Row: Decodable {
+        let elements: [Element]
+        
+        struct Element: Decodable {
+            let distance: Distance
+            let duration: Duration
+            let status: String
+            
+            struct Distance: Decodable {
+                let value: Int // Distance in meters
+                let text: String // Human-readable distance (e.g., "10 km")
+            }
+            
+            struct Duration: Decodable {
+                let value: Int // Duration in seconds
+                let text: String // Human-readable duration (e.g., "15 mins")
+            }
+        }
+    }
 }

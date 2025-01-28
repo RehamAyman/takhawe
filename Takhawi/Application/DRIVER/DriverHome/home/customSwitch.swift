@@ -16,8 +16,9 @@ class SwitchButton: UIButton {
             self.update()
         }
     }
-    var onImage = UIImage(named: "on")
-    var offImage = UIImage(named: "off")
+    //Frame 1000003370
+    var onImage = UIImage(named: "Frame 1000003368")
+    var offImage = UIImage(named: "Frame 1000003370")
     
     override init(frame: CGRect) {
         super.init(frame: frame)
