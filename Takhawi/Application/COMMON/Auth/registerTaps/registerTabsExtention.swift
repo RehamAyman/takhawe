@@ -39,14 +39,14 @@ extension registerTabs {
     
     
     
-    func sighUp (name : String , email : String , password : String , gender : Int , phone : String) {
+    func sighUp (name : String , email : String , password : String , gender : Int , phone : String , birthDate : Date ) {
         print("signup params  ")
         print( name )
         print(email)
         print(password)
         print(gender)
         print(self.phone)
-       self.action(name , email , password , phone , gender)
+        self.action(name , email , password , phone , gender , birthDate)
        
 
        

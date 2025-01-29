@@ -12,7 +12,7 @@ import Alamofire
 
 enum AuthRouter {
     case login(phone : String, password: String)
-    case signUp(name : String , email : String , password : String , role : String , phone : String , gender : String  )
+    case signUp(name : String , email : String , password : String , role : String , phone : String , gender : String  , birthDate : String )
     case regoins
     case checkPhone( phone : String)
     case forgetPassword ( phone : String)
@@ -97,14 +97,15 @@ extension AuthRouter: APIRouter {
                "password" : password
             ]
             
-        case.signUp( let name , let email , let password , let role ,let phone  , let gender ):
+        case.signUp( let name , let email , let password , let role ,let phone  , let gender , let dateOfBirth ):
             return [
                 "name" : name ,
                 "phone" : phone ,
                 "email" : email ,
                 "password" : password ,
                 "role" : role ,
-                "gender" : gender
+                "gender" : gender ,
+                "birth_date" : dateOfBirth
             ]
             
         case .checkPhone(let phone ):

@@ -73,7 +73,6 @@ extension DriverHomeVC :  CLLocationManagerDelegate  , GMSMapViewDelegate  {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print("listen")
-       
         centerMapOnLocation(location: locationManager.location!)
        self.locationManager.stopUpdatingLocation()
 //        let lat = "\(locationManager.location?.coordinate.latitude ?? 0.0)"
@@ -82,16 +81,12 @@ extension DriverHomeVC :  CLLocationManagerDelegate  , GMSMapViewDelegate  {
         guard let longitude =  locationManager.location?.coordinate.longitude else { return}
         print(latitude)
         print(longitude)
-        
-        
-        
-        
+
         getAddress(lat: latitude , Lng: longitude)
         // pass to the socket my location
         
         socketManager.sendMyLocation(lat: latitude , lng: longitude)
         self.getAllReports(lat: latitude, lng: longitude)
- 
     }
     
     

@@ -9,7 +9,8 @@ import SwiftUI
 
 struct tab4: View {
     @Binding var fullName : String
-    
+    // @Binding
+    @Binding  var birthdate : Date
     
     
     var body: some View {
@@ -18,6 +19,11 @@ struct tab4: View {
                 .resizable()
                 .frame(width:  UIScreen.main.bounds.width * 0.3)
                 .frame(height:  UIScreen.main.bounds.height * 0.15)
+            
+            DatePicker("Birthdate".localize, selection: $birthdate, in: ...Date(), displayedComponents: .date)
+                          // .labelsHidden() // Hide the label for a cleaner UI
+                           .padding()
+            
             
             TextField( "Enter Your Full Name".localize , text: $fullName )
                 
@@ -36,8 +42,3 @@ struct tab4: View {
     }
 }
 
-struct tab4_Previews: PreviewProvider {
-    static var previews: some View {
-        tab4(fullName: Binding.constant(""))
-    }
-}

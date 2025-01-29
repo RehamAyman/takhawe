@@ -23,12 +23,14 @@ struct registerTabs: View {
     @State var confirmPassword : String = ""
     @State var genderIndex : Int = 0
     @State var fullName : String = ""
-    @State var checkTerms : Bool = false 
+    @State var checkTerms : Bool = false
+    @State  var birthdate = Date()
+    
     
     var phone : String = ""
 
     
-    var action: (_ name : String , _ email : String , _ password : String , _ phone : String , _ genderIndex : Int ) -> Void
+    var action: (_ name : String , _ email : String , _ password : String , _ phone : String , _ genderIndex : Int , _ birthDate : Date ) -> Void
     var BackAction: () -> Void
     var showTermsaction: (() -> Void)?
     var IsArabicLang : Bool {
@@ -96,7 +98,7 @@ struct registerTabs: View {
                     tab3(index: $genderIndex)
                         
                         .tag(3)
-                    tab4(fullName: $fullName )
+                    tab4(fullName: $fullName  , birthdate: $birthdate)
                       
                         .tag(4)
                     
@@ -136,7 +138,7 @@ struct registerTabs: View {
                             showPopTopAlert(title: "Error!".localize  , withMessage: "Please add your fullname first!".localize , success: false )
                         } else {
                             // signup request
-                            self.sighUp(name: self.fullName, email: self.email, password: self.password, gender: self.genderIndex, phone: self.phone)
+                            self.sighUp(name: self.fullName, email: self.email, password: self.password, gender: self.genderIndex, phone: self.phone , birthDate: self.birthdate)
                         }
                         
                     

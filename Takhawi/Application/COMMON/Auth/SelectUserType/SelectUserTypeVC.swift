@@ -24,6 +24,7 @@ class SelectUserTypeVC: BaseVC {
     var fullname : String = "" 
     var phone : String = ""
     var genderIndex : Int = 0
+    var dateOfBirth : Date = Date()
     
 
     // MARK: - Lifecycle -
@@ -111,8 +112,10 @@ class SelectUserTypeVC: BaseVC {
 extension SelectUserTypeVC {
     
     func signupUser (name : String , email : String , password : String  , phone : String , genderIndex: Int , role : String ) {
+        
+        
            activityIndicatorr.startAnimating()
-           AuthRouter.signUp(name: name  , email: email , password: password , role: role, phone: phone, gender: genderIndex == 0 ? "Female" : "Male"  ).send {  (response: APIGenericResponse<LoginModelData>) in
+        AuthRouter.signUp(name: name  , email: email , password: password , role: role, phone: phone, gender: genderIndex == 0 ? "Female" : "Male", birthDate: self.dateOfBirth.ISO8601Format()  ).send {  (response: APIGenericResponse<LoginModelData>) in
                if response.status == true {
                    if let data = response.result {
                        showPopTopAlert(title: "Done Successfully".localize , withMessage: response.message  ?? "" , success: true )

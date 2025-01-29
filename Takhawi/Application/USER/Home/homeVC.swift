@@ -295,10 +295,7 @@ class homeVC: BaseVC, sendDataBackDelegate{
         let generator = UIImpactFeedbackGenerator(style: .medium)
           generator.prepare()
           generator.impactOccurred()
-        
-        
-        
-       // AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+        // AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
         
         let vc = emptyBookingVC()
             self.push(vc)
