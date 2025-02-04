@@ -223,6 +223,7 @@
 		CE1656662CCBDABE00A58919 /* driverReports.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1656652CCBDABE00A58919 /* driverReports.swift */; };
 		CE1A11D12C6C9D7A00F6FDE2 /* validationUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1A11D02C6C9D7A00F6FDE2 /* validationUrl.swift */; };
 		CE1A11D32C6CA3FF00F6FDE2 /* oneBasicTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1A11D22C6CA3FF00F6FDE2 /* oneBasicTrip.swift */; };
+		CE1A271D2D50BBBD0052DB7A /* earningsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1A271C2D50BBB80052DB7A /* earningsModel.swift */; };
 		CE1A94E02B6CD549003C50EF /* fileUploadedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1A94DF2B6CD549003C50EF /* fileUploadedView.swift */; };
 		CE2292852B1E57B300E8AB42 /* hotelsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2292842B1E57B300E8AB42 /* hotelsVC.swift */; };
 		CE2292872B1E57C100E8AB42 /* hotelsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2292862B1E57C100E8AB42 /* hotelsVC.xib */; };
@@ -779,6 +780,7 @@
 		CE1656652CCBDABE00A58919 /* driverReports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = driverReports.swift; sourceTree = "<group>"; };
 		CE1A11D02C6C9D7A00F6FDE2 /* validationUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = validationUrl.swift; sourceTree = "<group>"; };
 		CE1A11D22C6CA3FF00F6FDE2 /* oneBasicTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oneBasicTrip.swift; sourceTree = "<group>"; };
+		CE1A271C2D50BBB80052DB7A /* earningsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = earningsModel.swift; sourceTree = "<group>"; };
 		CE1A94DF2B6CD549003C50EF /* fileUploadedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fileUploadedView.swift; sourceTree = "<group>"; };
 		CE2292842B1E57B300E8AB42 /* hotelsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hotelsVC.swift; sourceTree = "<group>"; };
 		CE2292862B1E57C100E8AB42 /* hotelsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = hotelsVC.xib; sourceTree = "<group>"; };
@@ -2549,6 +2551,7 @@
 		CE8291F62C4174FC00E289EF /* model */ = {
 			isa = PBXGroup;
 			children = (
+				CE1A271C2D50BBB80052DB7A /* earningsModel.swift */,
 				CE9D270B2C4E803300A18F18 /* driverStatus.swift */,
 				CECC3D492C6B250A007AD2D4 /* vehicle.swift */,
 				CE9D3CA92C83E3CB007E872D /* meetingLocations.swift */,
@@ -3737,6 +3740,7 @@
 				CEDF18AE2B70AD6500B03B44 /* tab5DriverAuth.swift in Sources */,
 				CE4F0BAF2B77976400337A49 /* driverHome+googleExtention.swift in Sources */,
 				9694ABD42A5DFACA00BDF5F8 /* TableView&CollectionView.swift in Sources */,
+				CE1A271D2D50BBBD0052DB7A /* earningsModel.swift in Sources */,
 				CEEE6E372C5FAEBC00AB7435 /* cityCell.swift in Sources */,
 				CE8D74952CB3386C005E13B0 /* ApplePayHandler.swift in Sources */,
 				CE9757C42AE0F0BD0014346E /* tripListCell.swift in Sources */,
@@ -4175,7 +4179,7 @@
 				CODE_SIGN_ENTITLEMENTS = Takhawi/Takhawi.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = CA5NVSJ377;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				FRAMEWORK_SEARCH_PATHS = "${inherited}";
@@ -4220,7 +4224,7 @@
 				CODE_SIGN_ENTITLEMENTS = Takhawi/Takhawi.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = CA5NVSJ377;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;

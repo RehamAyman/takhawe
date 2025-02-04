@@ -27,7 +27,8 @@ class driverRequestMonyVC: BaseVC {
 //MARK: - Properties -
     var agree : Bool = false
     var matchId : Bool = false
-    var theWholeProfit : Int = 0
+    var theWholeProfit : Double = 0
+    
     
 // MARK: - Lifecycle -
     override func viewDidLoad() {

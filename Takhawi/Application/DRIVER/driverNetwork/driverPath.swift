@@ -31,6 +31,7 @@ enum driverServerPath {
     case getTotalProfit
     case reportDetails( id : Int )
     case getVipByDistance
+    case earnings
     
     
    
@@ -83,6 +84,8 @@ extension driverServerPath : ServerPath {
             return "driver-report/\(id)"
         case .getVipByDistance:
             return "trip/nearby-by-distance"
+        case .earnings :
+            return "driver-report/financial-summary"
     
         }
     }

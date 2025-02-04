@@ -34,6 +34,7 @@ enum DriverRouter {
     case getTotalProfit
     case reportDetails ( id : Int )
     case getVipByDistance ( distance : Int )
+    case earnings
 }
 
 extension DriverRouter : APIRouter {
@@ -49,7 +50,7 @@ extension DriverRouter : APIRouter {
         case .createAvehicle , .createBasic , .makeOffer  , .markReport , .stellementRequest , .addNewCar  :
             return .post
         
-        case  .driverStatus , .vehicleDetials , .getMeetingLocations , .getPrevVipTrips  , .getAllReports , .switchToUser , .report  , .getTotalProfit , .reportDetails , .getVipByDistance :
+        case  .driverStatus , .vehicleDetials , .getMeetingLocations , .getPrevVipTrips  , .getAllReports , .switchToUser , .report  , .getTotalProfit , .reportDetails , .getVipByDistance , .earnings :
             
           return .get
             
@@ -110,7 +111,8 @@ extension DriverRouter : APIRouter {
             return driverServerPath.reportDetails(id: id)
         case .getVipByDistance(distance: let distance ) :
             return driverServerPath.getVipByDistance
-            
+        case .earnings:
+            return driverServerPath.earnings
             
        
         }
@@ -229,7 +231,7 @@ extension DriverRouter : APIRouter {
           
             
             
-        case  .driverStatus , .vehicleDetials  , .markPassenger    , .deleteCar , .switchToUser , .endBasicTrip , .endVipTrip  , .report , .getTotalProfit , .reportDetails :
+        case  .driverStatus , .vehicleDetials  , .markPassenger    , .deleteCar , .switchToUser , .endBasicTrip , .endVipTrip  , .report , .getTotalProfit , .reportDetails  , .earnings :
             return nil
             
         }

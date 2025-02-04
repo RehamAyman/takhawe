@@ -27,6 +27,7 @@ class driverEarningsVC: BaseVC {
     
 //MARK: - Properties -
     let barChartView = BarChartView()
+    var Income : Double = 0
     
 
     
@@ -78,6 +79,7 @@ class driverEarningsVC: BaseVC {
     
     @IBAction func requestASettement(_ sender: UIButton) {
         let vc = driverRequestMonyVC()
+        vc.theWholeProfit = self.Income
         self.push(vc)
     }
 }
@@ -88,28 +90,46 @@ extension driverEarningsVC {
     
     func getReports () {
         activityIndicatorr.startAnimating()
-        DriverRouter.report(noOfMonths: 10 ).send {  (response : APIGenericResponse<driverReportsResult> )  in
-                if let response = response.result {
-                    self.ridesNo.text  = "\(response.totalRevenue?.total_trips ?? 0)" +  "Ride".localize
-                    self.totalIncome.text = "\(response.totalRevenue?.driver_profit ?? 0)" +  "SAR".localize
-                    self.titleIncome.text = "\(response.totalRevenue?.driver_profit ?? 0)" +  "SAR".localize
-                    let firstDate = response.monthlyRevenue?.first?.date ?? ""
-                    let secDate = response.monthlyRevenue?.last?.date ?? ""
-                    self.fromToLabel.text = "From " + firstDate + " To " + secDate
-                    let people = response.monthlyRevenue ?? []
-                    let values  =  people.map { $0.driver_profit ?? 0 }
-                    let days =  people.map { $0.date ?? "" }
-                    self.addChart(tripsValues: values, days: days)
-                 
-                    
-                    // Using map to get an array of names
-                  //  self.chartData = people.map { $0.driver_profit ?? 0 }
-
-                    
-                    
-                }
-            
+        DriverRouter.earnings.send { [weak self ] (response: APIGenericResponse<earningsModel>)  in
+            guard let self = self else { return }
+            if let result = response.result {
+                self.Income = result.driverWalletBalance ?? 0
+                self.ridesNo.text  = "\(result.totalTrips ?? 0 )" + " " +  "Ride".localize
+                self.totalIncome.text = "\(result.driverWalletBalance?.rounded() ?? 0)" +  "SAR".localize
+                self.titleIncome.text = "\(result.totalProfit ?? 0)" +  "SAR".localize
+                // draw the chart .
+                let values : [CGFloat] = [10, 10, 10, 10, 10, 10, 10]
+                let days : [String] = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+                self.addChart(tripsValues: values, days: days)
+                
+            }
         }
+        
+        
+        
+        
+//        DriverRouter.report(noOfMonths: 10 ).send {  (response : APIGenericResponse<driverReportsResult> )  in
+//                if let response = response.result {
+//                    self.ridesNo.text  = "\(response.totalRevenue?.total_trips ?? 0)" +  "Ride".localize
+//                    self.totalIncome.text = "\(response.totalRevenue?.driver_profit ?? 0)" +  "SAR".localize
+//                    self.titleIncome.text = "\(response.totalRevenue?.driver_profit ?? 0)" +  "SAR".localize
+//                    let firstDate = response.monthlyRevenue?.first?.date ?? ""
+//                    let secDate = response.monthlyRevenue?.last?.date ?? ""
+//                    self.fromToLabel.text = "From " + firstDate + " To " + secDate
+//                    let people = response.monthlyRevenue ?? []
+//                    let values  =  people.map { $0.driver_profit ?? 0 }
+//                    let days =  people.map { $0.date ?? "" }
+//                    self.addChart(tripsValues: values, days: days)
+//                 
+//                    
+//                    // Using map to get an array of names
+//                  //  self.chartData = people.map { $0.driver_profit ?? 0 }
+//
+//                    
+//                    
+//                }
+//            
+//        }
     }
     
     

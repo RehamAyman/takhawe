@@ -10,19 +10,15 @@
 import UIKit
 import CoreLocation
 import GoogleMaps
-
 import AlertKit
 import EMTNeumorphicView
 import Lottie
 import SocketIO
-//import AudioToolbox
-
 
 
 
 class homeVC: BaseVC, sendDataBackDelegate{
   
-    
     
 //MARK: - IBOutlets -
     
@@ -140,6 +136,10 @@ class homeVC: BaseVC, sendDataBackDelegate{
 // MARK: - Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        Vibration.success.vibrate()
+
         self.searchView.addTapGesture {
             if self.segment.selectedSegmentIndex == 0 {
                 self.getDestinationFromMaps(vip: false )
@@ -285,6 +285,8 @@ class homeVC: BaseVC, sendDataBackDelegate{
     
     
     @IBAction func hotelsAction(_ sender: UIButton) {
+        Vibration.success.vibrate()
+
         // first : check my role if user or driver
             //let vc = hotelsVC()
 //        let generator = UIImpactFeedbackGenerator(style: .medium)

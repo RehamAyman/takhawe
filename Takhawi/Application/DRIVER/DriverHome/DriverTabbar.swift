@@ -56,6 +56,7 @@ class DriverTabbar: UITabBarController {
     }
     
     func SimpleAnnimationWhenSelectItem(_ item: UITabBarItem) {
+        Vibration.success.vibrate()
         guard let barItemView = item.value(forKey: "view") as? UIView else { return }
         let timeInterval: TimeInterval = 0.4
         let propertyAnimator = UIViewPropertyAnimator(duration: timeInterval, dampingRatio: 0.5) {
