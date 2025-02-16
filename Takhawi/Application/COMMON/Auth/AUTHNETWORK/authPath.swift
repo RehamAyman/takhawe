@@ -23,9 +23,10 @@ enum AuthServerPath {
     case driverImage
     case uploadCarImages
     case uploadCarInsurance
-    
     case allCarData
     case refreshToken
+    case sendCode
+    case verifyCode
     
    
 }
@@ -65,6 +66,10 @@ extension AuthServerPath : ServerPath {
             return "vehicle-details"
         case .refreshToken:
             return ""
+        case .sendCode :
+            return "auth/send-verification-code"
+        case .verifyCode:
+            return "auth/verify-phone-code" 
         }
     }
 }

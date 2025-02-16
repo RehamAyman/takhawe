@@ -102,8 +102,8 @@ struct addNewCarSwiftui: View {
                         
                         Text ( "Vehicle Alphabet".localize)
                             .font(.custom(( LocalizationManager.shared.getLanguage() == .Arabic  ? AppFont.arBold : AppFont.Bold).rawValue , size: 14))
-                        
                             .padding(.top)
+                        
                         
                         OtpFormFieldView(pinOne: $AOne, pinTwo: $ATwo, pinThree: $AThree, pinFour: $AFour , numKeyboard: false  , threeItems: true)
                             .keyboardType(.asciiCapable)

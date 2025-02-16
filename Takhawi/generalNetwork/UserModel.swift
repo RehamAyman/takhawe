@@ -3,12 +3,6 @@
 ////
 ////  Created by AAIT
 ////
-//
-//import Foundation
-//
-
-
-
 
 //
 struct User : Codable {
@@ -47,7 +41,7 @@ struct User : Codable {
         case national_id = "national_id"
         case gender = "gender"
         case prefered_language = "prefered_language"
-        case is_verified = "is_verified"
+        case is_verified = "phone_verified"
         case is_blocked = "is_blocked"
         case createdAt = "createdAt"
         case updatedAt = "updatedAt"

@@ -25,6 +25,8 @@ enum AuthRouter {
     case uploadCarImages
     case uploadCarInsurance
     case allCarDetails
+    case sendCode
+    case verifyCode ( code : String)
     
 
     
@@ -43,7 +45,7 @@ extension AuthRouter: APIRouter {
     var method: HTTPMethod {
         switch self {
             
-        case .login , .signUp , .checkPhone , .forgetPassword  , .verifyResetCode , .resetPassword  , .driverUploadNationalId , .driverUploadDrivingLicens , .uploadCarLicense , .uploadCarImages , .uploadCarInsurance  :
+        case .login , .signUp , .checkPhone , .forgetPassword  , .verifyResetCode , .resetPassword  , .driverUploadNationalId , .driverUploadDrivingLicens , .uploadCarLicense , .uploadCarImages , .uploadCarInsurance , .sendCode  , .verifyCode :
             return .post
         
         case .regoins , .allCarDetails :
@@ -84,6 +86,10 @@ extension AuthRouter: APIRouter {
             return AuthServerPath.uploadCarInsurance
         case .allCarDetails :
             return AuthServerPath.allCarData
+        case .sendCode :
+            return AuthServerPath.sendCode
+        case .verifyCode:
+            return AuthServerPath.verifyCode
        
        
         }
@@ -128,8 +134,13 @@ extension AuthRouter: APIRouter {
             return [
                 "national_id" : nationalId
             ]
+        case .verifyCode(code: let code ):
+            return [
+                "code" : code
+            ]
             
-        case .regoins , .driverUploadDrivingLicens , .uploadCarLicense , .driverImage , .uploadCarImages , .uploadCarInsurance , .allCarDetails :
+        
+        case .regoins , .driverUploadDrivingLicens , .uploadCarLicense , .driverImage , .uploadCarImages , .uploadCarInsurance , .allCarDetails  , .sendCode  :
             return nil
         }
     }

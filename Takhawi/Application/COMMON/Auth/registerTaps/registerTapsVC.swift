@@ -24,9 +24,8 @@ class registerTapsVC: BaseVC {
    
     
     var phone : String = "" 
-    
     lazy var swiftUIView = UIHostingController(rootView: registerTabs(phone : phone  ) {name,email,password,phone ,gender  , dateBirth  in
-        print("here i catch next button  well 🥳")
+        print("here i catch next button well 🥳")
         let vc = SelectUserTypeVC()
         vc.email = email
         vc.fullname = name
@@ -34,7 +33,6 @@ class registerTapsVC: BaseVC {
         vc.phone = phone
         vc.genderIndex = gender
         vc.dateOfBirth = dateBirth
-        
         self.navigationController?.pushViewController(vc, animated: true)
    } BackAction: {
        print("hello i catch back action well 🥳 ")
@@ -67,20 +65,19 @@ class registerTapsVC: BaseVC {
     }
     
     
+    
 //MARK: - Design Methods -
     private func configureInitialDesign() {
         self.title = "".localized
     }
+   
     
     
     private func importSwiftuiView () {
         addChild(swiftUIView)
         swiftUIView.view.frame = view.frame
-       
         view.addSubview(swiftUIView.view)
-        
         swiftUIView.didMove(toParent: self)
-
     }
     
     

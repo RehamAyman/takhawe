@@ -302,11 +302,6 @@ extension DriverHomeVC :  CLLocationManagerDelegate  , GMSMapViewDelegate  {
               "units": "metric", // Use "metric" for kilometers
               "key": Server.googleKey.rawValue
           ]
-          
-          
-          print(parameters)
-          
-          
           AF.request(url, method: .get, parameters: parameters)
               .validate()
               .responseDecodable(of: DistanceMatrixResponse.self) { response in

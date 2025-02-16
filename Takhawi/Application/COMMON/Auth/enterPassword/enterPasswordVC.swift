@@ -76,75 +76,89 @@ extension enterPasswordVC {
     
      func login ( phone : String , password : String ) {
         
-    
        //     try validate(phone: self.phone , Password: self.otpTextField.text!)
             // login service
             activityIndicatorr.startAnimating()
             AuthRouter.login(phone: self.phone , password: self.otpTextField.text ?? "" ).send { [weak self] (response: APIGenericResponse<LoginModelData>) in
                 if let data = response.result {
-                    
                     UserDefaults.user = data
                     UserDefaults.accessToken = data.accessToken
                     // go to home
-                   
                     let userType = response.result?.user?.role
-                    if userType == role.user.rawValue {
+                    if userType != role.driver.rawValue {
                         if response.result?.user?.passenger_status == STATUS.REJECTED.rawValue {
                             showPopTopAlert(title: "Your Account has been rejected".localize, withMessage: "please contact us if you have any questions".localize, success: false )
-                        } else {
-                            UserDefaults.isLogin = true
-                            self?.registerFcmTocken()
-                            let vc =  homeVC()
-                            self?.push(vc)
-                            let ic = ICMUserAttributes()
-                            ic.email = UserDefaults.user?.user?.email ?? ""
-                            ic.name = UserDefaults.user?.user?.name ?? ""
-                            ic.phone = UserDefaults.user?.user?.phone ?? ""
-                            Intercom.loginUser(with: ic ) { result  in
-                                print("🤠🤠🤠🤠")
-                                print(result)
+                        }  else if response.result?.user?.is_verified == false  {   // check first if he is verified or not
+                            let vc = verificationVC()
+                            vc.isNewUser = true
+                            vc.send = true
+                            vc.action = {
+                                self?.goToUserHome()
                             }
+                            self?.push(vc)
+                        }  else {
+                           self?.goToUserHome()
                         }
-                        
                     } else if userType == role.driver.rawValue  {
                     // check driver status
                         if let status = STATUS(rawValue: response.result?.user?.driver_status ?? "" ) {
                         switch status {
                         case .APPROVED :
-                            UserDefaults.isLogin = true
-                            self?.registerFcmTocken()
-                            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                            let vc = storyboard.instantiateViewController(withIdentifier: "DriverTabbar") as! DriverTabbar
-                            self?.navigationController?.pushViewController(vc, animated: true)
-                            
+                            if response.result?.user?.is_verified == false {
+                                let vc = verificationVC()
+                                vc.isNewUser = true
+                                vc.send = true
+                                vc.action = {
+                                    self?.goToDriverHome()
+                                }
+                                self?.push(vc)
+                            } else {
+                                self?.goToDriverHome()
+                            }
+                          
                         case .REGISTERED :
                             self?.showDriverStatusLoading(bool: true )
                            // self?.getCarDetails()
                             self?.checkDriverStatus()
                         case .PENDING :
                             showPopTopAlert(title: "your application is under review".localize, withMessage: "please contact us if you have any questions".localize, success: false )
-                            
                         case .REJECTED :
-                          
                             showPopTopAlert(title: "Your Account has been rejected".localize, withMessage: "please contact us if you have any questions".localize, success: false )
                         }
-                        
                     }
-                        
-
-                        
-                    }
- 
+                  }
                 }
             }
- 
-    }
+         }
 
+    
+    private func goToDriverHome () {
+        UserDefaults.isLogin = true
+        self.registerFcmTocken()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "DriverTabbar") as! DriverTabbar
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
    
+    
+    private func goToUserHome () {
+        UserDefaults.isLogin = true
+        self.registerFcmTocken()
+        let vc =  homeVC()
+        self.push(vc)
+        let ic = ICMUserAttributes()
+        ic.email = UserDefaults.user?.user?.email ?? ""
+        ic.name = UserDefaults.user?.user?.name ?? ""
+        ic.phone = UserDefaults.user?.user?.phone ?? ""
+        Intercom.loginUser(with: ic ) { result  in
+            print("🤠🤠🤠🤠")
+            print(result)
+        }
+    }
     
     private func registerFcmTocken () {
         UserRouter.registerFcm(fcmTocken: AppDelegate.FCMToken ).send {  (response: APIGlobalResponse) in
-            
             
         }
     }
@@ -169,12 +183,9 @@ extension enterPasswordVC {
         DriverRouter.driverStatus.send {  [weak self] (response: APIGenericResponse<DriverStatusResult>) in
             guard let self = self else { return }
             guard let result = response.result else { return }
-        
            
                 let vc = driverAuthVC()
                
-            
-            
                 if result.national_Id_Images == false {
                     vc.selection = 1
                     self.push(vc)

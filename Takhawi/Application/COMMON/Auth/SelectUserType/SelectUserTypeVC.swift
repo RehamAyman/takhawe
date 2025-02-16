@@ -77,7 +77,6 @@ class SelectUserTypeVC: BaseVC {
         selectedType = "User"
         userCheackBox.checkState = .checked
         deiverCheackBox.checkState = .unchecked
-
         UIView.animate(withDuration: 0.5) {
             self.userView.borderWidth = 2
             self.userView.borderColor = UIColor(named: "MainColor")
@@ -94,49 +93,58 @@ class SelectUserTypeVC: BaseVC {
 
     @IBAction func continueAction(_ sender: Any) {
         if selectedType == "Driver" {
-           
             self.signupUser(name: self.fullname, email: self.email , password: self.password, phone: self.phone, genderIndex: self.genderIndex, role: role.driver.rawValue)
-            
         } else {
+            
+            // send a code first to verify the phone
+                      
             self.signupUser(name: self.fullname, email: self.email , password: self.password, phone: self.phone, genderIndex: self.genderIndex, role: role.user.rawValue)
- 
-           
         }
-     
-
-       
     }
 }
 
+
+
 // MARK: - Networking -
 extension SelectUserTypeVC {
-    
+
     func signupUser (name : String , email : String , password : String  , phone : String , genderIndex: Int , role : String ) {
         
+        activityIndicatorr.startAnimating()
+         AuthRouter.signUp(name: name  , email: email , password: password , role: role, phone: phone, gender: genderIndex == 0 ? "Female" : "Male", birthDate: self.dateOfBirth.ISO8601Format()  ).send {  (response: APIGenericResponse<LoginModelData>) in
+                if response.status == true {
+                    if let data = response.result {
+                        showPopTopAlert(title: "Done Successfully".localize , withMessage: response.message  , success: true )
+                        UserDefaults.accessToken = response.result?.accessToken
+                        let vc =  verificationVC()
+                        vc.phoneNumber =  phone
+                        vc.isNewUser = true
+                        vc.role = role
+                        self.push(vc)
+                        vc.action = {
+                            if role ==  "DRIVER" {
+                                let vc =  driverAuthVC()
+                                self.push(vc)
+                            } else {
+                                UserDefaults.isLogin = true
+                                UserDefaults.user = data
+                                self.registerFcmTocken()
+                                let vc =  homeVC()
+                                self.push(vc)
+                            }
+                           }
+                    }
+                }
+        }
         
-           activityIndicatorr.startAnimating()
-        AuthRouter.signUp(name: name  , email: email , password: password , role: role, phone: phone, gender: genderIndex == 0 ? "Female" : "Male", birthDate: self.dateOfBirth.ISO8601Format()  ).send {  (response: APIGenericResponse<LoginModelData>) in
-               if response.status == true {
-                   if let data = response.result {
-                       showPopTopAlert(title: "Done Successfully".localize , withMessage: response.message  ?? "" , success: true )
-                       if role == "USER" {
-                           UserDefaults.isLogin = true
-                           UserDefaults.user = data
-                           self.registerFcmTocken()
-                       }
-                           UserDefaults.accessToken = response.result?.accessToken
-                      
-                       let vc = role == "USER" ?  homeVC() : driverAuthVC()
-                       self.push(vc)
-                   }
-               }
-           }
+      
     }
+    
+    
+    
     
     private func registerFcmTocken () {
         UserRouter.registerFcm(fcmTocken: AppDelegate.FCMToken ).send {  (response: APIGlobalResponse) in
-            
-            
         }
     }
     

@@ -25,7 +25,14 @@ class verificationVC: BaseVC, AEOTPTextFieldDelegate {
     
 //MARK: - Properties -
     
-    var phoneNumber : String = "" 
+    var phoneNumber : String = ""
+    var isNewUser : Bool = false
+    var send : Bool = false
+    var role : String = ""
+    var action: (() -> Void)?
+   
+    
+    
 //MARK: - Creation -
    
     
@@ -33,6 +40,9 @@ class verificationVC: BaseVC, AEOTPTextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureInitialDesign()
+        if send {
+            self.authResnendCode()
+        }
     }
     
     
@@ -95,9 +105,11 @@ class verificationVC: BaseVC, AEOTPTextFieldDelegate {
    
     @IBAction func resendCode(_ sender: UIButton) {
         print("resend code action pressed")
-        self.resetCode()
-        
-        
+        if isNewUser {
+            self.authResnendCode()
+        } else {
+            self.resetCode()
+        }
     }
     
     
@@ -106,7 +118,11 @@ class verificationVC: BaseVC, AEOTPTextFieldDelegate {
         if self.codeText.text?.count ?? 0 < 4 {
             showPopTopAlert(title: "Error!".localized, withMessage: "enter the full 4 digits.".localized, success: false )
         } else {
-            self.resetCode()
+            if isNewUser { // come from register screens
+                self.verifyCode()
+            } else {
+                self.resetCode()
+            }
     
         }
     }
@@ -115,7 +131,6 @@ class verificationVC: BaseVC, AEOTPTextFieldDelegate {
 
 //MARK: - Networking -
 extension verificationVC {
-    
     
     func resetCode () {
         activityIndicatorr.startAnimating()
@@ -129,6 +144,32 @@ extension verificationVC {
             } else {
                 self.codeText.clearOTP()
                 self.disableNextButton()
+            }
+        }
+    }
+    
+    
+    
+    func authResnendCode () {
+        activityIndicatorr.startAnimating()
+        AuthRouter.sendCode.send {  [weak self] (response: APIGlobalResponse )  in
+            guard let self = self else { return }
+            showPopTopAlert(title: "Done".localize, withMessage: response.message, success: true )
+        }
+    }
+    
+    
+    
+    
+    func verifyCode () {
+        activityIndicatorr.startAnimating()
+        AuthRouter.verifyCode(code: self.codeText.text ?? "").send { [weak self] (response: APIGlobalResponse ) in
+            guard let self = self else { return }
+           
+            if response.status == true {
+                showPopTopAlert(title: "Done".localize, withMessage: response.message, success: true )
+                self.pop(animated: true )
+                self.action?()
             }
         }
     }

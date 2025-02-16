@@ -258,7 +258,7 @@
 "invalid Email" = "بريد الكتروني خاطئ" ;
 "Please add your fullname first!" = "ادخل الاسم بالكامل اولا " ; 
 "Done Successfully" = "تم بنجاح" ;
-"Passwrord and ConfirmPassword must be the same1" = "صيغة كلمه المرور خاطئة او غير متطابقه " ;
+"Passwrord and ConfirmPassword must be the same" = "صيغة كلمه المرور خاطئة او غير متطابقه " ;
 "Are you sure you want to log out?" = "هل أنت متأكد أنك تريد تسجيل الخروج؟" ;
 "Back to Home" = "العودة للرئيسية" ;
 "Yes" = "تاكيد" ;
@@ -442,3 +442,4 @@
 "Agree" = "موافق" ;
 "Ride" = "رحلة" ;
 "Birthdate" = "تاريخ الميلاد" ;
+"Please agree to the terms and conditions first." = "من فضلك قم بالموافقه علي الشروط و الاحكام اولا" ;

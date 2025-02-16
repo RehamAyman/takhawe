@@ -46,6 +46,7 @@ struct  SwitchRoleResult : Codable {
     let role : String?
     let driver_status : String?
     let passenger_status : String?
+    
    // let hobbies : [String]?
     let rate : Int?
 //    let vehicles : String?

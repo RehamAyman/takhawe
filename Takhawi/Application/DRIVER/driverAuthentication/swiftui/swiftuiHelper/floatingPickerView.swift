@@ -23,8 +23,8 @@ struct floatingPickerViews: View {
     @State var carType : String = ""
     @State var carName : String  = ""
     @State var yearText : String  = ""
-   
     @Binding var carDetails : CarDetailsResult?
+   
     @State var seatsNum : [Int] = [1,2,3,4,5,6,7,8,9,10]
    
     
@@ -43,35 +43,25 @@ struct floatingPickerViews: View {
     }
     
     
+    var filteredVehicleClasses: [VehicleClass] {
+        guard let vehicleClasses = carDetails?.vehicleClass else { return [] }
+        
+        if carName.isEmpty {
+            return vehicleClasses
+        } else {
+            return vehicleClasses.filter {
+                $0.name?.lowercased().contains(carName.lowercased()) ?? false
+            }
+        }
+    }
+    
+    
     
     
     var body: some View {
         
         if let carDetails = carDetails {
-            // 1
-            
-            VStack (spacing: 16 ) {
-                Menu {
-                    ForEach ( carDetails.vehicleClass ?? []  , id: \.id ) { item in
-                        Button( item.name ?? ""  , action: {
-                            self.selectedClass = item.id ?? 0
-                            self.vehicleClassText = item.name ?? ""
-                        })
-                    }
-                    
-                } label: {
-                    ZStack ( alignment: IsArabicLang ?  .leading : .trailing   ) {
-                        FloatingSecTextField(title:  "Enter Vehicle Class".localize , text: $vehicleClassText)
-                     //   FloatingTextField(title: "Enter Vehicle Class".localize , text: $vehicleClassText)
-                        
-                        Image ( "Vector 9")
-                            .resizable()
-                            .frame(width: 14 , height: 11)
-                            .padding( .horizontal ,30)
-                    }
-                    .frame(height: 50)
-                }
-                
+           
                 
                 // 2
                 
@@ -148,12 +138,43 @@ struct floatingPickerViews: View {
                         Button( item.name ?? ""  , action: {
                             self.selectedName =  item.id ?? 0
                             self.carName = item.name ?? ""
+                            self.selectedClass =  0
+                            self.vehicleClassText =  ""
+                            
                         })
                     }
                     
                 } label: {
                     ZStack ( alignment: IsArabicLang ? .leading : .trailing  ) {
                         FloatingSecTextField(title: "Choose Vehicle Name".localize , text: $carName)
+                        
+                        Image ( "Vector 9")
+                            .resizable()
+                            .frame(width: 14 , height: 11)
+                            .padding( .horizontal ,30)
+                    }
+                    .frame(height: 50)
+                }
+            
+            
+                
+            
+            // 1
+            
+            VStack (spacing: 16 ) {
+                Menu {
+                    // carDetails.vehicleClass ?? []
+                    ForEach (  filteredVehicleClasses  , id: \.id ) { item in
+                        Button( item.name ?? ""  , action: {
+                            self.selectedClass = item.id ?? 0
+                            self.vehicleClassText = item.name ?? ""
+                        })
+                    }
+                    
+                } label: {
+                    ZStack ( alignment: IsArabicLang ?  .leading : .trailing   ) {
+                        FloatingSecTextField(title:  "Enter Vehicle Class".localize , text: $vehicleClassText)
+                     //   FloatingTextField(title: "Enter Vehicle Class".localize , text: $vehicleClassText)
                         
                         Image ( "Vector 9")
                             .resizable()
@@ -188,5 +209,12 @@ struct floatingPickerViews: View {
                 
             }
         }
+    }
+    
+    
+    
+    
+    private func filterStringsStartingWith(from array: [String], startingWith searchText: String) -> [String] {
+        return array.filter { $0.lowercased().hasPrefix(searchText.lowercased()) }
     }
 }
