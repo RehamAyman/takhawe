@@ -104,6 +104,7 @@ extension enterPasswordVC {
                         if let status = STATUS(rawValue: response.result?.user?.driver_status ?? "" ) {
                         switch status {
                         case .APPROVED :
+                            
                             if response.result?.user?.is_verified == false {
                                 let vc = verificationVC()
                                 vc.isNewUser = true

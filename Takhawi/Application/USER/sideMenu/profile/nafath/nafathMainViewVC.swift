@@ -16,14 +16,7 @@ class nafathMainViewVC: BaseVC {
     
 //MARK: - Properties -
     
-    
-//MARK: - Creation -
-    static func create() -> nafathMainViewVC {
-        let vc = AppStoryboards.<#StoryboardCase#>.instantiate(nafathMainViewVC.self)
-        vc.hidesBottomBarWhenPushed = true
-        return vc
-    }
-    
+  
 // MARK: - Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +33,12 @@ class nafathMainViewVC: BaseVC {
     
     
 //MARK: - Actions -
+    
+    
+    @IBAction func checkAction(_ sender: UIButton) {
+        let vc = nafathSecScreenVC()
+        self.present( vc , animated: true )
+    }
     
 }
 

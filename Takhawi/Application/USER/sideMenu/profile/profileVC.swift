@@ -197,7 +197,10 @@ extension profileVC {
                         self.statusCheckIcon.image = UIImage(named: "6-Check" )
                     } else {
                         bottomView.addTapGesture {
-                            let vc =  verifiyIdVC()
+                            let vc = nafathMainViewVC() //  verifiyIdVC()
+                            
+//MARK:- GO TO NAFATH SCREEN
+                            
                             self.push(vc)
                         }
                     }

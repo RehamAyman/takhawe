@@ -112,23 +112,17 @@ extension driverOffersVC : UITableViewDelegate , UITableViewDataSource {
         request.source = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: latA, longitude: lngA ), addressDictionary: nil))
         request.destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: latB , longitude: lngB ), addressDictionary: nil))
         request.requestsAlternateRoutes = true
-        request.transportType = .automobile  // will be good for cars
+        request.transportType = .automobile
         let directions = MKDirections(request: request)
-    
                 directions.calculate {(response, error) -> Void in
-
                     guard let response = response else {
                         if let error = error {
                             print("Error: \(error)")
-                            
                             self.calculateADefualtTime()
-                            
                         }
                         return
                     }
-
                   // Lets Get the first suggested route and its travel time
-                    
                    if response.routes.count > 0 {
                         let route = response.routes[0]
                         print("⏰⏰⏰⏰⏰⏰")

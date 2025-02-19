@@ -14,15 +14,11 @@ class nafathSecScreenVC: BaseVC {
 //MARK: - IBOutlets -
     
     
-//MARK: - Properties -
+    @IBOutlet weak var sheildView: UIView!
+    //MARK: - Properties -
     
     
-//MARK: - Creation -
-    static func create() -> nafathSecScreenVC {
-        let vc = AppStoryboards.<#StoryboardCase#>.instantiate(nafathSecScreenVC.self)
-        vc.hidesBottomBarWhenPushed = true
-        return vc
-    }
+
     
 // MARK: - Lifecycle -
     override func viewDidLoad() {
@@ -34,6 +30,7 @@ class nafathSecScreenVC: BaseVC {
 //MARK: - Design Methods -
     private func configureInitialDesign() {
         self.title = "".localized
+        self.sheildView.layer.addBasicShadow(cornerRadius: 15)
     }
     
 //MARK: - Logic Methods -
