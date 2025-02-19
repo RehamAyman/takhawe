@@ -266,10 +266,10 @@ extension DriverHomeVC :  CLLocationManagerDelegate  , GMSMapViewDelegate  {
     func filterButtonAction () {
         self.filterButton.addTapGesture {
             let vc = chooseCityVC()
+            vc.comeFromDriverHome = true
             vc.action = { item in
                 self.getDistanceBetweenLocations( destinationCity: item.name ?? "" ) { distanceInKm, durationText in
                     if let distance = distanceInKm, let duration = durationText {
-                        print("Distance to \(item.name ):   \(distance) km, Estimated Time: \(duration)")
                                             
                         DriverRouter.getVipByDistance(distance: Int ( distance ) ).send { [weak self] (response : APIGenericResponse<[SocketVIP_Trip]> )   in
                             guard let self = self else { return }

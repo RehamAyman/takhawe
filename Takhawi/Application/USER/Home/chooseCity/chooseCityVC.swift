@@ -17,7 +17,8 @@ class chooseCityVC: BaseVC , UITableViewDelegate , UITableViewDataSource {
     
 //MARK: - IBOutlets -
 
-
+    @IBOutlet weak var chooseCity: UILabel!
+    
     @IBOutlet weak var progressIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
     
@@ -30,6 +31,7 @@ class chooseCityVC: BaseVC , UITableViewDelegate , UITableViewDataSource {
     var pationation : Pagination?
     var isLastPage : Bool = false
     var action: ((CitiesResult) -> Void)?
+    var comeFromDriverHome : Bool = false
    
   
    
@@ -51,6 +53,9 @@ class chooseCityVC: BaseVC , UITableViewDelegate , UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(cellType: cityCell.self)
+        if comeFromDriverHome {
+            self.chooseCity.text =  "Select your destination city".localize
+        }
        
         self.progressIndicator.isHidden = true
     }
