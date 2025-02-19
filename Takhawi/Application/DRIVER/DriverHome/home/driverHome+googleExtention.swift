@@ -339,7 +339,8 @@ extension DriverHomeVC :  CLLocationManagerDelegate  , GMSMapViewDelegate  {
     func getDestanceBetween ( lat1 : Double , lng1 : Double , lat2 : Double , lng2 : Double ) -> String {
         let locationA = CLLocation(latitude: lat1 , longitude: lng1 )
         let locationB = CLLocation(latitude: lat2 , longitude: lng2)
-        let distanceInKM =  ( locationA.distance(from: locationB) / 100 ).rounded()
+        
+        let distanceInKM =  ( locationA.distance(from: locationB) / 1000 ).rounded()
         let string = String (distanceInKM ) + " " + "km"
       return string
     }
@@ -373,7 +374,32 @@ extension DriverHomeVC :  CLLocationManagerDelegate  , GMSMapViewDelegate  {
     }
     
     
+    func getTripTime(from source: CLLocationCoordinate2D, to destination: CLLocationCoordinate2D, completion: @escaping (String?) -> Void) {
+        let sourcePlacemark = MKPlacemark(coordinate: source)
+        let destinationPlacemark = MKPlacemark(coordinate: destination)
+        
+        let sourceMapItem = MKMapItem(placemark: sourcePlacemark)
+        let destinationMapItem = MKMapItem(placemark: destinationPlacemark)
+        
+        let request = MKDirections.Request()
+        request.source = sourceMapItem
+        request.destination = destinationMapItem
+        request.transportType = .automobile // Change to .walking, .transit, etc.
+
+        let directions = MKDirections(request: request)
+        directions.calculate { response, error in
+            guard let route = response?.routes.first else {
+                completion(nil)
+                return
+            }
+            let travelTime = Int(route.expectedTravelTime / 60) // Convert to minutes
+            completion("\(travelTime) mins")
+        }
+    }
     
+    
+    
+   
     
 //  func getTravilTime (  lat1 : Double , lng1 : Double , lat2 : Double , lng2 : Double   ) -> String   {
 //        let request = MKDirections.Request()

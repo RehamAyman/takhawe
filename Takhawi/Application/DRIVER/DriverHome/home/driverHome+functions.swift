@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MapKit
 
 extension DriverHomeVC : UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
     
@@ -32,8 +33,22 @@ extension DriverHomeVC : UICollectionViewDelegate , UICollectionViewDataSource ,
                                                      lng1: item.pickup_location_lng ?? 0,
                                                      lat2: item.distination_location_lat ?? 0,
                                                      lng2: item.distination_location_lng ?? 0 )
+        let source = CLLocationCoordinate2D(latitude: item.pickup_location_lat ?? 0 , longitude: item.pickup_location_lng ?? 0)
+        let destination = CLLocationCoordinate2D(latitude: item.distination_location_lat ?? 0 , longitude: item.pickup_location_lng ?? 0 )
+
+        cell.time.text = "Loading..."
+      
+        getTripTime(from: source, to: destination) {  tripTime in
+                    DispatchQueue.main.async {
+                        cell.time.text = tripTime ?? "N/A"
+                    }
+                }
+        
+        
         if let image = item.passenger_avatar {
             cell.userPhoto.setImage(image: Server.imageBase.rawValue + image  )
+        } else {
+            cell.userPhoto.image = UIImage(named: "Group 1000002906" )
         }
         
         
@@ -103,6 +118,7 @@ extension DriverHomeVC : UICollectionViewDelegate , UICollectionViewDataSource ,
     
     private func changeConstrainsWithAnimation (const : Int ) {
         self.collectionViewHeight.constant = CGFloat(const)
+       
         UIView.animate(withDuration: 0.5) {
             self.view.setNeedsLayout()
         }
@@ -153,6 +169,7 @@ extension DriverHomeVC : UICollectionViewDelegate , UICollectionViewDataSource ,
        
        self.changeConstrainsWithAnimation(const: self.offers.count == 0 ? 30 : 340 )
        self.collectionView.isUserInteractionEnabled = self.offers.count == 0 ? false : true
+       self.collectionView.isHidden = false 
        self.createAtrip.isHidden = false
        self.createAtrip.isUserInteractionEnabled = true
        
@@ -163,6 +180,7 @@ extension DriverHomeVC : UICollectionViewDelegate , UICollectionViewDataSource ,
   private  func handleOnView  () {
       print("offffff")
       self.changeConstrainsWithAnimation(const:  30 )
+      self.collectionView.isHidden = true
       self.collectionView.isUserInteractionEnabled = false
       self.createAtrip.isHidden = true
       self.createAtrip.isUserInteractionEnabled = false
