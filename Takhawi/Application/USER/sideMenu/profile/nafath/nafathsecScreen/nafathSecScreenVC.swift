@@ -42,7 +42,7 @@ class nafathSecScreenVC: BaseVC {
         
     }
     
-//MARK: - Logic Methods -
+//MARK: - Logic Methods -هذا الجزء مخصص لربط مع نفاذ
     
     //MARK:- FIRE THIS CODE IN SUCCESS
     
@@ -56,6 +56,24 @@ class nafathSecScreenVC: BaseVC {
         showPopTopAlert(title: "Error!".localize , withMessage: "Authentication failed".localize , success: false  )
     }
     
+    private func convertToHijri(from gregorianDate: Date) -> String {
+        let hijriCalendar = Calendar(identifier: .islamicUmmAlQura)
+        let formatter = DateFormatter()
+        formatter.calendar = hijriCalendar
+        formatter.dateStyle = .long
+        formatter.locale = Locale(identifier: "ar") // Arabic format
+        return formatter.string(from: gregorianDate)
+    }
+    // Example Usage
+    private func HowToUse () {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        if let birthDate = dateFormatter.date(from: "1995-08-15") { // Example birthdate
+            let hijriDate = convertToHijri(from: birthDate)
+            print("Hijri Date: \(hijriDate)") // Output: 18 ربيع الأول 1416 هـ (example)
+        }
+    }
+        
     
     
 //MARK: - Actions -
