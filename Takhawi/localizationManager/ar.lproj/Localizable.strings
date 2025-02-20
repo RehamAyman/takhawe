@@ -451,3 +451,5 @@
 "choose the number from nafath" = "اختر الرقم الظاهر لك من خلال تطبيق نفاذ" ;
 "Go to nafath app" = "الذهاب الي تطبيق نفاذ" ; 
 "Select your destination city" = "اختر مدينة الوصول" ;
+"Authentication failed" = "فشلت عملية التوثيق" ;
+"Your account has been successfully verified." = "تم توثيق حسابك بنجاح" ;

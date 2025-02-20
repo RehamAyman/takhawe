@@ -25,7 +25,8 @@ class BarChartView: UIView {
         let barWidth: CGFloat = 30.0
         let spacing: CGFloat = 20.0
         let chartHeight = bounds.height * 0.6
-        let maxValue = barValues.max() ?? 1
+       // let maxValue = barValues.max() ?? 1
+        let maxValue = max(barValues.max() ?? 1, 1)
 
         for (index, value) in barValues.enumerated() {
             let xPos = CGFloat(index) * (barWidth + spacing) + spacing

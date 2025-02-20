@@ -59,6 +59,9 @@ class DriverPointsGoogleMapVC : BaseVC ,GMSMapViewDelegate{
             NSLog("One or more of the map styles failed to load. \(error)")
         }
     }
+    
+    
+    
     //MARK: - Logic Methods -
     func addMarkers() {
            for location in meetingLocationArray {
@@ -78,11 +81,9 @@ class DriverPointsGoogleMapVC : BaseVC ,GMSMapViewDelegate{
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
             // Perform action when marker is tapped
-            print("Marker tapped: \(marker.title ?? "")")
-     
+           
         if let selectedMarker = mapView.selectedMarker {
-                   selectedMarker.icon = UIImage(named: "meeting-point (2) 1")
-               }
+        selectedMarker.icon = UIImage(named: "meeting-point (2) 1")}
 
         marker.icon = UIImage(named: "redMeeting")
         mapView.selectedMarker = marker

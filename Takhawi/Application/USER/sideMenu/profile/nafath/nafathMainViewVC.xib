@@ -29,7 +29,7 @@
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" image="Group 25"/>
                 </button>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="YUa-Nx-M1s">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Nafath_logo.svg" translatesAutoresizingMaskIntoConstraints="NO" id="YUa-Nx-M1s">
                     <rect key="frame" x="137.5" y="80" width="100" height="100"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="100" id="BCR-6O-rpg"/>
@@ -147,7 +147,7 @@
     </objects>
     <resources>
         <image name="Group 25" width="41" height="40"/>
-        <image name="logo" width="131" height="115"/>
+        <image name="Nafath_logo.svg" width="1200" height="517"/>
         <image name="person" catalog="system" width="128" height="121"/>
         <namedColor name="BackGroundColor">
             <color red="0.95294117647058818" green="0.95294117647058818" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

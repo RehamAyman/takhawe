@@ -45,16 +45,12 @@ class driverEarningsVC: BaseVC {
     private func addChart (tripsValues  :  [CGFloat]  , days : [String]  ) {
 //       let barChartView = BarChartView()
         
-        
-        print("----- test -----")
-        print(tripsValues)
-        print(days)
+      
         barChartView.barValues = tripsValues // Array(tripsValues.prefix(7))
         barChartView.barLabels =  days // Array(days.prefix(7))
-       barChartView.translatesAutoresizingMaskIntoConstraints = false
-       self.chartContainer.addSubview(barChartView)
-      barChartView.backgroundColor = UIColor.white
-      
+        barChartView.translatesAutoresizingMaskIntoConstraints = false
+        self.chartContainer.addSubview(barChartView)
+        barChartView.backgroundColor = UIColor.white
       
        NSLayoutConstraint.activate([
            barChartView.topAnchor.constraint(equalTo: chartContainer.topAnchor),
@@ -98,10 +94,11 @@ extension driverEarningsVC {
                 self.totalIncome.text = "\(result.driverWalletBalance?.rounded() ?? 0)" +  "SAR".localize
                 self.titleIncome.text = "\(result.totalProfit ?? 0)" +  "SAR".localize
                 // draw the chart .
-                let values : [CGFloat] = [10, 10, 10, 10, 10, 10, 10]
-                let days : [String] = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+                let valuesArray = response.result?.dailyRevenue ?? []
+                let values : [CGFloat] = valuesArray.map { $0.driver_profit ?? 0 }   //  [1, 0, 0, 0, 0, 0, 0]
+                let days : [String] = ["Fri", "Sat" , "Sun", "Mon", "Tue", "Wed", "Thu"]
                 self.addChart(tripsValues: values, days: days)
-                
+
             }
         }
         
