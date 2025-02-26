@@ -453,3 +453,7 @@
 "Select your destination city" = "اختر مدينة الوصول" ;
 "Authentication failed" = "فشلت عملية التوثيق" ;
 "Your account has been successfully verified." = "تم توثيق حسابك بنجاح" ;
+"Are You Sure To Delete This Card" = "هل انت متاكد انك تريد حذف البطاقه" ;
+"Charge Wallet" = "شحن المحفظة" ;
+"please add card first" = "عليك اضافة بطاقه اولا" ;
+"please Select a Card first!" = "من فضلك اختر البطاقه اولا!" ;

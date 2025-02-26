@@ -36,6 +36,7 @@
                 <outlet property="step2View" destination="KUg-Rr-V4M" id="R50-lu-YvN"/>
                 <outlet property="topViewHeight" destination="Pjl-sJ-mve" id="JBC-gS-RW4"/>
                 <outlet property="tripDateC" destination="snD-YJ-XEN" id="Dbx-hY-iET"/>
+                <outlet property="tripNumberA" destination="Ixg-ow-MfH" id="2ef-6a-9Hr"/>
                 <outlet property="tripPrice" destination="3V0-qx-mLo" id="J49-eE-Ulm"/>
                 <outlet property="tripStartView" destination="pXB-bp-xjs" id="6Rm-XB-7Iy"/>
                 <outlet property="tripStartViewheight" destination="ejP-Ev-c8t" id="jXG-dE-nQh"/>
@@ -296,17 +297,23 @@
                                         <constraint firstAttribute="width" constant="60" id="vA4-y2-zBL"/>
                                     </constraints>
                                 </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ixg-ow-MfH">
+                                    <rect key="frame" x="181.33333333333334" y="-7.6666666666666288" width="123.66666666666666" height="15.666666666666666"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <color key="textColor" name="MainColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="asg-ks-grB">
-                                    <rect key="frame" x="83" y="-20" width="222" height="40"/>
+                                    <rect key="frame" x="83" y="-20" width="95.333333333333314" height="40"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="**** **** **** 8970" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAw-qh-HNV">
-                                            <rect key="frame" x="0.0" y="0.0" width="222" height="20"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="95.333333333333329" height="20"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expires: 12/26" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2Y-eZ-WLB">
-                                            <rect key="frame" x="0.0" y="20" width="222" height="20"/>
+                                            <rect key="frame" x="0.0" y="20" width="95.333333333333329" height="20"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -319,12 +326,14 @@
                             </subviews>
                             <color key="backgroundColor" red="0.96470588450000005" green="0.96470588450000005" blue="0.96470588450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
+                                <constraint firstAttribute="trailing" secondItem="Ixg-ow-MfH" secondAttribute="trailing" constant="8" id="0IO-s0-0we"/>
                                 <constraint firstItem="30k-8o-vt6" firstAttribute="centerY" secondItem="t1C-sX-ciP" secondAttribute="centerY" id="49Y-AJ-rzO"/>
-                                <constraint firstAttribute="trailing" secondItem="asg-ks-grB" secondAttribute="trailing" constant="8" id="6O1-lR-CCW"/>
                                 <constraint firstItem="asg-ks-grB" firstAttribute="leading" secondItem="30k-8o-vt6" secondAttribute="trailing" constant="8" id="BXT-ph-KHV"/>
+                                <constraint firstItem="Ixg-ow-MfH" firstAttribute="leading" secondItem="asg-ks-grB" secondAttribute="trailing" constant="3" id="RXF-k8-qBo"/>
                                 <constraint firstAttribute="height" id="XFa-aJ-as6"/>
                                 <constraint firstItem="asg-ks-grB" firstAttribute="centerY" secondItem="t1C-sX-ciP" secondAttribute="centerY" id="ZL3-up-J57"/>
                                 <constraint firstItem="30k-8o-vt6" firstAttribute="leading" secondItem="t1C-sX-ciP" secondAttribute="leading" constant="15" id="dQp-VF-rbg"/>
+                                <constraint firstItem="Ixg-ow-MfH" firstAttribute="centerY" secondItem="asg-ks-grB" secondAttribute="centerY" id="vpS-YE-DJ8"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

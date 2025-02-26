@@ -13,6 +13,7 @@ class successBookViewVC: BaseVC {
     
 //MARK: - IBOutlets -
     
+    @IBOutlet weak var tripNo: UILabel!
     @IBOutlet weak var driverName: UILabel!
     @IBOutlet weak var checkMark: UIImageView!
     @IBOutlet weak var confirmOutlet: UIButton!
@@ -22,6 +23,7 @@ class successBookViewVC: BaseVC {
 //MARK: - Properties -
     var action: (() -> Void)?
     var drivername : String = ""
+    var tripId : Int = 0
 //MARK: - Creation -
     
    
@@ -38,6 +40,11 @@ class successBookViewVC: BaseVC {
         self.title = "".localized
         self.mainView.layer.addBasicShadow(cornerRadius: 35 )
         self.driverName.text = self.drivername
+        if self.tripId != 0 {
+       
+            self.tripNo.text =  " #" + "\(self.tripId)"
+        }
+        
  
         
     }
@@ -78,10 +85,7 @@ override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
     @IBAction func confirmAction(_ sender: UIButton) {
         self.dismiss(animated: true )
         self.action?()
-    
     }
-    
-    
     
     
     @IBAction func dismissAction(_ sender: UIButton) {
@@ -93,15 +97,8 @@ override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
         let nav = CustomNavigationController(rootViewController: vc)
         AppHelper.changeWindowRoot(vc: nav)
         
-        
-        
-        
-      
     }
-    
-    
-    
-    
+ 
     
 }
 

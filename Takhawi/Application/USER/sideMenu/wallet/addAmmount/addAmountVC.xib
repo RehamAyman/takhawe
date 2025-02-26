@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -84,26 +84,49 @@
                     </connections>
                 </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ss4-g0-M72">
-                    <rect key="frame" x="0.0" y="204" width="393" height="504"/>
+                    <rect key="frame" x="0.0" y="202" width="393" height="446"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoM-ZS-Gv1">
+                    <rect key="frame" x="20" y="658" width="353" height="50"/>
+                    <color key="backgroundColor" name="MainColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Pf1-0E-Xx5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Charge Wallet"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Charge Wallet"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="charge:" destination="-1" eventType="touchUpInside" id="Mwm-Hd-SIx"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" name="BackGroundColor"/>
             <constraints>
-                <constraint firstItem="9r1-XB-8WC" firstAttribute="top" secondItem="Ss4-g0-M72" secondAttribute="bottom" constant="10" id="52C-b4-Vy8"/>
                 <constraint firstItem="jQf-uK-9N5" firstAttribute="top" secondItem="97A-AH-Tfl" secondAttribute="bottom" constant="30" id="GMK-6D-zGV"/>
-                <constraint firstItem="Ss4-g0-M72" firstAttribute="top" secondItem="jQf-uK-9N5" secondAttribute="bottom" constant="10" id="PO5-7K-4kL"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Ss4-g0-M72" secondAttribute="trailing" id="UY7-zL-V5d"/>
                 <constraint firstItem="Sms-M3-BII" firstAttribute="centerY" secondItem="97A-AH-Tfl" secondAttribute="centerY" id="Wg4-f4-KHx"/>
                 <constraint firstItem="jQf-uK-9N5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="XIm-mI-Jah"/>
                 <constraint firstItem="97A-AH-Tfl" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="YWk-gZ-cIQ"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="9r1-XB-8WC" secondAttribute="bottom" constant="50" id="an3-ru-ZbH"/>
+                <constraint firstItem="qoM-ZS-Gv1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="bwE-Dn-nag"/>
                 <constraint firstItem="Sms-M3-BII" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="e10-Bm-MwB"/>
                 <constraint firstItem="Ss4-g0-M72" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ejL-ks-FFi"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9r1-XB-8WC" secondAttribute="trailing" constant="20" id="g77-Dk-og9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="qoM-ZS-Gv1" secondAttribute="trailing" constant="20" id="gzx-cw-SAX"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jQf-uK-9N5" secondAttribute="trailing" constant="20" id="kD5-Rn-mwY"/>
                 <constraint firstItem="97A-AH-Tfl" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="m2c-F6-qyO"/>
+                <constraint firstItem="9r1-XB-8WC" firstAttribute="top" secondItem="qoM-ZS-Gv1" secondAttribute="bottom" constant="10" id="r9L-dT-hBG"/>
+                <constraint firstItem="qoM-ZS-Gv1" firstAttribute="top" secondItem="Ss4-g0-M72" secondAttribute="bottom" constant="10" id="shX-G2-CGS"/>
+                <constraint firstItem="Ss4-g0-M72" firstAttribute="top" secondItem="jQf-uK-9N5" secondAttribute="bottom" constant="8" id="uzc-gu-Ncx"/>
                 <constraint firstItem="9r1-XB-8WC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="zbb-fK-bEh"/>
             </constraints>
             <point key="canvasLocation" x="37" y="20"/>

@@ -17,10 +17,8 @@ extension tripsSideMenuVC : UITableViewDelegate , UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(cellType: userTripCell.self )
-        
         self.tableView.isHidden = false
         self.tableView.isUserInteractionEnabled = true
-     
         
     }
     
@@ -48,7 +46,7 @@ extension tripsSideMenuVC : UITableViewDelegate , UITableViewDataSource {
         cell.from.text = item.pickup_location?.description ?? ""
         cell.orderDate.text = item.start_date?.convertFromIso()
         cell.rateView.isUserInteractionEnabled = false
-        
+        cell.tripNumber.text = "# \(item.id ?? 0)"
        
         cell.addTapGesture {
             if self.driver == false  && self.segment.selectedSegmentIndex == 0 {
@@ -58,8 +56,6 @@ extension tripsSideMenuVC : UITableViewDelegate , UITableViewDataSource {
             }
         }
         
-        
-
         
         if self.driver && self.tripType == .basic {
             cell.rateView.isHidden = true
@@ -172,7 +168,6 @@ extension tripsSideMenuVC : UITableViewDelegate , UITableViewDataSource {
          vc.passedTrip =  item
          self.handleTripStatus(status: item.status ?? "" )
          print("... 👀 status is : \(self.tripStatus) 👀 ....  ")
-       
          vc.tripType = self.tripType
          vc.tripStatus = self.tripStatus
         vc.action = {

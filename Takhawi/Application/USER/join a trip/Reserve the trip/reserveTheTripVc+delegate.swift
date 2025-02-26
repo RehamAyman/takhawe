@@ -230,8 +230,10 @@ extension ReserveTheTripVC : UITableViewDelegate , UITableViewDataSource {
         vc.modalPresentationStyle = .overCurrentContext
         if viptrip {
             vc.drivername = self.offer?.driver?.name ?? ""
+            
         } else {
             vc.drivername = self.tripDetails?.driver_name ?? ""
+            vc.tripId = self.tripDetails?.id ?? 0
         }
     vc.action = {
         let vc = trackYourTripVC()

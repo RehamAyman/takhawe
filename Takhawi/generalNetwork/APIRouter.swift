@@ -70,8 +70,6 @@ extension APIRouter {
         
         if let data = data {
             
-            
-            
             self.uploadToServerWith(data: data) { (respons: T?,errorType) in
                 activityIndicatorr.stopAnimating()
                 AppIndicator.shared.dismiss()

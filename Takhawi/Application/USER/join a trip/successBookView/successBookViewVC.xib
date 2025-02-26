@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -16,6 +16,7 @@
                 <outlet property="confirmOutlet" destination="CJy-ZM-2NP" id="a7q-wB-4C9"/>
                 <outlet property="driverName" destination="0Bj-a7-cbG" id="E3q-3J-M8O"/>
                 <outlet property="mainView" destination="xXz-ZK-cfH" id="TCv-Rg-g1b"/>
+                <outlet property="tripNo" destination="hQt-iJ-PSa" id="Fvc-62-aYi"/>
                 <outlet property="view" destination="iN0-l3-epB" id="1GI-xa-65X"/>
                 <outlet property="visualView" destination="Y6i-GP-qSE" id="BMh-Gq-Ajb"/>
             </connections>
@@ -102,6 +103,12 @@
                                 <action selector="confirmAction:" destination="-1" eventType="touchUpInside" id="Drm-cq-sp7"/>
                             </connections>
                         </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQt-iJ-PSa">
+                            <rect key="frame" x="10" y="35" width="0.0" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" name="MainColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
@@ -117,10 +124,12 @@
                         <constraint firstAttribute="trailing" secondItem="CJy-ZM-2NP" secondAttribute="trailing" constant="25" id="ZEq-tW-SmQ"/>
                         <constraint firstItem="rt1-Pf-kwn" firstAttribute="centerX" secondItem="xXz-ZK-cfH" secondAttribute="centerX" id="hMn-Ar-pgV"/>
                         <constraint firstItem="rt1-Pf-kwn" firstAttribute="width" secondItem="xXz-ZK-cfH" secondAttribute="width" multiplier="0.7" id="hR1-aW-D02"/>
+                        <constraint firstItem="hQt-iJ-PSa" firstAttribute="leading" secondItem="xXz-ZK-cfH" secondAttribute="leading" constant="10" id="kGL-7H-Pyw"/>
                         <constraint firstAttribute="height" constant="380" id="lPj-yU-WIu"/>
                         <constraint firstItem="Pcm-9v-RWo" firstAttribute="top" secondItem="3yn-mf-Gvo" secondAttribute="bottom" constant="8" id="nsl-cZ-K2l"/>
                         <constraint firstItem="3yn-mf-Gvo" firstAttribute="top" secondItem="rt1-Pf-kwn" secondAttribute="bottom" constant="25" id="rmm-3e-Acl"/>
                         <constraint firstItem="3yn-mf-Gvo" firstAttribute="leading" secondItem="xXz-ZK-cfH" secondAttribute="leading" id="spu-Ln-Mk2"/>
+                        <constraint firstItem="hQt-iJ-PSa" firstAttribute="centerY" secondItem="4Ta-dN-NJX" secondAttribute="centerY" id="wJn-d7-Cig"/>
                         <constraint firstAttribute="trailing" secondItem="4Ta-dN-NJX" secondAttribute="trailing" constant="20" id="xGz-fR-MQm"/>
                         <constraint firstAttribute="trailing" secondItem="0Bj-a7-cbG" secondAttribute="trailing" constant="10" id="xRk-p5-1Zm"/>
                     </constraints>

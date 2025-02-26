@@ -55,6 +55,7 @@ enum UserRouter {
     case createBillingInfo ( surname : String , street : String , cityId : Int , state : String)
     case getAllReviews ( id : Int)
     case rateTheDriver ( tripId : Int , driverId : Int , note : String , rate : Int)
+    case deleteBankCard ( cardId : Int)
   
 }
 
@@ -85,7 +86,7 @@ extension UserRouter : APIRouter {
             return .put
             
             
-        case .removeDriverFromFav , .cancelVipTrip , .cancelBasicTrip , .deleteAcc:
+        case .removeDriverFromFav , .cancelVipTrip , .cancelBasicTrip , .deleteAcc , .deleteBankCard :
             return .delete
         }
     }
@@ -180,7 +181,8 @@ extension UserRouter : APIRouter {
             return userServerPath.reviewsList(id: id )
         case .rateTheDriver :
             return userServerPath.rateTheDriver
-    
+        case .deleteBankCard(cardId: let id ):
+            return userServerPath.deleteSavedCard(id: id )
         
             
             
@@ -407,7 +409,7 @@ extension UserRouter : APIRouter {
             
             
             
-        case .getAllVipOffers  , .recentAddress , .getOneTrip , .getProfile   , .calculateVipPrice , .getAllAddress   , .removeDriverFromFav    , .getVip , .getOneGeneralTrip  , .getPolices , .aboutUs , .getAllLastMessaged , .getAllChats  , .getAllPaymentCards  , .switchRole , .deleteAcc  , .getNotifications , .getBillingInfo  , .getAllReviews :
+        case .getAllVipOffers  , .recentAddress , .getOneTrip , .getProfile   , .calculateVipPrice , .getAllAddress   , .removeDriverFromFav    , .getVip , .getOneGeneralTrip  , .getPolices , .aboutUs , .getAllLastMessaged , .getAllChats  , .getAllPaymentCards  , .switchRole , .deleteAcc  , .getNotifications , .getBillingInfo  , .getAllReviews , .deleteBankCard :
             return nil
             
         }

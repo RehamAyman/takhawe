@@ -99,7 +99,7 @@ extension tripsSideMenuVC {
     
     func handleTripStatus ( status  : String) {
         switch status {
-        case "UPCOMING" :
+        case "UPCOMING" , "ACCEPTED":
             self.tripStatus = .comming
         case "ON_WAY" :
             self.tripStatus = .onWay

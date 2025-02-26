@@ -51,7 +51,8 @@ enum userServerPath {
     case getBillingInfo
     case createbillingInfo
     case reviewsList( id : Int)
-    case rateTheDriver 
+    case rateTheDriver
+    case deleteSavedCard ( id : Int)
     
 }
 
@@ -147,6 +148,8 @@ extension userServerPath : ServerPath {
             return "review/target/\(id)"
         case .rateTheDriver:
             return "review/driver"
+        case .deleteSavedCard(id: let id):
+            return "saved-card/\(id)"
             
         }
     }

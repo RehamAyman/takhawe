@@ -464,3 +464,7 @@
 "Select your destination city" = "Select your destination city" ; 
 "Authentication failed" = "Authentication failed" ; 
 "Your account has been successfully verified." = "Your account has been successfully verified." ;
+"Are You Sure To Delete This Card" = "Are You Sure To Delete This Card" ;
+"Charge Wallet" = "Charge Wallet" ; 
+"please add card first" = "please add card first" ;
+"please Select a Card first!" = "please Select a Card first!" ;

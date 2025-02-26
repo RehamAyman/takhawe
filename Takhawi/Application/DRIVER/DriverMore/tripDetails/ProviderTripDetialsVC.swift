@@ -131,7 +131,6 @@ class ProviderTripDetialsVC : BaseVC {
        // self.updateTripStatus(status: .arrived)
           
         case .arrived :// HANDLE START ACTION
-           
             
             self.updateTripStatus(status: .inProgress)
         case .inProgress:

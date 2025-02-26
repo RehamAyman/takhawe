@@ -48,6 +48,7 @@ class trackYourTripVC: BaseVC {
     @IBOutlet weak var tripDateC: UILabel!
     @IBOutlet weak var plateAlphaEN: UILabel!
     
+    @IBOutlet weak var tripNumberA: UILabel!
     
     
     //MARK: - Properties -
@@ -104,10 +105,12 @@ class trackYourTripVC: BaseVC {
         
       //  self.driverArriveIn.addTime(time: 10 )
       //  self.tripStartViewheight.constant = 0
-       
       //  self.driverArriveIn.start()
+        
+        
         self.topViewHeight.constant = 21
-      
+        self.tripNumberA.text = "#" + "\(self.tripId)"
+        
         
         
         

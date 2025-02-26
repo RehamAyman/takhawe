@@ -25,6 +25,7 @@ class addAmountVC : BaseVC  {
  
     var myCards : [cardResult] = []
     var action: (() -> Void)?
+    var selectedCard : Int = 0
     
     // MARK: - Lifecycle -
         override func viewDidLoad() {
@@ -51,27 +52,30 @@ class addAmountVC : BaseVC  {
     
     
     @IBAction func addNewCard(_ sender: UIButton) {
-        
         self.getBillingInfo()
-        
-        
-       
-        
+                
     }
     
+    
+    
+    @IBAction func charge(_ sender: UIButton) {
+        print(self.selectedCard)
+        if self.myCards.isEmpty {
+            showPopTopAlert(title: "Error!".localize , withMessage: "please add card first".localize, success: false)
+        } else {
+            self.chargeWallet(cardId: self.selectedCard )
+        }
+    }
     
     
     
     @IBAction func backButton(_ sender: UIButton) {
-        
-      
         self.pop(animated: true )
-        
     }
     
     
     
-    private func getAllSavedCards () {
+     func getAllSavedCards () {
         activityIndicatorr.startAnimating()
         UserRouter.getAllPaymentCards.send {  [weak self ] (response : APIGenericResponse<[cardResult]> ) in
             guard let self = self else { return }
