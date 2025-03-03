@@ -288,6 +288,8 @@ extension trackYourTripVC {
                                      lat2: result.destinationL?.lat ?? 0  ,
                                      lng1: result.pickup_location?.lng ?? 0  ,
                                      lng2:  result.destinationL?.lng ?? 0 )
+                
+           
                 self.driverName.text = result.driver?.name ?? ""
                 
                 self.rate.rating = result.driver?.driver_rate ?? 0

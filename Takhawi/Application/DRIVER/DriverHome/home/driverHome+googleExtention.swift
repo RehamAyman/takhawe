@@ -374,27 +374,51 @@ extension DriverHomeVC :  CLLocationManagerDelegate  , GMSMapViewDelegate  {
     }
     
     
-    func getTripTime(from source: CLLocationCoordinate2D, to destination: CLLocationCoordinate2D, completion: @escaping (String?) -> Void) {
-        let sourcePlacemark = MKPlacemark(coordinate: source)
-        let destinationPlacemark = MKPlacemark(coordinate: destination)
+    func getGoogleRouteTimeAndDistance(from start: CLLocationCoordinate2D, to destination: CLLocationCoordinate2D, mode: String = "driving", completion: @escaping (String, String) -> Void) {
+        let apiKey = AppDelegate.GoogleAPI
+        let urlString = "https://maps.googleapis.com/maps/api/directions/json?origin=\(start.latitude),\(start.longitude)&destination=\(destination.latitude),\(destination.longitude)&mode=\(mode)&key=\(apiKey)"
         
-        let sourceMapItem = MKMapItem(placemark: sourcePlacemark)
-        let destinationMapItem = MKMapItem(placemark: destinationPlacemark)
+        guard let url = URL(string: urlString) else {
+            print("❌ Invalid URL")
+            completion("--", "--")
+            return
+        }
         
-        let request = MKDirections.Request()
-        request.source = sourceMapItem
-        request.destination = destinationMapItem
-        request.transportType = .automobile // Change to .walking, .transit, etc.
-
-        let directions = MKDirections(request: request)
-        directions.calculate { response, error in
-            guard let route = response?.routes.first else {
-                completion(nil)
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                print("❌ Error: \(error.localizedDescription)")
+                completion("Error", "Error")
                 return
             }
-            let travelTime = Int(route.expectedTravelTime / 60) // Convert to minutes
-            completion("\(travelTime) mins")
-        }
+            
+            guard let data = data else {
+                print("❌ No data received")
+                completion("--", "--")
+                return
+            }
+            do {
+                if let json = try JSONSerialization.jsonObject(with: data) as? [String: Any],
+                   let routes = json["routes"] as? [[String: Any]],
+                   let firstRoute = routes.first,
+                   let legs = firstRoute["legs"] as? [[String: Any]],
+                   let firstLeg = legs.first,
+                   let duration = firstLeg["duration"] as? [String: Any],
+                   let distance = firstLeg["distance"] as? [String: Any],
+                   let timeText = duration["text"] as? String,
+                   let distanceText = distance["text"] as? String {
+                    
+                    DispatchQueue.main.async {
+                        completion(timeText, distanceText)
+                    }
+                } else {
+                    print("❌ Error parsing JSON")
+                    completion("--", "--")
+                }
+            } catch {
+                print("❌ JSON decoding error: \(error)")
+                completion("--", "--")
+            }
+        }.resume()
     }
     
     

@@ -16,7 +16,7 @@ class walletVC : BaseVC {
     
     //MARK: - Properties -
     
-    var walletTransactions : [WalletResult] = []
+    var walletTransactions : [WalletTransactions] = []
     
     // MARK: - Lifecycle -
         override func viewDidLoad() {

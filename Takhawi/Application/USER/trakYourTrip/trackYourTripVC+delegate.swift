@@ -7,6 +7,7 @@
 
 import Foundation
 import GoogleMaps
+import MapKit
 
 
 extension trackYourTripVC {
@@ -45,6 +46,7 @@ extension trackYourTripVC {
 //MARK: - GOOGLE MAPS METHODS
     
     func   setUpGoogleView ( lat1 : Double , lat2 : Double , lng1 : Double , lng2 : Double) {
+        
         do {
             // Set the map style by passing the URL of the local file.
             if let styleURL = Bundle.main.url(forResource: "googleMapsStyle", withExtension: "json") {
@@ -68,8 +70,20 @@ extension trackYourTripVC {
         let endCoordinate = CLLocationCoordinate2D(latitude: lat2 , longitude: lng2 )
                 addMarkers(from: startCoordinate, to: endCoordinate)
                 drawAnimatedRoute(from: startCoordinate, to: endCoordinate)
+        
+        getGoogleRouteTimeAndDistance(from: startCoordinate, to: endCoordinate , mode: "driving") { time, distance in
+            print("🕒 Travel Time: \(time)")
+            print("📏 Distance: \(distance)")
+            self.deliveryTime.text = time
+            self.secDeliverTime.text = time
+            self.distance.text = distance
+            self.secDistance.text = distance
+        }
+
       }
       
+    
+    
     
     func updateMarkerPosition(lat: CLLocationDegrees, lng: CLLocationDegrees) {
        
@@ -148,8 +162,60 @@ extension trackYourTripVC {
           }
           task.resume()
       }
-      
-    private func animatePolyline(from start: CLLocationCoordinate2D, to end: CLLocationCoordinate2D, encodedPolyline: String) {
+    
+    
+  
+    func getGoogleRouteTimeAndDistance(from start: CLLocationCoordinate2D, to destination: CLLocationCoordinate2D, mode: String = "driving", completion: @escaping (String, String) -> Void) {
+        let apiKey = AppDelegate.GoogleAPI
+        let urlString = "https://maps.googleapis.com/maps/api/directions/json?origin=\(start.latitude),\(start.longitude)&destination=\(destination.latitude),\(destination.longitude)&mode=\(mode)&key=\(apiKey)"
+        
+        guard let url = URL(string: urlString) else {
+            print("❌ Invalid URL")
+            completion("--", "--")
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                print("❌ Error: \(error.localizedDescription)")
+                completion("Error", "Error")
+                return
+            }
+            
+            guard let data = data else {
+                print("❌ No data received")
+                completion("--", "--")
+                return
+            }
+            do {
+                if let json = try JSONSerialization.jsonObject(with: data) as? [String: Any],
+                   let routes = json["routes"] as? [[String: Any]],
+                   let firstRoute = routes.first,
+                   let legs = firstRoute["legs"] as? [[String: Any]],
+                   let firstLeg = legs.first,
+                   let duration = firstLeg["duration"] as? [String: Any],
+                   let distance = firstLeg["distance"] as? [String: Any],
+                   let timeText = duration["text"] as? String,
+                   let distanceText = distance["text"] as? String {
+                    
+                    DispatchQueue.main.async {
+                        completion(timeText, distanceText)
+                    }
+                } else {
+                    print("❌ Error parsing JSON")
+                    completion("--", "--")
+                }
+            } catch {
+                print("❌ JSON decoding error: \(error)")
+                completion("--", "--")
+            }
+        }.resume()
+    }
+
+    
+    
+   
+ private func animatePolyline(from start: CLLocationCoordinate2D, to end: CLLocationCoordinate2D, encodedPolyline: String) {
           guard let path = GMSPath(fromEncodedPath: encodedPolyline) else { return }
           
           let polyline = GMSPolyline(path: path)

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct WalletResult : Codable {
+struct WalletTransactions : Codable {
     let id : Int?
     let transaction_type : String?
     let current_balance : Int?
@@ -46,5 +46,31 @@ struct WalletResult : Codable {
         trip_id = try values.decodeIfPresent(Int.self, forKey: .trip_id)
         passenger_id = try values.decodeIfPresent(Int.self, forKey: .passenger_id)
     }
+    
+    
+    
+    
 
 }
+
+
+
+
+struct WalletResult : Codable {
+    let balance : Int?
+    let transactions : [WalletTransactions]?
+
+    enum CodingKeys: String, CodingKey {
+
+        case balance = "balance"
+        case transactions = "transactions"
+    }
+
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        balance = try values.decodeIfPresent(Int.self, forKey: .balance)
+        transactions = try values.decodeIfPresent([WalletTransactions].self, forKey: .transactions)
+    }
+
+}
+

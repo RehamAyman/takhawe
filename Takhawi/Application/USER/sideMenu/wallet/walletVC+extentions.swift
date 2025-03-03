@@ -37,11 +37,11 @@ extension walletVC : UITableViewDelegate , UITableViewDataSource {
 
     func getUserAmmount () {
         activityIndicatorr.startAnimating()
-        UserRouter.walletData(page: 1).send { [weak self ] (response: APIGenericResponse<[WalletResult]>) in
+        UserRouter.walletData(page: 1).send { [weak self ] (response: APIGenericResponse<WalletResult>) in
             guard let self = self else { return }
             if let result = response.result {
-                self.totalAmmount.text = "\(result.first?.current_balance ?? 0 )"
-                self.walletTransactions = result
+                self.totalAmmount.text = "\(result.balance ?? 0 )"
+                self.walletTransactions = result.transactions ?? []
                 self.tableView.reloadData()
             }
         }

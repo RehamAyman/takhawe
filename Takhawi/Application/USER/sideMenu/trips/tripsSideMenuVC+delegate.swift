@@ -46,7 +46,7 @@ extension tripsSideMenuVC : UITableViewDelegate , UITableViewDataSource {
         cell.from.text = item.pickup_location?.description ?? ""
         cell.orderDate.text = item.start_date?.convertFromIso()
         cell.rateView.isUserInteractionEnabled = false
-        cell.tripNumber.text = "# \(item.id ?? 0)"
+       
        
         cell.addTapGesture {
             if self.driver == false  && self.segment.selectedSegmentIndex == 0 {
@@ -72,7 +72,7 @@ extension tripsSideMenuVC : UITableViewDelegate , UITableViewDataSource {
             }
             
         }  else {
-            
+            cell.tripNumber.text = "# \(item.id ?? 0)"
             cell.name.text = item.driver?.name ?? ""
             if let rate = item.driver?.driver_rate {
                 cell.rateView.rating = rate

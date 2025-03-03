@@ -25,14 +25,14 @@ extension driverNotificationsViewController :  UITableViewDelegate, UITableViewD
         return self.dummyNotifications.count
     }
     
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier:  "notificationCell" , for: indexPath) as! notificationCell
         let item =  self.dummyNotifications[indexPath.section].data[indexPath.row]
-        cell.icon.image = UIImage(named: item.icon)
+        cell.icon.image = UIImage(named: "Group 39335")
         cell.cellTitle.text = item.title
         cell.subTitle.text = item.subtitle
-        
-        
         return cell
         
     }

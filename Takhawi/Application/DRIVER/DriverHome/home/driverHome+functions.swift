@@ -29,21 +29,17 @@ extension DriverHomeVC : UICollectionViewDelegate , UICollectionViewDataSource ,
         cell.to.text = item.destination_description ?? ""
         cell.userName.text = item.passenger_name ?? ""
         cell.userRate.rating = item.passenger_rate ?? 0.0
-        cell.distance.text = self.getDestanceBetween(lat1: item.pickup_location_lat ?? 0,
-                                                     lng1: item.pickup_location_lng ?? 0,
-                                                     lat2: item.distination_location_lat ?? 0,
-                                                     lng2: item.distination_location_lng ?? 0 )
+
         let source = CLLocationCoordinate2D(latitude: item.pickup_location_lat ?? 0 , longitude: item.pickup_location_lng ?? 0)
         let destination = CLLocationCoordinate2D(latitude: item.distination_location_lat ?? 0 , longitude: item.pickup_location_lng ?? 0 )
 
         cell.time.text = "Loading..."
-      
-        getTripTime(from: source, to: destination) {  tripTime in
-                    DispatchQueue.main.async {
-                        cell.time.text = tripTime ?? "N/A"
-                    }
-                }
         
+        self.getGoogleRouteTimeAndDistance(from: source, to: destination) {  time, distance  in
+            cell.time.text = time
+            cell.distance.text = distance
+        }
+      
         
         if let image = item.passenger_avatar {
             cell.userPhoto.setImage(image: Server.imageBase.rawValue + image  )
